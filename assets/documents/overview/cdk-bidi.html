@@ -1,0 +1,22 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p" translation-result="on"><code class="docs-markdown-code">bidi</code> 包为组件提供了一个通用的体系，来获取和响应该应用的 LTR（从左到右）/RTL（从右到左）布局方向的变化。</p><p class="docs-markdown-p" translation-origin="off">The <code class="docs-markdown-code">bidi</code> package provides a common system for components to get and respond to change in the application's LTR/RTL layout direction.</p><h3 id="directionality" class="docs-header-link docs-markdown-h3" translation-result="on"><span header-link="-"></span> 方向性</h3><h3 class="docs-header-link docs-markdown-h3" translation-origin="off"><span header-link="directionality"></span> Directionality</h3><p class="docs-markdown-p" translation-result="on">当包含 CDK 的 <code class="docs-markdown-code">BidiModule</code> 时，组件中就可以注入 <code class="docs-markdown-code">Directionality</code> 来获取当前的文本方向了（RTL或者LTR）;</p><p class="docs-markdown-p" translation-origin="off">When including the CDK's <code class="docs-markdown-code">BidiModule</code>, components can inject <code class="docs-markdown-code">Directionality</code> to get the current text direction (RTL or LTR);</p><h4 id="example" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="-"></span> 例子</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="example"></span> Example</h4><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ ... }) 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyWidget <span class="hljs-keyword">implements</span> OnDestroy {
+
+  <span class="hljs-comment">/** Whether the widget is in RTL mode or not. */</span>
+  <span class="hljs-keyword">private</span> isRtl: <span class="hljs-built_in">boolean</span>;
+
+  <span class="hljs-comment">/** Subscription to the Directionality change EventEmitter. */</span>
+  <span class="hljs-keyword">private</span> _dirChangeSubscription = Subscription.EMPTY;  
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">dir: Directionality</span>) {
+    <span class="hljs-keyword">this</span>.isRtl = dir.value === <span class="hljs-string">'rtl'</span>;
+
+    _dirChangeSubscription = dir.change.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-keyword">this</span>.flipDirection();
+    });
+  }
+
+  ngOnDestroy() {
+    <span class="hljs-keyword">this</span>._dirChangeSubscription.unsubscribe();
+  }
+}  
+</code></pre><h3 id="the-code-dir-code-directive" class="docs-header-link docs-markdown-h3" translation-result="on"><span header-link="-code-dir-code-"></span> <code class="docs-markdown-code">Dir</code> 指令</h3><h3 class="docs-header-link docs-markdown-h3" translation-origin="off"><span header-link="the-code-dir-code-directive"></span> The <code class="docs-markdown-code">Dir</code> directive</h3><p class="docs-markdown-p" translation-result="on"><code class="docs-markdown-code">BidiModule</code> 还包含一个指令，用来匹配所有带 <code class="docs-markdown-code">dir</code> 属性的元素。该指令与 Directionality 具有相同的API，并将自身<em>作为</em> <code class="docs-markdown-code">Directionality</code> 的服务提供商。这样一来，任何注入了 <code class="docs-markdown-code">Directionality</code> 的组件都会得到关于最近祖先的布局方向上下文。</p><p class="docs-markdown-p" translation-origin="off">The <code class="docs-markdown-code">BidiModule</code> also includes a directive that matches any elements with a <code class="docs-markdown-code">dir</code> attribute. This directive has the same API as Directionality and provides itself <em>as</em> <code class="docs-markdown-code">Directionality</code>. By doing this, any component that injects <code class="docs-markdown-code">Directionality</code> will get the closest ancestor layout direction context.</p></div></body></html>

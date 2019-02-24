@@ -1,0 +1,16 @@
+<html><head></head><body><mat-tree [datasource]="dataSource" [treecontrol]="treeControl">
+  <mat-tree-node *mattreenodedef="let node" mattreenodepadding="">
+    <button mat-icon-button="" disabled=""></button>
+    {{node.item}}
+  </mat-tree-node>
+  <mat-tree-node *mattreenodedef="let node; when: hasChild" mattreenodepadding="">
+    <button mat-icon-button="" [attr.aria-label]="'toggle ' + node.filename" mattreenodetoggle="">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    {{node.item}}
+    <mat-progress-bar *ngif="node.isLoading" mode="indeterminate" class="example-tree-progress-bar"></mat-progress-bar>
+  </mat-tree-node>
+</mat-tree>
+</body></html>

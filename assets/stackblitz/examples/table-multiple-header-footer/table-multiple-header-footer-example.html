@@ -1,0 +1,44 @@
+<html><head></head><body><ng-container matcolumndef="item">
+    </ng-container><ng-container matcolumndef="cost">
+    </ng-container><ng-container matcolumndef="item-description">
+    </ng-container><ng-container matcolumndef="cost-description">
+    </ng-container><ng-container matcolumndef="disclaimer">
+    </ng-container><table mat-table="" [datasource]="transactions" class="mat-elevation-z8">
+  <!-- Item Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef=""> Item </th>
+    <td mat-cell="" *matcelldef="let transaction"> {{transaction.item}} </td>
+    <td mat-footer-cell="" *matfootercelldef=""> Total </td>
+  
+
+  <!-- Cost Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Cost </th>
+    <td mat-cell="" *matcelldef="let transaction"> {{transaction.cost | currency}} </td>
+    <td mat-footer-cell="" *matfootercelldef=""> {{getTotalCost() | currency}} </td>
+  
+
+  <!-- Item Description Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Name of the item purchased </th>
+  
+
+  <!-- Cost Description Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Cost of the item in USD </th>
+  
+
+  <!-- Disclaimer column -->
+  <td mat-footer-cell="" *matfootercelldef="" colspan="2">
+      Please note that the cost of items displayed are completely and totally made up.
+    </td>
+  
+
+  <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns" class="example-first-header-row">
+  </tr>
+  <tr mat-header-row="" *matheaderrowdef="['item-description', 'cost-description']" class="example-second-header-row">
+  </tr>
+
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+
+  <tr mat-footer-row="" *matfooterrowdef="displayedColumns" class="example-first-footer-row"></tr>
+  <tr mat-footer-row="" *matfooterrowdef="['disclaimer']" class="example-second-footer-row"></tr>
+</tbody></table>
+</body></html>

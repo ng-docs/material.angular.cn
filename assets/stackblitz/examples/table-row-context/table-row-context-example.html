@@ -1,0 +1,47 @@
+<html><head></head><body><ng-container matcolumndef="$implicit">
+    </ng-container><ng-container matcolumndef="index">
+    </ng-container><ng-container matcolumndef="count">
+    </ng-container><ng-container matcolumndef="first">
+    </ng-container><ng-container matcolumndef="last">
+    </ng-container><ng-container matcolumndef="even">
+    </ng-container><ng-container matcolumndef="odd">
+    </ng-container><table mat-table="" [datasource]="data" class="mat-elevation-z8">
+  <!-- Index Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef=""> $implicit </th>
+    <td mat-cell="" *matcelldef="let data"> {{data}} </td>
+  
+
+  <!-- Index Column -->
+  <th mat-header-cell="" *matheadercelldef=""> index </th>
+    <td mat-cell="" *matcelldef="let index = index"> {{index}} </td>
+  
+
+  <!-- Index Column -->
+  <th mat-header-cell="" *matheadercelldef=""> count </th>
+    <td mat-cell="" *matcelldef="let count = count"> {{count}} </td>
+  
+
+  <!-- Index Column -->
+  <th mat-header-cell="" *matheadercelldef=""> first </th>
+    <td mat-cell="" *matcelldef="let first = first"> {{first}} </td>
+  
+
+  <!-- Index Column -->
+  <th mat-header-cell="" *matheadercelldef=""> last </th>
+    <td mat-cell="" *matcelldef="let last = last"> {{last}} </td>
+  
+
+  <!-- Index Column -->
+  <th mat-header-cell="" *matheadercelldef=""> even </th>
+    <td mat-cell="" *matcelldef="let even = even"> {{even}} </td>
+  
+
+  <!-- Index Column -->
+  <th mat-header-cell="" *matheadercelldef=""> odd </th>
+    <td mat-cell="" *matcelldef="let odd = odd"> {{odd}} </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>
+</body></html>

@@ -1,0 +1,43 @@
+<html><head></head><body><ng-container matcolumndef="select">
+    </ng-container><ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="name">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><table mat-table="" [datasource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Checkbox Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef="">
+      <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() &amp;&amp; isAllSelected()" [indeterminate]="selection.hasValue() &amp;&amp; !isAllSelected()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell="" *matcelldef="let row">
+      <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+      </mat-checkbox>
+    </td>
+  
+
+  <!-- Position Column -->
+  <th mat-header-cell="" *matheadercelldef=""> No. </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.position}} </td>
+  
+
+  <!-- Name Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Name </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.name}} </td>
+  
+
+  <!-- Weight Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Weight </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.weight}} </td>
+  
+
+  <!-- Symbol Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Symbol </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.symbol}} </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+  </tr>
+</tbody></table>
+</body></html>

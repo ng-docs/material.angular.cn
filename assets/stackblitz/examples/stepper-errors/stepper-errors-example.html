@@ -1,0 +1,34 @@
+<html><head></head><body><mat-horizontal-stepper linear="" #stepper="">
+  <mat-step [stepcontrol]="firstFormGroup" errormessage="Name is required.">
+    <form [formgroup]="firstFormGroup">
+      <ng-template matsteplabel="">Fill out your name</ng-template>
+      <mat-form-field>
+        <input matinput="" placeholder="Last name, First name" formcontrolname="firstCtrl" required="">
+      </mat-form-field>
+      <div>
+        <button mat-button="" matsteppernext="">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepcontrol]="secondFormGroup" errormessage="Address is required.">
+    <form [formgroup]="secondFormGroup">
+      <ng-template matsteplabel="">Fill out your address</ng-template>
+      <mat-form-field>
+        <input matinput="" placeholder="Address" formcontrolname="secondCtrl" required="">
+      </mat-form-field>
+      <div>
+        <button mat-button="" matstepperprevious="">Back</button>
+        <button mat-button="" matsteppernext="">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matsteplabel="">Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button="" matstepperprevious="">Back</button>
+      <button mat-button="" (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+</body></html>

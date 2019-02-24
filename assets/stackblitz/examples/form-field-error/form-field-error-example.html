@@ -1,0 +1,7 @@
+<html><head></head><body><div class="example-container">
+  <mat-form-field>
+    <input matinput="" placeholder="Enter your email" [formcontrol]="email" required="">
+    <mat-error *ngif="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+</div>
+</body></html>

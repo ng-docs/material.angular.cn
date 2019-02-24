@@ -1,0 +1,17 @@
+<html><head></head><body><div class="example-container">
+  <h2 id="available-numbers">Available numbers</h2>
+
+  <div id="all" cdkdroplist="" [cdkdroplistdata]="all" cdkdroplistconnectedto="even" class="example-list" (cdkdroplistdropped)="drop($event)" [cdkdroplistenterpredicate]="noReturnPredicate">
+    <div class="example-box" *ngfor="let number of all" [cdkdragdata]="number" cdkdrag="">{{number}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2 id="even-numbers">Even numbers</h2>
+
+  <div id="even" cdkdroplist="" [cdkdroplistdata]="even" cdkdroplistconnectedto="all" class="example-list" (cdkdroplistdropped)="drop($event)" [cdkdroplistenterpredicate]="evenPredicate">
+    <div class="example-box" *ngfor="let number of even" cdkdrag="" [cdkdragdata]="number">{{number}}</div>
+  </div>
+</div>
+
+</body></html>

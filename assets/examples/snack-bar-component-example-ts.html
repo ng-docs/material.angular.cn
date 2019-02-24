@@ -1,0 +1,32 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-comment">/**
+ * @title Snack-bar with a custom component
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'snack-bar-component-example'</span>,
+  templateUrl: <span class="hljs-string">'snack-bar-component-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarComponentExample {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> snackBar: MatSnackBar</span>) {}
+
+  openSnackBar() {
+    <span class="hljs-keyword">this</span>.snackBar.openFromComponent(PizzaPartyComponent, {
+      duration: <span class="hljs-number">500</span>,
+    });
+  }
+}
+
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'snack-bar-component-example-snack'</span>,
+  templateUrl: <span class="hljs-string">'snack-bar-component-example-snack.html'</span>,
+  styles: [<span class="hljs-string">`
+    .example-pizza-party {
+      color: hotpink;
+    }
+  `</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyComponent {}
+</body></html>

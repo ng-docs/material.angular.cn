@@ -1,0 +1,25 @@
+<html><head></head><body><mat-tree [datasource]="dataSource" [treecontrol]="treeControl">
+  <mat-tree-node *mattreenodedef="let node" mattreenodetoggle="" mattreenodepadding="">
+    <button mat-icon-button="" disabled=""></button>
+    <mat-checkbox class="checklist-leaf-node" [checked]="checklistSelection.isSelected(node)" (change)="todoLeafItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+  </mat-tree-node>
+
+  <mat-tree-node *mattreenodedef="let node; when: hasNoContent" mattreenodepadding="">
+    <button mat-icon-button="" disabled=""></button>
+    <mat-form-field>
+      <input matinput="" #itemvalue="" placeholder="New item...">
+    </mat-form-field>
+    <button mat-button="" (click)="saveNode(node, itemValue.value)">Save</button>
+  </mat-tree-node>
+
+  <mat-tree-node *mattreenodedef="let node; when: hasChild" mattreenodepadding="">
+    <button mat-icon-button="" mattreenodetoggle="" [attr.aria-label]="'toggle ' + node.filename">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    <mat-checkbox [checked]="descendantsAllSelected(node)" [indeterminate]="descendantsPartiallySelected(node)" (change)="todoItemSelectionToggle(node)">{{node.item}}</mat-checkbox>
+    <button mat-icon-button="" (click)="addNewItem(node)"><mat-icon>add</mat-icon></button>
+  </mat-tree-node>
+</mat-tree>
+</body></html>

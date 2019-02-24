@@ -1,0 +1,15 @@
+<html><head></head><body><div class="docs-markdown"><h3 id="breakpointsmodule" class="docs-header-link docs-markdown-h3"><span header-link="breakpointsmodule"></span> BreakpointsModule</h3><p class="docs-markdown-p" translation-result="on">当包含了 CDK 的 <code class="docs-markdown-code">LayoutModule</code> 后，组件就可以注入 <code class="docs-markdown-code">BreakpointsObserver</code> 来获取 CSS 媒体查询的匹配状态。</p><p class="docs-markdown-p" translation-origin="off">When including the CDK's <code class="docs-markdown-code">LayoutModule</code>, components can inject <code class="docs-markdown-code">BreakpointsObserver</code> to request the matching state of a CSS Media Query.</p><p class="docs-markdown-p" translation-result="on">根据 Material Design <a href="https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints" class="docs-markdown-a">断点体系</a>，CDK 提供了一组<a href="https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints" class="docs-markdown-a">断点</a> 。</p><p class="docs-markdown-p" translation-origin="off">A set of breakpoints is provided based on the Material Design <a href="https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints" class="docs-markdown-a">breakpoint system</a>.</p><h4 id="example" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="-"></span> 例子</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="example"></span> Example</h4><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ ... })
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyWidget {
+  isHandset: Observable&lt;BreakpointState&gt;;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">bm: BreakpointObserver</span>) {
+    bm.observe(Handset).subscribe(<span class="hljs-function">(<span class="hljs-params">state: BreakpointState</span>) =&gt;</span> {
+      <span class="hljs-keyword">if</span> (state.matches) {
+        <span class="hljs-keyword">this</span>.makeEverythingFitOnSmallScreen();
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.expandEverythingToFillTheScreen();
+      }
+    });
+  }
+}
+</code></pre></div></body></html>

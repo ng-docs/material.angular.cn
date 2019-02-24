@@ -1,0 +1,10 @@
+<html><head></head><body><mat-form-field>
+  <input matinput="" [matdatepicker]="picker" placeholder="Input &amp; change events" (dateinput)="addEvent('input', $event)" (datechange)="addEvent('change', $event)">
+  <mat-datepicker-toggle matsuffix="" [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker=""></mat-datepicker>
+</mat-form-field>
+
+<div class="example-events">
+  <div *ngfor="let e of events">{{e}}</div>
+</div>
+</body></html>

@@ -1,0 +1,12 @@
+<html><head></head><body><mat-form-field class="example-user-input">
+  <input matinput="" placeholder="Show delay (milliseconds)" type="number" aria-label="Adds a delay between hovering over the button and displaying the tooltip" [formcontrol]="showDelay">
+</mat-form-field>
+
+<mat-form-field class="example-user-input">
+  <input matinput="" placeholder="Hide delay (milliseconds)" type="number" aria-label="Adds a delay between hovering away from the button and hiding the tooltip" [formcontrol]="hideDelay">
+</mat-form-field>
+
+<button mat-raised-button="" mattooltip="Info about the action" [mattooltipshowdelay]="showDelay.value" [mattooltiphidedelay]="hideDelay.value" aria-label="Button that displays a tooltip with a customized delay in showing and hiding">
+  Action
+</button>
+</body></html>

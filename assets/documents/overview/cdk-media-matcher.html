@@ -1,0 +1,9 @@
+<html><head></head><body><div class="docs-markdown"><h3 id="mediamatcher" class="docs-header-link docs-markdown-h3"><span header-link="mediamatcher"></span> MediaMatcher</h3><p class="docs-markdown-p" translation-result="on">当包含了 CDK 的 <code class="docs-markdown-code">LayoutModule</code> 时，组件就可以注入 <code class="docs-markdown-code">MediaMatcher</code> 来访问 matchMedia 方法（如果在该平台上可用的话）。</p><p class="docs-markdown-p" translation-origin="off">When including the CDK's <code class="docs-markdown-code">LayoutModule</code>, components can inject <code class="docs-markdown-code">MediaMatcher</code> to access the matchMedia method, if available on the platform.</p><h4 id="example" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="-"></span> 例子</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="example"></span> Example</h4><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ ... }) 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyWidget {  
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">mm: MediaMatcher</span>) {
+    mm.matchMedia(<span class="hljs-string">'(orientation: landscape)'</span>).matches ? 
+      <span class="hljs-keyword">this</span>.setLandscapeMode() :
+      <span class="hljs-keyword">this</span>.setPortraitMode();
+  }
+}  
+</code></pre></div></body></html>

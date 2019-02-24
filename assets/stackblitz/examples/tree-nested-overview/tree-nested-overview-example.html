@@ -1,0 +1,25 @@
+<html><head></head><body><mat-tree [datasource]="nestedDataSource" [treecontrol]="nestedTreeControl" class="example-tree">
+  <mat-tree-node *mattreenodedef="let node" mattreenodetoggle="">
+    <li class="mat-tree-node">
+      <button mat-icon-button="" disabled=""></button>
+      {{node.filename}}:  {{node.type}}
+    </li>
+  </mat-tree-node>
+
+  <mat-nested-tree-node *mattreenodedef="let node; when: hasNestedChild">
+    <li>
+      <div class="mat-tree-node">
+        <button mat-icon-button="" mattreenodetoggle="" [attr.aria-label]="'toggle ' + node.filename">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+        {{node.filename}}
+      </div>
+      <ul [class.example-tree-invisible]="!nestedTreeControl.isExpanded(node)">
+        <ng-container mattreenodeoutlet=""></ng-container>
+      </ul>
+    </li>
+  </mat-nested-tree-node>
+</mat-tree>
+</body></html>

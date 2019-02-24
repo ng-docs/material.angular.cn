@@ -1,0 +1,45 @@
+<html><head></head><body><div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade" *ngif="isLoadingResults || isRateLimitReached">
+    <mat-spinner *ngif="isLoadingResults"></mat-spinner>
+    <div class="example-rate-limit-reached" *ngif="isRateLimitReached">
+      GitHub's API rate limit has been reached. It will be reset in one minute.
+    </div>
+  </div>
+
+  <div class="example-table-container">
+
+    <ng-container matcolumndef="number">
+        </ng-container><ng-container matcolumndef="title">
+        </ng-container><ng-container matcolumndef="state">
+        </ng-container><ng-container matcolumndef="created">
+        </ng-container><table mat-table="" [datasource]="data" class="example-table" matsort="" matsortactive="created" matsortdisableclear="" matsortdirection="asc">
+      <!-- Number Column -->
+      <tbody><tr><th mat-header-cell="" *matheadercelldef="">#</th>
+        <td mat-cell="" *matcelldef="let row">{{row.number}}</td>
+      
+
+      <!-- Title Column -->
+      <th mat-header-cell="" *matheadercelldef="">Title</th>
+        <td mat-cell="" *matcelldef="let row">{{row.title}}</td>
+      
+
+      <!-- State Column -->
+      <th mat-header-cell="" *matheadercelldef="">State</th>
+        <td mat-cell="" *matcelldef="let row">{{row.state}}</td>
+      
+
+      <!-- Created Column -->
+      <th mat-header-cell="" *matheadercelldef="" mat-sort-header="" disableclear="">
+          Created
+        </th>
+        <td mat-cell="" *matcelldef="let row">{{row.created_at | date}}</td>
+      
+
+      </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+      <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+    </tbody></table>
+  </div>
+
+  <mat-paginator [length]="resultsLength" [pagesize]="30"></mat-paginator>
+</div>
+</body></html>

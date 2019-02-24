@@ -1,0 +1,38 @@
+<html><head></head><body><button mat-raised-button="" (click)="isOptional = !isOptional">
+  {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+</button>
+
+<mat-horizontal-stepper linear="" #stepper="">
+  <mat-step [stepcontrol]="firstFormGroup">
+    <form [formgroup]="firstFormGroup">
+      <ng-template matsteplabel="">Fill out your name</ng-template>
+      <mat-form-field>
+        <input matinput="" placeholder="Last name, First name" formcontrolname="firstCtrl" required="">
+      </mat-form-field>
+      <div>
+        <button mat-button="" matsteppernext="">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepcontrol]="secondFormGroup" [optional]="isOptional">
+    <form [formgroup]="secondFormGroup">
+      <ng-template matsteplabel="">Fill out your address</ng-template>
+      <mat-form-field>
+        <input matinput="" placeholder="Address" formcontrolname="secondCtrl" required="">
+      </mat-form-field>
+      <div>
+        <button mat-button="" matstepperprevious="">Back</button>
+        <button mat-button="" matsteppernext="">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matsteplabel="">Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button="" matstepperprevious="">Back</button>
+      <button mat-button="" (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+</body></html>

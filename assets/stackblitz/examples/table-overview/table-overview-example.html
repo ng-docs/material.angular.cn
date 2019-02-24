@@ -1,0 +1,39 @@
+<html><head></head><body><mat-form-field>
+  <input matinput="" (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <ng-container matcolumndef="id">
+      </ng-container><ng-container matcolumndef="progress">
+      </ng-container><ng-container matcolumndef="name">
+      </ng-container><ng-container matcolumndef="color">
+      </ng-container><table mat-table="" [datasource]="dataSource" matsort="">
+
+    <!-- ID Column -->
+    <tbody><tr><th mat-header-cell="" *matheadercelldef="" mat-sort-header=""> ID </th>
+      <td mat-cell="" *matcelldef="let row"> {{row.id}} </td>
+    
+
+    <!-- Progress Column -->
+    <th mat-header-cell="" *matheadercelldef="" mat-sort-header=""> Progress </th>
+      <td mat-cell="" *matcelldef="let row"> {{row.progress}}% </td>
+    
+
+    <!-- Name Column -->
+    <th mat-header-cell="" *matheadercelldef="" mat-sort-header=""> Name </th>
+      <td mat-cell="" *matcelldef="let row"> {{row.name}} </td>
+    
+
+    <!-- Color Column -->
+    <th mat-header-cell="" *matheadercelldef="" mat-sort-header=""> Color </th>
+      <td mat-cell="" *matcelldef="let row" [style.color]="row.color"> {{row.color}} </td>
+    
+
+    </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+    <tr mat-row="" *matrowdef="let row; columns: displayedColumns;">
+    </tr>
+  </tbody></table>
+
+  <mat-paginator [pagesizeoptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+</body></html>

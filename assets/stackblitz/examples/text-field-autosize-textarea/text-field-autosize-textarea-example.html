@@ -1,0 +1,17 @@
+<html><head></head><body><mat-form-field>
+  <mat-label>Font size</mat-label>
+  <mat-select #fontsize="" value="16px" (selectionchange)="triggerResize()">
+    <mat-option value="10px">10px</mat-option>
+    <mat-option value="12px">12px</mat-option>
+    <mat-option value="14px">14px</mat-option>
+    <mat-option value="16px">16px</mat-option>
+    <mat-option value="18px">18px</mat-option>
+    <mat-option value="20px">20px</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field [style.fontsize]="fontSize.value">
+  <mat-label>Autosize textarea</mat-label>
+  <textarea matinput="" cdktextareaautosize="" #autosize="cdkTextareaAutosize" cdkautosizeminrows="2" cdkautosizemaxrows="5"></textarea>
+</mat-form-field>
+</body></html>

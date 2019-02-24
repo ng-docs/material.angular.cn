@@ -1,0 +1,59 @@
+<html><head></head><body><div class="docs-markdown"><h3 id="theming-your-custom-component-with-angular-material-39-s-theming-system" class="docs-header-link docs-markdown-h3" translation-result="on"><span header-link="-angular-material-"></span> 使用 Angular Material 的主题体系为自定义组件应用主题</h3><h3 class="docs-header-link docs-markdown-h3" translation-origin="off"><span header-link="theming-your-custom-component-with-angular-material-39-s-theming-system"></span> Theming your custom component with Angular Material's theming system</h3><p class="docs-markdown-p" translation-result="on">要想借助 Angular Material 来为你自己的组件添加样式，必须使用 Sass 来定义该组件的样式。</p><p class="docs-markdown-p" translation-origin="off">In order to style your own components with Angular Material's tooling, the component's styles must be defined with Sass.</p><h4 id="1-define-all-color-and-typography-styles-in-a-quot-theme-file-quot-for-the-component" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="1-quot-quot-"></span> 1. 在 "主题文件" 中为该组件定义所有颜色和字体风格</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="1-define-all-color-and-typography-styles-in-a-quot-theme-file-quot-for-the-component"></span> 1. Define all color and typography styles in a "theme file" for the component</h4><p class="docs-markdown-p" translation-result="on">首先，创建一个 Sass mixin，它接受一个 Angular Material 主题，并为该组件输出一些特定颜色的样式。 Angular Material 的主题定义就是一个 Sass 的 map 结构。</p><p class="docs-markdown-p" translation-origin="off">First, create a Sass mixin that accepts an Angular Material theme and outputs the color-specific styles for the component. An Angular Material theme definition is a Sass map.</p><p class="docs-markdown-p" translation-result="on">比如，如果要构建自定义的轮播（carousel）组件：</p><p class="docs-markdown-p" translation-origin="off">For example, if building a custom carousel component:</p><pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import library functions for theme creation.</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+
+<span class="hljs-comment">// Define a mixin that accepts a theme and outputs the theme-specific styles.</span>
+@<span class="hljs-keyword">mixin</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>) {
+  <span class="hljs-comment">// Extract the palettes you need from the theme definition.</span>
+  <span class="hljs-variable">$primary</span>: map-get(<span class="hljs-variable">$theme</span>, primary);
+  <span class="hljs-variable">$accent</span>: map-get(<span class="hljs-variable">$theme</span>, accent);
+
+  <span class="hljs-comment">// Define any styles affected by the theme.</span>
+  <span class="hljs-selector-class">.candy-carousel</span> {
+    <span class="hljs-comment">// Use mat-color to extract individual colors a palette.</span>
+    <span class="hljs-attribute">background-color</span>: mat-color(<span class="hljs-variable">$primary</span>);
+    <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$accent</span>, A400);
+  }
+}
+</code></pre><p class="docs-markdown-p" translation-result="on">第二步，创建另一个 Sass mixin，它的参数是 Angular Material 文字定义，输出是一些文字样式。比如：</p><p class="docs-markdown-p" translation-origin="off">Second, create another Sass mixin that accepts an Angular Material typography definition and outputs typographic styles. For example:</p><pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code">@<span class="hljs-keyword">mixin</span> candy-carousel-typography(<span class="hljs-variable">$config</span>) {
+  <span class="hljs-selector-class">.candy-carousel</span> {
+    <span class="hljs-attribute">font</span>: {
+      family: mat-font-family(<span class="hljs-variable">$config</span>, body-<span class="hljs-number">1</span>);
+      size: mat-font-size(<span class="hljs-variable">$config</span>, body-<span class="hljs-number">1</span>);
+      weight: mat-font-weight(<span class="hljs-variable">$config</span>, body-<span class="hljs-number">1</span>);
+    }
+  }
+}
+</code></pre><p class="docs-markdown-p" translation-result="on">参见<a href="guide/typography" class="docs-markdown-a">文字风格指南</a>以了解自定义字体的更多信息。</p><p class="docs-markdown-p" translation-origin="off">See the <a href="https://material.angular.io/guide/typography" class="docs-markdown-a">typography guide</a> for more information on typographic customization.</p><h4 id="2-define-all-remaining-styles-in-a-normal-component-stylesheet-" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="2-"></span> 2. 在标准的组件样式表中定义剩下的所有样式。</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="2-define-all-remaining-styles-in-a-normal-component-stylesheet-"></span> 2. Define all remaining styles in a normal component stylesheet.</h4><p class="docs-markdown-p" translation-result="on">在独立的文件中定义所有不受主题影响的样式，并在组件的 <code class="docs-markdown-code">styleUrls</code> 中直接引用它。</p><p class="docs-markdown-p" translation-origin="off">Define all styles unaffected by the theme in a separate file referenced directly in the component's <code class="docs-markdown-code">styleUrl</code>. This generally includes everything except for color and typography styles.</p><h4 id="3-include-the-theme-mixin-in-your-application" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="3-mixin"></span> 3. 在应用中包含主题的 mixin</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="3-include-the-theme-mixin-in-your-application"></span> 3. Include the theme mixin in your application</h4><p class="docs-markdown-p" translation-result="on">无论你是否已经包含了 Angular Material 内置的那些主题 mixin，都要使用 Sass 的 <code class="docs-markdown-code">@include</code> 关键字来包含组件的主题 mixin。</p><p class="docs-markdown-p" translation-origin="off">Use the Sass <code class="docs-markdown-code">@include</code> keyword to include a component's theme mixin wherever you're already including Angular Material's built-in theme mixins.</p><pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import library functions for theme creation.</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+
+<span class="hljs-comment">// Include non-theme styles for core.</span>
+@<span class="hljs-keyword">include</span> mat-core();
+
+<span class="hljs-comment">// Define your application's custom theme.</span>
+<span class="hljs-variable">$primary</span>: mat-palette(<span class="hljs-variable">$mat-indigo</span>);
+<span class="hljs-variable">$accent</span>:  mat-palette(<span class="hljs-variable">$mat-pink</span>, A200, A100, A400);
+<span class="hljs-variable">$theme</span>: mat-light-theme(<span class="hljs-variable">$primary</span>, <span class="hljs-variable">$accent</span>);
+
+<span class="hljs-comment">// Include theme styles for Angular Material components.</span>
+@<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$theme</span>);
+
+<span class="hljs-comment">// Include theme styles for your custom components.</span>
+@<span class="hljs-keyword">include</span> candy-carousel-theme(<span class="hljs-variable">$theme</span>);
+</code></pre><h4 id="note-using-the-code-mat-color-code-function-to-extract-colors-from-a-palette" class="docs-header-link docs-markdown-h4" translation-result="on"><span header-link="-code-mat-color-code-"></span> 注意：要用 <code class="docs-markdown-code">mat-color</code> 函数来从调色板中提取出各种颜色</h4><h4 class="docs-header-link docs-markdown-h4" translation-origin="off"><span header-link="note-using-the-code-mat-color-code-function-to-extract-colors-from-a-palette"></span> Note: using the <code class="docs-markdown-code">mat-color</code> function to extract colors from a palette</h4><p class="docs-markdown-p" translation-result="on">你可以使用来自 <code class="docs-markdown-code">@angular/material/theming</code> 的主题函数和 Material Design 调色板变量，还可以用 Sass 函数 <code class="docs-markdown-code">mat-color</code> 来把指定的颜色从调色板中提取出来。比如：</p><p class="docs-markdown-p" translation-origin="off">You can consume the theming functions and Material Design color palettes from <code class="docs-markdown-code">@angular/material/theming</code>. The <code class="docs-markdown-code">mat-color</code> Sass function extracts a specific color from a palette. For example:</p><pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import theming functions</span>
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+
+<span class="hljs-selector-class">.candy-carousel</span> {
+  <span class="hljs-comment">// Get the default hue for a palette.</span>
+  <span class="hljs-attribute">color</span>: mat-color(<span class="hljs-variable">$primary</span>);
+
+  <span class="hljs-comment">// Get a specific hue for a palette. </span>
+  <span class="hljs-comment">// See https://material.io/archive/guidelines/style/color.html#color-color-palette for hues.</span>
+  <span class="hljs-attribute">background-color</span>: mat-color(<span class="hljs-variable">$accent</span>, <span class="hljs-number">300</span>);
+
+  <span class="hljs-comment">// Get a relative color for a hue ('lighter' or 'darker')</span>
+  <span class="hljs-attribute">outline-color</span>: mat-color(<span class="hljs-variable">$accent</span>, lighter);
+
+  <span class="hljs-comment">// Get a constrast color for a hue by adding `-contrast` to any other key.</span>
+  <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$primary</span>, <span class="hljs-string">'100-constrast'</span>);
+}
+</code></pre></div></body></html>

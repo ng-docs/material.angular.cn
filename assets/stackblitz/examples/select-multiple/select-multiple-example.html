@@ -1,0 +1,6 @@
+<html><head></head><body><mat-form-field>
+  <mat-select placeholder="Toppings" [formcontrol]="toppings" multiple="">
+    <mat-option *ngfor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+  </mat-select>
+</mat-form-field>
+</body></html>

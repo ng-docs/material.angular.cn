@@ -1,0 +1,15 @@
+<html><head></head><body><simple-column name="name" sortable=""></simple-column><simple-column name="position"></simple-column><simple-column name="weight" [dataaccessor]="getWeight"></simple-column><simple-column name="symbol" label="SYMBOL!"></simple-column><table mat-table="" [datasource]="dataSource" class="mat-elevation-z8" matsort="" #sort="matSort">
+  <!-- Basic column: name is used for header label AND data property -->
+  
+  
+
+  <!-- Name doesn't match the data property (or transform needed); define a custom data accessor -->
+  
+
+  <!-- Name doesn't match desired header text; define a custom label -->
+  
+
+  <tbody><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let data; columns: displayedColumns;"></tr>
+</tbody></table>
+</body></html>

@@ -1,0 +1,8 @@
+<html><head></head><body><mat-form-field>
+  <input matinput="" [matdatepicker]="dp" placeholder="Different locale">
+  <mat-datepicker-toggle matsuffix="" [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp=""></mat-datepicker>
+</mat-form-field>
+
+<button mat-button="" (click)="french()">Dynamically switch to French</button>
+</body></html>

@@ -1,0 +1,10 @@
+<html><head></head><body><mat-form-field>
+  <input matinput="" value="Disco party!" placeholder="Message" #message="">
+</mat-form-field>
+
+<mat-form-field>
+  <input matinput="" value="Dance" placeholder="Action" #action="">
+</mat-form-field>
+
+<button mat-button="" (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
+</body></html>
