@@ -1,0 +1,15 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormGroup, FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Date range picker forms integration */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'date-range-picker-forms-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'date-range-picker-forms-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRangePickerFormsExample</span> </span>{
+  range = <span class="hljs-keyword">new</span> FormGroup({
+    <span class="hljs-attr">start</span>: <span class="hljs-keyword">new</span> FormControl(),
+    <span class="hljs-attr">end</span>: <span class="hljs-keyword">new</span> FormControl()
+  });
+}
+</body></html>

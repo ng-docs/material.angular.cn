@@ -1,0 +1,25 @@
+<html><head></head><body><form [formgroup]="form">
+  <h4 id="mat-select">mat-select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Food</mat-label>
+    <mat-select [formcontrol]="foodControl" name="food">
+      <mat-option>None</mat-option>
+      <mat-option *ngfor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>Selected: {{foodControl.value}}</p>
+  <h4 id="native-select">Native select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Car</mat-label>
+    <select matnativecontrol="" [formcontrol]="carControl" name="car">
+      <option value="">None</option>
+      <option *ngfor="let car of cars" [value]="car.value">
+        {{car.viewValue}}
+      </option>
+    </select>
+  </mat-form-field>
+  <p>Selected: {{carControl.value}}</p>
+</form>
+</body></html>

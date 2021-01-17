@@ -1,0 +1,26 @@
+<html><head></head><body><ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="name">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><table mat-table="" [datasource]="dataSource" cdkdroplist="" cdkdroplistorientation="horizontal" (cdkdroplistdropped)="drop($event)">
+
+  <tbody><tr><th mat-header-cell="" cdkdrag="" *matheadercelldef=""> No. </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.position}} </td>
+  
+
+  <th mat-header-cell="" cdkdrag="" *matheadercelldef=""> Name </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.name}} </td>
+  
+
+  <th mat-header-cell="" cdkdrag="" *matheadercelldef=""> Weight </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.weight}} </td>
+  
+
+  <th mat-header-cell="" cdkdrag="" *matheadercelldef=""> Symbol </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.symbol}} </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="columns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: columns;"></tr>
+</tbody></table>
+</body></html>

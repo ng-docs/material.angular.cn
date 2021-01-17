@@ -1,0 +1,29 @@
+<html><head></head><body><mat-table [datasource]="dataSource" class="mat-elevation-z8 example-table">
+  <!-- Position Column -->
+  <ng-container matcolumndef="position" sticky="">
+    <mat-header-cell *matheadercelldef="" [matresizablemaxwidthpx]="100"> No. </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.position}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matcolumndef="name" sticky="">
+    <mat-header-cell *matheadercelldef="" [matresizableminwidthpx]="150"> Name </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column (not resizable) -->
+  <ng-container matcolumndef="weight">
+    <mat-header-cell *matheadercelldef="" disableresize=""> Weight (Not resizable) </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.weight}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matcolumndef="symbol">
+    <mat-header-cell *matheadercelldef=""> Symbol </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.symbol}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matheaderrowdef="displayedColumns"></mat-header-row>
+  <mat-row *matrowdef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+</body></html>

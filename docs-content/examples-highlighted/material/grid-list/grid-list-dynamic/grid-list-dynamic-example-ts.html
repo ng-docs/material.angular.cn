@@ -1,0 +1,25 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Tile {
+  <span class="hljs-attr">color</span>: <span class="hljs-built_in">string</span>;
+  cols: <span class="hljs-built_in">number</span>;
+  rows: <span class="hljs-built_in">number</span>;
+  text: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Dynamic grid-list
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'grid-list-dynamic-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'grid-list-dynamic-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GridListDynamicExample</span> </span>{
+  <span class="hljs-attr">tiles</span>: Tile[] = [
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">'One'</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">'lightblue'</span>},
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">'Two'</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">'lightgreen'</span>},
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">'Three'</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">'lightpink'</span>},
+    {<span class="hljs-attr">text</span>: <span class="hljs-string">'Four'</span>, <span class="hljs-attr">cols</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">rows</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">color</span>: <span class="hljs-string">'#DDBDF1'</span>},
+  ];
+}
+</body></html>

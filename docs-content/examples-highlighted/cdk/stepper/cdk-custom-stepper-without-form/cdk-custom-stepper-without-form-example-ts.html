@@ -1,0 +1,24 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkStepper} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>A custom CDK stepper without a form */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'cdk-custom-stepper-without-form-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'./cdk-custom-stepper-without-form-example.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'./cdk-custom-stepper-without-form-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkCustomStepperWithoutFormExample</span> </span>{}
+
+<span class="hljs-comment">/** Custom CDK stepper component */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'example-custom-stepper'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'./example-custom-stepper.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'./example-custom-stepper.css'</span>],
+  <span class="hljs-attr">providers</span>: [{<span class="hljs-attr">provide</span>: CdkStepper, <span class="hljs-attr">useExisting</span>: CustomStepper}]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomStepper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">CdkStepper</span> </span>{
+  selectStepByIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-built_in">this</span>.selectedIndex = index;
+  }
+}
+</body></html>

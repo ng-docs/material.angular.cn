@@ -1,0 +1,15 @@
+<html><head></head><body><mat-form-field appearance="fill">
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [formgroup]="range" [rangepicker]="picker">
+    <input matstartdate="" formcontrolname="start" placeholder="Start date">
+    <input matenddate="" formcontrolname="end" placeholder="End date">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matsuffix="" [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker=""></mat-date-range-picker>
+
+  <mat-error *ngif="range.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+  <mat-error *ngif="range.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+</mat-form-field>
+
+<p>Selected range: {{range.value | json}}</p>
+</body></html>

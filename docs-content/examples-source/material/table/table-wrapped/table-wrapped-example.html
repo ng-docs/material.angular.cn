@@ -1,0 +1,22 @@
+<html><head></head><body><div>
+  <button mat-raised-button="" (click)="clearTable()">Clear table</button>
+  <button mat-raised-button="" (click)="addData()">Add data</button>
+</div>
+
+<wrapper-table [datasource]="dataSource" [columns]="displayedColumns" matsort="" #sort="matSort">
+  <!-- Custom column definition to be provided to the wrapper table. -->
+  <ng-container matcolumndef="name">
+     Name 
+     {{element.name}} 
+  </ng-container>
+
+  <!-- Custom row definitions to be provided to the wrapper table. -->
+  
+  
+
+  <!-- Row shown when there is no matching data that will be provided to the wrapper table. -->
+  
+    No data
+  
+</wrapper-table>
+</body></html>

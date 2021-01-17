@@ -1,0 +1,156 @@
+<html><head></head><body><div class="docs-markdown"><p translation-result="on"><code>MatBottomSheet</code> 服务可用于在屏幕底部打开一些 Material Design 面板。
+这些面板的主要目的是在移动设备上作为对话框和菜单的替代品提供交互体验。</p><p translation-origin="off">The <code>MatBottomSheet</code> service can be used to open Material Design panels to the bottom of the screen.
+These panels are intended primarily as an interaction on mobile devices where they can be used as an
+alternative to dialogs and menus.</p>
+
+<div material-docs-example="bottom-sheet-overview"></div>
+
+<p translation-result="on">你可以调用它的 <code>open</code> 方法并传入一个要加载的组件和一个可选的配置对象，来打开一个底部操作表：</p><p translation-origin="off">You can open a bottom sheet by calling the <code>open</code> method with a component to be loaded and an
+optional config object. The <code>open</code> method will return an instance of <code>MatBottomSheetRef</code>:</p>
+
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(SocialShareComponent, {
+  <span class="hljs-attr">ariaLabel</span>: <span class="hljs-string">'Share on social media'</span>
+});</code></pre>
+<p translation-result="on"><code>MatBottomSheetRef</code> 是一个到当前打开的底部操作表的引用，可以通过此引用来关闭它或订阅其事件。
+注意，同一时间只能打开一个底部操作表。
+底部操作表中包含的任何组件也同样可以注入这个 <code>MatBottomSheetRef</code> 引用。</p><p translation-origin="off">The <code>MatBottomSheetRef</code> is a reference to the currently-opened bottom sheet and can be used to close
+it or to subscribe to events. Note that only one bottom sheet can be open at a time. Any component
+contained inside of a bottom sheet can inject the <code>MatBottomSheetRef</code> as well.</p>
+
+<pre><code class="language-ts">bottomSheetRef.afterDismissed().subscribe(<span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Bottom sheet has been dismissed.'</span>);
+});
+
+bottomSheetRef.dismiss();</code></pre>
+
+        <h3 id="sharing-data-with-the-bottom-sheet-component" class="docs-header-link" translation-result="on">
+          <span header-link="与底部操作表组件共享数据"></span>
+          与底部操作表组件共享数据
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="sharing-data-with-the-bottom-sheet-component"></span>
+          Sharing data with the bottom sheet component.
+        </h3>
+      
+        
+      <p translation-result="on">如果你要把一些数据传给底部操作表，可以使用 <code>data</code> 属性：</p><p translation-origin="off">If you want to pass in some data to the bottom sheet, you can do so using the <code>data</code> property:</p>
+
+<pre><code class="language-ts"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(HobbitSheet, {
+  <span class="hljs-attr">data</span>: { <span class="hljs-attr">names</span>: [<span class="hljs-string">'Frodo'</span>, <span class="hljs-string">'Bilbo'</span>] },
+});</code></pre>
+<p translation-result="on">然后，你就可以通过注入令牌 <code>MAT_BOTTOM_SHEET_DATA</code> 来访问所注入的这些数据了：</p><p translation-origin="off">Afterwards you can access the injected data using the <code>MAT_BOTTOM_SHEET_DATA</code> injection token:</p>
+
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MAT_BOTTOM_SHEET_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/bottom-sheet'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'hobbit-sheet'</span>,
+  <span class="hljs-attr">template</span>: <span class="hljs-string">'passed in {{ data.names }}'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HobbitSheet</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> data: {names: <span class="hljs-built_in">string</span>[]}</span>)</span> { }
+}</code></pre>
+
+        <h3 id="configuring-bottom-sheet-content-via-entrycomponents" class="docs-header-link" translation-result="on">
+          <span header-link="通过-entrycomponents-配置底部操作表的内容"></span>
+          通过 <code>entryComponents</code> 配置底部操作表的内容
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="configuring-bottom-sheet-content-via-entrycomponents"></span>
+          Configuring bottom sheet content via <code>entryComponents</code>
+        </h3>
+      
+        
+      <p translation-result="on">和 <code>MatDialog</code> 一样，<code>MatBottomSheet</code> 也会在运行期间实例化组件。
+为了让它能正常工作，Angular 编译器需要一些额外的信息，以便为你在底部操作表中使用的内容组件创建必要的 <code>ComponentFactory</code>。</p><p translation-origin="off">Similarly to <code>MatDialog</code>, <code>MatBottomSheet</code> instantiates components at run-time. In order for it to
+work, the Angular compiler needs extra information to create the necessary <code>ComponentFactory</code> for
+your bottom sheet content component.</p>
+
+<p translation-result="on">任何要包含在底部操作表中的组件都必须添加到你的 <code>NgModule</code> 的 <code>entryComponents</code> 数组中。</p><p translation-origin="off">Any components that are included inside of a bottom sheet have to be added to the <code>entryComponents</code>
+inside your <code>NgModule</code>.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [
+    <span class="hljs-comment">// ...</span>
+    MatBottomSheetModule
+  ],
+
+  <span class="hljs-attr">declarations</span>: [
+    AppComponent,
+    ExampleBottomSheetComponent
+  ],
+
+  <span class="hljs-attr">entryComponents</span>: [
+    ExampleBottomSheetComponent
+  ],
+
+  <span class="hljs-attr">providers</span>: [],
+  <span class="hljs-attr">bootstrap</span>: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
+
+        <h3 id="specifying-global-configuration-defaults" class="docs-header-link" translation-result="on">
+          <span header-link="全局指定配置的默认值"></span>
+          全局指定配置的默认值
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="specifying-global-configuration-defaults"></span>
+          Specifying global configuration defaults
+        </h3>
+      
+        
+      <p translation-result="on">可以通过在应用的根模块中为 <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> 提供一个 <code>MatBottomSheetConfig</code> 实例来为底部操作表指定默认选项。</p><p translation-origin="off">Default bottom sheet options can be specified by providing an instance of <code>MatBottomSheetConfig</code>
+for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application's root module.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MAT_BOTTOM_SHEET_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">hasBackdrop</span>: <span class="hljs-literal">false</span>}}
+  ]
+})</code></pre>
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，底部操作表的根元素伤都会有一个 <code>role="dialog"</code> 属性，并且可以使用 <code>MatBottomSheetConfig</code> 上的 <code>ariaLabel</code> 属性标记出来。</p><p translation-origin="off">By default, the bottom sheet has <code>role="dialog"</code> on the root element and can be labelled using the
+<code>ariaLabel</code> property on the <code>MatBottomSheetConfig</code>.</p>
+
+<p translation-result="on">当底部操作表打开时，它就会把焦点移交给所能找到的第一个可获得焦点的子元素。
+要阻止用户通过 tab 把焦点移到背景元素上，Material 的底部操作表会用<a href="guide/overview#focustrap">焦点陷阱</a>把焦点锁在自己的内部。
+当底部操作表关闭时，它就会把焦点归还给打开操作表之前的拥有焦点的那个元素。</p><p translation-origin="off">When a bottom sheet is opened, it will move focus to the first focusable element that it can find.
+In order to prevent users from tabbing into elements in the background, the Material bottom sheet
+uses a <a href="https://material.angular.io/cdk/a11y/overview#focustrap">focus trap</a> to contain focus
+within itself. Once a bottom sheet is closed, it will return focus to the element that was focused
+before it was opened.</p>
+
+
+        <h4 id="focus-management" class="docs-header-link" translation-result="on">
+          <span header-link="焦点管理"></span>
+          焦点管理
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="focus-management"></span>
+          Focus management
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，当打开时，底部工作表中第一个可 tab 进去的子元素将会接受焦点。
+不过，也可以通过为另一个可获得焦点的元素添加 <code>cdkFocusInitial</code> 元素来配置它。</p><p translation-origin="off">By default, the first tabbable element within the bottom sheet will receive focus upon open.
+This can be configured by setting the <code>cdkFocusInitial</code> attribute on another focusable element.</p>
+
+
+        <h4 id="keyboard-interaction" class="docs-header-link" translation-result="on">
+          <span header-link="键盘交互"></span>
+          键盘交互
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，按 ESC 键就会关闭底部操作表。虽然也可以通过 <code>disableClose</code> 选项来禁止此行为，不过一般不应这样做，因为它会打破屏幕阅读器用户所期望的交互模式。</p><p translation-origin="off">By default pressing the escape key will close the bottom sheet. While this behavior can
+be turned off via the <code>disableClose</code> option, users should generally avoid doing so
+as it breaks the expected interaction pattern for screen-reader users.</p>
+
+</div></body></html>

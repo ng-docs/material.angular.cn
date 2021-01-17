@@ -1,0 +1,68 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core/testing'</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
+<span class="hljs-keyword">import</span> {MatListHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/list/testing'</span>;
+<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
+  <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/list'</span>;
+<span class="hljs-keyword">import</span> {ListHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./list-harness-example'</span>;
+
+describe(<span class="hljs-string">'ListHarnessExample'</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;ListHarnessExample&gt;;
+  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+  beforeAll(<span class="hljs-function">() =&gt;</span> {
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+  });
+
+  beforeEach(
+    waitForAsync(<span class="hljs-function">() =&gt;</span> {
+      TestBed.configureTestingModule({
+        <span class="hljs-attr">imports</span>: [MatListModule],
+        <span class="hljs-attr">declarations</span>: [ListHarnessExample]
+      }).compileComponents();
+      fixture = TestBed.createComponent(ListHarnessExample);
+      fixture.detectChanges();
+      loader = TestbedHarnessEnvironment.loader(fixture);
+    })
+  );
+
+  it(<span class="hljs-string">'should get all items'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">await</span> loader.getHarness(MatListHarness);
+    <span class="hljs-keyword">const</span> items = <span class="hljs-keyword">await</span> list.getItems();
+    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> items.map(<span class="hljs-function"><span class="hljs-params">i</span> =&gt;</span> i.getText())))
+      .toEqual([<span class="hljs-string">'Item 1'</span>, <span class="hljs-string">'Item 2'</span>, <span class="hljs-string">'Item 3'</span>]);
+  });
+
+  it(<span class="hljs-string">'should get all items matching text'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">await</span> loader.getHarness(MatListHarness);
+    <span class="hljs-keyword">const</span> items = <span class="hljs-keyword">await</span> list.getItems({<span class="hljs-attr">text</span>: <span class="hljs-regexp">/[13]/</span>});
+    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> items.map(<span class="hljs-function"><span class="hljs-params">i</span> =&gt;</span> i.getText()))).toEqual([<span class="hljs-string">'Item 1'</span>, <span class="hljs-string">'Item 3'</span>]);
+  });
+
+  it(<span class="hljs-string">'should get items by subheader'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">await</span> loader.getHarness(MatListHarness);
+    <span class="hljs-keyword">const</span> sections = <span class="hljs-keyword">await</span> list.getItemsGroupedBySubheader();
+    expect(sections.length).toBe(<span class="hljs-number">3</span>);
+    expect(sections[<span class="hljs-number">0</span>].heading).toBeUndefined();
+    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> sections[<span class="hljs-number">0</span>].items.map(<span class="hljs-function"><span class="hljs-params">i</span> =&gt;</span> i.getText()))).toEqual([<span class="hljs-string">'Item 1'</span>]);
+    expect(sections[<span class="hljs-number">1</span>].heading).toBe(<span class="hljs-string">'Section 1'</span>);
+    expect(<span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> sections[<span class="hljs-number">1</span>].items.map(<span class="hljs-function"><span class="hljs-params">i</span> =&gt;</span> i.getText())))
+      .toEqual([<span class="hljs-string">'Item 2'</span>, <span class="hljs-string">'Item 3'</span>]);
+    expect(sections[<span class="hljs-number">2</span>].heading).toBe(<span class="hljs-string">'Section 2'</span>);
+    expect(sections[<span class="hljs-number">2</span>].items.length).toEqual(<span class="hljs-number">0</span>);
+  });
+
+  it(<span class="hljs-string">'should get list item text and lines'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> list = <span class="hljs-keyword">await</span> loader.getHarness(MatListHarness);
+    <span class="hljs-keyword">const</span> items = <span class="hljs-keyword">await</span> list.getItems();
+    expect(items.length).toBe(<span class="hljs-number">3</span>);
+    expect(<span class="hljs-keyword">await</span> items[<span class="hljs-number">0</span>].getText()).toBe(<span class="hljs-string">'Item 1'</span>);
+    expect(<span class="hljs-keyword">await</span> items[<span class="hljs-number">0</span>].getLinesText()).toEqual([<span class="hljs-string">'Item'</span>, <span class="hljs-string">'1'</span>]);
+    expect(<span class="hljs-keyword">await</span> items[<span class="hljs-number">1</span>].getText()).toBe(<span class="hljs-string">'Item 2'</span>);
+    expect(<span class="hljs-keyword">await</span> items[<span class="hljs-number">1</span>].getLinesText()).toEqual([]);
+    expect(<span class="hljs-keyword">await</span> items[<span class="hljs-number">2</span>].getText()).toBe(<span class="hljs-string">'Item 3'</span>);
+    expect(<span class="hljs-keyword">await</span> items[<span class="hljs-number">2</span>].getLinesText()).toEqual([]);
+  });
+});
+</body></html>

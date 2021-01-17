@@ -1,0 +1,46 @@
+<html><head></head><body><ng-template #weightedit="" let-element="">
+    <div style="background-color: white; width: 100%">
+      <form #f="ngForm" cdkeditcontrol="" cdkeditcontrolclickoutbehavior="submit" (ngsubmit)="onSubmitWeight(element, f)" [cdkeditcontrolpreservedformvalue]="preservedWeightValues.get(element)" (cdkeditcontrolpreservedformvaluechange)="preservedWeightValues.set(element, $event)"></form>
+        <input type="number" [ngmodel]="element.weight" name="weight" required="">
+      
+    </div>
+  </ng-template><table editable="" class="example-table">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
+  
+  
+  <tbody><tr>
+    <th> No. </th>
+    <th> Name </th>
+    <th> Weight </th>
+    <th> Symbol </th>
+  </tr>
+  
+  <tr *ngfor="let element of elements">
+    <td> {{element.position}} </td>
+    
+    <td [cdkpopoveredit]="nameEdit" cdkpopoveredittabout="" cdkeditopen="">
+      {{element.name}}
+      
+      <!-- This edit is defined in the cell and can implicitly access element -->
+      <ng-template #nameedit="">
+        <div style="background-color: white; width: 100%">
+          <form #f="ngForm" cdkeditcontrol="" cdkeditcontrolclickoutbehavior="submit" (ngsubmit)="onSubmitName(element, f)" [cdkeditcontrolpreservedformvalue]="preservedNameValues.get(element)" (cdkeditcontrolpreservedformvaluechange)="preservedNameValues.set(element, $event)">
+            <input [ngmodel]="element.name" name="name" required="">
+            <br>
+            <button type="submit">Confirm</button>
+          </form>
+        </div>
+      </ng-template>
+    </td>
+
+    <td [cdkpopoveredit]="weightEdit" [cdkpopovereditcontext]="element" cdkpopoveredittabout="" cdkeditopen="">
+      {{element.weight}}
+    </td>
+
+    <td> {{element.symbol}} </td>
+  </tr>
+</tbody></table>
+</body></html>

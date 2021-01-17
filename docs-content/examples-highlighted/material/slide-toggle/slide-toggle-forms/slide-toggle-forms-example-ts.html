@@ -1,0 +1,27 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title <span class="hljs-variable">Slide</span></span>-toggle with forms
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'slide-toggle-forms-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'./slide-toggle-forms-example.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'./slide-toggle-forms-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SlideToggleFormsExample</span> </span>{
+  isChecked = <span class="hljs-literal">true</span>;
+  formGroup: FormGroup;
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">formBuilder: FormBuilder</span>)</span> {
+    <span class="hljs-built_in">this</span>.formGroup = formBuilder.group({
+      <span class="hljs-attr">enableWifi</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-attr">acceptTerms</span>: [<span class="hljs-string">''</span>, Validators.requiredTrue]
+    });
+  }
+
+  <span class="hljs-function"><span class="hljs-title">onFormSubmit</span>(<span class="hljs-params"></span>)</span> {
+    alert(<span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-built_in">this</span>.formGroup.value, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>));
+  }
+}
+</body></html>

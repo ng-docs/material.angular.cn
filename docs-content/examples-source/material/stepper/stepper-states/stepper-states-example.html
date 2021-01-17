@@ -1,0 +1,69 @@
+<html><head></head><body><mat-horizontal-stepper #stepper="">
+  <mat-step [stepcontrol]="firstFormGroup">
+    <form [formgroup]="firstFormGroup">
+      <ng-template matsteplabel="">Fill out your name</ng-template>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matinput="" placeholder="Last name, First name" formcontrolname="firstCtrl" required="">
+      </mat-form-field>
+      <div>
+        <button mat-button="" matsteppernext="">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepcontrol]="secondFormGroup">
+    <form [formgroup]="secondFormGroup">
+      <ng-template matsteplabel="">Fill out your address</ng-template>
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matinput="" formcontrolname="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required="">
+      </mat-form-field>
+      <div>
+        <button mat-button="" matstepperprevious="">Back</button>
+        <button mat-button="" matsteppernext="">Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matsteplabel="">Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button="" matstepperprevious="">Back</button>
+      <button mat-button="" (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<!-- #docregion states -->
+<mat-horizontal-stepper>
+<!-- #docregion label -->
+  <mat-step label="Step 1" state="phone">
+    <p>Put down your phones.</p>
+    <div>
+      <button mat-button="" matsteppernext="">Next</button>
+    </div>
+  </mat-step>
+<!-- #enddocregion label -->
+  <mat-step label="Step 2" state="chat">
+    <p>Socialize with each other.</p>
+    <div>
+      <button mat-button="" matstepperprevious="">Back</button>
+      <button mat-button="" matsteppernext="">Next</button>
+    </div>
+  </mat-step>
+  <mat-step label="Step 3">
+    <p>You're welcome.</p>
+  </mat-step>
+
+  <!-- Icon overrides. -->
+<!-- #docregion override-icons -->
+  <ng-template matsteppericon="phone">
+    <mat-icon>call_end</mat-icon>
+  </ng-template>
+  <ng-template matsteppericon="chat">
+    <mat-icon>forum</mat-icon>
+  </ng-template>
+</mat-horizontal-stepper>
+<!-- #enddocregion override-icons -->
+<!-- #enddocregion states -->
+</body></html>

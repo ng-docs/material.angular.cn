@@ -1,0 +1,24 @@
+<html><head></head><body><mat-form-field>
+  <mat-label>List length</mat-label>
+  <input matinput="" [(ngmodel)]="length" type="number">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Page size</mat-label>
+  <input matinput="" [(ngmodel)]="pageSize" type="number">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Page size options</mat-label>
+  <input matinput="" [ngmodel]="pageSizeOptions" (ngmodelchange)="setPageSizeOptions($event)" [ngmodeloptions]="{updateOn: 'blur'}" placeholder="Ex. 10,25,50">
+</mat-form-field>
+
+<mat-paginator [length]="length" [pagesize]="pageSize" [pagesizeoptions]="pageSizeOptions" (page)="pageEvent = $event">
+</mat-paginator>
+
+<div *ngif="pageEvent">
+  <h5 id="page-change-event-properties">Page Change Event Properties</h5>
+  <div>List length: {{pageEvent.length}}</div>
+  <div>Page size: {{pageEvent.pageSize}}</div>
+  <div>Page index: {{pageEvent.pageIndex}}</div>
+</div>
+</body></html>

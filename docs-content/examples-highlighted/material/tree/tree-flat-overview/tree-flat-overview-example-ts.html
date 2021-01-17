@@ -1,0 +1,80 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatTreeFlatDataSource, MatTreeFlattener} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+
+<span class="hljs-comment">/**
+ * Food data with nested structure.
+ * Each node has a name and an optional list of children.
+ */</span>
+<span class="hljs-keyword">interface</span> FoodNode {
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  children?: FoodNode[];
+}
+
+<span class="hljs-keyword">const</span> TREE_DATA: FoodNode[] = [
+  {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Fruit'</span>,
+    <span class="hljs-attr">children</span>: [
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">'Apple'</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">'Banana'</span>},
+      {<span class="hljs-attr">name</span>: <span class="hljs-string">'Fruit loops'</span>},
+    ]
+  }, {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'Vegetables'</span>,
+    <span class="hljs-attr">children</span>: [
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Green'</span>,
+        <span class="hljs-attr">children</span>: [
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">'Broccoli'</span>},
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">'Brussels sprouts'</span>},
+        ]
+      }, {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'Orange'</span>,
+        <span class="hljs-attr">children</span>: [
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">'Pumpkins'</span>},
+          {<span class="hljs-attr">name</span>: <span class="hljs-string">'Carrots'</span>},
+        ]
+      },
+    ]
+  },
+];
+
+<span class="hljs-comment">/** Flat node with expandable and level information */</span>
+<span class="hljs-keyword">interface</span> ExampleFlatNode {
+  <span class="hljs-attr">expandable</span>: <span class="hljs-built_in">boolean</span>;
+  name: <span class="hljs-built_in">string</span>;
+  level: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Tree with flat nodes
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'tree-flat-overview-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'tree-flat-overview-example.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'tree-flat-overview-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeFlatOverviewExample</span> </span>{
+  <span class="hljs-keyword">private</span> _transformer = <span class="hljs-function">(<span class="hljs-params">node: FoodNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">expandable</span>: !!node.children &amp;&amp; node.children.length &gt; <span class="hljs-number">0</span>,
+      <span class="hljs-attr">name</span>: node.name,
+      <span class="hljs-attr">level</span>: level,
+    };
+  }
+
+  treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;ExampleFlatNode&gt;(
+      <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable);
+
+  treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(
+      <span class="hljs-built_in">this</span>._transformer, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children);
+
+  dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-built_in">this</span>.treeControl, <span class="hljs-built_in">this</span>.treeFlattener);
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dataSource.data = TREE_DATA;
+  }
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: ExampleFlatNode</span>) =&gt;</span> node.expandable;
+}
+</body></html>

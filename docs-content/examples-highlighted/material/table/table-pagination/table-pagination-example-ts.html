@@ -1,0 +1,53 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatPaginator} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/paginator'</span>;
+<span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Table with pagination
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'table-pagination-example'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'table-pagination-example.css'</span>],
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'table-pagination-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TablePaginationExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
+
+  <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dataSource.paginator = <span class="hljs-built_in">this</span>.paginator;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  position: <span class="hljs-built_in">number</span>;
+  weight: <span class="hljs-built_in">number</span>;
+  symbol: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Hydrogen'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'H'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Helium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'He'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Lithium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Li'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Beryllium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">9.0122</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Be'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Boron'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">10.811</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'B'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Carbon'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">12.0107</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'C'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">7</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Nitrogen'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">14.0067</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'N'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">8</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Oxygen'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">15.9994</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'O'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Fluorine'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">18.9984</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'F'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Neon'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">20.1797</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Ne'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">11</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Sodium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">22.9897</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Na'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">12</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Magnesium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">24.305</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Mg'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">13</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Aluminum'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">26.9815</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Al'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">14</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Silicon'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">28.0855</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Si'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">15</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Phosphorus'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">30.9738</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'P'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Sulfur'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">32.065</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'S'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">17</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Chlorine'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">35.453</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Cl'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">18</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Argon'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">39.948</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Ar'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">19</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Potassium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">39.0983</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'K'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">20</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Calcium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">40.078</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Ca'</span>},
+];
+</body></html>

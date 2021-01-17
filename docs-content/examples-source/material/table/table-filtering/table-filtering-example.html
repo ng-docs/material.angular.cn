@@ -1,0 +1,40 @@
+<html><head></head><body><mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matinput="" (keyup)="applyFilter($event)" placeholder="Ex. ium" #input="">
+</mat-form-field>
+
+<ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="name">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><table mat-table="" [datasource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Position Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef=""> No. </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.position}} </td>
+  
+
+  <!-- Name Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Name </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.name}} </td>
+  
+
+  <!-- Weight Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Weight </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.weight}} </td>
+  
+
+  <!-- Symbol Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Symbol </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.symbol}} </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matnodatarow="">
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</tbody></table>
+</body></html>

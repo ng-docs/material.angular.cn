@@ -1,0 +1,9 @@
+<html><head></head><body><form class="example-form">
+  <input type="text" placeholder="Search for a street" [formcontrol]="control" [matautocomplete]="auto">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngfor="let street of filteredStreets | async" [value]="street">
+      {{street}}
+    </mat-option>
+  </mat-autocomplete>
+</form>
+</body></html>

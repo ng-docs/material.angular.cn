@@ -1,0 +1,65 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core/testing'</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
+<span class="hljs-keyword">import</span> {HarnessLoader, parallel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
+  <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
+<span class="hljs-keyword">import</span> {IconHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./icon-harness-example'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule, MatIconRegistry} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatIconHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon/testing'</span>;
+<span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;
+
+
+describe(<span class="hljs-string">'IconHarnessExample'</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IconHarnessExample&gt;;
+  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+  beforeAll(<span class="hljs-function">() =&gt;</span> {
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+  });
+
+  beforeEach(
+    waitForAsync(<span class="hljs-function">() =&gt;</span> {
+      TestBed.configureTestingModule({
+        <span class="hljs-attr">imports</span>: [MatIconModule],
+        <span class="hljs-attr">declarations</span>: [IconHarnessExample]
+      }).compileComponents();
+    })
+  );
+
+  beforeEach(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">const</span> registry = TestBed.inject(MatIconRegistry);
+    <span class="hljs-keyword">const</span> sanitizer = TestBed.inject(DomSanitizer);
+
+    <span class="hljs-comment">// We use `bypassSecurityTrustHtml` exclusively for testing here.</span>
+    registry.addSvgIconLiteralInNamespace(<span class="hljs-string">'svgIcons'</span>, <span class="hljs-string">'svgIcon'</span>,
+      sanitizer.bypassSecurityTrustHtml(<span class="hljs-string">'&lt;svg&gt;&lt;/svg&gt;'</span>));
+
+    fixture = TestBed.createComponent(IconHarnessExample);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
+
+  it(<span class="hljs-string">'should load all icon harnesses'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
+    expect(icons.length).toBe(<span class="hljs-number">3</span>);
+  });
+
+  it(<span class="hljs-string">'should get the name of an icon'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
+    <span class="hljs-keyword">const</span> names = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> icons.map(<span class="hljs-function"><span class="hljs-params">icon</span> =&gt;</span> icon.getName()));
+    expect(names).toEqual([<span class="hljs-string">'fontIcon'</span>, <span class="hljs-string">'svgIcon'</span>, <span class="hljs-string">'ligature_icon'</span>]);
+  });
+
+  it(<span class="hljs-string">'should get the namespace of an icon'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
+    <span class="hljs-keyword">const</span> namespaces = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> icons.map(<span class="hljs-function"><span class="hljs-params">icon</span> =&gt;</span> icon.getNamespace()));
+    expect(namespaces).toEqual([<span class="hljs-string">'fontIcons'</span>, <span class="hljs-string">'svgIcons'</span>, <span class="hljs-literal">null</span>]);
+  });
+
+  it(<span class="hljs-string">'should get whether an icon is inline'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> icons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatIconHarness);
+    <span class="hljs-keyword">const</span> inlineStates = <span class="hljs-keyword">await</span> parallel(<span class="hljs-function">() =&gt;</span> icons.map(<span class="hljs-function"><span class="hljs-params">icon</span> =&gt;</span> icon.isInline()));
+    expect(inlineStates).toEqual([<span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span>]);
+  });
+});
+</body></html>

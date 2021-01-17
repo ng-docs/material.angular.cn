@@ -1,0 +1,38 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">interface</span> Food {
+  <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">interface</span> Car {
+  <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Basic select with initial value and no form
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'select-initial-value-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'select-initial-value-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SelectInitialValueExample</span> </span>{
+  <span class="hljs-attr">foods</span>: Food[] = [
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">'steak-0'</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">'Steak'</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">'pizza-1'</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">'Pizza'</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">'tacos-2'</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">'Tacos'</span>}
+  ];
+  cars: Car[] = [
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">'ford'</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">'Ford'</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">'chevrolet'</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">'Chevrolet'</span>},
+    {<span class="hljs-attr">value</span>: <span class="hljs-string">'dodge'</span>, <span class="hljs-attr">viewValue</span>: <span class="hljs-string">'Dodge'</span>}
+  ];
+  selectedFood = <span class="hljs-built_in">this</span>.foods[<span class="hljs-number">2</span>].value;
+  selectedCar = <span class="hljs-built_in">this</span>.cars[<span class="hljs-number">0</span>].value;
+
+  <span class="hljs-function"><span class="hljs-title">selectCar</span>(<span class="hljs-params">event: Event</span>)</span> {
+    <span class="hljs-built_in">this</span>.selectedCar = (event.target <span class="hljs-keyword">as</span> HTMLSelectElement).value;
+  }
+}
+</body></html>

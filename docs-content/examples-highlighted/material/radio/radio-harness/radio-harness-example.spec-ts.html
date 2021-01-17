@@ -1,0 +1,59 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {TestBed, ComponentFixture, waitForAsync} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core/testing'</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
+<span class="hljs-keyword">import</span> {MatRadioButtonHarness, MatRadioGroupHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio/testing'</span>;
+<span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {BrowserDynamicTestingModule, platformBrowserDynamicTesting}
+  <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser-dynamic/testing'</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio'</span>;
+<span class="hljs-keyword">import</span> {RadioHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./radio-harness-example'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+describe(<span class="hljs-string">'RadioHarnessExample'</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;RadioHarnessExample&gt;;
+  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+  beforeAll(<span class="hljs-function">() =&gt;</span> {
+    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+  });
+
+  beforeEach(
+    waitForAsync(<span class="hljs-function">() =&gt;</span> {
+      TestBed.configureTestingModule({
+        <span class="hljs-attr">imports</span>: [MatRadioModule, ReactiveFormsModule],
+        <span class="hljs-attr">declarations</span>: [RadioHarnessExample]
+      }).compileComponents();
+      fixture = TestBed.createComponent(RadioHarnessExample);
+      fixture.detectChanges();
+      loader = TestbedHarnessEnvironment.loader(fixture);
+    })
+  );
+
+  it(<span class="hljs-string">'should load all radio-group harnesses'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> groups = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatRadioGroupHarness);
+    expect(groups.length).toBe(<span class="hljs-number">1</span>);
+  });
+
+  it(<span class="hljs-string">'should get name of radio-group'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> group = <span class="hljs-keyword">await</span> loader.getHarness(MatRadioGroupHarness);
+    <span class="hljs-keyword">const</span> name = <span class="hljs-keyword">await</span> group.getName();
+    expect(name).toBe(<span class="hljs-string">'flavors'</span>);
+  });
+
+  it(<span class="hljs-string">'should check radio button'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatRadioButtonHarness);
+    expect(<span class="hljs-keyword">await</span> buttons[<span class="hljs-number">0</span>].isChecked()).toBeTrue();
+
+    <span class="hljs-keyword">await</span> buttons[<span class="hljs-number">1</span>].check();
+    expect(<span class="hljs-keyword">await</span> buttons[<span class="hljs-number">1</span>].isChecked()).toBeTrue();
+    expect(<span class="hljs-keyword">await</span> buttons[<span class="hljs-number">0</span>].isChecked()).toBeFalse();
+  });
+
+  it(<span class="hljs-string">'should get label text of buttons'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> [firstRadio, secondRadio, thirdRadio] =
+      <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatRadioButtonHarness);
+    expect(<span class="hljs-keyword">await</span> firstRadio.getLabelText()).toBe(<span class="hljs-string">'Chocolate'</span>);
+    expect(<span class="hljs-keyword">await</span> secondRadio.getLabelText()).toBe(<span class="hljs-string">'Vanilla'</span>);
+    expect(<span class="hljs-keyword">await</span> thirdRadio.getLabelText()).toBe(<span class="hljs-string">'Strawberry'</span>);
+  });
+});
+</body></html>

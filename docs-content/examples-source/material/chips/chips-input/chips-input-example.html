@@ -1,0 +1,11 @@
+<html><head></head><body><mat-form-field class="example-chip-list">
+  <mat-label>Favorite Fruits</mat-label>
+  <mat-chip-list #chiplist="" aria-label="Fruit selection">
+    <mat-chip *ngfor="let fruit of fruits" [selectable]="selectable" [removable]="removable" (removed)="remove(fruit)">
+      {{fruit.name}}
+      <mat-icon matchipremove="" *ngif="removable">cancel</mat-icon>
+    </mat-chip>
+    <input placeholder="New fruit..." [matchipinputfor]="chipList" [matchipinputseparatorkeycodes]="separatorKeysCodes" [matchipinputaddonblur]="addOnBlur" (matchipinputtokenend)="add($event)">
+  </mat-chip-list>
+</mat-form-field>
+</body></html>

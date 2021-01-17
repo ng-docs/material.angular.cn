@@ -1,0 +1,9 @@
+<html><head></head><body><mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngfor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</body></html>

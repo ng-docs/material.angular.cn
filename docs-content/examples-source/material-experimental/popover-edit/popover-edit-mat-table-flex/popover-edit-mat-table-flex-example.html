@@ -1,0 +1,76 @@
+<html><head></head><body><mat-table class="example-table" editable="" [datasource]="dataSource">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
+  <ng-template #weightedit="" let-element="">
+    <div>
+      <form #f="ngForm" mateditlens="" (ngsubmit)="onSubmitWeight(element, f)" [mateditlenspreservedformvalue]="preservedWeightValues.get(element)" (mateditlenspreservedformvaluechange)="preservedWeightValues.set(element, $event)">
+        <div mat-edit-content="">
+          <mat-form-field>
+            <input matinput="" type="number" [ngmodel]="element.weight" name="weight" required="">
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+
+  <!-- Position Column -->
+  <ng-container matcolumndef="position">
+    <mat-header-cell *matheadercelldef=""> No. </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.position}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matcolumndef="name">
+    <mat-header-cell *matheadercelldef=""> Name </mat-header-cell>
+    <mat-cell *matcelldef="let element" [matpopoveredit]="nameEdit">
+      {{element.name}}
+      
+      <!-- This edit is defined in the cell and can implicitly access element -->
+      <ng-template #nameedit="">
+        <div>
+          <form #f="ngForm" mateditlens="" (ngsubmit)="onSubmitName(element, f)" [mateditlenspreservedformvalue]="preservedNameValues.get(element)" (mateditlenspreservedformvaluechange)="preservedNameValues.set(element, $event)">
+            <h2 mat-edit-title="" id="name">Name</h2>
+            <div mat-edit-content="">
+              <mat-form-field>
+                <input matinput="" [ngmodel]="element.name" name="name" required="">
+              </mat-form-field>
+            </div>
+            <div mat-edit-actions="">
+              <button mat-button="" type="submit">Confirm</button>
+              <button mat-button="" mateditrevert="">Revert</button>
+              <button mat-button="" mateditclose="">Close</button>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+
+      <span *matrowhovercontent="">
+        <button mat-icon-button="" mateditopen=""><mat-icon>edit</mat-icon></button>
+      </span>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matcolumndef="weight">
+    <mat-header-cell *matheadercelldef=""> Weight </mat-header-cell>
+    <mat-cell *matcelldef="let element" [matpopoveredit]="weightEdit" [matpopovereditcontext]="element">
+      {{element.weight}}
+      
+      <span *matrowhovercontent="">
+        <button mat-icon-button="" mateditopen=""><mat-icon>edit</mat-icon></button>
+      </span>
+      </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matcolumndef="symbol">
+    <mat-header-cell *matheadercelldef=""> Symbol </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.symbol}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matheaderrowdef="displayedColumns"></mat-header-row>
+  <mat-row *matrowdef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+</body></html>

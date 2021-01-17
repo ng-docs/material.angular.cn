@@ -1,0 +1,7 @@
+<html><head></head><body><mat-autocomplete #autocomplete="matAutocomplete">
+  <mat-option *ngfor="let state of states" [value]="state.code">{{ state.name }}</mat-option>
+</mat-autocomplete>
+
+<input id="plain" [matautocomplete]="autocomplete">
+<input id="disabled" disabled="" [matautocomplete]="autocomplete">
+</body></html>

@@ -1,0 +1,45 @@
+<html><head></head><body><form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Company (disabled)</mat-label>
+    <input matinput="" disabled="" value="Google">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0"><tbody><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>First name</mat-label>
+      <input matinput="">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Long Last Name That Will Be Truncated</mat-label>
+      <input matinput="">
+    </mat-form-field></td>
+  </tr></tbody></table>
+
+  <p>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <textarea matinput="" placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Address 2</mat-label>
+      <textarea matinput=""></textarea>
+    </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0"><tbody><tr>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>City</mat-label>
+      <input matinput="" placeholder="Ex. San Francisco">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>State</mat-label>
+      <input matinput="" placeholder="Ex. California">
+    </mat-form-field></td>
+    <td><mat-form-field class="example-full-width">
+      <mat-label>Postal Code</mat-label>
+      <input matinput="" #postalcode="" maxlength="5" placeholder="Ex. 94105" value="94043">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field></td>
+  </tr></tbody></table>
+</form>
+</body></html>

@@ -1,0 +1,58 @@
+<html><head></head><body><ng-template #nameedit="" let-ctx="">
+    <div style="background-color: #ddd; width: 100%">
+      <form #f="ngForm" cdkeditcontrol="" (ngsubmit)="onSubmit(ctx.person, f)" [cdkeditcontrolpreservedformvalue]="preservedValues.get(ctx.person)" (cdkeditcontrolpreservedformvaluechange)="preservedValues.set(ctx.person, $event)"></form>
+        <div class="example-input-container">
+          <input [ngmodel]="ctx.person.firstName" name="firstName" required="" [attr.cdkfocusinitial]="ctx.focus === 'firstName' || null">
+          <input [ngmodel]="ctx.person.middleName" name="middleName" [attr.cdkfocusinitial]="ctx.focus === 'middleName' || null">
+          <input [ngmodel]="ctx.person.lastName" name="lastName" required="" [attr.cdkfocusinitial]="ctx.focus === 'lastName' || null">
+        </div>
+        <br>
+        <br>
+        <button type="submit">Confirm</button>
+        <button cdkeditrevert="">Revert</button>
+        <button cdkeditclose="">Close</button>
+      
+    </div>
+  </ng-template><table editable="" class="example-table">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
+  
+  
+  <tbody><tr>
+    <th> No. </th>
+    <th> First name </th>
+    <th> Middle name </th>
+    <th> Last name </th>
+  </tr>
+  
+  <tr *ngfor="let person of persons">
+    <td> {{person.id}} </td>
+
+    <td [cdkpopoveredit]="nameEdit" [cdkpopovereditcontext]="{person: person, focus: 'firstName'}" [cdkpopovereditcolspan]="{after: 2}">
+      {{person.firstName}}
+      
+      <span *cdkrowhovercontent="">
+        <button cdkeditopen="">Edit</button>
+      </span>
+    </td>
+    
+    <td [cdkpopoveredit]="nameEdit" [cdkpopovereditcontext]="{person: person, focus: 'middleName'}" [cdkpopovereditcolspan]="{before: 1, after: 1}">
+      {{person.middleName}}
+      
+      <span *cdkrowhovercontent="">
+        <button cdkeditopen="">Edit</button>
+      </span>
+    </td>
+    
+    <td [cdkpopoveredit]="nameEdit" [cdkpopovereditcontext]="{person: person, focus: 'lastName'}" [cdkpopovereditcolspan]="{before: 2}">
+      {{person.lastName}}
+      
+      <span *cdkrowhovercontent="">
+        <button cdkeditopen="">Edit</button>
+      </span>
+    </td>
+  </tr>
+</tbody></table>
+</body></html>

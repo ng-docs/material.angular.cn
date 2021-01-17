@@ -1,0 +1,16 @@
+<html><head></head><body><mat-checkbox [(ngmodel)]="centered" class="example-ripple-checkbox">Centered</mat-checkbox>
+<mat-checkbox [(ngmodel)]="disabled" class="example-ripple-checkbox">Disabled</mat-checkbox>
+<mat-checkbox [(ngmodel)]="unbounded" class="example-ripple-checkbox">Unbounded</mat-checkbox>
+
+<mat-form-field class="example-ripple-form-field">
+  <input matinput="" [(ngmodel)]="radius" type="number" placeholder="Radius">
+</mat-form-field>
+<mat-form-field class="example-ripple-form-field">
+  <input matinput="" [(ngmodel)]="color" type="text" placeholder="Color">
+</mat-form-field>
+
+
+<div class="example-ripple-container mat-elevation-z4" matripple="" [matripplecentered]="centered" [matrippledisabled]="disabled" [matrippleunbounded]="unbounded" [matrippleradius]="radius" [matripplecolor]="color">
+  Click me
+</div>
+</body></html>

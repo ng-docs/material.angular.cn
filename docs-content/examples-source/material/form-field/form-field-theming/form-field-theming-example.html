@@ -1,0 +1,18 @@
+<html><head></head><body><form class="example-container" [formgroup]="options" [style.fontsize.px]="getFontSize()">
+  <mat-form-field appearance="fill" [color]="colorControl.value">
+    <mat-label>Color</mat-label>
+    <mat-select [formcontrol]="colorControl">
+      <mat-option value="primary">Primary</mat-option>
+      <mat-option value="accent">Accent</mat-option>
+      <mat-option value="warn">Warn</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" [color]="colorControl.value">
+    <mat-label>Font size</mat-label>
+    <input matinput="" type="number" placeholder="Ex. 12" [formcontrol]="fontSizeControl" min="10">
+    <span matsuffix="">px</span>
+    <mat-error *ngif="fontSizeControl.invalid">Min size: 10px</mat-error>
+  </mat-form-field>
+</form>
+</body></html>

@@ -1,0 +1,14 @@
+<html><head></head><body><button mat-raised-button="" (click)="addColumn()"> Add column </button>
+<button mat-raised-button="" (click)="removeColumn()"> Remove column </button>
+<button mat-raised-button="" (click)="shuffle()"> Shuffle </button>
+
+<ng-container [matcolumndef]="column" *ngfor="let column of displayedColumns">
+    </ng-container><table mat-table="" [datasource]="data" class="mat-elevation-z8">
+  <tbody><tr><th mat-header-cell="" *matheadercelldef=""> {{column}} </th>
+    <td mat-cell="" *matcelldef="let element"> {{element[column]}} </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="columnsToDisplay"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: columnsToDisplay;"></tr>
+</tbody></table>
+</body></html>

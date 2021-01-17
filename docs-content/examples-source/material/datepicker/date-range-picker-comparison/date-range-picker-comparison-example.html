@@ -1,0 +1,20 @@
+<html><head></head><body><mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>First campaign</mat-label>
+  <mat-date-range-input [formgroup]="campaignOne" [rangepicker]="campaignOnePicker" [comparisonstart]="campaignTwo.value.start" [comparisonend]="campaignTwo.value.end">
+    <input matstartdate="" placeholder="Start date" formcontrolname="start">
+    <input matenddate="" placeholder="End date" formcontrolname="end">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matsuffix="" [for]="campaignOnePicker"></mat-datepicker-toggle>
+  <mat-date-range-picker #campaignonepicker=""></mat-date-range-picker>
+</mat-form-field>
+
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>Second campaign</mat-label>
+  <mat-date-range-input [formgroup]="campaignTwo" [rangepicker]="campaignTwoPicker" [comparisonstart]="campaignOne.value.start" [comparisonend]="campaignOne.value.end">
+    <input matstartdate="" placeholder="Start date" formcontrolname="start">
+    <input matenddate="" placeholder="End date" formcontrolname="end">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matsuffix="" [for]="campaignTwoPicker"></mat-datepicker-toggle>
+  <mat-date-range-picker #campaigntwopicker=""></mat-date-range-picker>
+</mat-form-field>
+</body></html>

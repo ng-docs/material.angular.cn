@@ -1,0 +1,39 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/menu'</span>;
+<span class="hljs-keyword">import</span> {MenuIconsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-icons/menu-icons-example'</span>;
+<span class="hljs-keyword">import</span> {MenuOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-overview/menu-overview-example'</span>;
+<span class="hljs-keyword">import</span> {MenuPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-position/menu-position-example'</span>;
+<span class="hljs-keyword">import</span> {MenuNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-nested/menu-nested-example'</span>;
+<span class="hljs-keyword">import</span> {MenuHarnessExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-harness/menu-harness-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  MenuHarnessExample,
+  MenuIconsExample,
+  MenuOverviewExample,
+  MenuPositionExample,
+  MenuNestedExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  MenuHarnessExample,
+  MenuIconsExample,
+  MenuOverviewExample,
+  MenuPositionExample,
+  MenuNestedExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
+  <span class="hljs-attr">declarations</span>: EXAMPLES,
+  <span class="hljs-attr">exports</span>: EXAMPLES,
+  <span class="hljs-attr">entryComponents</span>: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MenuExamplesModule</span> </span>{
+}
+</body></html>

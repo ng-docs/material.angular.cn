@@ -1,0 +1,101 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  Input,
+  AfterViewInit,
+  QueryList,
+  ViewChild,
+  ContentChild,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sort'</span>;
+<span class="hljs-keyword">import</span> {
+  MatColumnDef,
+  MatHeaderRowDef,
+  MatNoDataRow,
+  MatRowDef,
+  MatTable,
+  MatTableDataSource
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  position: <span class="hljs-built_in">number</span>;
+  weight: <span class="hljs-built_in">number</span>;
+  symbol: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Hydrogen'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">1.0079</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'H'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Helium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">4.0026</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'He'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Lithium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">6.941</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Li'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Beryllium'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">9.0122</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Be'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Boron'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">10.811</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'B'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Carbon'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">12.0107</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'C'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">7</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Nitrogen'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">14.0067</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'N'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">8</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Oxygen'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">15.9994</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'O'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Fluorine'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">18.9984</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'F'</span>},
+  {<span class="hljs-attr">position</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'Neon'</span>, <span class="hljs-attr">weight</span>: <span class="hljs-number">20.1797</span>, <span class="hljs-attr">symbol</span>: <span class="hljs-string">'Ne'</span>},
+];
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Table example that shows how to wrap a table component for definition and behavior reuse.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'table-wrapped-example'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'table-wrapped-example.css'</span>],
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'table-wrapped-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableWrappedExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sort'</span>) sort: MatSort;
+
+  <span class="hljs-function"><span class="hljs-title">ngAfterViewInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dataSource.sort = <span class="hljs-built_in">this</span>.sort;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">clearTable</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dataSource.data = [];
+  }
+
+  <span class="hljs-function"><span class="hljs-title">addData</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.dataSource.data = ELEMENT_DATA;
+  }
+}
+
+<span class="hljs-comment">/**
+ * Table component that accepts column and row definitions in its content to be registered to the
+ * table.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'wrapper-table'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'wrapper-table.html'</span>,
+  <span class="hljs-attr">styles</span>: [<span class="hljs-string">`
+    table {
+      width: 100%;
+    }
+  `</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WrapperTable</span>&lt;<span class="hljs-title">T</span>&gt; <span class="hljs-title">implements</span> <span class="hljs-title">AfterContentInit</span> </span>{
+  <span class="hljs-meta">@ContentChildren</span>(MatHeaderRowDef) headerRowDefs: QueryList&lt;MatHeaderRowDef&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(MatRowDef) rowDefs: QueryList&lt;MatRowDef&lt;T&gt;&gt;;
+  <span class="hljs-meta">@ContentChildren</span>(MatColumnDef) columnDefs: QueryList&lt;MatColumnDef&gt;;
+  <span class="hljs-meta">@ContentChild</span>(MatNoDataRow) noDataRow: MatNoDataRow;
+
+  <span class="hljs-meta">@ViewChild</span>(MatTable, {<span class="hljs-attr">static</span>: <span class="hljs-literal">true</span>}) table: MatTable&lt;T&gt;;
+
+  <span class="hljs-meta">@Input</span>() columns: <span class="hljs-built_in">string</span>[];
+
+  <span class="hljs-meta">@Input</span>() dataSource: DataSource&lt;T&gt;;
+
+  <span class="hljs-function"><span class="hljs-title">ngAfterContentInit</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.columnDefs.forEach(<span class="hljs-function"><span class="hljs-params">columnDef</span> =&gt;</span> <span class="hljs-built_in">this</span>.table.addColumnDef(columnDef));
+    <span class="hljs-built_in">this</span>.rowDefs.forEach(<span class="hljs-function"><span class="hljs-params">rowDef</span> =&gt;</span> <span class="hljs-built_in">this</span>.table.addRowDef(rowDef));
+    <span class="hljs-built_in">this</span>.headerRowDefs.forEach(<span class="hljs-function"><span class="hljs-params">headerRowDef</span> =&gt;</span> <span class="hljs-built_in">this</span>.table.addHeaderRowDef(headerRowDef));
+    <span class="hljs-built_in">this</span>.table.setNoDataRow(<span class="hljs-built_in">this</span>.noDataRow);
+  }
+}
+</body></html>

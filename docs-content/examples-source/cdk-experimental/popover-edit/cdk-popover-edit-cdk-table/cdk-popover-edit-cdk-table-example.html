@@ -1,0 +1,71 @@
+<html><head></head><body><ng-template #weightedit="" let-element="">
+    <div style="background-color: white;">
+      <form #f="ngForm" cdkeditcontrol="" (ngsubmit)="onSubmitWeight(element, f)" [cdkeditcontrolpreservedformvalue]="preservedWeightValues.get(element)" (cdkeditcontrolpreservedformvaluechange)="preservedWeightValues.set(element, $event)"></form>
+        Edit b:
+        <input type="number" [ngmodel]="element.weight" name="weight" required="">
+        <br>
+        <button type="submit">Confirm</button>
+        <button cdkeditrevert="" cdkeditclose="">Revert and close</button>
+      
+    </div>
+  </ng-template><ng-container cdkcolumndef="position">
+    </ng-container><ng-container cdkcolumndef="name">
+    </ng-container><ng-container cdkcolumndef="weight">
+    </ng-container><ng-container cdkcolumndef="symbol">
+    </ng-container><table class="example-table" cdk-table="" editable="" [datasource]="dataSource">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
+  
+
+  <!-- Position Column -->
+  <tbody><tr><th cdk-header-cell="" *cdkheadercelldef=""> No. </th>
+    <td cdk-cell="" *cdkcelldef="let element"> {{element.position}} </td>
+  
+
+  <!-- Name Column -->
+  <th cdk-header-cell="" *cdkheadercelldef=""> Name </th>
+    <td cdk-cell="" *cdkcelldef="let element" [cdkpopoveredit]="nameEdit">
+      {{element.name}}
+      
+      <!-- This edit is defined in the cell and can implicitly access element -->
+      <ng-template #nameedit="">
+        <div style="background-color: white;">
+          <form #f="ngForm" cdkeditcontrol="" (ngsubmit)="onSubmitName(element, f)" [cdkeditcontrolpreservedformvalue]="preservedNameValues.get(element)" (cdkeditcontrolpreservedformvaluechange)="preservedNameValues.set(element, $event)">
+            Edit a:
+            <input [ngmodel]="element.name" name="name" required="">
+            <br>
+            <button type="submit">Confirm</button>
+            <button cdkeditrevert="">Revert</button>
+            <button cdkeditclose="">Close</button>
+          </form>
+        </div>
+      </ng-template>
+
+      <span *cdkrowhovercontent="">
+        <button cdkeditopen="">Edit</button>
+      </span>
+    </td>
+  
+
+  <!-- Weight Column -->
+  <th cdk-header-cell="" *cdkheadercelldef=""> Weight </th>
+    <td cdk-cell="" *cdkcelldef="let element" [cdkpopoveredit]="weightEdit" [cdkpopovereditcontext]="element">
+      {{element.weight}}
+      
+      <span *cdkrowhovercontent="">
+        <button cdkeditopen="">Edit</button>
+      </span>
+    </td>
+  
+
+  <!-- Symbol Column -->
+  <th cdk-header-cell="" *cdkheadercelldef=""> Symbol </th>
+    <td cdk-cell="" *cdkcelldef="let element"> {{element.symbol}} </td>
+  
+
+  </tr><tr cdk-header-row="" *cdkheaderrowdef="displayedColumns"></tr>
+  <tr cdk-row="" *cdkrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>
+</body></html>

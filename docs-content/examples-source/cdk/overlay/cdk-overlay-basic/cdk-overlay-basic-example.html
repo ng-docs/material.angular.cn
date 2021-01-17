@@ -1,0 +1,13 @@
+<!-- This button triggers the overlay and is it's origin --><html><head></head><body><button (click)="isOpen = !isOpen" type="button" cdkoverlayorigin="" #trigger="cdkOverlayOrigin">
+  {{isOpen ? "Close" : "Open"}}
+</button>
+
+<!-- This template displays the overlay content and is connected to the button -->
+<ng-template cdkconnectedoverlay="" [cdkconnectedoverlayorigin]="trigger" [cdkconnectedoverlayopen]="isOpen">
+  <ul class="example-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</ng-template>
+</body></html>

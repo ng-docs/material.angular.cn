@@ -1,0 +1,20 @@
+<html><head></head><body><ng-container matcolumndef="item">
+    </ng-container><ng-container matcolumndef="cost">
+    </ng-container><table mat-table="" [datasource]="transactions" class="mat-elevation-z8">
+  <!-- Item Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef=""> Item </th>
+    <td mat-cell="" *matcelldef="let transaction"> {{transaction.item}} </td>
+    <td mat-footer-cell="" *matfootercelldef=""> Total </td>
+  
+
+  <!-- Cost Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Cost </th>
+    <td mat-cell="" *matcelldef="let transaction"> {{transaction.cost | currency}} </td>
+    <td mat-footer-cell="" *matfootercelldef=""> {{getTotalCost() | currency}} </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+  <tr mat-footer-row="" *matfooterrowdef="displayedColumns"></tr>
+</tbody></table>
+</body></html>

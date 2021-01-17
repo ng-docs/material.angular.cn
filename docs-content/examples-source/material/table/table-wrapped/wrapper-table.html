@@ -1,0 +1,22 @@
+<html><head></head><body><ng-content></ng-content><ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><table mat-table="" [datasource]="dataSource" class="mat-elevation-z8">
+  
+
+  <!-- Position Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef="" mat-sort-header=""> No. </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.position}} </td>
+  
+
+  <!-- Weight Column -->
+  <th mat-header-cell="" *matheadercelldef="" mat-sort-header=""> Weight </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.weight}} </td>
+  
+
+  <!-- Color Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Symbol </th>
+    <td mat-cell="" *matcelldef="let element"> {{element.symbol}} </td>
+  
+</tr></tbody></table>
+</body></html>

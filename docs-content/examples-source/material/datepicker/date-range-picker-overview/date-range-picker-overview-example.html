@@ -1,0 +1,10 @@
+<html><head></head><body><mat-form-field appearance="fill">
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [rangepicker]="picker">
+    <input matstartdate="" placeholder="Start date">
+    <input matenddate="" placeholder="End date">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matsuffix="" [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker=""></mat-date-range-picker>
+</mat-form-field>
+</body></html>

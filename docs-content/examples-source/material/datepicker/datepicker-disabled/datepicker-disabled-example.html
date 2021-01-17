@@ -1,0 +1,27 @@
+<html><head></head><body><p>
+  <mat-form-field appearance="fill">
+    <mat-label>Completely disabled</mat-label>
+    <input matinput="" [matdatepicker]="dp1" disabled="">
+    <mat-datepicker-toggle matsuffix="" [for]="dp1"></mat-datepicker-toggle>
+    <mat-datepicker #dp1=""></mat-datepicker>
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Popup disabled</mat-label>
+    <input matinput="" [matdatepicker]="dp2">
+    <mat-datepicker-toggle matsuffix="" [for]="dp2" disabled=""></mat-datepicker-toggle>
+    <mat-datepicker #dp2=""></mat-datepicker>
+  </mat-form-field>
+</p>
+
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Input disabled</mat-label>
+    <input matinput="" [matdatepicker]="dp3" disabled="">
+    <mat-datepicker-toggle matsuffix="" [for]="dp3"></mat-datepicker-toggle>
+    <mat-datepicker #dp3="" disabled="false"></mat-datepicker>
+  </mat-form-field>
+</p>
+</body></html>

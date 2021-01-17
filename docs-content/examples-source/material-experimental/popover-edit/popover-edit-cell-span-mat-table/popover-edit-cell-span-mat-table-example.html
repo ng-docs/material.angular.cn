@@ -1,0 +1,71 @@
+<html><head></head><body><ng-template #nameedit="" let-ctx="">
+    <div>
+      <form #f="ngForm" mateditlens="" (ngsubmit)="onSubmit(ctx.person, f)" [mateditlenspreservedformvalue]="preservedValues.get(ctx.person)" (mateditlenspreservedformvaluechange)="preservedValues.set(ctx.person, $event)"></form>
+        <div mat-edit-content="" class="example-input-container">
+          <mat-form-field>
+            <input matinput="" [ngmodel]="ctx.person.firstName" name="firstName" required="" [attr.cdkfocusinitial]="ctx.focus === 'firstName' || null">
+          </mat-form-field>
+          <mat-form-field>
+            <input matinput="" [ngmodel]="ctx.person.middleName" name="middleName" [attr.cdkfocusinitial]="ctx.focus === 'middleName' || null">
+          </mat-form-field>
+          <mat-form-field>
+            <input matinput="" [ngmodel]="ctx.person.lastName" name="lastName" required="" [attr.cdkfocusinitial]="ctx.focus === 'lastName' || null">
+          </mat-form-field>
+        </div>
+
+        <div mat-edit-actions="">
+          <button mat-button="" type="submit">Confirm</button>
+          <button mat-button="" cdkeditrevert="">Revert</button>
+          <button mat-button="" cdkeditclose="">Close</button>
+        </div>
+      
+    </div>
+  </ng-template><ng-container matcolumndef="id">
+    </ng-container><ng-container matcolumndef="firstName">
+    </ng-container><ng-container matcolumndef="middleName">
+    </ng-container><ng-container matcolumndef="lastName">
+    </ng-container><table class="example-table" mat-table="" editable="" [datasource]="dataSource">
+  
+
+  <!-- Position Column -->
+  <tbody><tr><th mat-header-cell="" *matheadercelldef=""> No. </th>
+    <td mat-cell="" *matcelldef="let person"> {{person.id}} </td>
+  
+
+  <!-- Name Column -->
+  <th mat-header-cell="" *matheadercelldef=""> First Name </th>
+    <td mat-cell="" *matcelldef="let person" [matpopoveredit]="nameEdit" [matpopovereditcontext]="{person: person, focus: 'firstName'}" [matpopovereditcolspan]="{after: 2}">
+      {{person.firstName}}
+
+      <span *matrowhovercontent="">
+        <button mat-icon-button="" mateditopen=""><mat-icon>edit</mat-icon></button>
+      </span>
+    </td>
+  
+
+  <!-- Weight Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Middle Name </th>
+    <td mat-cell="" *matcelldef="let person" [matpopoveredit]="nameEdit" [matpopovereditcontext]="{person: person, focus: 'middleName'}" [matpopovereditcolspan]="{before:1 , after: 1}">
+      {{person.middleName}}
+
+      <span *matrowhovercontent="">
+        <button mat-icon-button="" mateditopen=""><mat-icon>edit</mat-icon></button>
+      </span>
+    </td>
+  
+
+  <!-- Symbol Column -->
+  <th mat-header-cell="" *matheadercelldef=""> Last Name </th>
+    <td mat-cell="" *matcelldef="let person" [matpopoveredit]="nameEdit" [matpopovereditcontext]="{person: person, focus: 'lastName'}" [matpopovereditcolspan]="{before: 2}">
+      {{person.lastName}}
+
+      <span *matrowhovercontent="">
+        <button mat-icon-button="" mateditopen=""><mat-icon>edit</mat-icon></button>
+      </span>
+    </td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>
+</body></html>

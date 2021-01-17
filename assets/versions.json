@@ -8,7 +8,23 @@
     "title": "6.4.7"
   },
   {
+    "url": "https://v7.material.angular.io/",
+    "title": "7.3.7"
+  },
+  {
+    "url": "https://v8.material.angular.io/",
+    "title": "8.2.3"
+  },
+  {
+    "url": "https://v9.material.angular.io/",
+    "title": "9.2.4"
+  },
+  {
+    "url": "https://v10.material.angular.io/",
+    "title": "10.2.7"
+  },
+  {
     "url": "https://material.angular.io/",
-    "title": "7.2.0"
+    "title": "11.0.3"
   }
 ]

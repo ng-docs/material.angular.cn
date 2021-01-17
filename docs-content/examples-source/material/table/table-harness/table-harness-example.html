@@ -1,0 +1,30 @@
+<html><head></head><body><ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="name">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><table mat-table="" [datasource]="dataSource">
+  <tbody><tr><th mat-header-cell="" *matheadercelldef="">No.</th>
+    <td mat-cell="" *matcelldef="let element">{{element.position}}</td>
+    <td mat-footer-cell="" *matfootercelldef="">Number of the element</td>
+  
+
+  <th mat-header-cell="" *matheadercelldef="">Name</th>
+    <td mat-cell="" *matcelldef="let element">{{element.name}}</td>
+    <td mat-footer-cell="" *matfootercelldef="">Name of the element</td>
+  
+
+  <th mat-header-cell="" *matheadercelldef="">Weight</th>
+    <td mat-cell="" *matcelldef="let element">{{element.weight}}</td>
+    <td mat-footer-cell="" *matfootercelldef="">Weight of the element</td>
+  
+
+  <th mat-header-cell="" *matheadercelldef="">Symbol</th>
+    <td mat-cell="" *matcelldef="let element">{{element.symbol}}</td>
+    <td mat-footer-cell="" *matfootercelldef="">Symbol of the element</td>
+  
+
+  </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-footer-row="" *matfooterrowdef="displayedColumns"></tr>
+  <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>
+</body></html>

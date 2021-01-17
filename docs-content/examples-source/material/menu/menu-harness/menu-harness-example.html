@@ -1,0 +1,8 @@
+<html><head></head><body><button type="button" [matmenutriggerfor]="settingsMenu">Settings</button>
+<button type="button" disabled="" [matmenutriggerfor]="settingsMenu">Disabled menu</button>
+
+<mat-menu #settingsmenu="">
+  <menu mat-menu-item="">Profile</menu>
+  <menu mat-menu-item="">Account</menu>
+</mat-menu>
+</body></html>

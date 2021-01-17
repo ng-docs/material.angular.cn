@@ -1,0 +1,15 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Tooltip that can be disabled
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'tooltip-disabled-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'tooltip-disabled-example.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'tooltip-disabled-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipDisabledExample</span> </span>{
+  disabled = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>);
+}
+</body></html>

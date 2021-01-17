@@ -1,0 +1,40 @@
+<html><head></head><body><div class="example-container mat-elevation-z8">
+  <ng-container matcolumndef="name" sticky="">
+      </ng-container><ng-container matcolumndef="position">
+      </ng-container><ng-container matcolumndef="weight">
+      </ng-container><ng-container matcolumndef="symbol">
+      </ng-container><ng-container matcolumndef="star" stickyend="">
+      </ng-container><table mat-table="" [datasource]="dataSource">
+
+    <!-- Name Column -->
+    <tbody><tr><th mat-header-cell="" *matheadercelldef=""> Name </th>
+      <td mat-cell="" *matcelldef="let element"> {{element.name}} </td>
+    
+
+    <!-- Position Column -->
+    <th mat-header-cell="" *matheadercelldef=""> No. </th>
+      <td mat-cell="" *matcelldef="let element"> {{element.position}} </td>
+    
+
+    <!-- Weight Column -->
+    <th mat-header-cell="" *matheadercelldef=""> Weight </th>
+      <td mat-cell="" *matcelldef="let element"> {{element.weight}} </td>
+    
+
+    <!-- Symbol Column -->
+    <th mat-header-cell="" *matheadercelldef=""> Symbol </th>
+      <td mat-cell="" *matcelldef="let element"> {{element.symbol}} </td>
+    
+
+    <!-- Star Column -->
+    <th mat-header-cell="" *matheadercelldef=""></th>
+      <td mat-cell="" *matcelldef="let element">
+        <mat-icon>more_vert</mat-icon>
+      </td>
+    
+
+    </tr><tr mat-header-row="" *matheaderrowdef="displayedColumns"></tr>
+    <tr mat-row="" *matrowdef="let row; columns: displayedColumns;"></tr>
+  </tbody></table>
+</div>
+</body></html>

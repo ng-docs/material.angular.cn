@@ -1,0 +1,16 @@
+<html><head></head><body><form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Number</mat-label>
+<!-- #docregion input -->
+    <input type="text" placeholder="Pick one" aria-label="Number" matinput="" [formcontrol]="myControl" [matautocomplete]="auto">
+<!-- #enddocregion input -->
+<!-- #docregion mat-autocomplete -->
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngfor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+<!-- #enddocregion mat-autocomplete -->
+  </mat-form-field>
+</form>
+</body></html>

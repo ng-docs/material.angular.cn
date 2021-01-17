@@ -1,0 +1,17 @@
+<html><head></head><body><div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your password</mat-label>
+    <input matinput="" [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button="" matsuffix="" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input matinput="" type="number" class="example-right-align">
+    <span matprefix="">$&nbsp;</span>
+    <span matsuffix="">.00</span>
+  </mat-form-field>
+</div>
+</body></html>

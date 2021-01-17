@@ -1,0 +1,17 @@
+<html><head></head><body><span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {TooltipPosition} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tooltip'</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Tooltip with a custom position
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'tooltip-position-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'tooltip-position-example.html'</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">'tooltip-position-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TooltipPositionExample</span> </span>{
+  <span class="hljs-attr">positionOptions</span>: TooltipPosition[] = [<span class="hljs-string">'after'</span>, <span class="hljs-string">'before'</span>, <span class="hljs-string">'above'</span>, <span class="hljs-string">'below'</span>, <span class="hljs-string">'left'</span>, <span class="hljs-string">'right'</span>];
+  position = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-built_in">this</span>.positionOptions[<span class="hljs-number">0</span>]);
+}
+</body></html>

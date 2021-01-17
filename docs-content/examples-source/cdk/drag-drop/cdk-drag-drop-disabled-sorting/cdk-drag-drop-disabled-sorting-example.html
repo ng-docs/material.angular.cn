@@ -1,0 +1,18 @@
+<html><head></head><body><div cdkdroplistgroup="">
+  <div class="example-container">
+    <h2 id="available-items">Available items</h2>
+
+    <div cdkdroplist="" [cdkdroplistdata]="items" class="example-list" cdkdroplistsortingdisabled="" (cdkdroplistdropped)="drop($event)">
+      <div class="example-box" *ngfor="let item of items" cdkdrag="">{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2 id="shopping-basket">Shopping basket</h2>
+
+    <div cdkdroplist="" [cdkdroplistdata]="basket" class="example-list" (cdkdroplistdropped)="drop($event)">
+      <div class="example-box" *ngfor="let item of basket" cdkdrag="">{{item}}</div>
+    </div>
+  </div>
+</div>
+</body></html>

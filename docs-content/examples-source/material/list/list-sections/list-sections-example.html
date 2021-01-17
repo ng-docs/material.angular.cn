@@ -1,0 +1,16 @@
+<html><head></head><body><mat-list>
+  <div mat-subheader="">Folders</div>
+  <mat-list-item *ngfor="let folder of folders">
+    <mat-icon mat-list-icon="">folder</mat-icon>
+    <div mat-line="">{{folder.name}}</div>
+    <div mat-line=""> {{folder.updated | date}} </div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <div mat-subheader="">Notes</div>
+  <mat-list-item *ngfor="let note of notes">
+    <mat-icon mat-list-icon="">note</mat-icon>
+    <div mat-line="">{{note.name}}</div>
+    <div mat-line=""> {{note.updated | date}} </div>
+  </mat-list-item>
+</mat-list>
+</body></html>

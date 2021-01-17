@@ -1,0 +1,21 @@
+<html><head></head><body><mat-form-field appearance="fill">
+  <mat-label>Angular forms</mat-label>
+  <input matinput="" [matdatepicker]="picker1" [formcontrol]="date">
+  <mat-datepicker-toggle matsuffix="" [for]="picker1"></mat-datepicker-toggle>
+  <mat-datepicker #picker1=""></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Angular forms (w/ deserialization)</mat-label>
+  <input matinput="" [matdatepicker]="picker2" [formcontrol]="serializedDate">
+  <mat-datepicker-toggle matsuffix="" [for]="picker2"></mat-datepicker-toggle>
+  <mat-datepicker #picker2=""></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Value binding</mat-label>
+  <input matinput="" [matdatepicker]="picker3" [value]="date.value">
+  <mat-datepicker-toggle matsuffix="" [for]="picker3"></mat-datepicker-toggle>
+  <mat-datepicker #picker3=""></mat-datepicker>
+</mat-form-field>
+</body></html>
