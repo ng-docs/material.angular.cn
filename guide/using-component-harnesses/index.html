@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="en-US"><head>
+  <meta charset="utf-8">
+  <title>使用组件测试工具进行测试 Testing with component harnesses - Angular Material 组件库</title>
+  <link rel="canonical" href="https://material.angular.io">
+  <base href="/">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#3F50B5">
+  <meta name="description" content="UI component infrastructure and Material Design components for mobile and desktop Angular web applications.">
+  <meta name="keywords" content="angular, material design, material, angular material, web, ui, components, responsive, accessibility, typescript, css, mobile web, open source">
+  <meta name="author" content="Angular Components Team">
+
+  <!--Twitter card metadata-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Angular">
+  <meta name="twitter:creator" content="@Angular">
+  <meta name="twitter:title" content="Angular Material">
+  <meta name="twitter:description" content="UI component infrastructure and Material Design components for Angular web applications.">
+  <meta name="twitter:image" content="https://material.angular.io/assets/img/site-preview.png">
+
+  <!--Facebook Open Graph-->
+  <meta property="og:url" content="https://material.angular.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Angular Material">
+  <meta property="og:site_name" content="Angular Material">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:description" content="UI component infrastructure and Material Design components for Angular web applications.">
+  <meta property="og:image" content="https://material.angular.io/assets/img/site-preview.png">
+  <meta property="og:image:secure_url" content="https://material.angular.io/assets/img/site-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1339">
+  <meta property="og:image:height" content="943">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png?v=8.2.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png?v=8.2.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png?v=8.2.3">
+  <link rel="manifest" href="assets/img/favicons/manifest.json?v=8.2.3">
+  <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg?v=8.2.3" color="#3f51b5">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico?v=8.2.3">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml?v=8.2.3">
+  <meta name="theme-color" content="#3f51b5">
+
+  <link href="assets/translator/css/material-icons.css" rel="stylesheet">
+  <link href="assets/translator/css/material-roboto-mono.css" rel="stylesheet">
+  <link href="assets/translator/css/translator.css" rel="stylesheet">
+
+  <!--Structured Data-->
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebApplication",
+      "name": "Angular Material",
+      "description": "UI component infrastructure and Material Design components for Angular web applications.",
+      "url": "https://material.angular.io",
+      "image": "https://material.angular.io/assets/img/site-preview.png",
+      "screenshot": "https://material.angular.io/assets/img/site-preview.png",
+      "applicationCategory": "Software Documentation",
+      "operatingSystem": "Android, Chrome OS, iOS, iPadOS, macOS, OS X, Linux, Windows",
+      "author": {
+        "@type": "Organization",
+        "name": "Angular",
+        "description": "Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular.",
+        "url": "https://angular.io",
+        "logo": "https://angular.io/assets/images/logos/angular/angular.svg"
+      }
+    }
+  </script>
+<link rel="stylesheet" href="styles.056395d28d22720dda97.css"><style>material-docs-app{display:flex;flex-direction:column;position:absolute;top:56px;bottom:0;left:0;right:0}app-navbar{position:fixed;top:0;left:0;right:0;z-index:2}material-docs-app>app-component-sidenav{flex:1}material-docs-app>app-guides,material-docs-app>app-homepage,material-docs-app>guide-viewer{overflow-y:auto;-webkit-overflow-scrolling:touch}@media (max-width:720px){material-docs-app{top:92px}material-docs-app>app-guides,material-docs-app>app-homepage,material-docs-app>guide-viewer{overflow-y:visible}}</style><style>.docs-navbar-header[_ngcontent-iel-c49]{display:flex;flex-wrap:wrap;align-items:center;padding:8px 16px}.docs-navbar-header[_ngcontent-iel-c49] > .mat-button[_ngcontent-iel-c49]:last-child{margin-left:auto}.flex-spacer[_ngcontent-iel-c49]{flex-grow:1}.docs-angular-logo[_ngcontent-iel-c49]{height:26px;margin:0 4px 3px 0;vertical-align:middle}.docs-github-logo[_ngcontent-iel-c49]{height:21px;margin:0 7px 2px 0;vertical-align:middle}.docs-navbar-link[_ngcontent-iel-c49]{text-decoration:inherit;flex:1}.docs-navbar[_ngcontent-iel-c49], .docs-navbar-show-small[_ngcontent-iel-c49]{display:none}.skip-link-wrapper[_ngcontent-iel-c49]{position:absolute;top:10px;left:50%;transform:translateX(-50%);border-radius:5px}@media (max-width:720px){.docs-navbar-hide-small[_ngcontent-iel-c49]{display:none}.docs-navbar-show-small[_ngcontent-iel-c49]{display:block}.docs-navbar[_ngcontent-iel-c49]{display:flex}.docs-navbar--github-logo[_ngcontent-iel-c49]{margin:0}}</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button.mat-button-disabled,.mat-icon-button.mat-button-disabled,.mat-stroked-button.mat-button-disabled,.mat-flat-button.mat-button-disabled{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button.mat-button-disabled{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab.mat-button-disabled{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab.mat-button-disabled{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}.cdk-high-contrast-active .mat-button-base.cdk-keyboard-focused,.cdk-high-contrast-active .mat-button-base.cdk-program-focused{outline:solid 3px}
+</style><style>.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon{margin-right:0;margin-left:8px;float:right}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon svg{vertical-align:middle}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-background{fill:#fafafa}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-button{fill:#ffc107}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-toolbar{fill:#673ab7}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-background{fill:#fafafa}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-button{fill:#e91e63}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-toolbar{fill:#3f51b5}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-background{fill:#303030}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-button{fill:#607d8b}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-toolbar{fill:#e91e63}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-background{fill:#303030}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-button{fill:#4caf50}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-toolbar{fill:#9c27b0}</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0;min-height:64px}.mat-menu-panel.ng-animating{pointer-events:none}.cdk-high-contrast-active .mat-menu-panel{outline:solid 1px}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}.mat-menu-item[disabled]{pointer-events:none}.cdk-high-contrast-active .mat-menu-item.cdk-program-focused,.cdk-high-contrast-active .mat-menu-item.cdk-keyboard-focused,.cdk-high-contrast-active .mat-menu-item-highlighted{outline:dotted 1px}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:"";display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}
+</style><script charset="utf-8" src="64-es2015.0cf108642257b452c33e.js"></script><style>[_nghost-iel-c100]{display:flex;flex-direction:column;flex-grow:1}.docs-guide-wrapper[_ngcontent-iel-c100]{padding:20px 70px 0;display:block;text-align:center}@media (max-width:599px){.docs-guide-wrapper[_ngcontent-iel-c100]{padding-left:15px;padding-right:15px}}.docs-guide-toc-and-content[_ngcontent-iel-c100]{display:flex;align-items:flex-start;text-align:left;max-width:940px;margin:0 auto;min-height:100vh}@media (max-width:720px){.docs-guide-toc-and-content[_ngcontent-iel-c100]{flex-direction:column}}.docs-guide-content[_ngcontent-iel-c100]{flex-grow:1;width:80%}@media (max-width:720px){.docs-guide-content[_ngcontent-iel-c100]{width:100%}}table-of-contents[_ngcontent-iel-c100]{top:35px;position:sticky}@media (max-width:720px){table-of-contents[_ngcontent-iel-c100]{order:-1;position:inherit;width:auto;padding-left:0}}  blockquote{border-left:8px solid #1976d2;margin:0;padding:.5em 2em;background-color:rgba(25,118,210,.05)}</style><style>[_nghost-iel-c99]{font-size:13px;width:19%;position:sticky;top:0;padding-left:25px;box-sizing:border-box;display:inline-flex;flex-direction:column}.docs-toc-container[_ngcontent-iel-c99]{width:100%;padding:5px 0 10px 10px}.docs-toc-container[_ngcontent-iel-c99] + .docs-toc-container[_ngcontent-iel-c99]{padding-top:8px}.docs-toc-heading[_ngcontent-iel-c99]{margin:0;padding:0;font-size:13px;font-weight:700;text-transform:capitalize}a[_ngcontent-iel-c99]{line-height:16px;margin:8px 0 0;position:relative;text-decoration:none;display:block;text-overflow:ellipsis;width:100%;overflow:hidden}.docs-level-h4[_ngcontent-iel-c99]{margin-left:12px}</style><style>.docs-footer[_ngcontent-iel-c51]{padding:12px;font-size:12px}.docs-footer-list[_ngcontent-iel-c51]{align-items:center;display:flex;flex-flow:row wrap;padding:8px}.docs-footer-logo[_ngcontent-iel-c51]{flex:1}.docs-footer-angular-logo[_ngcontent-iel-c51]{height:50px}.docs-footer-version[_ngcontent-iel-c51]{display:flex;justify-content:center;align-items:center;flex:1}.docs-footer-version[_ngcontent-iel-c51]   .angular-material-logo[_ngcontent-iel-c51]{height:40px;margin:10px 0 10px 16px}.docs-footer-version[_ngcontent-iel-c51]   .version[_ngcontent-iel-c51]{margin:0 40px}.docs-footer-copyright[_ngcontent-iel-c51]{display:flex;flex:1;justify-content:flex-end;flex-direction:column;min-width:225px;margin-top:16px}.docs-footer-copyright[_ngcontent-iel-c51] > div[_ngcontent-iel-c51]{display:flex;flex-direction:column;align-self:flex-end;text-align:center}@media (min-width:885px){.docs-footer-copyright[_ngcontent-iel-c51]{margin-top:0}}.docs-footer-logo[_ngcontent-iel-c51]   span[_ngcontent-iel-c51]{display:inline-block;line-height:50px;margin:0 40px;vertical-align:bottom}.docs-footer-logo[_ngcontent-iel-c51]   span[_ngcontent-iel-c51]   a[_ngcontent-iel-c51]{font-size:16px;padding:0}a[_ngcontent-iel-c51]{text-decoration:none;color:inherit}a[_ngcontent-iel-c51]:focus, a[_ngcontent-iel-c51]:hover{text-decoration:underline}@media screen and (max-width:884px){.docs-footer-list[_ngcontent-iel-c51]{flex-direction:column}}</style></head>
+
+<body class="docs-app-background">
+<material-docs-app ng-version="11.0.0"><app-navbar class="mat-elevation-z6" _nghost-iel-c49=""><nav _ngcontent-iel-c49="" aria-label="Top Toolbar" class="docs-navbar-header"><div _ngcontent-iel-c49="" class="skip-link-wrapper cdk-visually-hidden ng-star-inserted"><a _ngcontent-iel-c49="" mat-raised-button="" color="accent" class="mat-focus-indicator mat-raised-button mat-button-base mat-accent" href="/guide/using-component-harnesses#guide-content" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"> Skip to main content </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a></div><!----><a _ngcontent-iel-c49="" mat-button="" routerlink="/" aria-label="Angular Material" class="mat-focus-indicator docs-button mat-button mat-button-base" tabindex="0" aria-disabled="false" href="/"><span class="mat-button-wrapper"><img _ngcontent-iel-c49="" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="angular" class="docs-angular-logo"><span _ngcontent-iel-c49="">Material</span></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-iel-c49="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/components"><span class="mat-button-wrapper">组件</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-iel-c49="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/cdk"><span class="mat-button-wrapper">组件开发包</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-iel-c49="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/guides"><span class="mat-button-wrapper">使用指南</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><!----><div _ngcontent-iel-c49="" class="flex-spacer"></div><version-picker _ngcontent-iel-c49=""><button aria-haspopup="true" mat-button="" aria-label="Select a version" mattooltip="选择文档版本" class="mat-focus-indicator mat-tooltip-trigger mat-menu-trigger mat-button mat-button-base" aria-describedby="cdk-describedby-message-0" cdk-describedby-host=""><span class="mat-button-wrapper"> 11.0.3 <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">arrow_drop_down</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu class="ng-tns-c42-0"><!----></mat-menu></version-picker><theme-picker _ngcontent-iel-c49=""><button aria-haspopup="true" mat-icon-button="" aria-label="Select a theme" mattooltip="选择文档的主题" class="mat-focus-indicator mat-tooltip-trigger mat-menu-trigger mat-icon-button mat-button-base" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">format_color_fill</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu xposition="before" class=""><!----></mat-menu></theme-picker><a _ngcontent-iel-c49="" mat-button="" href="https://github.com/ng-docs/components" target="_blank" aria-label="GitHub Repository" class="mat-focus-indicator docs-button docs-navbar-hide-small mat-button mat-button-base" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><img _ngcontent-iel-c49="" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo"> GitHub </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-iel-c49="" mat-icon-button="" href="https://github.com/angular/components" aria-label="GitHub Repository" class="mat-focus-indicator docs-button docs-navbar-show-small mat-icon-button mat-button-base" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><img _ngcontent-iel-c49="" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo"></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></a></nav><nav _ngcontent-iel-c49="" aria-label="Section Nav Bar" class="docs-navbar docs-navbar-show-small"><a _ngcontent-iel-c49="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/components"><span class="mat-button-wrapper">组件</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-iel-c49="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/cdk"><span class="mat-button-wrapper">组件开发包</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-iel-c49="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/guides"><span class="mat-button-wrapper">使用指南</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><!----></nav></app-navbar><router-outlet></router-outlet><guide-viewer _nghost-iel-c100="" class="ng-star-inserted"><div _ngcontent-iel-c100="" class="docs-primary-header"><h1 _ngcontent-iel-c100="">使用组件测试工具进行测试&nbsp;<small _ngcontent-iel-c100="">Testing with component harnesses</small></h1></div><div _ngcontent-iel-c100="" class="docs-guide-wrapper"><div _ngcontent-iel-c100="" class="docs-guide-toc-and-content"><doc-viewer _ngcontent-iel-c100="" focusonnavigation="" id="guide-content" aria-label="Guide content" class="docs-guide-content" tabindex="-1" style="outline: none;"><div class="docs-markdown"><h1 id="using-angular-materials-component-harnesses-in-your-tests" translation-result="on">在测试中使用 Angular Material 的组件测试工具（harness）</h1><h1 translation-origin="off">Using Angular Material's component harnesses in your tests</h1><p translation-result="on">Angular CDK 提供了用于创建组件测试工具的代码。组件测试工具是一个允许测试通过其 API 与组件进行交互的类。每个测试工具的 API 都会以和用户相同的方式与一个组件进行交互。通过使用测试工具 API，测试可以隔离对组件内部的更新，比如改变它的 DOM 结构。组件测试工具的思想来自集成测试中常用的 <a href="https://martinfowler.com/bliki/PageObject.html">PageObject</a> 模式。</p><p translation-origin="off">The Angular CDK provides code for creating component test harnesses. A component harness is
+a class that lets a test interact with a component via a supported API. Each harness's API
+interacts with a component the same way a user would. By using the harness API, a test insulates
+itself against updates to the internals of a component, such as changing its DOM structure. The
+idea for component harnesses comes from the
+<a href="https://martinfowler.com/bliki/PageObject.html">PageObject</a> pattern commonly used for integration
+testing.</p>
+
+<p translation-result="on">Angular Material 为它的很多组件提供了测试工具。 Angular 团队强烈鼓励开发人员使用这些测试工具进行测试，避免产生依赖于组件内部的脆弱测试。</p><p translation-origin="off">Angular Material offers test harnesses for many of its components. The Angular team strongly
+encourages developers to use these harnesses for testing to avoid creating brittle tests that rely
+on a component's internals.</p>
+
+<!-- TODO(mmalerba): add list of components that are ready -->
+
+<p translation-result="on">本指南讨论了使用组件测试工具的优点，并展示了该如何使用它们。</p><p translation-origin="off">This guide discusses the advantages of using component test harnesses and shows how to use them.</p>
+
+<h2 id="benefits-of-component-test-harnesses" translation-result="on">组件测试工具的优点</h2><h2 translation-origin="off">Benefits of component test harnesses</h2><p translation-result="on">在测试中使用 Angular Material 组件测试工具有两个主要的好处：</p><p translation-origin="off">There are two primary benefits to using the Angular Material component harnesses in your tests:</p>
+
+<ol>
+<li><p translation-result="on">通过直白的 API，测试工具可以让测试更容易阅读和理解。</p><p translation-origin="off">Harnesses make tests easier to read and understand with straightforward APIs.</p>
+
+</li>
+<li><p translation-result="on">在更新 Angular Material 时，测试工具可以让测试更加健壮，减少破坏的可能性。</p><p translation-origin="off">Harnesses make tests more robust and less likely to break when updating Angular Material.</p>
+
+</li>
+</ol>
+<p translation-result="on">下面会更详细地说明这些优点。</p><p translation-origin="off">The following sections will illustrate these benefits in more detail.</p>
+
+<h2 id="which-kinds-of-tests-can-use-harnesses" translation-result="on">哪些测试可以使用测试工具？</h2><h2 translation-origin="off">Which kinds of tests can use harnesses?</h2><p translation-result="on">Angular CDK 的组件测试工具专为多种不同的测试环境而设计。目前支持包括 Karma 单元测试和 Protractor 端到端（e2e）测试在内的 Angular Testbed 环境。你还可以通过创建 CDK 的 <code>HarnessEnvironment</code> 和 <code>TestElement</code> 类的自定义扩展来支持更多环境。</p><p translation-origin="off">The Angular CDK's component harnesses are designed to work in multiple different test environments.
+Support currently includes Angular's Testbed environment in Karma unit tests and Protractor
+end-to-end (e2e) tests. You can also support additional environments by creating custom extensions
+of the CDK's <code>HarnessEnvironment</code> and <code>TestElement</code> classes.</p>
+
+<h2 id="getting-started" translation-result="on">入门指南</h2><h2 translation-origin="off">Getting started</h2><p translation-result="on">所有测试工具的基础都位于 <code>@angular/cdk/testing</code> 中。根据你要写单元测试还是测试端测试，导入 <code>TestbedHarnessEnvironment</code> 或 <code>ProtractorHarnessEnvironment</code>。从 <code>HarnessEnvironment</code> 中，你可以得到一个 <code>HarnessLoader</code> 实例，你将用它来加载 Angular Material 组件测试工具。举例来说，如果我们要编写 <code>UserProfile</code> 组件的单元测试，代码可能是这样的：</p><p translation-origin="off">The foundation for all test harnesses lives in <code>@angular/cdk/testing</code>. Start by importing either
+<code>TestbedHarnessEnvironment</code> or <code>ProtractorHarnessEnvironment</code> based on whether you're writing a
+unit test or an e2e test. From the <code>HarnessEnvironment</code>, you can get a <code>HarnessLoader</code> instance,
+which you will use to load Angular Material component harnesses. For example, if we're writing unit
+tests for a <code>UserProfile</code> component, the code might look like this:</p>
+
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {HarnessLoader} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing'</span>;
+<span class="hljs-keyword">import</span> {TestbedHarnessEnvironment} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/testing/testbed'</span>;
+
+<span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+describe(<span class="hljs-string">'my-component'</span>, <span class="hljs-function">() =&gt;</span> {
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({<span class="hljs-attr">imports</span>: [MyModule], <span class="hljs-attr">declarations</span>: [UserProfile]})
+        .compileComponents();
+    fixture = TestBed.createComponent(UserProfile);
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
+}</code></pre>
+<p translation-result="on">此代码为 <code>UserProfile</code> 创建一个夹具，然后为夹具创建一个 <code>HarnessLoader</code>。接着，该 <code>HarnessLoader</code> 可以找到 <code>UserProfile</code> 中的 Angular Material 组件，并为它们创建测试工具。注意，<code>HarnessLoader</code> 和 <code>TestbedHarnessEnvironment</code> 要分别从不同的路径加载。</p><p translation-origin="off">This code creates a fixture for <code>UserProfile</code> and then creates a <code>HarnessLoader</code> for that fixture.
+The <code>HarnessLoader</code> can then locate Angular Material components inside <code>UserProfile</code> and create
+harnesses for them. Note that <code>HarnessLoader</code> and <code>TestbedHarnessEnvironment</code> are loaded from
+different paths. </p>
+
+<ul>
+<li><p translation-result="on"><code>@angular/cdk/testing</code> 包含一些共享符号，无论你的测试位于哪个环境中。</p><p translation-origin="off"><code>@angular/cdk/testing</code> contains symbols that are shared regardless of the environment your tests
+are in. </p>
+
+</li>
+<li><p translation-result="on"><code>@angular/cdk/testing/testbed</code> 包含仅用于 Karma 测试中的符号。</p><p translation-origin="off"><code>@angular/cdk/testing/testbed</code> contains symbols that are used only in Karma tests.</p>
+
+</li>
+<li><p translation-result="on"><code>@angular/cdk/testing/protractor</code>（上面未演示）包含仅用于 Protractor 测试中的符号。</p><p translation-origin="off"><code>@angular/cdk/testing/protractor</code> (not shown above) contains symbols that are used only in
+Protractor tests.</p>
+
+</li>
+</ul>
+<h2 id="loading-an-angular-material-harness" translation-result="on">加载一个 Angular Material 测试工具</h2><h2 translation-origin="off">Loading an Angular Material harness</h2><p translation-result="on"><code>HarnessLoader</code> 提供了两种方法，可以用来加载 <code>getHarness</code> 和 <code>getAllHarnesses</code>。<code>getHarness</code> 方法会为所匹配组件的第一个实例获取测试工具，而 <code>getAllHarnesses</code> 会得到一个测试工具列表，每个实例对应一个组件。例如，假设 <code>UserProfile</code> 包含三个 <code>MatButton</code> 实例。我们可以用如下方式为它们加载测试工具：</p><p translation-origin="off">The <code>HarnessLoader</code> provides two methods that can be used to load harnesses, <code>getHarness</code> and
+<code>getAllHarnesses</code>. The <code>getHarness</code> method gets a harness for the first instance
+of the matching component, while <code>getAllHarnesses</code> gets a list of harnesses, one
+for each instance of the corresponding component. For example, suppose <code>UserProfile</code> contains three
+<code>MatButton</code> instances. We could load harnesses for them as follows:</p>
+
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonHarness} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button/testing'</span>;
+
+...
+
+it(<span class="hljs-string">'should work'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> buttons = <span class="hljs-keyword">await</span> loader.getAllHarnesses(MatButtonHarness); <span class="hljs-comment">// length: 3</span>
+  <span class="hljs-keyword">const</span> firstButton = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness); <span class="hljs-comment">// === buttons[0]</span>
+});</code></pre>
+<p translation-result="on">注意这段示例代码使用 <code>async</code> 和 <code>await</code> 语法。所有组件的测试工具 API 都是异步的，并返回 <code>Promise</code> 对象。正因如此，Angular 团队推荐在测试中使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code> / <code>await</code> 语法</a>。</p><p translation-origin="off">Notice the example code uses <code>async</code> and <code>await</code> syntax. All component harness APIs are
+asynchronous and return <code>Promise</code> objects. Because of this, the Angular team recommends using the
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code>/<code>await</code> syntax</a>
+with your tests.</p>
+
+<p translation-result="on">上面的例子中获取了所有按钮的测试工具，并使用数组索引来获取特定按钮的测试工具。但是，如果按钮的数量或顺序发生了变化，那么这个测试就会破坏。你可以通过请求 <code>UserProfile</code> 中测试工具的一个子集，来编写一个不那么脆弱的测试程序。</p><p translation-origin="off">The example above retrieves all button harnesses and uses an array index to get the harness for a
+specific button. However, if the number or order of buttons changes, this test will break. You can
+write a less brittle test by instead asking for only a subset of harnesses inside <code>UserProfile</code>.  </p>
+
+<p translation-result="on">你可以通过 <code>HarnessLoader</code> 的 <code>getChildLoader</code> 方法来为 <code>UserProfile</code> DOM 的一部分加载测试工具。例如，假设我们知道 <code>UserProfile</code> 有一个 div， <code>&lt;div class="footer"&gt;</code> ，我们希望测试这个特定 <code>&lt;div&gt;</code> 里面的按钮。我们可以通过下列代码实现这一目标：</p><p translation-origin="off">You can load harnesses for a sub-section of the DOM within <code>UserProfile</code> with the <code>getChildLoader</code>
+method on <code>HarnessLoader</code>. For example, say that we know <code>UserProfile</code> has a div,
+<code>&lt;div class="footer"&gt;</code>, and we want the button inside that specific <code>&lt;div&gt;</code>. We can accomplish this
+with the following code:</p>
+
+<pre><code class="language-ts">it(<span class="hljs-string">'should work'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> footerLoader = <span class="hljs-keyword">await</span> loader.getChildLoader(<span class="hljs-string">'.footer'</span>);
+  <span class="hljs-keyword">const</span> footerButton = <span class="hljs-keyword">await</span> footerLoader.getHarness(MatButtonHarness);
+});</code></pre>
+<p translation-result="on">你还可以在所有的 Angular Material 组件测试工具上使用静态方法 <code>with</code>。该方法会创建一个 <code>HarnessPredicate</code>，它是一个根据所提供的约束条件来过滤已加载测试工具的对象。具体的约束选项取决于测试工具的类型，但所有的测试工具都支持：</p><p translation-origin="off">You can also use the static <code>with</code> method implemented on all Angular Material component harnesses.
+This method creates a <code>HarnessPredicate</code>, an object that filters loaded harnesses based on the
+provided constraints. The particular constraint options vary depending on the harness class, but all
+harnesses support at least:</p>
+
+<ul>
+<li><p translation-result="on"><code>selector</code> - 该组件必须匹配的 CSS 选择器（还有它的宿主选择器，如 <code>[mat-button]</code> ）</p><p translation-origin="off"><code>selector</code> - CSS selector that the component must match (in addition to its host selector, such
+as <code>[mat-button]</code>)</p>
+
+</li>
+<li><p translation-result="on"><code>ancestor</code> - 在 DOM 中该组件上方的一些祖先元素的 CSS 选择器</p><p translation-origin="off"><code>ancestor</code> - CSS selector for a some ancestor element above the component in the DOM</p>
+
+</li>
+</ul>
+<p translation-result="on">除了这些标准的选择器之外，<code>MatButtonHarness</code> 还支持</p><p translation-origin="off">In addition to these standard options, <code>MatButtonHarness</code> also supports</p>
+
+<ul>
+<li><p translation-result="on"><code>text</code> - 与该按钮的文本内容相匹配的字符串文本或正则表达式</p><p translation-origin="off"><code>text</code> - String text or regular expressions that matches the text content of the button </p>
+
+</li>
+</ul>
+<p translation-result="on">使用这种方法，我们可以在测试中找到如下按钮：</p><p translation-origin="off">Using this method we could locate buttons as follows in our test:</p>
+
+<pre><code class="language-ts">it(<span class="hljs-string">'should work'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-comment">// Harness for mat-button whose id is 'more-info'.</span>
+  <span class="hljs-keyword">const</span> info = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">'#more-info'</span>}));
+  <span class="hljs-comment">// Harness for mat-button whose text is 'Cancel'.</span>
+  <span class="hljs-keyword">const</span> cancel = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">text</span>: <span class="hljs-string">'Cancel'</span>}));
+  <span class="hljs-comment">// Harness for mat-button with class 'confirm' and whose text is either 'Ok' or 'Okay'.</span>
+  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(
+      MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">'.confirm'</span>, <span class="hljs-attr">text</span>: <span class="hljs-regexp">/^(Ok|Okay)$/</span>})
+});</code></pre>
+<h2 id="using-a-harness-to-interact-with-an-angular-material-component" translation-result="on">使用测试工具与 Angular Material 组件进行交互</h2><h2 translation-origin="off">Using a harness to interact with an Angular Material component</h2><p translation-result="on">Angular Material 组件通常会暴露这些方法，以执行真实用户可以执行的动作，或者检查真实用户可感知到的组件状态。例如， <code>MatButtonHarness</code> 有一些方法来对这个 <code>mat-button</code> 进行点击、设置焦点或取消焦点，还有一些获取该按钮的文本及其禁用状态的方法。因为 <code>MatButton</code> 是一个非常简单的组件，所以这些测试工具的方法可能和直接使用 DOM 的方式差别不大。而 <code>MatSelectHarness</code> 这样更复杂的测试工具具有 <code>open</code> 和 <code>isOpen</code> 这样的方法，可以捕获更多有关该组件内部结构的知识。</p><p translation-origin="off">The Angular Material component harnesses generally expose methods to either perform actions that a
+real user could perform or to inspect component state that a real user might perceive. For
+example, <code>MatButtonHarness</code> has methods to click, focus, and blur the <code>mat-button</code>, as well as
+methods to get the text of the button and its disabled state. Because <code>MatButton</code> is a very simple
+component, these harness methods might not seem very different from working directly with the DOM.
+However more complex harnesses like <code>MatSelectHarness</code> have methods like <code>open</code> and <code>isOpen</code> which
+capture more knowledge about the component's internals.</p>
+
+<p translation-result="on">使用 <code>MatButtonHarness</code> 与 <code>mat-button</code> 互动的测试看起来是这样的：</p><p translation-origin="off">A test using the <code>MatButtonHarness</code> to interact with a <code>mat-button</code> might look like the following:</p>
+
+<pre><code class="language-ts">it(<span class="hljs-string">'should mark confirmed when ok button clicked'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-keyword">const</span> okButton = <span class="hljs-keyword">await</span> loader.getHarness(MatButtonHarness.with({<span class="hljs-attr">selector</span>: <span class="hljs-string">'.confirm'</span>});
+  expect(fixture.componentInstance.confirmed).toBe(<span class="hljs-literal">false</span>);
+  expect(<span class="hljs-keyword">await</span> okButton.isDisabled()).toBe(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">await</span> okButton.click();
+  expect(fixture.componentInstance.confirmed).toBe(<span class="hljs-literal">true</span>);
+});</code></pre>
+<p translation-result="on">注意上面的代码不会调用 <code>fixture.detectChanges()</code>，这是你在单元测试中经常看到的。CDK 的组件测试工具会在执行动作之后和读取状态之前自动执行变更检测。测试工具还会自动等待夹具变得稳定，这会导致该测试等待 <code>setTimeout</code>、<code>Promise</code> 等。</p><p translation-origin="off">Note that the code above does not call <code>fixture.detectChanges()</code>, something you commonly see in
+unit tests. The CDK's component harnesses automatically invoke change detection after performing
+actions and before reading state. The harness also automatically waits for the fixture to be stable,
+which will cause the test to wait for <code>setTimeout</code>, <code>Promise</code>, etc.</p>
+
+<h2 id="comparison-with-and-without-component-harnesses" translation-result="on">使用和不使用组件测试工具时的比较</h2><h2 translation-origin="off">Comparison with and without component harnesses</h2><p translation-result="on">考虑你要测试 <code>&lt;issue-report-selector&gt;</code> 组件，它允许用户选择一个问题类型，并为该问题类型显示必要的表单创建报告。你需要一个测试来验证，当用户选择问题类型时，是否显示了正确的报告。首先考虑如果不使用组件测试工具，测试结果会是什么样子：</p><p translation-origin="off">Consider an <code>&lt;issue-report-selector&gt;</code> component that you want to test. It allows a user to
+choose an issue type and display the necessary form create report for that issue type. You need a 
+test to verify that when the user chooses an issue type the proper report displays. First consider
+what the test might look like without using component harnesses:</p>
+
+<pre><code class="language-ts">describe(<span class="hljs-string">'issue-report-selector'</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IssueReportSelector&gt;;
+
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [IssueReportSelectorModule],
+      <span class="hljs-attr">declarations</span>: [IssueReportSelector],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(IssueReportSelector);
+    fixture.detectChanges();
+  });
+
+  it(<span class="hljs-string">'should switch to bug report template'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    expect(fixture.debugElement.query(<span class="hljs-string">'bug-report-form'</span>)).toBeNull();
+    <span class="hljs-keyword">const</span> selectTrigger = fixture.debugElement.query(By.css(<span class="hljs-string">'.mat-select-trigger'</span>));
+    selectTrigger.triggerEventHandler(<span class="hljs-string">'click'</span>, {});
+    fixture.detectChanges();
+    <span class="hljs-keyword">await</span> fixture.whenStable();
+    <span class="hljs-keyword">const</span> options = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.mat-select-panel mat-option'</span>);
+    options[<span class="hljs-number">1</span>].click(); <span class="hljs-comment">// Click the second option, "Bug".</span>
+    fixture.detectChanges();
+    <span class="hljs-keyword">await</span> fixture.whenStable();
+    expect(fixture.debugElement.query(<span class="hljs-string">'bug-report-form'</span>)).not.toBeNull();
+  });
+});</code></pre>
+<p translation-result="on">使用 Angular Material 组件时，同样的测试可能如下：</p><p translation-origin="off">The same test, using the Angular Material component harnesses might look like the following:</p>
+
+<pre><code class="language-ts">describe(<span class="hljs-string">'issue-report-selector'</span>, <span class="hljs-function">() =&gt;</span> {
+  <span class="hljs-keyword">let</span> fixture: ComponentFixture&lt;IssueReportSelector&gt;;
+  <span class="hljs-keyword">let</span> loader: HarnessLoader;
+
+  beforeEach(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> TestBed.configureTestingModule({
+      <span class="hljs-attr">imports</span>: [IssueReportSelectorModule],
+      <span class="hljs-attr">declarations</span>: [IssueReportSelector],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(IssueReportSelector);
+    fixture.detectChanges();
+    loader = TestbedHarnessEnvironment.loader(fixture);
+  });
+
+  it(<span class="hljs-string">'should switch to bug report template'</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    expect(fixture.debugElement.query(<span class="hljs-string">'bug-report-form'</span>)).toBeNull();
+    <span class="hljs-keyword">const</span> select = <span class="hljs-keyword">await</span> loader.getHarness(MatSelectHarness);
+    <span class="hljs-keyword">await</span> select.open();
+    <span class="hljs-keyword">const</span> bugOption = <span class="hljs-keyword">await</span> select.getOption({<span class="hljs-attr">text</span>: <span class="hljs-string">'Bug'</span>});
+    <span class="hljs-keyword">await</span> bugOption.click();
+    expect(fixture.debugElement.query(<span class="hljs-string">'bug-report-form'</span>)).not.toBeNull();
+  });
+});</code></pre>
+
+        <h3 id="tests-that-are-easier-to-read-and-understand" class="docs-header-link" translation-result="on">
+          <span header-link="这些测试更容易阅读和理解"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/using-component-harnesses#这些测试更容易阅读和理解" aria-describedby="这些测试更容易阅读和理解"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          这些测试更容易阅读和理解
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tests-that-are-easier-to-read-and-understand"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/using-component-harnesses#tests-that-are-easier-to-read-and-understand" aria-describedby="tests-that-are-easier-to-read-and-understand"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          Tests that are easier to read and understand
+        </h3>
+      
+        
+      <p translation-result="on">上面的代码表明，在测试中采用这些测试工具可以让它们更容易理解。具体到这个例子中，它让 "open the mat-select" 逻辑变得更加明显。一个不太熟悉的读者可能不知道点击 <code>.mat-select-trigger</code> 会有什么用，但 <code>await select.open()</code> 是不言自明的。</p><p translation-origin="off">The code above shows that adopting the harnesses in tests can make them easier to understand.
+Specifically in this example, it makes the "open the mat-select" logic more obvious. An unfamiliar
+reader may not know what clicking on <code>.mat-select-trigger</code> does, but <code>await select.open()</code> is
+self-explanatory.</p>
+
+<p translation-result="on">这些测试工具还明确了应该选择哪个选项。如果没有这些工具，你需要用注释来解释 <code>options[1]</code> 含义，但是使用 <code>MatSelectHarness</code> 你可以使用 <code>text</code> 过滤器而不是索引，代码就会变成自文档化的。</p><p translation-origin="off">The harnesses also make clear which option should be selected. Without the harness, you need a
+comment explaining what <code>options[1]</code> means, but with the <code>MatSelectHarness</code> you can use the <code>text</code>
+filter rather than the index and the code becomes self-documenting.</p>
+
+<p translation-result="on">最后，重复调用 <code>detectChanges</code> 和 <code>whenStable()</code> 可能会混淆测试的底层意图。通过使用这些测试工具 API，你可以消除这些调用，让测试变得更加简洁。</p><p translation-origin="off">Finally, the repeated calls to <code>detectChanges</code> and <code>whenStable()</code> can obfuscate the underlying
+intent of the test. By using the harness APIs, you eliminate these calls, making the test more
+concise.</p>
+
+
+        <h3 id="tests-that-are-more-robust" class="docs-header-link" translation-result="on">
+          <span header-link="测试更健壮"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/using-component-harnesses#测试更健壮" aria-describedby="测试更健壮"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          测试更健壮
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tests-that-are-more-robust"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/using-component-harnesses#tests-that-are-more-robust" aria-describedby="tests-that-are-more-robust"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          Tests that are more robust
+        </h3>
+      
+        
+      <p translation-result="on">注意，没有测试工具的测试会直接使用 CSS 选择器查询 <code>&lt;mat-select&gt;</code> 中的元素，比如 <code>.mat-select-trigger</code>。如果 <code>&lt;mat-select&gt;</code> 的内部 DOM 发生了变化，这些查询可能会停止工作。虽然 Angular 团队试图最大限度地减少这种类型的变更，但一些特性和 bug 的修复最终都可能影响 DOM 的结构。通过使用 Angular Material 测试工具，你可以避免直接依赖内部的 DOM 结构。</p><p translation-origin="off">Notice that the test without harnesses directly uses CSS selectors to query elements within
+<code>&lt;mat-select&gt;</code>, such as <code>.mat-select-trigger</code>. If the internal DOM of <code>&lt;mat-select&gt;</code> changes, these
+queries may stop working. While the Angular team tries to minimize this type of change, some
+features and bug fixes ultimately require restructuring the DOM. By using the Angular Material
+harnesses, you avoid depending on internal DOM structure directly. </p>
+
+<p translation-result="on">除了 DOM 结构外，组件异步性在更新组件时也经常会带来挑战。如果一个组件在同步性方面发生了变化，那么下游的单元测试可能会破坏其对计时方面的期待。然后，测试需要添加或删除一些 <code>whenStable</code>、<code>flushMicroTasks</code>、<code>tick</code> 或 <code>detectChanges</code> 的神秘组合。但是，组件测试工具通过规范化所有带异步 API 组件的行为异步性避免了这个问题。当测试使用这些测试工具时，异步性的变化就会变得更加可控。</p><p translation-origin="off">In addition to DOM structure, component asynchronicity often offers a challenge when updating
+components. If a component changes between synchronous and asynchronous, downstream unit tests may
+break do to expectations around timing. Tests then require the addition or removal of some
+arcane combination of <code>whenStable</code>, <code>flushMicroTasks</code>, <code>tick</code>, or <code>detectChanges</code>. Component
+harnesses, however, avoid this problem by normalizing the asynchronicity of all component behaviors 
+with all asynchronous APIs. When a test uses these harnesses, changes to asynchronicity become
+far more manageable.</p>
+
+<p translation-result="on">Angular Material 组件的 DOM 结构和异步性都是其<em>实现细节</em>。当测试依赖于实现细节时，由于库的变化，它们会成为常见的失败之源。Angular CDK 的测试工具可以让应用作者和 Angular 团队对组件库的更新变得更容易，因为 Angular 团队只需为每个人更新一次测试工具。</p><p translation-origin="off">Both DOM structure and asynchronicity are <em>implementation details</em> of Angular Material's components.
+When tests depend on the implementation details, they become a common source of failures due to
+library changes. Angular CDK's test harnesses makes component library updates easier for both
+application authors and the Angular team, as the Angular team only has to update the harness once
+for everyone.</p>
+
+</div></doc-viewer><!----><table-of-contents _ngcontent-iel-c100="" container="guide-viewer" _nghost-iel-c99=""><div _ngcontent-iel-c99="" class="docs-toc-container ng-star-inserted"><div _ngcontent-iel-c99="" translation-result="" class="docs-toc-heading">目录</div><div _ngcontent-iel-c99="" translation-origin="off" class="docs-toc-heading">Guide Content</div><nav _ngcontent-iel-c99="" aria-label="Guide Content Table of Contents"><a _ngcontent-iel-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/using-component-harnesses#tests-that-are-easier-to-read-and-understand"> 这些测试更容易阅读和理解 </a><a _ngcontent-iel-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/using-component-harnesses#"> 
+          Tests that are easier to read and understand </a><a _ngcontent-iel-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/using-component-harnesses#tests-that-are-more-robust"> 测试更健壮 </a><a _ngcontent-iel-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/using-component-harnesses#"> 
+          Tests that are more robust </a><!----></nav></div><!----></table-of-contents></div></div><app-footer _ngcontent-iel-c100="" _nghost-iel-c51=""><footer _ngcontent-iel-c51="" class="docs-footer"><div _ngcontent-iel-c51="" class="docs-footer-list"><div _ngcontent-iel-c51="" class="docs-footer-logo"><div _ngcontent-iel-c51="" class="footer-logo"><img _ngcontent-iel-c51="" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="Angular icon" class="docs-footer-angular-logo"><span _ngcontent-iel-c51="" translation-result=""><a _ngcontent-iel-c51="" href="https://angular.cn">学习 Angular</a></span><span _ngcontent-iel-c51="" translation-origin="off"><a _ngcontent-iel-c51="" href="https://angular.io">Learn Angular</a></span></div></div><div _ngcontent-iel-c51="" class="docs-footer-version"><img _ngcontent-iel-c51="" src="../../../assets/img/angular-material-logo.svg" alt="Angular Material icon" class="angular-material-logo"><span _ngcontent-iel-c51="" translation-result="" class="version">当前版本：11.0.3</span><span _ngcontent-iel-c51="" translation-origin="off" class="version">Current Version: 11.0.3</span></div><div _ngcontent-iel-c51="" class="docs-footer-copyright"><div _ngcontent-iel-c51=""><span _ngcontent-iel-c51="">Powered by Google ©2010-2020.</span><a _ngcontent-iel-c51="" href="https://github.com/angular/components/blob/master/LICENSE">Code licensed under an MIT-style License.</a><span _ngcontent-iel-c51="">Documentation licensed under CC BY 4.0.</span></div></div></div></footer></app-footer></guide-viewer><!----></material-docs-app>
+<script>
+  // Note this is a customised version of the GA tracking snippet
+  // See the comments below for more info
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    ~i.name.indexOf('NG_DEFER_BOOTSTRAP') || // only load library if not running e2e tests
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+</script>
+<script>
+  // This hides the address bar on mobile browsers
+  // https://developers.google.com/web/fundamentals/native-hardware/fullscreen/
+  window.addEventListener('load', function () {
+    window.scrollTo(0, 1);
+  });
+</script>
+<script src="assets/translator/js/hammer.min.js"></script>
+<script src="assets/translator/js/web-animations.min.js"></script>
+<script src="assets/translator/js/translator.js"></script>
+<script src="runtime-es2015.c198b4aae4f5ae426c01.js" type="module"></script><script src="runtime-es5.c198b4aae4f5ae426c01.js" nomodule="" defer=""></script><script src="polyfills-es5.12c37a181442be72407a.js" nomodule="" defer=""></script><script src="polyfills-es2015.33bc2f4b9af7ed5d09a0.js" type="module"></script><script src="main-es2015.7f8c7c77424041780b26.js" type="module"></script><script src="main-es5.7f8c7c77424041780b26.js" nomodule="" defer=""></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div><div id="cdk-describedby-message-container" class="cdk-visually-hidden" aria-hidden="true"><div id="cdk-describedby-message-0">选择文档版本</div><div id="cdk-describedby-message-1">选择文档的主题</div></div></body></html>

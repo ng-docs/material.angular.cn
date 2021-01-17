@@ -1,0 +1,330 @@
+<!DOCTYPE html><html lang="en-US"><head>
+  <meta charset="utf-8">
+  <title>自定义排版 Customizing Typography - Angular Material 组件库</title>
+  <link rel="canonical" href="https://material.angular.io">
+  <base href="/">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#3F50B5">
+  <meta name="description" content="UI component infrastructure and Material Design components for mobile and desktop Angular web applications.">
+  <meta name="keywords" content="angular, material design, material, angular material, web, ui, components, responsive, accessibility, typescript, css, mobile web, open source">
+  <meta name="author" content="Angular Components Team">
+
+  <!--Twitter card metadata-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Angular">
+  <meta name="twitter:creator" content="@Angular">
+  <meta name="twitter:title" content="Angular Material">
+  <meta name="twitter:description" content="UI component infrastructure and Material Design components for Angular web applications.">
+  <meta name="twitter:image" content="https://material.angular.io/assets/img/site-preview.png">
+
+  <!--Facebook Open Graph-->
+  <meta property="og:url" content="https://material.angular.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Angular Material">
+  <meta property="og:site_name" content="Angular Material">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:description" content="UI component infrastructure and Material Design components for Angular web applications.">
+  <meta property="og:image" content="https://material.angular.io/assets/img/site-preview.png">
+  <meta property="og:image:secure_url" content="https://material.angular.io/assets/img/site-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1339">
+  <meta property="og:image:height" content="943">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png?v=8.2.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png?v=8.2.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png?v=8.2.3">
+  <link rel="manifest" href="assets/img/favicons/manifest.json?v=8.2.3">
+  <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg?v=8.2.3" color="#3f51b5">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico?v=8.2.3">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml?v=8.2.3">
+  <meta name="theme-color" content="#3f51b5">
+
+  <link href="assets/translator/css/material-icons.css" rel="stylesheet">
+  <link href="assets/translator/css/material-roboto-mono.css" rel="stylesheet">
+  <link href="assets/translator/css/translator.css" rel="stylesheet">
+
+  <!--Structured Data-->
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebApplication",
+      "name": "Angular Material",
+      "description": "UI component infrastructure and Material Design components for Angular web applications.",
+      "url": "https://material.angular.io",
+      "image": "https://material.angular.io/assets/img/site-preview.png",
+      "screenshot": "https://material.angular.io/assets/img/site-preview.png",
+      "applicationCategory": "Software Documentation",
+      "operatingSystem": "Android, Chrome OS, iOS, iPadOS, macOS, OS X, Linux, Windows",
+      "author": {
+        "@type": "Organization",
+        "name": "Angular",
+        "description": "Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular.",
+        "url": "https://angular.io",
+        "logo": "https://angular.io/assets/images/logos/angular/angular.svg"
+      }
+    }
+  </script>
+<link rel="stylesheet" href="styles.056395d28d22720dda97.css"><style>material-docs-app{display:flex;flex-direction:column;position:absolute;top:56px;bottom:0;left:0;right:0}app-navbar{position:fixed;top:0;left:0;right:0;z-index:2}material-docs-app>app-component-sidenav{flex:1}material-docs-app>app-guides,material-docs-app>app-homepage,material-docs-app>guide-viewer{overflow-y:auto;-webkit-overflow-scrolling:touch}@media (max-width:720px){material-docs-app{top:92px}material-docs-app>app-guides,material-docs-app>app-homepage,material-docs-app>guide-viewer{overflow-y:visible}}</style><style>.docs-navbar-header[_ngcontent-wwe-c49]{display:flex;flex-wrap:wrap;align-items:center;padding:8px 16px}.docs-navbar-header[_ngcontent-wwe-c49] > .mat-button[_ngcontent-wwe-c49]:last-child{margin-left:auto}.flex-spacer[_ngcontent-wwe-c49]{flex-grow:1}.docs-angular-logo[_ngcontent-wwe-c49]{height:26px;margin:0 4px 3px 0;vertical-align:middle}.docs-github-logo[_ngcontent-wwe-c49]{height:21px;margin:0 7px 2px 0;vertical-align:middle}.docs-navbar-link[_ngcontent-wwe-c49]{text-decoration:inherit;flex:1}.docs-navbar[_ngcontent-wwe-c49], .docs-navbar-show-small[_ngcontent-wwe-c49]{display:none}.skip-link-wrapper[_ngcontent-wwe-c49]{position:absolute;top:10px;left:50%;transform:translateX(-50%);border-radius:5px}@media (max-width:720px){.docs-navbar-hide-small[_ngcontent-wwe-c49]{display:none}.docs-navbar-show-small[_ngcontent-wwe-c49]{display:block}.docs-navbar[_ngcontent-wwe-c49]{display:flex}.docs-navbar--github-logo[_ngcontent-wwe-c49]{margin:0}}</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button.mat-button-disabled,.mat-icon-button.mat-button-disabled,.mat-stroked-button.mat-button-disabled,.mat-flat-button.mat-button-disabled{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button.mat-button-disabled{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab.mat-button-disabled{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab.mat-button-disabled{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}.cdk-high-contrast-active .mat-button-base.cdk-keyboard-focused,.cdk-high-contrast-active .mat-button-base.cdk-program-focused{outline:solid 3px}
+</style><style>.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon{margin-right:0;margin-left:8px;float:right}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon svg{vertical-align:middle}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-background{fill:#fafafa}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-button{fill:#ffc107}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-toolbar{fill:#673ab7}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-background{fill:#fafafa}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-button{fill:#e91e63}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-toolbar{fill:#3f51b5}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-background{fill:#303030}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-button{fill:#607d8b}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-toolbar{fill:#e91e63}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-background{fill:#303030}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-button{fill:#4caf50}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-toolbar{fill:#9c27b0}</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0;min-height:64px}.mat-menu-panel.ng-animating{pointer-events:none}.cdk-high-contrast-active .mat-menu-panel{outline:solid 1px}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}.mat-menu-item[disabled]{pointer-events:none}.cdk-high-contrast-active .mat-menu-item.cdk-program-focused,.cdk-high-contrast-active .mat-menu-item.cdk-keyboard-focused,.cdk-high-contrast-active .mat-menu-item-highlighted{outline:dotted 1px}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:"";display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}
+</style><script charset="utf-8" src="64-es2015.0cf108642257b452c33e.js"></script><style>[_nghost-wwe-c100]{display:flex;flex-direction:column;flex-grow:1}.docs-guide-wrapper[_ngcontent-wwe-c100]{padding:20px 70px 0;display:block;text-align:center}@media (max-width:599px){.docs-guide-wrapper[_ngcontent-wwe-c100]{padding-left:15px;padding-right:15px}}.docs-guide-toc-and-content[_ngcontent-wwe-c100]{display:flex;align-items:flex-start;text-align:left;max-width:940px;margin:0 auto;min-height:100vh}@media (max-width:720px){.docs-guide-toc-and-content[_ngcontent-wwe-c100]{flex-direction:column}}.docs-guide-content[_ngcontent-wwe-c100]{flex-grow:1;width:80%}@media (max-width:720px){.docs-guide-content[_ngcontent-wwe-c100]{width:100%}}table-of-contents[_ngcontent-wwe-c100]{top:35px;position:sticky}@media (max-width:720px){table-of-contents[_ngcontent-wwe-c100]{order:-1;position:inherit;width:auto;padding-left:0}}  blockquote{border-left:8px solid #1976d2;margin:0;padding:.5em 2em;background-color:rgba(25,118,210,.05)}</style><style>[_nghost-wwe-c99]{font-size:13px;width:19%;position:sticky;top:0;padding-left:25px;box-sizing:border-box;display:inline-flex;flex-direction:column}.docs-toc-container[_ngcontent-wwe-c99]{width:100%;padding:5px 0 10px 10px}.docs-toc-container[_ngcontent-wwe-c99] + .docs-toc-container[_ngcontent-wwe-c99]{padding-top:8px}.docs-toc-heading[_ngcontent-wwe-c99]{margin:0;padding:0;font-size:13px;font-weight:700;text-transform:capitalize}a[_ngcontent-wwe-c99]{line-height:16px;margin:8px 0 0;position:relative;text-decoration:none;display:block;text-overflow:ellipsis;width:100%;overflow:hidden}.docs-level-h4[_ngcontent-wwe-c99]{margin-left:12px}</style><style>.docs-footer[_ngcontent-wwe-c51]{padding:12px;font-size:12px}.docs-footer-list[_ngcontent-wwe-c51]{align-items:center;display:flex;flex-flow:row wrap;padding:8px}.docs-footer-logo[_ngcontent-wwe-c51]{flex:1}.docs-footer-angular-logo[_ngcontent-wwe-c51]{height:50px}.docs-footer-version[_ngcontent-wwe-c51]{display:flex;justify-content:center;align-items:center;flex:1}.docs-footer-version[_ngcontent-wwe-c51]   .angular-material-logo[_ngcontent-wwe-c51]{height:40px;margin:10px 0 10px 16px}.docs-footer-version[_ngcontent-wwe-c51]   .version[_ngcontent-wwe-c51]{margin:0 40px}.docs-footer-copyright[_ngcontent-wwe-c51]{display:flex;flex:1;justify-content:flex-end;flex-direction:column;min-width:225px;margin-top:16px}.docs-footer-copyright[_ngcontent-wwe-c51] > div[_ngcontent-wwe-c51]{display:flex;flex-direction:column;align-self:flex-end;text-align:center}@media (min-width:885px){.docs-footer-copyright[_ngcontent-wwe-c51]{margin-top:0}}.docs-footer-logo[_ngcontent-wwe-c51]   span[_ngcontent-wwe-c51]{display:inline-block;line-height:50px;margin:0 40px;vertical-align:bottom}.docs-footer-logo[_ngcontent-wwe-c51]   span[_ngcontent-wwe-c51]   a[_ngcontent-wwe-c51]{font-size:16px;padding:0}a[_ngcontent-wwe-c51]{text-decoration:none;color:inherit}a[_ngcontent-wwe-c51]:focus, a[_ngcontent-wwe-c51]:hover{text-decoration:underline}@media screen and (max-width:884px){.docs-footer-list[_ngcontent-wwe-c51]{flex-direction:column}}</style></head>
+
+<body class="docs-app-background">
+<material-docs-app ng-version="11.0.0"><app-navbar class="mat-elevation-z6" _nghost-wwe-c49=""><nav _ngcontent-wwe-c49="" aria-label="Top Toolbar" class="docs-navbar-header"><div _ngcontent-wwe-c49="" class="skip-link-wrapper cdk-visually-hidden ng-star-inserted"><a _ngcontent-wwe-c49="" mat-raised-button="" color="accent" class="mat-focus-indicator mat-raised-button mat-button-base mat-accent" href="/guide/typography#guide-content" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"> Skip to main content </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a></div><!----><a _ngcontent-wwe-c49="" mat-button="" routerlink="/" aria-label="Angular Material" class="mat-focus-indicator docs-button mat-button mat-button-base" tabindex="0" aria-disabled="false" href="/"><span class="mat-button-wrapper"><img _ngcontent-wwe-c49="" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="angular" class="docs-angular-logo"><span _ngcontent-wwe-c49="">Material</span></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-wwe-c49="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/components"><span class="mat-button-wrapper">组件</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-wwe-c49="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/cdk"><span class="mat-button-wrapper">组件开发包</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-wwe-c49="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/guides"><span class="mat-button-wrapper">使用指南</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><!----><div _ngcontent-wwe-c49="" class="flex-spacer"></div><version-picker _ngcontent-wwe-c49=""><button aria-haspopup="true" mat-button="" aria-label="Select a version" mattooltip="选择文档版本" class="mat-focus-indicator mat-tooltip-trigger mat-menu-trigger mat-button mat-button-base" aria-describedby="cdk-describedby-message-0" cdk-describedby-host=""><span class="mat-button-wrapper"> 11.0.3 <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">arrow_drop_down</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu class="ng-tns-c42-0"><!----></mat-menu></version-picker><theme-picker _ngcontent-wwe-c49=""><button aria-haspopup="true" mat-icon-button="" aria-label="Select a theme" mattooltip="选择文档的主题" class="mat-focus-indicator mat-tooltip-trigger mat-menu-trigger mat-icon-button mat-button-base" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">format_color_fill</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu xposition="before" class=""><!----></mat-menu></theme-picker><a _ngcontent-wwe-c49="" mat-button="" href="https://github.com/ng-docs/components" target="_blank" aria-label="GitHub Repository" class="mat-focus-indicator docs-button docs-navbar-hide-small mat-button mat-button-base" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><img _ngcontent-wwe-c49="" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo"> GitHub </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-wwe-c49="" mat-icon-button="" href="https://github.com/angular/components" aria-label="GitHub Repository" class="mat-focus-indicator docs-button docs-navbar-show-small mat-icon-button mat-button-base" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><img _ngcontent-wwe-c49="" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo"></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></a></nav><nav _ngcontent-wwe-c49="" aria-label="Section Nav Bar" class="docs-navbar docs-navbar-show-small"><a _ngcontent-wwe-c49="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/components"><span class="mat-button-wrapper">组件</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-wwe-c49="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/cdk"><span class="mat-button-wrapper">组件开发包</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-wwe-c49="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/guides"><span class="mat-button-wrapper">使用指南</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><!----></nav></app-navbar><router-outlet></router-outlet><guide-viewer _nghost-wwe-c100="" class="ng-star-inserted"><div _ngcontent-wwe-c100="" class="docs-primary-header"><h1 _ngcontent-wwe-c100="">自定义排版&nbsp;<small _ngcontent-wwe-c100="">Customizing Typography</small></h1></div><div _ngcontent-wwe-c100="" class="docs-guide-wrapper"><div _ngcontent-wwe-c100="" class="docs-guide-toc-and-content"><doc-viewer _ngcontent-wwe-c100="" focusonnavigation="" id="guide-content" aria-label="Guide content" class="docs-guide-content" tabindex="-1" style="outline: none;"><div class="docs-markdown"><h1 id="angular-material-typography" translation-result="on">Angular Material 的排版</h1><h1 translation-origin="off">Angular Material typography</h1>
+        <h3 id="what-is-typography" class="docs-header-link" translation-result="on">
+          <span header-link="什么是排版？"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#什么是排版？" aria-describedby="什么是排版？"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          什么是排版？
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="what-is-typography"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#what-is-typography" aria-describedby="what-is-typography"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          What is typography?
+        </h3>
+      
+        
+      <p translation-result="on">排版是一种排列字型的方式，它让文本在显示时更加清晰、易读、富有吸引力。Angular Material 的排版基于 <a href="https://material.io/archive/guidelines/style/typography.html">Material Design 规范</a>中给出的指导原则，并按排版等级进行排列。每个等级都有自己的 <code>font-size</code>、<code>line-height</code> 和 <code>font-weight</code>。 有效的等级包括：</p><p translation-origin="off">Typography is a way of arranging type to make text legible, readable, and appealing when displayed. Angular Material's typography is based on the guidelines from the <a href="https://material.io/archive/guidelines/style/typography.html">Material Design spec</a> and is arranged into typography levels. Each level has a <code>font-size</code>, <code>line-height</code> and <code>font-weight</code>. The available levels are:</p>
+
+<table>
+<thead>
+<tr>
+<th><p translation-result="on">名称</p><p translation-origin="off">Name</p></th>
+<th><p translation-result="on">CSS 类</p><p translation-origin="off">CSS classes</p></th>
+<th><p translation-result="on">说明</p><p translation-origin="off">Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>display-4</code></td>
+<td><code>.mat-display-4</code></td>
+<td><p translation-result="on">大型的，只出现一次的头，通常位于页面的顶部（比如 hero 的头部）</p><p translation-origin="off">Large, one-off header, usually at the top of the page (e.g. a hero header).</p></td>
+</tr>
+
+<tr>
+<td><code>display-3</code></td>
+<td><code>.mat-display-3</code></td>
+<td><p translation-result="on">大型的，只出现一次的头，通常位于页面的顶部（比如 hero 的头部）</p><p translation-origin="off">Large, one-off header, usually at the top of the page (e.g. a hero header).</p></td>
+</tr>
+
+<tr>
+<td><code>display-2</code></td>
+<td><code>.mat-display-2</code></td>
+<td><p translation-result="on">大型的，只出现一次的头，通常位于页面的顶部（比如 hero 的头部）</p><p translation-origin="off">Large, one-off header, usually at the top of the page (e.g. a hero header).</p></td>
+</tr>
+
+<tr>
+<td><code>display-1</code></td>
+<td><code>.mat-display-1</code></td>
+<td><p translation-result="on">大型的，只出现一次的头，通常位于页面的顶部（比如 hero 的头部）</p><p translation-origin="off">Large, one-off header, usually at the top of the page (e.g. a hero header).</p></td>
+</tr>
+
+<tr>
+<td><code>headline</code></td>
+<td><code>.mat-h1</code>, <code>.mat-headline</code></td>
+<td><p translation-result="on">与 <code>&lt;h1&gt;</code> 标签对应的小节的头部</p><p translation-origin="off">Section heading corresponding to the <code>&lt;h1&gt;</code> tag.</p></td>
+</tr>
+
+<tr>
+<td><code>title</code></td>
+<td><code>.mat-h2</code>, <code>.mat-title</code></td>
+<td><p translation-result="on">与 <code>&lt;h2&gt;</code> 标签对应的小节的头部</p><p translation-origin="off">Section heading corresponding to the <code>&lt;h2&gt;</code> tag.</p></td>
+</tr>
+
+<tr>
+<td><code>subheading-2</code></td>
+<td><code>.mat-h3</code>, <code>.mat-subheading-2</code></td>
+<td><p translation-result="on">与 <code>&lt;h3&gt;</code> 标签对应的小节的头部</p><p translation-origin="off">Section heading corresponding to the <code>&lt;h3&gt;</code> tag.</p></td>
+</tr>
+
+<tr>
+<td><code>subheading-1</code></td>
+<td><code>.mat-h4</code>, <code>.mat-subheading-1</code></td>
+<td><p translation-result="on">与 <code>&lt;h4&gt;</code> 标签对应的小节的头部</p><p translation-origin="off">Section heading corresponding to the <code>&lt;h4&gt;</code> tag.</p></td>
+</tr>
+
+<tr>
+<td><code>body-1</code></td>
+<td><code>.mat-body</code>, <code>.mat-body-1</code></td>
+<td><p translation-result="on">基本的正文文本。</p><p translation-origin="off">Base body text.</p></td>
+</tr>
+
+<tr>
+<td><code>body-2</code></td>
+<td><code>.mat-body-strong</code>, <code>.mat-body-2</code></td>
+<td><p translation-result="on">较粗的正文文本。</p><p translation-origin="off">Bolder body text.</p></td>
+</tr>
+
+<tr>
+<td><code>caption</code></td>
+<td><code>.mat-small</code>, <code>.mat-caption</code></td>
+<td><p translation-result="on">较小的正文文本和提示文本。</p><p translation-origin="off">Smaller body and hint text.</p></td>
+</tr>
+
+<tr>
+<td><code>button</code></td>
+<td><p translation-result="on">无。只用于组件中。</p><p translation-origin="off">None. Used only in components.</p></td>
+<td><p translation-result="on">按钮与链接。</p><p translation-origin="off">Buttons and anchors.</p></td>
+</tr>
+
+<tr>
+<td><code>input</code></td>
+<td><p translation-result="on">无。只用于组件中。</p><p translation-origin="off">None. Used only in components.</p></td>
+<td><p translation-result="on">表单输入字段。</p><p translation-origin="off">Form input fields.</p></td>
+</tr>
+
+</tbody></table>
+<p translation-result="on">这些排版等级都收集到了一个用来生成 CSS 的排版配置对象中。</p><p translation-origin="off">The typography levels are collected into a typography config which is used to generate the CSS.</p>
+
+
+        <h3 id="usage" class="docs-header-link" translation-result="on">
+          <span header-link="用法"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#用法" aria-describedby="用法"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          用法
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="usage"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#usage" aria-describedby="usage"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          Usage
+        </h3>
+      
+        
+      <p translation-result="on">在开始之前，你要先把 300、400 和 500 磅字重的 <code>Roboto</code> 字体包含进来。 你可以自己提供它，也可以从 <a href="https://fonts.google.com/">Google Fonts</a> 中包含它。</p><p translation-origin="off">To get started, you first include the <code>Roboto</code> font with the 300, 400 and 500 weights. You can host it yourself or include it from <a href="https://fonts.google.com/">Google Fonts</a>:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"preconnect"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.gstatic.com"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&amp;display=swap"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span></code></pre>
+<p translation-result="on">现在，你就可以为想设置样式的元素添加一些适当的 CSS 类了。</p><p translation-origin="off">Now you can add the appropriate CSS classes to the elements that you want to style:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-display-1"</span>&gt;</span>Jackdaws love my big sphinx of quartz.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-h2"</span>&gt;</span>The quick brown fox jumps over the lazy dog.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></code></pre>
+<p translation-result="on">默认情况下，Angular Material 不会应用任何全局 CSS。要更广泛的应用本库中的排版风格，你可以使用 <code>mat-typography</code> CSS 类。 这个类会为所有下属的原生元素设置样式。</p><p translation-origin="off">By default, Angular Material doesn't apply any global CSS. To apply the library's typographic styles more broadly, you can take advantage of the <code>mat-typography</code> CSS class. This class will style all descendant native elements.</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- By default, Angular Material applies no global styles to native elements. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This header is unstyled<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Applying the mat-tyography class adds styles for native elements. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-typography"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This header will be styled<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+
+        <h3 id="customization" class="docs-header-link" translation-result="on">
+          <span header-link="自定义"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#自定义" aria-describedby="自定义"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          自定义
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="customization"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#customization" aria-describedby="customization"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          Customization
+        </h3>
+      
+        
+      <p translation-result="on">排版定制是 Angular Material 的一个基于 Sass 的扩展方式。 和创建自定义主题类似，你也可以创建一个自定义的<strong>排版配置</strong>。</p><p translation-origin="off">Typography customization is an extension of Angular Material's Sass-based theming. Similar to creating a custom theme, you can create a custom <strong>typography configuration</strong>.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+
+<span class="hljs-comment">// Define a custom typography config that overrides the font-family as well as the</span>
+<span class="hljs-comment">// `headlines` and `body-1` levels.</span>
+<span class="hljs-variable">$custom-typography</span>: mat-typography-config(
+  <span class="hljs-variable">$font-family</span>: <span class="hljs-string">'Roboto, monospace'</span>,
+  <span class="hljs-variable">$headline</span>: mat-typography-level(<span class="hljs-number">32px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">700</span>),
+  <span class="hljs-variable">$body-1</span>: mat-typography-level(<span class="hljs-number">16px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">500</span>)
+);</code></pre>
+<p translation-result="on">正如上面这个例子所演示的，排版配置是使用 <code>mat-typography-config</code> 函数创建的，它会同时给出字体家族和一组前面讲过的排版等级。 每个排版等级都是用 <code>mat-typography-level</code> 函数定义的，它需要 <code>font-size</code>、<code>line-height</code> 和 <code>font-weight</code>。
+<strong>注意</strong>，<code>font-family</code> 的值必须带引号。</p><p translation-origin="off">As the above example demonstrates, a typography configuration is created by using the
+<code>mat-typography-config</code> function, which is given both the font-family and the set of typographic levels described earlier. Each typographic level is defined by the <code>mat-typography-level</code> function, which requires a <code>font-size</code>, <code>line-height</code>, and <code>font-weight</code>. <strong>Note</strong> that the <code>font-family</code>
+has to be in quotes.</p>
+
+<p translation-result="on">一旦创建了自定义的排版定义对象，就可以借助不同的 Sass 混入器来用它生成样式了。</p><p translation-origin="off">Once the custom typography definition is created, it can be consumed to generate styles via different Sass mixins.</p>
+
+<pre><code class="language-scss"><span class="hljs-comment">// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).</span>
+<span class="hljs-keyword">@include</span> mat-base-typography(<span class="hljs-variable">$custom-typography</span>);
+
+<span class="hljs-comment">// Override typography for a specific Angular Material components.</span>
+<span class="hljs-keyword">@include</span> mat-checkbox-typography(<span class="hljs-variable">$custom-typography</span>);
+
+<span class="hljs-comment">// Override typography for all Angular Material, including mat-base-typography and all components.</span>
+<span class="hljs-keyword">@include</span> angular-material-typography(<span class="hljs-variable">$custom-typography</span>);</code></pre>
+<p translation-result="on">如果你在使用 Material 的主题，还可以把你的排版配置对象传给 <code>mat-core</code> 混入器：</p><p translation-origin="off">If you're using Material's theming, you can also pass in your typography config to the
+<code>mat-core</code> mixin:</p>
+
+<pre><code class="language-scss"><span class="hljs-comment">// Override the typography in the core CSS.</span>
+<span class="hljs-keyword">@include</span> mat-core(<span class="hljs-variable">$custom-typography</span>);</code></pre>
+<p translation-result="on">要了解排版函数的详情及其默认配置，参见<a href="https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss">源码</a>。</p><p translation-origin="off">For more details about the typography functions and default config, see the
+<a href="https://github.com/angular/components/blob/master/src/material/core/typography/_typography.scss">source</a>.</p>
+
+
+        <h3 id="material-typography-in-your-custom-css" class="docs-header-link" translation-result="on">
+          <span header-link="在自定义-css-中使用-material-排版"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#在自定义-css-中使用-material-排版" aria-describedby="在自定义-css-中使用-material-排版"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          在自定义 CSS 中使用 Material 排版
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="material-typography-in-your-custom-css"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/guide/typography#material-typography-in-your-custom-css" aria-describedby="material-typography-in-your-custom-css"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+          Material typography in your custom CSS
+        </h3>
+      
+        
+      <p translation-result="on">Angular Material 包含一些排版工具的混入器和函数，你可以用它们来定制自己的组件：</p><p translation-origin="off">Angular Material includes typography utility mixins and functions that you can use to customize your own components:</p>
+
+<ul>
+<li><p translation-result="on"><code>mat-font-size($config, $level)</code> - 根据所提供的配置和等级，获取 <code>font-size</code>。</p><p translation-origin="off"><code>mat-font-size($config, $level)</code> - Gets the <code>font-size</code>, based on the provided config and level.</p>
+
+</li>
+<li><p translation-result="on"><code>mat-font-family($config)</code> - 根据所提供的配置，获取 <code>font-family</code>。</p><p translation-origin="off"><code>mat-font-family($config)</code> - Gets the <code>font-family</code>, based on the provided config.</p>
+
+</li>
+<li><p translation-result="on"><code>mat-line-height($config, $level)</code> - 根据所提供的配置和等级，获取 <code>line-height</code>。</p><p translation-origin="off"><code>mat-line-height($config, $level)</code> - Gets the <code>line-height</code>, based on the provided config and level.</p>
+
+</li>
+<li><p translation-result="on"><code>mat-font-weight($config, $level)</code> - 根据所提供的配置和等级，获取 <code>font-weight</code>。</p><p translation-origin="off"><code>mat-font-weight($config, $level)</code> - Gets the <code>font-weight</code>, based on the provided config and level.</p>
+
+</li>
+<li><p translation-result="on"><code>mat-typography-level-to-styles($config, $level)</code> - 这个混入器接受一个配置对象和一个排版等级，并输出一个简短的 CSS <code>font</code> 声明。</p><p translation-origin="off"><code>mat-typography-level-to-styles($config, $level)</code> - Mixin that takes in a configuration object and a typography level, and outputs a short-hand CSS <code>font</code> declaration.</p>
+
+</li>
+</ul>
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+
+<span class="hljs-comment">// Create a config with the default typography levels.</span>
+<span class="hljs-variable">$config</span>: mat-typography-config();
+
+<span class="hljs-comment">// Custom header that uses only the Material `font-size` and `font-family`.</span>
+<span class="hljs-selector-class">.unicorn-header</span> {
+  <span class="hljs-attribute">font-size</span>: mat-font-size(<span class="hljs-variable">$config</span>, headline);
+  <span class="hljs-attribute">font-family</span>: mat-font-family(<span class="hljs-variable">$config</span>);
+}
+
+<span class="hljs-comment">// Custom title that uses all of the typography styles from the `title` level.</span>
+<span class="hljs-selector-class">.unicorn-title</span> {
+  <span class="hljs-keyword">@include</span> mat-typography-level-to-styles(<span class="hljs-variable">$config</span>, title);
+}</code></pre>
+</div></doc-viewer><!----><table-of-contents _ngcontent-wwe-c100="" container="guide-viewer" _nghost-wwe-c99=""><div _ngcontent-wwe-c99="" class="docs-toc-container ng-star-inserted"><div _ngcontent-wwe-c99="" translation-result="" class="docs-toc-heading">目录</div><div _ngcontent-wwe-c99="" translation-origin="off" class="docs-toc-heading">Guide Content</div><nav _ngcontent-wwe-c99="" aria-label="Guide Content Table of Contents"><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#what-is-typography"> 什么是排版？ </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#"> 
+          What is typography? </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#usage"> 用法 </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#"> 
+          Usage </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#customization"> 自定义 </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#"> 
+          Customization </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#material-typography-in-your-custom-css"> 在自定义 CSS 中使用 Material 排版 </a><a _ngcontent-wwe-c99="" class="docs-level-h3 docs-link ng-star-inserted" href="/guide/typography#"> 
+          Material typography in your custom CSS </a><!----></nav></div><!----></table-of-contents></div></div><app-footer _ngcontent-wwe-c100="" _nghost-wwe-c51=""><footer _ngcontent-wwe-c51="" class="docs-footer"><div _ngcontent-wwe-c51="" class="docs-footer-list"><div _ngcontent-wwe-c51="" class="docs-footer-logo"><div _ngcontent-wwe-c51="" class="footer-logo"><img _ngcontent-wwe-c51="" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="Angular icon" class="docs-footer-angular-logo"><span _ngcontent-wwe-c51="" translation-result=""><a _ngcontent-wwe-c51="" href="https://angular.cn">学习 Angular</a></span><span _ngcontent-wwe-c51="" translation-origin="off"><a _ngcontent-wwe-c51="" href="https://angular.io">Learn Angular</a></span></div></div><div _ngcontent-wwe-c51="" class="docs-footer-version"><img _ngcontent-wwe-c51="" src="../../../assets/img/angular-material-logo.svg" alt="Angular Material icon" class="angular-material-logo"><span _ngcontent-wwe-c51="" translation-result="" class="version">当前版本：11.0.3</span><span _ngcontent-wwe-c51="" translation-origin="off" class="version">Current Version: 11.0.3</span></div><div _ngcontent-wwe-c51="" class="docs-footer-copyright"><div _ngcontent-wwe-c51=""><span _ngcontent-wwe-c51="">Powered by Google ©2010-2020.</span><a _ngcontent-wwe-c51="" href="https://github.com/angular/components/blob/master/LICENSE">Code licensed under an MIT-style License.</a><span _ngcontent-wwe-c51="">Documentation licensed under CC BY 4.0.</span></div></div></div></footer></app-footer></guide-viewer><!----></material-docs-app>
+<script>
+  // Note this is a customised version of the GA tracking snippet
+  // See the comments below for more info
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    ~i.name.indexOf('NG_DEFER_BOOTSTRAP') || // only load library if not running e2e tests
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+</script>
+<script>
+  // This hides the address bar on mobile browsers
+  // https://developers.google.com/web/fundamentals/native-hardware/fullscreen/
+  window.addEventListener('load', function () {
+    window.scrollTo(0, 1);
+  });
+</script>
+<script src="assets/translator/js/hammer.min.js"></script>
+<script src="assets/translator/js/web-animations.min.js"></script>
+<script src="assets/translator/js/translator.js"></script>
+<script src="runtime-es2015.c198b4aae4f5ae426c01.js" type="module"></script><script src="runtime-es5.c198b4aae4f5ae426c01.js" nomodule="" defer=""></script><script src="polyfills-es5.12c37a181442be72407a.js" nomodule="" defer=""></script><script src="polyfills-es2015.33bc2f4b9af7ed5d09a0.js" type="module"></script><script src="main-es2015.7f8c7c77424041780b26.js" type="module"></script><script src="main-es5.7f8c7c77424041780b26.js" nomodule="" defer=""></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div><div id="cdk-describedby-message-container" class="cdk-visually-hidden" aria-hidden="true"><div id="cdk-describedby-message-0">选择文档版本</div><div id="cdk-describedby-message-1">选择文档的主题</div></div></body></html>
