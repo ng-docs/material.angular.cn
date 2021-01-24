@@ -18,8 +18,8 @@
   <span header-link="Clipboard"></span>
   <code>Clipboard</code>
   
-</h4><p class="docs-api-class-description"></p><p>A service for copying text to the clipboard.</p>
-<p></p>
+</h4><div class="docs-api-class-description"><p>A service for copying text to the clipboard.</p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
@@ -50,10 +50,10 @@ which take too long to successfully render and be copied in the same tick.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The string to copy.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The string to copy.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -64,10 +64,10 @@ which take too long to successfully render and be copied in the same tick.</p>
       <code class="docs-api-method-returns-type">PendingCopy</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>the pending copy operation.</p>
+      <div class="docs-api-method-returns-description">
+        <p>the pending copy operation.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -97,10 +97,10 @@ which take too long to successfully render and be copied in the same tick.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The string to copy.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The string to copy.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -111,10 +111,10 @@ which take too long to successfully render and be copied in the same tick.</p>
       <code class="docs-api-method-returns-type">boolean</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Whether the operation was successful.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Whether the operation was successful.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -134,14 +134,14 @@ which take too long to successfully render and be copied in the same tick.</p>
   <span header-link="CdkCopyToClipboard"></span>
   <code>CdkCopyToClipboard</code>
   
-</h4><p class="docs-api-class-description"></p><p>Provides behavior for a button that when clicked copies content into user's
+</h4><div class="docs-api-class-description"><p>Provides behavior for a button that when clicked copies content into user's
 clipboard.</p>
-<p></p><p class="docs-api-directive-selectors">
+</div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
     <span class="docs-api-class-selector-name">[cdkCopyToClipboard]</span>
   
-</p><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -221,9 +221,9 @@ emitted value indicates whether copying was successful.</p>
       <code class="docs-api-method-parameter-type">number = this.attempts</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -244,7 +244,7 @@ emitted value indicates whether copying was successful.</p>
   <span header-link="PendingCopy"></span>
   <code>PendingCopy</code>
   
-</h4><p class="docs-api-class-description"></p><p>A pending copy-to-clipboard operation.</p>
+</h4><div class="docs-api-class-description"><p>A pending copy-to-clipboard operation.</p>
 <p>The implementation of copying text to the clipboard modifies the DOM and
 forces a relayout. This relayout can take too long if the string is large,
 causing the execCommand('copy') to happen too long after the user clicked.
@@ -253,7 +253,7 @@ relayout happen in a separate tick from copying by providing a copy function
 that can be called later.</p>
 <p>Destroy must be called when no longer in use, regardless of whether <code>copy</code> is
 called.</p>
-<p></p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
@@ -279,9 +279,9 @@ called.</p>
       <code class="docs-api-method-returns-type">boolean</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -317,8 +317,8 @@ called.</p>
 <h4 id="CdkCopyToClipboardConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkCopyToClipboardConfig"></span>
   <code>CdkCopyToClipboardConfig</code>
-</h4><p class="docs-api-interface-description"></p><p>Object that can be used to configure the default options for <code>CdkCopyToClipboard</code>.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+</h4><div class="docs-api-interface-description"><p>Object that can be used to configure the default options for <code>CdkCopyToClipboard</code>.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -355,8 +355,8 @@ called.</p>
 <h4 id="CKD_COPY_TO_CLIPBOARD_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CKD_COPY_TO_CLIPBOARD_CONFIG"></span>
   <code>CKD_COPY_TO_CLIPBOARD_CONFIG</code>
-</h4><p class="docs-api-constant-description"></p><p>Injection token that can be used to provide the default options to <code>CdkCopyToClipboard</code>.</p>
-<p></p><div class="docs-markdown">
+</h4><div class="docs-api-constant-description"><p>Injection token that can be used to provide the default options to <code>CdkCopyToClipboard</code>.</p>
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CKD_COPY_TO_CLIPBOARD_CONFIG: InjectionToken&lt;CdkCopyToClipboardConfig&gt;;</code>
 </pre>
 </div>

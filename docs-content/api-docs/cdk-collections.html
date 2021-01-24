@@ -18,13 +18,13 @@
   <span header-link="UniqueSelectionDispatcher"></span>
   <code>UniqueSelectionDispatcher</code>
   
-</h4><p class="docs-api-class-description"></p><p>Class to coordinate unique selection based on name.
+</h4><div class="docs-api-class-description"><p>Class to coordinate unique selection based on name.
 Intended to be consumed as an Angular service.
 This service is needed because native radio change events are only fired on the item currently
 being selected, and we still need to uncheck the previous selection.</p>
 <p>This service does not <em>store</em> any IDs and names because they may change at any time, so it is
 less error-prone if they are simply passed through when the events occur.</p>
-<p></p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
@@ -53,9 +53,9 @@ less error-prone if they are simply passed through when the events occur.</p>
       <code class="docs-api-method-parameter-type">UniqueSelectionDispatcherListener</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -66,10 +66,10 @@ less error-prone if they are simply passed through when the events occur.</p>
       <code class="docs-api-method-returns-type">() =&gt; void</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Function used to deregister listener</p>
+      <div class="docs-api-method-returns-description">
+        <p>Function used to deregister listener</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -99,10 +99,10 @@ less error-prone if they are simply passed through when the events occur.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>ID of the item.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>ID of the item.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -113,10 +113,10 @@ less error-prone if they are simply passed through when the events occur.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>Name of the item.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>Name of the item.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -144,8 +144,8 @@ less error-prone if they are simply passed through when the events occur.</p>
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"></p><p>DataSource wrapper for a native array.</p>
-<p></p>
+</h4><div class="docs-api-class-description"><p>DataSource wrapper for a native array.</p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
@@ -166,9 +166,9 @@ less error-prone if they are simply passed through when the events occur.</p>
       <code class="docs-api-method-returns-type">Observable&lt;T[] | ReadonlyArray&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -227,11 +227,11 @@ values that are bound in template views.</p>
       <code class="docs-api-method-parameter-type">CollectionViewer</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The component that exposes a view over the data provided by this
+      <div class="docs-api-method-parameter-description">
+        <p>The component that exposes a view over the data provided by this
     data source.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -242,10 +242,10 @@ values that are bound in template views.</p>
       <code class="docs-api-method-returns-type">Observable&lt;T[] | ReadonlyArray&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Observable that emits a new value when the data changes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Observable that emits a new value when the data changes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -276,11 +276,11 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-parameter-type">CollectionViewer</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The component that exposes a view over the data provided by this
+      <div class="docs-api-method-parameter-description">
+        <p>The component that exposes a view over the data provided by this
     data source.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -297,8 +297,8 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
   <span header-link="SelectionModel"></span>
   <code>SelectionModel</code>
   
-</h4><p class="docs-api-class-description"></p><p>Class to be used to power selecting one or more options from a list.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+</h4><div class="docs-api-class-description"><p>Class to be used to power selecting one or more options from a list.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -377,9 +377,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-parameter-type">T[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -407,9 +407,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-returns-type">boolean</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -436,9 +436,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-returns-type">boolean</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -485,9 +485,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -498,9 +498,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-returns-type">boolean</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -530,9 +530,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-parameter-type">T[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -563,9 +563,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-parameter-type">(a</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -596,9 +596,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -618,9 +618,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
 <h4 id="CollectionViewer" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CollectionViewer"></span>
   <code>CollectionViewer</code>
-</h4><p class="docs-api-interface-description"></p><p>Interface for any component that provides a view of some data collection and wants to provide
+</h4><div class="docs-api-interface-description"><p>Interface for any component that provides a view of some data collection and wants to provide
 information regarding the view and any changes made.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -654,9 +654,9 @@ data. The <code>start</code> index is inclusive, while the <code>end</code> is e
 <h4 id="TreeDataNodeFlattener" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TreeDataNodeFlattener"></span>
   <code>TreeDataNodeFlattener</code>
-</h4><p class="docs-api-interface-description"></p><p>Interface for a class that can flatten hierarchical structured data and re-expand the flattened
+</h4><div class="docs-api-interface-description"><p>Interface for a class that can flatten hierarchical structured data and re-expand the flattened
 data back into its original structure. Should be used in conjunction with the cdk-tree.</p>
-<p></p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
@@ -686,9 +686,9 @@ model.</p>
       <code class="docs-api-method-parameter-type">T[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   
@@ -699,9 +699,9 @@ model.</p>
       <code class="docs-api-method-parameter-type">SelectionModel&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -712,9 +712,9 @@ model.</p>
       <code class="docs-api-method-returns-type">T[]</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -744,9 +744,9 @@ model.</p>
       <code class="docs-api-method-parameter-type">any[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -757,9 +757,9 @@ model.</p>
       <code class="docs-api-method-returns-type">T[]</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -790,9 +790,9 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   
@@ -803,9 +803,9 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
       <code class="docs-api-method-parameter-type">T[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   
@@ -816,9 +816,9 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
       <code class="docs-api-method-parameter-type">boolean</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -858,9 +858,9 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
       <code class="docs-api-method-parameter-type">any</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -871,9 +871,9 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
       <code class="docs-api-method-returns-type">value is DataSource&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -900,8 +900,8 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
 <h4 id="ListRange" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="ListRange"></span>
   <code>ListRange</code>
-</h4><p class="docs-api-type-alias-description"></p><p>Represents a range of numbers with a specified start and end.</p>
-<p></p><div class="docs-markdown">
+</h4><div class="docs-api-type-alias-description"><p>Represents a range of numbers with a specified start and end.</p>
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> ListRange = {
     <span class="hljs-attr">start</span>: <span class="hljs-built_in">number</span>;
     end: <span class="hljs-built_in">number</span>;

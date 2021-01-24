@@ -18,10 +18,10 @@
   <span header-link="ComponentHarness"></span>
   <code>ComponentHarness</code>
   
-</h4><p class="docs-api-class-description"></p><p>Base class for component harnesses that all component harness authors should extend. This base
+</h4><div class="docs-api-class-description"><p>Base class for component harnesses that all component harness authors should extend. This base
 component harness provides the basic ability to locate element and sub-component harness. It
 should be inherited when defining user's own harness.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -68,9 +68,9 @@ appending to document.body).</p>
       <code class="docs-api-method-returns-type">LocatorFactory</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -120,9 +120,9 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -153,8 +153,8 @@ or element under the host element of this <code>ComponentHarness</code>.</p>
       <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A list of queries specifying which harnesses and elements to search for:</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
 <ul>
 <li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
 <li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
@@ -163,7 +163,7 @@ given class.</li>
 predicate.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -174,9 +174,9 @@ predicate.</li>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -187,8 +187,8 @@ predicate.</li>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+      <div class="docs-api-method-returns-description">
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
@@ -201,7 +201,7 @@ predicate.</li>
 <li><code>await ch.locatorFor('span')()</code> throws because the <code>Promise</code> rejects.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -232,8 +232,8 @@ or elements under the host element of this <code>ComponentHarness</code>.</p>
       <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A list of queries specifying which harnesses and elements to search for:</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
 <ul>
 <li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
 <li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
@@ -242,7 +242,7 @@ given class.</li>
 predicate.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -253,9 +253,9 @@ predicate.</li>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -266,8 +266,8 @@ predicate.</li>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An asynchronous locator function that searches for and returns a <code>Promise</code> for all
+      <div class="docs-api-method-returns-description">
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for all
   elements and harnesses matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If an element matches more than
   one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
@@ -295,7 +295,7 @@ predicate.</li>
 <li><code>await ch.locatorForAll('span')()</code> gets <code>[]</code>.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -326,8 +326,8 @@ or element under the host element of this <code>ComponentHarness</code>.</p>
       <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A list of queries specifying which harnesses and elements to search for:</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
 <ul>
 <li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
 <li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
@@ -336,7 +336,7 @@ given class.</li>
 predicate.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -347,9 +347,9 @@ predicate.</li>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -360,8 +360,8 @@ predicate.</li>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt; | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+      <div class="docs-api-method-returns-description">
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
@@ -374,7 +374,7 @@ predicate.</li>
 <li><code>await ch.locatorForOptional('span')()</code> gets <code>null</code>.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -417,9 +417,9 @@ authors to wait for async tasks outside of the Angular zone.</p>
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"></p><p>Base class for component harnesses that authors should extend if they anticipate that consumers
+</h4><div class="docs-api-class-description"><p>Base class for component harnesses that authors should extend if they anticipate that consumers
 of the harness may want to access other harnesses within the <code>&lt;ng-content&gt;</code> of the component.</p>
-<p></p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
@@ -447,9 +447,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-parameter-type">S</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -460,9 +460,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -491,9 +491,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -504,9 +504,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -535,9 +535,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-parameter-type">S</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -548,9 +548,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -579,9 +579,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -592,9 +592,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
       <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -624,9 +624,9 @@ searching for content contained by this harness.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -655,9 +655,9 @@ searching for content contained by this harness.</p>
       <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -673,9 +673,9 @@ searching for content contained by this harness.</p>
   <span header-link="HarnessPredicate"></span>
   <code>HarnessPredicate</code>
   
-</h4><p class="docs-api-class-description"></p><p>A class used to associate a ComponentHarness class with predicates functions that can be used to
+</h4><div class="docs-api-class-description"><p>A class used to associate a ComponentHarness class with predicates functions that can be used to
 filter instances of the class.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -723,10 +723,10 @@ filter instances of the class.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A description of this predicate that may be used in error messages.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A description of this predicate that may be used in error messages.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -737,10 +737,10 @@ filter instances of the class.</p>
       <code class="docs-api-method-parameter-type">AsyncPredicate&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>An async predicate function.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>An async predicate function.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -772,10 +772,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The name of the option (may be used in error messages).</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The name of the option (may be used in error messages).</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -786,10 +786,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-parameter-type">O</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The option value.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The option value.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -800,10 +800,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-parameter-type">AsyncOptionPredicate&lt;T, O&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The predicate function to run if the option value is not undefined.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The predicate function to run if the option value is not undefined.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -836,10 +836,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The harness to check</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The harness to check</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -850,11 +850,11 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A promise that resolves to true if the harness satisfies this predicate,
+      <div class="docs-api-method-returns-description">
+        <p>A promise that resolves to true if the harness satisfies this predicate,
   and resolves to false otherwise.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -886,10 +886,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-parameter-type">T[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The list of harnesses to filter.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The list of harnesses to filter.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -900,10 +900,10 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
       <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A list of harnesses that satisfy this predicate.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A list of harnesses that satisfy this predicate.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -953,11 +953,11 @@ harnesses. If the option value is undefined, the predicate will be ignored.</p>
   <span header-link="HarnessEnvironment"></span>
   <code>HarnessEnvironment</code>
   
-</h4><p class="docs-api-class-description"></p><p>Base harness environment class that can be extended to allow <code>ComponentHarness</code>es to be used in
+</h4><div class="docs-api-class-description"><p>Base harness environment class that can be extended to allow <code>ComponentHarness</code>es to be used in
 different test environments (e.g. testbed, protractor, etc.). This class implements the
 functionality of both a <code>HarnessLoader</code> and <code>LocatorFactory</code>. This class is generic on the raw
 element type, <code>E</code>, used by the particular test environment.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -1017,9 +1017,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">ComponentHarnessConstructor&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   
@@ -1030,9 +1030,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">E</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1043,9 +1043,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">T</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1075,9 +1075,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">E</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1088,9 +1088,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">HarnessEnvironment&lt;E&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1120,9 +1120,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">E</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1133,9 +1133,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">TestElement</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1157,9 +1157,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">LocatorFactory</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1185,10 +1185,10 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1217,9 +1217,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1230,9 +1230,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1261,9 +1261,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1274,9 +1274,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1308,9 +1308,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1321,9 +1321,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;E[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1352,9 +1352,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1365,9 +1365,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1394,9 +1394,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">E</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1425,9 +1425,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1438,9 +1438,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1469,9 +1469,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1482,9 +1482,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1513,9 +1513,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1526,9 +1526,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1557,9 +1557,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1570,9 +1570,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1597,9 +1597,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1610,9 +1610,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1637,9 +1637,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1650,9 +1650,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1677,9 +1677,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1690,9 +1690,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt; | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1718,9 +1718,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1746,10 +1746,10 @@ element type, <code>E</code>, used by the particular test environment.</p>
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1768,9 +1768,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
 <h4 id="HarnessLoader" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="HarnessLoader"></span>
   <code>HarnessLoader</code>
-</h4><p class="docs-api-interface-description"></p><p>Interface used to load ComponentHarness objects. This interface is used by test authors to
+</h4><div class="docs-api-interface-description"><p>Interface used to load ComponentHarness objects. This interface is used by test authors to
 instantiate <code>ComponentHarness</code>es.</p>
-<p></p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
@@ -1803,10 +1803,10 @@ element.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The selector for the root element of the new <code>HarnessLoader</code></p>
+      <div class="docs-api-method-parameter-description">
+        <p>The selector for the root element of the new <code>HarnessLoader</code></p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1817,10 +1817,10 @@ element.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A list of <code>HarnessLoader</code>s, one for each matching element, rooted at that element.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A list of <code>HarnessLoader</code>s, one for each matching element, rooted at that element.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1853,10 +1853,10 @@ element.</p>
       <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A query for a harness to create</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A query for a harness to create</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1867,10 +1867,10 @@ element.</p>
       <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A list instances of the given harness type.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A list instances of the given harness type.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1904,10 +1904,10 @@ selector, the first is used. If no elements match, an error is thrown.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The selector for the root element of the new <code>HarnessLoader</code></p>
+      <div class="docs-api-method-parameter-description">
+        <p>The selector for the root element of the new <code>HarnessLoader</code></p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1918,10 +1918,10 @@ selector, the first is used. If no elements match, an error is thrown.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A <code>HarnessLoader</code> rooted at the element matching the given selector.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A <code>HarnessLoader</code> rooted at the element matching the given selector.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1956,10 +1956,10 @@ component is found, an error is thrown.</p>
       <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A query for a harness to create</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A query for a harness to create</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -1970,10 +1970,10 @@ component is found, an error is thrown.</p>
       <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An instance of the given harness type</p>
+      <div class="docs-api-method-returns-description">
+        <p>An instance of the given harness type</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -1988,10 +1988,10 @@ component is found, an error is thrown.</p>
 <h4 id="LocatorFactory" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="LocatorFactory"></span>
   <code>LocatorFactory</code>
-</h4><p class="docs-api-interface-description"></p><p>Interface used to create asynchronous locator functions used find elements and component
+</h4><div class="docs-api-interface-description"><p>Interface used to create asynchronous locator functions used find elements and component
 harnesses. This interface is used by <code>ComponentHarness</code> authors to create locator functions for
 their <code>ComponentHarness</code> subclass.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -2037,9 +2037,9 @@ their <code>ComponentHarness</code> subclass.</p>
       <code class="docs-api-method-returns-type">LocatorFactory</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2070,10 +2070,10 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2105,10 +2105,10 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The selector for the root element.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The selector for the root element.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2119,10 +2119,10 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A <code>HarnessLoader</code> rooted at the first element matching the given selector.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A <code>HarnessLoader</code> rooted at the first element matching the given selector.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2154,10 +2154,10 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The selector for the root element.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The selector for the root element.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2168,10 +2168,10 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A list of <code>HarnessLoader</code>, one rooted at each element matching the given selector.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A list of <code>HarnessLoader</code>, one rooted at each element matching the given selector.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2203,10 +2203,10 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The selector for the root element.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The selector for the root element.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2217,11 +2217,11 @@ cases where it is needed to fully flush animation events.</p>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A <code>HarnessLoader</code> rooted at the first element matching the given selector, or null if
+      <div class="docs-api-method-returns-description">
+        <p>A <code>HarnessLoader</code> rooted at the first element matching the given selector, or null if
     no matching element is found.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2252,8 +2252,8 @@ or element under the root element of this <code>LocatorFactory</code>.</p>
       <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A list of queries specifying which harnesses and elements to search for:</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
 <ul>
 <li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
 <li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
@@ -2262,7 +2262,7 @@ given class.</li>
 predicate.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -2273,9 +2273,9 @@ predicate.</li>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2286,8 +2286,8 @@ predicate.</li>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+      <div class="docs-api-method-returns-description">
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
@@ -2300,7 +2300,7 @@ predicate.</li>
 <li><code>await lf.locatorFor('span')()</code> throws because the <code>Promise</code> rejects.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2331,8 +2331,8 @@ or elements under the root element of this <code>LocatorFactory</code>.</p>
       <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A list of queries specifying which harnesses and elements to search for:</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
 <ul>
 <li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
 <li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
@@ -2341,7 +2341,7 @@ given class.</li>
 predicate.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -2352,9 +2352,9 @@ predicate.</li>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2365,8 +2365,8 @@ predicate.</li>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt;[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An asynchronous locator function that searches for and returns a <code>Promise</code> for all
+      <div class="docs-api-method-returns-description">
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for all
   elements and harnesses matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If an element matches more than
   one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
@@ -2394,7 +2394,7 @@ predicate.</li>
 <li><code>await lf.locatorForAll('span')()</code> gets <code>[]</code>.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2425,8 +2425,8 @@ or element under the root element of this <code>LocatorFactory</code>.</p>
       <code class="docs-api-method-parameter-type"></code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>A list of queries specifying which harnesses and elements to search for:</p>
+      <div class="docs-api-method-parameter-description">
+        <p>A list of queries specifying which harnesses and elements to search for:</p>
 <ul>
 <li>A <code>string</code> searches for elements matching the CSS selector specified by the string.</li>
 <li>A <code>ComponentHarness</code> constructor searches for <code>ComponentHarness</code> instances matching the
@@ -2435,7 +2435,7 @@ given class.</li>
 predicate.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -2446,9 +2446,9 @@ predicate.</li>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2459,8 +2459,8 @@ predicate.</li>
       <code class="docs-api-method-returns-type">AsyncFactoryFn&lt;LocatorFnResult&lt;T&gt; | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+      <div class="docs-api-method-returns-description">
+        <p>An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
@@ -2473,7 +2473,7 @@ predicate.</li>
 <li><code>await lf.locatorForOptional('span')()</code> gets <code>null</code>.</li>
 </ul>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2499,10 +2499,10 @@ predicate.</li>
       <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>A <code>HarnessLoader</code> rooted at the root element of this <code>LocatorFactory</code>.</p>
+      <div class="docs-api-method-returns-description">
+        <p>A <code>HarnessLoader</code> rooted at the root element of this <code>LocatorFactory</code>.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2532,10 +2532,10 @@ authors to wait for async tasks outside of the Angular zone.</p>
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2550,8 +2550,8 @@ authors to wait for async tasks outside of the Angular zone.</p>
 <h4 id="ComponentHarnessConstructor" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="ComponentHarnessConstructor"></span>
   <code>ComponentHarnessConstructor</code>
-</h4><p class="docs-api-interface-description"></p><p>Constructor for a ComponentHarness subclass.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+</h4><div class="docs-api-interface-description"><p>Constructor for a ComponentHarness subclass.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -2597,9 +2597,9 @@ for the Angular component.</p>
       <code class="docs-api-method-parameter-type">LocatorFactory</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2610,9 +2610,9 @@ for the Angular component.</p>
       <code class="docs-api-method-returns-type">T</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2627,8 +2627,8 @@ for the Angular component.</p>
 <h4 id="BaseHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="BaseHarnessFilters"></span>
   <code>BaseHarnessFilters</code>
-</h4><p class="docs-api-interface-description"></p><p>A set of criteria that can be used to filter a list of <code>ComponentHarness</code> instances.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>ComponentHarness</code> instances.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -2674,8 +2674,8 @@ for the Angular component.</p>
 <h4 id="ModifierKeys" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="ModifierKeys"></span>
   <code>ModifierKeys</code>
-</h4><p class="docs-api-interface-description"></p><p>Modifier keys that may be held while typing.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+</h4><div class="docs-api-interface-description"><p>Modifier keys that may be held while typing.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -2743,9 +2743,9 @@ for the Angular component.</p>
 <h4 id="TestElement" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TestElement"></span>
   <code>TestElement</code>
-</h4><p class="docs-api-interface-description"></p><p>This acts as a common interface for DOM elements across both unit and e2e tests. It is the
+</h4><div class="docs-api-interface-description"><p>This acts as a common interface for DOM elements across both unit and e2e tests. It is the
 interface through which the ComponentHarness interacts with the component's DOM.</p>
-<p></p>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header" id="方法-7">方法</h5>
@@ -2773,10 +2773,10 @@ interface through which the ComponentHarness interacts with the component's DOM.
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2805,10 +2805,10 @@ interface through which the ComponentHarness interacts with the component's DOM.
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2842,9 +2842,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">ModifierKeys</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2855,10 +2855,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2890,10 +2890,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>Name of the event to be dispatched.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>Name of the event to be dispatched.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -2904,9 +2904,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">Record&lt;string, EventData&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2917,10 +2917,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2949,10 +2949,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -2984,9 +2984,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -2997,9 +2997,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3031,9 +3031,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3044,9 +3044,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3075,9 +3075,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;ElementDimensions&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3109,9 +3109,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3122,9 +3122,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3156,9 +3156,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3169,9 +3169,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3200,10 +3200,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3232,9 +3232,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3266,9 +3266,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3279,9 +3279,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3310,10 +3310,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3345,10 +3345,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">number</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>Coordinate within the element, along the X-axis at which to click.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>Coordinate within the element, along the X-axis at which to click.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -3359,10 +3359,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">number</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>Coordinate within the element, along the Y-axis at which to click.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>Coordinate within the element, along the Y-axis at which to click.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   
@@ -3373,10 +3373,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">ModifierKeys</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>Modifier keys held while clicking</p>
+      <div class="docs-api-method-parameter-description">
+        <p>Modifier keys held while clicking</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3387,10 +3387,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3422,9 +3422,9 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-parameter-type">number[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3435,10 +3435,10 @@ the element is clicked at a specific location, consider using <code>click('cente
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3471,9 +3471,9 @@ and attempts to add the string to the Element's value.</p>
       <code class="docs-api-method-parameter-type">(string | TestKey)[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3484,10 +3484,10 @@ and attempts to add the string to the Element's value.</p>
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3519,9 +3519,9 @@ and attempts to add the string to the Element's value.</p>
       <code class="docs-api-method-parameter-type">string</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3532,10 +3532,10 @@ and attempts to add the string to the Element's value.</p>
       <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        </p><p>Promise that resolves when the action completes.</p>
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3567,10 +3567,10 @@ and attempts to add the string to the Element's value.</p>
       <code class="docs-api-method-parameter-type">TextOptions</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>Options that affect what text is included.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>Options that affect what text is included.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3581,9 +3581,9 @@ and attempts to add the string to the Element's value.</p>
       <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3631,8 +3631,8 @@ and attempts to add the string to the Element's value.</p>
 <h4 id="ElementDimensions" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="ElementDimensions"></span>
   <code>ElementDimensions</code>
-</h4><p class="docs-api-interface-description"></p><p>Dimensions for element size and its position relative to the viewport.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
+</h4><div class="docs-api-interface-description"><p>Dimensions for element size and its position relative to the viewport.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -3700,8 +3700,8 @@ and attempts to add the string to the Element's value.</p>
 <h4 id="AutoChangeDetectionStatus" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="AutoChangeDetectionStatus"></span>
   <code>AutoChangeDetectionStatus</code>
-</h4><p class="docs-api-interface-description"></p><p>Represents the status of auto change detection.</p>
-<p></p><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
+</h4><div class="docs-api-interface-description"><p>Represents the status of auto change detection.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">名称</th>
@@ -3774,10 +3774,10 @@ changes.</p>
       <code class="docs-api-method-parameter-type">(status</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The handler for the auto change detection status.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The handler for the auto change detection status.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -3829,10 +3829,10 @@ changes.</p>
       <code class="docs-api-method-parameter-type">() =&gt; Promise&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        </p><p>The function to disable auto change detection for.</p>
+      <div class="docs-api-method-parameter-description">
+        <p>The function to disable auto change detection for.</p>
 
-      <p></p>
+      </div>
     </td>
   </tr>
   </tbody></table>
@@ -3863,9 +3863,9 @@ changes.</p>
       <code class="docs-api-method-parameter-type">() =&gt; any</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
+      <div class="docs-api-method-parameter-description">
         
-      </p>
+      </div>
     </td>
   </tr>
   </tbody><thead>
@@ -3876,9 +3876,9 @@ changes.</p>
       <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
+      <div class="docs-api-method-returns-description">
         
-      </p>
+      </div>
     </td>
   </tr></tbody></table>
 
@@ -3893,8 +3893,8 @@ changes.</p>
 <h4 id="AsyncFactoryFn" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="AsyncFactoryFn"></span>
   <code>AsyncFactoryFn</code>
-</h4><p class="docs-api-type-alias-description"></p><p>An async function that returns a promise when called.</p>
-<p></p><div class="docs-markdown">
+</h4><div class="docs-api-type-alias-description"><p>An async function that returns a promise when called.</p>
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> AsyncFactoryFn = <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;T&gt;;</code>
 </pre>
 </div>
@@ -3906,8 +3906,8 @@ changes.</p>
 <h4 id="AsyncPredicate" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="AsyncPredicate"></span>
   <code>AsyncPredicate</code>
-</h4><p class="docs-api-type-alias-description"></p><p>An async function that takes an item and returns a boolean promise</p>
-<p></p><div class="docs-markdown">
+</h4><div class="docs-api-type-alias-description"><p>An async function that takes an item and returns a boolean promise</p>
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> AsyncPredicate = <span class="hljs-function">(<span class="hljs-params">item: T</span>) =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">boolean</span>&gt;;</code>
 </pre>
 </div>
@@ -3919,8 +3919,8 @@ changes.</p>
 <h4 id="AsyncOptionPredicate" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="AsyncOptionPredicate"></span>
   <code>AsyncOptionPredicate</code>
-</h4><p class="docs-api-type-alias-description"></p><p>An async function that takes an item and an option value and returns a boolean promise.</p>
-<p></p><div class="docs-markdown">
+</h4><div class="docs-api-type-alias-description"><p>An async function that takes an item and an option value and returns a boolean promise.</p>
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> AsyncOptionPredicate = <span class="hljs-function">(<span class="hljs-params">item: T, option: O</span>) =&gt;</span> <span class="hljs-built_in">Promise</span>&lt;<span class="hljs-built_in">boolean</span>&gt;;</code>
 </pre>
 </div>
@@ -3932,9 +3932,9 @@ changes.</p>
 <h4 id="HarnessQuery" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="HarnessQuery"></span>
   <code>HarnessQuery</code>
-</h4><p class="docs-api-type-alias-description"></p><p>A query for a <code>ComponentHarness</code>, which is expressed as either a <code>ComponentHarnessConstructor</code> or
+</h4><div class="docs-api-type-alias-description"><p>A query for a <code>ComponentHarness</code>, which is expressed as either a <code>ComponentHarnessConstructor</code> or
 a <code>HarnessPredicate</code>.</p>
-<p></p><div class="docs-markdown">
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> HarnessQuery = ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;;</code>
 </pre>
 </div>
@@ -3946,7 +3946,7 @@ a <code>HarnessPredicate</code>.</p>
 <h4 id="LocatorFnResult" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="LocatorFnResult"></span>
   <code>LocatorFnResult</code>
-</h4><p class="docs-api-type-alias-description"></p><p>The result type obtained when searching using a particular list of queries. This type depends on
+</h4><div class="docs-api-type-alias-description"><p>The result type obtained when searching using a particular list of queries. This type depends on
 the particular items being queried.</p>
 <ul>
 <li>If one of the queries is for a <code>ComponentHarnessConstructor&lt;C1&gt;</code>, it means that the result
@@ -3966,7 +3966,7 @@ The type:
 ]&amp;gt;</code>
 is equivalent to:
 <code>MyHarness | MyOtherHarness | TestElement</code>.</p>
-<p></p><div class="docs-markdown">
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> LocatorFnResult = {
     [I <span class="hljs-keyword">in</span> keyof T]: T[I] <span class="hljs-keyword">extends</span> <span class="hljs-keyword">new</span> (...args: <span class="hljs-built_in">any</span>[]) =&gt; infer C ? C : T[I] <span class="hljs-keyword">extends</span> {
         <span class="hljs-attr">harnessType</span>: <span class="hljs-keyword">new</span> (...args: <span class="hljs-built_in">any</span>[]) =&gt; infer C;
@@ -3982,8 +3982,8 @@ is equivalent to:
 <h4 id="EventData" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="EventData"></span>
   <code>EventData</code>
-</h4><p class="docs-api-type-alias-description"></p><p>Data that can be attached to a custom event dispatched from a <code>TestElement</code>.</p>
-<p></p><div class="docs-markdown">
+</h4><div class="docs-api-type-alias-description"><p>Data that can be attached to a custom event dispatched from a <code>TestElement</code>.</p>
+</div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> EventData = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">number</span> | <span class="hljs-built_in">boolean</span> | <span class="hljs-literal">undefined</span> | <span class="hljs-literal">null</span> | EventData[] | {
     [key: <span class="hljs-built_in">string</span>]: EventData;
 };</code>
