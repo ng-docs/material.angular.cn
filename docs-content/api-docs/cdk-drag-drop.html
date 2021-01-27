@@ -18,7 +18,8 @@
   <span header-link="DragDrop"></span>
   <code>DragDrop</code>
   
-</h4><div class="docs-api-class-description"><p>Service that allows for drag-and-drop functionality to be attached to DOM elements.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">允许把拖放功能附加到 DOM 元素上的服务。</p><p translation-origin="off">Service that allows for drag-and-drop functionality to be attached to DOM elements.</p>
+
 </div>
 
 
@@ -33,12 +34,15 @@
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Turns an element into a draggable item.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个元素变成一个可拖动的条目。</p><p translation-origin="off">Turns an element into a draggable item.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -49,7 +53,8 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Element to which to attach the dragging functionality.</p>
+        <p translation-result="on">要附加拖动功能的元素。</p><p translation-origin="off">Element to which to attach the dragging functionality.</p>
+
 
       </div>
     </td>
@@ -63,13 +68,16 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Object used to configure the dragging behavior.</p>
+        <p translation-result="on">用于配置拖动行为的对象。</p><p translation-origin="off">Object used to configure the dragging behavior.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -93,12 +101,15 @@
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Turns an element into a drop list.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个元素转成一个拖放列表。</p><p translation-origin="off">Turns an element into a drop list.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -109,13 +120,16 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Element to which to attach the drop list functionality.</p>
+        <p translation-result="on">要附加投放列表功能的元素。</p><p translation-origin="off">Element to which to attach the drop list functionality.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1123,7 +1137,8 @@ it is being dragged. The placeholder is displayed in place of the element being 
   <span header-link="DragRef"></span>
   <code>DragRef</code>
   
-</h4><div class="docs-api-class-description"><p>Reference to a draggable item. Used to manipulate or dispose of the item.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">可拖动条目的引用。用来操纵或丢弃条目。</p><p translation-origin="off">Reference to a draggable item. Used to manipulate or dispose of the item.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1138,7 +1153,8 @@ it is being dragged. The placeholder is displayed in place of the element being 
       <code>beforeStarted: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits as the drag sequence is being prepared.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当拖曳序列准备就绪时触发。</p><p translation-origin="off">Emits as the drag sequence is being prepared.</p>
+
 </td>
 </tr>
 
@@ -1151,10 +1167,11 @@ it is being dragged. The placeholder is displayed in place of the element being 
       <code>constrainPosition: (point: Point, dragRef: DragRef) =&gt; Point</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Function that can be used to customize the logic of how the position of the drag item
+  <td class="docs-api-property-description"><p translation-result="on">一个函数，可以用来自定义拖动条目的位置限制逻辑。通过一个包含该用户指针在页面上的当前位置进行调用，并返回一个描述该条目应该渲染在哪个位置的点。</p><p translation-origin="off">Function that can be used to customize the logic of how the position of the drag item
 is limited while it's being dragged. Gets called with a point containing the current position
 of the user's pointer on the page and should return a point describing where the item should
 be rendered.</p>
+
 </td>
 </tr>
 
@@ -1167,7 +1184,8 @@ be rendered.</p>
       <code>data: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Arbitrary data that can be attached to the drag item.</p>
+  <td class="docs-api-property-description"><p translation-result="on">可以附加在拖动条目上的任意数据。</p><p translation-origin="off">Arbitrary data that can be attached to the drag item.</p>
+
 </td>
 </tr>
 
@@ -1180,7 +1198,8 @@ be rendered.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether starting to drag this element is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否已禁止拖动此元素。</p><p translation-origin="off">Whether starting to drag this element is disabled.</p>
+
 </td>
 </tr>
 
@@ -1196,8 +1215,9 @@ be rendered.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Amount of milliseconds to wait after the user has put their
+  <td class="docs-api-property-description"><p translation-result="on">用户在开始拖动元素之前把指针放下之后要等待的毫秒数。</p><p translation-origin="off">Amount of milliseconds to wait after the user has put their
 pointer down before starting to drag the element.</p>
+
 </td>
 </tr>
 
@@ -1218,7 +1238,8 @@ pointer down before starting to drag the element.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user drops the item inside a container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把条目放到容器中时，就会触发。</p><p translation-origin="off">Emits when the user drops the item inside a container.</p>
+
 </td>
 </tr>
 
@@ -1234,7 +1255,8 @@ pointer down before starting to drag the element.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user stops dragging an item in the container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户停止拖动容器中的某个条目时，会发出本通知。</p><p translation-origin="off">Emits when the user stops dragging an item in the container.</p>
+
 </td>
 </tr>
 
@@ -1251,7 +1273,8 @@ pointer down before starting to drag the element.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user has moved the item into a new container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把本条目移到新容器中时发出通知。</p><p translation-origin="off">Emits when the user has moved the item into a new container.</p>
+
 </td>
 </tr>
 
@@ -1267,7 +1290,8 @@ pointer down before starting to drag the element.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user removes the item its container by dragging it into another container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户通过把拖动条目从所在的容器移到另一个容器中时，就会触发。</p><p translation-origin="off">Emits when the user removes the item its container by dragging it into another container.</p>
+
 </td>
 </tr>
 
@@ -1280,7 +1304,8 @@ pointer down before starting to drag the element.</p>
       <code>lockAxis: 'x' | 'y'</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Axis along which dragging is locked.</p>
+  <td class="docs-api-property-description"><p translation-result="on">拖动时锁定的轴。</p><p translation-origin="off">Axis along which dragging is locked.</p>
+
 </td>
 </tr>
 
@@ -1305,8 +1330,9 @@ pointer down before starting to drag the element.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits as the user is dragging the item. Use with caution,
+  <td class="docs-api-property-description"><p translation-result="on">当用户正在拖动该条目时会触发。请谨慎使用，因为此事件会在用户拖动每一个像素时触发。</p><p translation-origin="off">Emits as the user is dragging the item. Use with caution,
 because this event will fire for every pixel that the user has dragged.</p>
+
 </td>
 </tr>
 
@@ -1319,7 +1345,8 @@ because this event will fire for every pixel that the user has dragged.</p>
       <code>previewClass: string | string[] | undefined</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Class to be added to the preview element.</p>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到预览元素中的类。</p><p translation-origin="off">Class to be added to the preview element.</p>
+
 </td>
 </tr>
 
@@ -1334,7 +1361,8 @@ because this event will fire for every pixel that the user has dragged.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user has released a drag item, before any animations have started.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户释放了一个拖动条目时触发。位于任何动画开始之前。</p><p translation-origin="off">Emits when the user has released a drag item, before any animations have started.</p>
+
 </td>
 </tr>
 
@@ -1349,7 +1377,8 @@ because this event will fire for every pixel that the user has dragged.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user starts dragging the item.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户开始拖动该条目时会触发。</p><p translation-origin="off">Emits when the user starts dragging the item.</p>
+
 </td>
 </tr>
 
@@ -1369,12 +1398,15 @@ because this event will fire for every pixel that the user has dragged.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets a handle as disabled. While a handle is disabled, it'll capture and interrupt dragging.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">禁用拖动手柄。当手柄被禁用时，它会捕获并中止拖动操作。</p><p translation-origin="off">Sets a handle as disabled. While a handle is disabled, it'll capture and interrupt dragging.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1385,7 +1417,8 @@ because this event will fire for every pixel that the user has dragged.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Handle element that should be disabled.</p>
+        <p translation-result="on">要被禁用的手柄元素。</p><p translation-origin="off">Handle element that should be disabled.</p>
+
 
       </div>
     </td>
@@ -1404,7 +1437,8 @@ because this event will fire for every pixel that the user has dragged.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Removes the dragging functionality from the DOM element.</p>
+      <p translation-result="on">从 DOM 元素中移除拖动功能。</p><p translation-origin="off">Removes the dragging functionality from the DOM element.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -1420,12 +1454,15 @@ because this event will fire for every pixel that the user has dragged.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Enables a handle, if it has been disabled.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">启用一个已被禁用的手柄。</p><p translation-origin="off">Enables a handle, if it has been disabled.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1436,7 +1473,8 @@ because this event will fire for every pixel that the user has dragged.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Handle element to be enabled.</p>
+        <p translation-result="on">要启用的手柄。</p><p translation-origin="off">Handle element to be enabled.</p>
+
 
       </div>
     </td>
@@ -1454,12 +1492,15 @@ because this event will fire for every pixel that the user has dragged.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets the current position in pixels the draggable outside of a drop container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取可拖动元素在投放容器外部的当前位置（以像素为单位）。</p><p translation-origin="off">Gets the current position in pixels the draggable outside of a drop container.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1483,13 +1524,16 @@ because this event will fire for every pixel that the user has dragged.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Returns the element that is being used as a placeholder
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在拖动当前元素的同时，返回当前占位符所在的元素。</p><p translation-origin="off">Returns the element that is being used as a placeholder
 while the current element is being dragged.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1513,12 +1557,15 @@ while the current element is being dragged.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Returns the root draggable element.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回可拖动条目的根元素。</p><p translation-origin="off">Returns the root draggable element.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1542,13 +1589,16 @@ while the current element is being dragged.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets the currently-visible element that represents the drag item.
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取代表该拖动条目的当前可见元素。拖动期间是其占位符，其它时候是其根元素。</p><p translation-origin="off">Gets the currently-visible element that represents the drag item.
 While dragging this is the placeholder, otherwise it's the root element.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1572,12 +1622,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Checks whether the element is currently being dragged.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查当前是否正在拖动该元素。</p><p translation-origin="off">Checks whether the element is currently being dragged.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1602,7 +1655,8 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Resets a standalone drag item to its initial position.</p>
+      <p translation-result="on">将一个独立的拖动条目重置到初始位置。</p><p translation-origin="off">Resets a standalone drag item to its initial position.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -1618,12 +1672,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the current position in pixels the draggable outside of a drop container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置可拖动元素在投放容器外部的当前位置（以像素为单位）。</p><p translation-origin="off">Sets the current position in pixels the draggable outside of a drop container.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1634,13 +1691,16 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New position to be set.</p>
+        <p translation-result="on">要设置的新位置。</p><p translation-origin="off">New position to be set.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1664,12 +1724,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Element to which the draggable's position will be constrained.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">用于进行可拖动位置限制的元素。</p><p translation-origin="off">Element to which the draggable's position will be constrained.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1709,12 +1772,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the layout direction of the draggable item.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置可拖动条目的布局方向。</p><p translation-origin="off">Sets the layout direction of the draggable item.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1754,12 +1820,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Registers the handles that can be used to drag the element.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册可以用来拖动元素的手柄。</p><p translation-origin="off">Registers the handles that can be used to drag the element.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1799,12 +1868,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Registers the template that should be used for the drag placeholder.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册要用作拖动占位符的模板。</p><p translation-origin="off">Registers the template that should be used for the drag placeholder.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1815,13 +1887,16 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Template that from which to stamp out the placeholder.</p>
+        <p translation-result="on">用来生成占位符的模板。</p><p translation-origin="off">Template that from which to stamp out the placeholder.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1845,12 +1920,15 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Registers the template that should be used for the drag preview.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册要用作拖动预览的模板。</p><p translation-origin="off">Registers the template that should be used for the drag preview.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1861,13 +1939,16 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Template that from which to stamp out the preview.</p>
+        <p translation-result="on">用来生成预览图的模板。</p><p translation-origin="off">Template that from which to stamp out the preview.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1891,14 +1972,17 @@ While dragging this is the placeholder, otherwise it's the root element.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets an alternate drag root element. The root element is the element that will be moved as
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置备用的拖动根元素。根元素是用户拖动时会被移动的元素。当你尝试在你可能无权访问的元素上启用拖曳时，传入一个备用的根元素是很有用的。</p><p translation-origin="off">Sets an alternate drag root element. The root element is the element that will be moved as
 the user is dragging. Passing an alternate root element is useful when trying to enable
 dragging on an element that you might not have access to.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1939,7 +2023,8 @@ dragging on an element that you might not have access to.</p>
   <span header-link="DropListRef"></span>
   <code>DropListRef</code>
   
-</h4><div class="docs-api-class-description"><p>Reference to a drop list. Used to manipulate or dispose of the container.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">投放列表的引用。用来操纵或丢弃容器。</p><p translation-origin="off">Reference to a drop list. Used to manipulate or dispose of the container.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1954,8 +2039,9 @@ dragging on an element that you might not have access to.</p>
       <code>autoScrollDisabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether auto-scrolling the view when the user
+  <td class="docs-api-property-description"><p translation-result="on">当用户把指针移到边缘附近时是否禁止自动滚动视图。</p><p translation-origin="off">Whether auto-scrolling the view when the user
 moves their pointer close to the edges is disabled.</p>
+
 </td>
 </tr>
 
@@ -1968,7 +2054,8 @@ moves their pointer close to the edges is disabled.</p>
       <code>autoScrollStep: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Number of pixels to scroll for each frame when auto-scrolling an element.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当自动滚动元素时，这是每一帧滚动的像素数。</p><p translation-origin="off">Number of pixels to scroll for each frame when auto-scrolling an element.</p>
+
 </td>
 </tr>
 
@@ -1981,7 +2068,8 @@ moves their pointer close to the edges is disabled.</p>
       <code>beforeStarted: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits right before dragging has started.</p>
+  <td class="docs-api-property-description"><p translation-result="on">在拖动开始之前触发。</p><p translation-origin="off">Emits right before dragging has started.</p>
+
 </td>
 </tr>
 
@@ -1994,7 +2082,8 @@ moves their pointer close to the edges is disabled.</p>
       <code>data: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Arbitrary data that can be attached to the drop list.</p>
+  <td class="docs-api-property-description"><p translation-result="on">任意数据都可以附加到投放列表中。</p><p translation-origin="off">Arbitrary data that can be attached to the drop list.</p>
+
 </td>
 </tr>
 
@@ -2007,7 +2096,8 @@ moves their pointer close to the edges is disabled.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether starting a dragging sequence from this container is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了从此容器启动拖曳序列的方法。</p><p translation-origin="off">Whether starting a dragging sequence from this container is disabled.</p>
+
 </td>
 </tr>
 
@@ -2028,7 +2118,8 @@ moves their pointer close to the edges is disabled.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user drops an item inside the container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把一个条目投放进该容器时就会触发。</p><p translation-origin="off">Emits when the user drops an item inside the container.</p>
+
 </td>
 </tr>
 
@@ -2041,7 +2132,8 @@ moves their pointer close to the edges is disabled.</p>
       <code>element: HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Element that the drop list is attached to.</p>
+  <td class="docs-api-property-description"><p translation-result="on">投放表附着到的元素</p><p translation-origin="off">Element that the drop list is attached to.</p>
+
 </td>
 </tr>
 
@@ -2054,8 +2146,9 @@ moves their pointer close to the edges is disabled.</p>
       <code>enterPredicate: (drag: DragRef, drop: DropListRef) =&gt; boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Function that is used to determine whether an item
+  <td class="docs-api-property-description"><p translation-result="on">该函数用于判断是否允许某个条目移入投放容器。</p><p translation-origin="off">Function that is used to determine whether an item
 is allowed to be moved into a drop container.</p>
+
 </td>
 </tr>
 
@@ -2072,7 +2165,8 @@ is allowed to be moved into a drop container.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user has moved a new drag item into this container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把一个新的拖动条目移到这个容器中时，就会触发。</p><p translation-origin="off">Emits when the user has moved a new drag item into this container.</p>
+
 </td>
 </tr>
 
@@ -2088,8 +2182,9 @@ is allowed to be moved into a drop container.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user removes an item from the container
+  <td class="docs-api-property-description"><p translation-result="on">当用户把条目拖到另一个容器中并从当前容器中删除该条目时触发。</p><p translation-origin="off">Emits when the user removes an item from the container
 by dragging it into another container.</p>
+
 </td>
 </tr>
 
@@ -2102,7 +2197,8 @@ by dragging it into another container.</p>
       <code>lockAxis: 'x' | 'y'</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Locks the position of the draggable elements inside the container along the specified axis.</p>
+  <td class="docs-api-property-description"><p translation-result="on">沿着指定的轴锁定容器内可拖动元素的位置。</p><p translation-origin="off">Locks the position of the draggable elements inside the container along the specified axis.</p>
+
 </td>
 </tr>
 
@@ -2115,7 +2211,8 @@ by dragging it into another container.</p>
       <code>sortPredicate: (index: number, drag: DragRef, drop: DropListRef) =&gt; boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Functions that is used to determine whether an item can be sorted into a particular index.</p>
+  <td class="docs-api-property-description"><p translation-result="on">一个函数，用来判断某个条目是否可以被排序到特定索引。</p><p translation-origin="off">Functions that is used to determine whether an item can be sorted into a particular index.</p>
+
 </td>
 </tr>
 
@@ -2133,7 +2230,8 @@ by dragging it into another container.</p>
 }&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits as the user is swapping items while actively dragging.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当用户正在主动拖动以交换条目时，就会触发。</p><p translation-origin="off">Emits as the user is swapping items while actively dragging.</p>
+
 </td>
 </tr>
 
@@ -2146,7 +2244,8 @@ by dragging it into another container.</p>
       <code>sortingDisabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sorting items within the list is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了列表中的条目排序。</p><p translation-origin="off">Whether sorting items within the list is disabled.</p>
+
 </td>
 </tr>
 
@@ -2166,13 +2265,16 @@ by dragging it into another container.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the containers that are connected to this one. When two or more containers are
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置连接到这个容器的容器。当有两个或多个容器相连时，系统会允许用户在它们之间传输条目。</p><p translation-origin="off">Sets the containers that are connected to this one. When two or more containers are
 connected, the user will be allowed to transfer items between them.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2183,13 +2285,16 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Other containers that the current containers should be connected to.</p>
+        <p translation-result="on">当前容器应该连接到的其他容器。</p><p translation-origin="off">Other containers that the current containers should be connected to.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2214,7 +2319,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Removes the drop list functionality from the DOM element.</p>
+      <p translation-result="on">从 DOM 元素中移除投放列表的功能。</p><p translation-origin="off">Removes the drop list functionality from the DOM element.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -2230,12 +2336,15 @@ connected, the user will be allowed to transfer items between them.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Drops an item into this container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把条目投放到这个容器里</p><p translation-origin="off">Drops an item into this container.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2246,7 +2355,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Item being dropped into the container.</p>
+        <p translation-result="on">要被投放进此容器的条目。</p><p translation-origin="off">Item being dropped into the container.</p>
+
 
       </div>
     </td>
@@ -2260,7 +2370,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index at which the item should be inserted.</p>
+        <p translation-result="on">该条目应该插入到的索引。</p><p translation-origin="off">Index at which the item should be inserted.</p>
+
 
       </div>
     </td>
@@ -2274,7 +2385,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index of the item when dragging started.</p>
+        <p translation-result="on">拖动开始时该条目的索引。</p><p translation-origin="off">Index of the item when dragging started.</p>
+
 
       </div>
     </td>
@@ -2288,7 +2400,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Container from which the item got dragged in.</p>
+        <p translation-result="on">该条目被拖入的容器。</p><p translation-origin="off">Container from which the item got dragged in.</p>
+
 
       </div>
     </td>
@@ -2302,8 +2415,9 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Whether the user's pointer was over the
+        <p translation-result="on">当条目被删除时，用户的指针是否在此容器上。</p><p translation-origin="off">Whether the user's pointer was over the
    container when the item was dropped.</p>
+
 
       </div>
     </td>
@@ -2317,7 +2431,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Distance the user has dragged since the start of the dragging sequence.</p>
+        <p translation-result="on">自拖曳序列开始以来用户拖动过的距离。</p><p translation-origin="off">Distance the user has dragged since the start of the dragging sequence.</p>
+
 
       </div>
     </td>
@@ -2335,12 +2450,15 @@ connected, the user will be allowed to transfer items between them.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Emits an event to indicate that the user moved an item into the container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">发出一个事件，表明用户已经把某个条目移到了容器中。</p><p translation-origin="off">Emits an event to indicate that the user moved an item into the container.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2351,7 +2469,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Item that was moved into the container.</p>
+        <p translation-result="on">被移入容器中的条目。</p><p translation-origin="off">Item that was moved into the container.</p>
+
 
       </div>
     </td>
@@ -2365,7 +2484,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Position of the item along the X axis.</p>
+        <p translation-result="on">该条目沿 X 轴的位置。</p><p translation-origin="off">Position of the item along the X axis.</p>
+
 
       </div>
     </td>
@@ -2379,7 +2499,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Position of the item along the Y axis.</p>
+        <p translation-result="on">该条目沿 Y 轴的位置。</p><p translation-origin="off">Position of the item along the Y axis.</p>
+
 
       </div>
     </td>
@@ -2393,8 +2514,9 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index at which the item entered. If omitted, the container will try to figure it
+        <p translation-result="on">条目进来后的索引。如果省略，容器会自动尝试定位。</p><p translation-origin="off">Index at which the item entered. If omitted, the container will try to figure it
   out automatically.</p>
+
 
       </div>
     </td>
@@ -2412,12 +2534,15 @@ connected, the user will be allowed to transfer items between them.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Removes an item from the container after it was dragged into another container by the user.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">用户将一个条目拖入另一个容器并从当前容器删除该条目。</p><p translation-origin="off">Removes an item from the container after it was dragged into another container by the user.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2428,7 +2553,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Item that was dragged out.</p>
+        <p translation-result="on">被拖走的条目</p><p translation-origin="off">Item that was dragged out.</p>
+
 
       </div>
     </td>
@@ -2446,12 +2572,15 @@ connected, the user will be allowed to transfer items between them.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Figures out the index of an item in the container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">找出容器中某个条目的索引。</p><p translation-origin="off">Figures out the index of an item in the container.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2462,13 +2591,16 @@ connected, the user will be allowed to transfer items between them.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Item whose index should be determined.</p>
+        <p translation-result="on">应该确定索引的条目。</p><p translation-origin="off">Item whose index should be determined.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2492,12 +2624,15 @@ connected, the user will be allowed to transfer items between them.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets the scrollable parents that are registered with this drop container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取在这个投放容器中注册的可滚动父类。</p><p translation-origin="off">Gets the scrollable parents that are registered with this drop container.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2522,7 +2657,8 @@ connected, the user will be allowed to transfer items between them.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether an item from this list is currently being dragged.</p>
+      <p translation-result="on">当前是否正在拖动此列表中的某个条目。</p><p translation-origin="off">Whether an item from this list is currently being dragged.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -2538,13 +2674,16 @@ connected, the user will be allowed to transfer items between them.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Whether the list is able to receive the item that
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">列表是否能够接收当前被拖入的已连接投放列表中的条目。</p><p translation-origin="off">Whether the list is able to receive the item that
 is currently being dragged inside a connected drop list.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2569,7 +2708,8 @@ is currently being dragged inside a connected drop list.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Starts dragging an item.</p>
+      <p translation-result="on">开始拖动一个条目。</p><p translation-origin="off">Starts dragging an item.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -2585,12 +2725,15 @@ is currently being dragged inside a connected drop list.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the layout direction of the drop list.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置投放列表的布局方向。</p><p translation-origin="off">Sets the layout direction of the drop list.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2630,12 +2773,15 @@ is currently being dragged inside a connected drop list.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the draggable items that are a part of this list.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置属于该列表的可拖动条目。</p><p translation-origin="off">Sets the draggable items that are a part of this list.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2646,13 +2792,16 @@ is currently being dragged inside a connected drop list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Items that are a part of this list.</p>
+        <p translation-result="on">属于这个列表的条目。</p><p translation-origin="off">Items that are a part of this list.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2676,12 +2825,15 @@ is currently being dragged inside a connected drop list.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the orientation of the container.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置容器的方向。</p><p translation-origin="off">Sets the orientation of the container.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2692,13 +2844,16 @@ is currently being dragged inside a connected drop list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New orientation for the container.</p>
+        <p translation-result="on">容器的新方向。</p><p translation-origin="off">New orientation for the container.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2722,12 +2877,15 @@ is currently being dragged inside a connected drop list.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets which parent elements are can be scrolled while the user is dragging.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当用户在拖动时，设置哪些父元素可以滚动。</p><p translation-origin="off">Sets which parent elements are can be scrolled while the user is dragging.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -2738,13 +2896,16 @@ is currently being dragged inside a connected drop list.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Elements that can be scrolled.</p>
+        <p translation-result="on">那些可以滚动的元素。</p><p translation-origin="off">Elements that can be scrolled.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -2772,7 +2933,8 @@ is currently being dragged inside a connected drop list.</p>
 <h4 id="DragRefConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="DragRefConfig"></span>
   <code>DragRefConfig</code>
-</h4><div class="docs-api-interface-description"><p>Object that can be used to configure the behavior of DragRef.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可以用来配置 DragRef 行为的对象。</p><p translation-origin="off">Object that can be used to configure the behavior of DragRef.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -2787,8 +2949,9 @@ is currently being dragged inside a connected drop list.</p>
       <code>dragStartThreshold: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Minimum amount of pixels that the user should
+  <td class="docs-api-property-description"><p translation-result="on">在 CDK 启动拖曳序列之前，用户应该拖动的最小像素数。</p><p translation-origin="off">Minimum amount of pixels that the user should
 drag, before the CDK initiates a drag sequence.</p>
+
 </td>
 </tr>
 
@@ -2801,7 +2964,8 @@ drag, before the CDK initiates a drag sequence.</p>
       <code>parentDragRef: DragRef</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Ref that the current drag item is nested in.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当前拖动条目所嵌套在的父拖动的引用。</p><p translation-origin="off">Ref that the current drag item is nested in.</p>
+
 </td>
 </tr>
 
@@ -2814,8 +2978,9 @@ drag, before the CDK initiates a drag sequence.</p>
       <code>pointerDirectionChangeThreshold: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Amount the pixels the user should drag before the CDK
+  <td class="docs-api-property-description"><p translation-result="on">在 CDK 认为改变了拖动方向之前，用户应该拖动的像素数量。</p><p translation-origin="off">Amount the pixels the user should drag before the CDK
 considers them to have changed the drag direction.</p>
+
 </td>
 </tr>
 
@@ -2828,7 +2993,8 @@ considers them to have changed the drag direction.</p>
       <code>zIndex: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p><code>z-index</code> for the absolutely-positioned elements that are created by the drag item.</p>
+  <td class="docs-api-property-description"><p translation-result="on"><code>z-index</code> 用于为拖动条目创建的绝对定位元素。</p><p translation-origin="off"><code>z-index</code> for the absolutely-positioned elements that are created by the drag item.</p>
+
 </td>
 </tr>
 
@@ -2847,7 +3013,8 @@ considers them to have changed the drag direction.</p>
 <h4 id="Point" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="Point"></span>
   <code>Point</code>
-</h4><div class="docs-api-interface-description"><p>Point on the page or within an element.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">页面上或元素中的点坐标。</p><p translation-origin="off">Point on the page or within an element.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -2892,7 +3059,8 @@ considers them to have changed the drag direction.</p>
 <h4 id="CdkDragStart" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragStart"></span>
   <code>CdkDragStart</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user starts dragging a draggable.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户开始拖动拖动时会发出本事件。</p><p translation-origin="off">Event emitted when the user starts dragging a draggable.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-10">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -2907,7 +3075,8 @@ considers them to have changed the drag direction.</p>
       <code>source: CdkDrag&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Draggable that emitted the event.</p>
+  <td class="docs-api-property-description"><p translation-result="on">发出了本事件的可拖动对象。</p><p translation-origin="off">Draggable that emitted the event.</p>
+
 </td>
 </tr>
 
@@ -2926,7 +3095,8 @@ considers them to have changed the drag direction.</p>
 <h4 id="CdkDragRelease" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragRelease"></span>
   <code>CdkDragRelease</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user releases an item, before any animations have started.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">用户在释放条目时发出的事件，发生在开始任何动画之前。</p><p translation-origin="off">Event emitted when the user releases an item, before any animations have started.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-11">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -2941,7 +3111,8 @@ considers them to have changed the drag direction.</p>
       <code>source: CdkDrag&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Draggable that emitted the event.</p>
+  <td class="docs-api-property-description"><p translation-result="on">发出了本事件的可拖动对象。</p><p translation-origin="off">Draggable that emitted the event.</p>
+
 </td>
 </tr>
 
@@ -2960,7 +3131,8 @@ considers them to have changed the drag direction.</p>
 <h4 id="CdkDragEnd" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragEnd"></span>
   <code>CdkDragEnd</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user stops dragging a draggable.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户停止拖动时会发出本事件。</p><p translation-origin="off">Event emitted when the user stops dragging a draggable.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-12">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -2978,7 +3150,8 @@ considers them to have changed the drag direction.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Distance in pixels that the user has dragged since the drag sequence started.</p>
+  <td class="docs-api-property-description"><p translation-result="on">自拖曳序列启动以来用户拖动过的像素距离。</p><p translation-origin="off">Distance in pixels that the user has dragged since the drag sequence started.</p>
+
 </td>
 </tr>
 
@@ -2991,7 +3164,8 @@ considers them to have changed the drag direction.</p>
       <code>source: CdkDrag&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Draggable that emitted the event.</p>
+  <td class="docs-api-property-description"><p translation-result="on">发出了本事件的可拖动对象。</p><p translation-origin="off">Draggable that emitted the event.</p>
+
 </td>
 </tr>
 
@@ -3010,7 +3184,8 @@ considers them to have changed the drag direction.</p>
 <h4 id="CdkDragEnter" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragEnter"></span>
   <code>CdkDragEnter</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user moves an item into a new drop container.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户把条目移到新的投送容器中时，就会发出本事件。</p><p translation-origin="off">Event emitted when the user moves an item into a new drop container.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-13">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3025,7 +3200,8 @@ considers them to have changed the drag direction.</p>
       <code>container: CdkDropList&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Container into which the user has moved the item.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用户移入了该条目的容器。</p><p translation-origin="off">Container into which the user has moved the item.</p>
+
 </td>
 </tr>
 
@@ -3038,7 +3214,8 @@ considers them to have changed the drag direction.</p>
       <code>currentIndex: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Index at which the item has entered the container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该条目已进入该容器中的索引。</p><p translation-origin="off">Index at which the item has entered the container.</p>
+
 </td>
 </tr>
 
@@ -3051,7 +3228,8 @@ considers them to have changed the drag direction.</p>
       <code>item: CdkDrag&lt;I&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Item that was moved into the container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">被移入容器中的条目。</p><p translation-origin="off">Item that was moved into the container.</p>
+
 </td>
 </tr>
 
@@ -3070,8 +3248,9 @@ considers them to have changed the drag direction.</p>
 <h4 id="CdkDragExit" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragExit"></span>
   <code>CdkDragExit</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user removes an item from a
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户把一个条目移到另一个投放容器，并从当前容器中移除时，就会触发本事件。</p><p translation-origin="off">Event emitted when the user removes an item from a
 drop container by moving it into another one.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-14">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3086,7 +3265,8 @@ drop container by moving it into another one.</p>
       <code>container: CdkDropList&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Container from which the user has a removed an item.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用户已移除本条目的容器。</p><p translation-origin="off">Container from which the user has a removed an item.</p>
+
 </td>
 </tr>
 
@@ -3099,7 +3279,8 @@ drop container by moving it into another one.</p>
       <code>item: CdkDrag&lt;I&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Item that was removed from the container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已从容器中移除的条目</p><p translation-origin="off">Item that was removed from the container.</p>
+
 </td>
 </tr>
 
@@ -3118,7 +3299,8 @@ drop container by moving it into another one.</p>
 <h4 id="CdkDragDrop" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragDrop"></span>
   <code>CdkDragDrop</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user drops a draggable item inside a drop container.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户在投送容器中放入一个可拖动条目时，就会发出本事件。</p><p translation-origin="off">Event emitted when the user drops a draggable item inside a drop container.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-15">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3133,7 +3315,8 @@ drop container by moving it into another one.</p>
       <code>container: CdkDropList&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Container in which the item was dropped.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该条目投送到的容器。</p><p translation-origin="off">Container in which the item was dropped.</p>
+
 </td>
 </tr>
 
@@ -3146,7 +3329,8 @@ drop container by moving it into another one.</p>
       <code>currentIndex: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Current index of the item.</p>
+  <td class="docs-api-property-description"><p translation-result="on">此条目的当前索引。</p><p translation-origin="off">Current index of the item.</p>
+
 </td>
 </tr>
 
@@ -3162,7 +3346,8 @@ drop container by moving it into another one.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Distance in pixels that the user has dragged since the drag sequence started.</p>
+  <td class="docs-api-property-description"><p translation-result="on">自拖曳序列启动以来用户拖动的像素距离。</p><p translation-origin="off">Distance in pixels that the user has dragged since the drag sequence started.</p>
+
 </td>
 </tr>
 
@@ -3175,7 +3360,8 @@ drop container by moving it into another one.</p>
       <code>isPointerOverContainer: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the user's pointer was over the container when the item was dropped.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当条目被移除时，用户的指针是否还在容器上。</p><p translation-origin="off">Whether the user's pointer was over the container when the item was dropped.</p>
+
 </td>
 </tr>
 
@@ -3188,7 +3374,8 @@ drop container by moving it into another one.</p>
       <code>item: CdkDrag</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Item that is being dropped.</p>
+  <td class="docs-api-property-description"><p translation-result="on">被投放的条目</p><p translation-origin="off">Item that is being dropped.</p>
+
 </td>
 </tr>
 
@@ -3201,7 +3388,8 @@ drop container by moving it into another one.</p>
       <code>previousContainer: CdkDropList&lt;O&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Container from which the item was picked up. Can be the same as the <code>container</code>.</p>
+  <td class="docs-api-property-description"><p translation-result="on">从中拿出条目的容器。可以和 <code>container</code> 属性是同一个。</p><p translation-origin="off">Container from which the item was picked up. Can be the same as the <code>container</code>.</p>
+
 </td>
 </tr>
 
@@ -3214,7 +3402,8 @@ drop container by moving it into another one.</p>
       <code>previousIndex: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Index of the item when it was picked up.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该条目被拿起时的条目索引。</p><p translation-origin="off">Index of the item when it was picked up.</p>
+
 </td>
 </tr>
 
@@ -3233,7 +3422,8 @@ drop container by moving it into another one.</p>
 <h4 id="CdkDragMove" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragMove"></span>
   <code>CdkDragMove</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted as the user is dragging a draggable item.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户正在拖动一个条目时，就会发出一个事件。</p><p translation-origin="off">Event emitted as the user is dragging a draggable item.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-16">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3251,10 +3441,11 @@ drop container by moving it into another one.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Indicates the direction in which the user is dragging the element along each axis.
+  <td class="docs-api-property-description"><p translation-result="on">指示用户沿每个轴拖动元素的方向。 <code>1</code> 表示位置在增加（例如，用户向右或向下移动），而 <code>-1</code> 表示它正在减少（它们向左或向上移动）。 <code>0</code> 意味着该位置没有变化。</p><p translation-origin="off">Indicates the direction in which the user is dragging the element along each axis.
 <code>1</code> means that the position is increasing (e.g. the user is moving to the right or downwards),
 whereas <code>-1</code> means that it's decreasing (they're moving to the left or upwards). <code>0</code> means
 that the position hasn't changed.</p>
+
 </td>
 </tr>
 
@@ -3270,7 +3461,8 @@ that the position hasn't changed.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Distance in pixels that the user has dragged since the drag sequence started.</p>
+  <td class="docs-api-property-description"><p translation-result="on">自拖曳序列启动以来用户已拖动的像素距离。</p><p translation-origin="off">Distance in pixels that the user has dragged since the drag sequence started.</p>
+
 </td>
 </tr>
 
@@ -3283,7 +3475,8 @@ that the position hasn't changed.</p>
       <code>event: MouseEvent | TouchEvent</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Native event that is causing the dragging.</p>
+  <td class="docs-api-property-description"><p translation-result="on">导致拖曳的原生事件</p><p translation-origin="off">Native event that is causing the dragging.</p>
+
 </td>
 </tr>
 
@@ -3299,7 +3492,8 @@ that the position hasn't changed.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Position of the user's pointer on the page.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用户指针在页面上的位置。</p><p translation-origin="off">Position of the user's pointer on the page.</p>
+
 </td>
 </tr>
 
@@ -3312,7 +3506,8 @@ that the position hasn't changed.</p>
       <code>source: CdkDrag&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Item that is being dragged.</p>
+  <td class="docs-api-property-description"><p translation-result="on">被拖动的条目</p><p translation-origin="off">Item that is being dragged.</p>
+
 </td>
 </tr>
 
@@ -3331,7 +3526,8 @@ that the position hasn't changed.</p>
 <h4 id="CdkDragSortEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CdkDragSortEvent"></span>
   <code>CdkDragSortEvent</code>
-</h4><div class="docs-api-interface-description"><p>Event emitted when the user swaps the position of two drag items.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户交换两个拖动条目的位置时，会发出一个事件。</p><p translation-origin="off">Event emitted when the user swaps the position of two drag items.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-17">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3346,7 +3542,8 @@ that the position hasn't changed.</p>
       <code>container: CdkDropList&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Container that the item belongs to.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该条目所属的容器。</p><p translation-origin="off">Container that the item belongs to.</p>
+
 </td>
 </tr>
 
@@ -3359,7 +3556,8 @@ that the position hasn't changed.</p>
       <code>currentIndex: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Index that the item is currently in.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该条目在当前排序中的索引</p><p translation-origin="off">Index that the item is currently in.</p>
+
 </td>
 </tr>
 
@@ -3372,7 +3570,8 @@ that the position hasn't changed.</p>
       <code>item: CdkDrag&lt;I&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Item that is being sorted.</p>
+  <td class="docs-api-property-description"><p translation-result="on">正在排序的条目</p><p translation-origin="off">Item that is being sorted.</p>
+
 </td>
 </tr>
 
@@ -3385,7 +3584,8 @@ that the position hasn't changed.</p>
       <code>previousIndex: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Index from which the item was sorted previously.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该条目在先前排序中的索引。</p><p translation-origin="off">Index from which the item was sorted previously.</p>
+
 </td>
 </tr>
 
@@ -3567,12 +3767,15 @@ items and drop lists within a module or a component.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Moves an item one index in an array to another.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把某个条目从数组中的一个索引号移到另一个索引号。</p><p translation-origin="off">Moves an item one index in an array to another.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -3583,7 +3786,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Array in which to move the item.</p>
+        <p translation-result="on">要移动此条目的数组。</p><p translation-origin="off">Array in which to move the item.</p>
+
 
       </div>
     </td>
@@ -3597,7 +3801,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Starting index of the item.</p>
+        <p translation-result="on">此条目的起始索引。</p><p translation-origin="off">Starting index of the item.</p>
+
 
       </div>
     </td>
@@ -3611,7 +3816,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index to which the item should be moved.</p>
+        <p translation-result="on">此条目应该移到的索引。</p><p translation-origin="off">Index to which the item should be moved.</p>
+
 
       </div>
     </td>
@@ -3630,12 +3836,15 @@ items and drop lists within a module or a component.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Moves an item from one array to another.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个条目从一个数组移动到另一个数组。</p><p translation-origin="off">Moves an item from one array to another.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -3646,7 +3855,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Array from which to transfer the item.</p>
+        <p translation-result="on">要从中传输该条目的数组。</p><p translation-origin="off">Array from which to transfer the item.</p>
+
 
       </div>
     </td>
@@ -3660,7 +3870,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Array into which to put the item.</p>
+        <p translation-result="on">要放入该条目的数组。</p><p translation-origin="off">Array into which to put the item.</p>
+
 
       </div>
     </td>
@@ -3674,7 +3885,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index of the item in its current array.</p>
+        <p translation-result="on">当前数组中该条目的索引。</p><p translation-origin="off">Index of the item in its current array.</p>
+
 
       </div>
     </td>
@@ -3688,7 +3900,8 @@ items and drop lists within a module or a component.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index at which to insert the item.</p>
+        <p translation-result="on">该条目要插入到的索引。</p><p translation-origin="off">Index at which to insert the item.</p>
+
 
       </div>
     </td>
@@ -3707,13 +3920,16 @@ items and drop lists within a module or a component.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Copies an item from one array to another, leaving it in its
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将一个条目从一个数组复制到另一个数组，并把它放在当前数组的原始位置。</p><p translation-origin="off">Copies an item from one array to another, leaving it in its
 original position in current array.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -3724,7 +3940,8 @@ original position in current array.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Array from which to copy the item.</p>
+        <p translation-result="on">要从中复制条目的数组。</p><p translation-origin="off">Array from which to copy the item.</p>
+
 
       </div>
     </td>
@@ -3738,7 +3955,8 @@ original position in current array.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Array into which is copy the item.</p>
+        <p translation-result="on">要把该条目复制到的数组。</p><p translation-origin="off">Array into which is copy the item.</p>
+
 
       </div>
     </td>
@@ -3752,7 +3970,8 @@ original position in current array.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index of the item in its current array.</p>
+        <p translation-result="on">该条目在当前数组中的索引。</p><p translation-origin="off">Index of the item in its current array.</p>
+
 
       </div>
     </td>
@@ -3766,7 +3985,8 @@ original position in current array.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Index at which to insert the item.</p>
+        <p translation-result="on">该条目在目标数组中要插入的索引。</p><p translation-origin="off">Index at which to insert the item.</p>
+
 
       </div>
     </td>

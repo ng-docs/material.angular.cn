@@ -18,8 +18,9 @@
   <span header-link="MatSlider"></span>
   <code>MatSlider</code>
   
-</h4><div class="docs-api-class-description"><p>Allows users to select from a range of values by moving the slider thumb. It is similar in
+</h4><div class="docs-api-class-description"><p translation-result="on">允许用户通过移动滑杆来从一系列值中进行选择。它的行为类似于原生的 <code>&lt;input type="range"&gt;</code> 元素。</p><p translation-origin="off">Allows users to select from a range of values by moving the slider thumb. It is similar in
 behavior to the native <code>&lt;input type="range"&gt;</code> element.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -69,9 +70,10 @@ behavior to the native <code>&lt;input type="range"&gt;</code> element.</p>
       <code>displayWith: (value: number) =&gt; string | number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Function that will be used to format the value before it is displayed
+  <td class="docs-api-property-description"><p translation-result="on">在滑块的标签上显示值之前用来格式化该值的函数。可以用来格式化非常大的数字，以便让它们适配滑杆。</p><p translation-origin="off">Function that will be used to format the value before it is displayed
 in the thumb label. Can be used to format very large number in order
 for them to fit into the slider thumb.</p>
+
 </td>
 </tr>
 
@@ -85,7 +87,8 @@ for them to fit into the slider thumb.</p>
       <code>invert: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the slider is inverted.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆是否反转了。</p><p translation-origin="off">Whether the slider is inverted.</p>
+
 </td>
 </tr>
 
@@ -99,7 +102,8 @@ for them to fit into the slider thumb.</p>
       <code>max: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The maximum value that the slider can have.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆所具有的最大值。</p><p translation-origin="off">The maximum value that the slider can have.</p>
+
 </td>
 </tr>
 
@@ -113,7 +117,8 @@ for them to fit into the slider thumb.</p>
       <code>min: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The minimum value that the slider can have.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆所具有的最小值。</p><p translation-origin="off">The minimum value that the slider can have.</p>
+
 </td>
 </tr>
 
@@ -127,7 +132,8 @@ for them to fit into the slider thumb.</p>
       <code>step: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The values at which the thumb will snap.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑块处的值。</p><p translation-origin="off">The values at which the thumb will snap.</p>
+
 </td>
 </tr>
 
@@ -141,7 +147,8 @@ for them to fit into the slider thumb.</p>
       <code>thumbLabel: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not to show the thumb label.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否要显示这个滑块标签。</p><p translation-origin="off">Whether or not to show the thumb label.</p>
+
 </td>
 </tr>
 
@@ -155,8 +162,9 @@ for them to fit into the slider thumb.</p>
       <code>tickInterval: number | "auto"</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>How often to show ticks. Relative to the step so that a tick always appears on a step.
+  <td class="docs-api-property-description"><p translation-result="on">多远才显示一个刻度。相对于步长来说，刻度总是会出现在一个步长上。例如：刻度的间隔为 4，步长为 3，则每 4 步（每 12 个值）就会画一个刻度。</p><p translation-origin="off">How often to show ticks. Relative to the step so that a tick always appears on a step.
 Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12 values).</p>
+
 </td>
 </tr>
 
@@ -170,7 +178,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>value: number | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Value of the slider.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆的值。</p><p translation-origin="off">Value of the slider.</p>
+
 </td>
 </tr>
 
@@ -184,7 +193,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>valueText: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Text corresponding to the slider's value. Used primarily for improved accessibility.</p>
+  <td class="docs-api-property-description"><p translation-result="on">对应滑杆值的文本。主要用于改善无障碍性。</p><p translation-origin="off">Text corresponding to the slider's value. Used primarily for improved accessibility.</p>
+
 </td>
 </tr>
 
@@ -198,7 +208,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>vertical: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the slider is vertical.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆是否垂直。</p><p translation-origin="off">Whether the slider is vertical.</p>
+
 </td>
 </tr>
 
@@ -212,7 +223,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>change: EventEmitter&lt;MatSliderChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the slider value has changed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆值发生变化时发出的事件。</p><p translation-origin="off">Event emitted when the slider value has changed.</p>
+
 </td>
 </tr>
 
@@ -226,7 +238,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>input: EventEmitter&lt;MatSliderChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the slider thumb moves.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆上的滑块移动时发出的事件。</p><p translation-origin="off">Event emitted when the slider thumb moves.</p>
+
 </td>
 </tr>
 
@@ -265,7 +278,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>displayValue: string | number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The value to be used for display purposes.</p>
+  <td class="docs-api-property-description"><p translation-result="on">供显示用的值。</p><p translation-origin="off">The value to be used for display purposes.</p>
+
 </td>
 </tr>
 
@@ -278,7 +292,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>onTouched: () =&gt; any</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>onTouch function registered via registerOnTouch (ControlValueAccessor).</p>
+  <td class="docs-api-property-description"><p translation-result="on">通过 ControlValueAccessor 上的 registerOnTouch 注册的 onTouch 函数。</p><p translation-origin="off">onTouch function registered via registerOnTouch (ControlValueAccessor).</p>
+
 </td>
 </tr>
 
@@ -291,7 +306,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>percent: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The percentage of the slider that coincides with the value.</p>
+  <td class="docs-api-property-description"><p translation-result="on">与滑杆值一致的百分比值。</p><p translation-origin="off">The percentage of the slider that coincides with the value.</p>
+
 </td>
 </tr>
 
@@ -312,7 +328,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>blur the host element</p>
+      <p translation-result="on">让宿主元素失去焦点</p><p translation-origin="off">blur the host element</p>
+
 
     </td>
   </tr></tbody></table>
@@ -328,12 +345,15 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>set focus to the host element</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把焦点设置到宿主元素上</p><p translation-origin="off">set focus to the host element</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -366,7 +386,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
   <span header-link="MatSliderChange"></span>
   <code>MatSliderChange</code>
   
-</h4><div class="docs-api-class-description"><p>A simple change event emitted by the MatSlider component.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">MatSlider 组件发出的一个简单的 change 事件。</p><p translation-origin="off">A simple change event emitted by the MatSlider component.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -381,7 +402,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>source: MatSlider</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The MatSlider that changed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">发生改变的 MatSlider。</p><p translation-origin="off">The MatSlider that changed.</p>
+
 </td>
 </tr>
 
@@ -394,7 +416,8 @@ Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12
       <code>value: number | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The new value of the source slider.</p>
+  <td class="docs-api-property-description"><p translation-result="on">源滑杆的新值。</p><p translation-origin="off">The new value of the source slider.</p>
+
 </td>
 </tr>
 

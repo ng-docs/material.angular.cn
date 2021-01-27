@@ -18,11 +18,13 @@
   <span header-link="Overlay"></span>
   <code>Overlay</code>
   
-</h4><div class="docs-api-class-description"><p>Service to create Overlays. Overlays are dynamically added pieces of floating UI, meant to be
+</h4><div class="docs-api-class-description"><p translation-result="on">用来创建浮层的服务。浮层是指动态添加的一些浮动用户界面，用来作为其它组件的底层构建块。像对话框、工具提示、菜单、选择器等等都可以用浮层来构建。该服务主要应该由可复用组件的作者使用，而不是供开发者构建最终用户应用。</p><p translation-origin="off">Service to create Overlays. Overlays are dynamically added pieces of floating UI, meant to be
 used as a low-level building block for other components. Dialogs, tooltips, menus,
 selects, etc. can all be built using overlays. The service should primarily be used by authors
 of re-usable components rather than developers building end-user applications.</p>
-<p>An overlay <em>is</em> a PortalOutlet, so any kind of Portal can be loaded into one.</p>
+
+<p translation-result="on">浮层<em>是</em>一个 PortalOutlet，任何类型的传送点都可以加载到其中。</p><p translation-origin="off">An overlay <em>is</em> a PortalOutlet, so any kind of Portal can be loaded into one.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -57,12 +59,15 @@ of re-usable components rather than developers building end-user applications.</
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Creates an overlay.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">创建一个浮层。</p><p translation-origin="off">Creates an overlay.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -73,13 +78,16 @@ of re-usable components rather than developers building end-user applications.</
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Configuration applied to the overlay.</p>
+        <p translation-result="on">应用于浮层的配置。</p><p translation-origin="off">Configuration applied to the overlay.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -87,7 +95,8 @@ of re-usable components rather than developers building end-user applications.</
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>Reference to the created overlay.</p>
+        <p translation-result="on">所创建浮层的引用。</p><p translation-origin="off">Reference to the created overlay.</p>
+
 
       </div>
     </td>
@@ -104,13 +113,16 @@ of re-usable components rather than developers building end-user applications.</
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets a position builder that can be used, via fluent API,
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个位置构建器，可以通过流式 API 来构建和配置定位策略。</p><p translation-origin="off">Gets a position builder that can be used, via fluent API,
 to construct and configure a position strategy.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -118,7 +130,8 @@ to construct and configure a position strategy.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>An overlay position builder.</p>
+        <p translation-result="on">浮层位置构建器。</p><p translation-origin="off">An overlay position builder.</p>
+
 
       </div>
     </td>
@@ -136,7 +149,8 @@ to construct and configure a position strategy.</p>
   <span header-link="OverlayContainer"></span>
   <code>OverlayContainer</code>
   
-</h4><div class="docs-api-class-description"><p>Container inside which all overlays will render.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">所有浮层都会渲染到其中的容器。</p><p translation-origin="off">Container inside which all overlays will render.</p>
+
 </div>
 
 
@@ -151,14 +165,17 @@ to construct and configure a position strategy.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>This method returns the overlay container element. It will lazily
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">该方法返回浮层的容器元素。它会在第一次调用时惰性创建该元素，以便在非浏览器环境中使用该容器。</p><p translation-origin="off">This method returns the overlay container element. It will lazily
 create the element the first time  it is called to facilitate using
 the container in non-browser environments.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -166,7 +183,8 @@ the container in non-browser environments.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>the container element</p>
+        <p translation-result="on">容器元素</p><p translation-origin="off">the container element</p>
+
 
       </div>
     </td>
@@ -191,10 +209,12 @@ the container in non-browser environments.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p>Alternative to OverlayContainer that supports correct displaying of overlay elements in
+</h4><div class="docs-api-class-description"><p translation-result="on">OverlayContainer 的替代品，支持在全屏模式（<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen">https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen</a>）下正确显示浮层元素</p><p translation-origin="off">Alternative to OverlayContainer that supports correct displaying of overlay elements in
 Fullscreen mode
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen">https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen</a></p>
-<p>Should be provided in the root component.</p>
+
+<p translation-result="on">应该在根组件中提供。</p><p translation-origin="off">Should be provided in the root component.</p>
+
 </div>
 
 
@@ -209,14 +229,17 @@ Fullscreen mode
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>This method returns the overlay container element. It will lazily
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">该方法返回浮层的容器元素。它会在第一次调用时惰性创建该元素，以便在非浏览器环境中使用该容器。</p><p translation-origin="off">This method returns the overlay container element. It will lazily
 create the element the first time  it is called to facilitate using
 the container in non-browser environments.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -224,7 +247,8 @@ the container in non-browser environments.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>the container element</p>
+        <p translation-result="on">容器元素</p><p translation-origin="off">the container element</p>
+
 
       </div>
     </td>
@@ -241,13 +265,16 @@ the container in non-browser environments.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>When the page is put into fullscreen mode, a specific element is specified.
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当页面进入全屏模式时，会指定一个元素。在全屏模式下，只能看到该元素及其子元素。</p><p translation-origin="off">When the page is put into fullscreen mode, a specific element is specified.
 Only that element and its children are visible when in fullscreen mode.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -708,8 +735,9 @@ on event target and order of overlay opens.</p>
   <span header-link="CdkOverlayOrigin"></span>
   <code>CdkOverlayOrigin</code>
   
-</h4><div class="docs-api-class-description"><p>Directive applied to an element to make it usable as an origin for an Overlay using a
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令应用于某个元素，以便在使用 ConnectedPositionStrategy 时可以作为 Overlay 的原点。</p><p translation-origin="off">Directive applied to an element to make it usable as an origin for an Overlay using a
 ConnectedPositionStrategy.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -754,8 +782,9 @@ ConnectedPositionStrategy.</p>
   <span header-link="CdkConnectedOverlay"></span>
   <code>CdkConnectedOverlay</code>
   
-</h4><div class="docs-api-class-description"><p>Directive to facilitate declarative creation of an
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令旨在帮助用 FlexibleConnectedPositionStrategy 声明式的创建一个浮层。</p><p translation-origin="off">Directive to facilitate declarative creation of an
 Overlay using a FlexibleConnectedPositionStrategy.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -781,7 +810,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>backdropClass: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The custom class to be set on the backdrop element.</p>
+  <td class="docs-api-property-description"><p translation-result="on">在背景板元素上设置的自定义类。</p><p translation-origin="off">The custom class to be set on the backdrop element.</p>
+
 </td>
 </tr>
 
@@ -795,7 +825,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>disableClose: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay can be closed by user interaction.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层是否可以通过用户交互来关闭。</p><p translation-origin="off">Whether the overlay can be closed by user interaction.</p>
+
 </td>
 </tr>
 
@@ -809,7 +840,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>flexibleDimensions: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay's width and height can be constrained to fit within the viewport.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层的宽度和高度是否可以约束在当前视口中。</p><p translation-origin="off">Whether the overlay's width and height can be constrained to fit within the viewport.</p>
+
 </td>
 </tr>
 
@@ -823,7 +855,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>growAfterOpen: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay can grow after the initial open when flexible positioning is turned on.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当弹性定位打开时，浮层是否能在首次打开后扩大。</p><p translation-origin="off">Whether the overlay can grow after the initial open when flexible positioning is turned on.</p>
+
 </td>
 </tr>
 
@@ -837,7 +870,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>hasBackdrop: any</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not the overlay should attach a backdrop.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层是否应带有背景板。</p><p translation-origin="off">Whether or not the overlay should attach a backdrop.</p>
+
 </td>
 </tr>
 
@@ -851,7 +885,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>height: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The height of the overlay panel.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的高度。</p><p translation-origin="off">The height of the overlay panel.</p>
+
 </td>
 </tr>
 
@@ -865,7 +900,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>lockPosition: any</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not the overlay should be locked when scrolling.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滚动时是否应该锁定浮层。</p><p translation-origin="off">Whether or not the overlay should be locked when scrolling.</p>
+
 </td>
 </tr>
 
@@ -879,7 +915,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>minHeight: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The min height of the overlay panel.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的最小高度。</p><p translation-origin="off">The min height of the overlay panel.</p>
+
 </td>
 </tr>
 
@@ -893,7 +930,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>minWidth: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The min width of the overlay panel.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的最小宽度。</p><p translation-origin="off">The min width of the overlay panel.</p>
+
 </td>
 </tr>
 
@@ -907,7 +945,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>offsetX: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The offset in pixels for the overlay connection point on the x-axis</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层连接点在 x 轴上的像素偏移量</p><p translation-origin="off">The offset in pixels for the overlay connection point on the x-axis</p>
+
 </td>
 </tr>
 
@@ -921,7 +960,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>offsetY: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The offset in pixels for the overlay connection point on the y-axis</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层连接点在 y 轴上的像素偏移量</p><p translation-origin="off">The offset in pixels for the overlay connection point on the y-axis</p>
+
 </td>
 </tr>
 
@@ -935,7 +975,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>open: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay is open.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层是否已打开。</p><p translation-origin="off">Whether the overlay is open.</p>
+
 </td>
 </tr>
 
@@ -949,7 +990,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>origin: CdkOverlayOrigin</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Origin for the connected overlay.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已连接浮层的原点。</p><p translation-origin="off">Origin for the connected overlay.</p>
+
 </td>
 </tr>
 
@@ -963,7 +1005,8 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>panelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The custom class to add to the overlay pane element.</p>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到浮层面板元素中的自定义类。</p><p translation-origin="off">The custom class to add to the overlay pane element.</p>
+
 </td>
 </tr>
 
@@ -977,8 +1020,9 @@ Overlay using a FlexibleConnectedPositionStrategy.</p>
       <code>positionStrategy: FlexibleConnectedPositionStrategy</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>This input overrides the positions input if specified. It lets users pass
+  <td class="docs-api-property-description"><p translation-result="on">如果指定，该输入会改写输入属性 positions。它可以让用户传入任意的定位策略。</p><p translation-origin="off">This input overrides the positions input if specified. It lets users pass
 in arbitrary positioning strategies.</p>
+
 </td>
 </tr>
 
@@ -992,7 +1036,8 @@ in arbitrary positioning strategies.</p>
       <code>positions: ConnectedPosition[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Registered connected position pairs.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已注册的连接位置对。</p><p translation-origin="off">Registered connected position pairs.</p>
+
 </td>
 </tr>
 
@@ -1006,7 +1051,8 @@ in arbitrary positioning strategies.</p>
       <code>push: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay can be pushed on-screen if none of the provided positions fit.</p>
+  <td class="docs-api-property-description"><p translation-result="on">如果所提供的位置都不合适，是否可以在屏幕上往下压浮层。</p><p translation-origin="off">Whether the overlay can be pushed on-screen if none of the provided positions fit.</p>
+
 </td>
 </tr>
 
@@ -1020,7 +1066,8 @@ in arbitrary positioning strategies.</p>
       <code>scrollStrategy: ScrollStrategy</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Strategy to be used when handling scroll events while the overlay is open.</p>
+  <td class="docs-api-property-description"><p translation-result="on">在浮层完成时，处理 scroll 事件时要使用的策略。</p><p translation-origin="off">Strategy to be used when handling scroll events while the overlay is open.</p>
+
 </td>
 </tr>
 
@@ -1034,7 +1081,8 @@ in arbitrary positioning strategies.</p>
       <code>transformOriginSelector: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>CSS selector which to set the transform origin.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用于设置变换原点的 CSS 选择器。</p><p translation-origin="off">CSS selector which to set the transform origin.</p>
+
 </td>
 </tr>
 
@@ -1048,7 +1096,8 @@ in arbitrary positioning strategies.</p>
       <code>viewportMargin: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Margin between the overlay and the viewport edges.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层与视口边缘之间的边距。</p><p translation-origin="off">Margin between the overlay and the viewport edges.</p>
+
 </td>
 </tr>
 
@@ -1062,7 +1111,8 @@ in arbitrary positioning strategies.</p>
       <code>width: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The width of the overlay panel.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的宽度。</p><p translation-origin="off">The width of the overlay panel.</p>
+
 </td>
 </tr>
 
@@ -1076,7 +1126,8 @@ in arbitrary positioning strategies.</p>
       <code>attach: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the overlay has been attached.</p>
+  <td class="docs-api-property-description"><p translation-result="on">连接浮层时会发出本事件。</p><p translation-origin="off">Event emitted when the overlay has been attached.</p>
+
 </td>
 </tr>
 
@@ -1090,7 +1141,8 @@ in arbitrary positioning strategies.</p>
       <code>backdropClick: EventEmitter&lt;MouseEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the backdrop is clicked.</p>
+  <td class="docs-api-property-description"><p translation-result="on">单击背景板时发出的事件。</p><p translation-origin="off">Event emitted when the backdrop is clicked.</p>
+
 </td>
 </tr>
 
@@ -1104,7 +1156,8 @@ in arbitrary positioning strategies.</p>
       <code>detach: EventEmitter&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the overlay has been detached.</p>
+  <td class="docs-api-property-description"><p translation-result="on">解除浮层时会发出本事件。</p><p translation-origin="off">Event emitted when the overlay has been detached.</p>
+
 </td>
 </tr>
 
@@ -1118,7 +1171,8 @@ in arbitrary positioning strategies.</p>
       <code>overlayKeydown: EventEmitter&lt;KeyboardEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when there are keyboard events that are targeted at the overlay.</p>
+  <td class="docs-api-property-description"><p translation-result="on">键盘事件的目标是本浮层会触发。</p><p translation-origin="off">Emits when there are keyboard events that are targeted at the overlay.</p>
+
 </td>
 </tr>
 
@@ -1132,7 +1186,8 @@ in arbitrary positioning strategies.</p>
       <code>overlayOutsideClick: EventEmitter&lt;MouseEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when there are mouse outside click events that are targeted at the overlay.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当本浮层的外部发生鼠标点击事件时会触发。</p><p translation-origin="off">Emits when there are mouse outside click events that are targeted at the overlay.</p>
+
 </td>
 </tr>
 
@@ -1146,7 +1201,8 @@ in arbitrary positioning strategies.</p>
       <code>positionChange: EventEmitter&lt;ConnectedOverlayPositionChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the position has changed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当定位发生变化时会发出本事件。</p><p translation-origin="off">Event emitted when the position has changed.</p>
+
 </td>
 </tr>
 
@@ -1159,7 +1215,8 @@ in arbitrary positioning strategies.</p>
       <code>dir: Direction</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The element's layout direction.</p>
+  <td class="docs-api-property-description"><p translation-result="on">元素的布局方向。</p><p translation-origin="off">The element's layout direction.</p>
+
 </td>
 </tr>
 
@@ -1172,7 +1229,8 @@ in arbitrary positioning strategies.</p>
       <code>overlayRef: OverlayRef</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The associated overlay reference.</p>
+  <td class="docs-api-property-description"><p translation-result="on">到关联的浮层引用。</p><p translation-origin="off">The associated overlay reference.</p>
+
 </td>
 </tr>
 
@@ -1196,8 +1254,9 @@ in arbitrary positioning strategies.</p>
   <span header-link="OverlayRef"></span>
   <code>OverlayRef</code>
   
-</h4><div class="docs-api-class-description"><p>Reference to an overlay that has been created with the Overlay service.
+</h4><div class="docs-api-class-description"><p translation-result="on">到使用浮层服务创建的浮层的引用。用来操纵或清除此浮层。</p><p translation-origin="off">Reference to an overlay that has been created with the Overlay service.
 Used to manipulate or dispose of said overlay.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1212,7 +1271,8 @@ Used to manipulate or dispose of said overlay.</p>
       <code>backdropElement: HTMLElement | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The overlay's backdrop HTML element.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层的背景板 HTML 元素。</p><p translation-origin="off">The overlay's backdrop HTML element.</p>
+
 </td>
 </tr>
 
@@ -1225,9 +1285,10 @@ Used to manipulate or dispose of said overlay.</p>
       <code>hostElement: HTMLElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Wrapper around the panel element. Can be used for advanced
+  <td class="docs-api-property-description"><p translation-result="on">面板元素周围的包装器。可用于高级定位，在这里，需要在浮层面板周围使用具有特定样式的包装器。</p><p translation-origin="off">Wrapper around the panel element. Can be used for advanced
 positioning where a wrapper with specific styling is
 required around the overlay pane.</p>
+
 </td>
 </tr>
 
@@ -1240,7 +1301,8 @@ required around the overlay pane.</p>
       <code>overlayElement: HTMLElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The overlay's HTML element</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层的 HTML 元素</p><p translation-origin="off">The overlay's HTML element</p>
+
 </td>
 </tr>
 
@@ -1260,12 +1322,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Add a CSS class or an array of classes to the overlay pane.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个或一组 CSS 类添加到浮层面板中。</p><p translation-origin="off">Add a CSS class or an array of classes to the overlay pane.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1413,12 +1478,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets an observable that emits when the overlay has been attached.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个在附着浮层时会发出通知的可观察对象。</p><p translation-origin="off">Gets an observable that emits when the overlay has been attached.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1442,12 +1510,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets an observable that emits when the backdrop has been clicked.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个当单击背景时会发出通知的可观察对象。</p><p translation-origin="off">Gets an observable that emits when the backdrop has been clicked.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1471,12 +1542,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Detaches an overlay from a portal.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从浮层中拆除传送点。</p><p translation-origin="off">Detaches an overlay from a portal.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1484,7 +1558,8 @@ required around the overlay pane.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>The portal detachment result.</p>
+        <p translation-result="on">拆除传送点的结果。</p><p translation-origin="off">The portal detachment result.</p>
+
 
       </div>
     </td>
@@ -1502,7 +1577,8 @@ required around the overlay pane.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches the backdrop (if any) associated with the overlay.</p>
+      <p translation-result="on">拆除与本浮层关联的背景板（如果有的话）。</p><p translation-origin="off">Detaches the backdrop (if any) associated with the overlay.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -1518,12 +1594,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets an observable that emits when the overlay has been detached.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个当浮层已被拆除时会发出的可观察对象。</p><p translation-origin="off">Gets an observable that emits when the overlay has been detached.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1548,7 +1627,8 @@ required around the overlay pane.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Cleans up the overlay from the DOM.</p>
+      <p translation-result="on">清理 DOM 中的浮层。</p><p translation-origin="off">Cleans up the overlay from the DOM.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -1564,12 +1644,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets the current overlay configuration, which is immutable.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取当前的浮层配置，它是不可变对象。</p><p translation-origin="off">Gets the current overlay configuration, which is immutable.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1593,12 +1676,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Returns the layout direction of the overlay panel.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回浮层面板的布局方向。</p><p translation-origin="off">Returns the layout direction of the overlay panel.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1622,12 +1708,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Whether the overlay has attached content.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">浮层是否附着着内容。</p><p translation-origin="off">Whether the overlay has attached content.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1651,12 +1740,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets an observable of keydown events targeted to this overlay.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个以此浮层为目标的 keydown 事件的可观察对象。</p><p translation-origin="off">Gets an observable of keydown events targeted to this overlay.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1680,12 +1772,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Gets an observable of pointer events targeted outside this overlay.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个此浮层之外的指针事件的可观察对象。</p><p translation-origin="off">Gets an observable of pointer events targeted outside this overlay.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -1709,12 +1804,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Remove a CSS class or an array of classes from the overlay pane.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从浮层面板中删除一个或一组 CSS 类。</p><p translation-origin="off">Remove a CSS class or an array of classes from the overlay pane.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1742,12 +1840,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sets the LTR/RTL direction for the overlay.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置浮层的 LTR/RTL 方向。</p><p translation-origin="off">Sets the LTR/RTL direction for the overlay.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1776,7 +1877,8 @@ required around the overlay pane.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the position of the overlay based on the position strategy.</p>
+      <p translation-result="on">根据定位策略更新浮层的位置。</p><p translation-origin="off">Updates the position of the overlay based on the position strategy.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -1792,12 +1894,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Switches to a new position strategy and updates the overlay position.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换到新的定位策略并更新浮层的位置。</p><p translation-origin="off">Switches to a new position strategy and updates the overlay position.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1825,12 +1930,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Switches to a new scroll strategy.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换到新的滚动策略。</p><p translation-origin="off">Switches to a new scroll strategy.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1858,12 +1966,15 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Update the size properties of the overlay.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新浮层的大小属性。</p><p translation-origin="off">Update the size properties of the overlay.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -3481,7 +3592,8 @@ alignment of the overlay.</p>
   <span header-link="OverlayConfig"></span>
   <code>OverlayConfig</code>
   
-</h4><div class="docs-api-class-description"><p>Initial configuration used when creating an overlay.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">创建浮层时使用的初始配置。</p><p translation-origin="off">Initial configuration used when creating an overlay.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3496,7 +3608,8 @@ alignment of the overlay.</p>
       <code>backdropClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Custom class to add to the backdrop</p>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到背景板的自定义类</p><p translation-origin="off">Custom class to add to the backdrop</p>
+
 </td>
 </tr>
 
@@ -3509,8 +3622,9 @@ alignment of the overlay.</p>
       <code>direction: Direction | Directionality</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Direction of the text in the overlay panel. If a <code>Directionality</code> instance
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板中文本的方向。如果 <code>Directionality</code> 实例，该浮层也会自动处理对其值的更改。</p><p translation-origin="off">Direction of the text in the overlay panel. If a <code>Directionality</code> instance
 is passed in, the overlay will handle changes to its value automatically.</p>
+
 </td>
 </tr>
 
@@ -3523,9 +3637,10 @@ is passed in, the overlay will handle changes to its value automatically.</p>
       <code>disposeOnNavigation: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay should be disposed of when the user goes backwards/forwards in history.
+  <td class="docs-api-property-description"><p translation-result="on">当用户在历史记录中往后退时，是否应该处理浮层。请注意，这通常不包括单击链接（除非用户正在使用 <code>HashLocationStrategy</code> ）。</p><p translation-origin="off">Whether the overlay should be disposed of when the user goes backwards/forwards in history.
 Note that this usually doesn't include clicking on links (unless the user is using
 the <code>HashLocationStrategy</code>).</p>
+
 </td>
 </tr>
 
@@ -3538,7 +3653,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>hasBackdrop: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the overlay has a backdrop.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层是否有背景板。</p><p translation-origin="off">Whether the overlay has a backdrop.</p>
+
 </td>
 </tr>
 
@@ -3551,7 +3667,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>height: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The height of the overlay panel. If a number is provided, pixel units are assumed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的高度。如果提供了数字，则假定单位是像素。</p><p translation-origin="off">The height of the overlay panel. If a number is provided, pixel units are assumed.</p>
+
 </td>
 </tr>
 
@@ -3564,7 +3681,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>maxHeight: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The max-height of the overlay panel. If a number is provided, pixel units are assumed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的最大高度。如果提供了数字，则假定单位是像素。</p><p translation-origin="off">The max-height of the overlay panel. If a number is provided, pixel units are assumed.</p>
+
 </td>
 </tr>
 
@@ -3577,7 +3695,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>maxWidth: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The max-width of the overlay panel. If a number is provided, pixel units are assumed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的最大宽度。如果提供了数字，则假定单位是像素。</p><p translation-origin="off">The max-width of the overlay panel. If a number is provided, pixel units are assumed.</p>
+
 </td>
 </tr>
 
@@ -3590,7 +3709,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>minHeight: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The min-height of the overlay panel. If a number is provided, pixel units are assumed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的最小高度。如果提供了数字，则假定单位是像素。</p><p translation-origin="off">The min-height of the overlay panel. If a number is provided, pixel units are assumed.</p>
+
 </td>
 </tr>
 
@@ -3603,7 +3723,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>minWidth: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The min-width of the overlay panel. If a number is provided, pixel units are assumed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的最小宽度。如果提供了数字，则假定单位是像素。</p><p translation-origin="off">The min-width of the overlay panel. If a number is provided, pixel units are assumed.</p>
+
 </td>
 </tr>
 
@@ -3616,7 +3737,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>panelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Custom class to add to the overlay pane.</p>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到浮层面板的自定义类。</p><p translation-origin="off">Custom class to add to the overlay pane.</p>
+
 </td>
 </tr>
 
@@ -3629,7 +3751,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>positionStrategy: PositionStrategy</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Strategy with which to position the overlay.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用于定位浮层的策略。</p><p translation-origin="off">Strategy with which to position the overlay.</p>
+
 </td>
 </tr>
 
@@ -3642,7 +3765,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>scrollStrategy: ScrollStrategy</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Strategy to be used when handling scroll events while the overlay is open.</p>
+  <td class="docs-api-property-description"><p translation-result="on">在浮层完成时，处理 scroll 事件时要使用的策略。</p><p translation-origin="off">Strategy to be used when handling scroll events while the overlay is open.</p>
+
 </td>
 </tr>
 
@@ -3655,7 +3779,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>width: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The width of the overlay panel. If a number is provided, pixel units are assumed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的宽度。如果提供了数字，则假定单位是像素。</p><p translation-origin="off">The width of the overlay panel. If a number is provided, pixel units are assumed.</p>
+
 </td>
 </tr>
 
@@ -4150,7 +4275,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="OverlaySizeConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="OverlaySizeConfig"></span>
   <code>OverlaySizeConfig</code>
-</h4><div class="docs-api-interface-description"><p>Size properties for an overlay.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">浮层的大小属性。</p><p translation-origin="off">Size properties for an overlay.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-10">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">

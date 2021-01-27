@@ -18,8 +18,9 @@
   <span header-link="Directionality"></span>
   <code>Directionality</code>
   
-</h4><div class="docs-api-class-description"><p>The directionality (LTR / RTL) context for the application (or a subtree of it).
+</h4><div class="docs-api-class-description"><p translation-result="on">应用程序（或其子树）的方向性（LTR/RTL）上下文。对外暴露当前的方向和一个表示方向变化的流。</p><p translation-origin="off">The directionality (LTR / RTL) context for the application (or a subtree of it).
 Exposes the current direction and a stream of direction changes.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -34,7 +35,8 @@ Exposes the current direction and a stream of direction changes.</p>
       <code>change: EventEmitter&lt;Direction&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Stream that emits whenever the 'ltr' / 'rtl' state changes.</p>
+  <td class="docs-api-property-description"><p translation-result="on">每当 'ltr' / 'rtl' 状态发生变化时就会触发的流。</p><p translation-origin="off">Stream that emits whenever the 'ltr' / 'rtl' state changes.</p>
+
 </td>
 </tr>
 
@@ -47,7 +49,8 @@ Exposes the current direction and a stream of direction changes.</p>
       <code>value: Direction</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The current 'ltr' or 'rtl' value.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当前 'ltr' 或 'rtl' 的值。</p><p translation-origin="off">The current 'ltr' or 'rtl' value.</p>
+
 </td>
 </tr>
 
@@ -71,9 +74,11 @@ Exposes the current direction and a stream of direction changes.</p>
   <span header-link="Dir"></span>
   <code>Dir</code>
   
-</h4><div class="docs-api-class-description"><p>Directive to listen for changes of direction of part of the DOM.</p>
-<p>Provides itself as Directionality such that descendant directives only need to ever inject
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令侦听部分 DOM 的方向变化。</p><p translation-origin="off">Directive to listen for changes of direction of part of the DOM.</p>
+
+<p translation-result="on">通过把自身提供为 Directionality，可以让后代指令只需要注入 Directionality 就能得到最接近的方向。</p><p translation-origin="off">Provides itself as Directionality such that descendant directives only need to ever inject
 Directionality to get the closest direction.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -95,7 +100,8 @@ Directionality to get the closest direction.</p>
       <code>change: EventEmitter&lt;Direction&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the direction changes.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当方向发生变化时会触发本事件。</p><p translation-origin="off">Event emitted when the direction changes.</p>
+
 </td>
 </tr>
 
@@ -108,7 +114,8 @@ Directionality to get the closest direction.</p>
       <code>value: Direction</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Current layout direction of the element.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该元素的当前布局方向。</p><p translation-origin="off">Current layout direction of the element.</p>
+
 </td>
 </tr>
 

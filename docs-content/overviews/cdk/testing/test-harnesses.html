@@ -62,7 +62,7 @@ needs to interact with the menu in a unit test.</p>
         </h4>
       
         
-      <p translation-result="on"><code>ComponentHarness</code> 是所有组件线束的抽象基类。每个线束都会扩展这个类。所有 <code>ComponentHarness</code> 子类都有一个静态属性 <code>hostSelector</code> ，它把 harness 类与 DOM 中组件的实例相匹配。除此之外，任何给定线束的 API 都是特定于其对应的组件的。请参阅该组件的文档，了解如何使用特定的线束。</p><p translation-origin="off"><code>ComponentHarness</code> is the abstract base class for all component harnesses. Every harness extends
+      <p translation-result="on"><code>ComponentHarness</code> 是所有组件线束的抽象基类。每个线束都会扩展这个类。所有 <code>ComponentHarness</code> 子类都有一个静态属性 <code>hostSelector</code> ，它把 harness 类与 DOM 中组件的实例相匹配。除此之外，任何指定线束的 API 都是特定于其对应的组件的。请参阅该组件的文档，了解如何使用特定的线束。</p><p translation-origin="off"><code>ComponentHarness</code> is the abstract base class for all component harnesses. Every harness extends
 this class. All <code>ComponentHarness</code> subclasses have a static property, <code>hostSelector</code>, that
 matches the harness class to instances of the component in the DOM. Beyond that, the API of any
 given harness is specific to its corresponding component; refer to the component's documentation to
@@ -78,7 +78,7 @@ learn how to use a specific harness.</p>
         </h4>
       
         
-      <p translation-result="on">这些类对应于组件工具体系的不同实现，并带有特定测试环境的绑定。任何给定的测试都只能导入<em>其中一个</em>类。基于 Karma 的单元测试应该使用 <code>TestbedHarnessEnvironment</code> ，而基于 Protractor 的端到端测试应该使用 <code>ProtractorHarnessEnvironment</code> 。其他环境要求自定义绑定;参见<a href="#api-for-harness-environment-authors">线束环境作者的 API，</a>了解有关备用测试环境的更多信息。</p><p translation-origin="off">These classes correspond to different implementations of the component harness system with bindings
+      <p translation-result="on">这些类对应于组件工具体系的不同实现，并带有特定测试环境的绑定。任何指定的测试都只能导入<em>其中一个</em>类。基于 Karma 的单元测试应该使用 <code>TestbedHarnessEnvironment</code> ，而基于 Protractor 的端到端测试应该使用 <code>ProtractorHarnessEnvironment</code> 。其他环境要求自定义绑定;参见<a href="#api-for-harness-environment-authors">线束环境作者的 API，</a>了解有关备用测试环境的更多信息。</p><p translation-origin="off">These classes correspond to different implementations of the component harness system with bindings
 for specific test environments. Any given test must only import <em>one</em> of these classes. Karma-based
 unit tests should use the <code>TestbedHarnessEnvironment</code>, while Protractor-based end-to-end tests
 should use the <code>ProtractorHarnessEnvironment</code>. Additional environments require custom bindings; see
@@ -221,7 +221,7 @@ are used to create <code>ComponentHarness</code> instances for elements under th
 </tr>
 
 <tr>
-<td><p translation-result="on"><code>HarnessLoader</code> 的根元素下面搜索给定 <code>ComponentHarness</code> 类或 <code>HarnessPredicate</code> 的实例，并返回与第一个匹配元素对应的线束的实例</p><p translation-origin="off"><code>getHarness&lt;T extends ComponentHarness&gt;(harnessType: ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;): Promise&lt;T&gt;</code></p></td>
+<td><p translation-result="on"><code>HarnessLoader</code> 的根元素下面搜索指定 <code>ComponentHarness</code> 类或 <code>HarnessPredicate</code> 的实例，并返回与第一个匹配元素对应的线束的实例</p><p translation-origin="off"><code>getHarness&lt;T extends ComponentHarness&gt;(harnessType: ComponentHarnessConstructor&lt;T&gt; | HarnessPredicate&lt;T&gt;): Promise&lt;T&gt;</code></p></td>
 <td><p>Searches for an instance of the given <code>ComponentHarness</code> class or <code>HarnessPredicate</code> below the root element of this <code>HarnessLoader</code> and returns an instance of the harness corresponding to the first matching element</p><p></p></td>
 </tr>
 
@@ -370,7 +370,7 @@ in more detail.</p>
         </h4>
       
         
-      <p translation-result="on"><code>ComponentHarness</code> 子类的每个实例都表示相应组件的一个特定实例。 <code>ComponentHarness</code> 类 <code>host</code> 方法访问组件的 host 元素。</p><p translation-origin="off">Each instance of a <code>ComponentHarness</code> subclass represents a particular instance of the
+      <p translation-result="on"><code>ComponentHarness</code> 子类的每个实例都表示相应组件的一个特定实例。 <code>ComponentHarness</code> 类 <code>host</code> 方法访问组件的宿主元素。</p><p translation-origin="off">Each instance of a <code>ComponentHarness</code> subclass represents a particular instance of the
 corresponding component. You can access the component's host element via the <code>host</code> method from
 the <code>ComponentHarness</code> base class.</p>
 
@@ -390,7 +390,7 @@ functions ensures that tests always reference the current state of the DOM.</p>
 </thead>
 <tbody>
 <tr>
-<td><p translation-result="on">返回相应组件实例的 host 元素的 <code>Promise</code></p><p translation-origin="off"><code>host(): Promise&lt;TestElement&gt;</code></p></td>
+<td><p translation-result="on">返回相应组件实例的宿主元素的 <code>Promise</code></p><p translation-origin="off"><code>host(): Promise&lt;TestElement&gt;</code></p></td>
 <td><p>Returns a <code>Promise</code> for the host element of the corresponding component instance.</p><p></p></td>
 </tr>
 
@@ -454,7 +454,7 @@ and content elements as follows:</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">单击该元素（相对于该元素左上角的给定位置）。</p><p translation-origin="off"><code>click(relativeX?: number, relativeY?: number): Promise&lt;void&gt;</code></p></td>
+<td><p translation-result="on">单击该元素（相对于该元素左上角的指定位置）。</p><p translation-origin="off"><code>click(relativeX?: number, relativeY?: number): Promise&lt;void&gt;</code></p></td>
 <td><p>Clicks the element (at the given position relative to the element's top-left corner).</p><p></p></td>
 </tr>
 
@@ -464,7 +464,7 @@ and content elements as follows:</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">获取该元素给定 CSS 属性的计算值。</p><p translation-origin="off"><code>getCssValue(property: string): Promise&lt;string&gt;</code></p></td>
+<td><p translation-result="on">获取该元素指定 CSS 属性的计算值。</p><p translation-origin="off"><code>getCssValue(property: string): Promise&lt;string&gt;</code></p></td>
 <td><p>Gets the computed value of the given CSS property for the element.</p><p></p></td>
 </tr>
 
@@ -484,12 +484,12 @@ and content elements as follows:</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">获取该元素给定 HTML 属性的值。</p><p translation-origin="off"><code>getAttribute(name: string): Promise&lt;string | null&gt;</code></p></td>
+<td><p translation-result="on">获取该元素指定 HTML 属性的值。</p><p translation-origin="off"><code>getAttribute(name: string): Promise&lt;string | null&gt;</code></p></td>
 <td><p>Gets the value of the given HTML attribute for the element.</p><p></p></td>
 </tr>
 
 <tr>
-<td><p translation-result="on">检查该元素是否已应用给定的类。</p><p translation-origin="off"><code>hasClass(name: string): Promise&lt;boolean&gt;</code></p></td>
+<td><p translation-result="on">检查该元素是否已应用指定的类。</p><p translation-origin="off"><code>hasClass(name: string): Promise&lt;boolean&gt;</code></p></td>
 <td><p>Checks whether the element has the given class applied.</p><p></p></td>
 </tr>
 
@@ -499,7 +499,7 @@ and content elements as follows:</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">获取该元素给定 JS 属性的值。</p><p translation-origin="off"><code>getProperty(name: string): Promise&lt;any&gt;</code></p></td>
+<td><p translation-result="on">获取该元素指定 JS 属性的值。</p><p translation-origin="off"><code>getProperty(name: string): Promise&lt;any&gt;</code></p></td>
 <td><p>Gets the value of the given JS property for the element.</p><p></p></td>
 </tr>
 
@@ -779,7 +779,7 @@ several APIs that can be used to create <code>HarnessLoader</code> instances for
 </thead>
 <tbody>
 <tr>
-<td><p translation-result="on">获取一个 <code>Promise</code> 用于 <code>HarnessLoader</code> 在给定的选择相匹配的第一元素为根，如果没有元件被发现的 <code>Promise</code> 废品。</p><p translation-origin="off"><code>harnessLoaderFor(selector: string): Promise&lt;HarnessLoader&gt;</code></p></td>
+<td><p translation-result="on">获取一个 <code>Promise</code> 用于 <code>HarnessLoader</code> 在指定的选择相匹配的第一元素为根，如果没有元件被发现的 <code>Promise</code> 废品。</p><p translation-origin="off"><code>harnessLoaderFor(selector: string): Promise&lt;HarnessLoader&gt;</code></p></td>
 <td><p>Gets a <code>Promise</code> for a <code>HarnessLoader</code> rooted at the first element matching the given selector, if no element is found the <code>Promise</code> rejects.</p><p></p></td>
 </tr>
 
@@ -803,8 +803,8 @@ extending <code>ContentContainerComponentHarness</code>.</p>
 }</code></pre>
 
         <h4 id="accessing-elements-outside-of-the-components-host-element" class="docs-header-link" translation-result="on">
-          <span header-link="访问该组件的-host-元素之外的元素"></span>
-          访问该组件的 host 元素之外的元素
+          <span header-link="访问该组件的宿主元素之外的元素"></span>
+          访问该组件的宿主元素之外的元素
         </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="accessing-elements-outside-of-the-components-host-element"></span>
           Accessing elements outside of the component's host element
@@ -973,7 +973,7 @@ result of the operation.</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">获取该元素给定 HTML 属性的值。</p><p translation-origin="off"><code>getAttribute(name: string): Promise&lt;string | null&gt;</code></p></td>
+<td><p translation-result="on">获取该元素指定 HTML 属性的值。</p><p translation-origin="off"><code>getAttribute(name: string): Promise&lt;string | null&gt;</code></p></td>
 <td><p>Gets the value of the given HTML attribute for the element.</p><p></p></td>
 </tr>
 
@@ -988,7 +988,7 @@ result of the operation.</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">获取该元素给定属性的值。</p><p translation-origin="off"><code>getProperty(name: string): Promise&lt;any&gt;</code></p></td>
+<td><p translation-result="on">获取该元素指定属性的值。</p><p translation-origin="off"><code>getProperty(name: string): Promise&lt;any&gt;</code></p></td>
 <td><p>Gets the value of the given property for the element.</p><p></p></td>
 </tr>
 
@@ -1062,7 +1062,7 @@ is <code>Element</code> for unit test environments.</p>
 </tr>
 
 <tr>
-<td><p translation-result="on">为给定的 raw 元素创建一个 <code>TestElement</code></p><p translation-origin="off"><code>abstract createTestElement(element: E): TestElement</code></p></td>
+<td><p translation-result="on">为指定的 raw 元素创建一个 <code>TestElement</code></p><p translation-origin="off"><code>abstract createTestElement(element: E): TestElement</code></p></td>
 <td><p>Creates a <code>TestElement</code> for the given raw element.</p><p></p></td>
 </tr>
 

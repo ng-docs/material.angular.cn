@@ -18,12 +18,14 @@
   <span header-link="UniqueSelectionDispatcher"></span>
   <code>UniqueSelectionDispatcher</code>
   
-</h4><div class="docs-api-class-description"><p>Class to coordinate unique selection based on name.
+</h4><div class="docs-api-class-description"><p translation-result="on">要根据名字来协调唯一选择的类。作为 Angular 服务使用。该服务是必需的，因为原生的单选按钮变化事件只会对当前选定的条目触发，我们仍然需要取消选定之前的选择。</p><p translation-origin="off">Class to coordinate unique selection based on name.
 Intended to be consumed as an Angular service.
 This service is needed because native radio change events are only fired on the item currently
 being selected, and we still need to uncheck the previous selection.</p>
-<p>This service does not <em>store</em> any IDs and names because they may change at any time, so it is
+
+<p translation-result="on">该服务不会<em>存储</em>任何 ID 和名字，因为它们可能随时都会发生变化，所以如果只在事件发生时传入它们，就不会出错。</p><p translation-origin="off">This service does not <em>store</em> any IDs and names because they may change at any time, so it is
 less error-prone if they are simply passed through when the events occur.</p>
+
 </div>
 
 
@@ -38,12 +40,15 @@ less error-prone if they are simply passed through when the events occur.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Listen for future changes to item selection.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">监听条目选择的未来变化。</p><p translation-origin="off">Listen for future changes to item selection.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -67,7 +72,8 @@ less error-prone if they are simply passed through when the events occur.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>Function used to deregister listener</p>
+        <p translation-result="on">用于注销监听器的函数</p><p translation-origin="off">Function used to deregister listener</p>
+
 
       </div>
     </td>
@@ -84,12 +90,15 @@ less error-prone if they are simply passed through when the events occur.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Notify other items that selection for the given name has been set.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">通知其他条目已经设置具有指定名字的选定项。</p><p translation-origin="off">Notify other items that selection for the given name has been set.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -100,7 +109,8 @@ less error-prone if they are simply passed through when the events occur.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>ID of the item.</p>
+        <p translation-result="on">条目的 ID。</p><p translation-origin="off">ID of the item.</p>
+
 
       </div>
     </td>
@@ -114,7 +124,8 @@ less error-prone if they are simply passed through when the events occur.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Name of the item.</p>
+        <p translation-result="on">该条目的名称。</p><p translation-origin="off">Name of the item.</p>
+
 
       </div>
     </td>
@@ -144,7 +155,8 @@ less error-prone if they are simply passed through when the events occur.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p>DataSource wrapper for a native array.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">原生数组的 DataSource 包装器。</p><p translation-origin="off">DataSource wrapper for a native array.</p>
+
 </div>
 
 
@@ -210,14 +222,17 @@ less error-prone if they are simply passed through when the events occur.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Connects a collection viewer (such as a data-table) to this data source. Note that
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将集合查看器（如数据表格）连接到这个数据源。请注意，提供的这个流将在变更检测期间被访问，并且不应直接更改模板视图中绑定的值。</p><p translation-origin="off">Connects a collection viewer (such as a data-table) to this data source. Note that
 the stream provided will be accessed during change detection and should not directly change
 values that are bound in template views.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -228,14 +243,17 @@ values that are bound in template views.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>The component that exposes a view over the data provided by this
+        <p translation-result="on">用来暴露这个数据源提供的数据视图的组件。</p><p translation-origin="off">The component that exposes a view over the data provided by this
     data source.</p>
+
 
       </div>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -243,7 +261,8 @@ values that are bound in template views.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p>Observable that emits a new value when the data changes.</p>
+        <p translation-result="on">可观察对象，当数据发生变化时会发出新值。</p><p translation-origin="off">Observable that emits a new value when the data changes.</p>
+
 
       </div>
     </td>
@@ -260,13 +279,16 @@ values that are bound in template views.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Disconnects a collection viewer (such as a data-table) from this data source. Can be used
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">断开集合查看器（例如数据表格）与该数据源的连接。当视图被销毁时，可以执行任何清理或拆除操作。</p><p translation-origin="off">Disconnects a collection viewer (such as a data-table) from this data source. Can be used
 to perform any clean-up or tear-down operations when a view is being destroyed.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -277,8 +299,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>The component that exposes a view over the data provided by this
+        <p translation-result="on">用来暴露这个数据源提供的数据视图的组件。</p><p translation-origin="off">The component that exposes a view over the data provided by this
     data source.</p>
+
 
       </div>
     </td>
@@ -297,7 +320,8 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
   <span header-link="SelectionModel"></span>
   <code>SelectionModel</code>
   
-</h4><div class="docs-api-class-description"><p>Class to be used to power selecting one or more options from a list.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">用来表示从列表中选择的一个或多个选项的类。</p><p translation-origin="off">Class to be used to power selecting one or more options from a list.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -312,7 +336,8 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code>changed: Subject&lt;SelectionChange&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the value has changed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当值发生变化时会发出本事件。</p><p translation-origin="off">Event emitted when the value has changed.</p>
+
 </td>
 </tr>
 
@@ -325,7 +350,8 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       <code>selected: T[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Selected values.</p>
+  <td class="docs-api-property-description"><p translation-result="on">选定的值。</p><p translation-origin="off">Selected values.</p>
+
 </td>
 </tr>
 
@@ -346,7 +372,8 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Clears all of the selected values.</p>
+      <p translation-result="on">清除所有选定的值。</p><p translation-origin="off">Clears all of the selected values.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -362,12 +389,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Deselects a value or an array of values.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">取消选定一个值或一个值数组。</p><p translation-origin="off">Deselects a value or an array of values.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -395,12 +425,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Determines whether the model has a value.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">确定模型中是否有值。</p><p translation-origin="off">Determines whether the model has a value.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -424,12 +457,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Determines whether the model does not have a value.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">确定模型中是否没有值。</p><p translation-origin="off">Determines whether the model does not have a value.</p>
 
-    <p translation-result="on">返回值</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">返回值</th>
+    </tr>
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
@@ -454,7 +490,8 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets whether multiple values can be selected.</p>
+      <p translation-result="on">获取是否可以选择多个值。</p><p translation-origin="off">Gets whether multiple values can be selected.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -470,12 +507,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Determines whether a value is selected.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">确定是否选定了某个值。</p><p translation-origin="off">Determines whether a value is selected.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -515,12 +555,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Selects a value or an array of values.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选定一个值或一个值数组。</p><p translation-origin="off">Selects a value or an array of values.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -548,12 +591,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Sorts the selected values based on a predicate function.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">根据谓词函数对选定的值进行排序。</p><p translation-origin="off">Sorts the selected values based on a predicate function.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -581,12 +627,15 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Toggles a value between selected and deselected.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在选定和取消选定之间切换一个值。</p><p translation-origin="off">Toggles a value between selected and deselected.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -618,8 +667,9 @@ to perform any clean-up or tear-down operations when a view is being destroyed.<
 <h4 id="CollectionViewer" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="CollectionViewer"></span>
   <code>CollectionViewer</code>
-</h4><div class="docs-api-interface-description"><p>Interface for any component that provides a view of some data collection and wants to provide
+</h4><div class="docs-api-interface-description"><p translation-result="on">让任何组件都可以提供某种数据集合视图的接口，它希望提供相关视图和所做过更改的信息。</p><p translation-origin="off">Interface for any component that provides a view of some data collection and wants to provide
 information regarding the view and any changes made.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -634,8 +684,9 @@ information regarding the view and any changes made.</p>
       <code>viewChange: Observable&lt;ListRange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>A stream that emits whenever the <code>CollectionViewer</code> starts looking at a new portion of the
+  <td class="docs-api-property-description"><p translation-result="on"><code>CollectionViewer</code> 开始查看数据的新部分时就会发出的流。 包含 <code>start</code> 索引，而不包含 <code>end</code> 索引（左闭右开区间）。</p><p translation-origin="off">A stream that emits whenever the <code>CollectionViewer</code> starts looking at a new portion of the
 data. The <code>start</code> index is inclusive, while the <code>end</code> is exclusive.</p>
+
 </td>
 </tr>
 
@@ -654,8 +705,9 @@ data. The <code>start</code> index is inclusive, while the <code>end</code> is e
 <h4 id="TreeDataNodeFlattener" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TreeDataNodeFlattener"></span>
   <code>TreeDataNodeFlattener</code>
-</h4><div class="docs-api-interface-description"><p>Interface for a class that can flatten hierarchical structured data and re-expand the flattened
+</h4><div class="docs-api-interface-description"><p translation-result="on">类的接口，它可以把分层的结构化数据扁平化，以及把扁平化的数据重新扩展为原来的结构。应该和 cdk-tree 一起使用。</p><p translation-origin="off">Interface for a class that can flatten hierarchical structured data and re-expand the flattened
 data back into its original structure. Should be used in conjunction with the cdk-tree.</p>
+
 </div>
 
 
@@ -670,13 +722,16 @@ data back into its original structure. Should be used in conjunction with the cd
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Expands a flattened array of data into its hierarchical form using the provided expansion
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">使用提供的扩展模型将展平的数据数组扩展为层次结构。</p><p translation-origin="off">Expands a flattened array of data into its hierarchical form using the provided expansion
 model.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -729,12 +784,15 @@ model.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Transforms a set of hierarchical structured data into a flattened data array.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将一组分层的结构化数据转换成一个展平的数据数组。</p><p translation-origin="off">Transforms a set of hierarchical structured data into a flattened data array.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -774,13 +832,16 @@ model.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Put node descendants of node in array.
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把节点的后代置于数组中。如果 <code>onlyExpandable</code> 为 true，则只处理可展开的后代。</p><p translation-origin="off">Put node descendants of node in array.
 If <code>onlyExpandable</code> is true, then only process expandable descendants.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -843,12 +904,15 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Checks whether an object is a data source.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查对象是否为数据源。</p><p translation-origin="off">Checks whether an object is a data source.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -900,7 +964,8 @@ If <code>onlyExpandable</code> is true, then only process expandable descendants
 <h4 id="ListRange" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="ListRange"></span>
   <code>ListRange</code>
-</h4><div class="docs-api-type-alias-description"><p>Represents a range of numbers with a specified start and end.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">表示特定起点和终点的数字范围。</p><p translation-origin="off">Represents a range of numbers with a specified start and end.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> ListRange = {
     <span class="hljs-attr">start</span>: <span class="hljs-built_in">number</span>;

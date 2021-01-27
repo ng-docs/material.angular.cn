@@ -18,7 +18,8 @@
   <span header-link="MatChipList"></span>
   <code>MatChipList</code>
   
-</h4><div class="docs-api-class-description"><p>A material design chips component (named ChipList for its similarity to the List component).</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">一种Material Design纸片组件（由于类似于 List 组件，因此得名 ChipList）。</p><p translation-origin="off">A material design chips component (named ChipList for its similarity to the List component).</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -40,7 +41,8 @@
       <code>ariaOrientation: 'horizontal' | 'vertical'</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Orientation of the chip list.</p>
+  <td class="docs-api-property-description"><p translation-result="on">纸片列表的方向。</p><p translation-origin="off">Orientation of the chip list.</p>
+
 </td>
 </tr>
 
@@ -54,9 +56,10 @@
       <code>compareWith: (o1: any, o2: any) =&gt; boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>A function to compare the option values with the selected values. The first argument
+  <td class="docs-api-property-description"><p translation-result="on">用来比较选项值和当前选择的函数。第一个参数是选项的值，第二个选定的值。应该返回一个布尔值。</p><p translation-origin="off">A function to compare the option values with the selected values. The first argument
 is a value from an option. The second is a value from the selection. A boolean
 should be returned.</p>
+
 </td>
 </tr>
 
@@ -70,7 +73,8 @@ should be returned.</p>
       <code>errorStateMatcher: ErrorStateMatcher</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>An object used to control when error messages are shown.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用于控制何时显示错误信息的对象。</p><p translation-origin="off">An object used to control when error messages are shown.</p>
+
 </td>
 </tr>
 
@@ -84,7 +88,8 @@ should be returned.</p>
       <code>multiple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the user should be allowed to select multiple chips.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否允许用户选择多个纸片。</p><p translation-origin="off">Whether the user should be allowed to select multiple chips.</p>
+
 </td>
 </tr>
 
@@ -98,8 +103,9 @@ should be returned.</p>
       <code>selectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not this chip list is selectable. When a chip list is not selectable,
+  <td class="docs-api-property-description"><p translation-result="on">这个纸片列表是否可以选择。当纸片列表不可选时，纸片列表中所有纸片的选定状态总会被忽略。</p><p translation-origin="off">Whether or not this chip list is selectable. When a chip list is not selectable,
 the selected states for all the chips inside the chip list are always ignored.</p>
+
 </td>
 </tr>
 
@@ -113,7 +119,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>change: EventEmitter&lt;MatChipListChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Event emitted when the selected chip list value has been changed by the user.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当纸片列表当前选择被用户改变时发出的事件。</p><p translation-origin="off">Event emitted when the selected chip list value has been changed by the user.</p>
+
 </td>
 </tr>
 
@@ -126,7 +133,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>chipBlurChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips' blur change events.</p>
+  <td class="docs-api-property-description"><p translation-result="on">所有子纸片的失焦事件的组合流。</p><p translation-origin="off">Combined stream of all of the child chips' blur change events.</p>
+
 </td>
 </tr>
 
@@ -139,7 +147,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>chipFocusChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips' focus change events.</p>
+  <td class="docs-api-property-description"><p translation-result="on">所有子纸片的聚焦事件的组合流。</p><p translation-origin="off">Combined stream of all of the child chips' focus change events.</p>
+
 </td>
 </tr>
 
@@ -152,7 +161,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>chipRemoveChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips' remove change events.</p>
+  <td class="docs-api-property-description"><p translation-result="on">所有子纸片的删除事件的组合流。</p><p translation-origin="off">Combined stream of all of the child chips' remove change events.</p>
+
 </td>
 </tr>
 
@@ -165,7 +175,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>chipSelectionChanges: Observable&lt;MatChipSelectionChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Combined stream of all of the child chips' selection change events.</p>
+  <td class="docs-api-property-description"><p translation-result="on">所有子纸片的选定状态更改事件的组合流。</p><p translation-origin="off">Combined stream of all of the child chips' selection change events.</p>
+
 </td>
 </tr>
 
@@ -178,7 +189,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>chips: QueryList&lt;MatChip&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip components contained within this chip list.</p>
+  <td class="docs-api-property-description"><p translation-result="on">这个纸片列表中包含的纸片组件。</p><p translation-origin="off">The chip components contained within this chip list.</p>
+
 </td>
 </tr>
 
@@ -203,7 +215,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>focused: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether any chips or the matChipInput inside of this chip-list has focus.</p>
+  <td class="docs-api-property-description"><p translation-result="on">这个纸片列表中是否存在任何拥有焦点的纸片或 matChipInput。</p><p translation-origin="off">Whether any chips or the matChipInput inside of this chip-list has focus.</p>
+
 </td>
 </tr>
 
@@ -216,7 +229,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>role: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The ARIA role applied to the chip list.</p>
+  <td class="docs-api-property-description"><p translation-result="on">ARIA 的角色，应用于纸片列表中。</p><p translation-origin="off">The ARIA role applied to the chip list.</p>
+
 </td>
 </tr>
 
@@ -229,7 +243,8 @@ the selected states for all the chips inside the chip list are always ignored.</
       <code>selected: MatChip[] | MatChip</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The array of selected chips inside chip list.</p>
+  <td class="docs-api-property-description"><p translation-result="on">纸片列表中选定纸片的数组。</p><p translation-origin="off">The array of selected chips inside chip list.</p>
+
 </td>
 </tr>
 
@@ -261,13 +276,16 @@ the selected states for all the chips inside the chip list are always ignored.</
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Focuses the first non-disabled chip in this chip list, or the associated input when there
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让这个纸片列表中的第一个非禁用纸片获得焦点，或在没有合格纸片时让其关联输入框获得焦点。</p><p translation-origin="off">Focuses the first non-disabled chip in this chip list, or the associated input when there
 are no eligible chips.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -295,12 +313,15 @@ are no eligible chips.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Associates an HTML input element with this chip list.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将 HTML 输入框元素与该纸片列表关联起来。</p><p translation-origin="off">Associates an HTML input element with this chip list.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -341,7 +362,8 @@ are no eligible chips.</p>
   <span header-link="MatChip"></span>
   <code>MatChip</code>
   
-</h4><div class="docs-api-class-description"><p>Material design styled Chip component. Used inside the MatChipList component.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">Material Design风格的纸片组件。在 MatChipList 组件中使用。</p><p translation-origin="off">Material design styled Chip component. Used inside the MatChipList component.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -397,7 +419,8 @@ are no eligible chips.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the chip is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片是否被禁用了。</p><p translation-origin="off">Whether the chip is disabled.</p>
+
 </td>
 </tr>
 
@@ -411,7 +434,8 @@ are no eligible chips.</p>
       <code>removable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Determines whether or not the chip displays the remove styling and emits (removed) events.</p>
+  <td class="docs-api-property-description"><p translation-result="on">确定该纸片是否显示移除样式并发出 (removed) 事件。</p><p translation-origin="off">Determines whether or not the chip displays the remove styling and emits (removed) events.</p>
+
 </td>
 </tr>
 
@@ -425,10 +449,11 @@ are no eligible chips.</p>
       <code>selectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not the chip is selectable. When a chip is not selectable,
+  <td class="docs-api-property-description"><p translation-result="on">该纸片是否可以选择。当纸片不可选时，总会忽略对选定状态的更改。默认情况下，纸片是可选择的，如果它的父纸片列表不可选，它就会变得不可选。</p><p translation-origin="off">Whether or not the chip is selectable. When a chip is not selectable,
 changes to its selected state are always ignored. By default a chip is
 selectable, and it becomes non-selectable if its parent chip list is
 not selectable.</p>
+
 </td>
 </tr>
 
@@ -442,7 +467,8 @@ not selectable.</p>
       <code>selected: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the chip is selected.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片是否被选定。</p><p translation-origin="off">Whether the chip is selected.</p>
+
 </td>
 </tr>
 
@@ -456,7 +482,8 @@ not selectable.</p>
       <code>value: any</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The value of the chip. Defaults to the content inside <code>&lt;mat-chip&gt;</code> tags.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片的值。默认为 <code>&lt;mat-chip&gt;</code> 标签中的内容。</p><p translation-origin="off">The value of the chip. Defaults to the content inside <code>&lt;mat-chip&gt;</code> tags.</p>
+
 </td>
 </tr>
 
@@ -470,7 +497,8 @@ not selectable.</p>
       <code>destroyed: EventEmitter&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emitted when the chip is destroyed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当该纸片被销毁时会触发。</p><p translation-origin="off">Emitted when the chip is destroyed.</p>
+
 </td>
 </tr>
 
@@ -484,7 +512,8 @@ not selectable.</p>
       <code>removed: EventEmitter&lt;MatChipEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emitted when a chip is to be removed.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当要移除某个纸片时会触发。</p><p translation-origin="off">Emitted when a chip is to be removed.</p>
+
 </td>
 </tr>
 
@@ -498,7 +527,8 @@ not selectable.</p>
       <code>selectionChange: EventEmitter&lt;MatChipSelectionChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emitted when the chip is selected or deselected.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片被选定或取消选定时会触发。</p><p translation-origin="off">Emitted when the chip is selected or deselected.</p>
+
 </td>
 </tr>
 
@@ -511,7 +541,8 @@ not selectable.</p>
       <code>ariaSelected: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The ARIA selected applied to the chip.</p>
+  <td class="docs-api-property-description"><p translation-result="on">应用于该纸片的 ARIA 选定属性。</p><p translation-origin="off">The ARIA selected applied to the chip.</p>
+
 </td>
 </tr>
 
@@ -524,7 +555,8 @@ not selectable.</p>
       <code>avatar: MatChipAvatar</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip avatar</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片的头像</p><p translation-origin="off">The chip avatar</p>
+
 </td>
 </tr>
 
@@ -537,7 +569,8 @@ not selectable.</p>
       <code>chipListSelectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the chip list is selectable</p>
+  <td class="docs-api-property-description"><p translation-result="on">纸片列表是否可选</p><p translation-origin="off">Whether the chip list is selectable</p>
+
 </td>
 </tr>
 
@@ -576,7 +609,8 @@ not selectable.</p>
       <code>removeIcon: MatChipRemove</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip's remove toggler.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片的移除切换器。</p><p translation-origin="off">The chip's remove toggler.</p>
+
 </td>
 </tr>
 
@@ -589,7 +623,8 @@ not selectable.</p>
       <code>trailingIcon: MatChipTrailingIcon</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip's trailing icon.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该纸片的尾部图标。</p><p translation-origin="off">The chip's trailing icon.</p>
+
 </td>
 </tr>
 
@@ -610,7 +645,8 @@ not selectable.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Deselects the chip.</p>
+      <p translation-result="on">取消选择该纸片。</p><p translation-origin="off">Deselects the chip.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -627,7 +663,8 @@ not selectable.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows for programmatic focusing of the chip.</p>
+      <p translation-result="on">允许通过编程把该纸片设为焦点。</p><p translation-origin="off">Allows for programmatic focusing of the chip.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -644,9 +681,11 @@ not selectable.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Allows for programmatic removal of the chip. Called by the MatChipList when the DELETE or
+      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-origin="off">Allows for programmatic removal of the chip. Called by the MatChipList when the DELETE or
 BACKSPACE keys are pressed.</p>
-<p>Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+
+<p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -663,7 +702,8 @@ BACKSPACE keys are pressed.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects the chip.</p>
+      <p translation-result="on">选择该纸片。</p><p translation-origin="off">Selects the chip.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -680,7 +720,8 @@ BACKSPACE keys are pressed.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Select this chip and emit selected event</p>
+      <p translation-result="on">选择这个纸片并发出 selected 事件</p><p translation-origin="off">Select this chip and emit selected event</p>
+
 
     </td>
   </tr></tbody></table>
@@ -696,12 +737,15 @@ BACKSPACE keys are pressed.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Toggles the current selected state of this chip.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换当前纸片的选定状态。</p><p translation-origin="off">Toggles the current selected state of this chip.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -742,14 +786,17 @@ BACKSPACE keys are pressed.</p>
   <span header-link="MatChipRemove"></span>
   <code>MatChipRemove</code>
   
-</h4><div class="docs-api-class-description"><p>Applies proper (click) support and adds styling for use with the Material Design "cancel" icon
+</h4><div class="docs-api-class-description"><p translation-result="on">应用正确的（click）支持，并为 <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a> 提供的 Material Design “cancel” 图标添加样式。</p><p translation-origin="off">Applies proper (click) support and adds styling for use with the Material Design "cancel" icon
 available at <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a>.</p>
-<p>Example:</p>
+
+<p translation-result="on">示例：</p><p translation-origin="off">Example:</p>
+
 <pre><code>`&lt;mat-chip&gt;
   &lt;mat-icon matChipRemove&gt;cancel&lt;/mat-icon&gt;
 &lt;/mat-chip&gt;`</code></pre>
-<p>You <em>may</em> use a custom icon, but you may need to override the <code>mat-chip-remove</code> positioning
+<p translation-result="on">你<em>可以</em>使用自定义图标，但是可能需要改写 <code>mat-chip-remove</code> 的定位样式，这样才能让图标在纸片内正确居中。</p><p translation-origin="off">You <em>may</em> use a custom icon, but you may need to override the <code>mat-chip-remove</code> positioning
 styles to properly center the icon within the chip.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -769,8 +816,9 @@ styles to properly center the icon within the chip.</p>
   <span header-link="MatChipInput"></span>
   <code>MatChipInput</code>
   
-</h4><div class="docs-api-class-description"><p>Directive that adds chip-specific behaviors to an input element inside <code>&lt;mat-form-field&gt;</code>.
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令用于把纸片特有的行为添加到 <code>&lt;mat-form-field&gt;</code> 里面的输入框元素中。可以放在 <code>&lt;mat-chip-list&gt;</code> 的内部或外部。</p><p translation-origin="off">Directive that adds chip-specific behaviors to an input element inside <code>&lt;mat-form-field&gt;</code>.
 May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -792,7 +840,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>addOnBlur: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether or not the chipEnd event will be emitted when the input is blurred.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当输入失焦时，是否会发出 chipEnd 事件。</p><p translation-origin="off">Whether or not the chipEnd event will be emitted when the input is blurred.</p>
+
 </td>
 </tr>
 
@@ -806,7 +855,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>chipList: MatChipList</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Register input for chip list</p>
+  <td class="docs-api-property-description"><p translation-result="on">注册纸片列表的输入框</p><p translation-origin="off">Register input for chip list</p>
+
 </td>
 </tr>
 
@@ -820,7 +870,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the input is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">输入框是否被禁用。</p><p translation-origin="off">Whether the input is disabled.</p>
+
 </td>
 </tr>
 
@@ -834,7 +885,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>id: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Unique id for the input.</p>
+  <td class="docs-api-property-description"><p translation-result="on">该输入框的唯一 ID。</p><p translation-origin="off">Unique id for the input.</p>
+
 </td>
 </tr>
 
@@ -848,7 +900,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>placeholder: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The input's placeholder text.</p>
+  <td class="docs-api-property-description"><p translation-result="on">输入框的占位符文本。</p><p translation-origin="off">The input's placeholder text.</p>
+
 </td>
 </tr>
 
@@ -862,8 +915,10 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>separatorKeyCodes: readonly number[] | ReadonlySet&lt;number&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The list of key codes that will trigger a chipEnd event.</p>
-<p>Defaults to <code>[ENTER]</code>.</p>
+  <td class="docs-api-property-description"><p translation-result="on">会触发 chipEnd 事件的键盘代码列表。</p><p translation-origin="off">The list of key codes that will trigger a chipEnd event.</p>
+
+<p translation-result="on">默认为 <code>[ENTER]</code> 。</p><p translation-origin="off">Defaults to <code>[ENTER]</code>.</p>
+
 </td>
 </tr>
 
@@ -877,7 +932,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>chipEnd: EventEmitter&lt;MatChipInputEvent&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emitted when a chip is to be added.</p>
+  <td class="docs-api-property-description"><p translation-result="on">当要添加纸片时会触发。</p><p translation-origin="off">Emitted when a chip is to be added.</p>
+
 </td>
 </tr>
 
@@ -890,7 +946,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>empty: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the input is empty.</p>
+  <td class="docs-api-property-description"><p translation-result="on">输入框是否为空。</p><p translation-origin="off">Whether the input is empty.</p>
+
 </td>
 </tr>
 
@@ -903,7 +960,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>focused: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the control is focused.</p>
+  <td class="docs-api-property-description"><p translation-result="on">控件是否有焦点。</p><p translation-origin="off">Whether the control is focused.</p>
+
 </td>
 </tr>
 
@@ -923,12 +981,15 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       </th>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell"><p>
-      </p><p>Focuses the input.</p>
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让输入框获得焦点。</p><p translation-origin="off">Focuses the input.</p>
 
-    <p translation-result="on">参数</p><p translation-origin="off"></p></td>
+
+    </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">参数</th>
+    </tr>
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -961,7 +1022,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
   <span header-link="MatChipListChange"></span>
   <code>MatChipListChange</code>
   
-</h4><div class="docs-api-class-description"><p>Change event object that is emitted when the chip list value has changed.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">纸片列表的值发生变化时发出的事件对象。</p><p translation-origin="off">Change event object that is emitted when the chip list value has changed.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1009,7 +1071,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
   <span header-link="MatChipSelectionChange"></span>
   <code>MatChipSelectionChange</code>
   
-</h4><div class="docs-api-class-description"><p>Event object emitted by MatChip when selected or deselected.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">MatChip 在选定或取消选定时会发出本事件对象。</p><p translation-origin="off">Event object emitted by MatChip when selected or deselected.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1073,7 +1136,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 <h4 id="MatChipEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="MatChipEvent"></span>
   <code>MatChipEvent</code>
-</h4><div class="docs-api-interface-description"><p>Represents an event fired on an individual <code>mat-chip</code>.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">表示单个 <code>mat-chip</code> 上触发的事件。</p><p translation-origin="off">Represents an event fired on an individual <code>mat-chip</code>.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1088,7 +1152,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>chip: MatChip</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The chip the event was fired on.</p>
+  <td class="docs-api-property-description"><p translation-result="on">触发该事件的纸片。</p><p translation-origin="off">The chip the event was fired on.</p>
+
 </td>
 </tr>
 
@@ -1107,7 +1172,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 <h4 id="MatChipInputEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="MatChipInputEvent"></span>
   <code>MatChipInputEvent</code>
-</h4><div class="docs-api-interface-description"><p>Represents an input event on a <code>matChipInput</code>.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">表示 <code>matChipInput</code> 上的输入事件。</p><p translation-origin="off">Represents an input event on a <code>matChipInput</code>.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1122,7 +1188,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>input: HTMLInputElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The native <code>&lt;input&gt;</code> element that the event is being fired for.</p>
+  <td class="docs-api-property-description"><p translation-result="on">触发该事件的原生 <code>&lt;input&gt;</code></p><p translation-origin="off">The native <code>&lt;input&gt;</code> element that the event is being fired for.</p>
+
 </td>
 </tr>
 
@@ -1135,7 +1202,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>value: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The value of the input.</p>
+  <td class="docs-api-property-description"><p translation-result="on">输入框的值。</p><p translation-origin="off">The value of the input.</p>
+
 </td>
 </tr>
 
@@ -1154,7 +1222,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 <h4 id="MatChipsDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="MatChipsDefaultOptions"></span>
   <code>MatChipsDefaultOptions</code>
-</h4><div class="docs-api-interface-description"><p>Default options, for the chips module, that can be overridden.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">纸片模块的默认选项，可以改写它们。</p><p translation-origin="off">Default options, for the chips module, that can be overridden.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1169,7 +1238,8 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>separatorKeyCodes: readonly number[] | ReadonlySet&lt;number&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The list of key codes that will trigger a chipEnd event.</p>
+  <td class="docs-api-property-description"><p translation-result="on">会触发 chipEnd 事件的键盘代码列表。</p><p translation-origin="off">The list of key codes that will trigger a chipEnd event.</p>
+
 </td>
 </tr>
 
@@ -1192,9 +1262,10 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
 <h4 id="MAT_CHIP_REMOVE" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MAT_CHIP_REMOVE"></span>
   <code>MAT_CHIP_REMOVE</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatChipRemove</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来引用 <code>MatChipRemove</code> 实例。它可以作为实际 <code>MatChipRemove</code> 类的备用令牌，直接使用实际类可能导致该类及其元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>MatChipRemove</code>. It serves as
 alternative token to the actual <code>MatChipRemove</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_REMOVE: InjectionToken&lt;MatChipRemove&gt;;</code>
 </pre>
@@ -1207,9 +1278,10 @@ retention of the class and its directive metadata.</p>
 <h4 id="MAT_CHIP_AVATAR" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MAT_CHIP_AVATAR"></span>
   <code>MAT_CHIP_AVATAR</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatChipAvatar</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来引用 <code>MatChipAvatar</code> 实例。它可以作为实际 <code>MatChipAvatar</code> 类的备用令牌，直接使用实际类可能导致该类及其元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>MatChipAvatar</code>. It serves as
 alternative token to the actual <code>MatChipAvatar</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_AVATAR: InjectionToken&lt;MatChipAvatar&gt;;</code>
 </pre>
@@ -1222,9 +1294,10 @@ retention of the class and its directive metadata.</p>
 <h4 id="MAT_CHIP_TRAILING_ICON" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MAT_CHIP_TRAILING_ICON"></span>
   <code>MAT_CHIP_TRAILING_ICON</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>MatChipTrailingIcon</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来引用 <code>MatChipTrailingIcon</code> 实例。它可以作为实际 <code>MatChipTrailingIcon</code> 类的备用令牌，直接使用实际类可能导致该类及其元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>MatChipTrailingIcon</code>. It serves as
 alternative token to the actual <code>MatChipTrailingIcon</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIP_TRAILING_ICON: InjectionToken&lt;MatChipTrailingIcon&gt;;</code>
 </pre>
@@ -1237,7 +1310,8 @@ retention of the class and its directive metadata.</p>
 <h4 id="MAT_CHIPS_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="MAT_CHIPS_DEFAULT_OPTIONS"></span>
   <code>MAT_CHIPS_DEFAULT_OPTIONS</code>
-</h4><div class="docs-api-constant-description"><p>Injection token to be used to override the default options for the chips module.</p>
+</h4><div class="docs-api-constant-description"><p translation-result="on">注入令牌，用于改写纸片模块的默认选项。</p><p translation-origin="off">Injection token to be used to override the default options for the chips module.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHIPS_DEFAULT_OPTIONS: InjectionToken&lt;MatChipsDefaultOptions&gt;;</code>
 </pre>
