@@ -414,7 +414,7 @@ default.</p>
       <code>indent: number | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">每个级别的缩进。默认值是 40px，来自Material Design菜单中的子菜单规范。</p><p translation-origin="off">The indent for each level. Default number 40px from material design menu sub-menu spec.</p>
+  <td class="docs-api-property-description"><p translation-result="on">每个级别的缩进。默认值是 40px，来自 Material Design 菜单中的子菜单规范。</p><p translation-origin="off">The indent for each level. Default number 40px from material design menu sub-menu spec.</p>
 
 </td>
 </tr>
@@ -429,7 +429,7 @@ default.</p>
       <code>level: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">树节点的深度级别。衬距将是<code>级别 * 缩进值</code>像素。</p><p translation-origin="off">The level of depth of the tree node. The padding will be <code>level * indent</code> pixels.</p>
+  <td class="docs-api-property-description"><p translation-result="on">树节点的深度级别。衬距将是 <code>级别 * 缩进值</code> 像素。</p><p translation-origin="off">The level of depth of the tree node. The padding will be <code>level * indent</code> pixels.</p>
 
 </td>
 </tr>
@@ -845,6 +845,7 @@ Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F
   level: 2
 }
 and the output flattened type is <code>F</code> with additional information.</p>
+<p>For example, the input data of type <code>T</code> is nested, and contains its children data: SomeNode: { key: 'Fruits', children: [ NodeOne: { key: 'Apple', }, NodeTwo: { key: 'Pear', } ] } After flattener flatten the tree, the structure will become SomeNode: { key: 'Fruits', expandable: true, level: 1 }, NodeOne: { key: 'Apple', expandable: false, level: 2 }, NodeTwo: { key: 'Pear', expandable: false, level: 2 } and the output flattened type is <code>F</code> with additional information.</p>
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
