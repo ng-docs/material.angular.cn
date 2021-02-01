@@ -305,7 +305,8 @@ Only that element and its children are visible when in fullscreen mode.</p>
   <span header-link="OverlayPositionBuilder"></span>
   <code>OverlayPositionBuilder</code>
   
-</h4><div class="docs-api-class-description"><p>Builder for overlay position strategy.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">浮层定位策略生成器。</p><p translation-origin="off">Builder for overlay position strategy.</p>
+
 </div>
 
 
@@ -321,7 +322,8 @@ Only that element and its children are visible when in fullscreen mode.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a flexible position strategy.</p>
+      <p translation-result="on">创建灵活定位策略。</p><p translation-origin="off">Creates a flexible position strategy.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -339,7 +341,8 @@ Only that element and its children are visible when in fullscreen mode.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Origin relative to which to position the overlay.</p>
+        <p translation-result="on">浮层定位相对的原点。</p><p translation-origin="off">Origin relative to which to position the overlay.</p>
+
 
       </div>
     </td>
@@ -373,7 +376,8 @@ Only that element and its children are visible when in fullscreen mode.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a global position strategy.</p>
+      <p translation-result="on">创建全局定位策略。</p><p translation-origin="off">Creates a global position strategy.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -407,7 +411,8 @@ Only that element and its children are visible when in fullscreen mode.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Creates a relative position strategy.</p>
+      <p translation-result="on">创建相对定位策略。</p><p translation-origin="off">Creates a relative position strategy.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -484,9 +489,11 @@ Only that element and its children are visible when in fullscreen mode.</p>
   <span header-link="ScrollStrategyOptions"></span>
   <code>ScrollStrategyOptions</code>
   
-</h4><div class="docs-api-class-description"><p>Options for how an overlay will handle scrolling.</p>
-<p>Users can provide a custom value for <code>ScrollStrategyOptions</code> to replace the default
+</h4><div class="docs-api-class-description"><p translation-result="on">规定浮层该如何处理滚动的选项。</p><p translation-origin="off">Options for how an overlay will handle scrolling.</p>
+
+<p translation-result="on">用户可以为 <code>ScrollStrategyOptions</code> 提供自定义值，以替换默认行为。此类主要充当 ScrollStrategy 实例的工厂。</p><p translation-origin="off">Users can provide a custom value for <code>ScrollStrategyOptions</code> to replace the default
 behaviors. This class primarily acts as a factory for ScrollStrategy instances.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -501,7 +508,8 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
       <code>block: () =&gt; new BlockScrollStrategy(this._viewportRuler, this._document)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Block scrolling.</p>
+  <td class="docs-api-property-description"><p translation-result="on">块滚动。</p><p translation-origin="off">Block scrolling.</p>
+
 </td>
 </tr>
 
@@ -514,7 +522,8 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
       <code>close: (config?: CloseScrollStrategyConfig) =&gt; new CloseScrollStrategy(this._scrollDispatcher, this._ngZone, this._viewportRuler, config)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Close the overlay as soon as the user scrolls.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用户滚动后立即关闭浮层。</p><p translation-origin="off">Close the overlay as soon as the user scrolls.</p>
+
 </td>
 </tr>
 
@@ -527,7 +536,8 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
       <code>noop: () =&gt; new NoopScrollStrategy()</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Do nothing on scroll.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滚动时不执行任何操作。</p><p translation-origin="off">Do nothing on scroll.</p>
+
 </td>
 </tr>
 
@@ -540,7 +550,8 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
       <code>reposition: (config?: RepositionScrollStrategyConfig) =&gt; new RepositionScrollStrategy(this._scrollDispatcher, this._viewportRuler, this._ngZone, config)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Update the overlay's position on scroll.</p>
+  <td class="docs-api-property-description"><p translation-result="on">更新浮层在滚动条上的位置。</p><p translation-origin="off">Update the overlay's position on scroll.</p>
+
 </td>
 </tr>
 
@@ -560,9 +571,10 @@ behaviors. This class primarily acts as a factory for ScrollStrategy instances.<
   <span header-link="OverlayOutsideClickDispatcher"></span>
   <code>OverlayOutsideClickDispatcher</code>
   
-</h4><div class="docs-api-class-description"><p>Service for dispatching mouse click events that land on the body to appropriate overlay ref,
+</h4><div class="docs-api-class-description"><p translation-result="on">用于将鼠标单击事件落到适当的浮层引用（如果有）上的服务。它维护一个已附加的浮层列表，以便根据事件目标和浮层打开顺序确定最适合的浮层。</p><p translation-origin="off">Service for dispatching mouse click events that land on the body to appropriate overlay ref,
 if any. It maintains a list of attached overlays to determine best suited overlay based
 on event target and order of overlay opens.</p>
+
 </div>
 
 
@@ -578,7 +590,8 @@ on event target and order of overlay opens.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Add a new overlay to the list of attached overlay refs.</p>
+      <p translation-result="on">将新的浮层添加到已附加的浮层引用列表中。</p><p translation-origin="off">Add a new overlay to the list of attached overlay refs.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -614,7 +627,8 @@ on event target and order of overlay opens.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches the global keyboard event listener.</p>
+      <p translation-result="on">拆除全局键盘事件侦听器。</p><p translation-origin="off">Detaches the global keyboard event listener.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -662,9 +676,10 @@ on event target and order of overlay opens.</p>
   <span header-link="OverlayKeyboardDispatcher"></span>
   <code>OverlayKeyboardDispatcher</code>
   
-</h4><div class="docs-api-class-description"><p>Service for dispatching keyboard events that land on the body to appropriate overlay ref,
+</h4><div class="docs-api-class-description"><p translation-result="on">本服务用于将落在 body 上的键盘事件分派到适当的浮层引用（如果有）。它维护一个已附着的浮层列表，以便根据事件目标和浮层打开顺序确定最适合的浮层。</p><p translation-origin="off">Service for dispatching keyboard events that land on the body to appropriate overlay ref,
 if any. It maintains a list of attached overlays to determine best suited overlay based
 on event target and order of overlay opens.</p>
+
 </div>
 
 
@@ -680,7 +695,8 @@ on event target and order of overlay opens.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Add a new overlay to the list of attached overlay refs.</p>
+      <p translation-result="on">将新的浮层添加到已附着的浮层引用列表中。</p><p translation-origin="off">Add a new overlay to the list of attached overlay refs.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -716,7 +732,8 @@ on event target and order of overlay opens.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Detaches the global keyboard event listener.</p>
+      <p translation-result="on">拆除全局键盘事件侦听器。</p><p translation-origin="off">Detaches the global keyboard event listener.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -2069,10 +2086,11 @@ required around the overlay pane.</p>
   <span header-link="GlobalPositionStrategy"></span>
   <code>GlobalPositionStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>A strategy for positioning overlays. Using this strategy, an overlay is given an
+</h4><div class="docs-api-class-description"><p translation-result="on">放置浮层的策略。使用此策略，可以为浮层赋予相对于浏览器视口的显式位置。为了避免亚像素渲染可能导致元素变得模糊的问题，我们使用 flexbox 而不是变换。</p><p translation-origin="off">A strategy for positioning overlays. Using this strategy, an overlay is given an
 explicit position relative to the browser's viewport. We use flexbox, instead of
 transforms, in order to avoid issues with subpixel rendering which can cause the
 element to become blurry.</p>
+
 </div>
 
 
@@ -2119,7 +2137,8 @@ element to become blurry.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the bottom position of the overlay. Clears any previously set vertical position.</p>
+      <p translation-result="on">设置浮层的底部位置。清除任何先前设置的垂直位置。</p><p translation-origin="off">Sets the bottom position of the overlay. Clears any previously set vertical position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2137,7 +2156,8 @@ element to become blurry.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New bottom offset.</p>
+        <p translation-result="on">新的底部偏移量。</p><p translation-origin="off">New bottom offset.</p>
+
 
       </div>
     </td>
@@ -2171,8 +2191,9 @@ element to become blurry.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Centers the overlay horizontally with an optional offset.
+      <p translation-result="on">使浮层水平居中，并具有可选的偏移量。清除任何先前设置的水平位置。</p><p translation-origin="off">Centers the overlay horizontally with an optional offset.
 Clears any previously set horizontal position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2190,7 +2211,8 @@ Clears any previously set horizontal position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Overlay offset from the horizontal center.</p>
+        <p translation-result="on">相对于水平中心的浮层偏移量。</p><p translation-origin="off">Overlay offset from the horizontal center.</p>
+
 
       </div>
     </td>
@@ -2224,8 +2246,9 @@ Clears any previously set horizontal position.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Centers the overlay vertically with an optional offset.
+      <p translation-result="on">使浮层垂直居中，并带有可选的偏移量。清除任何先前设置的垂直位置。</p><p translation-origin="off">Centers the overlay vertically with an optional offset.
 Clears any previously set vertical position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2243,7 +2266,8 @@ Clears any previously set vertical position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Overlay offset from the vertical center.</p>
+        <p translation-result="on">相对于垂直中心的浮层偏移量。</p><p translation-origin="off">Overlay offset from the vertical center.</p>
+
 
       </div>
     </td>
@@ -2277,7 +2301,8 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the left position of the overlay. Clears any previously set horizontal position.</p>
+      <p translation-result="on">设置浮层的左侧位置。清除任何先前设置的水平位置。</p><p translation-origin="off">Sets the left position of the overlay. Clears any previously set horizontal position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2295,7 +2320,8 @@ Clears any previously set vertical position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New left offset.</p>
+        <p translation-result="on">新的左侧偏移量。</p><p translation-origin="off">New left offset.</p>
+
 
       </div>
     </td>
@@ -2329,7 +2355,8 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the right position of the overlay. Clears any previously set horizontal position.</p>
+      <p translation-result="on">设置浮层的正确位置。清除任何先前设置的水平位置。</p><p translation-origin="off">Sets the right position of the overlay. Clears any previously set horizontal position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2347,7 +2374,8 @@ Clears any previously set vertical position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New right offset.</p>
+        <p translation-result="on">新的右侧偏移量。</p><p translation-origin="off">New right offset.</p>
+
 
       </div>
     </td>
@@ -2381,7 +2409,8 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the top position of the overlay. Clears any previously set vertical position.</p>
+      <p translation-result="on">设置浮层的顶部位置。清除任何先前设置的垂直位置。</p><p translation-origin="off">Sets the top position of the overlay. Clears any previously set vertical position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2399,7 +2428,8 @@ Clears any previously set vertical position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New top offset.</p>
+        <p translation-result="on">新的顶部偏移量。</p><p translation-origin="off">New top offset.</p>
+
 
       </div>
     </td>
@@ -2435,7 +2465,8 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the overlay height and clears any previously set height.</p>
+      <p translation-result="on">设置浮层高度并清除任何先前设置的高度。</p><p translation-origin="off">Sets the overlay height and clears any previously set height.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2453,7 +2484,8 @@ Clears any previously set vertical position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New height for the overlay</p>
+        <p translation-result="on">浮层的新高度</p><p translation-origin="off">New height for the overlay</p>
+
 
       </div>
     </td>
@@ -2489,7 +2521,8 @@ Clears any previously set vertical position.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the overlay width and clears any previously set width.</p>
+      <p translation-result="on">设置浮层宽度并清除任何先前设置的宽度。</p><p translation-origin="off">Sets the overlay width and clears any previously set width.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2507,7 +2540,8 @@ Clears any previously set vertical position.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New width for the overlay</p>
+        <p translation-result="on">浮层的新宽度</p><p translation-origin="off">New width for the overlay</p>
+
 
       </div>
     </td>
@@ -2541,11 +2575,12 @@ Clears any previously set vertical position.</p>
   <span header-link="ConnectedPositionStrategy"></span>
   <code>ConnectedPositionStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>A strategy for positioning overlays. Using this strategy, an overlay is given an
+</h4><div class="docs-api-class-description"><p translation-result="on">放置浮层的策略。使用此策略，可以为浮层提供相对于某原点元素的隐式位置。此相对位置是指浮层元素上的点相对于所连接的原点元素上的点。例如，一个基本的下拉列表将其原点的左下角连接到此浮层的左上角。</p><p translation-origin="off">A strategy for positioning overlays. Using this strategy, an overlay is given an
 implicit position relative to some origin element. The relative position is defined in terms of
 a point on the origin element that is connected to a point on the overlay element. For example,
 a basic dropdown is connecting the bottom-left corner of the origin to the top-left corner
 of the overlay.</p>
+
 </div><div class="docs-api-class-deprecated-marker" title="将会在 v8.0.0 中删除">
   已弃用
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
@@ -2562,7 +2597,8 @@ of the overlay.</p>
       <code>onPositionChange: Observable&lt;ConnectedOverlayPositionChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits an event when the connection point changes.</p>
+  <td class="docs-api-property-description"><p translation-result="on">连接点更改时发出事件。</p><p translation-origin="off">Emits an event when the connection point changes.</p>
+
 </td>
 </tr>
 
@@ -2575,7 +2611,8 @@ of the overlay.</p>
       <code>positions: ConnectionPositionPair[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Ordered list of preferred positions, from most to least desirable.</p>
+  <td class="docs-api-property-description"><p translation-result="on">首选位置的有序列表，从最高到最低。</p><p translation-origin="off">Ordered list of preferred positions, from most to least desirable.</p>
+
 </td>
 </tr>
 
@@ -2596,7 +2633,8 @@ of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attach this position strategy to an overlay.</p>
+      <p translation-result="on">将此定位策略附加到浮层。</p><p translation-origin="off">Attach this position strategy to an overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2632,7 +2670,8 @@ of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Disposes all resources used by the position strategy.</p>
+      <p translation-result="on">释放此定位策略使用的所有资源。</p><p translation-origin="off">Disposes all resources used by the position strategy.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -2649,9 +2688,10 @@ of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Re-positions the overlay element with the trigger in its last calculated position,
+      <p translation-result="on">即使触发器在“首选位置”列表中更高的位置，也可以将带有触发器的浮层元素重定位到其最后计算出的位置。这样一来，无需更改面板方向即可重新对齐面板。</p><p translation-origin="off">Re-positions the overlay element with the trigger in its last calculated position,
 even if a position higher in the "preferred positions" list would now fit. This
 allows one to re-align the panel without changing the orientation of the panel.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -2668,7 +2708,8 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the origin element, relative to which to position the overlay.</p>
+      <p translation-result="on">设置浮层的原点元素。</p><p translation-origin="off">Sets the origin element, relative to which to position the overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2686,7 +2727,8 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Reference to the new origin element.</p>
+        <p translation-result="on">到新原点元素的引用。</p><p translation-origin="off">Reference to the new origin element.</p>
+
 
       </div>
     </td>
@@ -2720,7 +2762,8 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the layout direction so the overlay's position can be adjusted to match.</p>
+      <p translation-result="on">设置布局方向，以便可以调整浮层的位置以匹配它。</p><p translation-origin="off">Sets the layout direction so the overlay's position can be adjusted to match.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2738,7 +2781,8 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New layout direction.</p>
+        <p translation-result="on">新的布局方向。</p><p translation-origin="off">New layout direction.</p>
+
 
       </div>
     </td>
@@ -2772,7 +2816,8 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Adds a new preferred fallback position.</p>
+      <p translation-result="on">添加新的首选后备排名。</p><p translation-origin="off">Adds a new preferred fallback position.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2862,9 +2907,10 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets whether the overlay's position should be locked in after it is positioned
+      <p translation-result="on">设置浮层的位置在最初放置后是否应锁定。当浮层被锁定时，在重新应用位置时（例如，当用户滚动离开时），它不会尝试重新定位自身。</p><p translation-origin="off">Sets whether the overlay's position should be locked in after it is positioned
 initially. When an overlay is locked in, it won't attempt to reposition itself
 when the position is re-applied (e.g. when the user scrolls away).</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2882,7 +2928,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Whether the overlay should locked in.</p>
+        <p translation-result="on">浮层是否应锁定。</p><p translation-origin="off">Whether the overlay should locked in.</p>
+
 
       </div>
     </td>
@@ -2916,7 +2963,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets an offset for the overlay's connection point on the x-axis</p>
+      <p translation-result="on">设置浮层在 x 轴上的连接点的偏移量</p><p translation-origin="off">Sets an offset for the overlay's connection point on the x-axis</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -2934,7 +2982,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New offset in the X axis.</p>
+        <p translation-result="on">X 轴上的新偏移量。</p><p translation-origin="off">New offset in the X axis.</p>
+
 
       </div>
     </td>
@@ -2968,7 +3017,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets an offset for the overlay's connection point on the y-axis</p>
+      <p translation-result="on">设置浮层在 y 轴上的连接点的偏移量</p><p translation-origin="off">Sets an offset for the overlay's connection point on the y-axis</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3020,7 +3070,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Overwrites the current set of positions with an array of new ones.</p>
+      <p translation-result="on">用一组新的位置覆盖当前位置。</p><p translation-origin="off">Overwrites the current set of positions with an array of new ones.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3038,7 +3089,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Position pairs to be set on the strategy.</p>
+        <p translation-result="on">要设置在本策略上的位置对。</p><p translation-origin="off">Position pairs to be set on the strategy.</p>
+
 
       </div>
     </td>
@@ -3072,9 +3124,10 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the list of Scrollable containers that host the origin element so that
+      <p translation-result="on">设置承载原点元素的可滚动容器列表，以便在重新定位时可以评估该元素或浮层是应该被裁剪还是位于视图外。每个可滚动对象都必须是该策略的原点元素的祖先。</p><p translation-origin="off">Sets the list of Scrollable containers that host the origin element so that
 on reposition we can evaluate if it or the overlay has been clipped or outside view. Every
 Scrollable must be an ancestor element of the strategy's origin element.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3110,11 +3163,12 @@ Scrollable must be an ancestor element of the strategy's origin element.</p>
   <span header-link="FlexibleConnectedPositionStrategy"></span>
   <code>FlexibleConnectedPositionStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>A strategy for positioning overlays. Using this strategy, an overlay is given an
+</h4><div class="docs-api-class-description"><p translation-result="on">放置浮层的策略。使用此策略，可以为浮层提供相对于某些原点元素的隐式位置。相对位置是根据与浮层元素上的点连接的原点元素上的点定义的。例如，一个基本的下拉列表将原点的左下角连接到浮层的左上角。</p><p translation-origin="off">A strategy for positioning overlays. Using this strategy, an overlay is given an
 implicit position relative some origin element. The relative position is defined in terms of
 a point on the origin element that is connected to a point on the overlay element. For example,
 a basic dropdown is connecting the bottom-left corner of the origin to the top-left corner
 of the overlay.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -3129,7 +3183,8 @@ of the overlay.</p>
       <code>positionChanges: Observable&lt;ConnectedOverlayPositionChange&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Observable sequence of position changes.</p>
+  <td class="docs-api-property-description"><p translation-result="on">位置变化的可观察序列。</p><p translation-origin="off">Observable sequence of position changes.</p>
+
 </td>
 </tr>
 
@@ -3142,7 +3197,8 @@ of the overlay.</p>
       <code>positions: ConnectionPositionPair[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Ordered list of preferred positions, from most to least desirable.</p>
+  <td class="docs-api-property-description"><p translation-result="on">首选位置的有序列表，从最高到最低。</p><p translation-origin="off">Ordered list of preferred positions, from most to least desirable.</p>
+
 </td>
 </tr>
 
@@ -3163,7 +3219,8 @@ of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this position strategy to an overlay.</p>
+      <p translation-result="on">将此定位策略附加到浮层。</p><p translation-origin="off">Attaches this position strategy to an overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3211,7 +3268,8 @@ of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Cleanup after the element gets destroyed.</p>
+      <p translation-result="on">元素销毁后进行清理。</p><p translation-origin="off">Cleanup after the element gets destroyed.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -3228,9 +3286,10 @@ of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>This re-aligns the overlay element with the trigger in its last calculated position,
+      <p translation-result="on">这将使浮层元素与触发器在其最后计算的位置处重新对齐，即使现在“首选位置”列表中的位置优先级较高也是如此。这样一来，无需更改面板方向即可重新对齐面板。</p><p translation-origin="off">This re-aligns the overlay element with the trigger in its last calculated position,
 even if a position higher in the "preferred positions" list would now fit. This
 allows one to re-align the panel without changing the orientation of the panel.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -3247,10 +3306,11 @@ allows one to re-align the panel without changing the orientation of the panel.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the origin, relative to which to position the overlay.
+      <p translation-result="on">设置相对于此浮层位置的原点。使用元素原点可用于构建需要相对于触发器定位的组件（例如，下拉菜单或工具提示），从而让这个点可用于诸如上下文菜单等需要相对于用户指针处打开的情况。</p><p translation-origin="off">Sets the origin, relative to which to position the overlay.
 Using an element origin is useful for building components that need to be positioned
 relatively to a trigger (e.g. dropdown menus or tooltips), whereas using a point can be
 used for cases like contextual menus which open relative to the user's pointer.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3268,7 +3328,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Reference to the new origin.</p>
+        <p translation-result="on">新原点的引用。</p><p translation-origin="off">Reference to the new origin.</p>
+
 
       </div>
     </td>
@@ -3302,7 +3363,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the default offset for the overlay's connection point on the x-axis.</p>
+      <p translation-result="on">设置浮层在 x 轴上的连接点的默认偏移量。</p><p translation-origin="off">Sets the default offset for the overlay's connection point on the x-axis.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3320,7 +3382,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New offset in the X axis.</p>
+        <p translation-result="on">X 轴上的新偏移量。</p><p translation-origin="off">New offset in the X axis.</p>
+
 
       </div>
     </td>
@@ -3354,7 +3417,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the default offset for the overlay's connection point on the y-axis.</p>
+      <p translation-result="on">设置浮层在 y 轴上的连接点的默认偏移量。</p><p translation-origin="off">Sets the default offset for the overlay's connection point on the y-axis.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3372,7 +3436,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>New offset in the Y axis.</p>
+        <p translation-result="on">Y 轴上的新偏移量。</p><p translation-origin="off">New offset in the Y axis.</p>
+
 
       </div>
     </td>
@@ -3406,7 +3471,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets whether the overlay's width and height can be constrained to fit within the viewport.</p>
+      <p translation-result="on">设置是否可以将浮层的宽度和高度限制为适合视口。</p><p translation-origin="off">Sets whether the overlay's width and height can be constrained to fit within the viewport.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3457,7 +3523,8 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets whether the overlay can grow after the initial open via flexible width/height.</p>
+      <p translation-result="on">设置浮层在初始打开后是否可以灵活的增加宽度/高度。</p><p translation-origin="off">Sets whether the overlay can grow after the initial open via flexible width/height.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3508,9 +3575,10 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets whether the overlay's position should be locked in after it is positioned
+      <p translation-result="on">设置浮层的位置在最初放置后是否应锁定。当浮层被锁定时，在重新应用位置时（例如，当用户滚动时），它不会尝试重新定位自身。</p><p translation-origin="off">Sets whether the overlay's position should be locked in after it is positioned
 initially. When an overlay is locked in, it won't attempt to reposition itself
 when the position is re-applied (e.g. when the user scrolls away).</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3528,7 +3596,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Whether the overlay should locked in.</p>
+        <p translation-result="on">浮层是否应锁定。</p><p translation-origin="off">Whether the overlay should locked in.</p>
+
 
       </div>
     </td>
@@ -3562,7 +3631,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Adds new preferred positions.</p>
+      <p translation-result="on">添加新的首选位置。</p><p translation-origin="off">Adds new preferred positions.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3580,7 +3650,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>List of positions options for this overlay.</p>
+        <p translation-result="on">此浮层的定位选项列表。</p><p translation-origin="off">List of positions options for this overlay.</p>
+
 
       </div>
     </td>
@@ -3614,7 +3685,8 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets whether the overlay can be pushed on-screen if none of the provided positions fit.</p>
+      <p translation-result="on">设置如果提供的位置都不适合，则是否可以在屏幕上推动浮层。</p><p translation-origin="off">Sets whether the overlay can be pushed on-screen if none of the provided positions fit.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3665,9 +3737,10 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets the list of Scrollable containers that host the origin element so that
+      <p translation-result="on">设置承载原点元素的可滚动容器列表，以便在重新定位时可以评估该元素或浮层是否已被裁剪或在外部视图。每个可滚动对象必须是此策略的原点元素的祖先。</p><p translation-origin="off">Sets the list of Scrollable containers that host the origin element so that
 on reposition we can evaluate if it or the overlay has been clipped or outside view. Every
 Scrollable must be an ancestor element of the strategy's origin element.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3718,10 +3791,11 @@ Scrollable must be an ancestor element of the strategy's origin element.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Configures that the position strategy should set a <code>transform-origin</code> on some elements
+      <p translation-result="on">配置定位策略应该把 <code>transform-origin</code> 设置为此浮层内的某些元素，具体取决于所要应用的当前位置。对于动画的原点要根据浮层的对齐方式而改变的情况，这很有用。</p><p translation-origin="off">Configures that the position strategy should set a <code>transform-origin</code> on some elements
 inside the overlay, depending on the current position that is being applied. This is
 useful for the cases where the origin of an animation can change depending on the
 alignment of the overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3739,8 +3813,9 @@ alignment of the overlay.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>CSS selector that will be used to find the target
+        <p translation-result="on">CSS 选择器，将用于查找要设置为形变原点的目标元素。</p><p translation-origin="off">CSS selector that will be used to find the target
    elements onto which to set the transform origin.</p>
+
 
       </div>
     </td>
@@ -3774,7 +3849,8 @@ alignment of the overlay.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Sets a minimum distance the overlay may be positioned to the edge of the viewport.</p>
+      <p translation-result="on">设置浮层可以放置到视口边缘的最小距离。</p><p translation-origin="off">Sets a minimum distance the overlay may be positioned to the edge of the viewport.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -3792,7 +3868,8 @@ alignment of the overlay.</p>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
-        <p>Required margin between the overlay and the viewport edge in pixels.</p>
+        <p translation-result="on">浮层和视口边缘之间的必要边距（以像素为单位）。</p><p translation-origin="off">Required margin between the overlay and the viewport edge in pixels.</p>
+
 
       </div>
     </td>
@@ -4034,7 +4111,8 @@ the <code>HashLocationStrategy</code>).</p>
   <span header-link="ConnectionPositionPair"></span>
   <code>ConnectionPositionPair</code>
   
-</h4><div class="docs-api-class-description"><p>The points of the origin element and the overlay element to connect.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">要连接的原点元素和浮层元素上的点。</p><p translation-origin="off">The points of the origin element and the overlay element to connect.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4075,7 +4153,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>originX: HorizontalConnectionPos</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>X-axis attachment point for connected overlay origin. Can be 'start', 'end', or 'center'.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已连接浮层原点的 X 轴连接点。可以是 'start'、'end' 或 'center'。</p><p translation-origin="off">X-axis attachment point for connected overlay origin. Can be 'start', 'end', or 'center'.</p>
+
 </td>
 </tr>
 
@@ -4088,7 +4167,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>originY: VerticalConnectionPos</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Y-axis attachment point for connected overlay origin. Can be 'top', 'bottom', or 'center'.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已连接浮层原点的 Y 轴连接点。可以是 'top'、'bottom' 或 'center'。</p><p translation-origin="off">Y-axis attachment point for connected overlay origin. Can be 'top', 'bottom', or 'center'.</p>
+
 </td>
 </tr>
 
@@ -4101,7 +4181,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>overlayX: HorizontalConnectionPos</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>X-axis attachment point for connected overlay. Can be 'start', 'end', or 'center'.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已连接浮层原点的 X 轴连接点。可以是 'start'、'end' 或 'center'。</p><p translation-origin="off">X-axis attachment point for connected overlay. Can be 'start', 'end', or 'center'.</p>
+
 </td>
 </tr>
 
@@ -4114,7 +4195,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>overlayY: VerticalConnectionPos</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Y-axis attachment point for connected overlay. Can be 'top', 'bottom', or 'center'.</p>
+  <td class="docs-api-property-description"><p translation-result="on">已连接浮层原点的 Y 轴连接点。可以是 'top'、'bottom' 或 'center'。</p><p translation-origin="off">Y-axis attachment point for connected overlay. Can be 'top', 'bottom', or 'center'.</p>
+
 </td>
 </tr>
 
@@ -4147,7 +4229,8 @@ the <code>HashLocationStrategy</code>).</p>
   <span header-link="ConnectedOverlayPositionChange"></span>
   <code>ConnectedOverlayPositionChange</code>
   
-</h4><div class="docs-api-class-description"><p>The change event emitted by the strategy when a fallback position is used.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">使用后备位置时，本策略发出的更改事件。</p><p translation-origin="off">The change event emitted by the strategy when a fallback position is used.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4182,7 +4265,8 @@ the <code>HashLocationStrategy</code>).</p>
   <span header-link="RepositionScrollStrategy"></span>
   <code>RepositionScrollStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>Strategy that will update the element position as the user is scrolling.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">在用户滚动时更新元素位置的策略。</p><p translation-origin="off">Strategy that will update the element position as the user is scrolling.</p>
+
 </div>
 
 
@@ -4198,7 +4282,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to an overlay.</p>
+      <p translation-result="on">将此滚动策略附加到浮层。</p><p translation-origin="off">Attaches this scroll strategy to an overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -4246,7 +4331,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Disables repositioning of the attached overlay on scroll.</p>
+      <p translation-result="on">禁止在滚动时重新定位浮层。</p><p translation-origin="off">Disables repositioning of the attached overlay on scroll.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4263,7 +4349,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Enables repositioning of the attached overlay on scroll.</p>
+      <p translation-result="on">允许在滚动时重新定位浮层。</p><p translation-origin="off">Enables repositioning of the attached overlay on scroll.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4280,7 +4367,8 @@ the <code>HashLocationStrategy</code>).</p>
   <span header-link="CloseScrollStrategy"></span>
   <code>CloseScrollStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>Strategy that will close the overlay as soon as the user starts scrolling.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">用户开始滚动时关闭浮层的策略。</p><p translation-origin="off">Strategy that will close the overlay as soon as the user starts scrolling.</p>
+
 </div>
 
 
@@ -4296,7 +4384,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to an overlay.</p>
+      <p translation-result="on">将此滚动策略附加到浮层。</p><p translation-origin="off">Attaches this scroll strategy to an overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -4344,7 +4433,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Disables the closing the attached overlay on scroll.</p>
+      <p translation-result="on">禁用“滚动时关闭已附着浮层”。</p><p translation-origin="off">Disables the closing the attached overlay on scroll.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4361,7 +4451,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Enables the closing of the attached overlay on scroll.</p>
+      <p translation-result="on">启用“滚动时关闭已附着浮层”。</p><p translation-origin="off">Enables the closing of the attached overlay on scroll.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4378,7 +4469,8 @@ the <code>HashLocationStrategy</code>).</p>
   <span header-link="NoopScrollStrategy"></span>
   <code>NoopScrollStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>Scroll strategy that doesn't do anything.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">什么也不做的滚动策略。</p><p translation-origin="off">Scroll strategy that doesn't do anything.</p>
+
 </div>
 
 
@@ -4394,7 +4486,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Does nothing, as this scroll strategy is a no-op.</p>
+      <p translation-result="on">什么也不做，因为这个滚动策略就是如此。</p><p translation-origin="off">Does nothing, as this scroll strategy is a no-op.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4411,7 +4504,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Does nothing, as this scroll strategy is a no-op.</p>
+      <p translation-result="on">什么也不做，因为这个滚动策略就是如此。</p><p translation-origin="off">Does nothing, as this scroll strategy is a no-op.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4428,7 +4522,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Does nothing, as this scroll strategy is a no-op.</p>
+      <p translation-result="on">什么也不做，因为这个滚动策略就是如此。</p><p translation-origin="off">Does nothing, as this scroll strategy is a no-op.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4445,7 +4540,8 @@ the <code>HashLocationStrategy</code>).</p>
   <span header-link="BlockScrollStrategy"></span>
   <code>BlockScrollStrategy</code>
   
-</h4><div class="docs-api-class-description"><p>Strategy that will prevent the user from scrolling while the overlay is visible.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">可以在浮层可见时阻止用户滚动的策略。</p><p translation-origin="off">Strategy that will prevent the user from scrolling while the overlay is visible.</p>
+
 </div>
 
 
@@ -4461,7 +4557,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this scroll strategy to an overlay.</p>
+      <p translation-result="on">将此滚动策略附加到浮层。</p><p translation-origin="off">Attaches this scroll strategy to an overlay.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4478,7 +4575,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Unblocks page-level scroll while the attached overlay is open.</p>
+      <p translation-result="on">打开已附着的浮层时，取消阻止页面级滚动。</p><p translation-origin="off">Unblocks page-level scroll while the attached overlay is open.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4495,7 +4593,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blocks page-level scroll while the attached overlay is open.</p>
+      <p translation-result="on">打开已附着的浮层时阻止页面级滚动。</p><p translation-origin="off">Blocks page-level scroll while the attached overlay is open.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4609,7 +4708,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="PositionStrategy" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="PositionStrategy"></span>
   <code>PositionStrategy</code>
-</h4><div class="docs-api-interface-description"><p>Strategy for setting the position on an overlay.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">在浮层上设置位置的策略。</p><p translation-origin="off">Strategy for setting the position on an overlay.</p>
+
 </div>
 
 
@@ -4625,7 +4725,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Updates the position of the overlay element.</p>
+      <p translation-result="on">更新浮层元素的位置。</p><p translation-origin="off">Updates the position of the overlay element.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4642,7 +4743,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Attaches this position strategy to an overlay.</p>
+      <p translation-result="on">将此定位策略附加到浮层。</p><p translation-origin="off">Attaches this position strategy to an overlay.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -4678,7 +4780,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Called when the overlay is detached.</p>
+      <p translation-result="on">拆除浮层时调用。</p><p translation-origin="off">Called when the overlay is detached.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4695,7 +4798,8 @@ the <code>HashLocationStrategy</code>).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Cleans up any DOM modifications made by the position strategy, if necessary.</p>
+      <p translation-result="on">如有必要，清除定位策略进行的所有 DOM 修改。</p><p translation-origin="off">Cleans up any DOM modifications made by the position strategy, if necessary.</p>
+
 
     </td>
   </tr></tbody></table>
@@ -4711,7 +4815,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="ConnectedPosition" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="ConnectedPosition"></span>
   <code>ConnectedPosition</code>
-</h4><div class="docs-api-interface-description"><p>A connected position as specified by the user.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">用户指定的连接位置。</p><p translation-origin="off">A connected position as specified by the user.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-11">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4828,7 +4933,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="OriginConnectionPosition" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="OriginConnectionPosition"></span>
   <code>OriginConnectionPosition</code>
-</h4><div class="docs-api-interface-description"><p>A connection point on the origin element.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">原点元素上的连接点。</p><p translation-origin="off">A connection point on the origin element.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-12">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4873,7 +4979,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="OverlayConnectionPosition" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="OverlayConnectionPosition"></span>
   <code>OverlayConnectionPosition</code>
-</h4><div class="docs-api-interface-description"><p>A connection point on the overlay element.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">浮层元素上的连接点。</p><p translation-origin="off">A connection point on the overlay element.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-13">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4918,7 +5025,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="ScrollStrategy" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="ScrollStrategy"></span>
   <code>ScrollStrategy</code>
-</h4><div class="docs-api-interface-description"><p>Describes a strategy that will be used by an overlay to handle scroll events while it is open.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">描述一种策略，浮层在打开时将用它处理滚动事件。</p><p translation-origin="off">Describes a strategy that will be used by an overlay to handle scroll events while it is open.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-14">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4933,7 +5041,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>attach: (overlayRef: OverlayReference) =&gt; void</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Attaches this <code>ScrollStrategy</code> to an overlay.</p>
+  <td class="docs-api-property-description"><p translation-result="on">将此 <code>ScrollStrategy</code> 附着到浮层。</p><p translation-origin="off">Attaches this <code>ScrollStrategy</code> to an overlay.</p>
+
 </td>
 </tr>
 
@@ -4946,7 +5055,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>detach: () =&gt; void</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Detaches the scroll strategy from the current overlay.</p>
+  <td class="docs-api-property-description"><p translation-result="on">从当前浮层拆除滚动策略。</p><p translation-origin="off">Detaches the scroll strategy from the current overlay.</p>
+
 </td>
 </tr>
 
@@ -4959,7 +5069,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>disable: () =&gt; void</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Disable this scroll strategy (called when the attached overlay is detached from a portal).</p>
+  <td class="docs-api-property-description"><p translation-result="on">禁用此滚动策略（当已附着的浮层从传送点 Portal 拆除时调用）。</p><p translation-origin="off">Disable this scroll strategy (called when the attached overlay is detached from a portal).</p>
+
 </td>
 </tr>
 
@@ -4972,7 +5083,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>enable: () =&gt; void</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Enable this scroll strategy (called when the attached overlay is attached to a portal).</p>
+  <td class="docs-api-property-description"><p translation-result="on">启用此滚动策略（将已附着的浮层附着到传送点 Portal 时调用）。</p><p translation-origin="off">Enable this scroll strategy (called when the attached overlay is attached to a portal).</p>
+
 </td>
 </tr>
 
@@ -4991,7 +5103,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="RepositionScrollStrategyConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="RepositionScrollStrategyConfig"></span>
   <code>RepositionScrollStrategyConfig</code>
-</h4><div class="docs-api-interface-description"><p>Config options for the RepositionScrollStrategy.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">RepositionScrollStrategy 的配置选项。</p><p translation-origin="off">Config options for the RepositionScrollStrategy.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-15">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -5006,7 +5119,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>autoClose: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether to close the overlay once the user has scrolled away completely.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用户完全滚动离开后是否关闭浮层。</p><p translation-origin="off">Whether to close the overlay once the user has scrolled away completely.</p>
+
 </td>
 </tr>
 
@@ -5019,7 +5133,8 @@ the <code>HashLocationStrategy</code>).</p>
       <code>scrollThrottle: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Time in milliseconds to throttle the scroll events.</p>
+  <td class="docs-api-property-description"><p translation-result="on">滚动事件的限流时间（以毫秒为单位）。</p><p translation-origin="off">Time in milliseconds to throttle the scroll events.</p>
+
 </td>
 </tr>
 
@@ -5042,7 +5157,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="FlexibleConnectedPositionStrategyOrigin" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="FlexibleConnectedPositionStrategyOrigin"></span>
   <code>FlexibleConnectedPositionStrategyOrigin</code>
-</h4><div class="docs-api-type-alias-description"><p>Possible values that can be set as the origin of a FlexibleConnectedPositionStrategy.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可以设置为 FlexibleConnectedPositionStrategy 原点的可能值。</p><p translation-origin="off">Possible values that can be set as the origin of a FlexibleConnectedPositionStrategy.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> FlexibleConnectedPositionStrategyOrigin = ElementRef | Element | Point &amp; {
     width?: <span class="hljs-built_in">number</span>;
@@ -5070,7 +5186,8 @@ the <code>HashLocationStrategy</code>).</p>
 <h4 id="VerticalConnectionPos" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="VerticalConnectionPos"></span>
   <code>VerticalConnectionPos</code>
-</h4><div class="docs-api-type-alias-description"><p>Vertical dimension of a connection point on the perimeter of the origin or overlay element.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">在原点周边或浮层元素上的连接点的垂直尺寸。</p><p translation-origin="off">Vertical dimension of a connection point on the perimeter of the origin or overlay element.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> VerticalConnectionPos = <span class="hljs-string">'top'</span> | <span class="hljs-string">'center'</span> | <span class="hljs-string">'bottom'</span>;</code>
 </pre>

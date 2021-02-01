@@ -162,7 +162,8 @@
   <span header-link="CdkDropList"></span>
   <code>CdkDropList</code>
   
-</h4><div class="docs-api-class-description"><p>Container that wraps a set of draggable items.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">包装一组可拖动条目的容器。</p><p translation-origin="off">Container that wraps a set of draggable items.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -186,7 +187,8 @@
       <code>autoScrollDisabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether to auto-scroll the view when the user moves their pointer close to the edges.</p>
+  <td class="docs-api-property-description"><p translation-result="on">用户将指针移到边缘附近时是否自动滚动视图。</p><p translation-origin="off">Whether to auto-scroll the view when the user moves their pointer close to the edges.</p>
+
 </td>
 </tr>
 
@@ -215,9 +217,10 @@
       <code>connectedTo: (CdkDropList | string)[] | CdkDropList | string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Other draggable containers that this container is connected to and into which the
+  <td class="docs-api-property-description"><p translation-result="on">此容器连接到的其他可拖动容器，此容器中的条目可以转移到其中。可以是到其他投放容器的引用，也可以是其唯一 ID。</p><p translation-origin="off">Other draggable containers that this container is connected to and into which the
 container's items can be transferred. Can either be references to other drop containers,
 or their unique IDs.</p>
+
 </td>
 </tr>
 
@@ -231,7 +234,8 @@ or their unique IDs.</p>
       <code>data: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Arbitrary data to attach to this container.</p>
+  <td class="docs-api-property-description"><p translation-result="on">附加到此容器的任意数据。</p><p translation-origin="off">Arbitrary data to attach to this container.</p>
+
 </td>
 </tr>
 
@@ -260,8 +264,9 @@ or their unique IDs.</p>
       <code>enterPredicate: (drag: CdkDrag, drop: CdkDropList) =&gt; boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Function that is used to determine whether an item
+  <td class="docs-api-property-description"><p translation-result="on">此函数用于确定是否允许将条目移入投放容器。</p><p translation-origin="off">Function that is used to determine whether an item
 is allowed to be moved into a drop container.</p>
+
 </td>
 </tr>
 
@@ -275,8 +280,9 @@ is allowed to be moved into a drop container.</p>
       <code>id: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Unique ID for the drop zone. Can be used as a reference
+  <td class="docs-api-property-description"><p translation-result="on">投放区的唯一 ID。可以在 <code>connectedTo</code> 中用作另一个 <code>CdkDropList</code> 的引用。</p><p translation-origin="off">Unique ID for the drop zone. Can be used as a reference
 in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
+
 </td>
 </tr>
 
@@ -305,7 +311,8 @@ in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
       <code>orientation: DropListOrientation</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Direction in which the list is oriented.</p>
+  <td class="docs-api-property-description"><p translation-result="on">列表的方向。</p><p translation-origin="off">Direction in which the list is oriented.</p>
+
 </td>
 </tr>
 
@@ -334,7 +341,8 @@ in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
       <code>sortingDisabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether sorting within this drop list is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用此投放列表中的排序。</p><p translation-origin="off">Whether sorting within this drop list is disabled.</p>
+
 </td>
 </tr>
 
@@ -378,8 +386,9 @@ in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
       <code>exited: EventEmitter&lt;CdkDragExit&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits when the user removes an item from the container
+  <td class="docs-api-property-description"><p translation-result="on">当用户通过将条目拖到另一个容器中来将其从容器中移除时发出。</p><p translation-origin="off">Emits when the user removes an item from the container
 by dragging it into another container.</p>
+
 </td>
 </tr>
 
@@ -428,7 +437,8 @@ by dragging it into another container.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Registers an items with the drop list.</p>
+      <p translation-result="on">在投放列表中注册一个条目。</p><p translation-origin="off">Registers an items with the drop list.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -464,7 +474,8 @@ by dragging it into another container.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the registered items in the list, sorted by their position in the DOM.</p>
+      <p translation-result="on">获取列表中的已注册条目，按其在 DOM 中的位置排序。</p><p translation-origin="off">Gets the registered items in the list, sorted by their position in the DOM.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -496,7 +507,8 @@ by dragging it into another container.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Removes an item from the drop list.</p>
+      <p translation-result="on">从投放列表中删除一个条目。</p><p translation-origin="off">Removes an item from the drop list.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -532,10 +544,11 @@ by dragging it into another container.</p>
   <span header-link="CdkDropListGroup"></span>
   <code>CdkDropListGroup</code>
   
-</h4><div class="docs-api-class-description"><p>Declaratively connects sibling <code>cdkDropList</code> instances together. All of the <code>cdkDropList</code>
+</h4><div class="docs-api-class-description"><p translation-result="on">声明性地将同级 <code>cdkDropList</code> 实例连接在一起。放置在 <code>cdkDropListGroup</code> 内的所有 <code>cdkDropList</code> 元素将自动互连。可作为 <code>cdkDropList</code> 的输入属性 <code>cdkDropListConnectedTo</code> 的替代品。</p><p translation-origin="off">Declaratively connects sibling <code>cdkDropList</code> instances together. All of the <code>cdkDropList</code>
 elements that are placed inside a <code>cdkDropListGroup</code> will be connected to each other
 automatically. Can be used as an alternative to the <code>cdkDropListConnectedTo</code> input
 from <code>cdkDropList</code>.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -557,7 +570,8 @@ from <code>cdkDropList</code>.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether starting a dragging sequence from inside this group is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁止从该组内部开始拖动序列。</p><p translation-origin="off">Whether starting a dragging sequence from inside this group is disabled.</p>
+
 </td>
 </tr>
 
@@ -577,7 +591,8 @@ from <code>cdkDropList</code>.</p>
   <span header-link="CdkDrag"></span>
   <code>CdkDrag</code>
   
-</h4><div class="docs-api-class-description"><p>Element that can be moved inside a CdkDropList container.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">可以在 CdkDropList 容器内移动的元素。</p><p translation-origin="off">Element that can be moved inside a CdkDropList container.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -599,10 +614,11 @@ from <code>cdkDropList</code>.</p>
       <code>boundaryElement: string | ElementRef&lt;HTMLElement&gt; | HTMLElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Node or selector that will be used to determine the element to which the draggable's
+  <td class="docs-api-property-description"><p translation-result="on">本节点或选择器将用于确定用来限制可拖动对象位置的元素。如果传入了一个字符串，它将用作选择器，该选择器将从元素的父级开始一直沿 DOM 进行匹配，直到找到匹配项为止。</p><p translation-origin="off">Node or selector that will be used to determine the element to which the draggable's
 position will be constrained. If a string is passed in, it'll be used as a selector that
 will be matched starting from the element's parent and going up the DOM until a match
 has been found.</p>
+
 </td>
 </tr>
 
@@ -616,10 +632,11 @@ has been found.</p>
       <code>constrainPosition: (point: Point, dragRef: DragRef) =&gt; Point</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Function that can be used to customize the logic of how the position of the drag item
+  <td class="docs-api-property-description"><p translation-result="on">本函数用于自定义在拖动条目时如何限制其位置的逻辑。使用用户指针在页面上的当前位置进行调用，并且要返回描述该条目应该出现在哪里的点。</p><p translation-origin="off">Function that can be used to customize the logic of how the position of the drag item
 is limited while it's being dragged. Gets called with a point containing the current position
 of the user's pointer on the page and should return a point describing where the item should
 be rendered.</p>
+
 </td>
 </tr>
 
@@ -633,7 +650,8 @@ be rendered.</p>
       <code>data: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Arbitrary data to attach to this drag instance.</p>
+  <td class="docs-api-property-description"><p translation-result="on">要附加到此拖动实例的任意数据。</p><p translation-origin="off">Arbitrary data to attach to this drag instance.</p>
+
 </td>
 </tr>
 
@@ -662,8 +680,9 @@ be rendered.</p>
       <code>dragStartDelay: DragStartDelay</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Amount of milliseconds to wait after the user has put their
+  <td class="docs-api-property-description"><p translation-result="on">用户放下指针后到开始拖动元素之前要等待的毫秒数。</p><p translation-origin="off">Amount of milliseconds to wait after the user has put their
 pointer down before starting to drag the element.</p>
+
 </td>
 </tr>
 
@@ -680,8 +699,9 @@ pointer down before starting to drag the element.</p>
 }</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Sets the position of a <code>CdkDrag</code> that is outside of a drop container.
+  <td class="docs-api-property-description"><p translation-result="on">设置投放容器外部的 <code>CdkDrag</code> 的位置。可用于为返回的用户恢复元素的位置。</p><p translation-origin="off">Sets the position of a <code>CdkDrag</code> that is outside of a drop container.
 Can be used to restore the element's position for a returning user.</p>
+
 </td>
 </tr>
 
@@ -695,7 +715,8 @@ Can be used to restore the element's position for a returning user.</p>
       <code>lockAxis: DragAxis</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Locks the position of the dragged element along the specified axis.</p>
+  <td class="docs-api-property-description"><p translation-result="on">锁定所拖动元素沿指定轴的位置。</p><p translation-origin="off">Locks the position of the dragged element along the specified axis.</p>
+
 </td>
 </tr>
 
@@ -724,9 +745,10 @@ Can be used to restore the element's position for a returning user.</p>
       <code>rootElementSelector: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Selector that will be used to determine the root draggable element, starting from
+  <td class="docs-api-property-description"><p translation-result="on">本选择器用于在 DOM 树中从本 <code>cdkDrag</code> 元素往上找，以确定其根级可拖动元素。当尝试在可能无法访问的元素上启动拖动时，传递一个备用根元素是很有用的。</p><p translation-origin="off">Selector that will be used to determine the root draggable element, starting from
 the <code>cdkDrag</code> element and going up the DOM. Passing an alternate root element is useful
 when trying to enable dragging on an element that you might not have access to.</p>
+
 </td>
 </tr>
 
@@ -800,8 +822,9 @@ when trying to enable dragging on an element that you might not have access to.<
       <code>moved: Observable&lt;CdkDragMove&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Emits as the user is dragging the item. Use with caution,
+  <td class="docs-api-property-description"><p translation-result="on">当用户拖动条目时触发。慎用，因为此事件将针对用户拖过的每个像素触发。</p><p translation-origin="off">Emits as the user is dragging the item. Use with caution,
 because this event will fire for every pixel that the user has dragged.</p>
+
 </td>
 </tr>
 
@@ -878,7 +901,8 @@ because this event will fire for every pixel that the user has dragged.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the pixel coordinates of the draggable outside of a drop container.</p>
+      <p translation-result="on">获取可拖动对象在投放容器外的像素坐标。</p><p translation-origin="off">Gets the pixel coordinates of the draggable outside of a drop container.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -913,8 +937,9 @@ because this event will fire for every pixel that the user has dragged.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Returns the element that is being used as a placeholder
+      <p translation-result="on">返回在拖动当前元素时要用作占位符的元素。</p><p translation-origin="off">Returns the element that is being used as a placeholder
 while the current element is being dragged.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -997,7 +1022,8 @@ while the current element is being dragged.</p>
   <span header-link="CdkDragHandle"></span>
   <code>CdkDragHandle</code>
   
-</h4><div class="docs-api-class-description"><p>Handle that can be used to drag a CdkDrag instance.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">可用于拖动 CdkDrag 实例的手柄。</p><p translation-origin="off">Handle that can be used to drag a CdkDrag instance.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -1018,7 +1044,8 @@ while the current element is being dragged.</p>
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether starting to drag through this handle is disabled.</p>
+  <td class="docs-api-property-description"><p translation-result="on">是否要禁用通过该手柄开始拖动的功能。</p><p translation-origin="off">Whether starting to drag through this handle is disabled.</p>
+
 </td>
 </tr>
 
@@ -1050,8 +1077,9 @@ while the current element is being dragged.</p>
   <span header-link="CdkDragPreview"></span>
   <code>CdkDragPreview</code>
   
-</h4><div class="docs-api-class-description"><p>Element that will be used as a template for the preview
+</h4><div class="docs-api-class-description"><p translation-result="on">拖动时将用作预览 CdkDrag 的模板的元素。</p><p translation-origin="off">Element that will be used as a template for the preview
 of a CdkDrag when it is being dragged.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -1072,7 +1100,8 @@ of a CdkDrag when it is being dragged.</p>
       <code>data: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Context data to be added to the preview template instance.</p>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到预览模板实例的上下文数据。</p><p translation-origin="off">Context data to be added to the preview template instance.</p>
+
 </td>
 </tr>
 
@@ -1086,7 +1115,8 @@ of a CdkDrag when it is being dragged.</p>
       <code>matchSize: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the preview should preserve the same size as the item that is being dragged.</p>
+  <td class="docs-api-property-description"><p translation-result="on">预览是否应保持与要拖动的条目相同的大小。</p><p translation-origin="off">Whether the preview should preserve the same size as the item that is being dragged.</p>
+
 </td>
 </tr>
 
@@ -1118,8 +1148,9 @@ of a CdkDrag when it is being dragged.</p>
   <span header-link="CdkDragPlaceholder"></span>
   <code>CdkDragPlaceholder</code>
   
-</h4><div class="docs-api-class-description"><p>Element that will be used as a template for the placeholder of a CdkDrag when
+</h4><div class="docs-api-class-description"><p translation-result="on">拖动时将用作 CdkDrag 占位符模板的元素。该占位符会用来代替要拖动的元素。</p><p translation-origin="off">Element that will be used as a template for the placeholder of a CdkDrag when
 it is being dragged. The placeholder is displayed in place of the element being dragged.</p>
+
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
   
@@ -1140,7 +1171,8 @@ it is being dragged. The placeholder is displayed in place of the element being 
       <code>data: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Context data to be added to the placeholder template instance.</p>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到占位符模板实例的上下文数据。</p><p translation-origin="off">Context data to be added to the placeholder template instance.</p>
+
 </td>
 </tr>
 
@@ -3691,8 +3723,9 @@ that the position hasn't changed.</p>
 <h4 id="DragDropConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="DragDropConfig"></span>
   <code>DragDropConfig</code>
-</h4><div class="docs-api-interface-description"><p>Object that can be used to configure the drag
+</h4><div class="docs-api-interface-description"><p translation-result="on">可用于配置模块或组件中的拖动条目和拖放列表的对象。</p><p translation-origin="off">Object that can be used to configure the drag
 items and drop lists within a module or a component.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-18">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -4094,7 +4127,8 @@ original position in current array.</p>
 <h4 id="DragStartDelay" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="DragStartDelay"></span>
   <code>DragStartDelay</code>
-</h4><div class="docs-api-type-alias-description"><p>Possible values that can be used to configure the drag start delay.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可用于配置拖动开始延迟的可能值。</p><p translation-origin="off">Possible values that can be used to configure the drag start delay.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragStartDelay = <span class="hljs-built_in">number</span> | {
     <span class="hljs-attr">touch</span>: <span class="hljs-built_in">number</span>;
@@ -4110,7 +4144,8 @@ original position in current array.</p>
 <h4 id="DragAxis" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="DragAxis"></span>
   <code>DragAxis</code>
-</h4><div class="docs-api-type-alias-description"><p>Possible axis along which dragging can be locked.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可以锁定可能的拖动轴。</p><p translation-origin="off">Possible axis along which dragging can be locked.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragAxis = <span class="hljs-string">'x'</span> | <span class="hljs-string">'y'</span>;</code>
 </pre>
@@ -4123,7 +4158,8 @@ original position in current array.</p>
 <h4 id="DragConstrainPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="DragConstrainPosition"></span>
   <code>DragConstrainPosition</code>
-</h4><div class="docs-api-type-alias-description"><p>Function that can be used to constrain the position of a dragged element.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可用于约束元素拖动位置的函数。</p><p translation-origin="off">Function that can be used to constrain the position of a dragged element.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragConstrainPosition = <span class="hljs-function">(<span class="hljs-params">point: Point, dragRef: DragRef</span>) =&gt;</span> Point;</code>
 </pre>
@@ -4136,7 +4172,8 @@ original position in current array.</p>
 <h4 id="DropListOrientation" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="DropListOrientation"></span>
   <code>DropListOrientation</code>
-</h4><div class="docs-api-type-alias-description"><p>Possible orientations for a drop list.</p>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">下拉列表的可能方向。</p><p translation-origin="off">Possible orientations for a drop list.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DropListOrientation = <span class="hljs-string">'horizontal'</span> | <span class="hljs-string">'vertical'</span>;</code>
 </pre>
@@ -4153,9 +4190,10 @@ original position in current array.</p>
 <h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DROP_LIST"></span>
   <code>CDK_DROP_LIST</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDropList</code> 实例的注入令牌。它用作实际 <code>CdkDropList</code> 类的备用令牌，这可能导致不必要地保留该类及其指令元数据。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
 alternative token to the actual <code>CdkDropList</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
@@ -4168,8 +4206,9 @@ retention of the class and its directive metadata.</p>
 <h4 id="CDK_DRAG_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DRAG_CONFIG"></span>
   <code>CDK_DRAG_CONFIG</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to configure the
+</h4><div class="docs-api-constant-description"><p translation-result="on">注入令牌，可用于配置与拖放相关的组件的行为。</p><p translation-origin="off">Injection token that can be used to configure the
 behavior of the drag&amp;drop-related components.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_CONFIG: InjectionToken&lt;DragDropConfig&gt;;</code>
 </pre>
@@ -4182,9 +4221,10 @@ behavior of the drag&amp;drop-related components.</p>
 <h4 id="CDK_DROP_LIST_GROUP" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DROP_LIST_GROUP"></span>
   <code>CDK_DROP_LIST_GROUP</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDropListGroup</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDropListGroup</code> 实例的注入令牌。它用作实际 <code>CdkDropListGroup</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDropListGroup</code>. It serves as
 alternative token to the actual <code>CdkDropListGroup</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: InjectionToken&lt;CdkDropListGroup&lt;unknown&gt;&gt;;</code>
 </pre>
@@ -4197,9 +4237,10 @@ retention of the class and its directive metadata.</p>
 <h4 id="CDK_DRAG_HANDLE" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DRAG_HANDLE"></span>
   <code>CDK_DRAG_HANDLE</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDragHandle</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDragHandle</code> 实例的注入令牌。它用作实际 <code>CdkDragHandle</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDragHandle</code>. It serves as
 alternative token to the actual <code>CdkDragHandle</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_HANDLE: InjectionToken&lt;CdkDragHandle&gt;;</code>
 </pre>
@@ -4212,9 +4253,10 @@ retention of the class and its directive metadata.</p>
 <h4 id="CDK_DRAG_PREVIEW" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DRAG_PREVIEW"></span>
   <code>CDK_DRAG_PREVIEW</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDragPreview</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDragPreview</code> 实例的注入令牌。它用作实际 <code>CdkDragPreview</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDragPreview</code>. It serves as
 alternative token to the actual <code>CdkDragPreview</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PREVIEW: InjectionToken&lt;CdkDragPreview&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
@@ -4227,9 +4269,10 @@ retention of the class and its directive metadata.</p>
 <h4 id="CDK_DRAG_PLACEHOLDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DRAG_PLACEHOLDER"></span>
   <code>CDK_DRAG_PLACEHOLDER</code>
-</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDragPlaceholder</code>. It serves as
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDragPlaceholder</code> 实例的注入令牌。它用作实际 <code>CdkDragPlaceholder</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDragPlaceholder</code>. It serves as
 alternative token to the actual <code>CdkDragPlaceholder</code> class which could cause unnecessary
 retention of the class and its directive metadata.</p>
+
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PLACEHOLDER: InjectionToken&lt;CdkDragPlaceholder&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
