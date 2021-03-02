@@ -25,7 +25,8 @@
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material tree node.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">与标准 Angular Material 树节点进行交互的组件测试工具。</p><p translation-origin="off">Harness for interacting with a standard Angular Material tree node.</p>
+
 </div>
 
 
@@ -43,7 +44,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Collapses the node if it is expanded. Only works when node is not disabled.</p>
+      <p translation-result="on">如果节点已展开，则使其折叠。仅在未禁用节点时起作用。</p><p translation-origin="off">Collapses the node if it is expanded. Only works when node is not disabled.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -78,7 +80,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Expands the node if it is collapsed. Only works when node is not disabled.</p>
+      <p translation-result="on">如果节点已折叠，则将其展开。仅在未禁用节点时起作用。</p><p translation-origin="off">Expands the node if it is collapsed. Only works when node is not disabled.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -305,7 +308,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the level of the tree node. Note that this gets the aria-level and is 1 indexed.</p>
+      <p translation-result="on">获取此树节点的级别。请注意，这将获得 aria-level，并且起始索引为 1。</p><p translation-origin="off">Gets the level of the tree node. Note that this gets the aria-level and is 1 indexed.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -339,7 +343,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the tree node's text.</p>
+      <p translation-result="on">获取此树节点的文本。</p><p translation-origin="off">Gets the tree node's text.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -408,7 +413,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the tree node is disabled.</p>
+      <p translation-result="on">此树节点是否已禁用。</p><p translation-origin="off">Whether the tree node is disabled.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -442,7 +448,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the tree node is expanded.</p>
+      <p translation-result="on">此树节点是否已展开。</p><p translation-origin="off">Whether the tree node is expanded.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -476,7 +483,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggles node between expanded/collapsed. Only works when node is not disabled.</p>
+      <p translation-result="on">在展开/折叠之间切换节点。仅在未禁用节点时起作用。</p><p translation-origin="off">Toggles node between expanded/collapsed. Only works when node is not disabled.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -535,7 +543,8 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets all of the nodes in the tree.</p>
+      <p translation-result="on">获取树中的所有节点。</p><p translation-origin="off">Gets all of the nodes in the tree.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -588,11 +597,12 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets an object representation for the visible tree structure
+      <p translation-result="on">获取可见树结构的对象表示形式。如果某个节点位于未展开的节点之下，则不会包含该节点。例如下面这棵树（所有节点都已展开）：</p><p translation-origin="off">Gets an object representation for the visible tree structure
 If a node is under an unexpanded node it will not be included.
 Eg.
-Tree (all nodes expanded):
-<code>&lt;mat-tree&gt;
+Tree (all nodes expanded):</p>
+
+<p><code>&lt;mat-tree&gt;
   &lt;mat-tree-node&gt;Node 1&lt;mat-tree-node&gt;
   &lt;mat-nested-tree-node&gt;
     Node 2
@@ -607,15 +617,16 @@ Tree (all nodes expanded):
     &lt;mat-tree-node&gt;
   &lt;mat-nested-tree-node&gt;
 &lt;/mat-tree&gt;</code></p>
-<p>Tree structure:
-{
- children: [
+<p translation-result="on">树结构：</p><p translation-origin="off">Tree structure:</p>
+
+<p><code>{
+ children: \[
    {
      text: 'Node 1',
-     children: [
+     children: \[
        {
          text: 'Node 2',
-         children: [
+         children: \[
            {
              text: 'Node 2.1',
              children: [{text: 'Node 2.1.1'}]
@@ -626,7 +637,7 @@ Tree (all nodes expanded):
      ]
    }
  ]
-};</p>
+};</code></p>
 
     </td>
   </tr></tbody><thead>
@@ -696,7 +707,8 @@ Tree (all nodes expanded):
 <h4 id="TreeHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TreeHarnessFilters"></span>
   <code>TreeHarnessFilters</code>
-</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of tree harness instances</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组条件，可用于筛选树测试工具实例的列表</p><p translation-origin="off">A set of criteria that can be used to filter a list of tree harness instances</p>
+
 </div>
 
 
@@ -710,7 +722,8 @@ Tree (all nodes expanded):
 <h4 id="TreeNodeHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TreeNodeHarnessFilters"></span>
   <code>TreeNodeHarnessFilters</code>
-</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of node harness instances.</p>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组条件，可用于筛选节点测试工具实例的列表。</p><p translation-origin="off">A set of criteria that can be used to filter a list of node harness instances.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -725,7 +738,8 @@ Tree (all nodes expanded):
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Only find instances whose disabled state matches the given value.</p>
+  <td class="docs-api-property-description"><p translation-result="on">仅查找其禁用状态与给定值匹配的实例。</p><p translation-origin="off">Only find instances whose disabled state matches the given value.</p>
+
 </td>
 </tr>
 
@@ -738,7 +752,8 @@ Tree (all nodes expanded):
       <code>expanded: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Only find instances whose expansion state matches the given value.</p>
+  <td class="docs-api-property-description"><p translation-result="on">仅查找其展开状态与给定值匹配的实例。</p><p translation-origin="off">Only find instances whose expansion state matches the given value.</p>
+
 </td>
 </tr>
 
@@ -751,7 +766,8 @@ Tree (all nodes expanded):
       <code>level: number</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Only find instances whose level matches the given value.</p>
+  <td class="docs-api-property-description"><p translation-result="on">仅查找其级别与给定值匹配的实例。</p><p translation-origin="off">Only find instances whose level matches the given value.</p>
+
 </td>
 </tr>
 

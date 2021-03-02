@@ -816,10 +816,12 @@ inside the outlet.</p>
   <span header-link="MatTreeFlattener"></span>
   <code>MatTreeFlattener</code>
   
-</h4><div class="docs-api-class-description"><p>Tree flattener to convert a normal type of node to node with children &amp; level information.
+</h4><div class="docs-api-class-description"><p translation-result="on">树展平器，用于将普通类型的节点转换为具有子级和级别信息的节点。把 <code>T</code> 型嵌套节点转换为 <code>F</code> 型扁平节点。</p><p translation-origin="off">Tree flattener to convert a normal type of node to node with children &amp; level information.
 Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F</code>.</p>
-<p>For example, the input data of type <code>T</code> is nested, and contains its children data:
-  SomeNode: {
+
+<p translation-result="on">例如，类型为 <code>T</code> 的输入数据是嵌套的，并包含其子数据：</p><p translation-origin="off">For example, the input data of type <code>T</code> is nested, and contains its children data:</p>
+
+<p>  SomeNode: {
     key: 'Fruits',
     children: [
       NodeOne: {
@@ -829,9 +831,10 @@ Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F
        key: 'Pear',
      }
    ]
- }
- After flattener flatten the tree, the structure will become
- SomeNode: {
+ }</p>
+<p translation-result="on">当展平之后，其结构变为：</p><p translation-origin="off"> After flattener flatten the tree, the structure will become</p>
+
+<p> SomeNode: {
    key: 'Fruits',
    expandable: true,
    level: 1
@@ -845,9 +848,8 @@ Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F
   key: 'Pear',
   expandable: false,
   level: 2
-}
-and the output flattened type is <code>F</code> with additional information.</p>
-<p>For example, the input data of type <code>T</code> is nested, and contains its children data: SomeNode: { key: 'Fruits', children: [ NodeOne: { key: 'Apple', }, NodeTwo: { key: 'Pear', } ] } After flattener flatten the tree, the structure will become SomeNode: { key: 'Fruits', expandable: true, level: 1 }, NodeOne: { key: 'Apple', expandable: false, level: 2 }, NodeTwo: { key: 'Pear', expandable: false, level: 2 } and the output flattened type is <code>F</code> with additional information.</p>
+}</p>
+<p>and the output flattened type is <code>F</code> with additional information.</p>
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -918,8 +920,9 @@ and the output flattened type is <code>F</code> with additional information.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Expand flattened node with current expansion status.
+      <p translation-result="on">根据当前展开状态展开已展平的节点。返回的列表长度可能不同。</p><p translation-origin="off">Expand flattened node with current expansion status.
 The returned list may have different length.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -983,9 +986,10 @@ The returned list may have different length.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Flatten a list of node type T to flattened version of node F.
+      <p translation-result="on">将节点类型为 T 的列表展平为节点类型为 F 的展平版本。请注意，类型 T 可能是嵌套的，而 <code>structuredData</code> 的长度可能与返回列表 <code>F[]</code> 的长度不同。</p><p translation-origin="off">Flatten a list of node type T to flattened version of node F.
 Please note that type T may be nested, and the length of <code>structuredData</code> may be different
 from that of returned list <code>F[]</code>.</p>
+
 
     </td>
   </tr></tbody><thead>
@@ -1043,11 +1047,12 @@ from that of returned list <code>F[]</code>.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p>Data source for flat tree.
+</h4><div class="docs-api-class-description"><p translation-result="on">扁平树的数据源。数据源需要处理树节点的展开/折叠，并将数据提更改为 <code>MatTree</code>。<code>T</code> 型的嵌套树节点由 <code>MatTreeFlattener</code> 展平，并转换为 <code>F</code> 型，供 <code>MatTree</code> 使用。</p><p translation-origin="off">Data source for flat tree.
 The data source need to handle expansion/collapsion of the tree node and change the data feed
 to <code>MatTree</code>.
 The nested tree nodes of type <code>T</code> are flattened through <code>MatTreeFlattener</code>, and converted
 to type <code>F</code> for <code>MatTree</code> to consume.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1147,9 +1152,11 @@ to type <code>F</code> for <code>MatTree</code> to consume.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p>Data source for nested tree.</p>
-<p>The data source for nested tree doesn't have to consider node flattener, or the way to expand
+</h4><div class="docs-api-class-description"><p translation-result="on">嵌套树的数据源。</p><p translation-origin="off">Data source for nested tree.</p>
+
+<p translation-result="on">嵌套树的数据源不必考虑节点展平器，也不必考虑展开或折叠的方式。展开/折叠将由 TreeControl 和每个非叶节点处理。</p><p translation-origin="off">The data source for nested tree doesn't have to consider node flattener, or the way to expand
 or collapse. The expansion/collapsion will be handled by TreeControl and each non-leaf node.</p>
+
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
@@ -1164,7 +1171,8 @@ or collapse. The expansion/collapsion will be handled by TreeControl and each no
       <code>data: T[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Data for the nested tree</p>
+  <td class="docs-api-property-description"><p translation-result="on">嵌套树的数据</p><p translation-origin="off">Data for the nested tree</p>
+
 </td>
 </tr>
 
