@@ -6,13 +6,21 @@
 
 <span class="hljs-comment">/**
  * Node for to-do item
+ *
+ * 待办事项的节点
+ *
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoItemNode</span> </span>{
   <span class="hljs-attr">children</span>: TodoItemNode[];
   item: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-comment">/** Flat to-do item node with expandable and level information */</span>
+<span class="hljs-comment">/**
+ * Flat to-do item node with expandable and level information
+ *
+ * 具有可扩展和级别信息的平面待办事项节点
+ *
+ */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoItemFlatNode</span> </span>{
   <span class="hljs-attr">item</span>: <span class="hljs-built_in">string</span>;
   level: <span class="hljs-built_in">number</span>;
@@ -21,6 +29,9 @@
 
 <span class="hljs-comment">/**
  * The Json object for to-do list data.
+ *
+ * 待办事项列表数据的 Json 对象。
+ *
  */</span>
 <span class="hljs-keyword">const</span> TREE_DATA = {
   <span class="hljs-attr">Groceries</span>: {
@@ -40,6 +51,9 @@
  * Checklist database, it can build a tree structured Json object.
  * Each node in Json object represents a to-do item or a category.
  * If a node is a category, it has children items and new items can be added under the category.
+ *
+ * 检查列表数据库，它可以构建一个树状结构的 Json 对象。 Json 对象中的每个节点代表一个待办事项或一个类别。如果一个节点是一个类别，它有子条目，并且可以在该类别下添加新条目。
+ *
  */</span>
 <span class="hljs-meta">@Injectable</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ChecklistDatabase</span> </span>{
@@ -65,6 +79,9 @@
   <span class="hljs-comment">/**
    * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
    * The return value is the list of `TodoItemNode`.
+   *
+   * 构建文件结构树。该 `value` 是 Json 对象，或 Json 对象的子树。返回值是 `TodoItemNode` 的列表。
+   *
    */</span>
   buildFileTree(obj: {[key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>}, <span class="hljs-attr">level</span>: <span class="hljs-built_in">number</span>): TodoItemNode[] {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(obj).reduce&lt;TodoItemNode[]&gt;(<span class="hljs-function">(<span class="hljs-params">accumulator, key</span>) =&gt;</span> {
@@ -84,7 +101,12 @@
     }, []);
   }
 
-  <span class="hljs-comment">/** Add an item to to-do list */</span>
+  <span class="hljs-comment">/**
+   * Add an item to to-do list
+   *
+   * 将条目添加到待办事项列表
+   *
+   */</span>
   <span class="hljs-function"><span class="hljs-title">insertItem</span>(<span class="hljs-params">parent: TodoItemNode, name: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-keyword">if</span> (parent.children) {
       parent.children.push({<span class="hljs-attr">item</span>: name} <span class="hljs-keyword">as</span> TodoItemNode);
@@ -108,16 +130,36 @@
   <span class="hljs-attr">providers</span>: [ChecklistDatabase],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeChecklistExample</span> </span>{
-  <span class="hljs-comment">/** Map from flat node to nested node. This helps us finding the nested node to be modified */</span>
+  <span class="hljs-comment">/**
+   * Map from flat node to nested node. This helps us finding the nested node to be modified
+   *
+   * 从平面节点映射到嵌套节点。这有助于我们找到要修改的嵌套节点
+   *
+   */</span>
   flatNodeMap = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;TodoItemFlatNode, TodoItemNode&gt;();
 
-  <span class="hljs-comment">/** Map from nested node to flattened node. This helps us to keep the same object for selection */</span>
+  <span class="hljs-comment">/**
+   * Map from nested node to flattened node. This helps us to keep the same object for selection
+   *
+   * 从嵌套节点映射到平面节点。这有助于我们保留相同的对象以供选择
+   *
+   */</span>
   nestedNodeMap = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;TodoItemNode, TodoItemFlatNode&gt;();
 
-  <span class="hljs-comment">/** A selected parent node to be inserted */</span>
+  <span class="hljs-comment">/**
+   * A selected parent node to be inserted
+   *
+   * 要插入的已选定父节点
+   *
+   */</span>
   selectedParent: TodoItemFlatNode | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
 
-  <span class="hljs-comment">/** The new item&#x27;s name */</span>
+  <span class="hljs-comment">/**
+   * The new item&#x27;s name
+   *
+   * 新条目的名称
+   *
+   */</span>
   newItemName = <span class="hljs-string">&#x27;&#x27;</span>;
 
   treeControl: FlatTreeControl&lt;TodoItemFlatNode&gt;;
@@ -126,7 +168,12 @@
 
   dataSource: MatTreeFlatDataSource&lt;TodoItemNode, TodoItemFlatNode&gt;;
 
-  <span class="hljs-comment">/** The selection for checklist */</span>
+  <span class="hljs-comment">/**
+   * The selection for checklist
+   *
+   * 检查的选择结果
+   *
+   */</span>
   checklistSelection = <span class="hljs-keyword">new</span> SelectionModel&lt;TodoItemFlatNode&gt;(<span class="hljs-literal">true</span> <span class="hljs-comment">/* multiple */</span>);
 
   <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _database: ChecklistDatabase</span>)</span> {
@@ -156,6 +203,9 @@
 
   <span class="hljs-comment">/**
    * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
+   *
+   * 将嵌套节点转换为平面节点的转换器。在 map 中记录这些节点以备后用。
+   *
    */</span>
   transformer = <span class="hljs-function">(<span class="hljs-params">node: TodoItemNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
     <span class="hljs-keyword">const</span> existingNode = <span class="hljs-built_in">this</span>.nestedNodeMap.get(node);
@@ -169,7 +219,12 @@
     <span class="hljs-keyword">return</span> flatNode;
   };
 
-  <span class="hljs-comment">/** Whether all the descendants of the node are selected. */</span>
+  <span class="hljs-comment">/**
+   * Whether all the descendants of the node are selected.
+   *
+   * 节点的所有后代是否都被选定了。
+   *
+   */</span>
   descendantsAllSelected(node: TodoItemFlatNode): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-built_in">this</span>.treeControl.getDescendants(node);
     <span class="hljs-keyword">const</span> descAllSelected =
@@ -180,14 +235,24 @@
     <span class="hljs-keyword">return</span> descAllSelected;
   }
 
-  <span class="hljs-comment">/** Whether part of the descendants are selected */</span>
+  <span class="hljs-comment">/**
+   * Whether part of the descendants are selected
+   *
+   * 是否选定了部分后代
+   *
+   */</span>
   descendantsPartiallySelected(node: TodoItemFlatNode): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-built_in">this</span>.treeControl.getDescendants(node);
     <span class="hljs-keyword">const</span> result = descendants.some(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> <span class="hljs-built_in">this</span>.checklistSelection.isSelected(child));
     <span class="hljs-keyword">return</span> result &amp;&amp; !<span class="hljs-built_in">this</span>.descendantsAllSelected(node);
   }
 
-  <span class="hljs-comment">/** Toggle the to-do item selection. Select/deselect all the descendants node */</span>
+  <span class="hljs-comment">/**
+   * Toggle the to-do item selection. Select/deselect all the descendants node
+   *
+   * 切换待办事项选择结果。选定/取消选定所有后代节点
+   *
+   */</span>
   todoItemSelectionToggle(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.checklistSelection.toggle(node);
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-built_in">this</span>.treeControl.getDescendants(node);
@@ -200,7 +265,12 @@
     <span class="hljs-built_in">this</span>.checkAllParentsSelection(node);
   }
 
-  <span class="hljs-comment">/** Toggle a leaf to-do item selection. Check all the parents to see if they changed */</span>
+  <span class="hljs-comment">/**
+   * Toggle a leaf to-do item selection. Check all the parents to see if they changed
+   *
+   * 切换叶待办事项的选择结果。检查所有的父母，看看它们是否改变了
+   *
+   */</span>
   todoLeafItemSelectionToggle(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
     <span class="hljs-built_in">this</span>.checklistSelection.toggle(node);
     <span class="hljs-built_in">this</span>.checkAllParentsSelection(node);
@@ -215,7 +285,12 @@
     }
   }
 
-  <span class="hljs-comment">/** Check root node checked state and change it accordingly */</span>
+  <span class="hljs-comment">/**
+   * Check root node checked state and change it accordingly
+   *
+   * 检查根节点的勾选状态并相应地更改它
+   *
+   */</span>
   checkRootNodeSelection(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">const</span> nodeSelected = <span class="hljs-built_in">this</span>.checklistSelection.isSelected(node);
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-built_in">this</span>.treeControl.getDescendants(node);
@@ -251,14 +326,24 @@
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
 
-  <span class="hljs-comment">/** Select the category so we can insert the new item. */</span>
+  <span class="hljs-comment">/**
+   * Select the category so we can insert the new item.
+   *
+   * 选定此类别，以便我们可以插入新条目。
+   *
+   */</span>
   <span class="hljs-function"><span class="hljs-title">addNewItem</span>(<span class="hljs-params">node: TodoItemFlatNode</span>)</span> {
     <span class="hljs-keyword">const</span> parentNode = <span class="hljs-built_in">this</span>.flatNodeMap.get(node);
     <span class="hljs-built_in">this</span>._database.insertItem(parentNode!, <span class="hljs-string">&#x27;&#x27;</span>);
     <span class="hljs-built_in">this</span>.treeControl.expand(node);
   }
 
-  <span class="hljs-comment">/** Save the node to database */</span>
+  <span class="hljs-comment">/**
+   * Save the node to database
+   *
+   * 将节点保存到数据库
+   *
+   */</span>
   <span class="hljs-function"><span class="hljs-title">saveNode</span>(<span class="hljs-params">node: TodoItemFlatNode, itemValue: <span class="hljs-built_in">string</span></span>)</span> {
     <span class="hljs-keyword">const</span> nestedNode = <span class="hljs-built_in">this</span>.flatNodeMap.get(node);
     <span class="hljs-built_in">this</span>._database.updateItem(nestedNode!, itemValue);

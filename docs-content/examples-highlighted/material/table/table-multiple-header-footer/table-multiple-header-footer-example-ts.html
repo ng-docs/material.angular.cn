@@ -24,7 +24,12 @@
     {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Swim suit&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">15</span>},
   ];
 
-  <span class="hljs-comment">/** Gets the total cost of all transactions. */</span>
+  <span class="hljs-comment">/**
+   * Gets the total cost of all transactions.
+   *
+   * 获取所有交易的总成本。
+   *
+   */</span>
   <span class="hljs-function"><span class="hljs-title">getTotalCost</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.transactions.map(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.cost).reduce(<span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> acc + value, <span class="hljs-number">0</span>);
   }

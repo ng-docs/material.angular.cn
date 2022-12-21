@@ -10,7 +10,12 @@
   fruit: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-comment">/** Constants used to fill up our data base. */</span>
+<span class="hljs-comment">/**
+ * Constants used to fill up our data base.
+ *
+ * 一些用于填充我们的数据库的常量。
+ *
+ */</span>
 <span class="hljs-keyword">const</span> FRUITS: <span class="hljs-built_in">string</span>[] = [
   <span class="hljs-string">&#x27;blueberry&#x27;</span>,
   <span class="hljs-string">&#x27;lychee&#x27;</span>,
@@ -81,7 +86,12 @@
   }
 }
 
-<span class="hljs-comment">/** Builds and returns a new User. */</span>
+<span class="hljs-comment">/**
+ * Builds and returns a new User.
+ *
+ * 构建并返回一个新用户。
+ *
+ */</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createNewUser</span>(<span class="hljs-params">id: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">UserData</span> </span>{
   <span class="hljs-keyword">const</span> name =
     NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] +
