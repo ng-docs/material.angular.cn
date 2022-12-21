@@ -1,0 +1,454 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-slider-api-参考文档--">
+    Angular Material legacy-slider API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-slider</code></p><h3 id="material-legacy-slider-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlider" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlider"></span>
+  <code>MatLegacySlider</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">允许用户通过移动滑杆来从一系列值中进行选择。它的行为类似于原生的 <code>&lt;input type="range"&gt;</code> 元素。</p><p translation-origin="off">Allows users to select from a range of values by moving the slider thumb. It is similar in
+behavior to the native <code>&lt;input type="range"&gt;</code> element.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-slider</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSlider</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的主题调色板。</p><p translation-origin="off">Theme color palette for the component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>displayWith: (value: number) =&gt; string | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在滑块的标签上显示值之前用来格式化该值的函数。可以用来格式化非常大的数字，以便让它们适配滑杆。</p><p translation-origin="off">Function that will be used to format the value before it is displayed
+in the thumb label. Can be used to format very large number in order
+for them to fit into the slider thumb.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>invert: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆是否反转了。</p><p translation-origin="off">Whether the slider is inverted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>max: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆所具有的最大值。</p><p translation-origin="off">The maximum value that the slider can have.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>min: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆所具有的最小值。</p><p translation-origin="off">The minimum value that the slider can have.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>step: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑块处的值。</p><p translation-origin="off">The values at which the thumb will snap.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>thumbLabel: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否要显示这个滑块标签。</p><p translation-origin="off">Whether or not to show the thumb label.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>tickInterval: 'auto' | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">多远才显示一个刻度。相对于步长来说，刻度总是会出现在一个步长上。例如：刻度的间隔为 4，步长为 3，则每 4 步（每 12 个值）就会画一个刻度。</p><p translation-origin="off">How often to show ticks. Relative to the step so that a tick always appears on a step.
+Ex: Tick interval of 4 with a step of 3 will draw a tick every 4 steps (every 12 values).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆的值。</p><p translation-origin="off">Value of the slider.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>valueText: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对应滑杆值的文本。主要用于改善无障碍性。</p><p translation-origin="off">Text corresponding to the slider's value. Used primarily for improved accessibility.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>vertical: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆是否垂直。</p><p translation-origin="off">Whether the slider is vertical.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatLegacySliderChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆值发生变化时发出的事件。</p><p translation-origin="off">Event emitted when the slider value has changed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>input: EventEmitter&lt;MatLegacySliderChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑杆上的滑块移动时发出的事件。</p><p translation-origin="off">Event emitted when the slider thumb moves.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，则默认颜色恢复为原来的颜色。</p><p translation-origin="off">Default color to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，将退回到 Tabindex。</p><p translation-origin="off">Tabindex to which to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>displayValue: string | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">供显示用的值。</p><p translation-origin="off">The value to be used for display purposes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>onTouched: () =&gt; any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">通过 ControlValueAccessor 上的 registerOnTouch 注册的 onTouch 函数。</p><p translation-origin="off">onTouch function registered via registerOnTouch (ControlValueAccessor).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>percent: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">与滑杆值一致的百分比值。</p><p translation-origin="off">The percentage of the slider that coincides with the value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">blur
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让宿主元素失焦</p><p translation-origin="off">blur the host element</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把焦点设置到宿主元素上</p><p translation-origin="off">set focus to the host element</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-legacy-slider-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatLegacySliderChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySliderChange"></span>
+  <code>MatLegacySliderChange</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">MatSlider 组件发出的一个简单的 change 事件。</p><p translation-origin="off">A simple change event emitted by the MatSlider component.</p>
+
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatLegacySlider</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">发生改变的 MatSlider。</p><p translation-origin="off">The MatSlider that changed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: number | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">源滑杆的新值。</p><p translation-origin="off">The new value of the source slider.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    </div>

@@ -1,0 +1,588 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-button-toggle-api-参考文档--">
+    Angular Material button-toggle API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatButtonToggleModule} from '@angular/material/button-toggle';
+      </code>
+    </p>
+  <h3 id="material-button-toggle-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatButtonToggleGroup" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatButtonToggleGroup"></span>
+  <code>MatButtonToggleGroup</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">排他性按钮开关组的行为类似于单选按钮组。</p><p translation-origin="off">Exclusive selection button toggle group that behaves like a radio-button group.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-button-toggle-group</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matButtonToggleGroup</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>appearance: MatButtonToggleAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组中所有按钮的外观。</p><p translation-origin="off">The appearance for all the buttons in the group.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了多按钮开关组。</p><p translation-origin="off">Whether multiple button toggle group is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>multiple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否可以选择多个按钮开关。</p><p translation-origin="off">Whether multiple button toggles can be selected.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">底层 <code>input</code> 元素的 <code>name</code> 属性。</p><p translation-origin="off"><code>name</code> attribute for the underlying <code>input</code> element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">开关组的值。</p><p translation-origin="off">Value of the toggle group.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>vertical: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">开关组是否为垂直的。</p><p translation-origin="off">Whether the toggle group is vertical.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatButtonToggleChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当组的值发生变化时会发出本事件。</p><p translation-origin="off">Event emitted when the group's value changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selected: MatButtonToggle | MatButtonToggle[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本组中选定的按钮开关。</p><p translation-origin="off">Selected button toggles in the group.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatButtonToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatButtonToggle"></span>
+  <code>MatButtonToggle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">开关组内部的单个按钮。</p><p translation-origin="off">Single button inside of a toggle group.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-button-toggle</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matButtonToggle</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>appearance: MatButtonToggleAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此按钮的外观样式。</p><p translation-origin="off">The appearance style of the button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">附着在宿主元素上的 aria-label 属性。在大多数情况下，aria-labelledby 优先，所以可省略。</p><p translation-origin="off">Attached to the aria-label attribute of the host element. In most cases, aria-labelledby will
+take precedence so this may be omitted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户可以指定 <code>aria-labelledby</code> 属性，它会被转发到 input 元素上</p><p translation-origin="off">Users can specify the <code>aria-labelledby</code> attribute which will be forwarded to the input element</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此按钮是否被勾选。</p><p translation-origin="off">Whether the button is checked.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用涟漪。</p><p translation-origin="off">Whether ripples are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此按钮是否已禁用。</p><p translation-origin="off">Whether the button is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此按钮开关的唯一 ID。</p><p translation-origin="off">The unique ID for this button toggle.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">HTML 的 'name' 属性用于对单选按钮进行分组以进行唯一选择。</p><p translation-origin="off">HTML's 'name' attribute used to group radios for unique selection.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">MatButtonToggleGroup 读取它来指定自己的值。</p><p translation-origin="off">MatButtonToggleGroup reads this to assign its own value.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatButtonToggleChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本组的值发生变化时发出的事件。</p><p translation-origin="off">Event emitted when the group value changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>buttonId: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>button</code> 元素的唯一 ID。</p><p translation-origin="off">Unique ID for the underlying <code>button</code> element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>buttonToggleGroup: MatButtonToggleGroup</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">父开关组（排他选择）。可选。</p><p translation-origin="off">The parent button toggle group (exclusive selection). Optional.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此按钮获得焦点。</p><p translation-origin="off">Focuses the button.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-button-toggle-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatButtonToggleChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatButtonToggleChange"></span>
+  <code>MatButtonToggleChange</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">MatButtonToggle 发出的变更事件对象。</p><p translation-origin="off">Change event object emitted by button toggle.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatButtonToggle</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">发出此事件的 MatButtonToggle。</p><p translation-origin="off">The button toggle that emits the event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">赋值给此 MatButtonToggle 的值。</p><p translation-origin="off">The value assigned to the button toggle.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-button-toggle-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatButtonToggleDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatButtonToggleDefaultOptions"></span>
+  <code>MatButtonToggleDefaultOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">表示按钮开关的默认选项，可用 <code>MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS</code> 注入令牌进行配置。</p><p translation-origin="off">Represents the default options for the button toggle that can be configured
+using the <code>MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS</code> injection token.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>appearance: MatButtonToggleAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">切换按钮使用的默认外观。可以通过在切换按钮或组上显式设置外观来覆盖。</p><p translation-origin="off">Default appearance to be used by button toggles. Can be overridden by explicitly
+setting an appearance on a button toggle or group.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-button-toggle-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="ToggleType" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ToggleType"></span>
+  <code>ToggleType</code>
+</h4><div class="docs-api-type-alias-deprecated-marker" title="将会在 v11.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> ToggleType = <span class="hljs-string">'checkbox'</span> | <span class="hljs-string">'radio'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MatButtonToggleAppearance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatButtonToggleAppearance"></span>
+  <code>MatButtonToggleAppearance</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">按钮开关可能的外观样式。</p><p translation-origin="off">Possible appearance styles for the button toggle.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatButtonToggleAppearance = <span class="hljs-string">'legacy'</span> | <span class="hljs-string">'standard'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-button-toggle-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS"></span>
+  <code>MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">注入令牌，可以用来配置应用中所有按钮开关的默认选项。</p><p translation-origin="off">Injection token that can be used to configure the
+default options for all button toggles within an app.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS: InjectionToken&lt;MatButtonToggleDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_BUTTON_TOGGLE_GROUP" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_BUTTON_TOGGLE_GROUP"></span>
+  <code>MAT_BUTTON_TOGGLE_GROUP</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来引用 <code>MatButtonToggleGroup</code> 实例。它可以作为实际 <code>MatButtonToggleGroup</code> 类的备用令牌，使用实际类会导致无法优化不必要的类及其组件元数据。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>MatButtonToggleGroup</code>.
+It serves as alternative token to the actual <code>MatButtonToggleGroup</code> class which
+could cause unnecessary retention of the class and its component metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_BUTTON_TOGGLE_GROUP: InjectionToken&lt;MatButtonToggleGroup&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

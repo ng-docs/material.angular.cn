@@ -1,0 +1,102 @@
+<div class="docs-markdown"><p translation-result="on"><code>matSort</code> 和 <code>mat-sort-header</code> 用于为表格型数据添加排序状态并显示出来。</p><p translation-origin="off">The <code>matSort</code> and <code>mat-sort-header</code> are used, respectively, to add sorting state and display
+to tabular data.</p>
+
+<div material-docs-example="sort-overview"></div>
+
+
+        <h3 id="adding-sort-to-table-headers" class="docs-header-link" translation-result="on">
+          <span header-link="为表头添加排序功能"></span>
+          为表头添加排序功能
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="adding-sort-to-table-headers"></span>
+          Adding sort to table headers
+        </h3>
+      
+        
+      <p translation-result="on">要想为表头添加排序行为和样式，请把 <code>&lt;mat-sort-header&gt;</code> 组件添加到每个表头中，并提供一个 <code>id</code> 来标识它。
+这些表头应该包含在一个带有 <code>matSort</code> 指令的父元素中，当用户在表头上触发排序时，该指令将会发出一个 <code>matSortChange</code> 事件。</p><p translation-origin="off">To add sorting behavior and styling to a set of table headers, add the <code>&lt;mat-sort-header&gt;</code> component
+to each header and provide an <code>id</code> that will identify it. These headers should be contained within a
+parent element with the <code>matSort</code> directive, which will emit a <code>matSortChange</code> event when the user
+ triggers sorting on the header.</p>
+
+<p translation-result="on">用户可以通过鼠标点击或键盘动作来为表头触发排序。这时，<code>matSort</code> 就会发出一个 <code>matSortChange</code> 事件，其中包含触发排序的表头和排序的方向（<code>asc</code> 或 <code>desc</code>）。</p><p translation-origin="off">Users can trigger the sort header through a mouse click or keyboard action. When this happens, the
+<code>matSort</code> will emit a <code>matSortChange</code> event that contains the ID of the header triggered and the
+direction to sort (<code>asc</code> or <code>desc</code>).</p>
+
+
+        <h4 id="changing-the-sort-order" class="docs-header-link" translation-result="on">
+          <span header-link="修改排序方向"></span>
+          修改排序方向
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="changing-the-sort-order"></span>
+          Changing the sort order
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，排序表头的排序方向先从 <code>asc</code> 开始，再点就变成 <code>desc</code>，再点一次则会移除排序。</p><p translation-origin="off">By default, a sort header starts its sorting at <code>asc</code> and then <code>desc</code>. Triggering the sort header
+after <code>desc</code> will remove sorting.</p>
+
+<p translation-result="on">要想逆转所有表头的排序顺序，请把 <code>matSort</code> 指令的 <code>matSortStart</code> 属性设置为 <code>desc</code>。
+如果要对某个特定的表头逆转排序顺序，请设置那个表头自身的输入属性 <code>start</code>。</p><p translation-origin="off">To reverse the sort order for all headers, set the <code>matSortStart</code> to <code>desc</code> on the <code>matSort</code>
+directive. To reverse the order only for a specific header, set the <code>start</code> input only on the header
+instead.</p>
+
+<p translation-result="on">要想阻止该用户从已经排序的列上清除排序状态，请把 <code>matSort</code> 的 <code>matSortDisableClear</code> 属性设置为 <code>true</code> 来影响所有表头，如果只想针对特定的表头，请把该表头的 <code>disableClear</code> 设置为 <code>true</code>。</p><p translation-origin="off">To prevent the user from clearing the sort state from an already sorted column, set
+<code>matSortDisableClear</code> to <code>true</code> on the <code>matSort</code> to affect all headers, or set <code>disableClear</code> to
+<code>true</code> on a specific header.</p>
+
+
+        <h4 id="disabling-sorting" class="docs-header-link" translation-result="on">
+          <span header-link="禁用排序"></span>
+          禁用排序
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="disabling-sorting"></span>
+          Disabling sorting
+        </h4>
+      
+        
+      <p translation-result="on">如果你要阻止用户修改所有列的排序状态，可以绑定 <code>mat-sort</code> 的 <code>matSortDisabled</code> 属性；如果只想针对单个 <code>mat-sort-header</code>，请绑定它的 <code>disabled</code> 属性。</p><p translation-origin="off">If you want to prevent the user from changing the sorting order of any column, you can use the
+<code>matSortDisabled</code> binding on the <code>mat-sort</code>, or the <code>disabled</code> on a single <code>mat-sort-header</code>.</p>
+
+
+        <h4 id="using-sort-with-the-mat-table" class="docs-header-link" translation-result="on">
+          <span header-link="在-mat-table-上使用排序"></span>
+          在 mat-table 上使用排序
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="using-sort-with-the-mat-table"></span>
+          Using sort with the mat-table
+        </h4>
+      
+        
+      <p translation-result="on">当使用 <code>mat-table</code> 中的表头时，不需要为它设置 <code>mat-sort-header</code>，因为默认情况下它将会使用列本身的 id。</p><p translation-origin="off">When used on a <code>mat-table</code> header, it is not required to set a <code>mat-sort-header</code> id on because
+by default it will use the id of the column.</p>
+
+<div material-docs-example="table-sorting"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">当你将 <code>MatSortHeader</code> 应用于标题单元格元素时，该组件会将标题单元格的内容包装在按钮内。然后标题单元格的文本内容就会成为排序按钮的无障碍标签。但是，标题单元格文本通常会描述列，而不会用来与控件交互执行排序操作。要清楚地表达标题如何执行排序，请始终使用输入属性 <code>sortActionDescription</code> 来提供按钮元素的描述，例如“按姓氏排序”。</p><p translation-origin="off">When you apply <code>MatSortHeader</code> to a header cell element, the component wraps the content of the
+header cell inside a button. The text content of the header cell then becomes the accessible
+label for the sort button. However, the header cell text typically describes the column and does
+not indicate that interacting with the control performs a sorting action. To clearly communicate
+that the header performs sorting, always use the <code>sortActionDescription</code> input to provide a
+description for the button element, such as "Sort by last name".</p>
+
+<p translation-result="on"><code>MatSortHeader</code> 应用 <code>aria-sort</code> 属性将当前排序状态传达给辅助技术。但是，大多数屏幕阅读器不会播报 <code>aria-sort</code> 值的更改，这意味着屏幕阅读器用户不会收到排序发生的反馈。要解决此问题，请使用 <code>MatSort</code> 指令上的 <code>matSortChange</code> 事件通过来自 <code>@angular/cdk/a11y</code> 的 <code>LiveAnnouncer</code> 服务播报本次状态更新。</p><p translation-origin="off"><code>MatSortHeader</code> applies the <code>aria-sort</code> attribute to communicate the active sort state to
+assistive technology. However, most screen readers do not announce changes to the value of
+<code>aria-sort</code>, meaning that screen reader users do not receive feedback that sorting occurred. To
+remedy this, use the <code>matSortChange</code> event on the <code>MatSort</code> directive to announce state
+updates with the <code>LiveAnnouncer</code> service from <code>@angular/cdk/a11y</code>.</p>
+
+<p translation-result="on">如果你的应用程序包含许多表和排序标头，请考虑创建自定义指令以一致地应用 <code>sortActionDescription</code> 并播报排序状态更改。</p><p translation-origin="off">If your application contains many tables and sort headers, consider creating a custom
+directives to consistently apply <code>sortActionDescription</code> and announce sort state changes. </p>
+
+</div>

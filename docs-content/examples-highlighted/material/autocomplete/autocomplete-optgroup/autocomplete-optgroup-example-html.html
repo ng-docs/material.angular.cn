@@ -1,0 +1,17 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">&quot;stateForm&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">appearance</span>=<span class="hljs-string">&quot;fill&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>States Group<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+           <span class="hljs-attr">matInput</span>
+           <span class="hljs-attr">formControlName</span>=<span class="hljs-string">&quot;stateGroup&quot;</span>
+           <span class="hljs-attr">required</span>
+           [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">&quot;autoGroup&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">autoGroup</span>=<span class="hljs-string">&quot;matAutocomplete&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let group of stateGroupOptions | async&quot;</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">&quot;group.letter&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let name of group.names&quot;</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;name&quot;</span>&gt;</span>
+            {{name}}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

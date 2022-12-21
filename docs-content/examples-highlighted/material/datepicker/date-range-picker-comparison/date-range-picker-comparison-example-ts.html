@@ -1,0 +1,23 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {FormGroup, FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
+
+<span class="hljs-keyword">const</span> today = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+<span class="hljs-keyword">const</span> month = today.getMonth();
+<span class="hljs-keyword">const</span> year = today.getFullYear();
+
+<span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Date range picker comparison ranges */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;date-range-picker-comparison-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;date-range-picker-comparison-example.html&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;date-range-picker-comparison-example.css&#x27;</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DateRangePickerComparisonExample</span> </span>{
+  campaignOne = <span class="hljs-keyword">new</span> FormGroup({
+    <span class="hljs-attr">start</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, <span class="hljs-number">13</span>)),
+    <span class="hljs-attr">end</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, <span class="hljs-number">16</span>)),
+  });
+  campaignTwo = <span class="hljs-keyword">new</span> FormGroup({
+    <span class="hljs-attr">start</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, <span class="hljs-number">15</span>)),
+    <span class="hljs-attr">end</span>: <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, <span class="hljs-number">19</span>)),
+  });
+}

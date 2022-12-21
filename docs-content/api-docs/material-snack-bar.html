@@ -1,0 +1,1011 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-snack-bar-api-参考文档--">
+    Angular Material snack-bar API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatSnackBarModule} from '@angular/material/snack-bar';
+      </code>
+    </p>
+  <h3 id="material-snack-bar-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="MatSnackBar" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBar"></span>
+  <code>MatSnackBar</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一个服务，用来派发 Material Design 快餐栏的消息。</p><p translation-origin="off">Service to dispatch Material Design snack bar messages.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>handsetCssClass: 'mat-mdc-snack-bar-handset'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>simpleSnackBarComponent: SimpleSnackBar</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>snackBarContainerComponent: MatSnackBarContainer</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dismiss
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭目前可见的快餐栏。</p><p translation-origin="off">Dismisses the currently-visible snack bar.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">带有信息和可选操作的快餐栏。</p><p translation-origin="off">Opens a snackbar with a message and an optional action.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        message</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要显示在快餐栏里的消息。</p><p translation-origin="off">The message to show in the snackbar.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        action</p>
+      <code class="docs-api-method-parameter-type">string = ''</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">快餐栏的动作标签。</p><p translation-origin="off">The label for the snackbar action.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatSnackBarConfig&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">快餐栏的其它配置选项。</p><p translation-origin="off">Additional configuration options for the snackbar.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatSnackBarRef&lt;TextOnlySnackBar&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">openFromComponent
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">为内容创建并派发带有自定义组件的快餐栏，删除任何目前打开着的快餐栏。</p><p translation-origin="off">Creates and dispatches a snack bar with a custom component for the content, removing any
+currently opened snack bars.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        component</p>
+      <code class="docs-api-method-parameter-type">ComponentType&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要实例化的组件。</p><p translation-origin="off">Component to be instantiated.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatSnackBarConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">快餐栏的额外配置。</p><p translation-origin="off">Extra configuration for the snack bar.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatSnackBarRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">openFromTemplate
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">使用该内容的自定义模板创建并派发一个快餐栏，删除任何目前打开着的快餐栏。</p><p translation-origin="off">Creates and dispatches a snack bar with a custom template for the content, removing any
+currently opened snack bars.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">TemplateRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要实例化的模板。</p><p translation-origin="off">Template to be instantiated.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatSnackBarConfig&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">快餐栏的额外配置。</p><p translation-origin="off">Extra configuration for the snack bar.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatSnackBarRef&lt;EmbeddedViewRef&lt;any&gt;&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-snack-bar-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="SimpleSnackBar" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="SimpleSnackBar"></span>
+  <code>SimpleSnackBar</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">simple-snack-bar</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSnackBar</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: {
+    message: string;
+    action: string;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasAction: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否要显示动作按钮。</p><p translation-origin="off">If the action button should be shown.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>snackBarRef: MatSnackBarRef&lt;SimpleSnackBar&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">action
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">执行快餐店里的动作。</p><p translation-origin="off">Performs the action on the snack bar.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatSnackBarLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarLabel"></span>
+  <code>MatSnackBarLabel</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">要应用于要在快餐栏中渲染的文本元素的指令。</p><p translation-origin="off">Directive that should be applied to the text element to be rendered in the snack bar.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matSnackBarLabel]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarActions" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarActions"></span>
+  <code>MatSnackBarActions</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">要应用于包含快餐栏操作按钮的元素的指令。</p><p translation-origin="off">Directive that should be applied to the element containing the snack bar's action buttons.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matSnackBarActions]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarAction" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarAction"></span>
+  <code>MatSnackBarAction</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">要应用于快餐栏的每个操作按钮的指令。</p><p translation-origin="off">Directive that should be applied to each of the snack bar's action buttons.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matSnackBarAction]</span>
+  
+</div>
+
+
+
+
+
+
+    <h3 id="material-snack-bar-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatSnackBarConfig" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarConfig"></span>
+  <code>MatSnackBarConfig</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">打开快餐栏时使用的配置。</p><p translation-origin="off">Configuration used when opening a snack-bar.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>announcementMessage: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">将由 LiveAnnouncer 朗读的消息。当没有自定义组件或模板的情况下打开快餐栏时，公告信息会默认为指定的消息。</p><p translation-origin="off">Message to be announced by the LiveAnnouncer. When opening a snackbar without a custom
+component or template, the announcement message will default to the specified message.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要注入到子组件中的数据。</p><p translation-origin="off">Data being injected into the child component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>direction: Direction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">快餐栏的文字布局方向。</p><p translation-origin="off">Text layout direction for the snack bar.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>duration: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在自动关闭快餐栏之前要等待的毫秒数。</p><p translation-origin="off">The length of time in milliseconds to wait before automatically dismissing the snack bar.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>horizontalPosition: MatSnackBarHorizontalPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">放置快餐栏的水平位置。</p><p translation-origin="off">The horizontal position to place the snack bar.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到快餐栏容器中的额外 CSS 类。</p><p translation-origin="off">Extra CSS classes to be added to the snack bar container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>politeness: AriaLivePoliteness</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">MatAriaLiveAnnouncer 公告的文雅程度。</p><p translation-origin="off">The politeness level for the MatAriaLiveAnnouncer announcement.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>verticalPosition: MatSnackBarVerticalPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">放置快餐栏的垂直位置。</p><p translation-origin="off">The vertical position to place the snack bar.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainerRef: ViewContainerRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">视图容器的引用，可以在依赖注入时作为快餐栏的父组件。注意：这不会影响快餐栏在 DOM 中的插入位置。</p><p translation-origin="off">The view container that serves as the parent for the snackbar for the purposes of dependency
+injection. Note: this does not affect where the snackbar is inserted in the DOM.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSnackBarRef"></span>
+  <code>MatSnackBarRef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">到快餐栏服务派发出的快餐栏的引用。</p><p translation-origin="off">Reference to a snack bar dispatched from the snack bar service.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>instance: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件的实例构成了快餐栏的内容。</p><p translation-origin="off">The instance of the component making up the content of the snack bar.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterDismissed
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个当快餐栏结束时会得到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the snack bar is finished closing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;MatSnackBarDismiss&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterOpened
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当快餐栏已经打开并出现时，会通知它。</p><p translation-origin="off">Gets an observable that is notified when the snack bar has opened and appeared.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dismiss
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭快餐栏。</p><p translation-origin="off">Dismisses the snack bar.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dismissWithAction
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">标记某个快餐栏动作被点击过。</p><p translation-origin="off">Marks the snackbar action clicked.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">onAction
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个会在调用小吃条动作时得到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the snack bar action is called.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v8.0.0 或更高版本中删除">
+            已弃用
+          </div>closeWithAction
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">标记某个快餐栏动作被点击过。</p><p translation-origin="off">Marks the snackbar action clicked.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-snack-bar-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="TextOnlySnackBar" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TextOnlySnackBar"></span>
+  <code>TextOnlySnackBar</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">简单快餐栏组件的接口，它包含一条消息和一个动作。</p><p translation-origin="off">Interface for a simple snack bar component that has a message and a single action.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>action: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: {
+    message: string;
+    action: string;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasAction: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>snackBarRef: MatSnackBarRef&lt;TextOnlySnackBar&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSnackBarDismiss" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatSnackBarDismiss"></span>
+  <code>MatSnackBarDismiss</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">快餐栏被关闭时发生的事件。</p><p translation-origin="off">Event that is emitted when a snack bar is dismissed.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dismissedByAction: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">快餐栏是否被动作按钮关闭了。</p><p translation-origin="off">Whether the snack bar was dismissed using the action button.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-snack-bar-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="MatSnackBarHorizontalPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatSnackBarHorizontalPosition"></span>
+  <code>MatSnackBarHorizontalPosition</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">MatSnackBarConfig 中 horizontalPosition 的可选值。</p><p translation-origin="off">Possible values for horizontalPosition on MatSnackBarConfig.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatSnackBarHorizontalPosition = <span class="hljs-string">'start'</span> | <span class="hljs-string">'center'</span> | <span class="hljs-string">'end'</span> | <span class="hljs-string">'left'</span> | <span class="hljs-string">'right'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MatSnackBarVerticalPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatSnackBarVerticalPosition"></span>
+  <code>MatSnackBarVerticalPosition</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">MatSnackBarConfig 中 verticalPosition 的可选值。</p><p translation-origin="off">Possible values for verticalPosition on MatSnackBarConfig.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatSnackBarVerticalPosition = <span class="hljs-string">'top'</span> | <span class="hljs-string">'bottom'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-snack-bar-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_SNACK_BAR_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_SNACK_BAR_DEFAULT_OPTIONS"></span>
+  <code>MAT_SNACK_BAR_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来指定快餐栏的默认配置。</p><p translation-origin="off">Injection token that can be used to specify default snack bar.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SNACK_BAR_DEFAULT_OPTIONS: InjectionToken&lt;MatSnackBarConfig&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_SNACK_BAR_DATA" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_SNACK_BAR_DATA"></span>
+  <code>MAT_SNACK_BAR_DATA</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来访问传入快餐栏的数据。</p><p translation-origin="off">Injection token that can be used to access the data that was passed in to a snack bar.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SNACK_BAR_DATA: InjectionToken&lt;<span class="hljs-built_in">any</span>&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

@@ -1,0 +1,687 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-select-api-参考文档--">
+    Angular Material legacy-select API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-select</code></p><h3 id="material-legacy-select-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacySelect" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySelect"></span>
+  <code>MatLegacySelect</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-select</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSelect</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此选择框的 aria-label。</p><p translation-origin="off">Aria label of the select.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用来指定 <code>aria-labelledby</code> 属性的输入属性。</p><p translation-origin="off">Input that can be used to specify the <code>aria-labelledby</code> attribute.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>compareWith: (o1: any, o2: any) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">比较选项值和选定值的函数。第一个参数就是选项中的值。第二个参数是选定的值。应该返回一个布尔值。</p><p translation-origin="off">Function to compare the option values with the selected values. The first argument
+is a value from an option. The second is a value from the selection. A boolean
+should be returned.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableOptionCentering: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否要把活动选项置于触发器的中心位置。</p><p translation-origin="off">Whether to center the active option over the trigger.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用涟漪。</p><p translation-origin="off">Whether ripples are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>errorStateMatcher: ErrorStateMatcher</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于控制何时显示错误信息的对象。</p><p translation-origin="off">Object used to control when error messages are shown.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">元素的唯一 id。</p><p translation-origin="off">Unique id of the element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>multiple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否允许用户选择多个选项。</p><p translation-origin="off">Whether the user should be allowed to select multiple options.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>panelClass: string | string[] | Set&lt;string&gt; | {
+    [key: string]: any;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要传递给选择框面板的类。语法与 <code>ngClass</code> 相同。</p><p translation-origin="off">Classes to be passed to the select panel. Supports the same syntax as <code>ngClass</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>placeholder: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果没有选定任何值，就会显示此占位符。</p><p translation-origin="off">Placeholder to be shown if no value has been selected.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否必填项。</p><p translation-origin="off">Whether the component is required.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>sortComparator: (a: MatOption, b: MatOption, options: MatOption[]) =&gt; number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">函数用于对多选模式选择框中的值进行排序。与 <code>Array.prototype.sort</code> 的逻辑相同。</p><p translation-origin="off">Function used to sort the values in a select in multiple mode.
+Follows the same logic as <code>Array.prototype.sort</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>typeaheadDebounceInterval: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在将焦点移动到某个条目之前，最后一次按键后要等待的时间（以毫秒为单位）。</p><p translation-origin="off">Time to wait in milliseconds after the last keystroke before moving focus to an item.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选择框控件的值。</p><p translation-origin="off">Value of the select control.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>openedChange: EventEmitter&lt;boolean&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">切换选择框面板时会发生事件。</p><p translation-origin="off">Event emitted when the select panel has been toggled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;C&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户更改了选定值时发出的事件。</p><p translation-origin="off">Event emitted when the selected value has been changed by the user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>controlType: 'mat-select'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个控件的名字，可以被 <code>mat-form-field</code> 使用。</p><p translation-origin="off">A name for this control that can be used by <code>mat-form-field</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>customTrigger: MatLegacySelectTrigger</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，将退回到 Tabindex。</p><p translation-origin="off">Tabindex to which to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>empty: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此选择框是否有值。</p><p translation-origin="off">Whether the select has a value.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorState: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">组件是否处于错误状态下。</p><p translation-origin="off">Whether the component is in an error state.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focused: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此选择框是否拥有焦点。</p><p translation-origin="off">Whether the select is focused.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>optionGroups: QueryList&lt;MatLegacyOptgroup&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>optionSelectionChanges: Observable&lt;MatOptionSelectionChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">所有子选项的 'change' 事件的组合流。</p><p translation-origin="off">Combined stream of all of the child options' change events.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: QueryList&lt;MatLegacyOption&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panel: ElementRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">包含选择框选项的面板。</p><p translation-origin="off">Panel containing the select options.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelOpen: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板是否打开了。</p><p translation-origin="off">Whether or not the overlay panel is open.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selected: MatOption | MatOption[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前选定的选项。</p><p translation-origin="off">The currently selected option.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trigger: ElementRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于打开选择框的触发器。</p><p translation-origin="off">Trigger that opens the select.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>triggerValue: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">触发器中显示的值。</p><p translation-origin="off">The value displayed in the trigger.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭浮层窗格并让宿主元素获得焦点。</p><p translation-origin="off">Closes the overlay panel and focuses the host element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此选择框元素获得焦点。</p><p translation-origin="off">Focuses the select element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">浮层面板是否打开或关闭。</p><p translation-origin="off">Toggles the overlay panel open or closed.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateErrorState
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">根据所提供的错误状态匹配器更新错误状态。</p><p translation-origin="off">Updates the error state based on the provided error state matcher.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatLegacySelectTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySelectTrigger"></span>
+  <code>MatLegacySelectTrigger</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">当选择框具有值时，允许用户自定义要显示的触发器。</p><p translation-origin="off">Allows the user to customize the trigger that is displayed when the select has a value.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-select-trigger</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div>
+
+
+
+
+
+
+    <h3 id="material-legacy-select-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatLegacySelectChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySelectChange"></span>
+  <code>MatLegacySelectChange</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">当选择框的值发生更改后触发的事件对象。</p><p translation-origin="off">Change event object that is emitted when the select value has changed.</p>
+
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatLegacySelect</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the select that emitted the change event.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Current value of the select that emitted the event.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    </div>

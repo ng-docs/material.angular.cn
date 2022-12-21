@@ -1,0 +1,375 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-platform-api-参考文档--">
+    Angular CDK platform API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {PlatformModule} from '@angular/cdk/platform';
+      </code>
+    </p>
+  <h3 id="cdk-platform-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="Platform" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="Platform"></span>
+  <code>Platform</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">本服务通过比较 userAgent 字符串和检查浏览器特定的全局属性来检测当前平台。</p><p translation-origin="off">Service to detect the current platform by comparing the userAgent strings and
+checking browser-specific global properties.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ANDROID: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的平台是不是 Android 版。</p><p translation-origin="off">Whether the current platform is Android.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>BLINK: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的渲染引擎是否为 Blink。</p><p translation-origin="off">Whether the current rendering engine is Blink.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>EDGE: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的浏览器是否为 Microsoft Edge。</p><p translation-origin="off">Whether the current browser is Microsoft Edge.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>FIREFOX: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的浏览器是否为 Firefox。</p><p translation-origin="off">Whether the current browser is Firefox.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>IOS: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">目前的平台是否为 Apple iOS。</p><p translation-origin="off">Whether the current platform is Apple iOS.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>SAFARI: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的浏览器是否为 Safari。</p><p translation-origin="off">Whether the current browser is Safari.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>TRIDENT: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的渲染引擎是否为 Microsoft Trident。</p><p translation-origin="off">Whether the current rendering engine is Microsoft Trident.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>WEBKIT: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前的渲染引擎是否为 WebKit。</p><p translation-origin="off">Whether the current rendering engine is WebKit.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isBrowser: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">Angular 应用是否正在浏览器中渲染。</p><p translation-origin="off">Whether the Angular application is being rendered in the browser.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-platform-functions" class="docs-header-link docs-api-h3">
+      <span header-link="functions"></span>
+      函数
+    </h3>
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getSupportedInputTypes
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Set&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">该浏览器支持的输入类型。</p><p translation-origin="off">The input types supported by this browser.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">supportsPassiveEventListeners
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查用户的浏览器是否支持被动事件侦听器。参见：<a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md">https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md</a></p><p translation-origin="off">Checks whether the user's browser supports passive event listeners.
+See: <a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md">https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md</a></p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">normalizePassiveListenerOptions
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将 <code>AddEventListener</code> 对象规范化为可以在任何浏览器中传给 <code>addEventListener</code> 的，无论其是否支持 <code>options</code> 参数。</p><p translation-origin="off">Normalizes an <code>AddEventListener</code> object to something that can be passed
+to <code>addEventListener</code> on any browser, no matter whether it supports the
+<code>options</code> parameter.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">AddEventListenerOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要规范化的对象。</p><p translation-origin="off">Object to be normalized.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">AddEventListenerOptions | boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">supportsScrollBehavior
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查浏览器是否支持滚动行为。</p><p translation-origin="off">Check whether the browser supports scroll behaviors.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getRtlScrollAxisType
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查此浏览器使用的 RTL 滚动轴的类型。在撰写本文时，Chrome 浏览器为 NORMAL（正常），Firefox 和 Safari 为 NEGATED（否），而 IE＆Edge 为 INVERTED（反向）。</p><p translation-origin="off">Checks the type of RTL scroll axis used by this browser. As of time of writing, Chrome is NORMAL,
+Firefox &amp; Safari are NEGATED, and IE &amp; Edge are INVERTED.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">RtlScrollAxisType</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+    </div>

@@ -1,0 +1,1262 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-stepper-api-参考文档--">
+    Angular Material stepper API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatStepperModule} from '@angular/material/stepper';
+      </code>
+    </p>
+  <h3 id="material-stepper-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="MatStepperIntl" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepperIntl"></span>
+  <code>MatStepperIntl</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">国际化所需的步进器数据。</p><p translation-origin="off">Stepper data that is required for internationalization.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>changes: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只要这里的标签发生了变化就会发出流。如果标签在初始化后发生了变化，用它来通知组件。</p><p translation-origin="off">Stream that emits whenever the labels here are changed. Use this to notify
+components if the labels have changed after initialization.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>completedLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于向屏幕阅读器指示步骤已完成的标签。</p><p translation-origin="off">Label that is used to indicate step as completed to screen readers.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>editableLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于指示步骤对屏幕阅读器是可编辑的标签。</p><p translation-origin="off">Label that is used to indicate step as editable to screen readers.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>optionalLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在可选步骤下要渲染的标签。</p><p translation-origin="off">Label that is rendered below optional steps.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-stepper-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatStepLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepLabel"></span>
+  <code>MatStepLabel</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/stepper/api#CdkStepLabel" class="docs-api-class-extends-type">
+      CdkStepLabel
+    </a>
+  </span>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matStepLabel]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatStep" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStep"></span>
+  <code>MatStep</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/stepper/api#CdkStep" class="docs-api-class-extends-type">
+      CdkStep
+    </a>
+  </span>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-step</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matStep</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选项卡的 Aria 标签。</p><p translation-origin="off">Aria label for the tab.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">到用来标注此选项卡的元素的引用。如果同时设置了 <code>aria-label</code>，则被清除。</p><p translation-origin="off">Reference to the element that the tab is labelled by.
+Will be cleared if <code>aria-label</code> is set at the same time.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">特定步骤的主题颜色。</p><p translation-origin="off">Theme color for the particular step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>completed: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步骤是否标记为已完成。</p><p translation-origin="off">Whether step is marked as completed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>editable: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">一旦标记为已完成，用户是否可以返回此步骤。</p><p translation-origin="off">Whether the user can return to this step once it has been marked as completed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>errorMessage: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当出现错误时显示的错误信息。</p><p translation-origin="off">Error message to display when there's an error.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hasError: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步骤是否有错误。</p><p translation-origin="off">Whether step has an error.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>label: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该步骤的纯文本标签。</p><p translation-origin="off">Plain text label of the step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>optional: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否可以不必完成此步骤。</p><p translation-origin="off">Whether the completion of step is optional.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>state: StepState</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步骤的状态。</p><p translation-origin="off">State of the step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>stepControl: AbstractControlLike</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该步骤的顶级抽象控件。</p><p translation-origin="off">The top level abstract control of the step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'interacted'</span>)
+        </div><p class="docs-api-property-name">
+      <code>interactedStream: EventEmitter&lt;CdkStep&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户尝试离开此步骤时，将发出此信号。</p><p translation-origin="off">Emits when the user has attempted to move away from the step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>content: TemplateRef&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步骤内容的模板。</p><p translation-origin="off">Template for step content.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>interacted: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户是否试图从这一步离开。</p><p translation-origin="off">Whether user has attempted to move away from the step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stepLabel: MatStepLabel</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步骤标签的内容，由 <code>&lt;ng-template matStepLabel&gt;</code> 提供。</p><p translation-origin="off">Content for step label given by <code>&lt;ng-template matStepLabel&gt;</code>.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isErrorState
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">自定义错误状态匹配器，它还要检查交互式表单的有效性。</p><p translation-origin="off">Custom error state matcher that additionally checks for validity of interacted form.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        control</p>
+      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        form</p>
+      <code class="docs-api-method-parameter-type">NgForm | FormGroupDirective</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">reset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把步骤重置为初始状态。请注意，这也包括重置表单数据。</p><p translation-origin="off">Resets the step to its initial state. Note that this includes resetting form data.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">select
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选择此步骤组件。</p><p translation-origin="off">Selects this step component.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatStepper" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepper"></span>
+  <code>MatStepper</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/stepper/api#CdkStepper" class="docs-api-class-extends-type">
+      CdkStepper
+    </a>
+  </span>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-stepper</span>
+  
+    <span class="docs-api-class-selector-name">mat-vertical-stepper</span>
+  
+    <span class="docs-api-class-selector-name">mat-horizontal-stepper</span>
+  
+    <span class="docs-api-class-selector-name">[matStepper]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matStepper, matVerticalStepper, matHorizontalStepper</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>animationDuration: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">动画的持续时间。如果没有设置单位，将标准化为毫秒。</p><p translation-origin="off">Duration for the animation. Will be normalized to milliseconds if no units are set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步进器中所有步骤的主题颜色。</p><p translation-origin="off">Theme color for all of the steps in stepper.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应为步骤头禁用涟漪。</p><p translation-origin="off">Whether ripples should be disabled for the step headers.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>headerPosition: 'top' | 'bottom'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步进器标头的位置。仅适用于 <code>horizontal</code> 方向。</p><p translation-origin="off">Position of the stepper's header.
+Only applies in the <code>horizontal</code> orientation.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: 'bottom' | 'end'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签应显示在底部还是尾部位置。仅适用于 <code>horizontal</code> 方向。</p><p translation-origin="off">Whether the label should display in bottom or end position.
+Only applies in the <code>horizontal</code> orientation.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>linear: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否检查前一个步骤的有效性。</p><p translation-origin="off">Whether the validity of previous steps should be checked or not.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>orientation: StepperOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此步进器的方向。</p><p translation-origin="off">Orientation of the stepper.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selected: CdkStep | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选定的步骤。</p><p translation-origin="off">The step that is selected.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selectedIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选定步骤的索引。</p><p translation-origin="off">The index of the selected step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>animationDone: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">转换到当前步骤完毕后发出的事件。</p><p translation-origin="off">Event emitted when the current step is done transitioning in.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选定的步骤发生变化时发出的事件。</p><p translation-origin="off">Event emitted when the selected step has changed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>steps: QueryList&lt;MatStep&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">属于当前步进器的步骤（不包括那些来自嵌套步进器的步骤）。</p><p translation-origin="off">Steps that belong to the current stepper, excluding ones from nested steppers.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">next
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选择并让列表中的下一步获得焦点。</p><p translation-origin="off">Selects and focuses the next step in list.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">previous
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选择并让列表中的上一步获得焦点。</p><p translation-origin="off">Selects and focuses the previous step in list.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">reset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">步进器的初始状态是 1。请注意，这包括清除表单数据。</p><p translation-origin="off">Resets the stepper to its initial state. Note that this includes clearing form data.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatStepperNext" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepperNext"></span>
+  <code>MatStepperNext</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/stepper/api#CdkStepperNext" class="docs-api-class-extends-type">
+      CdkStepperNext
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用来移动到步进器工作流下一步的按钮。</p><p translation-origin="off">Button that moves to the next step in a stepper workflow.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">button[matStepperNext]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>type: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">下一个按钮的类型如果没有指定，默认为 “submit”。</p><p translation-origin="off">Type of the next button. Defaults to "submit" if not specified.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatStepperPrevious" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepperPrevious"></span>
+  <code>MatStepperPrevious</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/stepper/api#CdkStepperPrevious" class="docs-api-class-extends-type">
+      CdkStepperPrevious
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用来移动到步进器工作流中上一步的按钮。</p><p translation-origin="off">Button that moves to the previous step in a stepper workflow.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">button[matStepperPrevious]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>type: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">上一个按钮的类型如果没有指定，默认为 “button”。</p><p translation-origin="off">Type of the previous button. Defaults to "button" if not specified.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatStepHeader" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepHeader"></span>
+  <code>MatStepHeader</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-step-header</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>active: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定的步骤标签是否有效。</p><p translation-origin="off">Whether the given step label is active.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的主题调色板。</p><p translation-origin="off">Theme color palette for the component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应该禁用涟漪。</p><p translation-origin="off">Whether the ripple should be disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>errorMessage: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当出现错误时显示错误信息。</p><p translation-origin="off">Error message to display when there's an error.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>iconOverrides: {
+    [key: string]: TemplateRef&lt;MatStepperIconContext&gt;;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写那些通过步进器传入的头部图标。</p><p translation-origin="off">Overrides for the header icons, passed in via the stepper.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>index: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定步骤的索引。</p><p translation-origin="off">Index of the given step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>label: MatStepLabel | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定步骤的标签。</p><p translation-origin="off">Label of the given step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>optional: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定的步骤是否可选。</p><p translation-origin="off">Whether the given step is optional.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selected: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定的步骤是否已选定。</p><p translation-origin="off">Whether the given step is selected.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>state: StepState</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定步骤的状态</p><p translation-origin="off">State of the given step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，则默认颜色恢复为原来的颜色。</p><p translation-origin="off">Default color to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让步骤头获得焦点。</p><p translation-origin="off">Focuses the step header.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatStepperIcon" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepperIcon"></span>
+  <code>MatStepperIcon</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用来改写步骤头内部图标的模板。</p><p translation-origin="off">Template to be used to override the icons inside the step header.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">ng-template[matStepperIcon]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matStepperIcon'</span>)
+        </div><p class="docs-api-property-name">
+      <code>name: StepState</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要改写的图标名称。</p><p translation-origin="off">Name of the icon to be overridden.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>templateRef: TemplateRef&lt;MatStepperIconContext&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatStepContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatStepContent"></span>
+  <code>MatStepContent</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on"><code>mat-step</code> 的内容，它将被延迟渲染。</p><p translation-origin="off">Content for a <code>mat-step</code> that will be rendered lazily.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">ng-template[matStepContent]</span>
+  
+</div>
+
+
+
+
+
+
+    <h3 id="material-stepper-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatStepperIconContext" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatStepperIconContext"></span>
+  <code>MatStepperIconContext</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可用于附着的 <code>matStepperIcon</code> 的模板上下文。</p><p translation-origin="off">Template context available to an attached <code>matStepperIcon</code>.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>active: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该步骤当前是否处于活动状态。</p><p translation-origin="off">Whether the step is currently active.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>index: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">步骤的索引。</p><p translation-origin="off">Index of the step.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>optional: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该步骤是否可选。</p><p translation-origin="off">Whether the step is optional.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    </div>

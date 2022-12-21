@@ -1,0 +1,92 @@
+<div class="docs-markdown"><h1 id="applying-elevation" translation-result="on">应用纵深</h1><h1 translation-origin="off">Applying Elevation</h1><p translation-result="on"><a href="https://material.io/design/environment/elevation.html">Material Design 规范</a>提供了关于如何通过添加阴影在 UI 元素上表达纵深的指导。 Angular Material 提供了一些 CSS 类和 Sass mixins，用来添加这些阴影。</p><p translation-origin="off"><a href="https://material.io/design/environment/elevation.html">The Material Design specification</a> gives guidance on expressing elevation on
+UI elements by adding shadows. Angular Material provides CSS classes and Sass mixins for adding
+these shadows.</p>
+
+
+        <h2 id="elevation-css-classes" class="docs-header-link" translation-result="on">
+          <span header-link="表示纵深的-css-类"></span>
+          表示纵深的 CSS 类
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="elevation-css-classes"></span>
+          Elevation CSS classes
+        </h2>
+      
+        
+      <p translation-result="on"><a href="https://material.angular.io/guide/theming#applying-a-theme-to-components">主题指南</a>中所讲的 <code>core-theme</code> Sass mixin，会生成用于控制纵深的 CSS 类。这些类遵循统一的模式 <code>mat-elevation-z#</code> ，其中 <code>#</code> 是你想用的纵深数字，范围从 0 到 24。这些预定义的类使用 Material Design 规范定义的 <code>box-shadow</code> 设置。</p><p translation-origin="off">The <code>core-theme</code> Sass mixin, described in the <a href="https://material.angular.io/guide/theming#applying-a-theme-to-components">theming guide</a>, emits CSS classes for applying
+elevation. These classes follow the pattern <code>mat-elevation-z#</code>, where <code>#</code> is the elevation number
+you want, from 0 to 24. These predefined classes use the CSS <code>box-shadow</code> settings defined by the
+Material Design specification.</p>
+
+<p translation-result="on">你可以通过更换纵深 CSS 类来动态更改元素的纵深。</p><p translation-origin="off">You can dynamically change elevation on an element by swapping elevation CSS classes.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.mat-elevation-z2</span>]=<span class="hljs-string">"!isActive"</span> [<span class="hljs-attr">class.mat-elevation-z8</span>]=<span class="hljs-string">"isActive"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<div material-docs-example="elevation-overview"></div>
+
+
+        <h2 id="elevation-sass-mixins" class="docs-header-link" translation-result="on">
+          <span header-link="纵深-sass-mixin"></span>
+          纵深 Sass mixin
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="elevation-sass-mixins"></span>
+          Elevation Sass mixins
+        </h2>
+      
+        
+      <p translation-result="on">除了预定义的 CSS 类之外，你还可以使用 <code>elevation</code> Sass mixin 来应用纵深样式。此 mixin 接受 <code>$zValue</code> 和可选的 <code>$color</code> 参数。<code>$zValue</code> 是一个从 0 到 24 的数字，代表元素的语义化纵深，它会控制盒子阴影的强度。你可以使用 <code>$color</code> 参数进一步自定义阴影外观。</p><p translation-origin="off">In addition to the predefined CSS classes, you can apply elevation styles using the <code>elevation</code>
+Sass mixin. This mixin accepts a <code>$zValue</code> and an optional <code>$color</code>. The <code>$zValue</code> is a number from
+0 to 24, representing the semantic elevation of the element, that controls the intensity of the
+box-shadow. You can use the <code>$color</code> parameter to further customize the shadow appearance.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+<span class="hljs-selector-class">.my-class-with-default-shadow</span> {
+    <span class="hljs-comment">// Adds a shadow for elevation level 2 with default color and full opacity:</span>
+    <span class="hljs-keyword">@include</span> mat.elevation(<span class="hljs-number">2</span>);
+}
+
+<span class="hljs-selector-class">.my-class-with-custom-shadow</span> {
+    <span class="hljs-comment">// Adds a shadow for elevation level 2 with color #e91e63 and 80% of the default opacity:</span>
+    <span class="hljs-keyword">@include</span> mat.elevation(<span class="hljs-number">2</span>, <span class="hljs-number">#e91e63</span>, <span class="hljs-number">0.8</span>);
+}
+</code></pre>
+
+        <h3 id="overridable-elevation" class="docs-header-link" translation-result="on">
+          <span header-link="可覆盖的纵深"></span>
+          可覆盖的纵深
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="overridable-elevation"></span>
+          Overridable elevation
+        </h3>
+      
+        
+      <p translation-result="on">在创作组件时，你可能需要指定一个默认纵深，而组件的使用者可以覆盖它。你可以使用 <code>overridable-elevation</code> Sass Mixin 来完成此操作。此行为与 <code>elevation</code> mixin 的行为相同，但是这些样式只有在元素上没有符合 <code>mat-elevation-z#</code> 模式的 CSS 类时才适用，如上面的<a href="#elevation-css-classes">纵深 CSS 类</a>中所述。</p><p translation-origin="off">When authoring a component, you may want to specify a default elevation that the component consumer
+can override. You can accomplish this by using the <code>overridable-elevation</code> Sass mixin. This behaves
+identically to the <code>elevation</code> mixin, except that the styles only apply when the element does not
+have a CSS class matching the pattern <code>mat-elevation-z#</code>, as described in
+<a href="#elevation-css-classes">Elevation CSS classes</a> above.</p>
+
+
+        <h3 id="animating-elevation" class="docs-header-link" translation-result="on">
+          <span header-link="动画纵深"></span>
+          动画纵深
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="animating-elevation"></span>
+          Animating elevation
+        </h3>
+      
+        
+      <p translation-result="on">你可以使用 <code>elevation-transition</code> Mixin 来添加纵深变化时的转场动画。</p><p translation-origin="off">You can use the <code>elevation-transition</code> mixin to add a transition when elevation changes.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+<span class="hljs-selector-class">.my-class</span> {
+    <span class="hljs-keyword">@include</span> mat.elevation-transition();
+    <span class="hljs-keyword">@include</span> mat.elevation(<span class="hljs-number">2</span>);
+
+    &amp;<span class="hljs-selector-pseudo">:active</span> {
+        <span class="hljs-keyword">@include</span> mat.elevation(<span class="hljs-number">8</span>);
+  }
+}
+</code></pre>
+</div>

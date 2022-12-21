@@ -1,0 +1,1640 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-dialog-api-参考文档--">
+    Angular Material legacy-dialog API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-dialog</code></p><h3 id="material-legacy-dialog-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="MatLegacyDialog" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialog"></span>
+  <code>MatLegacyDialog</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于打开 Material Design 模态对话框的服务。</p><p translation-origin="off">Service to open Material Design modal dialogs.</p>
+
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>afterAllClosed: Observable&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当所有打开的对话框都关闭的时候会发出通知的流。如果没有打开的对话框，就会在订阅时立即触发。</p><p translation-origin="off">Stream that emits when all open dialog have finished closing.
+Will emit on subscribe if there are no open dialogs to begin with.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>afterOpened: Subject&lt;MatDialogRef&lt;any&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当对话框打开后会发出通知的流。</p><p translation-origin="off">Stream that emits when a dialog has been opened.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dialogConfigClass: MatLegacyDialogConfig</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>openDialogs: MatDialogRef&lt;any&gt;[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">跟踪当前打开的对话框。</p><p translation-origin="off">Keeps track of the currently-open dialogs.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closeAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭所有当前打开的对话框。</p><p translation-origin="off">Closes all of the currently-open dialogs.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDialogById
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">通过 id 查找一个打开的对话框。</p><p translation-origin="off">Finds an open dialog by its id.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        id</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">在查找对话框时要用到的 ID。</p><p translation-origin="off">ID to use when looking up the dialog.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;any&gt; | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开一个包含指定组件的模态对话框。</p><p translation-origin="off">Opens a modal dialog containing the given component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        component</p>
+      <code class="docs-api-method-parameter-type">ComponentType&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要加载到对话框中的组件类型。</p><p translation-origin="off">Type of the component to load into the dialog.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatDialogConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">额外的配置选项。</p><p translation-origin="off">Extra configuration options.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">引用新打开的对话框。</p><p translation-origin="off">Reference to the newly-opened dialog.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开一个包含指定模板的模态对话框。</p><p translation-origin="off">Opens a modal dialog containing the given template.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">TemplateRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">TemplateRef 要实例化为对话框内容。</p><p translation-origin="off">TemplateRef to instantiate as the dialog content.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatDialogConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">额外的配置选项。</p><p translation-origin="off">Extra configuration options.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">引用新打开的对话框。</p><p translation-origin="off">Reference to the newly-opened dialog.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">ComponentType&lt;T&gt; | TemplateRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatDialogConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-legacy-dialog-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacyDialogClose" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogClose"></span>
+  <code>MatLegacyDialogClose</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该按钮用于关闭当前对话框。</p><p translation-origin="off">Button that will close the current dialog.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-close]</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogClose]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matDialogClose</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该按钮的屏幕阅读器标签。</p><p translation-origin="off">Screen reader label for the button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'mat-dialog-close'</span>)
+        </div><p class="docs-api-property-name">
+      <code>dialogResult: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框关闭的输入属性。</p><p translation-origin="off">Dialog close input.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>type: 'submit' | 'button' | 'reset'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">默认为 “button” 以防止意外的表单提交。</p><p translation-origin="off">Default to "button" to prevents accidental form submits.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v13.0.0 或更高版本中删除">
+        已弃用
+      </div><p class="docs-api-property-name">
+      <code>dialogRef: MatLegacyDialogRef&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the containing dialog.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyDialogTitle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogTitle"></span>
+  <code>MatLegacyDialogTitle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该对话框元素的标头。当滚动时，它会固定在对话框的顶部。</p><p translation-origin="off">Title of a dialog element. Stays fixed to the top of the dialog when scrolling.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-title]</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogTitle]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matDialogTitle</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框标题的唯一 ID。如果没有提供，它将自动生成。</p><p translation-origin="off">Unique id for the dialog title. If none is supplied, it will be auto-generated.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyDialogContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogContent"></span>
+  <code>MatLegacyDialogContent</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">对话框的可滚动内容容器。</p><p translation-origin="off">Scrollable content container of a dialog.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-content]</span>
+  
+    <span class="docs-api-class-selector-name">mat-dialog-content</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogContent]</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyDialogActions" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogActions"></span>
+  <code>MatLegacyDialogActions</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">对话框中底部操作按钮的容器。当滚动时，它会固定在底部。</p><p translation-origin="off">Container for the bottom action buttons in a dialog.
+Stays fixed to the bottom when scrolling.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-actions]</span>
+  
+    <span class="docs-api-class-selector-name">mat-dialog-actions</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogActions]</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>align: 'start' | 'center' | 'end'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">操作按钮的水平对齐方式。</p><p translation-origin="off">Horizontal alignment of action buttons.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-legacy-dialog-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatLegacyDialogRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogRef"></span>
+  <code>MatLegacyDialogRef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/dialog/api#MatDialogRef" class="docs-api-class-extends-type">
+      MatDialogRef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">通过 MatDialog 服务打开的对话框的引用。</p><p translation-origin="off">Reference to a dialog opened via the MatDialog service.</p>
+
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>componentInstance: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在对话框中打开的组件实例。</p><p translation-origin="off">The instance of component opened into the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClose: boolean | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否允许用户关闭该对话框。</p><p translation-origin="off">Whether the user is allowed to close the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的唯一 ID。</p><p translation-origin="off">Unique ID for the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addPanelClass
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个或一组 CSS 类添加到浮层面板中。</p><p translation-origin="off">Add a CSS class or an array of classes to the overlay pane.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        classes</p>
+      <code class="docs-api-method-parameter-type">string | string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterClosed
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个会在对话框关闭后收到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the dialog is finished closing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;R | undefined&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterOpened
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个会在对话框打开后得到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the dialog is finished opening.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">backdropClick
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当点击浮层的背景板时，它会发出数据。</p><p translation-origin="off">Gets an observable that emits when the overlay's backdrop has been clicked.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;MouseEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">beforeClosed
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个当对话框即将关闭时得到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the dialog has started closing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;R | undefined&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭对话框。</p><p translation-origin="off">Close the dialog.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dialogResult<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">R</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">返回到窗口对话框的可选结果。</p><p translation-origin="off">Optional result to return to the dialog opener.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getState
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取对话框生命周期的当前状态。</p><p translation-origin="off">Gets the current state of the dialog's lifecycle.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogState</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">keydownEvents
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当指定浮层收到 keydown 事件时，它会发出数据。</p><p translation-origin="off">Gets an observable that emits when keydown events are targeted on the overlay.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;KeyboardEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removePanelClass
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从浮层面板中删除一个或一组 CSS 类。</p><p translation-origin="off">Remove a CSS class or an array of classes from the overlay pane.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        classes</p>
+      <code class="docs-api-method-parameter-type">string | string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updatePosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新对话框的位置。</p><p translation-origin="off">Updates the dialog's position.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        position<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">DialogPosition</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">新对话框位置。</p><p translation-origin="off">New dialog position.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新对话框的宽度和高度。</p><p translation-origin="off">Updates the dialog's width and height.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        width</p>
+      <code class="docs-api-method-parameter-type">string = ''</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">对话框的新宽度。</p><p translation-origin="off">New width of the dialog.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        height</p>
+      <code class="docs-api-method-parameter-type">string = ''</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">对话框的新高度。</p><p translation-origin="off">New height of the dialog.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatLegacyDialogConfig" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyDialogConfig"></span>
+  <code>MatLegacyDialogConfig</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/dialog/api#MatDialogConfig" class="docs-api-class-extends-type">
+      MatDialogConfig
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaDescribedBy: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">描述该对话框元素的 ID。</p><p translation-origin="off">ID of the element that describes the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要分配给对话框元素的 Aria 标签。</p><p translation-origin="off">Aria label to assign to the dialog element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabelledBy: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标记该对话框的元素的 ID。</p><p translation-origin="off">ID of the element that labels the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaModal: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这是否是模态对话框。用于设置 <code>aria-modal</code> 属性。</p><p translation-origin="off">Whether this is a modal dialog. Used to set the <code>aria-modal</code> attribute.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>autoFocus: AutoFocusTarget | string | boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当对话框打开时应该聚焦到哪里。</p><p translation-origin="off">Where the dialog should focus on open.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>backdropClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">背景板的自定义类。</p><p translation-origin="off">Custom class for the backdrop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closeOnNavigation: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户在历史记录中后退时，该对话框是否会关闭。请注意，这通常不包括单击链接（除非用户正在使用 <code>HashLocationStrategy</code> ）。</p><p translation-origin="off">Whether the dialog should close when the user goes backwards/forwards in history.
+Note that this usually doesn't include clicking on links (unless the user is using
+the <code>HashLocationStrategy</code>).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>componentFactoryResolver: ComponentFactoryResolver</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">备用 <code>ComponentFactoryResolver</code>，用于解析其关联组件。</p><p translation-origin="off">Alternate <code>ComponentFactoryResolver</code> to use when resolving the associated component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要注入到子组件中的数据。</p><p translation-origin="off">Data being injected into the child component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>delayFocusTrap: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否等待开场动画完成后再捕获焦点。</p><p translation-origin="off">Whether to wait for the opening animation to finish before trapping focus.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>direction: Direction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框内容的布局方向</p><p translation-origin="off">Layout direction for the dialog's content.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClose: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户是否可以使用 escape 或单击背景板来关闭该模态框。</p><p translation-origin="off">Whether the user can use escape or clicking on the backdrop to close the modal.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>enterAnimationDuration: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">进入动画的持续时间。必须是有效的 CSS 值（例如 100 毫秒）。</p><p translation-origin="off">Duration of the enter animation. Has to be a valid CSS value (e.g. 100ms).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exitAnimationDuration: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">退出动画的持续时间。必须是有效的 CSS 值（例如 50 毫秒）。</p><p translation-origin="off">Duration of the exit animation. Has to be a valid CSS value (e.g. 50ms).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasBackdrop: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框是否有背景板。</p><p translation-origin="off">Whether the dialog has a backdrop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>height: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框的高度。</p><p translation-origin="off">Height of the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框的 ID。如果省略，就会生成一个唯一的。</p><p translation-origin="off">ID for the dialog. If omitted, a unique one will be generated.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: Injector</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于实例化要附着的组件的注入器。如果提供，则优先于由 <code>ViewContainerRef</code> 间接提供的注入器。</p><p translation-origin="off">Injector used for the instantiation of the component to be attached. If provided,
+takes precedence over the injector indirectly provided by <code>ViewContainerRef</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>maxHeight: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最大高度。如果提供了数字，则假设单位是像素。</p><p translation-origin="off">Max-height of the dialog. If a number is provided, assumes pixel units.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>maxWidth: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最大宽度。如果提供了数字，则假设单位是像素。默认为 80vw。</p><p translation-origin="off">Max-width of the dialog. If a number is provided, assumes pixel units. Defaults to 80vw.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>minHeight: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最小高度。如果提供了数字，则假设单位是像素。</p><p translation-origin="off">Min-height of the dialog. If a number is provided, assumes pixel units.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>minWidth: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最小宽度。如果提供了数字，则假设单位是像素。</p><p translation-origin="off">Min-width of the dialog. If a number is provided, assumes pixel units.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的自定义类。</p><p translation-origin="off">Custom class for the overlay pane.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>position: DialogPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">位置改写。</p><p translation-origin="off">Position overrides.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>restoreFocus: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框是否应该在关闭之前将焦点还给以前拥有焦点的元素。</p><p translation-origin="off">Whether the dialog should restore focus to the
+previously-focused element, after it's closed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>role: DialogRole</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框元素的 ARIA 角色。</p><p translation-origin="off">The ARIA role of the dialog element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollStrategy: ScrollStrategy</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于对话框的滚动策略。</p><p translation-origin="off">Scroll strategy to be used for the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainerRef: ViewContainerRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">附着到的组件应该位于 Angular 的<em>逻辑</em>组件树中。这会影响注入时的可用内容以及在对话框中实例化的组件的变更检测顺序。这不会影响对象内容的渲染位置。</p><p translation-origin="off">Where the attached component should live in Angular's <em>logical</em> component tree.
+This affects what is available for injection and the change detection order for the
+component instantiated inside of the dialog. This does not affect where the dialog
+content will be rendered.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>width: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框的宽度。</p><p translation-origin="off">Width of the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-legacy-dialog-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_LEGACY_DIALOG_DATA" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_DIALOG_DATA"></span>
+  <code>MAT_LEGACY_DIALOG_DATA</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来访问那些传入对话框的数据。</p><p translation-origin="off">Injection token that can be used to access the data that was passed in to a dialog.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_DIALOG_DATA: InjectionToken&lt;<span class="hljs-built_in">any</span>&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_LEGACY_DIALOG_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_DIALOG_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_DIALOG_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来指定默认的对话框选项。</p><p translation-origin="off">Injection token that can be used to specify default dialog options.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_DIALOG_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacyDialogConfig&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_LEGACY_DIALOG_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_DIALOG_SCROLL_STRATEGY"></span>
+  <code>MAT_LEGACY_DIALOG_SCROLL_STRATEGY</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-constant-description"><p translation-result="on">一个注入令牌，它在对话框打开时确定滚动的处理方式。</p><p translation-origin="off">Injection token that determines the scroll handling while the dialog is open.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_DIALOG_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

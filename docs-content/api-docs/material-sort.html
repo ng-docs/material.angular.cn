@@ -1,0 +1,731 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-sort-api-参考文档--">
+    Angular Material sort API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatSortModule} from '@angular/material/sort';
+      </code>
+    </p>
+  <h3 id="material-sort-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="MatSortHeaderIntl" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSortHeaderIntl"></span>
+  <code>MatSortHeaderIntl</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">要修改显示的标签和文本，就要创建一个 MatSortHeaderIntl 的新实例，并把它包含在自定义提供者中。</p><p translation-origin="off">To modify the labels and text displayed, create a new instance of MatSortHeaderIntl and
+include it in a custom provider.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>changes: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只要这里的标签发生了变化就会发出流。如果标签在初始化后发生了变化，就用它来通知组件。</p><p translation-origin="off">Stream that emits whenever the labels here are changed. Use this to notify
+components if the labels have changed after initialization.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-sort-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatSortHeader" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSortHeader"></span>
+  <code>MatSortHeader</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">对元素应用排序行为（点击以改变排序）和样式，包括一个显示当前排序方向的箭头。</p><p translation-origin="off">Applies sorting behavior (click to change sort) and styles to an element, including an
+arrow to display the current sort direction.</p>
+
+<p translation-result="on">必须提供一个 id 并将其包含在父 MatSort 指令中。</p><p translation-origin="off">Must be provided with an id and contained within a parent MatSort directive.</p>
+
+<p translation-result="on">如果在 CdkTable 的头单元格中使用它，它会自动默认包含列的定义。</p><p translation-origin="off">If used on header cells in a CdkTable, it will automatically default its id from its containing
+column definition.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-sort-header]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSortHeader</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>arrowPosition: SortHeaderArrowPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">设置排序后显示的箭头位置。</p><p translation-origin="off">Sets the position of the arrow that displays when sorted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableClear: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">为这个 MatSortable 改写包含其中的 MatSort 的 disableClear 值。</p><p translation-origin="off">Overrides the disable clear value of the containing MatSort for this MatSortable.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'mat-sort-header'</span>)
+        </div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此排序头的 ID。如果在 CdkColumnDef 的上下文中使用，则默认为该列的名字。</p><p translation-origin="off">ID of this sort header. If used within the context of a CdkColumnDef, this will default to
+the column's name.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>sortActionDescription: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">描述应用于 MatSortHeader 的按钮元素，带有 aria-describedby。此文本应描述用户单击排序标题时将发生的操作。</p><p translation-origin="off">Description applied to MatSortHeader's button element with aria-describedby. This text should
+describe the action that will occur when the user clicks the sort header.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>start: SortDirection</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写这个 MatSortable 中包含 MatSort 的 sort 起始值。</p><p translation-origin="off">Overrides the sort start value of the containing MatSort for this MatSortable.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSort" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSort"></span>
+  <code>MatSort</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">MatSortable 的容器，可以管理排序状态并提供默认的排序参数。</p><p translation-origin="off">Container for MatSortables to manage the sort state and provide default sort parameters.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matSort]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSort</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matSortActive'</span>)
+        </div><p class="docs-api-property-name">
+      <code>active: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">最近排序过的 MatSortable 的 id。</p><p translation-origin="off">The id of the most recently sorted MatSortable.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matSortDirection'</span>)
+        </div><p class="docs-api-property-name">
+      <code>direction: SortDirection</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前活动的 MatSortable 的排序方向。</p><p translation-origin="off">The sort direction of the currently active MatSortable.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matSortDisableClear'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disableClear: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否通过完成排序方向的循环来禁止用户清除排序。可以通过 MatSortable 的输入属性 disableClear 来改写它。</p><p translation-origin="off">Whether to disable the user from clearing the sort by finishing the sort direction cycle.
+May be overridden by the MatSortable's disable clear input.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matSortDisabled</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matSortStart'</span>)
+        </div><p class="docs-api-property-name">
+      <code>start: SortDirection</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">最初对 MatSortable 进行排序时要设置的方向。可以通过 MatSortable 的输入属性 start 来改写它。</p><p translation-origin="off">The direction to set when an MatSortable is initially sorted.
+May be overridden by the MatSortable's sort start.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'matSortChange'</span>)
+        </div><p class="docs-api-property-name">
+      <code>sortChange: EventEmitter&lt;Sort&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户改变活动的排序或排序方向时发出的事件。</p><p translation-origin="off">Event emitted when the user changes either the active sort or sort direction.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>initialized: Observable&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在指令/组件的 ngOnInit 期间发出一次的流。</p><p translation-origin="off">Stream that emits once during the directive/component's ngOnInit.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortables: Map&lt;string, MatSortable&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本指令管理的所有已注册可排序对象的集合。</p><p translation-origin="off">Collection of all registered sortables that this directive manages.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">deregister
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">取消注册 MatSortable 的函数。这会从 MatSortable 集合中删除此 MatSortable。</p><p translation-origin="off">Unregister function to be used by the contained MatSortables. Removes the MatSortable from the
+collection of contained MatSortables.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        sortable</p>
+      <code class="docs-api-method-parameter-type">MatSortable</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getNextSortDirection
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回活动可排序对象的下一个排序方向，检查潜在的改写。</p><p translation-origin="off">Returns the next sort direction of the active sortable, checking for potential overrides.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        sortable</p>
+      <code class="docs-api-method-parameter-type">MatSortable</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">SortDirection</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">register
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册 MatSortable 的函数。这会把此 MatSortable 添加到 MatSortable 的集合中的。</p><p translation-origin="off">Register function to be used by the contained MatSortables. Adds the MatSortable to the
+collection of MatSortables.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        sortable</p>
+      <code class="docs-api-method-parameter-type">MatSortable</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">sort
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置当前排序的 id，并确定新的排序方向。</p><p translation-origin="off">Sets the active sort id and determines the new sort direction.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        sortable</p>
+      <code class="docs-api-method-parameter-type">MatSortable</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-sort-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatSortable" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatSortable"></span>
+  <code>MatSortable</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">指令的接口，用于保存供 <code>MatSortHeader</code> 使用的排序状态。</p><p translation-origin="off">Interface for a directive that holds sorting state consumed by <code>MatSortHeader</code>.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClear: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁止清除排序状态。</p><p translation-origin="off">Whether to disable clearing the sorting state.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要被排序的列的 id。</p><p translation-origin="off">The id of the column being sorted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>start: SortDirection</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">开始排序的方向。</p><p translation-origin="off">Starting sort direction.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="Sort" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="Sort"></span>
+  <code>Sort</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当前的排序状态。</p><p translation-origin="off">The current sort state.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>active: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要被排序的列的 id。</p><p translation-origin="off">The id of the column being sorted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>direction: SortDirection</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">排序的方向。</p><p translation-origin="off">The sort direction.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSortDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatSortDefaultOptions"></span>
+  <code>MatSortDefaultOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on"><code>mat-sort</code> 的默认选项。</p><p translation-origin="off">Default options for <code>mat-sort</code>.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>arrowPosition: SortHeaderArrowPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">排序时显示的箭头的位置。</p><p translation-origin="off">Position of the arrow that displays when sorted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClear: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁止清除排序状态。</p><p translation-origin="off">Whether to disable clearing the sorting state.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-sort-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="SortDirection" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="SortDirection"></span>
+  <code>SortDirection</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> SortDirection = <span class="hljs-string">'asc'</span> | <span class="hljs-string">'desc'</span> | <span class="hljs-string">''</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="SortHeaderArrowPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="SortHeaderArrowPosition"></span>
+  <code>SortHeaderArrowPosition</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">排序时显示的箭头的位置。</p><p translation-origin="off">Position of the arrow that displays when sorted.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> SortHeaderArrowPosition = <span class="hljs-string">'before'</span> | <span class="hljs-string">'after'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-sort-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_SORT_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_SORT_DEFAULT_OPTIONS"></span>
+  <code>MAT_SORT_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on"><code>mat-sort</code> 的默认选项的注入令牌。</p><p translation-origin="off">Injection token to be used to override the default options for <code>mat-sort</code>.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SORT_DEFAULT_OPTIONS: InjectionToken&lt;MatSortDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

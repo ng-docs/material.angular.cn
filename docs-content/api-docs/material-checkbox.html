@@ -1,0 +1,728 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-checkbox-api-参考文档--">
+    Angular Material checkbox API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatCheckboxModule} from '@angular/material/checkbox';
+      </code>
+    </p>
+  <h3 id="material-checkbox-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatCheckbox" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCheckbox"></span>
+  <code>MatCheckbox</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-checkbox</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matCheckbox</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-describedby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDescribedby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">'aria-describedby' 属性是在该元素的标签和字段类型之后读取的。</p><p translation-origin="off">The 'aria-describedby' attribute is read after the element's label and field type.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">附着在宿主元素的 aria-label 属性上。在大多数情况下，aria-labelledby 优先，所以这个可以省略。</p><p translation-origin="off">Attached to the aria-label attribute of the host element. In most cases, aria-labelledby will
+take precedence so this may be omitted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户可以指定 <code>aria-labelledby</code> 属性，它会被转发到 input 元素</p><p translation-origin="off">Users can specify the <code>aria-labelledby</code> attribute which will be forwarded to the input element</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否勾选了复选框。</p><p translation-origin="off">Whether the checkbox is checked.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的主题调色板。</p><p translation-origin="off">Theme color palette for the component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用涟漪。</p><p translation-origin="off">Whether ripples are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该复选框是否已禁用。这完全取代了 mixinDisabled 提供的实现，但 mixin 仍然是必需的，因为 mixinTabIndex 需要它。</p><p translation-origin="off">Whether the checkbox is disabled. This fully overrides the implementation provided by
+mixinDisabled, but the mixin is still required because mixinTabIndex requires it.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">复选框的唯一 ID。如果没有提供，它就会自动生成。</p><p translation-origin="off">A unique id for the checkbox input. If none is supplied, it will be auto-generated.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>indeterminate: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该复选框是否未决。这也称为“混合”模式，用于表示带有三种状态的复选框，例如一个嵌套着其它复选框列表的复选框。请注意，只要手动点击复选框，就会立即将未决状态设为 false。</p><p translation-origin="off">Whether the checkbox is indeterminate. This is also known as "mixed" mode and can be used to
+represent a checkbox with three states, e.g. a checkbox that represents a nested list of
+checkable items. Note that whenever checkbox is manually clicked, indeterminate is immediately
+set to false.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: 'before' | 'after'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签位于复选框之后还是之前。默认为 'after'</p><p translation-origin="off">Whether the label should appear after or before the checkbox. Defaults to 'after'</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果存在，name 值就会被应用到 input 元素中</p><p translation-origin="off">Name value will be applied to the input element if present</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该复选框是否必填的。</p><p translation-origin="off">Whether the checkbox is required.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">原生输入框元素的 value 属性</p><p translation-origin="off">The value attribute of the native input element</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;E&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>checked</code> 值发生变化时会发出本事件。</p><p translation-origin="off">Event emitted when the checkbox's <code>checked</code> value changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>indeterminateChange: EventEmitter&lt;boolean&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>indeterminate</code> 值发生变化时会发出本事件。</p><p translation-origin="off">Event emitted when the checkbox's <code>indeterminate</code> value changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，则默认颜色恢复为原来的颜色。</p><p translation-origin="off">Default color to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，将退回到 Tabindex。</p><p translation-origin="off">Tabindex to which to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>inputId: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">返回不可见输入框的唯一 id。</p><p translation-origin="off">Returns the unique id for the visual hidden input.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ripple: MatRipple</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">引用复选框的涟漪对象实例。</p><p translation-origin="off">Reference to the ripple instance of the checkbox.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">聚焦复选框。</p><p translation-origin="off">Focuses the checkbox.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换 <code>checked</code> 状态。</p><p translation-origin="off">Toggles the <code>checked</code> state of the checkbox.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatCheckboxRequiredValidator" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCheckboxRequiredValidator"></span>
+  <code>MatCheckboxRequiredValidator</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一个验证器，用于验证 Material 复选框在模板驱动复选框中的必填属性。目前 CheckboxRequiredValidator 只能用于 <code>input type=checkbox</code>，而且不能用于 <code>mat-checkbox</code>。</p><p translation-origin="off">Validator for Material checkbox's required attribute in template-driven checkbox.
+Current CheckboxRequiredValidator only work with <code>input type=checkbox</code> and does not
+work with <code>mat-checkbox</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-checkbox[required][formControlName]</span>
+  
+    <span class="docs-api-class-selector-name">mat-checkbox[required][formControl]</span>
+  
+    <span class="docs-api-class-selector-name">mat-checkbox[required][ngModel]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>required: boolean | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Tracks changes to the required attribute bound to this directive.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">enabled
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        input</p>
+      <code class="docs-api-method-parameter-type">boolean</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerOnValidatorChange
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fn</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">validate
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        control</p>
+      <code class="docs-api-method-parameter-type">AbstractControl&lt;any, any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ValidationErrors | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-checkbox-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatCheckboxChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCheckboxChange"></span>
+  <code>MatCheckboxChange</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">MatCheckbox 发出的“更改”事件对象。</p><p translation-origin="off">Change event object emitted by checkbox.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该复选框的新 <code>checked</code> 值。</p><p translation-origin="off">The new <code>checked</code> value of the checkbox.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatCheckbox</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该事件的来源 MatCheckbox。</p><p translation-origin="off">The source checkbox of the event.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-checkbox-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatCheckboxDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatCheckboxDefaultOptions"></span>
+  <code>MatCheckboxDefaultOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">默认的 <code>mat-checkbox</code> 选项，可以改写它们。</p><p translation-origin="off">Default <code>mat-checkbox</code> options that can be overridden.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>clickAction: MatCheckboxClickAction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">复选框的默认复选框单击操作。</p><p translation-origin="off">Default checkbox click action for checkboxes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于复选框的默认主题调色板。</p><p translation-origin="off">Default theme color palette to be used for checkboxes.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-checkbox-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="MatCheckboxClickAction" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatCheckboxClickAction"></span>
+  <code>MatCheckboxClickAction</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">当用户点击 input 元素时，复选框会处理点击动作。
+noop：不要切换为勾选或未决。
+check：只切换勾选状态，忽略未决状态。
+check-indeterminate：切换勾选状态，未决状态设为 false。默认行为。
+undefined：与 <code>check-indeterminate</code> 相同。</p><p translation-origin="off">Checkbox click action when user click on input element.
+noop: Do not toggle checked or indeterminate.
+check: Only toggle checked status, ignore indeterminate.
+check-indeterminate: Toggle checked status, set indeterminate to false. Default behavior.
+undefined: Same as <code>check-indeterminate</code>.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatCheckboxClickAction = <span class="hljs-string">'noop'</span> | <span class="hljs-string">'check'</span> | <span class="hljs-string">'check-indeterminate'</span> | <span class="hljs-literal">undefined</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-checkbox-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR"></span>
+  <code>MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHECKBOX_CONTROL_VALUE_ACCESSOR: <span class="hljs-built_in">any</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_CHECKBOX_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHECKBOX_DEFAULT_OPTIONS"></span>
+  <code>MAT_CHECKBOX_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌用来改写 <code>mat-checkbox</code> 的默认选项。</p><p translation-origin="off">Injection token to be used to override the default options for <code>mat-checkbox</code>.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHECKBOX_DEFAULT_OPTIONS: InjectionToken&lt;MatCheckboxDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_CHECKBOX_REQUIRED_VALIDATOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_CHECKBOX_REQUIRED_VALIDATOR"></span>
+  <code>MAT_CHECKBOX_REQUIRED_VALIDATOR</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_CHECKBOX_REQUIRED_VALIDATOR: Provider;</code>
+</pre>
+</div>
+
+
+    </div>

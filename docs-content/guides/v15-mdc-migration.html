@@ -1,0 +1,1213 @@
+<div class="docs-markdown"><h1 id="migrating-to-mdc-based-angular-material-components" translation-result="on">迁移到基于 MDC 的 Angular Material Components</h1><h1 translation-origin="off">Migrating to MDC-based Angular Material Components</h1><p translation-result="on">在 Angular Material v15 中，许多组件已经重构为基于官方的 <a href="https://github.com/material-components/material-components-web">Material Design Components for Web (MDC)</a> 。来自以下导入的组件已被重构：</p><p translation-origin="off">In Angular Material v15, many of the components have been refactored to be based on the official
+<a href="https://github.com/material-components/material-components-web">Material Design Components for Web (MDC)</a>.
+The components from the following imports have been refactored:</p>
+
+<table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">导入路径</nt-wrapper><nt-wrapper translation-origin="off">Import path</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">变更摘要</nt-wrapper><nt-wrapper translation-origin="off">Summary of changes</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@angular/material/autocomplete</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/button</td>
+<td><nt-wrapper translation-result="on">样式变更，API 变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, API changes</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/card</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/checkbox</td>
+<td><nt-wrapper translation-result="on">样式变更，事件行为变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, changes to event behavior</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/chips</td>
+<td><nt-wrapper translation-result="on">完全重写</nt-wrapper><nt-wrapper translation-origin="off">Complete rewrite</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/core</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/dialog</td>
+<td><nt-wrapper translation-result="on">样式变更，变更检测行为的变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, changes to change detection behavior</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/form-field</td>
+<td><nt-wrapper translation-result="on">样式变更、某些外观已删除、API 变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, some appearances removed, API changes</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/input</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/list</td>
+<td><nt-wrapper translation-result="on">样式变更，API 变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, API changes</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/menu</td>
+<td><nt-wrapper translation-result="on">样式变更，API 变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, API changes</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/paginator</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/progress-bar</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/progress-spinner</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/radio</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/select</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/slide-toggle</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/slider</td>
+<td><nt-wrapper translation-result="on">完全重写</nt-wrapper><nt-wrapper translation-origin="off">Complete rewrite</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/snack-bar</td>
+<td><nt-wrapper translation-result="on">样式变更，API 变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, API changes</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/table</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/tabs</td>
+<td><nt-wrapper translation-result="on">样式变更，API 变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes, API changes</nt-wrapper></td>
+</tr>
+
+<tr>
+<td>@angular/material/tooltip</td>
+<td><nt-wrapper translation-result="on">仅样式变更</nt-wrapper><nt-wrapper translation-origin="off">Style changes only</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+<p translation-result="on">重构的组件提供了一些优于旧实现的优势，包括：</p><p translation-origin="off">The refactored components offer several benefits over the old implementations, including:</p>
+
+<ul>
+<li><p translation-result="on">改进的无障碍性</p><p translation-origin="off">Improved accessibility</p>
+
+</li>
+<li><p translation-result="on">更好地遵守 Material Design 规范</p><p translation-origin="off">Better adherence to the Material Design spec</p>
+
+</li>
+<li><p translation-result="on">由于基于通用基础设施，未来版本的 Material Design 规范的采纳速度更快</p><p translation-origin="off">Faster adoption of future versions of the Material Design spec, due to being based on common
+infrastructure</p>
+
+</li>
+</ul>
+
+        <h2 id="what-has-changed" class="docs-header-link" translation-result="on">
+          <span header-link="发生了哪些变化？"></span>
+          发生了哪些变化？
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="what-has-changed"></span>
+          What has changed?
+        </h2>
+      
+        
+      <p translation-result="on">新组件具有不同的内部 DOM 和 CSS 样式。但是，新组件的大多数 TypeScript API 和组件/指令选择器都尽可能接近旧实现。这使得迁移你的应用程序并使其与新组件一起运行变得更简单。</p><p translation-origin="off">The new components have different internal DOM and CSS styles. However, most of the TypeScript APIs
+and component/directive selectors for the new components have been kept as close as possible to the
+old implementation. This makes it straightforward to migrate your application and get it running
+with the new components.</p>
+
+<p translation-result="on">由于新的 DOM 和 CSS，你可能会发现应用程序中的某些样式需要调整，尤其是当你的 CSS 覆盖了任何已迁移组件的内部元素的样式时。</p><p translation-origin="off">Due to the new DOM and CSS, you will likely find that some styles in your application need to be
+adjusted, particularly if your CSS is overriding styles on internal elements on any of the migrated
+components.</p>
+
+<p translation-result="on">为了与 MDC 集成，有一些组件对其 API 进行了较大变更。这些组件包括：</p><p translation-origin="off">There are a few components with larger changes to their APIs that were necessary in order to
+integrate with MDC. These components include:</p>
+
+<ul>
+<li><p translation-result="on">表单字段</p><p translation-origin="off">form-field</p>
+
+</li>
+<li><p translation-result="on">纸片</p><p translation-origin="off">chips</p>
+
+</li>
+<li><p translation-result="on">滑块</p><p translation-origin="off">slider</p>
+
+</li>
+<li><p translation-result="on">列表</p><p translation-origin="off">list</p>
+
+</li>
+</ul>
+<p translation-result="on">有关所有组件的<a href="#comprehensive-list-of-changes">完整变更列表，</a>请参见下文。</p><p translation-origin="off">See below for a <a href="#comprehensive-list-of-changes">comprehensive list of changes</a> for all components.</p>
+
+<p translation-result="on">每个新组件的旧实现现在均已被弃用，但仍然可以从 “legacy” 导入中获得。例如，你可以导入旧的 <code>mat-button</code> 实现，可以通过导入 <code>legacy-button</code> 模块来使用它。</p><p translation-origin="off">The old implementation of each new component is now deprecated, but still available from a "legacy"
+import. For example, you can import the old <code>mat-button</code> implementation can be used by importing the
+legacy button module.</p>
+
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatLegacyButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/legacy-button'</span>;
+</code></pre>
+
+        <h2 id="how-to-migrate" class="docs-header-link" translation-result="on">
+          <span header-link="如何迁移"></span>
+          如何迁移
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="how-to-migrate"></span>
+          How to Migrate
+        </h2>
+      
+        
+      <p translation-result="on">你可以通过运行 Angular Material 的自动重构工具来开始迁移。该工具实现为一个 <a href="https://angular.io/guide/schematics">Angular 原理图</a>，能将你的大部分代码更新为新的组件版本。虽然需要进行一些跟进，但你可以通过遵循这些最佳实践来减少手动工作：</p><p translation-origin="off">You can start your migration by running Angular Material's automated refactoring tool. This tool,
+implemented as an <a href="https://angular.io/guide/schematics">Angular Schematic</a>, updates the majority
+your code to the new component versions. While some follow-up is necessary, you can reduce the
+manual effort by following these best practices:</p>
+
+<p translation-result="on">通过确保你的应用程序在迁移之前遵循了某些良好实践，你可以减少所需的手动工作量。</p><p translation-origin="off">You can reduce the amount of manual effort needed by ensuring that your application follows good
+practices before migrating.</p>
+
+<ul>
+<li><p translation-result="on">尽可能避免覆盖 CSS 中内部 Angular Material 元素的样式。如果你发现自己经常覆盖内部元素的样式，请考虑使用专为更多样式定制而设计的组件，例如 <a href="guide/cdk">Angular CDK</a> 中可用的组件。</p><p translation-origin="off">Avoid overriding styles on internal Angular Material elements in your CSS as much as possible. If
+you find yourself frequently overriding styles on internal elements, consider using a component
+that is designed for more style customization, such as the ones available in the
+<a href="guide/cdk">Angular CDK</a>.</p>
+
+</li>
+<li><p translation-result="on">使用<a href="/guide/using-component-harnesses">组件挽具</a>在测试中与 Angular Material 组件交互，而不是检查组件的内部元素、属性或方法。使用组件挽具使你的测试更易于理解，并且对 Angular Material 中的更改更健壮</p><p translation-origin="off">Use <a href="/guide/using-component-harnesses">component harnesses</a> to interact with Angular Material
+components in tests rather than inspecting internal elements, properties, or methods of the
+component. Using component harnesses makes your tests easier to understand and more robust to
+changes in Angular Material</p>
+
+</li>
+</ul>
+
+        <h3 id="1-update-to-angular-material-v15" class="docs-header-link" translation-result="on">
+          <span header-link="1-更新到-angular-material-v15"></span>
+          1. 更新到 Angular Material v15
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="1-update-to-angular-material-v15"></span>
+          1. Update to Angular Material v15
+        </h3>
+      
+        
+      <p translation-result="on">Angular Material 包含一个示意图，可帮助迁移应用程序以使用新的基于 MDC 的组件。首先，将你的应用程序升级到 Angular Material 15。</p><p translation-origin="off">Angular Material includes a schematic to help migrate applications to use the new MDC-based
+components. To get started, upgrade your application to Angular Material 15.</p>
+
+<pre><code class="language-shell">ng update @angular/material^15
+</code></pre>
+<p translation-result="on">作为此更新的一部分，将运行原理图以自动移动你的应用程序以使用包含旧组件实现的“遗留”导入。这提供了一种让你的应用程序在 v15 上运行的快速途径，只需最少的手动更改。</p><p translation-origin="off">As part of this update, a schematic will run to automatically move your application to use the
+"legacy" imports containing the old component implementations. This provides a quick path to getting
+your application running on v15 with minimal manual changes.</p>
+
+
+        <h3 id="2-run-the-migration-tool" class="docs-header-link" translation-result="on">
+          <span header-link="2运行迁移工具"></span>
+          2.运行迁移工具
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="2-run-the-migration-tool"></span>
+          2. Run the migration tool
+        </h3>
+      
+        
+      <p translation-result="on">升级到 v15 后，你可以运行迁移工具以从遗留组件实现切换到基于 MDC 的新组件实现。</p><p translation-origin="off">After upgrading to v15, you can run the migration tool to switch from the legacy component
+implementations to the new MDC-based ones.</p>
+
+<pre><code class="language-shell">ng generate @angular/material:mdc-migration
+</code></pre>
+<p translation-result="on">此命令将你的 TypeScript、样式和模板更新为新的实现，并尽可能自动更新。</p><p translation-origin="off">This command updates your TypeScript, styles, and templates to the new implementations, updating as
+much as it can automatically.</p>
+
+
+        <h4 id="running-a-partial-migration" class="docs-header-link" translation-result="on">
+          <span header-link="运行部分迁移"></span>
+          运行部分迁移
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="running-a-partial-migration"></span>
+          Running a Partial Migration
+        </h4>
+      
+        
+      <p translation-result="on">根据应用程序的大小和复杂性，你可能希望一次迁移单个组件或一小组组件，而不是一次迁移所有组件。</p><p translation-origin="off">Depending on the size and complexity of your application, you may want to migrate a single component
+or small group of components at a time, rather than all components at once.</p>
+
+<p translation-result="on">你可能还希望一次迁移你的应用程序一个模块，而不是一起迁移。你可以在同一个应用程序中同时使用旧实现和新实现，只要它们不在同一个 <code>NgModule</code> 中使用。</p><p translation-origin="off">You may also want to migrate your app one module at a time instead of all together. You can use both
+the old implementation and new implementation in the same application, as long as they aren't used
+in the same <code>NgModule</code>.</p>
+
+<p translation-result="on">该脚本将提示你输入要迁移的目录和组件。</p><p translation-origin="off">The script will prompt you for the directory and components you want to migrate.</p>
+
+
+        <h3 id="3-check-for-todos-left-by-the-migration-tool" class="docs-header-link" translation-result="on">
+          <span header-link="3-检查迁移工具留下的-todo。"></span>
+          3. 检查迁移工具留下的 TODO。
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="3-check-for-todos-left-by-the-migration-tool"></span>
+          3. Check for TODOs left by the migration tool.
+        </h3>
+      
+        
+      <p translation-result="on">在迁移工具无法自动更新你的代码的情况下，它会尝试添加注释以供人工跟进。这些 TODO 注释遵循通用格式，因此可以轻松识别。</p><p translation-origin="off">In situations where the migration tool is not able to automatically update your code, it will
+attempt to add comments for a human to follow up. These TODO comments follow a common format, so
+they can be easily identified.</p>
+
+<pre><code class="language-ts"><span class="hljs-comment">// TODO(mdc-migration): ...</span>
+</code></pre>
+<p translation-result="on">要搜索迁移工具留下的所有注释，请在你的 IDE 中搜索 <code>TODO(mdc-migration):</code></p><p translation-origin="off">To search for all comments left by the migration tool, search for <code>TODO(mdc-migration):</code> in your
+IDE.</p>
+
+
+        <h3 id="4-verify-your-application" class="docs-header-link" translation-result="on">
+          <span header-link="4-验证你的申请"></span>
+          4. 验证你的申请
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="4-verify-your-application"></span>
+          4. Verify Your Application
+        </h3>
+      
+        
+      <p translation-result="on">在运行迁移并解决 TODO 之后，手动验证一切是否正常工作。</p><p translation-origin="off">After running the migration and addressing the TODOs, manually verify that everything is working
+correctly.</p>
+
+<p translation-result="on">运行你的测试并确认它们通过。你的测试可能依赖于内部 DOM 或旧组件实现的异步计时细节，并且可能需要更新。如果你发现需要更新某些测试，请考虑使用<a href="guide/using-component-harnesses">组件挽具</a>来使测试更加健壮。</p><p translation-origin="off">Run your tests and confirm that they pass. It's possible that your tests depended on internal DOM or
+async timing details of the old component implementations and may need to be updated. If you find
+you need to update some tests, consider using <a href="guide/using-component-harnesses">component harnesses</a> to
+make the tests more robust.</p>
+
+<p translation-result="on">运行你的应用程序并验证新组件是否正确。由于组件内部 DOM 和 CSS 的变化，你可能需要调整应用程序的某些样式。</p><p translation-origin="off">Run your application and verify that the new components look right. Due to the changes in internal
+DOM and CSS of the components, you may need to tweak some of your application's styles.</p>
+
+
+        <h2 id="comprehensive-list-of-changes" class="docs-header-link" translation-result="on">
+          <span header-link="综合变更清单"></span>
+          综合变更清单
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="comprehensive-list-of-changes"></span>
+          Comprehensive List of Changes
+        </h2>
+      
+        
+      
+        <h3 id="library-wide-changes" class="docs-header-link" translation-result="on">
+          <span header-link="库范围内的变化"></span>
+          库范围内的变化
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="library-wide-changes"></span>
+          Library-wide Changes
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">组件大小、颜色、间距、阴影和动画都在整体上略有变化。这些更改通常会提高规范合规性和无障碍性。</p><p translation-origin="off">Component size, color, spacing, shadows, and animations all change slightly across the board.
+These changes generally improve spec-compliance and accessibility.</p>
+
+</li>
+<li><p translation-result="on">所有组件的 DOM 结构均已更改，以提高无障碍性并更好地遵循 Material Design 规范。</p><p translation-origin="off">The DOM structure for all components has changed to improve accessibility and better follow the
+Material Design spec.</p>
+
+</li>
+<li><p translation-result="on">应用于组件的 CSS 类使用 <code>mat-mdc-</code> 前缀，而之前它只是一个 <code>mat-</code> 前缀。大致对应于旧实现中的元素的元素已被赋予相同的类名（除了前缀）。例如，按钮的宿主类是 <code>mat-mdc-button</code> 而不再是 <code>mat-button</code> 。但是，并非以前实现中的所有元素在新实现中都具有等效元素。</p><p translation-origin="off">CSS classes applied to components use the <code>mat-mdc-</code> prefix, whereas before it was simply a <code>mat-</code>
+prefix. Elements that roughly correspond to element in the old implementation have been given the
+same class name (aside from the prefix). For example, the button’s host class is <code>mat-mdc-button</code>
+instead of <code>mat-button</code>. However, not all elements in the previous implementation have an
+equivalent element in the new implementation.</p>
+
+</li>
+</ul>
+
+        <h3 id="theming" class="docs-header-link" translation-result="on">
+          <span header-link="主题"></span>
+          主题
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on"><code>mat.define-typography-config</code> 定义的默认排版级别已更新，以反映对 Material Design 规范的更改。</p><p translation-origin="off">Default typography levels defined by <code>mat.define-typography-config</code> have been updated to reflect
+changes to the Material Design spec.</p>
+
+</li>
+<li><p translation-result="on">所有组件现在都具有可主题化的密集度。当你包含主题混合时，默认密集度级别 (0) 的样式将默认包含在内。</p><p translation-origin="off">All components now have themeable density. Styles for the default density level (0) will be
+included by default when you include a theme mixin.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+<span class="hljs-variable">$theme</span>: mat.define-light-theme((
+  color: ...
+));
+
+<span class="hljs-comment">// Adds density level 0 styles</span>
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$theme</span>);
+</code></pre>
+<p translation-result="on">如果你喜欢不同的默认密集度级别，可以在主题配置中设置它：</p><p translation-origin="off">If you prefer a different default density level, you can set it in your theme config:</p>
+
+<!-- TODO(wagnermaciel): link to density docs for more info once they exist. -->
+
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-light-theme((
+  color: ...,
+  density: -<span class="hljs-number">1</span>
+));
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="autocomplete" class="docs-header-link" translation-result="on">
+          <span header-link="自动完成"></span>
+          自动完成
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="autocomplete"></span>
+          Autocomplete
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">长选项现在将换行而不再是截断。</p><p translation-origin="off">Long options now wrap instead of truncating.</p>
+
+</li>
+<li><p translation-result="on">选项高度不再以 <code>48px</code> 为上限。</p><p translation-origin="off">Option heights are no longer capped at <code>48px</code>.</p>
+
+</li>
+<li><p translation-result="on">选项列表现在有一个 <code>8px</code> 的顶部和底部内衬距。</p><p translation-origin="off">Option list now has an <code>8px</code> top and bottom padding.</p>
+
+</li>
+<li><p translation-result="on">选项列表现在当打开和关闭时会有一个动画。</p><p translation-origin="off">Options list now has an animation when opening and closing.</p>
+
+</li>
+</ul>
+
+        <h3 id="button" class="docs-header-link" translation-result="on">
+          <span header-link="按钮"></span>
+          按钮
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="button"></span>
+          Button
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">图标按钮的高度和宽度是 <code>48px</code> 而不再是 <code>40px</code> 。</p><p translation-origin="off">Icon button height and width are <code>48px</code> instead of <code>40px</code>.</p>
+
+</li>
+<li><p translation-result="on">各种状态颜色（悬停、焦点、活动）略有不同，以提高文本对比度。</p><p translation-origin="off">State colors (hover, focus, active) are slightly different to improve text contrast ratios.</p>
+
+</li>
+<li><p translation-result="on">字母间距是 <code>1.25px</code> 而不再是 <code>normal</code> 了。</p><p translation-origin="off">Letter-spacing is <code>1.25px</code> instead of <code>normal</code>.</p>
+
+</li>
+<li><p translation-result="on">FAB 支持具有 <code>extended</code> 输入属性的文本。</p><p translation-origin="off">FAB supports text with the <code>extended</code> input attribute.</p>
+
+</li>
+<li><p translation-result="on">主题 mixin 被分成三个独立的 mixin：</p><p translation-origin="off">Theming mixins are split into three separate mixins:</p>
+
+<ul>
+<li><p translation-result="on">普通按钮（ default - 默认、raised - 凸起、stroked - 描边、flat - 扁平）： <code>mat.mdc-button-theme</code></p><p translation-origin="off">Normal button (default, raised, stroked, flat): <code>mat.mdc-button-theme</code></p>
+
+</li>
+<li><p translation-result="on">图标按钮： <code>mat.mdc-icon-button-theme</code></p><p translation-origin="off">Icon button: <code>mat.mdc-icon-button-theme</code></p>
+
+</li>
+<li><p>FAB: <code>mat.mdc-fab-theme</code></p>
+</li>
+</ul>
+</li>
+<li><p translation-result="on">按钮内容中的图标放置在按钮文本之前。添加 <code>iconPositionEnd</code> 属性可以将它们放在按钮文本之后。</p><p translation-origin="off">Icons in the button content are placed before the button text. Add the <code>iconPositionEnd</code> attribute to place them after the button text.</p>
+
+</li>
+<li><p translation-result="on">按钮内容中的图标继承文本的 <code>font-size</code> 。只有图标而没有文本的按钮不能正确对齐（这不适用于图标按钮）。</p><p translation-origin="off">Icons in the button content inherit the text <code>font-size</code>. Buttons with only icons and no text do
+not align properly (this does not apply to the icon-button).</p>
+
+</li>
+</ul>
+
+        <h3 id="card" class="docs-header-link" translation-result="on">
+          <span header-link="卡片"></span>
+          卡片
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="card"></span>
+          Card
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">默认情况下，mat-card 不应用任何内衬距。相反，此内衬距是在卡片内容区域定义的： <code>&lt;mat-card-content&gt;</code> 、 <code>&lt;mat-card-header&gt;</code> 和 <code>&lt;mat-card-actions&gt;</code> 。</p><p translation-origin="off">By default, mat-card does not apply any internal padding. Instead, this padding is defined on the
+card content areas: <code>&lt;mat-card-content&gt;</code>, <code>&lt;mat-card-header&gt;</code>, and <code>&lt;mat-card-actions&gt;</code>.</p>
+
+</li>
+<li><p translation-result="on"><code>&lt;mat-card-content&gt;</code> 不再设置任何排版样式，用户可以自由添加对其应用程序有意义的任何排版样式，无论是 <code>&lt;mat-card-content&gt;</code> 本身还是任何适当的子元素。例如：</p><p translation-origin="off"><code>&lt;mat-card-content&gt;</code> no longer sets any typography styles, users are free to add whatever
+typography styles make sense for their application, either to <code>&lt;mat-card-content&gt;</code> itself or any
+child elements as appropriate. For example:</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+<span class="hljs-keyword">@include</span> mat.typography-hierarchy();
+</code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-card</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-card-content</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-body-1"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="checkbox" class="docs-header-link" translation-result="on">
+          <span header-link="复选框"></span>
+          复选框
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="checkbox"></span>
+          Checkbox
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">单击复选框现在直接触发原生复选框元素，而不再是 shim div。原生复选框在其 <code>click</code> 事件上调用 <code>preventDefault</code> 时会有古怪的行为，因此用户不应在 <code>click</code> 上调用 <code>preventDefault</code> 。</p><p translation-origin="off">Clicks on the checkbox now trigger directly on the native checkbox element rather than a shim div.
+Native checkboxes have bizarre behavior when calling <code>preventDefault</code> on their <code>click</code> event, so
+users should not call <code>preventDefault</code> on <code>click</code>.</p>
+
+</li>
+<li><p translation-result="on">复选框触控目标更大，现在为 40px 而不再是 16px，这样会更具无障碍性。请务必在布局中留出足够的空间，以使触控目标不会与其他组件重叠。如果你不关心无障碍性，你可以通过为复选框使用密集度 -1 来匹配以前的大小。</p><p translation-origin="off">Checkbox touch targets are larger, now 40px instead of 16px, which is more accessible. Be sure to
+allow enough space in your layout so that the touch target does not overlap other components. If
+you are not concerned with accessibility you can match the previous size by using density -1 for
+the checkbox.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+<span class="hljs-keyword">@include</span> mat.checkbox-density(-<span class="hljs-number">1</span>);
+</code></pre>
+</li>
+<li><p translation-result="on">由于基于应用程序主题的启发式更改，复选框颜色可能会更改为白色或黑色。以前，检查框的颜色会设置为主题的背景颜色。对于 MDC，它是从白色或黑色中与原色对比度最大的那一个选出的。</p><p translation-origin="off">Checkbox color may be changed to white or black due to a change in heuristics based on the
+application’s theme. Previously, the check’s color would be set to the theme’s background color.
+With MDC, it is determined by whether white or black has the most contrast against the primary
+color.</p>
+
+</li>
+<li><p translation-result="on">聚焦状态稍微调暗，提高对比度。</p><p translation-origin="off">Focus state is slightly darker, improving contrast ratio.</p>
+
+</li>
+<li><p translation-result="on">文本样式不再被继承；你需要专门针对复选框的 <code>label</code> 来覆盖排版属性。</p><p translation-origin="off">Text styles are not inherited; you will need to specifically target the checkbox’s <code>label</code> to
+override typography properties.</p>
+
+</li>
+<li><p translation-result="on">用鼠标选中复选框后，涟漪将保持可见而不是动画后消失。</p><p translation-origin="off">After toggling a checkbox with the mouse, the ripple will remain visible instead of animating out.</p>
+
+</li>
+</ul>
+
+        <h3 id="chips" class="docs-header-link" translation-result="on">
+          <span header-link="纸片"></span>
+          纸片
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="chips"></span>
+          Chips
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">纸片组件已分为多个变体，分别对应于更合适的无障碍性交互模式。原始的 <code>mat-chip-list</code> 使用 <code>role="listbox"</code> ，但这种交互模式并不适合所有用例。这些新的纸片组件有：</p><p translation-origin="off">The chips component has been split into multiple variants corresponding with more appropriate
+interaction patterns for accessibility. The original <code>mat-chip-list</code> used <code>role="listbox"</code>, but
+this interaction pattern is not suited for all use-cases. The new chips have:</p>
+
+<ul>
+<li><p translation-result="on"><code>&lt;mat-chip-listbox&gt;</code> 和 <code>&lt;mat-chip-option&gt;</code> - 这是最接近之前的交互模式。这是唯一支持纸片选择状态的变体。此模式与 Material Design 规范中指定的过滤器纸片模式一致。当你希望用户从选项列表中选择一个或多个值时，应使用此模式。</p><p translation-origin="off"><code>&lt;mat-chip-listbox&gt;</code> with <code>&lt;mat-chip-option&gt;</code> - this is the closest to the previous interaction
+pattern. This is the only variant that supports selection state for chips. This pattern aligns
+with the filter chips pattern specified in the Material Design spec. This pattern should be used
+when you want the user to select one or more values from a list of options.</p>
+
+</li>
+<li><p translation-result="on"><code>&lt;mat-chip-grid&gt;</code> 和 <code>&lt;mat-chip-row&gt;</code> - 这种模式应用于任何文本输入+纸片交互。</p><p translation-origin="off"><code>&lt;mat-chip-grid&gt;</code> with <code>&lt;mat-chip-row&gt;</code> - this pattern should be used for any text input + chips
+interaction.</p>
+
+</li>
+<li><p translation-result="on"><code>&lt;mat-chip-set&gt;</code> 和 <code>&lt;mat-chip&gt;</code> - 此变体没有无障碍模式，并假设只在应用程序级别应用一个。这允许应用程序使用纸片视觉效果实现自定义无障碍模式。</p><p translation-origin="off"><code>&lt;mat-chip-set&gt;</code> with <code>&lt;mat-chip&gt;</code> - this variant has no accessibility pattern and assumes one
+will be applied at the application level. This allows the application to implement a custom
+accessibility pattern with the chips visuals.</p>
+
+</li>
+</ul>
+</li>
+<li><p translation-result="on">迁移工具总是会将遗留的 <code>&lt;mat-chip-list&gt;</code> 更改为 <code>&lt;mat-chip-listbox&gt;</code> 以最小化前后的差异。你应该根据具体情况分别考虑将其更改为 <code>&lt;mat-chip-grid&gt;</code> 或 <code>&lt;mat-chip-set&gt;</code> 。有关如何为你的用例选择适当组件的更多指南，请参阅<a href="guide/overview#interaction-patterns">纸片交互模式</a>。</p><p translation-origin="off">The migration tool always changes the legacy <code>&lt;mat-chip-list&gt;</code> to <code>&lt;mat-chip-listbox&gt;</code> to minimize
+ differences before and after. You should separately consider changing to <code>&lt;mat-chip-grid&gt;</code> or
+ <code>&lt;mat-chip-set&gt;</code> on a case-by-case basis. See <a href="guide/overview#interaction-patterns">Chips Interaction Patterns</a> for more guidence on
+ choosing the appropriate component for your use case.</p>
+
+</li>
+</ul>
+
+        <h3 id="dialog" class="docs-header-link" translation-result="on">
+          <span header-link="对话"></span>
+          对话
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="dialog"></span>
+          Dialog
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on"><code>.mat-dialog-container</code> 不再包含 24px 的内衬距。相反，内部对话框指令会负责添加正确的内衬距。如果你的对话框不使用任何像 <code>&lt;mat-dialog-content&gt;</code> 这样的指令，这将很明显。</p><p translation-origin="off">The <code>.mat-dialog-container</code> does not contain a 24px padding anymore. Instead, the inner dialog
+directives are responsible for adding the right padding. This will be apparent if your dialog does
+not use any of the directives like <code>&lt;mat-dialog-content&gt;</code>.</p>
+
+</li>
+<li><p translation-result="on"><code>mat-dialog-content</code> 会使用 Material Design 规范指定的字体设置，其中包括相当宽敞的行高。如果你有一个信息密集的对话框，这些设置看起来不太好，你可以避免使用 <code>&lt;mat-dialog-content&gt;</code> 并只使用带有自定义内衬距的 div，或者使用可以与 <code>mat.mdc-dialog-typography</code> 一起应用的自定义排版设置 <code>mat.mdc-dialog-typography</code> mixin。</p><p translation-origin="off"><code>mat-dialog-content</code> uses the font-settings specified by the Material Design spec, which includes
+a rather roomy line-height. If you have an information-dense dialog that doesn't look good with
+these settings, you can avoid using <code>&lt;mat-dialog-content&gt;</code> and just use a div with custom padding,
+or use custom typography settings that can be applied with the <code>mat.mdc-dialog-typography</code> mixin.</p>
+
+</li>
+<li><p translation-result="on">旧对话框会触发额外的变更检测，这可能掩盖了应用程序中的变更检测问题，这需要在迁移时修复。</p><p translation-origin="off">The old dialog triggered an extra change detection, which may have masked change detection issues
+in your application that need to be fixed when migrating.</p>
+
+</li>
+</ul>
+
+        <h3 id="form-field" class="docs-header-link" translation-result="on">
+          <span header-link="表单字段"></span>
+          表单字段
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="form-field"></span>
+          Form Field
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">“旧版 - legacy”和“标准 - standard”表单字段外观设置不再存在，因为它们已从 Material Design 规范中删除。</p><p translation-origin="off">The "legacy" and "standard" form-field appearance settings no longer exist, as these have been
+dropped from the Material Design spec.</p>
+
+</li>
+<li><p translation-result="on">如果未指定标签，则删除的“旧版 - legacy”外观会将输入框占位符提升为浮动标签。如果之前未提供，则所有较新的外观设置都需要明确指定 <code>&lt;mat-label&gt;</code>。此更改解决了不互换使用标签和占位符的无障碍性最佳实践。</p><p translation-origin="off">The removed "legacy" appearance promoted input placeholders to the floating label if the label was
+not specified. All newer appearance settings require explicitly specifying a <code>&lt;mat-label&gt;</code> if one
+was not provided before. This change addresses an accessibility best practice of not using labels
+and placeholders interchangeably.</p>
+
+</li>
+<li><p translation-result="on">默认情况下，MatFormField 仍然会在字段下方保留一行空间用于提示或错误文本。但是，有一个新选项 <code>@Input() subscriptSizing: 'fixed'|'dynamic'</code> 。当此设置设置为 <code>fixed</code> （默认）时，表单字段在布局中保留足够的空间来显示一行提示或错误文本。当设置为 <code>dynamic</code> 时，表单字段会扩展和收缩它在布局中占用的空间量以适应当前显示的错误/提示。</p><p translation-origin="off">By default, MatFormField still reserves exactly one line of space below the field for hint or
+error text. However, there is a new option <code>@Input() subscriptSizing: 'fixed'|'dynamic'</code>. When
+this setting is set to <code>fixed</code> (default), the form-field reserves enough space in the layout to
+show one line of hint or error text. When set to <code>dynamic</code>, the form-field expands and contracts
+the amount of space it takes in the layout to fit the error / hint that is currently shown.</p>
+
+</li>
+<li><p translation-result="on"><code>&lt;mat-hint&gt;</code> 中的文本变得更大更暗，以满足 W3C 文本指南。</p><p translation-origin="off">The text inside <code>&lt;mat-hint&gt;</code> is larger and darker in order to meet W3C text guidelines.</p>
+
+</li>
+<li><p translation-result="on">虽然以前的表单字段有一个前缀指令 ( <code>matPrefix</code> ) 和一个后缀指令 ( <code>matSuffix</code> )，但基于 MDC 的表单字段把它们分成了与输入文本基线对齐的文本前缀/后缀和在表单字段中居中对齐的图标前缀/后缀。使用 <code>matTextPrefix</code> 或 <code>matTextSuffix</code> 标出文本前缀/后缀，使用 <code>matIconPrefix</code> 或 <code>matIconSuffix</code> 标出图标前缀/后缀。旧的 <code>matSuffix</code> 和 <code>matPrefix</code> API 会表现得像图标前缀/后缀，不过它们现在已被弃用。</p><p translation-origin="off">While the previous form-field had a single directive for prefixes (<code>matPrefix</code>) and a single
+directive for suffixes (<code>matSuffix</code>), the MDC-based form-field distinguishes between text
+prefix/suffixes which are baseline aligned with the input text, and icon prefix/suffixes which are
+center aligned in the form-field. Use <code>matTextPrefix</code> or <code>matTextSuffix</code> to indicate a text
+prefix/suffix, and <code>matIconPrefix</code> or <code>matIconSuffix</code> to indicate an icon prefix/suffix. The old
+<code>matSuffix</code> and <code>matPrefix</code> APIs will behave like icons, though they are now deprecated.</p>
+
+</li>
+<li><p translation-result="on"><code>floatLabel</code> 输入属性不再接受 <code>'never'</code> 值。 <code>floatLabel="never"</code> 仅受已删除的旧式表单字段外观的支持。它用于实现行为上类似于占位符的浮动标签。如果你需要此行为，请改用 <code>&lt;input&gt;</code> 上的 <code>placeholder</code> 属性。</p><p translation-origin="off">The <code>floatLabel</code> input no longer accepts <code>'never'</code>. <code>floatLabel="never"</code> was only supported by the
+legacy form-field appearance which has been dropped. It was used to achieve a floating label that
+behaved like a placeholder. If you need this behavior, use the <code>placeholder</code> property on <code>&lt;input&gt;</code>
+instead.</p>
+
+</li>
+<li><p translation-result="on">自定义表单字段控件可能需要调整其样式以说明围绕它的表单字段 DOM 和样式已更改的事实。</p><p translation-origin="off">Custom form field controls may need their styles adjusted to account for the fact that the
+surrounding form field DOM and styles have changed.</p>
+
+</li>
+</ul>
+
+        <h3 id="input" class="docs-header-link" translation-result="on">
+          <span header-link="输入框"></span>
+          输入框
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="input"></span>
+          Input
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">MatInput 必须用在 <code>&lt;mat-form-field&gt;</code> 内。以前，如果页面在其他地方加载了表单字段样式，则可能会（无意中）用到不在表单字段中的 <code>&lt;input matInput&gt;</code> 。</p><p translation-origin="off">MatInput must be inside <code>&lt;mat-form-field&gt;</code>. Previously it was (unintentionally) possible to use an
+<code>&lt;input matInput&gt;</code> without the form field if the page loaded form field styles elsewhere.</p>
+
+</li>
+<li><p translation-result="on">基于 MDC 的 MatInput 隐藏了与 <code>&lt;input matInput type="date"&gt;</code> 关联的原生日历选择器指示器，如果你希望此指示器出现在你的输入中，请使用以下样式：</p><p translation-origin="off">The MDC-based MatInput hides the native calendar picker indicator associated with
+<code>&lt;input matInput type="date"&gt;</code>, if you want this indicator to appear for your inputs, use the
+following styles:</p>
+
+<pre><code class="language-scss"><span class="hljs-selector-class">.mat-mdc-input-element</span>::-webkit-calendar-picker-indicator {
+  display: block;
+}
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="list" class="docs-header-link" translation-result="on">
+          <span header-link="列表"></span>
+          列表
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="list"></span>
+          List
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">此 API 已经过重新设计以支持文本换行并更好地与 Material Design 规范集成。</p><p translation-origin="off">The API has been reworked to support text wrapping and better integration with the Material Design
+specification.</p>
+
+</li>
+<li><p translation-result="on">以前，列表项通常是使用应用了 <code>matLine</code> 指令的多个 <code>span</code> 元素创建的。每个 <code>span</code> 产生一条线，第一个成为主线。使用新 API 时，<code>matLine</code> 指令已拆分为两个更细粒度、更有意义的指令：</p><p translation-origin="off">Previously, list items were commonly created using multiple <code>span</code> elements with the <code>matLine</code>
+directive applied. Each <code>span</code> resulting in a line, and the first one becoming the primary line.
+With the new API, the <code>matLine</code> directive has been split into two more granular and meaningful
+directives:</p>
+
+<ul>
+<li><code>matListItemTitle</code></li>
+<li><code>matListItemLine</code></li>
+</ul>
+</li>
+<li><p translation-result="on"><code>matListItemLine</code> 之外的文本（所谓的“未限定范围的内容”）将导致获取额外的一行（就好像其内容被放进了一行）。</p><p translation-origin="off">Text outside of a <code>matListItemLine</code> (so-called "unscoped content") will result in an additional
+line being acquired (as if the content was put into a line).</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  Second line
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+</code></pre>
+</li>
+<li><p translation-result="on">该列表会自动推断文本内容的行数。例如，在上面的代码片段中，列表项会渲染成两行的空间。使用新的 API，你可以在 <code>&lt;mat-list-item&gt;</code> 上设置明确的行数以手动控制换行。</p><p translation-origin="off">The list automatically infers the number of lines of text content. For example, in the snippet
+above, the list item renders space for two lines. With the new API, you can set an explicit number
+of lines on the <code>&lt;mat-list-item&gt;</code> to manually control wrapping.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> <span class="hljs-attr">lines</span>=<span class="hljs-string">"3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matListItemTitle</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  This text will wrap into the third line. Space for three lines is acquired by the
+  list item.
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+</code></pre>
+<p translation-result="on">请注意，<code>matListItemTitle</code> 或 <code>matListItemLine</code> 中的文本永远不会换行。根据提供的明确行数，只有未限定范围的内容才会包装/占用剩余空间。</p><p translation-origin="off">Note that text inside a <code>matListItemTitle</code> or <code>matListItemLine</code> will never wrap. Only unscoped
+content will wrap/take up the remaining space based on explicit number of lines provided.</p>
+
+</li>
+<li><p translation-result="on">除了行的组成方式不同之外，其他一些指令已经重命名，以便使用更明确的名称：</p><p translation-origin="off">Aside from the differences in how lines are composed, some other directives have been renamed to
+use more explicit naming:</p>
+
+<ul>
+<li><p translation-result="on"><code>matListIcon</code> 现在是 <code>matListItemIcon</code></p><p translation-origin="off"><code>matListIcon</code> is now <code>matListItemIcon</code></p>
+
+</li>
+<li><p translation-result="on"><code>matListAvatar</code> 现在是 <code>matListItemAvatar</code></p><p translation-origin="off"><code>matListAvatar</code> is now <code>matListItemAvatar</code></p>
+
+</li>
+</ul>
+</li>
+<li><p translation-result="on">最后，还有一个新指令 ( <code>matListItemMeta</code> ) 可用于将内容放入列表项的元（meta）部分（通常是列表项的末尾）。列表项中以前未限定范围的内容会被放入元部分。</p><p translation-origin="off">Lastly, also a new directive (<code>matListItemMeta</code>) is available to put content into the meta section
+of a list item (usually the end of the list item). Previously unscoped content in a list item was
+put into the meta section.</p>
+
+</li>
+<li><p translation-result="on">常用列表项的推荐迁移步骤：</p><p translation-origin="off">Recommended migration steps for common use of a list item:</p>
+
+<ol>
+<li><p translation-result="on">将第一个 <code>matLine</code> 更改为 <code>matListItemTitle</code></p><p translation-origin="off">Change the first <code>matLine</code> to <code>matListItemTitle</code></p>
+
+</li>
+<li><p translation-result="on">将所有其他 <code>matLine</code> 更改为 <code>matListItemLine</code></p><p translation-origin="off">Change all other <code>matLine</code>'s to <code>matListItemLine</code></p>
+
+</li>
+<li><p translation-result="on">将所有 <code>matListIcon</code> 更改为 <code>matListItemIcon</code></p><p translation-origin="off">Change all <code>matListIcon</code> to <code>matListItemIcon</code></p>
+
+</li>
+<li><p translation-result="on">将所有 <code>matListAvatar</code> 更改为 <code>matListItemAvatar</code></p><p translation-origin="off">Change all <code>matListAvatar</code> to <code>matListItemAvatar</code></p>
+
+</li>
+<li><p translation-result="on">将所有未限定范围的内容（ <code>matLine</code> 之外的内容）包装在 <code>matListItemMeta</code> 容器中。</p><p translation-origin="off">Wrap all unscoped content (content outside a <code>matLine</code>) in a <code>matListItemMeta</code> container.</p>
+
+</li>
+</ol>
+</li>
+</ul>
+
+        <h3 id="menu" class="docs-header-link" translation-result="on">
+          <span header-link="菜单"></span>
+          菜单
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="menu"></span>
+          Menu
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">无论在 DOM 中的顺序如何，菜单项的图标总是会出现在文本之前。</p><p translation-origin="off">The icon for a menu item appears before the text, regardless of the order in the DOM.</p>
+
+<ul>
+<li><p translation-result="on">如果你有一段内容，例如 <code>&lt;img&gt;</code> ，你想用它来代替 <code>&lt;mat-icon&gt;</code> 使用 <code>ngProjectAs="mat-icon"</code> 将它投射到图标槽中。</p><p translation-origin="off">If you have a piece of content such as an <code>&lt;img&gt;</code> that you want to use in place of a
+<code>&lt;mat-icon&gt;</code> use <code>ngProjectAs="mat-icon"</code> to project it into the icon slot.</p>
+
+</li>
+<li><p translation-result="on">如果你需要图标出现在条目的末尾（规范未正式支持），你可以将文本和图标包裹在一个 span 内，例如：</p><p translation-origin="off">If you need your icon to appear at the end of the item (not officially supported by the spec)
+you can wrap both the text and your icon in a span, for example:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>end_icon<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p translation-result="on">菜单项中的文本将换行而不再用省略号隐藏。</p><p translation-origin="off">The text in menu items wraps instead of being hidden with an ellipses.</p>
+
+</li>
+<li><p translation-result="on">菜单项高度不再以 <code>48px</code> 为上限。</p><p translation-origin="off">Menu item heights are no longer capped at <code>48px</code>.</p>
+
+</li>
+<li><p translation-result="on">菜单纵深从第 8 级开始，而不再是第 4 级。</p><p translation-origin="off">Menu elevation starts from level 8, instead of level 4.</p>
+
+</li>
+</ul>
+
+        <h3 id="option--optgroup" class="docs-header-link" translation-result="on">
+          <span header-link="选项选项组"></span>
+          选项/选项组
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="option--optgroup"></span>
+          Option / Optgroup
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">长选项现在将换行而不再用省略号截断。</p><p translation-origin="off">Long options now wrap instead of truncating with an ellipsis.</p>
+
+</li>
+<li><p translation-result="on">选项高度不再以 <code>48px</code> 为上限。</p><p translation-origin="off">Option heights are no longer capped at <code>48px</code>.</p>
+
+</li>
+</ul>
+
+        <h3 id="paginator" class="docs-header-link" translation-result="on">
+          <span header-link="分页器"></span>
+          分页器
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="paginator"></span>
+          Paginator
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on"><code>mat-paginator</code> 中的表单字段仅支持新表单字段提供的 <code>appearance</code> 选项（ <code>fill</code> 和 <code>outline</code> ）。</p><p translation-origin="off">The form-field inside of <code>mat-paginator</code> only supports the <code>appearance</code> options offered by the new
+form-field (<code>fill</code> and <code>outline</code>).</p>
+
+</li>
+</ul>
+
+        <h3 id="progress-bar" class="docs-header-link" translation-result="on">
+          <span header-link="进度条"></span>
+          进度条
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="progress-bar"></span>
+          Progress Bar
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">内部元素的可见性现在设置为 <code>visible</code> 。设置 <code>visibility: hidden</code> 将不再隐藏所有内部元素。要改为使用 <code>opacity: 0</code> 、 <code>display: none</code> 设置样式，或使用 <code>ngIf</code> 完全删除它。</p><p translation-origin="off">Visibility on internal elements is now set to <code>visible</code>. Setting <code>visibility: hidden</code> will no
+longer hide all internal elements. Instead, style it with <code>opacity: 0</code>, <code>display: none</code>, or
+remove it completely with <code>ngIf</code>.</p>
+
+</li>
+<li><p translation-result="on">高度始终设置为 4px，并且不会使用 <code>height</code> 样式来变短或变高。</p><p translation-origin="off">Height is always set to 4px and does not get shorter or taller using <code>height</code> styles.</p>
+
+</li>
+</ul>
+
+        <h3 id="progress-spinner" class="docs-header-link" translation-result="on">
+          <span header-link="进度圈"></span>
+          进度圈
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="progress-spinner"></span>
+          Progress Spinner
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">宿主元素不再是 <code>display: block</code> 的。要修复布局问题，请将 <code>display: block</code> 添加回此元素。</p><p translation-origin="off">Host element is no longer <code>display: block</code> which may affect layout. To fix layout issues add
+<code>display: block</code> back to the element.</p>
+
+</li>
+</ul>
+
+        <h3 id="radio" class="docs-header-link" translation-result="on">
+          <span header-link="单选"></span>
+          单选
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="radio"></span>
+          Radio
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">单选按钮标签不再是 <code>width: 100%</code>。这有助于防止用户在偶然单击页面上的空白时意外选中单选按钮。</p><p translation-origin="off">Radio button labels are no longer <code>width: 100%</code>. This helps prevent users from accidentally
+selecting a radio when clicking on whitespace that appears inert on the page.</p>
+
+</li>
+<li><p translation-result="on">标签更小，距离单选按钮更远，以符合 Material Design 规范。</p><p translation-origin="off">Labels are smaller and further away from the radio button to align with the Material Design spec.</p>
+
+</li>
+<li><p translation-result="on">触控目标现在更大且更具无障碍性。请务必在布局中留出足够的空间，以使触控目标不会与其他组件重叠。如果你不关心无障碍性，你可以通过对单选按钮使用密集度 -1 来匹配以前的大小。</p><p translation-origin="off">The touch target is now much larger and more accessible. Be sure to allow enough space in your
+layout so that the touch target does not overlap other components. If you are not concerned with
+accessibility you can match the previous size by using density -1 for the radio.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+<span class="hljs-keyword">@include</span> mat.radio-density(-<span class="hljs-number">1</span>);
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="select" class="docs-header-link" translation-result="on">
+          <span header-link="选择框"></span>
+          选择框
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="select"></span>
+          Select
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on"><code>MatSelect</code> 不再将下拉菜单中的选定选项与触发器文本对齐。</p><p translation-origin="off"><code>MatSelect</code> no longer aligns the selected option in the dropdown menu with the trigger text.</p>
+
+</li>
+<li><p translation-result="on">长选项现在将换行而不再截断。</p><p translation-origin="off">Long options now wrap instead of truncating.</p>
+
+</li>
+<li><p translation-result="on">选项高度不再以 <code>48px</code> 为上限。</p><p translation-origin="off">Option heights are no longer capped at <code>48px</code>.</p>
+
+</li>
+<li><p translation-result="on">选项列表现在有一个 <code>8px</code> 的顶部和底部内衬距。</p><p translation-origin="off">Option list now has an <code>8px</code> top and bottom padding.</p>
+
+</li>
+<li><p translation-result="on">选项列表动画已更改。</p><p translation-origin="off">Option list animation has changed.</p>
+
+</li>
+<li><p translation-result="on">以前下拉菜单的宽度可能比父表单字段宽，但现在下拉菜单的宽度与表单字段的宽度相同</p><p translation-origin="off">Previously the dropdown menu width could be wider than the parent form-field, but now the dropdown
+is the same width as the form-field</p>
+
+</li>
+</ul>
+
+        <h3 id="slide-toggle" class="docs-header-link" translation-result="on">
+          <span header-link="滑动开关"></span>
+          滑动开关
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="slide-toggle"></span>
+          Slide Toggle
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">为了提高无障碍性，基于 MDC 的版本使用 <code>&lt;button role="switch"&gt;</code> 来表示切换而不再是 <code>&lt;input type="checkbox"&gt;</code> 。滑动开关将不再响应原生表单验证。要考虑表单验证的替代方法。</p><p translation-origin="off">To improve accessibility, the MDC-based version uses <code>&lt;button role="switch"&gt;</code> to represent the
+toggle rather than <code>&lt;input type="checkbox"&gt;</code>. Slide toggle will no longer respond to native form
+validation. Consider alternative approaches to form validation.</p>
+
+</li>
+<li><p translation-result="on">触控目标更大且更具无障碍性。请务必在布局中留出足够的空间，以使触控目标不会与其他组件重叠。如果你不关心无障碍性，你可以通过使用密集度 -1 进行滑动开关来匹配以前的大小。</p><p translation-origin="off">The touch target is much larger and more accessible. Be sure to allow enough space in your
+layout so that the touch target does not overlap other components. If you are not concerned with
+accessibility you can match the previous size by using density -1 for the slide-toggle.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+<span class="hljs-keyword">@include</span> mat.slide-toggle-density(-<span class="hljs-number">1</span>);
+</code></pre>
+</li>
+<li><p translation-result="on">标签离已启用的开关更近了</p><p translation-origin="off">The label is closer to the enabled toggle</p>
+
+</li>
+</ul>
+
+        <h3 id="slider" class="docs-header-link" translation-result="on">
+          <span header-link="滑块"></span>
+          滑块
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="slider"></span>
+          Slider
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">滑块现在可与移动设备屏幕阅读器配合使用。</p><p translation-origin="off">Sliders now work with mobile device screen readers.</p>
+
+</li>
+<li><p translation-result="on">滑块模板 API 已从单个 <code>&lt;mat-slider&gt;</code> 元素更改为包含一个或两个 <code>&lt;input&gt;</code> 元素（取决于滑块是否应为标准滑块或范围滑块）的 <code>&lt;mat-slider&gt;</code> 元素。例如</p><p translation-origin="off">The slider template API has changed from a single <code>&lt;mat-slider&gt;</code> element to a <code>&lt;mat-slider&gt;</code>
+element which contains one or two <code>&lt;input&gt;</code> elements (depending on whether the slider should)
+be a standard or range slider. E.g.</p>
+
+<pre><code class="language-html">  <span class="hljs-comment">&lt;!-- Single slider --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Range slider --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderStartThumb</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderEndThumb</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p translation-result="on"><code>&lt;mat-slider&gt;</code> 上的新 <code>discrete</code> 属性现在控制滑块是否具有刻度线和值指示器工具提示。它取代了 <code>thumbLabel</code> 。</p><p translation-origin="off">The new <code>discrete</code> property on the <code>&lt;mat-slider&gt;</code> now controls whether the slider has tick marks
+and a value indicator tooltip. It replaces <code>thumbLabel</code>.</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">thumbLabel</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">discrete</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p translation-result="on"><code>tickInterval</code> 属性已被删除。要切换到新 API，请使用 <code>showTickMarks</code> 创建带有刻度线的滑块，刻度线的间隔将与滑块的 <code>step</code> 相匹配。 <code>tickInterval</code> 属性正在考虑在未来的版本中加回来。</p><p translation-origin="off">The <code>tickInterval</code> property has been removed. To switch to the new API, use <code>showTickMarks</code> to
+create a slider with tick marks, and the interval for your tick marks will match your slider's
+<code>step</code>. The <code>tickInterval</code> property is under consideration to be added back in future releases.</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">tickInterval</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">showTickMarks</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p translation-result="on"><code>displayValue</code> 属性已被删除。控制值指示器文本的建议替代方法是通过 <code>displayWith</code> 提供一个函数。</p><p translation-origin="off">The <code>displayValue</code> property has been removed. The suggested alternative for controlling the
+value indicator text is to provide a function via <code>displayWith</code>.</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">displayValue</span>]=<span class="hljs-string">"myDisplayValue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">displayWith</span>]=<span class="hljs-string">"myDisplayWithFn"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p translation-result="on">现在删除了 <code>valueText</code> 属性，以支持直接使用原生输入框的 aria-valuetext 或提供 <code>displayWith</code> 函数。</p><p translation-origin="off">The <code>valueText</code> property is now removed in favor of directly using the native input's
+aria-valuetext or providing a <code>displayWith</code> function.</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">valueText</span>]=<span class="hljs-string">"myValueText"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After (Option 1) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">attr.aria-valuetext</span>]=<span class="hljs-string">"myValueText"</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After (Option 2) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> [<span class="hljs-attr">displayWith</span>]=<span class="hljs-string">"myDisplayWithFn"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+</li>
+<li><p translation-result="on">滑块 API 也发生了变化，因此有两个新组件： <code>MatSliderThumb</code> 和 <code>MatSliderRangeThumb</code> 。它们提供以下属性：</p><p translation-origin="off">The slider API has also changed such that there are two new components: <code>MatSliderThumb</code> and
+<code>MatSliderRangeThumb</code>. They provide the following properties:</p>
+
+<ul>
+<li><p><code>@Input() value: number</code></p>
+</li>
+<li><p><code>@Output() valueChange: EventEmitter&lt;number&gt;</code></p>
+</li>
+<li><p><code>@Output() dragEnd: EventEmitter&lt;MatSliderDragEvent&gt;</code></p>
+</li>
+<li><p><code>@Output() dragStart: EventEmitter&lt;MatSliderDragEvent&gt;</code></p>
+</li>
+<li><p><code>percentage: number</code></p>
+<p translation-result="on">以及以下方法：</p><p translation-origin="off">And the following methods:</p>
+
+</li>
+<li><p><code>blur</code></p>
+</li>
+<li><p><code>focus</code></p>
+</li>
+</ul>
+</li>
+<li><p translation-result="on">为了适应范围滑块，实现已从作为表单控件的 <code>&lt;mat-slider&gt;</code> 元素更改为包含 1-2 个 <code>&lt;input&gt;</code> 元素（滑块的“Thumbs”）作为表单控件的 <code>&lt;mat-slider&gt;</code> 元素。值、关联事件（ <code>input</code> 、 <code>change</code> ）和标签（ <code>aria-label</code> ）现在改为放在 <code>&lt;input&gt;</code> 元素上。</p><p translation-origin="off">To accommodate range sliders, the implementation has changed from the <code>&lt;mat-slider&gt;</code> element being
+the form control to the <code>&lt;mat-slider&gt;</code> element containing 1-2 <code>&lt;input&gt;</code> elements (the slider
+"thumbs") that act as the form control(s). The value, associated events (<code>input</code>, <code>change</code>), and
+labels (<code>aria-label</code>) now live on the <code>&lt;input&gt;</code> elements instead.</p>
+
+</li>
+<li><p translation-result="on">不再支持垂直滑块和反转滑块，因为它们不再是 Material Design 规范的一部分。因此，<code>invert</code> 和 <code>vertical</code> 属性已被删除。</p><p translation-origin="off">Vertical sliders and inverted sliders are no longer supported, as they are no longer part of the
+Material Design spec. As a result, the <code>invert</code> and <code>vertical</code> properties have been removed.</p>
+
+</li>
+</ul>
+
+        <h3 id="snack-bar" class="docs-header-link" translation-result="on">
+          <span header-link="快餐栏"></span>
+          快餐栏
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="snack-bar"></span>
+          Snack Bar
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">对于简单的、基于文本的快餐栏，没有重大变化。</p><p translation-origin="off">For simple, text-based snack-bars, there are no significant changes.</p>
+
+</li>
+<li><p translation-result="on">对于带有操作按钮的简单快餐栏，它们使用基于 MDC 的 mat-button，因此你的应用程序需要包含用于基于 MDC 的按钮的 Sass 主题 mixin。</p><p translation-origin="off">For simple snack-bars with an action button, they use the MDC-based mat-button, so your
+application will need to include the Sass theming mixin for the MDC-based button.</p>
+
+</li>
+<li><p translation-result="on">对于使用自定义结构化内容的快餐栏（如果你调用 <code>MatSnackBar.openFromComponent</code> 或 <code>MatSnackBar.openFromTemplate</code> ），你应该使用以下新指令来标记出你的内容：</p><p translation-origin="off">For snack-bars that use custom structured content (if you call <code>MatSnackBar.openFromComponent</code> or
+<code>MatSnackBar.openFromTemplate</code>), you should use the following new directives to annotate your
+content:</p>
+
+<ul>
+<li><p translation-result="on">用 <code>matSnackBarLabel</code> 标记显示给用户的文本</p><p translation-origin="off"><code>matSnackBarLabel</code> to mark the text displayed to users</p>
+
+</li>
+<li><p translation-result="on">用 <code>matSnackBarActions</code> 标记包含操作按钮的元素</p><p translation-origin="off"><code>matSnackBarActions</code> to mark the element containing the action buttons</p>
+
+</li>
+<li><p translation-result="on">用 <code>matSnackBarAction</code> 标记单个操作按钮</p><p translation-origin="off"><code>matSnackBarAction</code> to mark individual action buttons</p>
+
+</li>
+<li><p translation-result="on">如果你不指定这些指令中的任何一个，它将把整个自定义组件/模板视为文本。</p><p translation-origin="off">If you do not specify any of these directives, it will treat the entire custom component /
+template as text.</p>
+
+</li>
+</ul>
+</li>
+<li><p translation-result="on">打开快餐栏的测试现在需要在尝试访问快餐栏的内容之前调用 <code>flush()</code>。在运行迁移工具之前更新你的测试以使用<a href="guide/using-component-harnesses">组件挽具</a>应该可以无缝过渡。</p><p translation-origin="off">Tests that open a snack-bar now require calling <code>flush()</code> before attempting to access the content
+of the snackbar. Updating your tests to use <a href="guide/using-component-harnesses">component harnesses</a>
+before running the migration tool should make this transition seamless.</p>
+
+</li>
+</ul>
+
+        <h3 id="table" class="docs-header-link" translation-result="on">
+          <span header-link="表格"></span>
+          表格
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="table"></span>
+          Table
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">所有单元格都有 <code>16px</code> 的左右内衬距，而不再是只有最左边和最右边的单元格有 <code>24px</code> 的内衬距。</p><p translation-origin="off">All cells have a <code>16px</code> left and right padding instead of just the leftmost and rightmost cells
+having a padding of <code>24px</code>.</p>
+
+</li>
+<li><p translation-result="on">标题单元格具有与数据行相同的颜色和文本大小，而不再是具有更浅的灰色和更小的文本。</p><p translation-origin="off">Header cells have the same color and text size as the data rows instead of having more grayish and
+smaller text.</p>
+
+</li>
+<li><p translation-result="on">默认情况下，单元格文本不再换行。可以通过把 <code>white-space: normal</code> 应用到单元格来为其启用换行。</p><p translation-origin="off">Cell text no longer wraps by default. Cell wrapping can be enabled by applying
+<code>white-space: normal</code> to the table cells.</p>
+
+</li>
+<li><p translation-result="on">行高是 <code>52px</code> 而不再是 <code>48px</code> 。</p><p translation-origin="off">Row height is <code>52px</code> instead of <code>48px</code>.</p>
+
+</li>
+<li><p translation-result="on">单元格的 box-sizing 是 <code>border-box</code> 而不再是 <code>content-box</code> 。这可能会影响自定义宽度样式。</p><p translation-origin="off">Cell box-sizing is <code>border-box</code> instead of <code>content-box</code>. This may affect custom width styles.</p>
+
+</li>
+<li><p translation-result="on">表格的最后一行不再包含底部边框线，因为表格应该有自己的边框。</p><p translation-origin="off">The table's last row does not include a bottom border row because the table is expected to have a
+border.</p>
+
+</li>
+<li><p translation-result="on"><code>MatTableDataSource</code> 的 paginator 属性有一个通用接口，可以匹配大多数但不是所有的 paginator API。你可能需要明确指定分页器的类型才能访问完整的 API，例如： <code>new MatTableDataSource&lt;MyData, MatPaginator&gt;();</code></p><p translation-origin="off">The paginator property of the <code>MatTableDataSource</code> has a generic interface that matches most, but
+not all of the paginator API. You may need to explicitly type the paginator to access the full
+API, for example: <code>new MatTableDataSource&lt;MyData, MatPaginator&gt;();</code></p>
+
+</li>
+<li><p translation-result="on">弹性表格 ( <code>&lt;mat-table&gt;</code> ) 会在单元格而不是行上显示边框。</p><p translation-origin="off">Flex tables (<code>&lt;mat-table&gt;</code>) display a border on the cells instead of rows.</p>
+
+</li>
+<li><p translation-result="on">弹性表格 ( <code>&lt;mat-table&gt;</code> ) 用 <code>height</code> 设置行高而不再是 <code>min-height</code> 。</p><p translation-origin="off">Flex table (<code>&lt;mat-table&gt;</code>) row height is set with <code>height</code> instead of <code>min-height</code>.</p>
+
+</li>
+</ul>
+
+        <h3 id="tabs" class="docs-header-link" translation-result="on">
+          <span header-link="选项卡"></span>
+          选项卡
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tabs"></span>
+          Tabs
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">选择选项卡标题时，标题标签文本颜色会与主题颜色匹配。</p><p translation-origin="off">Header label text color matches the theme color when the tab header is selected.</p>
+
+</li>
+<li><p translation-result="on">标头标签会拉伸以填充容器的宽度。这可以通过将 <code>&lt;mat-tab-group&gt;</code> 的输入属性 <code>mat-stretch-tabs</code> 设置为 <code>false</code> 来关闭。</p><p translation-origin="off">Header labels stretch to fill the container's width. This can be turned off by
+setting the <code>&lt;mat-tab-group&gt;</code> input <code>mat-stretch-tabs</code> to <code>false</code>.</p>
+
+</li>
+<li><p translation-result="on"><code>&lt;mat-tab-nav-bar&gt;</code> 需要使用 <code>tabPanel</code> 输入属性来引用 <code>&lt;mat-tab-nav-panel&gt;</code> 。 <code>&lt;mat-tab-nav-panel&gt;</code> 必须包裹已连接到导航栏的内容。这允许组件为无障碍技术提供正确的标签。</p><p translation-origin="off">The <code>&lt;mat-tab-nav-bar&gt;</code> requires a reference to a <code>&lt;mat-tab-nav-panel&gt;</code> using the <code>tabPanel</code>
+input. The <code>&lt;mat-tab-nav-panel&gt;</code> must wrap the content connected to the nav-bar. This allows the
+component to provide correct labeling for assistive technology.</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Before --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- After --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-bar</span> [<span class="hljs-attr">tabPanel</span>]=<span class="hljs-string">"tabPanel"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-bar</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-nav-panel</span> #<span class="hljs-attr">tabPanel</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-nav-panel</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+
+        <h3 id="tooltip" class="docs-header-link" translation-result="on">
+          <span header-link="工具提示"></span>
+          工具提示
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tooltip"></span>
+          Tooltip
+        </h3>
+      
+        
+      <ul>
+<li><p translation-result="on">背景颜色是不透明的，而不再是稍微透明的。这提高了无障碍性。</p><p translation-origin="off">Background color is opaque instead of slightly transparent. This improves accessibility.</p>
+
+</li>
+<li><p translation-result="on">默认字体大小是 <code>12px</code> 而不再是 <code>10px</code> 。</p><p translation-origin="off">Default font-size is <code>12px</code> instead of <code>10px</code>.</p>
+
+</li>
+<li><p translation-result="on">行高是 <code>normal</code>，而不再是 <code>16px</code> 。</p><p translation-origin="off">Line height is <code>normal</code> instead of <code>16px</code>.</p>
+
+</li>
+<li><p translation-result="on">文本溢出是 <code>ellipsis</code> 而不再是 <code>clip</code> 。</p><p translation-origin="off">Text overflow is <code>ellipsis</code> instead of <code>clip</code>.</p>
+
+</li>
+<li><p translation-result="on">有一个新的最小宽度 <code>40px</code> 。</p><p translation-origin="off">There is a new minimum width of <code>40px</code>.</p>
+
+</li>
+<li><p translation-result="on">单行工具提示的文本对齐方式为 <code>center</code> 。多行工具提示使用 <code>left</code> 对齐。</p><p translation-origin="off">Text alignment for single line tooltips is <code>center</code>. Multi-line tooltips use <code>left</code> alignment.</p>
+
+</li>
+</ul>
+</div>

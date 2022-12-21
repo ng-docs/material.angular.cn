@@ -1,0 +1,12 @@
+<div class="docs-markdown"><h1 id="deploy-to-local" translation-result="on">部署到本地环境</h1><h1 translation-origin="off">Deploy to local</h1><p>有些企业内部的防火墙比较严格，如果无法打开 <a href="https://material.angular.cn">https://material.angular.cn</a>，你可以在企业内部进行私有化部署。步骤如下：</p>
+<p>本文档的预编译版本位于 <a href="https://github.com/ng-docs/material-cn-prebuilt">Github</a> 上，如果你想进行私有化部署，请把它 Clone 下来，在 nginx 等服务器上按照静态网站的形式做部署即可，除此之外不需要任何服务端环境。</p>
+<p>以 Nginx 为例，你需要在 nginx 上做如下改动：</p>
+<pre><code>server {
+    root /path/to/material-cn-prebuilt/;
+    location / {
+        try_files $uri $uri.html $uri/ /index.html;
+    }
+}
+</code></pre>
+<p>注意其中的 <code>$uri.html</code>，这是本文档相对于常规 Angular 应用的主要差别，因为本文档进行了预先渲染（Prerender），这项工作可以让你在不需要 Node 服务器的情况下获得等同于服务端渲染的体验改善。</p>
+</div>

@@ -1,0 +1,269 @@
+<div class="docs-markdown"><p translation-result="on"><code>&lt;mat-form-field&gt;</code> 是一个组件，用于把几个 Angular Material 组件包装在一起，并应用上常见的<a href="https://material.io/guidelines/components/text-fields.html">文本输入框</a>样式，比如下划线、浮动标签和提示信息。</p><p translation-origin="off"><code>&lt;mat-form-field&gt;</code> is a component used to wrap several Angular Material components and apply common
+<a href="https://material.io/guidelines/components/text-fields.html">Text field</a> styles such as the
+underline, floating label, and hint messages.</p>
+
+<p translation-result="on">该文档中，"表单字段"（form field）是指包装组件 <code>&lt;mat-form-field&gt;</code>，而 "表单字段控件"（form field control）是指被 <code>&lt;mat-form-field&gt;</code> 包装的组件（如文本框、多行文本框、选择框等）。</p><p translation-origin="off">In this document, "form field" refers to the wrapper component <code>&lt;mat-form-field&gt;</code> and
+"form field control" refers to the component that the <code>&lt;mat-form-field&gt;</code> is wrapping
+(e.g. the input, textarea, select, etc.)</p>
+
+<p translation-result="on">在设计上，下列 Angular Material 组件可用在 <code>&lt;mat-form-field&gt;</code> 中：</p><p translation-origin="off">The following Angular Material components are designed to work inside a <code>&lt;mat-form-field&gt;</code>:</p>
+
+<ul>
+<li><p><a href="https://material.angular.io/components/input/overview"><code>&lt;input matNativeControl&gt;</code> &amp; <code>&lt;textarea matNativeControl&gt;</code></a></p>
+</li>
+<li><p><a href="https://material.angular.io/components/select/overview"><code>&lt;select matNativeControl&gt;</code></a></p>
+</li>
+<li><p><a href="https://material.angular.io/components/select/overview"><code>&lt;mat-select&gt;</code></a></p>
+</li>
+<li><p><a href="https://material.angular.io/components/chips/overview"><code>&lt;mat-chip-list&gt;</code></a></p>
+</li>
+</ul>
+<div material-docs-example="form-field-overview"></div>
+
+
+        <h3 id="form-field-appearance-variants" class="docs-header-link" translation-result="on">
+          <span header-link="表单字段外观的变体形式"></span>
+          表单字段外观的变体形式
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="form-field-appearance-variants"></span>
+          Form field appearance variants
+        </h3>
+      
+        
+      <p translation-result="on"><code>mat-form-field</code> 支持两种不同的外观变体，可以通过输入属性 <code>appearance</code> 进行设置：<code>fill</code> 和 <code>outline</code>。
+<code>fill</code> 外观显示的表单字段除了下划线之外还带有填充的背景。
+<code>outline</code> 外观会显示一个带四周边框的表单字段，而不仅有下划线。</p><p translation-origin="off"><code>mat-form-field</code> supports two different appearance variants which can be set via the <code>appearance</code>
+input: <code>fill</code> and <code>outline</code>. The <code>fill</code> appearance displays the form field with a filled background
+box and an underline, while the <code>outline</code> appearance shows the form field with a border all the way
+around.</p>
+
+<p translation-result="on">开箱即用的情况下，如果你没有为 <code>&lt;mat-form-field&gt;</code> 指定 <code>appearance</code>，它将默认为 <code>legacy</code>。但是，这可以使用全局的提供者进行配置，为你的应用程序选择不同的默认外观。</p><p translation-origin="off">Out of the box, if you do not specify an <code>appearance</code> for the <code>&lt;mat-form-field&gt;</code> it will default to
+<code>fill</code>. However, this can be configured using a global provider to choose a different default
+appearance for your app.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MAT_FORM_FIELD_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">appearance</span>: <span class="hljs-string">'outline'</span>}}
+  ]
+})
+</code></pre>
+<p>第二个重要的不同点是 <code>standard</code>、<code>fill</code> 或 <code>outline</code> 不会把占位符（placeholder）提升为标签。
+对于 <code>legacy</code> 外观来说，指定 <code>&lt;input placeholder="placeholder"&gt;</code> 将导致为 <code>mat-form-field</code> 添加一个浮动标签。
+对于新外观，它只会给输入框添加一个标准的占位符。如果你想使用浮动标签，请往 <code>mat-form-field</code> 中添加一个 <code>&lt;mat-label&gt;</code>。</p>
+<div material-docs-example="form-field-appearance"></div>
+
+
+        <h3 id="floating-label" class="docs-header-link" translation-result="on">
+          <span header-link="浮动标签"></span>
+          浮动标签
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="floating-label"></span>
+          Floating label
+        </h3>
+      
+        
+      <p translation-result="on">当控件不包含任何文本时，显示在表单字段控件顶部的那个文本标签就叫做浮动标签。
+默认情况下，如果存在文本，则浮动标签将显示在表单字段控件的上方。
+可以通过添加 <code>mat-label</code> 元素来为表单字段指定浮动标签。</p><p translation-origin="off">The floating label is a text label displayed on top of the form field control when
+the control does not contain any text or when <code>&lt;select matNativeControl&gt;</code> does not show any option
+text. By default, when text is present the floating label floats above the form field control. The
+label for a form field can be specified by adding a <code>mat-label</code> element.</p>
+
+<p translation-result="on">如果表单字段控件带有 <code>required</code> 属性，则该标签会带有一个星号后缀，以表明该字段是必填的。
+如果不希望显示星号，则可以通过为 <code>&lt;mat-form-field&gt;</code> 添加 <code>hideRequiredMarker</code> 属性来禁止显示它。</p><p translation-origin="off">If the form field control is marked with a <code>required</code> attribute, an asterisk will be appended to the
+label to indicate the fact that it is a required field. If unwanted, this can be disabled by
+setting the <code>hideRequiredMarker</code> property on <code>&lt;mat-form-field&gt;</code></p>
+
+<p translation-result="on"><code>&lt;mat-form-field&gt;</code> 的 <code>floatLabel</code> 属性可以用来修改默认的浮动行为。它可以设置为 <code>never</code>，以便当表单字段控件中有文本时隐藏该标签，而不是浮起它。也可以设置为 <code>always</code>，以便当表单字段控件中没有文本时也仍然浮起该标签。
+它也可以设置为 <code>auto</code> 来恢复默认行为。</p><p translation-origin="off">The <code>floatLabel</code> property of <code>&lt;mat-form-field&gt;</code> can be used to change this default floating
+behavior. It can be set to <code>always</code> to float the label even when no text is present in the form
+field control, or to <code>auto</code> to restore the default behavior.</p>
+
+<div material-docs-example="form-field-label"></div>
+
+<p translation-result="on">浮动标签的行为可以通过在应用的根模块中通过注入令牌 <code>MAT_LABEL_GLOBAL_OPTIONS</code> 进行全局性调整。
+就像 <code>floatLabel</code> 输入框一样，该选项可以设为 <code>always</code>、<code>never</code> 或 <code>auto</code> 之一。</p><p translation-origin="off">The floating label behavior can be adjusted globally by providing a value for
+<code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> in your application's root module. Like the <code>floatLabel</code> input,
+the option can be either set to <code>always</code> or <code>auto</code>.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MAT_FORM_FIELD_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">floatLabel</span>: <span class="hljs-string">'always'</span>}}
+  ]
+})
+</code></pre>
+
+        <h3 id="hint-labels" class="docs-header-link" translation-result="on">
+          <span header-link="提示标签"></span>
+          提示标签
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="hint-labels"></span>
+          Hint labels
+        </h3>
+      
+        
+      <p translation-result="on">提示标签是显示在表单字段下划线下方的额外的描述性文本。<code>&lt;mat-form-field&gt;</code> 最多能有两个提示标签：
+一个向开始处对齐（LTR 语言下向左，RTL 语言下向右 —— 如阿拉伯语），一个向末尾处对齐。</p><p translation-origin="off">Hint labels are additional descriptive text that appears below the form field's underline. A
+<code>&lt;mat-form-field&gt;</code> can have up to two hint labels; one start-aligned (left in an LTR language, right
+in RTL), and one end-aligned.</p>
+
+<p translation-result="on">提示标签可以用两种方式指定：<code>&lt;mat-form-field&gt;</code> 的 <code>hintLabel</code> 属性或在表单字段中添加一个 <code>&lt;mat-hint&gt;</code> 元素。
+当通过 <code>hintLabel</code> 属性添加提示时，它会被视为开始提示。通过 <code>&lt;mat-hint&gt;</code> 元素添加提示时，可以把它的 <code>align</code> 属性设置为 <code>start</code> 或 <code>end</code> 来控制放在哪一侧。试图往同一侧添加多个提示将会引发错误。</p><p translation-origin="off">Hint labels are specified in one of two ways: either by using the <code>hintLabel</code> property of
+<code>&lt;mat-form-field&gt;</code>, or by adding a <code>&lt;mat-hint&gt;</code> element inside the form field. When adding a hint
+via the <code>hintLabel</code> property, it will be treated as the start hint. Hints added via the
+<code>&lt;mat-hint&gt;</code> hint element can be added to either side by setting the <code>align</code> property on
+<code>&lt;mat-hint&gt;</code> to either <code>start</code> or <code>end</code>. Attempting to add multiple hints to the same side will
+raise an error.</p>
+
+<div material-docs-example="form-field-hint"></div>
+
+
+        <h3 id="error-messages" class="docs-header-link" translation-result="on">
+          <span header-link="错误信息"></span>
+          错误信息
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="error-messages"></span>
+          Error messages
+        </h3>
+      
+        
+      <p translation-result="on">通过往表单字段中添加 <code>mat-error</code> 元素，就可以在表单字段的下划线下方显示错误信息。
+错误信息最初是隐藏的，在用户与元素进行过交互或提交了父表单后，无效表单字段上的错误信息就会显示出来。
+由于错误信息和提示信息占用相同的空间，因此在显示错误时就会隐藏提示。</p><p translation-origin="off">Error messages can be shown under the form field underline by adding <code>mat-error</code> elements inside the
+form field. Errors are hidden initially and will be displayed on invalid form fields after the user
+has interacted with the element or the parent form has been submitted. Since the errors occupy the
+same space as the hints, the hints are hidden when the errors are shown.</p>
+
+<p translation-result="on">如果表单字段可以有多个错误状态，则由消费者决定应该显示哪些。这可以借助 CSS、<code>ngIf</code> 或 <code>ngSwitch</code> 来实现。
+如果需要，也可以同时显示多个错误信息，但是 <code>&lt;mat-form-field&gt;</code> 所保留的空间只够一次显示一条错误信息的。
+使用者需要自己保证有足够的空间显示多个错误。</p><p translation-origin="off">If a form field can have more than one error state, it is up to the consumer to toggle which
+messages should be displayed. This can be done with CSS, <code>ngIf</code> or <code>ngSwitch</code>. Multiple error
+messages can be shown at the same time if desired, but the <code>&lt;mat-form-field&gt;</code> only reserves enough
+space to display one error message at a time. Ensuring that enough space is available to display
+multiple errors is up to the user.</p>
+
+<div material-docs-example="form-field-error"></div>
+
+
+        <h3 id="prefix--suffix" class="docs-header-link" translation-result="on">
+          <span header-link="前缀与后缀"></span>
+          前缀与后缀
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="prefix--suffix"></span>
+          Prefix &amp; suffix
+        </h3>
+      
+        
+      <p translation-result="on">自定义内容可以作为前缀或后缀加在输入框标记之前或之后。根据 Material 规范，它要位于包裹着表单控件的视觉容器内部。</p><p translation-origin="off">Custom content can be included before and after the input tag, as a prefix or suffix. It will be
+included within the visual container that wraps the form control as per the Material specification.</p>
+
+<p translation-result="on">把 <code>matPrefix</code> 指令添加到 <code>&lt;mat-form-field&gt;</code> 内的某个元素上就会把该元素用作前缀，而 <code>matSuffix</code> 会把它用作后缀。</p><p translation-origin="off">Adding the <code>matPrefix</code> directive to an element inside the <code>&lt;mat-form-field&gt;</code> will designate it as
+the prefix. Similarly, adding <code>matSuffix</code> will designate it as the suffix.</p>
+
+<p translation-result="on">如果前缀/后缀的内容是完全基于文本的，建议使用 <code>matTextPrefix</code> 或 <code>matTextSuffix</code> 指令，它们可以确保此文本与表单控件对齐。</p><p translation-origin="off">If the prefix/suffix content is purely text-based, it is recommended to use the <code>matTextPrefix</code> or
+<code>matTextSuffix</code> directives which ensure that the text is aligned with the form control.</p>
+
+<div material-docs-example="form-field-prefix-suffix"></div>
+
+
+        <h3 id="custom-form-field-controls" class="docs-header-link" translation-result="on">
+          <span header-link="自定义表单字段控件"></span>
+          自定义表单字段控件
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="custom-form-field-controls"></span>
+          Custom form field controls
+        </h3>
+      
+        
+      <p translation-result="on">除了 Angular Material 提供的表单字段控件之外，也同样可以创建能和 <code>&lt;mat-form-field&gt;</code> 协同工作的自定义表单字段控件。
+欲知详情，参见<a href="/guide/creating-a-custom-form-field-control">创建自定义 mat-form-field 控件</a>。</p><p translation-origin="off">In addition to the form field controls that Angular Material provides, it is possible to create
+custom form field controls that work with <code>&lt;mat-form-field&gt;</code> in the same way. For additional
+information on this see the guide on
+<a href="/guide/creating-a-custom-form-field-control">Creating Custom mat-form-field Controls</a>.</p>
+
+
+        <h3 id="theming" class="docs-header-link" translation-result="on">
+          <span header-link="主题"></span>
+          主题
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      
+        
+      <p translation-result="on"><code>&lt;mat-form-field&gt;</code> 有一个 <code>color</code> 属性，它可以设置为 <code>primary</code>、<code>accent</code> 或 <code>warn</code>。
+这将会根据应用的主题颜色来设置表单字段的下划线和浮动标签的颜色。</p><p translation-origin="off"><code>&lt;mat-form-field&gt;</code> has a <code>color</code> property which can be set to <code>primary</code>, <code>accent</code>, or <code>warn</code>. This
+will set the color of the form field underline and floating label based on the theme colors
+of your app.</p>
+
+<div material-docs-example="form-field-theming"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">就其本身而言， <code>MatFormField</code> 不会对控件应用任何额外的无障碍性处理。但是，表单字段的一些可选特性会与表单字段中包含的控件交互。</p><p translation-origin="off">By itself, <code>MatFormField</code> does not apply any additional accessibility treatment to a control.
+However, several of the form field's optional features interact with the control contained within
+the form field.</p>
+
+<p translation-result="on">当你通过 <code>&lt;mat-label&gt;</code> 提供标签时， <code>MatFormField</code> 会通过原生 <code>&lt;label&gt;</code> 元素自动将此标签与字段的控件相关联，使用 <code>for</code> 属性来引用控件的 ID。</p><p translation-origin="off">When you provide a label via <code>&lt;mat-label&gt;</code>, <code>MatFormField</code> automatically associates this label with
+the field's control via a native <code>&lt;label&gt;</code> element, using the <code>for</code> attribute to reference the
+control's ID.</p>
+
+<p translation-result="on">如果指定了浮动标签，它就会自动用作表单字段控件的标签。如果没有指定浮动标签，用户就应该使用 <code>aria-label</code>、<code>aria-labelledby</code> 或 <code>&lt;label for=...&gt;</code> 来给表单字段控件提供标签。</p><p translation-origin="off">If a floating label is specified, it will be automatically used as the label for the form
+field control. If no floating label is specified, the user should label the form field control
+themselves using <code>aria-label</code>, <code>aria-labelledby</code> or <code>&lt;label for=...&gt;</code>.</p>
+
+<p translation-result="on">当你通过 <code>&lt;mat-hint&gt;</code> 或 <code>&lt;mat-error&gt;</code> 来提供信息文本时， <code>MatFormField</code> 会自动将这些元素的 ID 添加到控件的 <code>aria-describedby</code> 属性中。此外， <code>MatError</code> 会应用 <code>aria-live="polite"</code> ，这样辅助技术就会在错误出现时播报这些错误。</p><p translation-origin="off">When you provide informational text via <code>&lt;mat-hint&gt;</code> or <code>&lt;mat-error&gt;</code>, <code>MatFormField</code> automatically
+adds these elements' IDs to the control's <code>aria-describedby</code> attribute. Additionally, <code>MatError</code>
+applies <code>aria-live="polite"</code> by default such that assistive technology will announce errors when
+they appear.</p>
+
+
+        <h3 id="troubleshooting" class="docs-header-link" translation-result="on">
+          <span header-link="排查问题"></span>
+          排查问题
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="troubleshooting"></span>
+          Troubleshooting
+        </h3>
+      
+        
+      
+        <h4 id="error-a-hint-was-already-declared-for-align" class="docs-header-link" translation-result="on">
+          <span header-link="error-a-hint-was-already-declared-for-align-（在-align-声明的位置已经有一个提示信息了）"></span>
+          Error: A hint was already declared for align="..." <br>（在 align="..." 声明的位置已经有一个提示信息了）
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="error-a-hint-was-already-declared-for-align"></span>
+          Error: A hint was already declared for align="..."
+        </h4>
+      
+        
+      <p translation-result="on">该错误会在你往同一侧添加了多个提示信息时出现。记住，<code>hintLabel</code> 属性会在开始侧添加一个提示信息。</p><p translation-origin="off">This error occurs if you have added multiple hints for the same side. Keep in mind that the
+<code>hintLabel</code> property adds a hint to the start side.</p>
+
+
+        <h4 id="error-mat-form-field-must-contain-a-matformfieldcontrol" class="docs-header-link" translation-result="on">
+          <span header-link="error-mat-form-field-must-contain-a-matformfieldcontrol-（mat-form-field-内必须有一个-matformfieldcontrol）"></span>
+          Error: mat-form-field must contain a MatFormFieldControl <br>（mat-form-field 内必须有一个 MatFormFieldControl）
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="error-mat-form-field-must-contain-a-matformfieldcontrol"></span>
+          Error: mat-form-field must contain a MatFormFieldControl
+        </h4>
+      
+        
+      <p translation-result="on">该错误会在你没有往表单字段中添加过表单字段控件时出现。如果你的表单字段包含了原生的 <code>&lt;input&gt;</code> 或 <code>&lt;textarea&gt;</code> 元素，
+请确保你往它们上添加过 <code>matInput</code> 指令，并且导入过 <code>MatInputModule</code>。
+可以充当表单字段控件的其它组件包括 <code>&lt;mat-select&gt;</code>、<code>&lt;mat-chip-list&gt;</code> 以及你创建的任何自定义表单字段控件。</p><p translation-origin="off">This error occurs when you have not added a form field control to your form field. If your form
+field contains a native <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element, make sure you've added the <code>matInput</code>
+directive to it and have imported <code>MatInputModule</code>. Other components that can act as a form field
+control include <code>&lt;mat-select&gt;</code>, <code>&lt;mat-chip-list&gt;</code>, and any custom form field controls you've
+created.</p>
+
+</div>

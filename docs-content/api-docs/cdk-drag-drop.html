@@ -1,0 +1,4642 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-drag-drop-api-参考文档--">
+    Angular CDK drag-drop API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {DragDropModule} from '@angular/cdk/drag-drop';
+      </code>
+    </p>
+  <h3 id="cdk-drag-drop-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="DragDrop" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="DragDrop"></span>
+  <code>DragDrop</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">允许把拖放功能附着到 DOM 元素上的服务。</p><p translation-origin="off">Service that allows for drag-and-drop functionality to be attached to DOM elements.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createDrag
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个元素变成一个可拖动的条目。</p><p translation-origin="off">Turns an element into a draggable item.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要附加拖动功能的元素。</p><p translation-origin="off">Element to which to attach the dragging functionality.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config</p>
+      <code class="docs-api-method-parameter-type">DragRefConfig = DEFAULT_CONFIG</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">用于配置拖动行为的对象。</p><p translation-origin="off">Object used to configure the dragging behavior.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">DragRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createDropList
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个元素转成一个拖放列表。</p><p translation-origin="off">Turns an element into a drop list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要附加投放列表功能的元素。</p><p translation-origin="off">Element to which to attach the drop list functionality.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">DropListRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-drag-drop-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkDropList" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkDropList"></span>
+  <code>CdkDropList</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">包装一组可拖动条目的容器。</p><p translation-origin="off">Container that wraps a set of draggable items.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkDropList]</span>
+  
+    <span class="docs-api-class-selector-name">cdk-drop-list</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkDropList</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListAutoScrollDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>autoScrollDisabled: BooleanInput</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户将指针移到边缘附近时是否自动滚动视图。</p><p translation-origin="off">Whether to auto-scroll the view when the user moves their pointer close to the edges.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListAutoScrollStep'</span>)
+        </div><p class="docs-api-property-name">
+      <code>autoScrollStep: NumberInput</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当自动滚动元素时，这是每一帧滚动的像素数。</p><p translation-origin="off">Number of pixels to scroll for each frame when auto-scrolling an element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListConnectedTo'</span>)
+        </div><p class="docs-api-property-name">
+      <code>connectedTo: (CdkDropList | string)[] | CdkDropList | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此容器连接到的其他可拖动容器，此容器中的条目可以转移到其中。可以是到其他投放容器的引用，也可以是其唯一 ID。</p><p translation-origin="off">Other draggable containers that this container is connected to and into which the
+container's items can be transferred. Can either be references to other drop containers,
+or their unique IDs.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListData'</span>)
+        </div><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">附加到此容器的任意数据。</p><p translation-origin="off">Arbitrary data to attach to this container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了从此容器启动拖曳序列的方法。</p><p translation-origin="off">Whether starting a dragging sequence from this container is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListEnterPredicate'</span>)
+        </div><p class="docs-api-property-name">
+      <code>enterPredicate: (drag: CdkDrag, drop: CdkDropList) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此函数用于确定是否允许将条目移入投放容器。</p><p translation-origin="off">Function that is used to determine whether an item
+is allowed to be moved into a drop container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">投放区的唯一 ID。可以在 <code>connectedTo</code> 中用作另一个 <code>CdkDropList</code> 的引用。</p><p translation-origin="off">Unique ID for the drop zone. Can be used as a reference
+in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListLockAxis'</span>)
+        </div><p class="docs-api-property-name">
+      <code>lockAxis: DragAxis</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">沿着指定的轴锁定容器内可拖动元素的位置。</p><p translation-origin="off">Locks the position of the draggable elements inside the container along the specified axis.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListOrientation'</span>)
+        </div><p class="docs-api-property-name">
+      <code>orientation: DropListOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">列表的方向。</p><p translation-origin="off">Direction in which the list is oriented.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListSortPredicate'</span>)
+        </div><p class="docs-api-property-name">
+      <code>sortPredicate: (index: number, drag: CdkDrag, drop: CdkDropList) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">一个函数，用来判断某个条目是否可以被排序到特定索引。</p><p translation-origin="off">Functions that is used to determine whether an item can be sorted into a particular index.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListSortingDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>sortingDisabled: BooleanInput</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用此投放列表中的排序。</p><p translation-origin="off">Whether sorting within this drop list is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDropListDropped'</span>)
+        </div><p class="docs-api-property-name">
+      <code>dropped: EventEmitter&lt;CdkDragDrop&lt;T, any&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把一个条目投放进该容器时就会触发。</p><p translation-origin="off">Emits when the user drops an item inside the container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDropListEntered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>entered: EventEmitter&lt;CdkDragEnter&lt;T&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把一个新的拖动条目移到这个容器中时，就会触发。</p><p translation-origin="off">Emits when the user has moved a new drag item into this container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDropListExited'</span>)
+        </div><p class="docs-api-property-name">
+      <code>exited: EventEmitter&lt;CdkDragExit&lt;T&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户通过将条目拖到另一个容器中来将其从容器中移除时发出。</p><p translation-origin="off">Emits when the user removes an item from the container
+by dragging it into another container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDropListSorted'</span>)
+        </div><p class="docs-api-property-name">
+      <code>sorted: EventEmitter&lt;CdkDragSortEvent&lt;T&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户正在主动拖动以交换条目时，就会触发。</p><p translation-origin="off">Emits as the user is swapping items while actively dragging.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>element: ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">拖放列表要附着到的元素。</p><p translation-origin="off">Element that the drop list is attached to.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在投放列表中注册一个条目。</p><p translation-origin="off">Registers an items with the drop list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        item</p>
+      <code class="docs-api-method-parameter-type">CdkDrag&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getSortedItems
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取列表中的已注册条目，按其在 DOM 中的位置排序。</p><p translation-origin="off">Gets the registered items in the list, sorted by their position in the DOM.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkDrag[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removeItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从投放列表中删除一个条目。</p><p translation-origin="off">Removes an item from the drop list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        item</p>
+      <code class="docs-api-method-parameter-type">CdkDrag&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkDropListGroup" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkDropListGroup"></span>
+  <code>CdkDropListGroup</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">声明性地将同级 <code>cdkDropList</code> 实例连接在一起。放置在 <code>cdkDropListGroup</code> 内的所有 <code>cdkDropList</code> 元素将自动互连。可作为 <code>cdkDropList</code> 的输入属性 <code>cdkDropListConnectedTo</code> 的替代品。</p><p translation-origin="off">Declaratively connects sibling <code>cdkDropList</code> instances together. All of the <code>cdkDropList</code>
+elements that are placed inside a <code>cdkDropListGroup</code> will be connected to each other
+automatically. Can be used as an alternative to the <code>cdkDropListConnectedTo</code> input
+from <code>cdkDropList</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkDropListGroup]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkDropListGroup</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDropListGroupDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁止从该组内部开始拖动序列。</p><p translation-origin="off">Whether starting a dragging sequence from inside this group is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDrag" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkDrag"></span>
+  <code>CdkDrag</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">可以在 CdkDropList 容器内移动的元素。</p><p translation-origin="off">Element that can be moved inside a CdkDropList container.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkDrag]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkDrag</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragBoundary'</span>)
+        </div><p class="docs-api-property-name">
+      <code>boundaryElement: string | ElementRef&lt;HTMLElement&gt; | HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本节点或选择器将用于确定用来限制可拖动对象位置的元素。如果传入了一个字符串，它将用作选择器，该选择器将从元素的父级开始一直沿 DOM 进行匹配，直到找到匹配项为止。</p><p translation-origin="off">Node or selector that will be used to determine the element to which the draggable's
+position will be constrained. If a string is passed in, it'll be used as a selector that
+will be matched starting from the element's parent and going up the DOM until a match
+has been found.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragConstrainPosition'</span>)
+        </div><p class="docs-api-property-name">
+      <code>constrainPosition: (userPointerPosition: Point, dragRef: DragRef, dimensions: ClientRect, pickupPositionInElement: Point) =&gt; Point</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本函数用于自定义在拖动条目时如何限制其位置的逻辑。使用用户指针在页面上的当前位置进行调用（正在被拖曳的条目的引用及其规格）。要返回描述该条目应该出现在哪里的点。</p><p translation-origin="off">Function that can be used to customize the logic of how the position of the drag item
+is limited while it's being dragged. Gets called with a point containing the current position
+of the user's pointer on the page, a reference to the item being dragged and its dimensions.
+Should return a point describing where the item should be rendered.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragData'</span>)
+        </div><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要附加到此拖动实例的任意数据。</p><p translation-origin="off">Arbitrary data to attach to this drag instance.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否已禁止拖动此元素。</p><p translation-origin="off">Whether starting to drag this element is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragStartDelay'</span>)
+        </div><p class="docs-api-property-name">
+      <code>dragStartDelay: DragStartDelay</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户在开始拖动元素之前把指针放下之后要等待的毫秒数。</p><p translation-origin="off">Amount of milliseconds to wait after the user has put their
+pointer down before starting to drag the element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragFreeDragPosition'</span>)
+        </div><p class="docs-api-property-name">
+      <code>freeDragPosition: Point</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">设置投放容器外部的 <code>CdkDrag</code> 的位置。可用于为返回的用户恢复元素的位置。</p><p translation-origin="off">Sets the position of a <code>CdkDrag</code> that is outside of a drop container.
+Can be used to restore the element's position for a returning user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragLockAxis'</span>)
+        </div><p class="docs-api-property-name">
+      <code>lockAxis: DragAxis</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">锁定所拖动元素沿指定轴的位置。</p><p translation-origin="off">Locks the position of the dragged element along the specified axis.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragPreviewClass'</span>)
+        </div><p class="docs-api-property-name">
+      <code>previewClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到预览元素中的类。</p><p translation-origin="off">Class to be added to the preview element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragPreviewContainer'</span>)
+        </div><p class="docs-api-property-name">
+      <code>previewContainer: PreviewContainer</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">配置条目预览的插入位置。可以通过 <code>CDK_DROP_LIST</code> 进行全局配置。可能的值有：</p><p translation-origin="off">Configures the place into which the preview of the item will be inserted. Can be configured
+globally through <code>CDK_DROP_LIST</code>. Possible values:</p>
+
+<ul>
+<li><p translation-result="on"><code>global</code> —— 预览将插入在 <code>&lt;body&gt;</code> 的底部。优点是你不必担心 <code>overflow: hidden</code> 或 <code>z-index</code>，但条目不会保留其继承的样式。</p><p translation-origin="off"><code>global</code> - Preview will be inserted at the bottom of the <code>&lt;body&gt;</code>. The advantage is that
+you don't have to worry about <code>overflow: hidden</code> or <code>z-index</code>, but the item won't retain
+its inherited styles.</p>
+
+</li>
+<li><p translation-result="on"><code>parent</code> —— 预览将插入到拖动条目的父级中。优点是已继承的样式将被保留，但可能会被 <code>overflow: hidden</code> 裁剪，由于 <code>z-index</code> 而变得不可见。此外，该预览将对选择器如 <code>:nth-child</code> 和一些 flexbox 配置产生影响。</p><p translation-origin="off"><code>parent</code> - Preview will be inserted into the parent of the drag item. The advantage is that
+inherited styles will be preserved, but it may be clipped by <code>overflow: hidden</code> or not be
+visible due to <code>z-index</code>. Furthermore, the preview is going to have an effect over selectors
+like <code>:nth-child</code> and some flexbox configurations.</p>
+
+</li>
+<li><p translation-result="on"><code>ElementRef&lt;HTMLElement&gt; | HTMLElement</code> 预览将插入到特定元素中。具有和 <code>parent</code> 一样的优点和缺点。</p><p translation-origin="off"><code>ElementRef&lt;HTMLElement&gt; | HTMLElement</code> - Preview will be inserted into a specific element.
+Same advantages and disadvantages as <code>parent</code>.</p>
+
+</li>
+</ul>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragRootElement'</span>)
+        </div><p class="docs-api-property-name">
+      <code>rootElementSelector: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本选择器用于在 DOM 树中从本 <code>cdkDrag</code> 元素往上找，以确定其根级可拖动元素。当尝试在可能无法访问的元素上启动拖动时，传递一个备用根元素是很有用的。</p><p translation-origin="off">Selector that will be used to determine the root draggable element, starting from
+the <code>cdkDrag</code> element and going up the DOM. Passing an alternate root element is useful
+when trying to enable dragging on an element that you might not have access to.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragDropped'</span>)
+        </div><p class="docs-api-property-name">
+      <code>dropped: EventEmitter&lt;CdkDragDrop&lt;any&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把条目放到容器中时，就会触发。</p><p translation-origin="off">Emits when the user drops the item inside a container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragEnded'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ended: EventEmitter&lt;CdkDragEnd&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户停止拖动容器中的某个条目时，会发出本通知。</p><p translation-origin="off">Emits when the user stops dragging an item in the container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragEntered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>entered: EventEmitter&lt;CdkDragEnter&lt;any&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把本条目移到新容器中时发出通知。</p><p translation-origin="off">Emits when the user has moved the item into a new container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragExited'</span>)
+        </div><p class="docs-api-property-name">
+      <code>exited: EventEmitter&lt;CdkDragExit&lt;any&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户通过把拖动条目从所在的容器移到另一个容器中时，就会触发。</p><p translation-origin="off">Emits when the user removes the item its container by dragging it into another container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragMoved'</span>)
+        </div><p class="docs-api-property-name">
+      <code>moved: Observable&lt;CdkDragMove&lt;T&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户正在拖动该条目时会触发。请谨慎使用，因为此事件会在用户拖动每一个像素时触发。</p><p translation-origin="off">Emits as the user is dragging the item. Use with caution,
+because this event will fire for every pixel that the user has dragged.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragReleased'</span>)
+        </div><p class="docs-api-property-name">
+      <code>released: EventEmitter&lt;CdkDragRelease&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户释放了一个拖动条目时触发。位于任何动画开始之前。</p><p translation-origin="off">Emits when the user has released a drag item, before any animations have started.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkDragStarted'</span>)
+        </div><p class="docs-api-property-name">
+      <code>started: EventEmitter&lt;CdkDragStart&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户开始拖动该条目时会触发。</p><p translation-origin="off">Emits when the user starts dragging the item.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropContainer: CdkDropList</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此可拖动对象所属的可拖动容器。</p><p translation-origin="off">Droppable container that the draggable is a part of.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>element: ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此可拖动对象要附着到的元素。</p><p translation-origin="off">Element that the draggable is attached to.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getFreeDragPosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取可拖动对象在投放容器外的像素坐标。</p><p translation-origin="off">Gets the pixel coordinates of the draggable outside of a drop container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Readonly&lt;Point&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getPlaceholderElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回在拖动当前元素时要用作占位符的元素。</p><p translation-origin="off">Returns the element that is being used as a placeholder
+while the current element is being dragged.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getRootElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回可拖动条目的根元素。</p><p translation-origin="off">Returns the root draggable element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">reset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将一个独立的拖动条目重置到初始位置。</p><p translation-origin="off">Resets a standalone drag item to its initial position.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setFreeDragPosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置可拖动元素在投放容器外部的当前位置（以像素为单位）。</p><p translation-origin="off">Sets the current position in pixels the draggable outside of a drop container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">Point</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要设置的新位置。</p><p translation-origin="off">New position to be set.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkDragHandle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkDragHandle"></span>
+  <code>CdkDragHandle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">可用于拖动 CdkDrag 实例的手柄。</p><p translation-origin="off">Handle that can be used to drag a CdkDrag instance.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkDragHandle]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkDragHandleDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否要禁用通过该手柄开始拖动的功能。</p><p translation-origin="off">Whether starting to drag through this handle is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>element: ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragPreview" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkDragPreview"></span>
+  <code>CdkDragPreview</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">拖动时将用作预览 CdkDrag 的模板的元素。</p><p translation-origin="off">Element that will be used as a template for the preview
+of a CdkDrag when it is being dragged.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">ng-template[cdkDragPreview]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到预览模板实例的上下文数据。</p><p translation-origin="off">Context data to be added to the preview template instance.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>matchSize: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">预览是否应保持与要拖动的条目相同的大小。</p><p translation-origin="off">Whether the preview should preserve the same size as the item that is being dragged.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>templateRef: TemplateRef&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragPlaceholder" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkDragPlaceholder"></span>
+  <code>CdkDragPlaceholder</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">拖动时将用作 CdkDrag 占位符模板的元素。该占位符会用来代替要拖动的元素。</p><p translation-origin="off">Element that will be used as a template for the placeholder of a CdkDrag when
+it is being dragged. The placeholder is displayed in place of the element being dragged.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">ng-template[cdkDragPlaceholder]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到占位符模板实例的上下文数据。</p><p translation-origin="off">Context data to be added to the placeholder template instance.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>templateRef: TemplateRef&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-drag-drop-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="DragRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="DragRef"></span>
+  <code>DragRef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">可拖动条目的引用。用来操纵或丢弃条目。</p><p translation-origin="off">Reference to a draggable item. Used to manipulate or dispose of the item.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>beforeStarted: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当拖曳序列准备就绪时触发。</p><p translation-origin="off">Emits as the drag sequence is being prepared.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>constrainPosition: (userPointerPosition: Point, dragRef: DragRef, dimensions: ClientRect, pickupPositionInElement: Point) =&gt; Point</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本函数用于自定义在拖动条目时如何限制其位置的逻辑。使用用户指针在页面上的当前位置进行调用（正在被拖曳的条目的引用及其规格）。要返回描述该条目应该出现在哪里的点。</p><p translation-origin="off">Function that can be used to customize the logic of how the position of the drag item
+is limited while it's being dragged. Gets called with a point containing the current position
+of the user's pointer on the page, a reference to the item being dragged and its dimensions.
+Should return a point describing where the item should be rendered.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">可以附加到拖动条目上的任意数据。</p><p translation-origin="off">Arbitrary data that can be attached to the drag item.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否已禁止拖动此元素。</p><p translation-origin="off">Whether starting to drag this element is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dragStartDelay: number | {
+    touch: number;
+    mouse: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户在开始拖动元素之前把指针放下之后要等待的毫秒数。</p><p translation-origin="off">Amount of milliseconds to wait after the user has put their
+pointer down before starting to drag the element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropped: Subject&lt;{
+    previousIndex: number;
+    currentIndex: number;
+    item: DragRef;
+    container: DropListRef;
+    previousContainer: DropListRef;
+    distance: Point;
+    dropPoint: Point;
+    isPointerOverContainer: boolean;
+    event: MouseEvent | TouchEvent;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把条目放到容器中时，就会触发。</p><p translation-origin="off">Emits when the user drops the item inside a container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ended: Subject&lt;{
+    source: DragRef;
+    distance: Point;
+    dropPoint: Point;
+    event: MouseEvent | TouchEvent;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户停止拖动容器中的某个条目时，会发出本通知。</p><p translation-origin="off">Emits when the user stops dragging an item in the container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>entered: Subject&lt;{
+    container: DropListRef;
+    item: DragRef;
+    currentIndex: number;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把本条目移到新容器中时发出通知。</p><p translation-origin="off">Emits when the user has moved the item into a new container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exited: Subject&lt;{
+    container: DropListRef;
+    item: DragRef;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户通过把拖动条目从所在的容器移到另一个容器中时，就会触发。</p><p translation-origin="off">Emits when the user removes the item its container by dragging it into another container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>lockAxis: 'x' | 'y'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">拖动时锁定的轴。</p><p translation-origin="off">Axis along which dragging is locked.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>moved: Observable&lt;{
+    source: DragRef;
+    pointerPosition: {
+        x: number;
+        y: number;
+    };
+    event: MouseEvent | TouchEvent;
+    distance: Point;
+    delta: {
+        x: -1 | 0 | 1;
+        y: -1 | 0 | 1;
+    };
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户正在拖动该条目时会触发。请谨慎使用，因为此事件会在用户拖动每一个像素时触发。</p><p translation-origin="off">Emits as the user is dragging the item. Use with caution,
+because this event will fire for every pixel that the user has dragged.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previewClass: string | string[] | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到预览元素中的类。</p><p translation-origin="off">Class to be added to the preview element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>released: Subject&lt;{
+    source: DragRef;
+    event: MouseEvent | TouchEvent;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户释放了一个拖动条目时触发。位于任何动画开始之前。</p><p translation-origin="off">Emits when the user has released a drag item, before any animations have started.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>started: Subject&lt;{
+    source: DragRef;
+    event: MouseEvent | TouchEvent;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户开始拖动该条目时会触发。</p><p translation-origin="off">Emits when the user starts dragging the item.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">disableHandle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">禁用拖动手柄。当手柄被禁用时，它会捕获并中止拖动操作。</p><p translation-origin="off">Sets a handle as disabled. While a handle is disabled, it'll capture and interrupt dragging.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        handle</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要被禁用的手柄元素。</p><p translation-origin="off">Handle element that should be disabled.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dispose
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从 DOM 元素中移除拖动功能。</p><p translation-origin="off">Removes the dragging functionality from the DOM element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">enableHandle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">启用一个已被禁用的手柄。</p><p translation-origin="off">Enables a handle, if it has been disabled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        handle</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要启用的手柄。</p><p translation-origin="off">Handle element to be enabled.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getFreeDragPosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取可拖动元素在投放容器外部的当前位置（以像素为单位）。</p><p translation-origin="off">Gets the current position in pixels the draggable outside of a drop container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Readonly&lt;Point&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getPlaceholderElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在拖动当前元素的同时，返回当前占位符所在的元素。</p><p translation-origin="off">Returns the element that is being used as a placeholder
+while the current element is being dragged.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getRootElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回可拖动条目的根元素。</p><p translation-origin="off">Returns the root draggable element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getVisibleElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取代表该拖动条目的当前可见元素。拖动期间是其占位符，其它时候是其根元素。</p><p translation-origin="off">Gets the currently-visible element that represents the drag item.
+While dragging this is the placeholder, otherwise it's the root element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isDragging
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查当前是否正在拖动该元素。</p><p translation-origin="off">Checks whether the element is currently being dragged.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">reset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将一个独立的拖动条目重置到初始位置。</p><p translation-origin="off">Resets a standalone drag item to its initial position.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setFreeDragPosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置可拖动元素在投放容器外部的当前位置（以像素为单位）。</p><p translation-origin="off">Sets the current position in pixels the draggable outside of a drop container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">Point</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要设置的新位置。</p><p translation-origin="off">New position to be set.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withBoundaryElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">用于进行可拖动位置限制的元素。</p><p translation-origin="off">Element to which the draggable's position will be constrained.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        boundaryElement</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withDirection
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置可拖动条目的布局方向。</p><p translation-origin="off">Sets the layout direction of the draggable item.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        direction</p>
+      <code class="docs-api-method-parameter-type">Direction</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withHandles
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册可以用来拖动元素的手柄。</p><p translation-origin="off">Registers the handles that can be used to drag the element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        handles</p>
+      <code class="docs-api-method-parameter-type">(HTMLElement | ElementRef&lt;HTMLElement&gt;)[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withParent
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置嵌套引用的父引用。</p><p translation-origin="off">Sets the parent ref that the ref is nested in.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        parent</p>
+      <code class="docs-api-method-parameter-type">DragRef&lt;unknown&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withPlaceholderTemplate
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册要用作拖动占位符的模板。</p><p translation-origin="off">Registers the template that should be used for the drag placeholder.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">DragHelperTemplate&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">用来生成占位符的模板。</p><p translation-origin="off">Template that from which to stamp out the placeholder.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withPreviewContainer
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置要在其中插入预览元素的容器。</p><p translation-origin="off">Sets the container into which to insert the preview element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        value</p>
+      <code class="docs-api-method-parameter-type">PreviewContainer</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要将预览插入其中的容器。</p><p translation-origin="off">Container into which to insert the preview.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withPreviewTemplate
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注册要用作拖动预览的模板。</p><p translation-origin="off">Registers the template that should be used for the drag preview.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">DragPreviewTemplate&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">用来生成预览图的模板。</p><p translation-origin="off">Template that from which to stamp out the preview.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withRootElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置备用的拖动根元素。根元素是用户拖动时会被移动的元素。当你尝试在你可能无权访问的元素上启用拖曳时，传入一个备用的根元素是很有用的。</p><p translation-origin="off">Sets an alternate drag root element. The root element is the element that will be moved as
+the user is dragging. Passing an alternate root element is useful when trying to enable
+dragging on an element that you might not have access to.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        rootElement</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="DropListRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="DropListRef"></span>
+  <code>DropListRef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">投放列表的引用。用来操纵或丢弃容器。</p><p translation-origin="off">Reference to a drop list. Used to manipulate or dispose of the container.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>autoScrollDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把指针移到边缘附近时是否禁止自动滚动视图。</p><p translation-origin="off">Whether auto-scrolling the view when the user
+moves their pointer close to the edges is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>autoScrollStep: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当自动滚动元素时，这是每一帧滚动的像素数。</p><p translation-origin="off">Number of pixels to scroll for each frame when auto-scrolling an element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>beforeStarted: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在拖动开始之前触发。</p><p translation-origin="off">Emits right before dragging has started.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">可以附加到投放列表上的任意数据。</p><p translation-origin="off">Arbitrary data that can be attached to the drop list.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了从此容器启动拖曳序列的方法。</p><p translation-origin="off">Whether starting a dragging sequence from this container is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropped: Subject&lt;{
+    item: DragRef;
+    currentIndex: number;
+    previousIndex: number;
+    container: DropListRef;
+    previousContainer: DropListRef;
+    isPointerOverContainer: boolean;
+    distance: Point;
+    dropPoint: Point;
+    event: MouseEvent | TouchEvent;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把一个条目投放进该容器时就会触发。</p><p translation-origin="off">Emits when the user drops an item inside the container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>element: HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">投放表附着到的元素</p><p translation-origin="off">Element that the drop list is attached to.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>enterPredicate: (drag: DragRef, drop: DropListRef) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该函数用于判断是否允许某个条目移入投放容器。</p><p translation-origin="off">Function that is used to determine whether an item
+is allowed to be moved into a drop container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>entered: Subject&lt;{
+    item: DragRef;
+    container: DropListRef;
+    currentIndex: number;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把一个新的拖动条目移到这个容器中时，就会触发。</p><p translation-origin="off">Emits when the user has moved a new drag item into this container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exited: Subject&lt;{
+    item: DragRef;
+    container: DropListRef;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户把条目拖到另一个容器中并从当前容器中删除该条目时触发。</p><p translation-origin="off">Emits when the user removes an item from the container
+by dragging it into another container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>lockAxis: 'x' | 'y'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">沿着指定的轴锁定容器内可拖动元素的位置。</p><p translation-origin="off">Locks the position of the draggable elements inside the container along the specified axis.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortPredicate: (index: number, drag: DragRef, drop: DropListRef) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">一个函数，用来判断某个条目是否可以被排序到特定索引。</p><p translation-origin="off">Function that is used to determine whether an item can be sorted into a particular index.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sorted: Subject&lt;{
+    previousIndex: number;
+    currentIndex: number;
+    container: DropListRef;
+    item: DragRef;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户正在主动拖动以交换条目时，就会触发。</p><p translation-origin="off">Emits as the user is swapping items while actively dragging.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortingDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了列表中的条目排序。</p><p translation-origin="off">Whether sorting items within the list is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">connectedTo
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置连接到这个容器的容器。当有两个或多个容器相连时，系统会允许用户在它们之间传输条目。</p><p translation-origin="off">Sets the containers that are connected to this one. When two or more containers are
+connected, the user will be allowed to transfer items between them.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        connectedTo</p>
+      <code class="docs-api-method-parameter-type">DropListRef&lt;any&gt;[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">当前容器应该连接到的其他容器。</p><p translation-origin="off">Other containers that the current containers should be connected to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dispose
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从 DOM 元素中移除投放列表的功能。</p><p translation-origin="off">Removes the drop list functionality from the DOM element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">drop
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把条目投放到这个容器里。</p><p translation-origin="off">Drops an item into this container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        item</p>
+      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要被投放进此容器的条目。</p><p translation-origin="off">Item being dropped into the container.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目应该插入到的索引。</p><p translation-origin="off">Index at which the item should be inserted.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        previousIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">拖动开始时该条目的索引。</p><p translation-origin="off">Index of the item when dragging started.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        previousContainer</p>
+      <code class="docs-api-method-parameter-type">DropListRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目被拖入的容器。</p><p translation-origin="off">Container from which the item got dragged in.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        isPointerOverContainer</p>
+      <code class="docs-api-method-parameter-type">boolean</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">当条目被移除时，用户的指针是否还在容器上。</p><p translation-origin="off">Whether the user's pointer was over the
+   container when the item was dropped.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        distance</p>
+      <code class="docs-api-method-parameter-type">Point</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">自拖曳序列开始以来用户拖动过的距离。</p><p translation-origin="off">Distance the user has dragged since the start of the dragging sequence.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        event</p>
+      <code class="docs-api-method-parameter-type">MouseEvent | TouchEvent = {} as any</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">触发扔下（drop）序列的事件。</p><p translation-origin="off">Event that triggered the dropping sequence.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dropPoint</p>
+      <code class="docs-api-method-parameter-type">Point</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">enter
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">发出一个事件，表明用户已经把某个条目移到了容器中。</p><p translation-origin="off">Emits an event to indicate that the user moved an item into the container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        item</p>
+      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">被移入容器中的条目。</p><p translation-origin="off">Item that was moved into the container.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        pointerX</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目沿 X 轴的位置。</p><p translation-origin="off">Position of the item along the X axis.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        pointerY</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目沿 Y 轴的位置。</p><p translation-origin="off">Position of the item along the Y axis.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        index<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">条目进来后的索引。如果省略，容器会自动尝试定位。</p><p translation-origin="off">Index at which the item entered. If omitted, the container will try to figure it
+  out automatically.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">exit
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">用户将一个条目拖入另一个容器并从当前容器删除该条目。</p><p translation-origin="off">Removes an item from the container after it was dragged into another container by the user.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        item</p>
+      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">被拖走的条目。</p><p translation-origin="off">Item that was dragged out.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getItemIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">找出容器中某个条目的索引。</p><p translation-origin="off">Figures out the index of an item in the container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        item</p>
+      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">应该确定索引的条目。</p><p translation-origin="off">Item whose index should be determined.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getScrollableParents
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取在这个投放容器中注册的可滚动父类。</p><p translation-origin="off">Gets the scrollable parents that are registered with this drop container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">readonly HTMLElement[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isDragging
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当前是否正在拖动此列表中的某个条目。</p><p translation-origin="off">Whether an item from this list is currently being dragged.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isReceiving
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">列表是否能够接收当前被拖入的已连接投放列表中的条目。</p><p translation-origin="off">Whether the list is able to receive the item that
+is currently being dragged inside a connected drop list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">start
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">开始拖动一个条目。</p><p translation-origin="off">Starts dragging an item.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withDirection
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置投放列表的布局方向。</p><p translation-origin="off">Sets the layout direction of the drop list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        direction</p>
+      <code class="docs-api-method-parameter-type">Direction</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withItems
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置属于该列表的可拖动条目。</p><p translation-origin="off">Sets the draggable items that are a part of this list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        items</p>
+      <code class="docs-api-method-parameter-type">DragRefInternal[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">属于这个列表的条目。</p><p translation-origin="off">Items that are a part of this list.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withOrientation
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置容器的方向。</p><p translation-origin="off">Sets the orientation of the container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">容器的新方向。</p><p translation-origin="off">New orientation for the container.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">withScrollableParents
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当用户在拖动时，设置哪些父元素可以滚动。</p><p translation-origin="off">Sets which parent elements are can be scrolled while the user is dragging.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        elements</p>
+      <code class="docs-api-method-parameter-type">HTMLElement[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">那些可以滚动的元素。</p><p translation-origin="off">Elements that can be scrolled.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-drag-drop-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="DragRefConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DragRefConfig"></span>
+  <code>DragRefConfig</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可以用来配置 DragRef 行为的对象。</p><p translation-origin="off">Object that can be used to configure the behavior of DragRef.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dragStartThreshold: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在 CDK 启动拖曳序列之前，用户应该拖动的最小像素数。</p><p translation-origin="off">Minimum amount of pixels that the user should
+drag, before the CDK initiates a drag sequence.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>parentDragRef: DragRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前拖动条目所嵌套在的父拖动的引用。</p><p translation-origin="off">Ref that the current drag item is nested in.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pointerDirectionChangeThreshold: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在 CDK 认为改变了拖动方向之前，用户应该拖动的像素数量。</p><p translation-origin="off">Amount the pixels the user should drag before the CDK
+considers them to have changed the drag direction.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>zIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>z-index</code> 用于为拖动条目创建的绝对定位元素。</p><p translation-origin="off"><code>z-index</code> for the absolutely-positioned elements that are created by the drag item.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="Point" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="Point"></span>
+  <code>Point</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">页面上或元素中的点坐标。</p><p translation-origin="off">Point on the page or within an element.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>x: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>y: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragStart" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragStart"></span>
+  <code>CdkDragStart</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户开始拖动拖动时会发出本事件。</p><p translation-origin="off">Event emitted when the user starts dragging a draggable.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-10">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">开始本拖动序列的原生事件。</p><p translation-origin="off">Native event that started the drag sequence.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: CdkDrag&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">发出了本事件的可拖动对象。</p><p translation-origin="off">Draggable that emitted the event.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragRelease" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragRelease"></span>
+  <code>CdkDragRelease</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">用户在释放条目时发出的事件，发生在开始任何动画之前。</p><p translation-origin="off">Event emitted when the user releases an item, before any animations have started.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-11">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">导致发出本事件的原生事件。</p><p translation-origin="off">Native event that caused the release event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: CdkDrag&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">发出了本事件的可拖动对象。</p><p translation-origin="off">Draggable that emitted the event.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragEnd" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragEnd"></span>
+  <code>CdkDragEnd</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户停止拖动时会发出本事件。</p><p translation-origin="off">Event emitted when the user stops dragging a draggable.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-12">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>distance: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自拖曳序列启动以来用户拖动过的像素距离。</p><p translation-origin="off">Distance in pixels that the user has dragged since the drag sequence started.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropPoint: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">放置条目时指针所处的位置</p><p translation-origin="off">Position where the pointer was when the item was dropped</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">导致本次拖动停止的原生事件。</p><p translation-origin="off">Native event that caused the dragging to stop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: CdkDrag&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">发出了本事件的可拖动对象。</p><p translation-origin="off">Draggable that emitted the event.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragEnter" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragEnter"></span>
+  <code>CdkDragEnter</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户把条目移到新的投送容器中时，就会发出本事件。</p><p translation-origin="off">Event emitted when the user moves an item into a new drop container.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-13">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>container: CdkDropList&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户移入了该条目的容器。</p><p translation-origin="off">Container into which the user has moved the item.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>currentIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该条目已进入该容器中的索引。</p><p translation-origin="off">Index at which the item has entered the container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>item: CdkDrag&lt;I&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">被移入容器中的条目。</p><p translation-origin="off">Item that was moved into the container.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragExit" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragExit"></span>
+  <code>CdkDragExit</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户把一个条目移到另一个投放容器，并从当前容器中移除时，就会触发本事件。</p><p translation-origin="off">Event emitted when the user removes an item from a
+drop container by moving it into another one.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-14">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>container: CdkDropList&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户已移除本条目的容器。</p><p translation-origin="off">Container from which the user has a removed an item.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>item: CdkDrag&lt;I&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">已从容器中移除的条目</p><p translation-origin="off">Item that was removed from the container.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragDrop" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragDrop"></span>
+  <code>CdkDragDrop</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户在投送容器中放入一个可拖动条目时，就会发出本事件。</p><p translation-origin="off">Event emitted when the user drops a draggable item inside a drop container.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-15">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>container: CdkDropList&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该条目投送到的容器。</p><p translation-origin="off">Container in which the item was dropped.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>currentIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此条目的当前索引。</p><p translation-origin="off">Current index of the item.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>distance: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自拖曳序列启动以来用户拖动的像素距离。</p><p translation-origin="off">Distance in pixels that the user has dragged since the drag sequence started.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dropPoint: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">放置条目时指针所处的位置</p><p translation-origin="off">Position where the pointer was when the item was dropped</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">导致放下（drop）事件的原生事件。</p><p translation-origin="off">Native event that caused the drop event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isPointerOverContainer: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当条目被移除时，用户的指针是否还在容器上。</p><p translation-origin="off">Whether the user's pointer was over the container when the item was dropped.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>item: CdkDrag&lt;I&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">被投放的条目</p><p translation-origin="off">Item that is being dropped.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previousContainer: CdkDropList&lt;O&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">从中拿出条目的容器。可以和 <code>container</code> 属性是同一个。</p><p translation-origin="off">Container from which the item was picked up. Can be the same as the <code>container</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previousIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该条目被拿起时的条目索引。</p><p translation-origin="off">Index of the item when it was picked up.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragMove" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragMove"></span>
+  <code>CdkDragMove</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户正在拖动一个条目时，就会发出一个事件。</p><p translation-origin="off">Event emitted as the user is dragging a draggable item.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-16">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>delta: {
+    x: -1 | 0 | 1;
+    y: -1 | 0 | 1;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指示用户沿每个轴拖动元素的方向。<code>1</code> 表示位置在增加（例如，用户向右或向下移动），而 <code>-1</code> 表示它正在减少（它们向左或向上移动）。<code>0</code> 意味着该位置没有变化。</p><p translation-origin="off">Indicates the direction in which the user is dragging the element along each axis.
+<code>1</code> means that the position is increasing (e.g. the user is moving to the right or downwards),
+whereas <code>-1</code> means that it's decreasing (they're moving to the left or upwards). <code>0</code> means
+that the position hasn't changed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>distance: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自拖曳序列启动以来用户已拖动的像素距离。</p><p translation-origin="off">Distance in pixels that the user has dragged since the drag sequence started.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>event: MouseEvent | TouchEvent</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">导致拖曳的原生事件</p><p translation-origin="off">Native event that is causing the dragging.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pointerPosition: {
+    x: number;
+    y: number;
+}</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户指针在页面上的位置。</p><p translation-origin="off">Position of the user's pointer on the page.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: CdkDrag&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">被拖动的条目</p><p translation-origin="off">Item that is being dragged.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkDragSortEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkDragSortEvent"></span>
+  <code>CdkDragSortEvent</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">当用户交换两个拖动条目的位置时，会发出一个事件。</p><p translation-origin="off">Event emitted when the user swaps the position of two drag items.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-17">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>container: CdkDropList&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该条目所属的容器。</p><p translation-origin="off">Container that the item belongs to.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>currentIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该条目在当前排序中的索引</p><p translation-origin="off">Index that the item is currently in.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>item: CdkDrag&lt;I&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">正在排序的条目</p><p translation-origin="off">Item that is being sorted.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previousIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该条目在先前排序中的索引。</p><p translation-origin="off">Index from which the item was sorted previously.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="DragDropConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DragDropConfig"></span>
+  <code>DragDropConfig</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可用于配置模块或组件中的拖动条目和拖放列表的对象。</p><p translation-origin="off">Object that can be used to configure the drag
+items and drop lists within a module or a component.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-18">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>boundaryElement: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>constrainPosition: DragConstrainPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dragStartDelay: DragStartDelay</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>draggingDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>listAutoScrollDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>listOrientation: DropListOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>lockAxis: DragAxis</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previewClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previewContainer: 'global' | 'parent'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>rootElementSelector: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortingDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>zIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-drag-drop-functions" class="docs-header-link docs-api-h3">
+      <span header-link="functions"></span>
+      函数
+    </h3>
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">moveItemInArray
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把某个条目从数组中的一个索引号移到另一个索引号。</p><p translation-origin="off">Moves an item one index in an array to another.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        array</p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要移动此条目的数组。</p><p translation-origin="off">Array in which to move the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        fromIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">此条目的起始索引。</p><p translation-origin="off">Starting index of the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        toIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">此条目应该移到的索引。</p><p translation-origin="off">Index to which the item should be moved.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">transferArrayItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个条目从一个数组移动到另一个数组。</p><p translation-origin="off">Moves an item from one array to another.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentArray</p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要从中传输该条目的数组。</p><p translation-origin="off">Array from which to transfer the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        targetArray</p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要放入该条目的数组。</p><p translation-origin="off">Array into which to put the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">当前数组中该条目的索引。</p><p translation-origin="off">Index of the item in its current array.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        targetIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目要插入到的索引。</p><p translation-origin="off">Index at which to insert the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+    
+      
+      
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copyArrayItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将一个条目从一个数组复制到另一个数组，并把它放在当前数组的原始位置。</p><p translation-origin="off">Copies an item from one array to another, leaving it in its
+original position in current array.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentArray</p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要从中复制条目的数组。</p><p translation-origin="off">Array from which to copy the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        targetArray</p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要把该条目复制到的数组。</p><p translation-origin="off">Array into which is copy the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        currentIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目在当前数组中的索引。</p><p translation-origin="off">Index of the item in its current array.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        targetIndex</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该条目在目标数组中要插入的索引。</p><p translation-origin="off">Index at which to insert the item.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+    <h3 id="cdk-drag-drop-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="PreviewContainer" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="PreviewContainer"></span>
+  <code>PreviewContainer</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可以在其中插入拖动条目预览的可能位置。</p><p translation-origin="off">Possible places into which the preview of a drag item can be inserted.</p>
+
+<ul>
+<li><p translation-result="on"><code>global</code> —— 预览将插入在 <code>&lt;body&gt;</code> 的底部。优点是你不必担心 <code>overflow: hidden</code> 或 <code>z-index</code>，但条目不会保留其继承的样式。</p><p translation-origin="off"><code>global</code> - Preview will be inserted at the bottom of the <code>&lt;body&gt;</code>. The advantage is that
+you don't have to worry about <code>overflow: hidden</code> or <code>z-index</code>, but the item won't retain
+its inherited styles.</p>
+
+</li>
+<li><p translation-result="on"><code>parent</code> —— 预览将插入到拖动条目的父级中。优点是已继承的样式将被保留，但可能会被 <code>overflow: hidden</code> 裁剪，由于 <code>z-index</code> 而变得不可见。此外，该预览将对选择器如 <code>:nth-child</code> 和一些 flexbox 配置产生影响。</p><p translation-origin="off"><code>parent</code> - Preview will be inserted into the parent of the drag item. The advantage is that
+inherited styles will be preserved, but it may be clipped by <code>overflow: hidden</code> or not be
+visible due to <code>z-index</code>. Furthermore, the preview is going to have an effect over selectors
+like <code>:nth-child</code> and some flexbox configurations.</p>
+
+</li>
+<li><p translation-result="on"><code>ElementRef&lt;HTMLElement&gt; | HTMLElement</code> 预览将插入到特定元素中。具有和 <code>parent</code> 一样的优点和缺点。</p><p translation-origin="off"><code>ElementRef&lt;HTMLElement&gt; | HTMLElement</code> - Preview will be inserted into a specific element.
+Same advantages and disadvantages as <code>parent</code>.</p>
+
+</li>
+</ul>
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> PreviewContainer = <span class="hljs-string">'global'</span> | <span class="hljs-string">'parent'</span> | ElementRef&lt;HTMLElement&gt; | HTMLElement;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DragStartDelay" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragStartDelay"></span>
+  <code>DragStartDelay</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可用于配置拖动开始延迟的可能值。</p><p translation-origin="off">Possible values that can be used to configure the drag start delay.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragStartDelay = <span class="hljs-built_in">number</span> | {
+    <span class="hljs-attr">touch</span>: <span class="hljs-built_in">number</span>;
+    mouse: <span class="hljs-built_in">number</span>;
+};</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DragAxis" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragAxis"></span>
+  <code>DragAxis</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可以锁定可能的拖动轴。</p><p translation-origin="off">Possible axis along which dragging can be locked.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragAxis = <span class="hljs-string">'x'</span> | <span class="hljs-string">'y'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DragConstrainPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragConstrainPosition"></span>
+  <code>DragConstrainPosition</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">可用于约束元素拖动位置的函数。</p><p translation-origin="off">Function that can be used to constrain the position of a dragged element.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragConstrainPosition = <span class="hljs-function">(<span class="hljs-params">point: Point, dragRef: DragRef</span>) =&gt;</span> Point;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DropListOrientation" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DropListOrientation"></span>
+  <code>DropListOrientation</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">下拉列表的可能方向。</p><p translation-origin="off">Possible orientations for a drop list.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DropListOrientation = <span class="hljs-string">'horizontal'</span> | <span class="hljs-string">'vertical'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="cdk-drag-drop-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DROP_LIST"></span>
+  <code>CDK_DROP_LIST</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDropList</code> 实例的注入令牌。它用作实际 <code>CdkDropList</code> 类的备用令牌，这可能导致不必要地保留该类及其指令元数据。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
+alternative token to the actual <code>CdkDropList</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_CONFIG"></span>
+  <code>CDK_DRAG_CONFIG</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">注入令牌，可用于配置与拖放相关的组件的行为。</p><p translation-origin="off">Injection token that can be used to configure the
+behavior of the drag&amp;drop-related components.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_CONFIG: InjectionToken&lt;DragDropConfig&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DROP_LIST_GROUP" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DROP_LIST_GROUP"></span>
+  <code>CDK_DROP_LIST_GROUP</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDropListGroup</code> 实例的注入令牌。它用作实际 <code>CdkDropListGroup</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDropListGroup</code>. It serves as
+alternative token to the actual <code>CdkDropListGroup</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: InjectionToken&lt;CdkDropListGroup&lt;unknown&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_HANDLE" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_HANDLE"></span>
+  <code>CDK_DRAG_HANDLE</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDragHandle</code> 实例的注入令牌。它用作实际 <code>CdkDragHandle</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDragHandle</code>. It serves as
+alternative token to the actual <code>CdkDragHandle</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_HANDLE: InjectionToken&lt;CdkDragHandle&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_PREVIEW" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_PREVIEW"></span>
+  <code>CDK_DRAG_PREVIEW</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDragPreview</code> 实例的注入令牌。它用作实际 <code>CdkDragPreview</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDragPreview</code>. It serves as
+alternative token to the actual <code>CdkDragPreview</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PREVIEW: InjectionToken&lt;CdkDragPreview&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DRAG_PLACEHOLDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_PLACEHOLDER"></span>
+  <code>CDK_DRAG_PLACEHOLDER</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDragPlaceholder</code> 实例的注入令牌。它用作实际 <code>CdkDragPlaceholder</code> 类的备用令牌，直接使用该类可能导致该类及其指令的元数据无法被优化掉。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDragPlaceholder</code>. It serves as
+alternative token to the actual <code>CdkDragPlaceholder</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_PLACEHOLDER: InjectionToken&lt;CdkDragPlaceholder&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

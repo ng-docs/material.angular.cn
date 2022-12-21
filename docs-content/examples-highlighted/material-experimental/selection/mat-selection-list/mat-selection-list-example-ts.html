@@ -1,0 +1,79 @@
+<span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Mat Selection on a simple list.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;mat-selection-list-example&#x27;</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;mat-selection-list-example.html&#x27;</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionListExample</span> </span>{
+  data = ELEMENT_NAMES;
+  selected1: <span class="hljs-built_in">string</span>[] = [];
+  selected2: <span class="hljs-built_in">string</span>[] = [];
+  selected3: <span class="hljs-built_in">string</span>[] = [];
+  selected4: <span class="hljs-built_in">string</span>[] = [];
+
+  <span class="hljs-function"><span class="hljs-title">getCurrentSelected</span>(<span class="hljs-params">event: SelectionChange&lt;<span class="hljs-built_in">string</span>&gt;</span>)</span> {
+    <span class="hljs-keyword">return</span> event.after.map(<span class="hljs-function"><span class="hljs-params">select</span> =&gt;</span> select.value);
+  }
+
+  <span class="hljs-function"><span class="hljs-title">trackByFn</span>(<span class="hljs-params">index: <span class="hljs-built_in">number</span>, value: <span class="hljs-built_in">string</span></span>)</span> {
+    <span class="hljs-keyword">return</span> index;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">changeElementName</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.data = ELEMENT_SYMBOLS;
+  }
+
+  <span class="hljs-function"><span class="hljs-title">reset</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.data = ELEMENT_NAMES;
+  }
+}
+
+<span class="hljs-keyword">const</span> ELEMENT_NAMES = [
+  <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,
+  <span class="hljs-string">&#x27;Helium&#x27;</span>,
+  <span class="hljs-string">&#x27;Lithium&#x27;</span>,
+  <span class="hljs-string">&#x27;Beryllium&#x27;</span>,
+  <span class="hljs-string">&#x27;Boron&#x27;</span>,
+  <span class="hljs-string">&#x27;Carbon&#x27;</span>,
+  <span class="hljs-string">&#x27;Nitrogen&#x27;</span>,
+  <span class="hljs-string">&#x27;Oxygen&#x27;</span>,
+  <span class="hljs-string">&#x27;Fluorine&#x27;</span>,
+  <span class="hljs-string">&#x27;Neon&#x27;</span>,
+  <span class="hljs-string">&#x27;Sodium&#x27;</span>,
+  <span class="hljs-string">&#x27;Magnesium&#x27;</span>,
+  <span class="hljs-string">&#x27;Aluminum&#x27;</span>,
+  <span class="hljs-string">&#x27;Silicon&#x27;</span>,
+  <span class="hljs-string">&#x27;Phosphorus&#x27;</span>,
+  <span class="hljs-string">&#x27;Sulfur&#x27;</span>,
+  <span class="hljs-string">&#x27;Chlorine&#x27;</span>,
+  <span class="hljs-string">&#x27;Argon&#x27;</span>,
+  <span class="hljs-string">&#x27;Potassium&#x27;</span>,
+  <span class="hljs-string">&#x27;Calcium&#x27;</span>,
+];
+
+<span class="hljs-keyword">const</span> ELEMENT_SYMBOLS = [
+  <span class="hljs-string">&#x27;H&#x27;</span>,
+  <span class="hljs-string">&#x27;He&#x27;</span>,
+  <span class="hljs-string">&#x27;Li&#x27;</span>,
+  <span class="hljs-string">&#x27;Be&#x27;</span>,
+  <span class="hljs-string">&#x27;B&#x27;</span>,
+  <span class="hljs-string">&#x27;C&#x27;</span>,
+  <span class="hljs-string">&#x27;N&#x27;</span>,
+  <span class="hljs-string">&#x27;O&#x27;</span>,
+  <span class="hljs-string">&#x27;F&#x27;</span>,
+  <span class="hljs-string">&#x27;Ne&#x27;</span>,
+  <span class="hljs-string">&#x27;Na&#x27;</span>,
+  <span class="hljs-string">&#x27;Mg&#x27;</span>,
+  <span class="hljs-string">&#x27;Al&#x27;</span>,
+  <span class="hljs-string">&#x27;Si&#x27;</span>,
+  <span class="hljs-string">&#x27;P&#x27;</span>,
+  <span class="hljs-string">&#x27;S&#x27;</span>,
+  <span class="hljs-string">&#x27;Cl&#x27;</span>,
+  <span class="hljs-string">&#x27;Ar&#x27;</span>,
+  <span class="hljs-string">&#x27;K&#x27;</span>,
+  <span class="hljs-string">&#x27;Ca&#x27;</span>,
+];

@@ -1,0 +1,504 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-radio-api-参考文档--">
+    Angular Material legacy-radio API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-radio</code></p><h3 id="material-legacy-radio-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacyRadioGroup" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRadioGroup"></span>
+  <code>MatLegacyRadioGroup</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一组单选按钮。可以包含一个或多个 <code>&lt;mat-radio-button&gt;</code> 元素。</p><p translation-origin="off">A group of radio buttons. May contain one or more <code>&lt;mat-radio-button&gt;</code> elements.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-radio-group</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matRadioGroup</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组中所有单选按钮的主题颜色。</p><p translation-origin="off">Theme color for all of the radio buttons in the group.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮组是否已禁用</p><p translation-origin="off">Whether the radio group is disabled</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: 'before' | 'after'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签是应该出现在单选按钮之后还是之前。默认为 'after'</p><p translation-origin="off">Whether the labels should appear after or before the radio-buttons. Defaults to 'after'</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮组的名称。该组中的所有单选按钮都将使用此名称。</p><p translation-origin="off">Name of the radio button group. All radio buttons inside this group will use this name.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮组是否为必填项</p><p translation-origin="off">Whether the radio group is required</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selected: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前选定的单选按钮。如果设置为新的单选按钮，则会更新该单选按钮组的值以匹配新选定的按钮。</p><p translation-origin="off">The currently selected radio button. If set to a new radio button, the radio group value
+will be updated to match the new selected button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮组的值。如果有一个与匹配值对应的单选按钮，它应该等于选定单选按钮的值。如果没有这样一个对应的单选按钮，在加入了一个带有匹配值的新单选按钮，该值仍然会生效。</p><p translation-origin="off">Value for the radio-group. Should equal the value of the selected radio button if there is
+a corresponding radio button with a matching value. If there is not such a corresponding
+radio button, this value persists to be applied in case a new radio button is added with a
+matching value.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatRadioChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">本组的值发生变化时发出的事件。只有在值是因用户与单选按钮的交互而发生变化时才会发出变更事件（与 <code>&lt;input type-"radio"&gt;</code> 的行为相同）。</p><p translation-origin="off">Event emitted when the group value changes.
+Change events are only emitted when the value changes due to user interaction with
+a radio button (the same behavior as <code>&lt;input type-"radio"&gt;</code>).</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyRadioButton" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyRadioButton"></span>
+  <code>MatLegacyRadioButton</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">Material Design 单选按钮。通常放在 <code>&lt;mat-radio-group&gt;</code> 元素内。</p><p translation-origin="off">A Material design radio-button. Typically placed inside of <code>&lt;mat-radio-group&gt;</code> elements.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-radio-button</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matRadioButton</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-describedby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDescribedby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">'aria-describedby' 属性是在该元素的标签和字段类型之后读取的。</p><p translation-origin="off">The 'aria-describedby' attribute is read after the element's label and field type.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用来在底层的 input 元素上设置 'aria-label' 属性。</p><p translation-origin="off">Used to set the 'aria-label' attribute on the underlying input element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">'aria-labelledby' 属性优先于该元素上的替换文本。</p><p translation-origin="off">The 'aria-labelledby' attribute takes precedence as the element's text alternative.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个单选按钮是否被勾选。</p><p translation-origin="off">Whether this radio button is checked.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮的主题颜色。</p><p translation-origin="off">Theme color of the radio button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用涟漪。</p><p translation-origin="off">Whether ripples are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮是否已禁用。</p><p translation-origin="off">Whether the radio button is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮的唯一 ID。</p><p translation-origin="off">The unique ID for the radio button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: 'before' | 'after'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签是应该出现在单选按钮之后还是之前。默认为 'after'</p><p translation-origin="off">Whether the label should appear after or before the radio button. Defaults to 'after'</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">模拟 HTML 的 “name” 属性，用于对单选按钮进行分组以进行唯一选择。</p><p translation-origin="off">Analog to HTML 'name' attribute used to group radios for unique selection.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单选按钮是否为必填项。</p><p translation-origin="off">Whether the radio button is required.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个单选按钮的值。</p><p translation-origin="off">The value of this radio button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;MatRadioChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该单选按钮的 checked 属性发生变化时，会发出本事件。只会在值因用户与单选按钮的交互而发生变化时发出此变更事件（与 <code>&lt;input type-"radio"&gt;</code> 的行为相同）。</p><p translation-origin="off">Event emitted when the checked state of this radio button changes.
+Change events are only emitted when the value changes due to user interaction with
+the radio button (the same behavior as <code>&lt;input type-"radio"&gt;</code>).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，将退回到 Tabindex。</p><p translation-origin="off">Tabindex to which to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>inputId: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>&lt;mat-radio-button&gt;</code> 里面的原生输入框元素的 ID</p><p translation-origin="off">ID of the native input element inside <code>&lt;mat-radio-button&gt;</code></p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>radioGroup: _MatRadioGroupBase&lt;_MatRadioButtonBase&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">父单选按钮组。可能存在，也可能不存在。</p><p translation-origin="off">The parent radio group. May or may not be present.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此单选按钮获得焦点。</p><p translation-origin="off">Focuses the radio button.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    </div>

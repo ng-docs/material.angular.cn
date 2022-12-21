@@ -1,0 +1,578 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-autocomplete-api-参考文档--">
+    Angular Material legacy-autocomplete API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-autocomplete</code></p><h3 id="material-legacy-autocomplete-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacyAutocomplete" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyAutocomplete"></span>
+  <code>MatLegacyAutocomplete</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-autocomplete</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matAutocomplete</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选择器的 Aria 标签。</p><p translation-origin="off">Aria label of the autocomplete.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于指定 <code>aria-labelledby</code> 属性的输入属性。</p><p translation-origin="off">Input that can be used to specify the <code>aria-labelledby</code> attribute.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>autoActiveFirstOption: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当自动完成面板打开时，是否应突出显示第一个选项。可以通过 <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</code> 令牌进行全局配置。</p><p translation-origin="off">Whether the first option should be highlighted when the autocomplete panel is opened.
+Can be configured globally through the <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</code> token.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>autoSelectActiveOption: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在用户导航时是否应选择活动选项。</p><p translation-origin="off">Whether the active option should be selected as the user is navigating.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'class'</span>)
+        </div><p class="docs-api-property-name">
+      <code>classList: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">取得 mat-autocomplete 宿主元素上设置的类，并把它们应用到浮层容器中的面板上，以便指定样式。</p><p translation-origin="off">Takes classes set on the host mat-autocomplete element and applies them to the panel
+inside the overlay container to allow for easy styling.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用涟漪。</p><p translation-origin="off">Whether ripples are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>displayWith: ((value: any) =&gt; string) | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">一个函数，用来将选项的控件值映射到触发器中的显示值。</p><p translation-origin="off">Function that maps an option's control value to its display value in the trigger.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>panelWidth: string | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定自动完成面板的宽度。可以是任意 CSS 尺寸值，否则就会匹配它的宿主宽度。</p><p translation-origin="off">Specify the width of the autocomplete panel.  Can be any CSS sizing value, otherwise it will
+match the width of its host.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>closed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自动完成面板关闭时发出的事件。</p><p translation-origin="off">Event that is emitted when the autocomplete panel is closed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>opened: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自动完成面板打开时发出的事件。</p><p translation-origin="off">Event that is emitted when the autocomplete panel is opened.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>optionActivated: EventEmitter&lt;MatAutocompleteActivatedEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只要激活某个选项，就会发出触发本事件。</p><p translation-origin="off">Emits whenever an option is activated.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>optionSelected: EventEmitter&lt;MatAutocompleteSelectedEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每次从列表中选择一个选项时就会发出的事件。</p><p translation-origin="off">Event that is emitted whenever an option from the list is selected.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">供自动完成触发器的 “aria-owns” 属性使用的唯一 ID。</p><p translation-origin="off">Unique ID to be used by autocomplete trigger's "aria-owns" property.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isOpen: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自动完成面板是否已打开。</p><p translation-origin="off">Whether the autocomplete panel is open.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>optionGroups: QueryList&lt;MatLegacyOptgroup&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对自动完成中所有选项组的引用。</p><p translation-origin="off">Reference to all option groups within the autocomplete.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: QueryList&lt;MatLegacyOption&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对自动完成中所有选项的引用。</p><p translation-origin="off">Reference to all options within the autocomplete.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panel: ElementRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">容纳自动完成选项的面板元素。</p><p translation-origin="off">Element for the panel containing the autocomplete options.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>showPanel: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自动填充功能面板是否可见，取决于选项的长度。</p><p translation-origin="off">Whether the autocomplete panel should be visible, depending on option length.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyAutocompleteTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyAutocompleteTrigger"></span>
+  <code>MatLegacyAutocompleteTrigger</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">input[matAutocomplete]</span>
+  
+    <span class="docs-api-class-selector-name">textarea[matAutocomplete]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matAutocompleteTrigger</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matAutocomplete'</span>)
+        </div><p class="docs-api-property-name">
+      <code>autocomplete: _MatAutocompleteBase</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要附着到此触发器的自动完成面板。</p><p translation-origin="off">The autocomplete panel to be attached to this trigger.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matAutocompleteDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>autocompleteDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用了自动完成器。当禁用时，该元素和常规输入框的行为相同，用户将无法打开该面板。</p><p translation-origin="off">Whether the autocomplete is disabled. When disabled, the element will
+act as a regular input and the user won't be able to open the panel.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matAutocompleteConnectedTo'</span>)
+        </div><p class="docs-api-property-name">
+      <code>connectedTo: _MatAutocompleteOriginBase</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用来定位自动完成面板的基准点。默认为本自动完成触发器元素。</p><p translation-origin="off">Reference relative to which to position the autocomplete panel.
+Defaults to the autocomplete trigger element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matAutocompletePosition'</span>)
+        </div><p class="docs-api-property-name">
+      <code>position: 'auto' | 'above' | 'below'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自动完成面板相对于触发器元素的位置。<code>auto</code> 位置会让该面板在触发器下方渲染，前提是它有足够的空间放进本视口中，否则面板就会显示在它的上方。如果位置设为 <code>above</code> 或 <code>below</code>，则面板将始终显示在触发器的上方或下方，无论它是否完全适合本视口。</p><p translation-origin="off">Position of the autocomplete panel relative to the trigger element. A position of <code>auto</code>
+will render the panel underneath the trigger if there is enough space for it to fit in
+the viewport, otherwise the panel will be shown above it. If the position is set to
+<code>above</code> or <code>below</code>, the panel will always be shown above or below the trigger. no matter
+whether it fits completely in the viewport.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>activeOption: _MatOptionBase | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前处于活动状态的选项，强制转换为 MatOption 类型。</p><p translation-origin="off">The currently active option, coerced to MatOption type.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>optionSelections: Observable&lt;MatOptionSelectionChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对自动完成选项的选择状态的更改流。</p><p translation-origin="off">Stream of changes to the selection state of the autocomplete options.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelClosingActions: Observable&lt;MatOptionSelectionChange | null&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">会导致关闭自动完成面板的一系列动作，包括当选择了某个选项时、失焦时，以及当按下 TAB 时。</p><p translation-origin="off">A stream of actions that should close the autocomplete panel, including
+when an option is selected, on blur, and when TAB is pressed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelOpen: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">自动完成面板是否处于已打开状态。</p><p translation-origin="off">Whether or not the autocomplete panel is open.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closePanel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭自动完成建议面板。</p><p translation-origin="off">Closes the autocomplete suggestion panel.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">openPanel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开自动完成建议面板。</p><p translation-origin="off">Opens the autocomplete suggestion panel.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updatePosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新自动完成建议面板的位置，以确保它能容纳视口中的所有选项。</p><p translation-origin="off">Updates the position of the autocomplete suggestion panel to ensure that it fits all options
+within the viewport.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatLegacyAutocompleteOrigin" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyAutocompleteOrigin"></span>
+  <code>MatLegacyAutocompleteOrigin</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">指令应用于某个元素，以使其可用作自动完成面板的连接点。</p><p translation-origin="off">Directive applied to an element to make it usable
+as a connection point for an autocomplete panel.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matAutocompleteOrigin]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matAutocompleteOrigin</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>elementRef: ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对此指令要应用到的元素的引用。</p><p translation-origin="off">Reference to the element on which the directive is applied.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    </div>

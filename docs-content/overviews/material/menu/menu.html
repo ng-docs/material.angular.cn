@@ -1,0 +1,209 @@
+<div class="docs-markdown"><p translation-result="on"><code>&lt;mat-menu&gt;</code> 是一个包含选项列表的浮动面板。</p><p translation-origin="off"><code>&lt;mat-menu&gt;</code> is a floating panel containing list of options.</p>
+
+<div material-docs-example="menu-overview"></div>
+
+<p translation-result="on"><code>&lt;mat-menu&gt;</code> 元素本身不会渲染任何东西。要用 <code>matMenuTriggerFor</code> 指令来附着到所属元素并打开此菜单：</p><p translation-origin="off">By itself, the <code>&lt;mat-menu&gt;</code> element does not render anything. The menu is attached to and opened
+via application of the <code>matMenuTriggerFor</code> directive:</p>
+
+<div material-docs-example="menu-overview" file="menu-overview-example.html" region="mat-menu-trigger-for"></div>
+
+
+        <h3 id="toggling-the-menu-programmatically" class="docs-header-link" translation-result="on">
+          <span header-link="以编程方式切换菜单"></span>
+          以编程方式切换菜单
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="toggling-the-menu-programmatically"></span>
+          Toggling the menu programmatically
+        </h3>
+      
+        
+      <p translation-result="on">菜单对外暴露了一个 API，用于以编程的方式打开/关闭它。注意，在这种情况下，仍然必须用 <code>matMenuTriggerFor</code> 来把菜单附着到 DOM 中的某个触发器元素上。</p><p translation-origin="off">The menu exposes an API to open/close programmatically. Please note that in this case, an
+<code>matMenuTriggerFor</code> directive is still necessary to attach the menu to a trigger element in the DOM.</p>
+
+<pre><code class="language-ts"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
+  <span class="hljs-meta">@ViewChild</span>(MatMenuTrigger) trigger: MatMenuTrigger;
+
+  <span class="hljs-function"><span class="hljs-title">someMethod</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.trigger.openMenu();
+  }
+}
+</code></pre>
+
+        <h3 id="icons" class="docs-header-link" translation-result="on">
+          <span header-link="图标"></span>
+          图标
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="icons"></span>
+          Icons
+        </h3>
+      
+        
+      <p translation-result="on">菜单支持在菜单项的文本之前显示 <code>mat-icon</code> 元素上。</p><p translation-origin="off">Menus support displaying <code>mat-icon</code> elements before the menu item text.</p>
+
+<div material-docs-example="menu-icons" file="menu-icons-example.html"></div>
+
+
+        <h3 id="customizing-menu-position" class="docs-header-link" translation-result="on">
+          <span header-link="自定义菜单位置"></span>
+          自定义菜单位置
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="customizing-menu-position"></span>
+          Customizing menu position
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，菜单将会显示在触发器的下方（Y 轴）、后方（X 轴）并与触发器元素重叠。
+此位置可以使用 <code>xPosition</code> (<code>before | after</code>) 和 <code>yPosition</code> (<code>above | below</code>) 属性进行修改。
+还可以用 <code>[overlapTrigger]="false"</code> 属性来强迫菜单不要与触发器重叠。</p><p translation-origin="off">By default, the menu will display below (y-axis), after (x-axis), without overlapping
+its trigger. The position can be changed using the <code>xPosition</code> (<code>before | after</code>) and <code>yPosition</code>
+(<code>above | below</code>) attributes. The menu can be forced to overlap the trigger using the
+<code>overlapTrigger</code> attribute.</p>
+
+<div material-docs-example="menu-position" file="menu-position-example.html" region="menu-position"></div>
+
+
+        <h3 id="nested-menu" class="docs-header-link" translation-result="on">
+          <span header-link="内嵌菜单"></span>
+          内嵌菜单
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="nested-menu"></span>
+          Nested menu
+        </h3>
+      
+        
+      <p translation-result="on">Material 支持让 <code>mat-menu-item</code> 再打开子菜单。要做到这一点，你要先定义根菜单和子菜单，然后在 <code>mat-menu-item</code> 上设置 <code>[matMenuTriggerFor]</code> 以触发子菜单：</p><p translation-origin="off">Material supports the ability for an <code>mat-menu-item</code> to open a sub-menu. To do so, you have to define
+your root menu and sub-menus, in addition to setting the <code>[matMenuTriggerFor]</code> on the <code>mat-menu-item</code>
+that should trigger the sub-menu:</p>
+
+<div material-docs-example="menu-nested" file="menu-nested-example.html" region="sub-menu"></div>
+
+
+        <h3 id="lazy-rendering" class="docs-header-link" translation-result="on">
+          <span header-link="惰性渲染"></span>
+          惰性渲染
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="lazy-rendering"></span>
+          Lazy rendering
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，即使菜单面板是关闭的，其内容也会被初始化。要想等到菜单打开时才进行初始化，可以用一个带 <code>matMenuContent</code> 属性的 <code>ng-template</code> 来提供其内容：</p><p translation-origin="off">By default, the menu content will be initialized even when the panel is closed. To defer
+initialization until the menu is open, the content can be provided as an <code>ng-template</code>
+with the <code>matMenuContent</code> attribute:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matMenuContent</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+
+        <h3 id="passing-in-data-to-a-menu" class="docs-header-link" translation-result="on">
+          <span header-link="给菜单传入数据"></span>
+          给菜单传入数据
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="passing-in-data-to-a-menu"></span>
+          Passing in data to a menu
+        </h3>
+      
+        
+      <p translation-result="on">当使用惰性渲染时，可以通过输入属性 <code>matMenuTriggerData</code> 来把额外的上下文数据传给菜单。
+这会允许使用不同的数据集渲染同一个菜单实例 —— 取决于在哪个触发器上打开它：</p><p translation-origin="off">When using lazy rendering, additional context data can be passed to the menu panel via
+the <code>matMenuTriggerData</code> input. This allows for a single menu instance to be rendered
+with a different set of data, depending on the trigger that opened it:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matMenuContent</span> <span class="hljs-attr">let-name</span>=<span class="hljs-string">"name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Log off {{name}}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">"{name: 'Sally'}"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span> [<span class="hljs-attr">matMenuTriggerData</span>]=<span class="hljs-string">"{name: 'Bob'}"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+
+        <h3 id="keyboard-interaction" class="docs-header-link" translation-result="on">
+          <span header-link="键盘交互"></span>
+          键盘交互
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      
+        
+      <table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">键盘快捷键</nt-wrapper><nt-wrapper translation-origin="off">Keyboard shortcut</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">操作</nt-wrapper><nt-wrapper translation-origin="off">Action</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>Down Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">聚焦下一个菜单项。</nt-wrapper><nt-wrapper translation-origin="off">Focus the next menu item.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Up Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">聚焦上一个菜单项。</nt-wrapper><nt-wrapper translation-origin="off">Focus the previous menu item.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Left Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">如果是子菜单，则关闭当前菜单。</nt-wrapper><nt-wrapper translation-origin="off">Close the current menu if it is a sub-menu.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Right Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">打开当前菜单项的子菜单。</nt-wrapper><nt-wrapper translation-origin="off">Opens the current menu item's sub-menu.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Enter</kbd></td>
+<td><nt-wrapper translation-result="on">激活焦点菜单项。</nt-wrapper><nt-wrapper translation-origin="off">Activate the focused menu item.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Escape</kbd></td>
+<td><nt-wrapper translation-result="on">关闭所有打开的菜单。</nt-wrapper><nt-wrapper translation-origin="off">Close all open menus.</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">Angular Material 的菜单组件由两个相互关连的部分组成：触发器和弹出菜单。</p><p translation-origin="off">Angular Material's menu component consists of two connected parts: the trigger and the pop-up menu.</p>
+
+<p translation-result="on">菜单触发器是一个标准按钮元素，增加了 <code>aria-haspopup</code> 、 <code>aria-expanded</code> 和 <code>aria-controls</code>，以创建与弹出面板的联系。</p><p translation-origin="off">The menu trigger is a standard button element augmented with <code>aria-haspopup</code>, <code>aria-expanded</code>, and
+<code>aria-controls</code> to create the relationship to the pop-up panel.</p>
+
+<p translation-result="on">弹出菜单实现了 <code>role="menu"</code> 模式，它会处理键盘交互和焦点管理。打开后，触发器将聚焦第一个可聚焦的菜单项。关闭后，菜单会将焦点返回到其触发器。请避免创建会禁用所有条目的菜单，而是隐藏或禁用菜单触发器。</p><p translation-origin="off">The pop-up menu implements the <code>role="menu"</code> pattern, handling keyboard interaction and focus
+management. Upon opening, the trigger will focus the first focusable menu item. Upon close, the menu
+will return focus to its trigger. Avoid creating a menu in which all items are disabled, instead
+hiding or disabling the menu trigger. </p>
+
+<p translation-result="on">Angular Material 不支持 <code>menuitemcheckbox</code> 或 <code>menuitemradio</code> 角色。</p><p translation-origin="off">Angular Material does not support the <code>menuitemcheckbox</code> or <code>menuitemradio</code> roles.</p>
+
+<p translation-result="on">总是要通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 来为没有描述性文本内容的任何菜单触发器或菜单项提供无障碍标签。</p><p translation-origin="off">Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for any menu
+triggers or menu items without descriptive text content.</p>
+
+</div>

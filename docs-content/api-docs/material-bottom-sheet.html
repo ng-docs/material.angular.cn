@@ -1,0 +1,727 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-bottom-sheet-api-参考文档--">
+    Angular Material bottom-sheet API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+      </code>
+    </p>
+  <h3 id="material-bottom-sheet-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="MatBottomSheet" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatBottomSheet"></span>
+  <code>MatBottomSheet</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于触发 Material Design 底部操作表的服务。</p><p translation-origin="off">Service to trigger Material Design bottom sheets.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dismiss
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关掉当前可见的底部操作表。</p><p translation-origin="off">Dismisses the currently-visible bottom sheet.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        result<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">R</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要传递给底部操作表实例的数据。</p><p translation-origin="off">Data to pass to the bottom sheet instance.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开一个包含指定组件的底部操作表。</p><p translation-origin="off">Opens a bottom sheet containing the given component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        component</p>
+      <code class="docs-api-method-parameter-type">ComponentType&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要装入底部操作表的组件类型。</p><p translation-origin="off">Type of the component to load into the bottom sheet.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatBottomSheetConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">额外的配置选项。</p><p translation-origin="off">Extra configuration options.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatBottomSheetRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">指向新打开的底部操作表的引用。</p><p translation-origin="off">Reference to the newly-opened bottom sheet.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开一个包含指定模板的底部操作表。</p><p translation-origin="off">Opens a bottom sheet containing the given template.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">TemplateRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要用作底部操作表内容的 TemplateRef。</p><p translation-origin="off">TemplateRef to instantiate as the bottom sheet content.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatBottomSheetConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">额外的配置选项。</p><p translation-origin="off">Extra configuration options.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatBottomSheetRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">指向新打开的底部操作表的引用。</p><p translation-origin="off">Reference to the newly-opened bottom sheet.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-bottom-sheet-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatBottomSheetConfig" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatBottomSheetConfig"></span>
+  <code>MatBottomSheetConfig</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">打开底部操作表时使用的配置。</p><p translation-origin="off">Configuration used when opening a bottom sheet.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指定给底部操作表元素的 Aria 标签。</p><p translation-origin="off">Aria label to assign to the bottom sheet element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaModal: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个底部操作表是否是模态的。用于设置 <code>aria-modal</code> 属性。</p><p translation-origin="off">Whether this is a modal bottom sheet. Used to set the <code>aria-modal</code> attribute.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>autoFocus: AutoFocusTarget | string | boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">底部工作表打开时应聚焦到的位置。。</p><p translation-origin="off">Where the bottom sheet should focus on open.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>backdropClass: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">背景板的自定义类。</p><p translation-origin="off">Custom class for the backdrop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closeOnNavigation: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户在历史记录中前进或后退时，底部操作表是否应该关闭。请注意，这通常不包括单击某些链接（除非用户正在使用 <code>HashLocationStrategy</code> ）。</p><p translation-origin="off">Whether the bottom sheet should close when the user goes backwards/forwards in history.
+Note that this usually doesn't include clicking on links (unless the user is using
+the <code>HashLocationStrategy</code>).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">注入到子组件中的数据。</p><p translation-origin="off">Data being injected into the child component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>direction: Direction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">底部操作表的文本布局方向。</p><p translation-origin="off">Text layout direction for the bottom sheet.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClose: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户是否可以使用 escape 或单击外部来关闭底部操作表。</p><p translation-origin="off">Whether the user can use escape or clicking outside to close the bottom sheet.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasBackdrop: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">底部操作表是否有背景板。</p><p translation-origin="off">Whether the bottom sheet has a backdrop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要添加到底部操作表容器中的额外 CSS 类。</p><p translation-origin="off">Extra CSS classes to be added to the bottom sheet container.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>restoreFocus: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">关闭底部操作表时是否应该把焦点还给以前拥有焦点的元素。</p><p translation-origin="off">Whether the bottom sheet should restore focus to the
+previously-focused element, after it's closed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollStrategy: ScrollStrategy</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于底部操作表的滚动策略。</p><p translation-origin="off">Scroll strategy to be used for the bottom sheet.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainerRef: ViewContainerRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于放置底部操作表浮层的容器。</p><p translation-origin="off">The view container to place the overlay for the bottom sheet into.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatBottomSheetRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatBottomSheetRef"></span>
+  <code>MatBottomSheetRef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">引用来自底部操作表服务的底部操作表。</p><p translation-origin="off">Reference to a bottom sheet dispatched from the bottom sheet service.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClose: boolean | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否允许用户关闭底部操作表。</p><p translation-origin="off">Whether the user is allowed to close the bottom sheet.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>instance: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件的实例组成了底部操作表的内容。</p><p translation-origin="off">Instance of the component making up the content of the bottom sheet.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterDismissed
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当底部操作表已经完成并关闭时，它会收到通知。</p><p translation-origin="off">Gets an observable that is notified when the bottom sheet is finished closing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;R | undefined&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterOpened
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当底部操作表已经打开并出现时，它会收到通知。</p><p translation-origin="off">Gets an observable that is notified when the bottom sheet has opened and appeared.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">backdropClick
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当点击浮层的背景板时，它会发出数据。</p><p translation-origin="off">Gets an observable that emits when the overlay's backdrop has been clicked.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;MouseEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">dismiss
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭底部操作表。</p><p translation-origin="off">Dismisses the bottom sheet.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        result<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">R</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要传递回底部操作表的数据。</p><p translation-origin="off">Data to be passed back to the bottom sheet opener.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">keydownEvents
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当指定浮层收到 keydown 事件时，它会发出数据。</p><p translation-origin="off">Gets an observable that emits when keydown events are targeted on the overlay.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;KeyboardEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-bottom-sheet-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="AutoFocusTarget" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AutoFocusTarget"></span>
+  <code>AutoFocusTarget</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">用于在对话框打开时自动将焦点设置到何处的选项</p><p translation-origin="off">Options for where to set focus to automatically on dialog open</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> AutoFocusTarget = <span class="hljs-string">'dialog'</span> | <span class="hljs-string">'first-tabbable'</span> | <span class="hljs-string">'first-heading'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-bottom-sheet-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_BOTTOM_SHEET_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_BOTTOM_SHEET_DEFAULT_OPTIONS"></span>
+  <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来指定底部操作表的默认选项。</p><p translation-origin="off">Injection token that can be used to specify default bottom sheet options.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_BOTTOM_SHEET_DEFAULT_OPTIONS: InjectionToken&lt;MatBottomSheetConfig&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_BOTTOM_SHEET_DATA" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_BOTTOM_SHEET_DATA"></span>
+  <code>MAT_BOTTOM_SHEET_DATA</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来访问那些传入底部操作表的数据。</p><p translation-origin="off">Injection token that can be used to access the data that was passed in to a bottom sheet.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_BOTTOM_SHEET_DATA: InjectionToken&lt;<span class="hljs-built_in">any</span>&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="matBottomSheetAnimations" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="matBottomSheetAnimations"></span>
+  <code>matBottomSheetAnimations</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">Material 底部操作表使用的动画。</p><p translation-origin="off">Animations used by the Material bottom sheet.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> matBottomSheetAnimations: { <span class="hljs-keyword">readonly</span> bottomSheetState: AnimationTriggerMetadata; };</code>
+</pre>
+</div>
+
+
+    </div>

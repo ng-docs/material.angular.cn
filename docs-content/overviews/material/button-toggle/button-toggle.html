@@ -1,0 +1,98 @@
+<div class="docs-markdown"><p translation-result="on"><code>&lt;mat-button-toggle&gt;</code> 是一个具有按钮外观的双态开关。
+这些开关的行为可以配置得像单选按钮或检查框一样。虽然它们也可以独立使用，但一般会作为 <code>mat-button-toggle-group</code> 中的一部分。</p><p translation-origin="off"><code>&lt;mat-button-toggle&gt;</code> are on/off toggles with the appearance of a button. These toggles can be
+configured to behave as either radio-buttons or checkboxes. While they can be standalone, they are
+typically part of a <code>mat-button-toggle-group</code>.</p>
+
+<div material-docs-example="button-toggle-overview"></div>
+
+
+        <h3 id="exclusive-selection-vs-multiple-selection" class="docs-header-link" translation-result="on">
+          <span header-link="单选与多选"></span>
+          单选与多选
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="exclusive-selection-vs-multiple-selection"></span>
+          Exclusive selection vs. multiple selection
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，<code>mat-button-toggle-group</code> 的表现很像单选按钮组 —— 只能选中一个元素。
+在这种模式下，<code>mat-button-toggle-group</code> 的 <code>value</code> 表示当前选中的按钮，还支持 <code>ngModel</code>。</p><p translation-origin="off">By default, <code>mat-button-toggle-group</code> acts like a radio-button group- only one item can be selected.
+In this mode, the <code>value</code> of the <code>mat-button-toggle-group</code> will reflect the value of the selected
+button and <code>ngModel</code> is supported.</p>
+
+<p translation-result="on">添加 <code>multiple</code> 属性将会允许同时选中多个条目（就像检查框那样）。
+在这种模式下，这些开关的值是没用的，<code>mat-button-toggle-group</code> 没有值，不支持 <code>ngModel</code>。</p><p translation-origin="off">Adding the <code>multiple</code> attribute allows multiple items to be selected (checkbox behavior). In this
+mode the values of the toggles are not used, the <code>mat-button-toggle-group</code> does not have a value,
+and <code>ngModel</code> is not supported.</p>
+
+<div material-docs-example="button-toggle-mode"></div>
+
+
+        <h3 id="appearance" class="docs-header-link" translation-result="on">
+          <span header-link="外观"></span>
+          外观
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="appearance"></span>
+          Appearance
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，<code>mat-button-toggle-group</code> 和 <code>mat-button-toggle</code> 的外观将遵循最新的 Material 设计准则。如果需要，也可以使用输入属性 <code>appearance</code> 切换回上一版 Material Design 规范的外观。可以使用 <code>MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS</code> 注入令牌来全局配置 <code>appearance</code>。</p><p translation-origin="off">By default, the appearance of <code>mat-button-toggle-group</code> and <code>mat-button-toggle</code> will follow the
+latest Material Design guidelines. If you want to, you can switch back to the appearance that was
+following the previous Material Design spec by using the <code>appearance</code> input. The <code>appearance</code> can
+be configured globally using the <code>MAT_BUTTON_TOGGLE_DEFAULT_OPTIONS</code> injection token.</p>
+
+<div material-docs-example="button-toggle-appearance"></div>
+
+
+        <h3 id="use-with-angularforms" class="docs-header-link" translation-result="on">
+          <span header-link="与-angularforms-一起使用"></span>
+          与 <code>@angular/forms</code> 一起使用
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="use-with-angularforms"></span>
+          Use with <code>@angular/forms</code>
+        </h3>
+      
+        
+      <p translation-result="on"><code>&lt;mat-button-toggle-group&gt;</code> 与 <code>@angular/forms</code> 兼容并支持 <code>FormsModule</code> 和 <code>ReactiveFormsModule</code> 。</p><p translation-origin="off"><code>&lt;mat-button-toggle-group&gt;</code> is compatible with <code>@angular/forms</code> and supports both <code>FormsModule</code>
+and <code>ReactiveFormsModule</code>.</p>
+
+
+        <h3 id="orientation" class="docs-header-link" translation-result="on">
+          <span header-link="方向"></span>
+          方向
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="orientation"></span>
+          Orientation
+        </h3>
+      
+        
+      <p translation-result="on">通过添加 <code>vertical</code> 属性，按钮开关组可以沿垂直方向渲染。</p><p translation-origin="off">The button-toggles can be rendered in a vertical orientation by adding the <code>vertical</code> attribute.</p>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on"><code>MatButtonToggle</code> 内部使用带有 <code>aria-pressed</code> 的原生 <code>button</code> 元素来传达切换状态。如果切换按钮只包含一个图标，你应该通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为它指定一个有意义的标签。对于动态标签， <code>MatButtonToggle</code> 提供了用于绑定 <code>aria-label</code> 和 <code>aria-labelledby</code> 的输入属性。这意味着你不应该使用 <code>attr.</code> 作为绑定这些属性时的前缀，如下所示。</p><p translation-origin="off"><code>MatButtonToggle</code> internally uses native <code>button</code> elements with <code>aria-pressed</code> to convey toggle
+state. If a toggle contains only an icon, you should specify a meaningful label via <code>aria-label</code>
+or <code>aria-labelledby</code>. For dynamic labels, <code>MatButtonToggle</code> provides input properties for binding
+<code>aria-label</code> and <code>aria-labelledby</code>. This means that you should not use the <code>attr.</code> prefix when
+binding these properties, as demonstrated below.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> [<span class="hljs-attr">aria-label</span>]=<span class="hljs-string">"alertsEnabled ? 'Disable alerts' : 'Enable alerts'"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>notifications<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+</code></pre>
+<p translation-result="on">围绕各个按钮的 <code>MatButtonToggleGroup</code> 应用 <code>role="group"</code> 来传达各个切换之间的关联。每个 <code>&lt;mat-button-toggle-group&gt;</code> 元素都应该被赋予一个带有 <code>aria-label</code> 或 <code>aria-labelledby</code> 的标签，以传达所有切换按钮的集体含义。例如，如果你的切换按钮是“粗体”、“斜体”和“下划线”，则可以将父组标记为“字体样式”。</p><p translation-origin="off">The <code>MatButtonToggleGroup</code> surrounding the individual buttons applies
+<code>role="group"</code> to convey the association between the individual toggles. Each
+<code>&lt;mat-button-toggle-group&gt;</code> element should be given a label with <code>aria-label</code> or <code>aria-labelledby</code>
+that communicates the collective meaning of all toggles. For example, if you have toggles for
+"Bold", "Italic", and "Underline", you might label the parent group "Font styles".</p>
+
+</div>

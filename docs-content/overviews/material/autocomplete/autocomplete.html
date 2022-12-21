@@ -1,0 +1,240 @@
+<div class="docs-markdown"><p translation-result="on">自动完成器（autocomplete）通过显示一个建议选项面板，来对标准文本框进行增强</p><p translation-origin="off">The autocomplete is a normal text input enhanced by a panel of suggested options.</p>
+
+
+        <h3 id="simple-autocomplete" class="docs-header-link" translation-result="on">
+          <span header-link="简单的自动完成器"></span>
+          简单的自动完成器
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="simple-autocomplete"></span>
+          Simple autocomplete
+        </h3>
+      
+        
+      <p translation-result="on">首先，创建自动完成面板，并在其中显示选项。每个选项都应该用 <code>mat-option</code> 标签来定义。把每个选项的 value 属性设置为你希望选择该选项时输入的文本值的值。</p><p translation-origin="off">Start by creating the autocomplete panel and the options displayed inside it. Each option should be
+defined by a <code>mat-option</code> tag. Set each option's value property to whatever you'd like the value
+of the text input to be when that option is selected.</p>
+
+<div material-docs-example="autocomplete-simple" file="autocomplete-simple-example.html" region="mat-autocomplete"></div>
+
+<p translation-result="on">接下来，创建输入框并设置 <code>matAutocomplete</code> 输入属性以引用我们赋值给此自动完成器的模板引用。我们假设你使用 <code>ReactiveFormsModule</code> 中的 <code>formControl</code> 指令来跟踪输入框的值。</p><p translation-origin="off">Next, create the input and set the <code>matAutocomplete</code> input to refer to the template reference we assigned 
+to the autocomplete. Let's assume you're using the <code>formControl</code> directive from <code>ReactiveFormsModule</code> to 
+track the value of the input.</p>
+
+<blockquote>
+<p translation-result="on">注意：如果你愿意，也可以用模板驱动表单代替。我们在这个例子中使用响应式表单，是因为这样比较容易订阅输入值的变化。在这个例子中，要确保你的 <code>NgModule</code> 从 <code>@angular/forms</code> 中导入了 <code>ReactiveFormsModule</code>。
+如果你对使用响应式表单还不熟，可以阅读 <a href="https://angular.cn/guide/reactive-forms">Angular 官方文档</a> 中的相关主题。</p><p translation-origin="off">Note: It is possible to use template-driven forms instead, if you prefer. We use reactive forms
+in this example because it makes subscribing to changes in the input's value easy. For this
+example, be sure to import <code>ReactiveFormsModule</code> from <code>@angular/forms</code> into your <code>NgModule</code>.
+If you are unfamiliar with using reactive forms, you can read more about the subject in the
+<a href="https://angular.io/guide/reactive-forms">Angular documentation</a>.</p>
+
+</blockquote>
+<p translation-result="on">现在，我们需要把这个输入框和它的面板联系起来。我们可以把这个自动完成面板的实例导出给一个局部模板变量（这里叫它 "auto"），然后把这个变量绑定到输入框的 <code>matAutocomplete</code> 属性上。</p><p translation-origin="off">Now we'll need to link the text input to its panel. We can do this by exporting the autocomplete
+panel instance into a local template variable (here we called it "auto"), and binding that variable
+to the input's <code>matAutocomplete</code> property.</p>
+
+<div material-docs-example="autocomplete-simple" file="autocomplete-simple-example.html" region="input"></div>
+
+
+        <h3 id="adding-a-custom-filter" class="docs-header-link" translation-result="on">
+          <span header-link="添加自定义过滤器"></span>
+          添加自定义过滤器
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="adding-a-custom-filter"></span>
+          Adding a custom filter
+        </h3>
+      
+        
+      <p translation-result="on">此刻，自动完成面板应该能根据焦点状态进行切换了，而候选项也是可供选择的。但如果我们希望这些选项能在输入时进行过滤，就要添加一个自定义过滤器。</p><p translation-origin="off">At this point, the autocomplete panel should be toggleable on focus and options should be
+selectable. But if we want our options to filter when we type, we need to add a custom filter.</p>
+
+<p translation-result="on">可以用任何你喜欢的方式根据已输入的文本对候选项进行过滤。
+这里我们对候选项的值执行一个简单的字符串测试，看它是否匹配已输入的值，从候选项的首字母开始。
+我们已经能访问该 <code>FormControl</code> 的 <code>valueChanges</code> 这个 <code>Observable</code> 了，所以我们可以通过把它们传给过滤器来找出所建议的选项。
+其结果 <code>filteredOptions</code> 可以使用 <code>async</code> 管道绑定到模板的 <code>options</code> 属性中。</p><p translation-origin="off">You can filter the options in any way you like based on the text input*. Here we will perform a
+simple string test on the option value to see if it matches the input value, starting from the
+option's first letter. We already have access to the built-in <code>valueChanges</code> Observable on the
+<code>FormControl</code>, so we can simply map the text input's values to the suggested options by passing
+them through this filter. The resulting Observable, <code>filteredOptions</code>, can be added to the
+template in place of the <code>options</code> property using the <code>async</code> pipe.</p>
+
+<p translation-result="on">接下来还要我们往 <code>valueChanges</code> 中添加一个空字符串，以便在值初始化后（做任何修改之前）就对选项进行一次过滤。</p><p translation-origin="off">Below we are also priming our value change stream with an empty string so that the options are
+filtered by that value on init (before there are any value changes).</p>
+
+<p translation-result="on">为了获得最佳的无障碍性，你可能还要往该页添加一些文本指南来解释过滤条件。
+特别是，如果你使用了非标准过滤器，并且不单从字符串的开头儿进行匹配，那么它将对使用屏幕阅读器的用户有很大帮助。</p><p translation-origin="off">*For optimal accessibility, you may want to consider adding text guidance on the page to explain
+filter criteria. This is especially helpful for screenreader users if you're using a non-standard
+filter that doesn't limit matches to the beginning of the string.</p>
+
+<div material-docs-example="autocomplete-filter"></div>
+
+
+        <h3 id="setting-separate-control-and-display-values" class="docs-header-link" translation-result="on">
+          <span header-link="分别设置控件值和显示内容"></span>
+          分别设置控件值和显示内容
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="setting-separate-control-and-display-values"></span>
+          Setting separate control and display values
+        </h3>
+      
+        
+      <p translation-result="on">如果你希望把选项的控件值（它将保存在表单中）设置得和它的显示值（它将显示在文本框中）不同，那么你就要在你的自动完成元素上设置 <code>displayWith</code> 属性。
+一种常见的用法是你希望把数据存为对象，却只想显示该选项的某个字符串型属性。</p><p translation-origin="off">If you want the option's control value (what is saved in the form) to be different than the option's
+display value (what is displayed in the text field), you'll need to set the <code>displayWith</code>
+property on your autocomplete element. A common use case for this might be if you want to save your
+data as an object, but display just one of the option's string properties.</p>
+
+<p translation-result="on">要做到这一点，请在你的组件类上创建一个用于把控件值映射为其显示值的函数。然后把该函数绑定到自动完成器的 <code>displayWith</code> 属性上。</p><p translation-origin="off">To make this work, create a function on your component class that maps the control value to the
+desired display value. Then bind it to the autocomplete's <code>displayWith</code> property.</p>
+
+<div material-docs-example="autocomplete-display"></div>
+
+
+        <h3 id="automatically-highlighting-the-first-option" class="docs-header-link" translation-result="on">
+          <span header-link="自动高亮第一个候选项"></span>
+          自动高亮第一个候选项
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="automatically-highlighting-the-first-option"></span>
+          Automatically highlighting the first option
+        </h3>
+      
+        
+      <p translation-result="on">如果你希望当用户打开自动完成面板时自动高亮第一个选项，可以设置 <code>mat-autocomplete</code> 组件的输入属性 <code>autoActiveFirstOption</code>。该行为可以通过依赖注入令牌 <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</code> 进行全局配置。</p><p translation-origin="off">If your use case requires for the first autocomplete option to be highlighted when the user opens
+the panel, you can do so by setting the <code>autoActiveFirstOption</code> input on the <code>mat-autocomplete</code>
+component. This behavior can be configured globally using the <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</code>
+injection token.</p>
+
+<div material-docs-example="autocomplete-auto-active-first-option"></div>
+
+
+        <h3 id="autocomplete-on-a-custom-input-element" class="docs-header-link" translation-result="on">
+          <span header-link="在自定义输入框元素上使用自动完成器"></span>
+          在自定义输入框元素上使用自动完成器
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="autocomplete-on-a-custom-input-element"></span>
+          Autocomplete on a custom input element
+        </h3>
+      
+        
+      <p translation-result="on"><code>mat-autocomplete</code> 支持把自己附着到 <code>mat-form-field</code> 上，你也可以使用 <code>matAutocomplete</code> 来把它设置到任何 <code>input</code> 元素上。这样你就可以自定义输入框的样子，而无需从 <code>mat-form-field</code> 引入额外的功能。</p><p translation-origin="off">While <code>mat-autocomplete</code> supports attaching itself to a <code>mat-form-field</code>, you can also set it on
+any other <code>input</code> element using the <code>matAutocomplete</code> attribute. This allows you to customize what
+the input looks like without having to bring in the extra functionality from <code>mat-form-field</code>.</p>
+
+<div material-docs-example="autocomplete-plain-input"></div>
+
+
+        <h3 id="attaching-the-autocomplete-panel-to-a-different-element" class="docs-header-link" translation-result="on">
+          <span header-link="把自动完成面板附着到另一个元素上"></span>
+          把自动完成面板附着到另一个元素上
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="attaching-the-autocomplete-panel-to-a-different-element"></span>
+          Attaching the autocomplete panel to a different element
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，自动完成面板将会附着在你的输入控件上，不过，有时候你可能希望把它附着到另一个容器元素上。
+你可以使用 <code>matAutocompleteOrigin</code> 和 <code>matAutocompleteConnectedTo</code> 指令来修改它要附着的元素：</p><p translation-origin="off">By default the autocomplete panel will be attached to your input element, however in some cases you
+may want it to attach to a different container element. You can change the element that the
+autocomplete is attached to using the <code>matAutocompleteOrigin</code> directive together with the
+<code>matAutocompleteConnectedTo</code> input:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-wrapper-example"</span> <span class="hljs-attr">matAutocompleteOrigin</span> #<span class="hljs-attr">origin</span>=<span class="hljs-string">"matAutocompleteOrigin"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+    <span class="hljs-attr">matInput</span>
+    [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span>
+    [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"auto"</span>
+    [<span class="hljs-attr">matAutocompleteConnectedTo</span>]=<span class="hljs-string">"origin"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>{{option}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
+</code></pre>
+
+        <h3 id="keyboard-interaction" class="docs-header-link" translation-result="on">
+          <span header-link="键盘交互"></span>
+          键盘交互
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      
+        
+      <table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">快捷键</nt-wrapper><nt-wrapper translation-origin="off">Keyboard shortcut</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">操作</nt-wrapper><nt-wrapper translation-origin="off">Action</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>Down Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">导航到下一个选项。</nt-wrapper><nt-wrapper translation-origin="off">Navigate to the next option.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Up Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">导航到上一个选项。</nt-wrapper><nt-wrapper translation-origin="off">Navigate to the previous option.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Enter</kbd></td>
+<td><nt-wrapper translation-result="on">选择活动选项。</nt-wrapper><nt-wrapper translation-origin="off">Select the active option.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Escape</kbd></td>
+<td><nt-wrapper translation-result="on">关闭自动完成面板。</nt-wrapper><nt-wrapper translation-origin="off">Close the autocomplete panel.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Alt</kbd> + <kbd>Up Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">关闭自动完成面板。</nt-wrapper><nt-wrapper translation-origin="off">Close the autocomplete panel.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Alt</kbd> + <kbd>Down Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">如果有任何匹配的选项，就打开自动完成面板。</nt-wrapper><nt-wrapper translation-origin="off">Open the autocomplete panel if there are any matching options.</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+<p>  <kbd>ESCAPE</kbd>: 关闭自动完成面板</p>
+
+        <h3 id="option-groups" class="docs-header-link" translation-result="on">
+          <span header-link="选项组"></span>
+          选项组
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="option-groups"></span>
+          Option groups
+        </h3>
+      
+        
+      <p translation-result="on">可以使用 <code>mat-optgroup</code> 元素对 <code>mat-option</code> 进行分组：</p><p translation-origin="off"><code>mat-option</code> can be collected into groups using the <code>mat-optgroup</code> element:</p>
+
+<div material-docs-example="autocomplete-optgroup" file="autocomplete-optgroup-example.html" region="mat-autocomplete"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on"><code>MatAutocomplete</code> 实现了 ARIA 组合框交互模式。为文本输入触发器指定 <code>role="combobox"</code> 而为弹出窗口的内容应用 <code>role="listbox"</code>。由于这种列表框模式，你<em>不应</em>将其他交互式控件（例如按钮或复选框）放入自动完成选项中。像这样嵌套交互式控件会干扰大多数辅助技术。</p><p translation-origin="off"><code>MatAutocomplete</code> implements the ARIA combobox interaction pattern. The text input trigger specifies
+<code>role="combobox"</code> while the content of the pop-up applies <code>role="listbox"</code>. Because of this listbox
+pattern, you should <em>not</em> put other interactive controls, such as buttons or checkboxes, inside
+an autocomplete option. Nesting interactive controls like this interferes with most assistive
+technology.</p>
+
+<p translation-result="on">始终为自动完成提供无障碍标签。这可以通过在 <code>&lt;mat-form-field&gt;</code> 内部使用 <code>&lt;mat-label&gt;</code>、原生 <code>&lt;label&gt;</code> 元素、<code>aria-label</code> 属性或 <code>aria-labelledby</code> 属性来完成。</p><p translation-origin="off">Always provide an accessible label for the autocomplete. This can be done by using a
+<code>&lt;mat-label&gt;</code> inside of <code>&lt;mat-form-field&gt;</code>, a native <code>&lt;label&gt;</code> element, the <code>aria-label</code>
+attribute, or the <code>aria-labelledby</code> attribute.</p>
+
+<p translation-result="on"><code>MatAutocomplete</code> 会保留对文本触发器的焦点，使用 <code>aria-activedescendant</code> 可以支持通过自动完成选项进行导航。</p><p translation-origin="off"><code>MatAutocomplete</code> preserves focus on the text trigger, using <code>aria-activedescendant</code> to support
+navigation though the autocomplete options.</p>
+
+</div>

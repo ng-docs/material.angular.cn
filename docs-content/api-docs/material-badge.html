@@ -1,0 +1,312 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-badge-api-参考文档--">
+    Angular Material badge API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatBadgeModule} from '@angular/material/badge';
+      </code>
+    </p>
+  <h3 id="material-badge-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatBadge" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatBadge"></span>
+  <code>MatBadge</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于显示文字徽章的指令。</p><p translation-origin="off">Directive to display a text badge.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matBadge]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeColor'</span>)
+        </div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">徽章的颜色。可以是 <code>primary</code>、<code>accent</code> 或 <code>warn</code>。</p><p translation-origin="off">The color of the badge. Can be <code>primary</code>, <code>accent</code>, or <code>warn</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadge'</span>)
+        </div><p class="docs-api-property-name">
+      <code>content: string | number | undefined | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">徽章的内容</p><p translation-origin="off">The content for the badge</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeDescription'</span>)
+        </div><p class="docs-api-property-name">
+      <code>description: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于描述被 aria-describedby 装饰的元素的信息</p><p translation-origin="off">Message used to describe the decorated element via aria-describedby</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matBadgeDisabled</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeHidden'</span>)
+        </div><p class="docs-api-property-name">
+      <code>hidden: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">徽章是否隐藏了。</p><p translation-origin="off">Whether the badge is hidden.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeOverlap'</span>)
+        </div><p class="docs-api-property-name">
+      <code>overlap: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">徽章是否应与其内容重叠</p><p translation-origin="off">Whether the badge should overlap its contents or not</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgePosition'</span>)
+        </div><p class="docs-api-property-name">
+      <code>position: MatBadgePosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">徽章应该放在哪里。接受 'above'|'below' 和 'before'|'after' 的任意组合</p><p translation-origin="off">Position the badge should reside.
+Accepts any combination of 'above'|'below' and 'before'|'after'</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matBadgeSize'</span>)
+        </div><p class="docs-api-property-name">
+      <code>size: MatBadgeSize</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">徽章的大小。可以是 'small'、'medium' 或 'large'。</p><p translation-origin="off">Size of the badge. Can be 'small', 'medium', or 'large'.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getBadgeElement
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取要在其中渲染徽章内容的元素。如果该元素尚未创建（例如，如果徽章没有内容），则为 undefined。</p><p translation-origin="off">Gets the element into which the badge's content is being rendered. Undefined if the element
+hasn't been created (e.g. if the badge doesn't have content).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">HTMLElement | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isAbove
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">徽章是否在宿主元素上方</p><p translation-origin="off">Whether the badge is above the host or not</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isAfter
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">徽章是否在宿主元素下方</p><p translation-origin="off">Whether the badge is after the host or not</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-badge-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="MatBadgePosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatBadgePosition"></span>
+  <code>MatBadgePosition</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">matBadgePosition 可接受的位置选项</p><p translation-origin="off">Allowed position options for matBadgePosition</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatBadgePosition = <span class="hljs-string">'above after'</span> | <span class="hljs-string">'above before'</span> | <span class="hljs-string">'below before'</span> | <span class="hljs-string">'below after'</span> | <span class="hljs-string">'before'</span> | <span class="hljs-string">'after'</span> | <span class="hljs-string">'above'</span> | <span class="hljs-string">'below'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MatBadgeSize" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatBadgeSize"></span>
+  <code>MatBadgeSize</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">matBadgeSize 可接受的大小选项</p><p translation-origin="off">Allowed size options for matBadgeSize</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatBadgeSize = <span class="hljs-string">'small'</span> | <span class="hljs-string">'medium'</span> | <span class="hljs-string">'large'</span>;</code>
+</pre>
+</div>
+
+
+    </div>

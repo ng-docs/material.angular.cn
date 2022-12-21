@@ -1,0 +1,24 @@
+<div class="docs-markdown"><p translation-result="on">手风琴是具有一个或多个可展开分区的组件。 CDK 手风琴提供了一个基础，你可以在此基础上构建自己的自定义手风琴组件。 CDK 手风琴为手风琴交互模式提供了逻辑，没有任何样式。你可以根据应用程序的需要自定义手风琴的外观。</p><p translation-origin="off">An accordion is a component with one or more expandable sections. CDK accordion provides a
+foundation upon which you can build your own custom accordion component. CDK accordion provides
+logic for the accordion interaction pattern without any styles. You can customize the accordion's
+appearance based on your application's needs.</p>
+
+<div material-docs-example="cdk-accordion-overview"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">CDK 手风琴没有做任何无障碍性处理，因为它无法控制其标记脚本。我们建议将手风琴触发器元素设置为 <code>role="button"</code> ，而将正文（body）容器设置为 <code>role="region"</code> 。此外，触发器应该有指向正文的 <code>aria-controls</code> 和基于展开状态的 <code>aria-expanded</code>，而正文应该有一个指向标题的 <code>aria-labelledby</code> 。有关示例实现，请参见上面的示例。</p><p translation-origin="off">The CDK accordion doesn't come with any accessibility treatment, because it doesn't have control
+over its markup. We recommend to set the accordion trigger element as a <code>role="button"</code> while
+the body container as a <code>role="region"</code>. Furthermore, the trigger should have <code>aria-controls</code>
+pointing to the body and <code>aria-expanded</code> based on the expanded state, while the body should have
+an <code>aria-labelledby</code> that points to the header. See the example above for a sample implementation.</p>
+
+</div>

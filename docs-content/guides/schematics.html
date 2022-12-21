@@ -1,0 +1,225 @@
+<div class="docs-markdown"><h1 id="installation-and-code-generation" translation-result="on">安装与代码生成</h1><h1 translation-origin="off">Installation and Code Generation</h1><p translation-result="on">Angular Material 带了一份供 Angular CLI 使用的原理图（schematic），可以让创建 Material 应用更简单些。</p><p translation-origin="off">Angular Material comes packaged with Angular CLI schematics to make
+creating Material applications easier.</p>
+
+
+        <h2 id="install-schematics" class="docs-header-link" translation-result="on">
+          <span header-link="安装原理图"></span>
+          安装原理图
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="install-schematics"></span>
+          Install Schematics
+        </h2>
+      
+        
+      <p translation-result="on">Angular Material 附带了一些原理图，一旦你安装了这个 npm 包，就可以通过 Angular CLI 来使用这些原理图了。</p><p translation-origin="off">Schematics are included with both <code>@angular/cdk</code> and <code>@angular/material</code>. Once you install the npm
+packages, they will be available through the Angular CLI.</p>
+
+<p translation-result="on">运行下列命令可以自动为你的项目安装 Angular Material、<a href="guide/cdk">组件开发工具</a> (CDK) 和 <a href="https://angular.cn/guide/animations">Angular 动画库</a>，并运行代码原理图。</p><p translation-origin="off">Using the command below will install Angular Material, the <a href="https://material.angular.io/cdk">Component Dev Kit</a> (CDK),
+and <a href="https://angular.io/guide/animations">Angular Animations</a> in your project. Then it will run the
+installation schematic.</p>
+
+<pre><code>ng add @angular/material
+</code></pre>
+<p translation-result="on">如果你只想安装 <code>@angular/cdk</code>，也可以使用<a href="guide/cdk">组件开发工具</a>的专用代码原理图</p><p translation-origin="off">In case you just want to install the <code>@angular/cdk</code>, there are also schematics for the <a href="https://material.angular.io/cdk">Component Dev Kit</a></p>
+
+<pre><code>ng add @angular/cdk
+</code></pre>
+<p translation-result="on">Angular Material 的 <code>ng add</code> 原理图会帮助你的 Angular CLI 项目配置 Angular Material。运行 <code>ng add</code> 将会：</p><p translation-origin="off">The Angular Material <code>ng add</code> schematic helps you set up an Angular CLI project that uses Material. Running <code>ng add</code> will:</p>
+
+<ul>
+<li><p translation-result="on">确保 <code>package.json</code> 中具有<a href="guide/getting-started#step-1-install-angular-material-angular-cdk-and-angular-animations">项目所需的依赖</a></p><p translation-origin="off">Ensure <a href="guide/getting-started#step-1-install-angular-material-angular-cdk-and-angular-animations">project dependencies</a> are placed in <code>package.json</code></p>
+
+</li>
+<li><p translation-result="on">为应用启用 <a href="guide/getting-started#step-2-configure-animations">BrowserAnimationsModule</a> 模块</p><p translation-origin="off">Enable the <a href="guide/getting-started#step-2-configure-animations">BrowserAnimationsModule</a> your app module</p>
+
+</li>
+<li><p translation-result="on">添加一个<a href="guide/theming#using-a-pre-built-theme">预定义的主题</a>或一个<a href="guide/theming#defining-a-custom-theme">自定义主题</a></p><p translation-origin="off">Add either a <a href="guide/theming#using-a-pre-built-theme">prebuilt theme</a> or a <a href="guide/theming#defining-a-custom-theme">custom theme</a></p>
+
+</li>
+<li><p translation-result="on">为 <code>index.html</code> 添加 Roboto 字体</p><p translation-origin="off">Add Roboto fonts to your <code>index.html</code></p>
+
+</li>
+<li><p translation-result="on">在 <code>index.html</code> 中添加 <a href="guide/getting-started#step-6-optional-add-material-icons">Material 图标字体</a></p><p translation-origin="off">Add the <a href="guide/getting-started#step-6-optional-add-material-icons">Material Icon font</a> to your <code>index.html</code></p>
+
+</li>
+<li><p translation-result="on">添加下列全局样式</p><p translation-origin="off">Add global styles to</p>
+
+<ul>
+<li><p translation-result="on">移除 <code>body</code> 的边距（margin）</p><p translation-origin="off">Remove margins from <code>body</code></p>
+
+</li>
+<li><p translation-result="on">为 <code>html</code> 和 <code>body</code> 设置 <code>height: 100%</code></p><p translation-origin="off">Set <code>height: 100%</code> on <code>html</code> and <code>body</code></p>
+
+</li>
+<li><p translation-result="on">把 Roboto 设置为应用的默认字体</p><p translation-origin="off">Make Roboto the default font of your app</p>
+
+</li>
+</ul>
+</li>
+</ul>
+
+        <h2 id="component-schematics" class="docs-header-link" translation-result="on">
+          <span header-link="组件原理图"></span>
+          组件原理图
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="component-schematics"></span>
+          Component schematics
+        </h2>
+      
+        
+      <p translation-result="on">除了用于安装的 schematic 之外，Angular Material 还带有多个原理图，用于轻松生成 Material Design 组件：</p><p translation-origin="off">In addition to the installation schematic, Angular Material comes with multiple schematics that can be
+used to easily generate Material Design components:</p>
+
+<table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">名称</nt-wrapper><nt-wrapper translation-origin="off">Name</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">说明</nt-wrapper><nt-wrapper translation-origin="off">Description</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>address-form</code></td>
+<td><nt-wrapper translation-result="on">一个表单组，它使用 Material Design 的多个表单控件接收一个送货地址</nt-wrapper><nt-wrapper translation-origin="off">Component with a form group that uses Material Design form controls to prompt for a shipping address</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>navigation</code></td>
+<td><nt-wrapper translation-result="on">创建一个带有响应式 Material Design 侧边栏组件和一个用于显示应用名称的工具栏组件</nt-wrapper><nt-wrapper translation-origin="off">Creates a component with a responsive Material Design sidenav and a toolbar for showing the app name</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>dashboard</code></td>
+<td><nt-wrapper translation-result="on">带有多个 Material Design 卡片和菜单的网格式布局组件</nt-wrapper><nt-wrapper translation-origin="off">Component with multiple Material Design cards and menus which are aligned in a grid layout</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>table</code></td>
+<td><nt-wrapper translation-result="on">生成一个带有 Material Design 并支持排序和分页的数据表组件</nt-wrapper><nt-wrapper translation-origin="off">Generates a component with a Material Design data table that supports sorting and pagination</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>tree</code></td>
+<td><nt-wrapper translation-result="on">该组件以 <code>&lt;mat-tree&gt;</code> 组件来展示一个可交互的文件夹式结构</nt-wrapper><nt-wrapper translation-origin="off">Component that interactively visualizes a nested folder structure by using the <code>&lt;mat-tree&gt;</code> component</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+<p translation-result="on">此外，Angular CDK 也给出了一些组件的原理图：</p><p translation-origin="off">Additionally, the Angular CDK also comes with a collection of component schematics:</p>
+
+<table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">名称</nt-wrapper><nt-wrapper translation-origin="off">Name</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">说明</nt-wrapper><nt-wrapper translation-origin="off">Description</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>drag-drop</code></td>
+<td><nt-wrapper translation-result="on">该组件使用 <code>@angular/cdk/drag-drop</code> 指令来创建一个可交互的 to-do 列表</nt-wrapper><nt-wrapper translation-origin="off">Component that uses the <code>@angular/cdk/drag-drop</code> directives for creating an interactive to-do list</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+
+        <h3 id="address-form-schematic" class="docs-header-link" translation-result="on">
+          <span header-link="地址表单原理图"></span>
+          地址表单原理图
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="address-form-schematic"></span>
+          Address form schematic
+        </h3>
+      
+        
+      <p translation-result="on">运行 <code>address-form</code> 原理图会生成一个新的 Angular 组件，它可用于快速开始一个 Material Design 表单组，其中包括：</p><p translation-origin="off">Running the <code>address-form</code> schematic generates a new Angular component that can be used to get
+started with a Material Design form group consisting of:</p>
+
+<ul>
+<li><p translation-result="on">一些 Material Design 表单字段</p><p translation-origin="off">Material Design form fields</p>
+
+</li>
+<li><p translation-result="on">一些 Material Design 单选控件</p><p translation-origin="off">Material Design radio controls</p>
+
+</li>
+<li><p translation-result="on">一些 Material Design 按钮</p><p translation-origin="off">Material Design buttons</p>
+
+</li>
+</ul>
+<pre><code>ng generate @angular/material:address-form &lt;component-name&gt;
+</code></pre>
+
+        <h3 id="navigation-schematic" class="docs-header-link" translation-result="on">
+          <span header-link="导航原理图"></span>
+          导航原理图
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="navigation-schematic"></span>
+          Navigation schematic
+        </h3>
+      
+        
+      <p translation-result="on"><code>navigation</code> 原理图将会创建一个包括应用名的工具栏和一个能自适应 Material 的断点的侧边栏。</p><p translation-origin="off">The <code>navigation</code> schematic will create a new component that includes
+a toolbar with the app name, and a responsive side nav based on Material
+breakpoints.</p>
+
+<pre><code>ng generate @angular/material:navigation &lt;component-name&gt;
+</code></pre>
+
+        <h3 id="table-schematic" class="docs-header-link" translation-result="on">
+          <span header-link="表格原理图"></span>
+          表格原理图
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="table-schematic"></span>
+          Table schematic
+        </h3>
+      
+        
+      <p translation-result="on">表格原理图将创建一个组件，它可以渲染出一个预置了可排序、可分页数据源的 Angular Material <code>&lt;table&gt;</code>。</p><p translation-origin="off">The table schematic will create a component that renders an Angular Material <code>&lt;table&gt;</code> which has
+been pre-configured with a datasource for sorting and pagination.</p>
+
+<pre><code>ng generate @angular/material:table &lt;component-name&gt;
+</code></pre>
+
+        <h3 id="dashboard-schematic" class="docs-header-link" translation-result="on">
+          <span header-link="仪表盘原理图"></span>
+          仪表盘原理图
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="dashboard-schematic"></span>
+          Dashboard schematic
+        </h3>
+      
+        
+      <p translation-result="on"><code>dashboard</code> 原理图将创建一个新组件，它包含一个由 Material Design 卡片组成的动态网格列表。</p><p translation-origin="off">The <code>dashboard</code> schematic will create a new component that contains
+a dynamic grid list of Material Design cards.</p>
+
+<pre><code>ng generate @angular/material:dashboard &lt;component-name&gt;
+</code></pre>
+
+        <h3 id="tree-schematic" class="docs-header-link" translation-result="on">
+          <span header-link="树原理图"></span>
+          树原理图
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tree-schematic"></span>
+          Tree schematic
+        </h3>
+      
+        
+      <p translation-result="on"><code>tree</code> 原理图可用于快速生成一个 Angular 组件，它使用 Angular Material 的 <code>&lt;mat-tree&gt;</code> 组件来展示一个嵌套的文件夹式结构。</p><p translation-origin="off">The <code>tree</code> schematic can be used to quickly generate an Angular component that uses the Angular
+Material <code>&lt;mat-tree&gt;</code> component to visualize a nested folder structure.</p>
+
+<pre><code>ng generate @angular/material:tree &lt;component-name&gt;
+</code></pre>
+
+        <h3 id="drag-and-drop-schematic" class="docs-header-link" translation-result="on">
+          <span header-link="拖放原理图"></span>
+          拖放原理图
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="drag-and-drop-schematic"></span>
+          Drag and Drop schematic
+        </h3>
+      
+        
+      <p translation-result="on"><code>drag-drop</code> 原理图是由 <code>@angular/cdk</code> 提供的，它可用来生成带有 CDK 拖放指令的组件。</p><p translation-origin="off">The <code>drag-drop</code> schematic is provided by the <code>@angular/cdk</code> and can be used to generate a component
+that uses the CDK drag and drop directives.</p>
+
+<pre><code>ng generate @angular/cdk:drag-drop &lt;component-name&gt;
+</code></pre>
+</div>

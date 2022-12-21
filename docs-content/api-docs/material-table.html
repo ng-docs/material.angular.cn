@@ -1,0 +1,2145 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-table-api-参考文档--">
+    Angular Material table API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatTableModule} from '@angular/material/table';
+      </code>
+    </p>
+  <h3 id="material-table-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatRecycleRows" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRecycleRows"></span>
+  <code>MatRecycleRows</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">启用复写器的视图回收策略，从而减少渲染延迟。与为行设置动画的表格不兼容。</p><p translation-origin="off">Enables the recycle view repeater strategy, which reduces rendering latency. Not compatible with
+tables that animate rows.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-table[recycleRows]</span>
+  
+    <span class="docs-api-class-selector-name">table[mat-table][recycleRows]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatTable" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTable"></span>
+  <code>MatTable</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkTable" class="docs-api-class-extends-type">
+      CdkTable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-table</span>
+  
+    <span class="docs-api-class-selector-name">table[mat-table]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matTable</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dataSource: CdkTableDataSourceInput&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该表格的数据源可以通过三种方式提供（按复杂程度排序）：</p><p translation-origin="off">The table's source of data, which can be provided in three ways (in order of complexity):</p>
+
+<ul>
+<li><p translation-result="on">简单数据数组（每个对象代表格一个表格行）</p><p translation-origin="off">Simple data array (each object represents one table row)</p>
+
+</li>
+<li><p translation-result="on">每当数组发生变化时都会发出数据数组的流</p><p translation-origin="off">Stream that emits a data array each time the array changes</p>
+
+</li>
+<li><p translation-result="on">那些实现了 connect / disconnect 接口的 <code>DataSource</code>。</p><p translation-origin="off"><code>DataSource</code> object that implements the connect/disconnect interface.</p>
+
+</li>
+</ul>
+<p translation-result="on">如果提供了数组，那么在添加、删除或移动该数组的对象时，都必须通知该表格。
+这可以通过调用 <code>renderRows()</code> 函数来完成，它会渲染自上次渲染表格以来的差异部分。如果数据数组的引用发生了变化，该表格会自动触发对行的更新。</p><p translation-origin="off">If a data array is provided, the table must be notified when the array's objects are
+added, removed, or moved. This can be done by calling the <code>renderRows()</code> function which will
+render the diff since the last table render. If the data array reference is changed, the table
+will automatically trigger an update to the rows.</p>
+
+<p translation-result="on">当提供一个可观察的流时，如果该流发出一个新的数据数组，该表格就会自动触发一次更新。</p><p translation-origin="off">When providing an Observable stream, the table will trigger an update automatically when the
+stream emits a new array of data.</p>
+
+<p translation-result="on">最后，在提供 <code>DataSource</code> 对象时，该表格将使用 connect 函数提供的 Observable 流，并在该流发出新的数据数组值时触发更新。
+在表格的 ngOnDestroy 中，或者从表格中删除了数据源时，该表格会调用数据源的 <code>disconnect</code> 函数（这可能对清理在连接过程中注册的所有订阅很有帮助）。</p><p translation-origin="off">Finally, when providing a <code>DataSource</code> object, the table will use the Observable stream
+provided by the connect function and trigger updates when that stream emits new data array
+values. During the table's ngOnDestroy or when the data source is removed from the table, the
+table will call the DataSource's <code>disconnect</code> function (may be useful for cleaning up any
+subscriptions registered during the connect process).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>fixedLayout: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否使用固定（fixed）表格布局。启用此选项会强制让所有列宽一致，并优化渲染原生表格的粘性样式。对弹性（flex）表格无效。</p><p translation-origin="off">Whether to use a fixed table layout. Enabling this option will enforce consistent column widths
+and optimize rendering sticky styles for native tables. No-op for flex tables.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>multiTemplateDataRows: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">通过计算哪些行的 'when' 谓词结果为 true 来允许其数据对象对应于多行。
+如果 <code>multiTemplateDataRows</code> 为 false（这是默认值），那么每个数据对象都会渲染到其谓词结果为 true 的第一行（按照表格中定义的顺序），
+否则就使用默认行（即没有 when 谓词的行）。</p><p translation-origin="off">Whether to allow multiple rows per data object by evaluating which rows evaluate their 'when'
+predicate to true. If <code>multiTemplateDataRows</code> is false, which is the default value, then each
+dataobject will render the first row that evaluates its when predicate to true, in the order
+defined in the table, or otherwise the default row which does not have a when predicate.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>trackBy: TrackByFunction&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">跟踪函数，用于检查数据变化的差异。类似于 <code>ngFor</code> 的 <code>trackBy</code> 函数。
+可以优化行操作，方法是根据该函数处理后的数据来标识一行，以了解该行是否应添加/删除/移动。接受带两个参数 <code>index</code> 和 <code>item</code> 的函数。</p><p translation-origin="off">Tracking function that will be used to check the differences in data changes. Used similarly
+to <code>ngFor</code> <code>trackBy</code> function. Optimize row operations by identifying a row based on its data
+relative to the function to know if a row should be added/removed/moved.
+Accepts a function that takes two parameters, <code>index</code> and <code>item</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>contentChanged: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当表格使用来自数据源的最新数据渲染完一组数据行时发出，即使该组行是空的。</p><p translation-origin="off">Emits when the table completes rendering a set of data rows based on the latest data from the
+data source, even if the set of rows is empty.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>needsPositionStickyOnElement: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写在 <code>CdkTable</code> 每个粘性单元元素上添加 position: sticky 的需求。</p><p translation-origin="off">Overrides the need to add position: sticky on every sticky cell element in <code>CdkTable</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stickyCssClass: 'mat-mdc-table-sticky'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>CdkTable</code> 设置的粘性 CSS 类。</p><p translation-origin="off">Overrides the sticky CSS class set by the <code>CdkTable</code>.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addColumnDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">添加一个未包含在内容子组件中的列定义。</p><p translation-origin="off">Adds a column definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        columnDef</p>
+      <code class="docs-api-method-parameter-type">CdkColumnDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addFooterRowDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">添加一个未包含在内容子组件中的表尾行定义。</p><p translation-origin="off">Adds a footer row definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        footerRowDef</p>
+      <code class="docs-api-method-parameter-type">CdkFooterRowDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addHeaderRowDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">添加一个未包含在内容子组件中的表头行定义。</p><p translation-origin="off">Adds a header row definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        headerRowDef</p>
+      <code class="docs-api-method-parameter-type">CdkHeaderRowDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addRowDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">添加一个未包含在内容子组件中的行定义。</p><p translation-origin="off">Adds a row definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        rowDef</p>
+      <code class="docs-api-method-parameter-type">CdkRowDef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removeColumnDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">删除那些未包含在内容子组件中的列定义。</p><p translation-origin="off">Removes a column definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        columnDef</p>
+      <code class="docs-api-method-parameter-type">CdkColumnDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removeFooterRowDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">删除一个未包含在内容子组件中的表尾行定义。</p><p translation-origin="off">Removes a footer row definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        footerRowDef</p>
+      <code class="docs-api-method-parameter-type">CdkFooterRowDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removeHeaderRowDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">删除那些未包含在内容子组件中的表头行定义。</p><p translation-origin="off">Removes a header row definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        headerRowDef</p>
+      <code class="docs-api-method-parameter-type">CdkHeaderRowDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removeRowDef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">删除那些未包含在内容子组件中的行定义。</p><p translation-origin="off">Removes a row definition that was not included as part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        rowDef</p>
+      <code class="docs-api-method-parameter-type">CdkRowDef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">renderRows
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">根据表格中最新的数据集来渲染行，这些数据既可以直接输入，也可以从一个可观察的流中检索出来（直接获取或从 DataSource 获取）。检查自上次 diff 之后的数据差异，以便只进行必要的修改（添加/删除/移动行）。</p><p translation-origin="off">Renders rows based on the table's latest set of data, which was either provided directly as an
+input or retrieved through an Observable stream (directly or from a DataSource).
+Checks for differences in the data since the last diff to perform only the necessary
+changes (add/remove/move rows).</p>
+
+<p translation-result="on">如果表格的数据源是 DataSource 或者 Observable，每当提供的 Observable 流发出一个新的数据数组时，都会自动调用它。如果你的数据是数组，那么就需要手动调用这个函数来渲染任何变化。</p><p translation-origin="off">If the table's data source is a DataSource or Observable, this will be invoked automatically
+each time the provided Observable stream emits a new data array. Otherwise if your data is
+an array, this function will need to be called to render any changes.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setNoDataRow
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置一个没有包含在内容子组件中的无数据行定义。</p><p translation-origin="off">Sets a no data row definition that was not included as a part of the content children.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        noDataRow</p>
+      <code class="docs-api-method-parameter-type">CdkNoDataRow</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateStickyColumnStyles
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新列的粘性样式。首先，对于已粘附在左右两侧的单元格，重置所有已应用的样式。然后，根据每一行中每个单元格的列定义，评估哪些单元格需要粘附在左侧或右侧。当列定义的粘性属性发生变化时，会自动调用它。如果单元格内容在上述事件之外发生了变化，可以手动调用。</p><p translation-origin="off">Updates the column sticky styles. First resets all applied styles with respect to the cells
+sticking to the left and right. Then sticky styles are added for the left and right according
+to the column definitions for each cell in each row. This is automatically called when
+the data source provides a new set of data or when a column definition changes its sticky
+input. May be called manually for cases where the cell content changes outside of these events.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateStickyFooterRowStyles
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新表尾的粘性样式。首先，对于已粘附在底部的单元格，重置所有已应用的样式。然后，评估哪些单元格需要粘附在底部。当表尾行所显示的一组列发生变化时，或者其粘性属性发生变化时，会自动调用它。如果单元格内容在上述事件之外发生了变化，可以手动调用。</p><p translation-origin="off">Updates the footer sticky styles. First resets all applied styles with respect to the cells
+sticking to the bottom. Then, evaluating which cells need to be stuck to the bottom. This is
+automatically called when the footer row changes its displayed set of columns, or if its
+sticky input changes. May be called manually for cases where the cell content changes outside
+of these events.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateStickyHeaderRowStyles
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新表头的粘性样式。首先，对于已粘附在顶部的单元格，重置所有已应用的样式。然后，评估哪些单元格需要粘附在上面。当表头行所显示的一组列发生变化时，或者其粘性属性发生变化时，会自动调用它。如果单元格内容在上述事件之外发生了变化，可以手动调用。</p><p translation-origin="off">Updates the header sticky styles. First resets all applied styles with respect to the cells
+sticking to the top. Then, evaluating which cells need to be stuck to the top. This is
+automatically called when the header row changes its displayed set of columns, or if its
+sticky input changes. May be called manually for cases where the cell content changes outside
+of these events.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCellDef"></span>
+  <code>MatCellDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkCellDef" class="docs-api-class-extends-type">
+      CdkCellDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的单元格定义。存放列的数据行单元格的模板以及单元格专有属性。</p><p translation-origin="off">Cell definition for the mat-table.
+Captures the template of a column's data row cell as well as cell-specific properties.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matCellDef]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatHeaderCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderCellDef"></span>
+  <code>MatHeaderCellDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkHeaderCellDef" class="docs-api-class-extends-type">
+      CdkHeaderCellDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的表头单元格定义。存放列表头单元格的模板以及单元格专有属性。</p><p translation-origin="off">Header cell definition for the mat-table.
+Captures the template of a column's header cell and as well as cell-specific properties.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matHeaderCellDef]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatFooterCellDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterCellDef"></span>
+  <code>MatFooterCellDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkFooterCellDef" class="docs-api-class-extends-type">
+      CdkFooterCellDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的表尾单元格定义。存放列的表尾单元格的模板以及单元格专有属性。</p><p translation-origin="off">Footer cell definition for the mat-table.
+Captures the template of a column's footer cell and as well as cell-specific properties.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matFooterCellDef]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatColumnDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatColumnDef"></span>
+  <code>MatColumnDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkColumnDef" class="docs-api-class-extends-type">
+      CdkColumnDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的列定义。定义一组可用于表列的单元格。</p><p translation-origin="off">Column definition for the mat-table.
+Defines a set of cells available for a table column.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matColumnDef]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matColumnDef'</span>)
+        </div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个列的唯一名称。</p><p translation-origin="off">Unique name for this column.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>sticky: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应该使用粘性定位。</p><p translation-origin="off">Whether sticky positioning should be applied.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'stickyEnd'</span>)
+        </div><p class="docs-api-property-name">
+      <code>stickyEnd: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此列是否应粘性在该行的末尾。应该确保它模仿了混入接口 <code>CanStick</code>，当该值更改后必须把 <code>_hasStickyChanged</code> 设为 true。</p><p translation-origin="off">Whether this column should be sticky positioned on the end of the row. Should make sure
+that it mimics the <code>CanStick</code> mixin such that <code>_hasStickyChanged</code> is set to true if the value
+has been changed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>cssClassFriendlyName: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">列名的转换后版本，可以作为 CSS 类名的一部分。只允许字母、数字和两个特殊字符 “-” 和 “_”。除此之外的字符都会替换为 “-”。</p><p translation-origin="off">Transformed version of the column name that can be used as part of a CSS classname. Excludes
+all non-alphanumeric characters and the special characters '-' and '_'. Any characters that
+do not match are replaced by the '-' character.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasStickyChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">此粘性组件的值是否自上次调用后发生了变化。</p><p translation-origin="off">Whether the sticky value has changed since this was last called.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">resetStickyChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">对于粘性状态已被使用且未经检查的情况，重置脏检查。</p><p translation-origin="off">Resets the dirty check for cases where the sticky state has been used without checking.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatHeaderCell" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderCell"></span>
+  <code>MatHeaderCell</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkHeaderCell" class="docs-api-class-extends-type">
+      CdkHeaderCell
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于添加正确的类和角色的表头单元格模板容器。</p><p translation-origin="off">Header cell template container that adds the right classes and role.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-header-cell</span>
+  
+    <span class="docs-api-class-selector-name">th[mat-header-cell]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatFooterCell" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterCell"></span>
+  <code>MatFooterCell</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkFooterCell" class="docs-api-class-extends-type">
+      CdkFooterCell
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于添加正确的类和角色的表尾单元格模板容器。</p><p translation-origin="off">Footer cell template container that adds the right classes and role.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-footer-cell</span>
+  
+    <span class="docs-api-class-selector-name">td[mat-footer-cell]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatCell" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCell"></span>
+  <code>MatCell</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkCell" class="docs-api-class-extends-type">
+      CdkCell
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于添加正确的类和角色的单元格模板容器。</p><p translation-origin="off">Cell template container that adds the right classes and role.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-cell</span>
+  
+    <span class="docs-api-class-selector-name">td[mat-cell]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatHeaderRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderRowDef"></span>
+  <code>MatHeaderRowDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkHeaderRowDef" class="docs-api-class-extends-type">
+      CdkHeaderRowDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的表头行定义。存放表头行的模板和其他表头属性，比如要显示的列。</p><p translation-origin="off">Header row definition for the mat-table.
+Captures the header row's template and other header properties such as the columns to display.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matHeaderRowDef]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matHeaderRowDef</span>)
+        </div><p class="docs-api-property-name">
+      <code>columns: Iterable&lt;string&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要在行上显示的列。</p><p translation-origin="off">The columns to be displayed on this row.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matHeaderRowDefSticky</span>)
+        </div><p class="docs-api-property-name">
+      <code>sticky: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应该使用粘性定位。</p><p translation-origin="off">Whether sticky positioning should be applied.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">extractCellTemplate
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从提供的列定义中获取对此行的定义有用的相关单元格模板。</p><p translation-origin="off">Gets this row def's relevant cell template from the provided column def.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        column</p>
+      <code class="docs-api-method-parameter-type">CdkColumnDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">TemplateRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getColumnsDiff
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回当前列和最后一个差分过的列之间的差异，如果没有差别，则返回 null。</p><p translation-origin="off">Returns the difference between the current columns and the columns from the last diff, or null
+if there is no difference.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">IterableChanges&lt;any&gt; | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasStickyChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">此粘性组件的值是否自上次调用后发生了变化。</p><p translation-origin="off">Whether the sticky value has changed since this was last called.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">resetStickyChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">对于粘性状态已被使用且未经检查的情况，重置脏检查。</p><p translation-origin="off">Resets the dirty check for cases where the sticky state has been used without checking.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatFooterRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterRowDef"></span>
+  <code>MatFooterRowDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkFooterRowDef" class="docs-api-class-extends-type">
+      CdkFooterRowDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的表尾行定义。存放表尾行的模板和其他表尾属性，比如要显示的列。</p><p translation-origin="off">Footer row definition for the mat-table.
+Captures the footer row's template and other footer properties such as the columns to display.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matFooterRowDef]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matFooterRowDef</span>)
+        </div><p class="docs-api-property-name">
+      <code>columns: Iterable&lt;string&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要在行上显示的列。</p><p translation-origin="off">The columns to be displayed on this row.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matFooterRowDefSticky</span>)
+        </div><p class="docs-api-property-name">
+      <code>sticky: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应该使用粘性定位。</p><p translation-origin="off">Whether sticky positioning should be applied.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">extractCellTemplate
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从提供的列定义中获取对此行的定义有用的相关单元格模板。</p><p translation-origin="off">Gets this row def's relevant cell template from the provided column def.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        column</p>
+      <code class="docs-api-method-parameter-type">CdkColumnDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">TemplateRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getColumnsDiff
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回当前列和最后一个差分过的列之间的差异，如果没有差别，则返回 null。</p><p translation-origin="off">Returns the difference between the current columns and the columns from the last diff, or null
+if there is no difference.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">IterableChanges&lt;any&gt; | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasStickyChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">此粘性组件的值是否自上次调用后发生了变化。</p><p translation-origin="off">Whether the sticky value has changed since this was last called.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">resetStickyChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">对于粘性状态已被使用且未经检查的情况，重置脏检查。</p><p translation-origin="off">Resets the dirty check for cases where the sticky state has been used without checking.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatRowDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRowDef"></span>
+  <code>MatRowDef</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkRowDef" class="docs-api-class-extends-type">
+      CdkRowDef
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">mat-table 的数据行定义。
+存放数据行的模板和其他属性，比如要显示的列和描述何时应该使用该行的谓词。</p><p translation-origin="off">Data row definition for the mat-table.
+Captures the data row's template and other properties such as the columns to display and
+a when predicate that describes when this row should be used.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matRowDef]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matRowDefColumns</span>)
+        </div><p class="docs-api-property-name">
+      <code>columns: Iterable&lt;string&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要在行上显示的列。</p><p translation-origin="off">The columns to be displayed on this row.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matRowDefWhen</span>)
+        </div><p class="docs-api-property-name">
+      <code>when: (index: number, rowData: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果要把这个行模板用于所提供的索引和行数据，该函数应返回 true。如果未定义，那么当该函数对该数据返回 true 时，该行将被认为是默认的行模板。对于每一行，必须至少有一个函数能通过或者为 undefined 以便作为默认值。</p><p translation-origin="off">Function that should return true if this row template should be used for the provided index
+and row data. If left undefined, this row will be considered the default row template to use
+when no other when functions return true for the data.
+For every row, there must be at least one when function that passes or an undefined to default.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">extractCellTemplate
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从提供的列定义中获取对此行的定义有用的相关单元格模板。</p><p translation-origin="off">Gets this row def's relevant cell template from the provided column def.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        column</p>
+      <code class="docs-api-method-parameter-type">CdkColumnDef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">TemplateRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getColumnsDiff
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回当前列和最后一个差分过的列之间的差异，如果没有差别，则返回 null。</p><p translation-origin="off">Returns the difference between the current columns and the columns from the last diff, or null
+if there is no difference.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">IterableChanges&lt;any&gt; | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatHeaderRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderRow"></span>
+  <code>MatHeaderRow</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkHeaderRow" class="docs-api-class-extends-type">
+      CdkHeaderRow
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">包含单元格出口地标的表头模板容器。添加合适的类和角色。</p><p translation-origin="off">Header template container that contains the cell outlet. Adds the right class and role.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-header-row</span>
+  
+    <span class="docs-api-class-selector-name">tr[mat-header-row]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matHeaderRow</span>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatFooterRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterRow"></span>
+  <code>MatFooterRow</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkFooterRow" class="docs-api-class-extends-type">
+      CdkFooterRow
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">包含单元格出口地标的表尾模板容器。添加合适的类和角色。</p><p translation-origin="off">Footer template container that contains the cell outlet. Adds the right class and role.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-footer-row</span>
+  
+    <span class="docs-api-class-selector-name">tr[mat-footer-row]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matFooterRow</span>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRow"></span>
+  <code>MatRow</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkRow" class="docs-api-class-extends-type">
+      CdkRow
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">包含单元格出口地标的数据行模板容器。添加合适的类和角色。</p><p translation-origin="off">Data row template container that contains the cell outlet. Adds the right class and role.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-row</span>
+  
+    <span class="docs-api-class-selector-name">tr[mat-row]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matRow</span>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatNoDataRow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatNoDataRow"></span>
+  <code>MatNoDataRow</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkNoDataRow" class="docs-api-class-extends-type">
+      CdkNoDataRow
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">当表中没有数据时，可以用来显示一条消息的行。</p><p translation-origin="off">Row that can be used to display a message when no data is shown in the table.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">ng-template[matNoDataRow]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>templateRef: TemplateRef&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatTextColumn" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTextColumn"></span>
+  <code>MatTextColumn</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkTextColumn" class="docs-api-class-extends-type">
+      CdkTextColumn
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">只显示表头行和行单元格的文本内容的列。假设该表正在使用原生表格实现（ <code>&lt;table&gt;</code> ）。</p><p translation-origin="off">Column that simply shows text content for the header and row cells. Assumes that the table
+is using the native table implementation (<code>&lt;table&gt;</code>).</p>
+
+<p translation-result="on">默认情况下，该列的名称就是表头文本和数据属性访问器。输入属性 <code>headerText</code> 可以改写表头文本。输入属性 <code>dataAccessor</code> 可以改写单元格的值。
+输入属性 <code>justify</code> 把文本对齐方式修改为对齐到开头或结尾。</p><p translation-origin="off">By default, the name of this column will be the header text and data property accessor.
+The header text can be overridden with the <code>headerText</code> input. Cell values can be overridden with
+the <code>dataAccessor</code> input. Change the text justification to the start or end using the <code>justify</code>
+input.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-text-column</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dataAccessor: (data: T, name: string) =&gt; string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">访问器函数用来检索为要每个单元格渲染的数据。如果未设置此属性，数据单元格将渲染数据属性中与该列名匹配的值。 例如，如果列的名字是 <code>id</code>，那么渲染的值就是 data 的 <code>id</code> 属性定义的值。</p><p translation-origin="off">Accessor function to retrieve the data rendered for each cell. If this
+property is not set, the data cells will render the value found in the data's property matching
+the column's name. For example, if the column is named <code>id</code>, then the rendered value will be
+value defined by the data's <code>id</code> property.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>headerText: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要作为列表头的文本标签。如果未设置此属性，则表头文本默认使用列名的首字母大写形式。</p><p translation-origin="off">Text label that should be used for the column header. If this property is not
+set, the header text will default to the column name with its first letter capitalized.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>justify: 'start' | 'end' | 'center'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">单元格中值的对齐方式。</p><p translation-origin="off">Alignment of the cell values.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要用来引用这个列的列名。</p><p translation-origin="off">Column name that should be used to reference this column.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-table-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatTableDataSource" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTableDataSource"></span>
+  <code>MatTableDataSource</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">可接受客户端数据的数据源，包括原生支持的过滤、排序（使用 MatSort）和分页（使用 MatPaginator）。</p><p translation-origin="off">Data source that accepts a client-side data array and includes native support of filtering,
+sorting (using MatSort), and pagination (using MatPaginator).</p>
+
+<p translation-result="on">可以通过改写 sortingDataAccessor 来进行自定义排序，它定义了要如何访问数据属性。
+还允许通过改写 filterTermAccessor 来自定义过滤器，它定义了要如何将行数据转换成字符串以进行过滤匹配。</p><p translation-origin="off">Allows for sort customization by overriding sortingDataAccessor, which defines how data
+properties are accessed. Also allows for filter customization by overriding filterTermAccessor,
+which defines how row data is converted to a string for filter matching.</p>
+
+<p translation-result="on"><strong>注意：</strong>这个类是一个简单的数据源，可以帮助你入门。因此，它无法处理某些更高级的案例，比如提供强大的 i18n 支持或服务器端交互。
+如果你的应用需要支持更高级的用例，可以考虑实现自己的 <code>DataSource</code>。</p><p translation-origin="off"><strong>Note:</strong> This class is meant to be a simple data source to help you get started. As such
+it isn't equipped to handle some more advanced cases like robust i18n support or server-side
+interactions. If your app needs to support more advanced use cases, consider implementing your
+own <code>DataSource</code>.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要由表格渲染的数据数组，其中每个对象代表一行。</p><p translation-origin="off">Array of data that should be rendered by the table, where each object represents one row.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>filter: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要用来从数据数组中过滤对象的过滤器关键词。
+要改写数据对象与此过滤器字符串的匹配方式，请为 filterPredicate 提供一个自定义函数。</p><p translation-origin="off">Filter term that should be used to filter out objects from the data array. To override how
+data objects match to this filter string, provide a custom function for filterPredicate.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>filterPredicate: (data: T, filter: string) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">检查数据对象是否与数据源的过滤字符串匹配。默认情况下，会把每个数据对象都转换为其属性的字符串，如果该过滤器在该字符串中至少出现过一次，则返回 true。默认情况下，会修剪掉过滤字符串的空白，并且匹配时不区分大小写。可以改写为过滤器匹配算法的自定义实现。</p><p translation-origin="off">Checks if a data object matches the data source's filter string. By default, each data object
+is converted to a string of its properties and returns true if the filter has
+at least one occurrence in that string. By default, the filter string has its whitespace
+trimmed and the match is case-insensitive. May be overridden for a custom implementation of
+filter matching.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>filteredData: T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">通过过滤器字符串过滤过的数据集，如果没有过滤器，则全是数据。
+需要知道表格所展现的数据集时，这非常有用。比如，'selectAll()' 函数可能会想给用户展示一组过滤过的数据，而不是所有的数据。</p><p translation-origin="off">The filtered set of data that has been matched by the filter string, or all the data if there
+is no filter. Useful for knowing the set of data the table represents.
+For example, a 'selectAll()' function would likely want to select the set of filtered data
+shown to the user rather than all the data.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>paginator: P | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该表格使用的 MatPaginator 组件实例，用来控制要显示哪页数据。MatPaginator 发出的页面更改会触发表格渲染数据的更新。</p><p translation-origin="off">Instance of the paginator component used by the table to control what page of the data is
+displayed. Page changes emitted by the paginator will trigger an update to the
+table's rendered data.</p>
+
+<p translation-result="on">注意，数据源会使用此分页器的属性来计算应该显示哪个页面的数据。如果分页器要通过模板输入接收其属性，比如 <code>[pageLength]=100</code> 或者 <code>[pageIndex]=1</code>，那就要确保此分页器的视图已经初始化了，然后再赋值给这个数据源。</p><p translation-origin="off">Note that the data source uses the paginator's properties to calculate which page of data
+should be displayed. If the paginator receives its properties as template inputs,
+e.g. <code>[pageLength]=100</code> or <code>[pageIndex]=1</code>, then be sure that the paginator's view has been
+initialized before assigning it to this data source.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sort: MatSort | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该表格使用 MatSort 指令的实例来控制它的排序。MatSort 发出的排序变化会触发对该表格所渲染数据的更新。</p><p translation-origin="off">Instance of the MatSort directive used by the table to control its sorting. Sort changes
+emitted by the MatSort will trigger an update to the table's rendered data.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortData: (data: T[], sort: MatSort) =&gt; T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">根据 MatSort 的状态获取一个数据数组的已排序副本。在对已过滤的数据进行更改或从 MatSort 发出排序更改时调用。
+默认情况下，使用该函数检索主动排序及其方向，并借助 sortingDataAccessor 检索数据来进行比较。可以改写为自定义的数据排序实现。</p><p translation-origin="off">Gets a sorted copy of the data array based on the state of the MatSort. Called
+after changes are made to the filtered data or when sort changes are emitted from MatSort.
+By default, the function retrieves the active sort and its direction and compares data
+by retrieving data using the sortingDataAccessor. May be overridden for a custom implementation
+of data ordering.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortingDataAccessor: (data: T, sortHeaderId: string) =&gt; string | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">数据访问器函数，用于访问数据属性，以便通过默认的 sortData 函数进行排序。
+这个默认函数假设排序头的 ID（默认为列名）与数据的属性相匹配（比如列 Xyz 对应 data['Xyz']）。可以为不同的行为设置同一个自定义函数。</p><p translation-origin="off">Data accessor function that is used for accessing data properties for sorting through
+the default sortData function.
+This default function assumes that the sort header IDs (which defaults to the column name)
+matches the data's properties (e.g. column Xyz represents data['Xyz']).
+May be set to a custom function for different behavior.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-table-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatTableDataSourcePageEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatTableDataSourcePageEvent"></span>
+  <code>MatTableDataSourcePageEvent</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">与 MatPaginator 的 PageEvent 所需的 API 部分匹配的接口。这种解耦让用户可以依赖旧版或基于 MDC 的分页器。</p><p translation-origin="off">Interface that matches the required API parts for the MatPaginator's PageEvent.
+Decoupled so that users can depend on either the legacy or MDC-based paginator.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>length: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatTableDataSourcePaginator" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatTableDataSourcePaginator"></span>
+  <code>MatTableDataSourcePaginator</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">与 MatPaginator 所需的 API 部分匹配的接口。这种解耦让用户可以依赖旧版或基于 MDC 的分页器。</p><p translation-origin="off">Interface that matches the required API parts of the MatPaginator.
+Decoupled so that users can depend on either the legacy or MDC-based paginator.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>firstPage: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>initialized: Observable&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>lastPage: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>length: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>page: Subject&lt;MatTableDataSourcePageEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    </div>

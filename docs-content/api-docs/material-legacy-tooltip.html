@@ -1,0 +1,321 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-tooltip-api-参考文档--">
+    Angular Material legacy-tooltip API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-tooltip</code></p><h3 id="material-legacy-tooltip-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacyTooltip" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyTooltip"></span>
+  <code>MatLegacyTooltip</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">将 Material Design 工具提示附着到主体元素的指令。对工具提示提供的位置的显示和隐藏进行动画处理（默认为元素下方）。</p><p translation-origin="off">Directive that attaches a material design tooltip to the host element. Animates the showing and
+hiding of a tooltip provided position (defaults to below the element).</p>
+
+<p><a href="https://material.io/design/components/tooltips.html">https://material.io/design/components/tooltips.html</a></p>
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matTooltip]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matTooltip</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">禁止显示工具提示。</p><p translation-origin="off">Disables the display of the tooltip.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipHideDelay'</span>)
+        </div><p class="docs-api-property-name">
+      <code>hideDelay: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">调用 hide 之后到隐藏工具提示之前的默认延迟（毫秒）</p><p translation-origin="off">The default delay in ms before hiding the tooltip after hide is called</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltip'</span>)
+        </div><p class="docs-api-property-name">
+      <code>message: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要在工具提示中显示的消息是什么</p><p translation-origin="off">The message to be displayed in the tooltip</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipPosition'</span>)
+        </div><p class="docs-api-property-name">
+      <code>position: TooltipPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">允许用户定义工具提示相对于父元素的位置</p><p translation-origin="off">Allows the user to define the position of the tooltip relative to the parent element</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipPositionAtOrigin'</span>)
+        </div><p class="docs-api-property-name">
+      <code>positionAtOrigin: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipShowDelay'</span>)
+        </div><p class="docs-api-property-name">
+      <code>showDelay: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">调用 show 之后到显示工具提示之前的默认延迟（毫秒）</p><p translation-origin="off">The default delay in ms before showing the tooltip after show is called</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipClass'</span>)
+        </div><p class="docs-api-property-name">
+      <code>tooltipClass: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要传递给工具提示的类。语法和 <code>ngClass</code> 相同。</p><p translation-origin="off">Classes to be passed to the tooltip. Supports the same syntax as <code>ngClass</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matTooltipTouchGestures'</span>)
+        </div><p class="docs-api-property-name">
+      <code>touchGestures: TooltipTouchGestures</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">工具提示应如何处理触摸手势。在触摸设备上，工具提示指令会使用长按手势进行显示和隐藏，但是它可能与原生的浏览器手势冲突。 为了解决这个冲突，Angular Material 会在触发器上禁用原生手势，但这可能不适用于特定的元素（例如输入框和可拖动的元素）。 此选项有不同的值用来配置 touch 事件的处理方式，如下所示：</p><p translation-origin="off">How touch gestures should be handled by the tooltip. On touch devices the tooltip directive
+uses a long press gesture to show and hide, however it can conflict with the native browser
+gestures. To work around the conflict, Angular Material disables native gestures on the
+trigger, but that might not be desirable on particular elements (e.g. inputs and draggable
+elements). The different values for this option configure the touch event handling as follows:</p>
+
+<ul>
+<li><p translation-result="on"><code>auto</code> - 为所有元素启用触摸手势，但会尽量避免与特定元素的原生浏览器手势冲突。 它特别允许在 input 和 textarea 上进行文本选择，并保留原生浏览器中标记为 <code>draggable</code> 的元素上的拖曳效果。</p><p translation-origin="off"><code>auto</code> - Enables touch gestures for all elements, but tries to avoid conflicts with native
+browser gestures on particular elements. In particular, it allows text selection on inputs
+and textareas, and preserves the native browser dragging on elements marked as <code>draggable</code>.</p>
+
+</li>
+<li><p translation-result="on"><code>on</code> - 为所有元素启用触摸手势，并禁用原生浏览器手势，没有例外。</p><p translation-origin="off"><code>on</code> - Enables touch gestures for all elements and disables native
+browser gestures with no exceptions.</p>
+
+</li>
+<li><p translation-result="on"><code>off</code> - 禁用触摸手势。请注意，这会阻止在触摸设备上显示工具提示。</p><p translation-origin="off"><code>off</code> - Disables touch gestures. Note that this will prevent the tooltip from
+showing on touch devices.</p>
+
+</li>
+</ul>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hide
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">要延迟多少毫秒后隐藏工具提示，默认为 tooltip-delay-hide，如果没有输入则默认为 0ms</p><p translation-origin="off">Hides the tooltip after the delay in ms, defaults to tooltip-delay-hide or 0ms if no input</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        delay</p>
+      <code class="docs-api-method-parameter-type">number = this.hideDelay</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">show
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">要延迟多少毫秒后显示工具提示，默认为 tooltip-delay-show，如果没有输入则默认为 0ms</p><p translation-origin="off">Shows the tooltip after the delay in ms, defaults to tooltip-delay-show or 0ms if no input</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        delay</p>
+      <code class="docs-api-method-parameter-type">number = this.showDelay</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ x</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">显示/隐藏工具提示</p><p translation-origin="off">Shows/hides the tooltip</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ x</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    </div>
