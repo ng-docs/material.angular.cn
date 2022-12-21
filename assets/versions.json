@@ -1,38 +1,55 @@
+
 [
   {
-    "url": "https://material.angular.io/",
-    "title": "13.3.0"
+    "url": "https://next.material.angular.io",
+    "title": "下一代"
   },
   {
-    "url": "https://v12.material.angular.io/",
-    "title": "12.2.13"
+    "url": "https://rc.material.angular.io",
+    "title": "发布候选版"
   },
   {
-    "url": "https://v11.material.angular.io/",
-    "title": "11.2.13"
+    "url": "https://material.angular.io",
+    "title": "15.1.0 (最新)"
   },
   {
-    "url": "https://v10.material.angular.io/",
-    "title": "10.2.7"
+    "title": "v14（中文）",
+    "url": "https://v14.material.angular.cn"
   },
   {
-    "url": "https://v9.material.angular.io/",
-    "title": "9.2.4"
+    "title": "v13",
+    "url": "https://v13.material.angular.io"
   },
   {
-    "url": "https://v8.material.angular.io/",
-    "title": "8.2.3"
+    "title": "v12（中文）",
+    "url": "https://v12.material.angular.cn"
   },
   {
-    "url": "https://v7.material.angular.io/",
-    "title": "7.3.7"
+    "title": "v11（中文）",
+    "url": "https://v11.material.angular.cn"
   },
   {
-    "url": "https://v6.material.angular.io/",
-    "title": "6.4.7"
+    "title": "v10",
+    "url": "https://v10.material.angular.io"
   },
   {
-    "url": "https://v5.material.angular.io/",
-    "title": "5.2.5"
+    "title": "v9",
+    "url": "https://v9.material.angular.io"
+  },
+  {
+    "title": "v8",
+    "url": "https://v8.material.angular.io"
+  },
+  {
+    "title": "v7",
+    "url": "https://v7.material.angular.io"
+  },
+  {
+    "title": "v6",
+    "url": "https://v6.material.angular.io"
+  },
+  {
+    "title": "v5",
+    "url": "https://v5.material.angular.io"
   }
 ]
