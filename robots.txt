@@ -1,3 +1,2 @@
-Sitemap: https://material.angular.io/sitemap.xml
+Sitemap: https://material.angular.cn/sitemap.xml
 User-agent: *
-Disallow:
