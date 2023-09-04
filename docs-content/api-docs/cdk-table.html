@@ -100,16 +100,16 @@ connect function that will return an Observable stream that emits the data array
 </li>
 </ul>
 <p translation-result="on">如果提供了数组，那么在添加、删除或移动该数组的对象时，都必须通知该表格。
-这可以通过调用 <code>renderRows()</code> 函数来完成，它会渲染自上次渲染表格以来的差异部分。如果数据数组的引用发生了变化，该表格会自动触发对行的更新。</p><p translation-origin="off">If a data array is provided, the table must be notified when the array's objects are
+这可以通过调用 <code>renderRows()</code> 函数来完成，它会渲染自上次渲染表格以来的差异部分。如果数据数组的引用发生了变化，该表格会自动触发对行的更新。</p><p translation-result="on">当提供一个可观察的流时，如果该流发出一个新的数据数组，该表格就会自动触发一次更新。</p><p translation-origin="off">If a data array is provided, the table must be notified when the array's objects are
 added, removed, or moved. This can be done by calling the <code>renderRows()</code> function which will
 render the diff since the last table render. If the data array reference is changed, the table
 will automatically trigger an update to the rows.</p>
 
-<p translation-result="on">当提供一个可观察的流时，如果该流发出一个新的数据数组，该表格就会自动触发一次更新。</p><p translation-origin="off">When providing an Observable stream, the table will trigger an update automatically when the
+<p translation-result="on">最后，在提供 <code>DataSource</code> 对象时，该表格将使用 connect 函数提供的 Observable 流，并在该流发出新的数据数组值时触发更新。
+在表格的 ngOnDestroy 中，或者从表格中删除了数据源时，该表格会调用数据源的 <code>disconnect</code> 函数（这可能对清理在连接过程中注册的所有订阅很有帮助）。</p><p translation-origin="off">When providing an Observable stream, the table will trigger an update automatically when the
 stream emits a new array of data.</p>
 
-<p translation-result="on">最后，在提供 <code>DataSource</code> 对象时，该表格将使用 connect 函数提供的 Observable 流，并在该流发出新的数据数组值时触发更新。
-在表格的 ngOnDestroy 中，或者从表格中删除了数据源时，该表格会调用数据源的 <code>disconnect</code> 函数（这可能对清理在连接过程中注册的所有订阅很有帮助）。</p><p translation-origin="off">Finally, when providing a <code>DataSource</code> object, the table will use the Observable stream
+<p translation-origin="off">Finally, when providing a <code>DataSource</code> object, the table will use the Observable stream
 provided by the connect function and trigger updates when that stream emits new data array
 values. During the table's ngOnDestroy or when the data source is removed from the table, the
 table will call the DataSource's <code>disconnect</code> function (may be useful for cleaning up any
@@ -533,12 +533,12 @@ table subclasses.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">根据表格中最新的数据集来渲染行，这些数据既可以直接输入，也可以从一个可观察的流中检索出来（直接获取或从 DataSource 获取）。检查自上次 diff 之后的数据差异，以便只进行必要的修改（添加/删除/移动行）。</p><p translation-origin="off">Renders rows based on the table's latest set of data, which was either provided directly as an
+      <p translation-result="on">根据表格中最新的数据集来渲染行，这些数据既可以直接输入，也可以从一个可观察的流中检索出来（直接获取或从 DataSource 获取）。检查自上次 diff 之后的数据差异，以便只进行必要的修改（添加/删除/移动行）。</p><p translation-result="on">如果表格的数据源是 DataSource 或者 Observable，每当提供的 Observable 流发出一个新的数据数组时，都会自动调用它。如果你的数据是数组，那么就需要手动调用这个函数来渲染任何变化。</p><p translation-origin="off">Renders rows based on the table's latest set of data, which was either provided directly as an
 input or retrieved through an Observable stream (directly or from a DataSource).
 Checks for differences in the data since the last diff to perform only the necessary
 changes (add/remove/move rows).</p>
 
-<p translation-result="on">如果表格的数据源是 DataSource 或者 Observable，每当提供的 Observable 流发出一个新的数据数组时，都会自动调用它。如果你的数据是数组，那么就需要手动调用这个函数来渲染任何变化。</p><p translation-origin="off">If the table's data source is a DataSource or Observable, this will be invoked automatically
+<p translation-origin="off">If the table's data source is a DataSource or Observable, this will be invoked automatically
 each time the provided Observable stream emits a new data array. Otherwise if your data is
 an array, this function will need to be called to render any changes.</p>
 
@@ -1045,9 +1045,7 @@ Captures the header row's template and other header properties such as the colum
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1242,9 +1240,7 @@ Captures the footer row's template and other footer properties such as the colum
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1450,9 +1446,7 @@ For every row, there must be at least one when function that passes or an undefi
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1621,10 +1615,10 @@ if there is no difference.</p>
   <span header-link="CdkTextColumn"></span>
   <code>CdkTextColumn</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">只显示表头行和行单元格的文本内容的列。假设该表正在使用原生表格实现（ <code>&lt;table&gt;</code> ）。</p><p translation-origin="off">Column that simply shows text content for the header and row cells. Assumes that the table
+</h4><div class="docs-api-class-description"><p translation-result="on">只显示表头行和行单元格的文本内容的列。假设该表正在使用原生表格实现（ <code>&lt;table&gt;</code> ）。</p><p translation-result="on">默认情况下，该列的名称就是表头文本和数据属性访问器。输入属性 <code>headerText</code> 可以改写表头文本。输入属性 <code>dataAccessor</code> 可以改写单元格的值。 输入属性 <code>justify</code> 把文本对齐方式修改为对齐到开头或结尾。</p><p translation-origin="off">Column that simply shows text content for the header and row cells. Assumes that the table
 is using the native table implementation (<code>&lt;table&gt;</code>).</p>
 
-<p translation-result="on">默认情况下，该列的名称就是表头文本和数据属性访问器。输入属性 <code>headerText</code> 可以改写表头文本。输入属性 <code>dataAccessor</code> 可以改写单元格的值。 输入属性 <code>justify</code> 把文本对齐方式修改为对齐到开头或结尾。</p><p translation-origin="off">By default, the name of this column will be the header text and data property accessor.
+<p translation-origin="off">By default, the name of this column will be the header text and data property accessor.
 The header text can be overridden with the <code>headerText</code> input. Cell values can be overridden with
 the <code>dataAccessor</code> input. Change the text justification to the start or end using the <code>justify</code>
 input.</p>
@@ -1802,9 +1796,7 @@ for changes and notifying the table.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>

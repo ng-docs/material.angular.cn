@@ -1,4 +1,4 @@
-<div class="docs-markdown"><h1 id="customizing-angular-material-component-styles" translation-result="on">自定义 Angular Material 组件样式</h1><h1 translation-origin="off">Customizing Angular Material component styles</h1><p translation-result="on">Angular Material 支持通过 Sass API 自定义组件样式，如<a href="https://material.angular.cn/guide/theming">主题指南</a>中所述。本文档提供了一个指南，用于指导如何定义自定义 CSS 规则，以便直接设置 Angular Material 组件的样式。</p><p translation-origin="off">Angular Material supports customizing component styles via Sass API as described in the <a href="https://material.angular.io/guide/theming">theming
+<div class="docs-markdown"><h1 id="customizing-angular-material-component-styles" translation-result="on">自定义 Angular Material 组件样式</h1><h1 translation-origin="off" id="customizing-angular-material-component-styles">Customizing Angular Material component styles</h1><p translation-result="on">Angular Material 支持通过 Sass API 自定义组件样式，如<a href="https://material.angular.cn/guide/theming">主题指南</a>中所述。本文档提供了一个指南，用于指导如何定义自定义 CSS 规则，以便直接设置 Angular Material 组件的样式。</p><p translation-origin="off">Angular Material supports customizing component styles via Sass API as described in the <a href="https://material.angular.io/guide/theming">theming
 guide</a>. This document provides guidance on defining custom CSS rules that directly style
 Angular Material components.</p>
 
@@ -6,7 +6,7 @@ Angular Material components.</p>
         <h2 id="targeting-custom-styles" class="docs-header-link" translation-result="on">
           <span header-link="定位自定义样式"></span>
           定位自定义样式
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------targeting-custom-styles--------">
           <span header-link="targeting-custom-styles"></span>
           Targeting custom styles
         </h2>
@@ -16,18 +16,18 @@ Angular Material components.</p>
         <h3 id="component-host-elements" class="docs-header-link" translation-result="on">
           <span header-link="组件的宿主元素"></span>
           组件的宿主元素
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------component-host-elements--------">
           <span header-link="component-host-elements"></span>
           Component host elements
         </h3>
       
         
-      <p translation-result="on">对于任何 Angular Material 组件，你可以安全地为组件的宿主元素自定义 CSS，以便影响组件的位置或布局，例如 <code>margin</code>、<code>position</code>、<code>top</code>、<code>left</code>、<code>transform</code> 和 <code>z-index</code>。你应该通过自定义 CSS 类并将该类应用于组件的宿主元素来应用这个类。</p><p translation-origin="off">For any Angular Material component, you can safely define custom CSS for a component's host element
+      <p translation-result="on">对于任何 Angular Material 组件，你可以安全地为组件的宿主元素自定义 CSS，以便影响组件的位置或布局，例如 <code>margin</code>、<code>position</code>、<code>top</code>、<code>left</code>、<code>transform</code> 和 <code>z-index</code>。你应该通过自定义 CSS 类并将该类应用于组件的宿主元素来应用这个类。</p><p translation-result="on">要避免定义会影响组件大小或内部布局的自定义样式，例如 <code>padding</code>、<code>height</code>、<code>width</code> 或 <code>overflow</code>。你可以指定 <code>display: none</code> 来隐藏组件，但尽量不要指定任何其他 <code>display</code> 值。当其内部样式在发行版之间发生变化时，覆盖这些属性可能会以意想不到的方式破坏组件。</p><p translation-origin="off">For any Angular Material component, you can safely define custom CSS for a component's host element
 that affect the positioning or layout of that component, such as <code>margin</code>, <code>position</code>, <code>top</code>,
 <code>left</code>, <code>transform</code>, and <code>z-index</code>. You should apply such styles by defining a custom CSS
 class and applying that class to the component's host element.</p>
 
-<p translation-result="on">要避免定义会影响组件大小或内部布局的自定义样式，例如 <code>padding</code>、<code>height</code>、<code>width</code> 或 <code>overflow</code>。你可以指定 <code>display: none</code> 来隐藏组件，但尽量不要指定任何其他 <code>display</code> 值。当其内部样式在发行版之间发生变化时，覆盖这些属性可能会以意想不到的方式破坏组件。</p><p translation-origin="off">Avoid defining custom styles that would affect the size or internal layout of the component, such as
+<p translation-origin="off">Avoid defining custom styles that would affect the size or internal layout of the component, such as
 <code>padding</code>, <code>height</code>, <code>width</code>, or <code>overflow</code>. You can specify <code>display: none</code> to hide a component,
 but avoid specifying any other <code>display</code> value. Overriding these properties can break components
 in unexpected ways as the internal styles change between releases.</p>
@@ -36,7 +36,7 @@ in unexpected ways as the internal styles change between releases.</p>
         <h3 id="internal-component-elements" class="docs-header-link" translation-result="on">
           <span header-link="组件的内部元素"></span>
           组件的内部元素
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------internal-component-elements--------">
           <span header-link="internal-component-elements"></span>
           Internal component elements
         </h3>
@@ -50,7 +50,7 @@ styles to break.</p>
         <h2 id="applying-styles-to-angular-material-components" class="docs-header-link" translation-result="on">
           <span header-link="将样式应用于-angular-material-组件"></span>
           将样式应用于 Angular Material 组件
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------applying-styles-to-angular-material-components--------">
           <span header-link="applying-styles-to-angular-material-components"></span>
           Applying styles to Angular Material components
         </h2>
@@ -65,7 +65,7 @@ rendering location.</p>
         <h3 id="view-encapsulation" class="docs-header-link" translation-result="on">
           <span header-link="视图封装"></span>
           视图封装
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------view-encapsulation--------">
           <span header-link="view-encapsulation"></span>
           View encapsulation
         </h3>
@@ -84,17 +84,17 @@ on the Angular blog.</p>
         <h4 id="bypassing-encapsulation" class="docs-header-link" translation-result="on">
           <span header-link="绕过封装"></span>
           绕过封装
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------bypassing-encapsulation--------">
           <span header-link="bypassing-encapsulation"></span>
           Bypassing encapsulation
         </h4>
       
         
-      <p translation-result="on">Angular Material 禁用了库中所有组件的样式封装。但是，在你自己的组件中使用默认的样式封装方式仍然可以防止自定义样式泄漏到 Angular Material 组件中。</p><p translation-origin="off">Angular Material disables style encapsulation for all components in the library. However, the
+      <p translation-result="on">Angular Material 禁用了库中所有组件的样式封装。但是，在你自己的组件中使用默认的样式封装方式仍然可以防止自定义样式泄漏到 Angular Material 组件中。</p><p translation-result="on">如果你的组件启用了视图封装，那么它的样式只会影响到模板中显式定义的元素。要影响模板中使用的组件的后代，可以使用以下方法之一：</p><p translation-origin="off">Angular Material disables style encapsulation for all components in the library. However, the
 default style encapsulation in your own components still prevents custom styles from leaking into
 Angular Material components.</p>
 
-<p translation-result="on">如果你的组件启用了视图封装，那么它的样式只会影响到模板中显式定义的元素。要影响模板中使用的组件的后代，可以使用以下方法之一：</p><p translation-origin="off">If your component enables view encapsulation, your component styles will only
+<p translation-origin="off">If your component enables view encapsulation, your component styles will only
 affect the elements explicitly defined in your template. To affect descendants of components used
 in your template, you can use one of the following approaches:</p>
 
@@ -121,25 +121,25 @@ difficult to maintain.</p>
         <h3 id="css-specificity" class="docs-header-link" translation-result="on">
           <span header-link="css-特异度"></span>
           CSS 特异度
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------css-specificity--------">
           <span header-link="css-specificity"></span>
           CSS specificity
         </h3>
       
         
-      <p translation-result="on">每个 CSS 声明都具有一个<em>特异度</em>级别，取决于所用到的选择器的类型和数量。特异度较高的样式也会有较高的优先级。Angular Material 自己会在组件中使用尽可能小的特异度。不过，Angular Material 将来也可能更改组件样式的特异度，这可能会让你的自定义覆盖规则变得脆弱、容易被破坏。</p><p translation-origin="off">Each CSS declaration has a level of <em>specificity</em> based on the type and number of selectors used.
+      <p translation-result="on">每个 CSS 声明都具有一个<em>特异度</em>级别，取决于所用到的选择器的类型和数量。特异度较高的样式也会有较高的优先级。Angular Material 自己会在组件中使用尽可能小的特异度。不过，Angular Material 将来也可能更改组件样式的特异度，这可能会让你的自定义覆盖规则变得脆弱、容易被破坏。</p><p translation-result="on">你可以到 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN Web 文档</a>中深入了解特异度及其计算方法。</p><p translation-origin="off">Each CSS declaration has a level of <em>specificity</em> based on the type and number of selectors used.
 More specific styles take precedence over less specific styles. Angular Material generally attempts
 to use the least specific selectors possible. However, Angular Material may change component style
 specificity at any time, making custom overrides brittle and prone to breaking.</p>
 
-<p translation-result="on">你可以到 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN Web 文档</a>中深入了解特异度及其计算方法。</p><p translation-origin="off">You can read more about specificity and how it is calculated on the
+<p translation-origin="off">You can read more about specificity and how it is calculated on the
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN web docs</a>.</p>
 
 
         <h3 id="rendering-location" class="docs-header-link" translation-result="on">
           <span header-link="渲染位置"></span>
           渲染位置
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------rendering-location--------">
           <span header-link="rendering-location"></span>
           Rendering location
         </h3>
@@ -155,7 +155,7 @@ will not apply to these elements. You can define styles for these elements as gl
         <h4 id="styling-overlay-components" class="docs-header-link" translation-result="on">
           <span header-link="为浮层组件设置样式"></span>
           为浮层组件设置样式
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------styling-overlay-components--------">
           <span header-link="styling-overlay-components"></span>
           Styling overlay components
         </h4>

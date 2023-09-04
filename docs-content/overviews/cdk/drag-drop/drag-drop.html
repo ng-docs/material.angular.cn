@@ -7,7 +7,7 @@ in addition to horizontal lists and locking along an axis.</p>
         <h3 id="getting-started" class="docs-header-link" translation-result="on">
           <span header-link="快速起步"></span>
           快速起步
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------getting-started--------">
           <span header-link="getting-started"></span>
           Getting started
         </h3>
@@ -24,7 +24,7 @@ You can add <code>cdkDropList</code> elements to constrain where elements may be
         <h3 id="reordering-lists" class="docs-header-link" translation-result="on">
           <span header-link="重新排序列表"></span>
           重新排序列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------reordering-lists--------">
           <span header-link="reordering-lists"></span>
           Reordering lists
         </h3>
@@ -41,7 +41,7 @@ update the data model once the user finishes dragging.</p>
         <h3 id="transferring-items-between-lists" class="docs-header-link" translation-result="on">
           <span header-link="在列表之间转移条目"></span>
           在列表之间转移条目
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------transferring-items-between-lists--------">
           <span header-link="transferring-items-between-lists"></span>
           Transferring items between lists
         </h3>
@@ -79,7 +79,7 @@ will be connected to all other lists automatically.</p>
         <h3 id="attaching-data" class="docs-header-link" translation-result="on">
           <span header-link="附着数据"></span>
           附着数据
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------attaching-data--------">
           <span header-link="attaching-data"></span>
           Attaching data
         </h3>
@@ -97,7 +97,7 @@ you to easily identify the origin of the drag or drop interaction.</p>
         <h3 id="styling" class="docs-header-link" translation-result="on">
           <span header-link="样式"></span>
           样式
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------styling--------">
           <span header-link="styling"></span>
           Styling
         </h3>
@@ -165,7 +165,7 @@ by the directives:</p>
         <h3 id="animations" class="docs-header-link" translation-result="on">
           <span header-link="动画"></span>
           动画
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------animations--------">
           <span header-link="animations"></span>
           Animations
         </h3>
@@ -203,7 +203,7 @@ following classes can be used for animations:</p>
         <h3 id="customizing-the-drag-area-using-a-handle" class="docs-header-link" translation-result="on">
           <span header-link="使用拖动把手自定义拖曳区域"></span>
           使用拖动把手自定义拖曳区域
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------customizing-the-drag-area-using-a-handle--------">
           <span header-link="customizing-the-drag-area-using-a-handle"></span>
           Customizing the drag area using a handle
         </h3>
@@ -220,21 +220,21 @@ restrict the user to only be able to do so using a handle element, you can do it
         <h3 id="customizing-the-drag-preview" class="docs-header-link" translation-result="on">
           <span header-link="自定义拖动预览图"></span>
           自定义拖动预览图
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------customizing-the-drag-preview--------">
           <span header-link="customizing-the-drag-preview"></span>
           Customizing the drag preview
         </h3>
       
         
       <p translation-result="on">当拾起 <code>cdkDrag</code> 元素时，它会在拖动过程中创建一个可见的预览元素。默认情况下，这将是位于用户光标旁边的原始元素的克隆体。但是，通过由 <code>*cdkDragPreview</code> 提供的自定义模板，可以自定义此预览。
-使用此默认配置时，自定义预览不会匹配原始被拖动元素的大小，因为 CDK 不能对该元素的内容做任何假设。如果你希望匹配其大小，可以给输入参数 <code>matchSize</code> 传入 <code>true</code>。</p><p translation-origin="off">When a <code>cdkDrag</code> element is picked up, it will create a preview element visible while dragging.
+使用此默认配置时，自定义预览不会匹配原始被拖动元素的大小，因为 CDK 不能对该元素的内容做任何假设。如果你希望匹配其大小，可以给输入参数 <code>matchSize</code> 传入 <code>true</code>。</p><p translation-result="on">注意，克隆元素时会删除它的 <code>id</code> 属性，以免在页面中拥有多个具有相同 <code>id</code> 的元素。这会导致任何以此 <code>id</code> 为目标的 CSS 都不能应用在这个预览元素上。</p><p translation-origin="off">When a <code>cdkDrag</code> element is picked up, it will create a preview element visible while dragging.
 By default, this will be a clone of the original element positioned next to the user's cursor.
 This preview can be customized, though, by providing a custom template via <code>*cdkDragPreview</code>.
 Using the default configuration the custom preview won't match the size of the original dragged
 element, because the CDK doesn't make assumptions about the element's content. If you want the
 size to be matched, you can pass <code>true</code> to the <code>matchSize</code> input.</p>
 
-<p translation-result="on">注意，克隆元素时会删除它的 <code>id</code> 属性，以免在页面中拥有多个具有相同 <code>id</code> 的元素。这会导致任何以此 <code>id</code> 为目标的 CSS 都不能应用在这个预览元素上。</p><p translation-origin="off">Note that the cloned element will remove its <code>id</code> attribute in order to avoid having multiple
+<p translation-origin="off">Note that the cloned element will remove its <code>id</code> attribute in order to avoid having multiple
 elements with the same <code>id</code> on the page. This will cause any CSS that targets that <code>id</code> not
 to be applied.</p>
 
@@ -244,7 +244,7 @@ to be applied.</p>
         <h3 id="drag-preview-insertion-point" class="docs-header-link" translation-result="on">
           <span header-link="拖动预览器插入点"></span>
           拖动预览器插入点
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------drag-preview-insertion-point--------">
           <span header-link="drag-preview-insertion-point"></span>
           Drag preview insertion point
         </h3>
@@ -291,7 +291,7 @@ using the <code>cdkDragPreviewContainer</code> input on <code>cdkDrag</code>. Th
         <h3 id="customizing-the-drag-placeholder" class="docs-header-link" translation-result="on">
           <span header-link="自定义拖动占位符"></span>
           自定义拖动占位符
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------customizing-the-drag-placeholder--------">
           <span header-link="customizing-the-drag-placeholder"></span>
           Customizing the drag placeholder
         </h3>
@@ -308,7 +308,7 @@ directive:</p>
         <h3 id="list-orientation" class="docs-header-link" translation-result="on">
           <span header-link="列出方向"></span>
           列出方向
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------list-orientation--------">
           <span header-link="list-orientation"></span>
           List orientation
         </h3>
@@ -323,7 +323,7 @@ changed by setting the <code>orientation</code> property to <code>"horizontal"</
         <h3 id="restricting-movement-within-an-element" class="docs-header-link" translation-result="on">
           <span header-link="把移动限制在某个元素内部"></span>
           把移动限制在某个元素内部
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------restricting-movement-within-an-element--------">
           <span header-link="restricting-movement-within-an-element"></span>
           Restricting movement within an element
         </h3>
@@ -341,7 +341,7 @@ also be used when <code>cdkDrag</code> is placed inside a <code>cdkDropList</cod
         <h3 id="restricting-movement-along-an-axis" class="docs-header-link" translation-result="on">
           <span header-link="限定沿轴的移动"></span>
           限定沿轴的移动
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------restricting-movement-along-an-axis--------">
           <span header-link="restricting-movement-along-an-axis"></span>
           Restricting movement along an axis
         </h3>
@@ -357,7 +357,7 @@ to either <code>"x"</code> or <code>"y"</code>.</p>
         <h3 id="alternate-drag-root-element" class="docs-header-link" translation-result="on">
           <span header-link="替代拖动根元素"></span>
           替代拖动根元素
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------alternate-drag-root-element--------">
           <span header-link="alternate-drag-root-element"></span>
           Alternate drag root element
         </h3>
@@ -375,7 +375,7 @@ draggable.</p>
         <h3 id="controlling-which-items-can-be-moved-into-a-container" class="docs-header-link" translation-result="on">
           <span header-link="控制哪些条目可以移入容器"></span>
           控制哪些条目可以移入容器
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------controlling-which-items-can-be-moved-into-a-container--------">
           <span header-link="controlling-which-items-can-be-moved-into-a-container"></span>
           Controlling which items can be moved into a container
         </h3>
@@ -393,7 +393,7 @@ be allowed into the new container.</p>
         <h3 id="disabled-dragging" class="docs-header-link" translation-result="on">
           <span header-link="禁用拖动功能"></span>
           禁用拖动功能
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------disabled-dragging--------">
           <span header-link="disabled-dragging"></span>
           Disabled dragging
         </h3>
@@ -410,7 +410,7 @@ using the <code>cdkDropListDisabled</code> input on a <code>cdkDropList</code> o
         <h3 id="disabled-sorting" class="docs-header-link" translation-result="on">
           <span header-link="禁用排序"></span>
           禁用排序
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------disabled-sorting--------">
           <span header-link="disabled-sorting"></span>
           Disabled sorting
         </h3>
@@ -428,7 +428,7 @@ decides to return the item.</p>
         <h3 id="delayed-dragging" class="docs-header-link" translation-result="on">
           <span header-link="延迟拖动"></span>
           延迟拖动
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------delayed-dragging--------">
           <span header-link="delayed-dragging"></span>
           Delayed dragging
         </h3>
@@ -447,7 +447,7 @@ moving the element.</p>
         <h3 id="changing-the-standalone-drag-position" class="docs-header-link" translation-result="on">
           <span header-link="改变独立的拖动位置"></span>
           改变独立的拖动位置
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------changing-the-standalone-drag-position--------">
           <span header-link="changing-the-standalone-drag-position"></span>
           Changing the standalone drag position
         </h3>
@@ -464,7 +464,7 @@ draggable's position after a user has navigated away and then returned.</p>
         <h3 id="controlling-whether-an-item-can-be-sorted-into-a-particular-index" class="docs-header-link" translation-result="on">
           <span header-link="控制是否可以把一个条目排序到一个特定的序号上"></span>
           控制是否可以把一个条目排序到一个特定的序号上
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------controlling-whether-an-item-can-be-sorted-into-a-particular-index--------">
           <span header-link="controlling-whether-an-item-can-be-sorted-into-a-particular-index"></span>
           Controlling whether an item can be sorted into a particular index
         </h3>

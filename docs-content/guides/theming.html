@@ -1,18 +1,18 @@
-<div class="docs-markdown"><h1 id="theming-angular-material" translation-result="on">Angular Material 主题</h1><h1 translation-origin="off">Theming Angular Material</h1>
+<div class="docs-markdown"><h1 id="theming-angular-material" translation-result="on">Angular Material 主题</h1><h1 translation-origin="off" id="theming-angular-material">Theming Angular Material</h1>
         <h2 id="what-is-theming" class="docs-header-link" translation-result="on">
           <span header-link="什么是主题？"></span>
           什么是主题？
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------what-is-theming--------">
           <span header-link="what-is-theming"></span>
           What is theming?
         </h2>
       
         
-      <p translation-result="on">Angular Material 的主题体系允许你为应用程序中的组件自定义颜色、排版和密集度样式。此主题体系基于 Google 的 <a href="https://material.io/design/material-theming/overview.html">Material Design</a> 规范。</p><p translation-origin="off">Angular Material's theming system lets you customize color, typography, and density styles for components
+      <p translation-result="on">Angular Material 的主题体系允许你为应用程序中的组件自定义颜色、排版和密集度样式。此主题体系基于 Google 的 <a href="https://material.io/design/material-theming/overview.html">Material Design</a> 规范。</p><p translation-result="on">本文档介绍了自定义颜色的概念和 API。关于排版的定制指南参见 <a href="https://material.angular.io/guide/typography">Angular Material 排版</a>。关于如何使用此系统来构建自定义组件的指南，请参阅 <a href="https://material.angular.io/guide/theming-your-components">主题化你自己的组件</a>。</p><p translation-origin="off">Angular Material's theming system lets you customize color, typography, and density styles for components
 in your application. The theming system is based on Google's
 <a href="https://material.io/design/material-theming/overview.html">Material Design</a> specification.</p>
 
-<p translation-result="on">本文档介绍了自定义颜色的概念和 API。关于排版的定制指南参见 <a href="https://material.angular.io/guide/typography">Angular Material 排版</a>。关于如何使用此系统来构建自定义组件的指南，请参阅 <a href="https://material.angular.io/guide/theming-your-components">主题化你自己的组件</a>。</p><p translation-origin="off">This document describes the concepts and APIs for customizing colors. For typography customization,
+<p translation-origin="off">This document describes the concepts and APIs for customizing colors. For typography customization,
 see <a href="https://material.angular.io/guide/typography">Angular Material Typography</a>. For guidance on building components to be
 customizable with this system, see <a href="https://material.angular.io/guide/theming-your-components">Theming your own components</a>.</p>
 
@@ -21,10 +21,10 @@ customizable with this system, see <a href="https://material.angular.io/guide/th
           <span header-link="sass"></span>
           Sass
         </h3>
-      <p translation-result="on">Angular Material 的主题 API 是用 <a href="https://sass-lang.com">Sass</a> 构建的。本文档假设你熟悉 CSS 和 Sass 的基础知识，包括变量、函数和 mixin。</p><p translation-origin="off">Angular Material's theming APIs are built with <a href="https://sass-lang.com">Sass</a>. This document assumes
+      <p translation-result="on">Angular Material 的主题 API 是用 <a href="https://sass-lang.com">Sass</a> 构建的。本文档假设你熟悉 CSS 和 Sass 的基础知识，包括变量、函数和 mixin。</p><p translation-result="on">你可以通过使用预构建的主题在没有 Sass 的情况下使用 Angular Material，如下面的<a href="#using-a-pre-built-theme">使用预构建的主题</a>所述。但是，直接使用库的 Sass API 能让你最大程度地控制应用程序中的样式。</p><p translation-origin="off">Angular Material's theming APIs are built with <a href="https://sass-lang.com">Sass</a>. This document assumes
 familiarity with CSS and Sass basics, including variables, functions, and mixins.</p>
 
-<p translation-result="on">你可以通过使用预构建的主题在没有 Sass 的情况下使用 Angular Material，如下面的<a href="#using-a-pre-built-theme">使用预构建的主题</a>所述。但是，直接使用库的 Sass API 能让你最大程度地控制应用程序中的样式。</p><p translation-origin="off">You can use Angular Material without Sass by using a pre-built theme, described in
+<p translation-origin="off">You can use Angular Material without Sass by using a pre-built theme, described in
 <a href="#using-a-pre-built-theme">Using a pre-built theme</a> below. However, using the library's Sass API
 directly gives you the most control over the styles in your application.</p>
 
@@ -32,18 +32,18 @@ directly gives you the most control over the styles in your application.</p>
         <h2 id="palettes" class="docs-header-link" translation-result="on">
           <span header-link="调色板"></span>
           调色板
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------palettes--------">
           <span header-link="palettes"></span>
           Palettes
         </h2>
       
         
-      <p translation-result="on"><strong>调色板</strong>是代表颜色空间一部分的颜色集合。此集合中的每个值都称为<strong>色调</strong>。在 Material Design 中，调色板中的每个色调都有一个标识符数字。这些数字包括 50，以及 100 到 900 之间间隔 100 的所有值。这些编号会将调色板中的色调从最亮到最暗进行排序。</p><p translation-origin="off">A <strong>palette</strong> is a collection of colors representing a portion of color space. Each value in this
+      <p translation-result="on"><strong>调色板</strong>是代表颜色空间一部分的颜色集合。此集合中的每个值都称为<strong>色调</strong>。在 Material Design 中，调色板中的每个色调都有一个标识符数字。这些数字包括 50，以及 100 到 900 之间间隔 100 的所有值。这些编号会将调色板中的色调从最亮到最暗进行排序。</p><p translation-result="on">Angular Material 将调色板表示为 <a href="https://sass-lang.com/documentation/values/maps">Sass 映射表</a>。此映射表包含调色板的色调和每个色调的各个对比色的嵌套映射表。当使用某个色调作为背景色时，就会把其对比色用作文本颜色。下面的示例演示了调色板的结构。 <a href="https://material.io/design/color/the-color-system.html">更多背景信息，请参见 Material Design 的色彩体系</a>。</p><p translation-origin="off">A <strong>palette</strong> is a collection of colors representing a portion of color space. Each value in this
 collection is called a <strong>hue</strong>. In Material Design, each hues in a palette has an identifier number.
 These identifier numbers include 50, and then each 100 value between 100 and 900. The numbers order
 hues within a palette from lightest to darkest.</p>
 
-<p translation-result="on">Angular Material 将调色板表示为 <a href="https://sass-lang.com/documentation/values/maps">Sass 映射表</a>。此映射表包含调色板的色调和每个色调的各个对比色的嵌套映射表。当使用某个色调作为背景色时，就会把其对比色用作文本颜色。下面的示例演示了调色板的结构。 <a href="https://material.io/design/color/the-color-system.html">更多背景信息，请参见 Material Design 的色彩体系</a>。</p><p translation-origin="off">Angular Material represents a palette as a <a href="https://sass-lang.com/documentation/values/maps">Sass map</a>. This map contains the
+<p translation-origin="off">Angular Material represents a palette as a <a href="https://sass-lang.com/documentation/values/maps">Sass map</a>. This map contains the
 palette's hues and another nested map of contrast colors for each of the hues. The contrast colors
 serve as text color when using a hue as a background color. The example below demonstrates the
 structure of a palette. <a href="https://material.io/design/color/the-color-system.html">See the Material Design color system for more background.</a></p>
@@ -67,33 +67,33 @@ structure of a palette. <a href="https://material.io/design/color/the-color-syst
         <h3 id="create-your-own-palette" class="docs-header-link" translation-result="on">
           <span header-link="创建你自己的调色板"></span>
           创建你自己的调色板
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------create-your-own-palette--------">
           <span header-link="create-your-own-palette"></span>
           Create your own palette
         </h3>
       
         
-      <p translation-result="on">你可以通过定义与上面<a href="#palettes">调色板</a>部分中描述的结构相一致的 Sass 映射表来创建自己的调色板。映射表必须定义 50 的色调，以及 100 和 900 之间间隔 100 的每个色调。映射表还必须为每个色调定义具有对比色的 <code>contrast</code> 映射表。</p><p translation-origin="off">You can create your own palette by defining a Sass map that matches the structure described in the
+      <p translation-result="on">你可以通过定义与上面<a href="#palettes">调色板</a>部分中描述的结构相一致的 Sass 映射表来创建自己的调色板。映射表必须定义 50 的色调，以及 100 和 900 之间间隔 100 的每个色调。映射表还必须为每个色调定义具有对比色的 <code>contrast</code> 映射表。</p><p translation-result="on">你可以使用 <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material Design 调色板工具</a>来帮你选择调色板中的色调。</p><p translation-origin="off">You can create your own palette by defining a Sass map that matches the structure described in the
 <a href="#palettes">Palettes</a> section above. The map must define hues for 50 and each hundred between 100
 and 900. The map must also define a <code>contrast</code> map with contrast colors for each hue.</p>
 
-<p translation-result="on">你可以使用 <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">Material Design 调色板工具</a>来帮你选择调色板中的色调。</p><p translation-origin="off">You can use <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">the Material Design palette tool</a> to help choose the hues in your
+<p translation-origin="off">You can use <a href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors">the Material Design palette tool</a> to help choose the hues in your
 palette.</p>
 
 
         <h3 id="predefined-palettes" class="docs-header-link" translation-result="on">
           <span header-link="预定义的调色板"></span>
           预定义的调色板
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------predefined-palettes--------">
           <span header-link="predefined-palettes"></span>
           Predefined palettes
         </h3>
       
         
-      <p translation-result="on">Angular Material 提供了基于 2014 版 Material Design 规范的预定义调色板。有关完整列表，请参阅 <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">Material Design 2014 调色板</a>。</p><p translation-origin="off">Angular Material offers predefined palettes based on the 2014 version of the Material Design
+      <p translation-result="on">Angular Material 提供了基于 2014 版 Material Design 规范的预定义调色板。有关完整列表，请参阅 <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">Material Design 2014 调色板</a>。</p><p translation-result="on">除了编号从 0 到 900 的色调外，2014 年 Material Design 调色板还包括编号为 <code>A100</code>、 <code>A200</code>、 <code>A400</code> 和 <code>A700</code> 的显著<em>强调</em>色调。Angular Material 不需要这些色调，但你可以在定义主题时使用这些色调，如下面的<a href="#defining-a-theme">定义主题</a>中所述。</p><p translation-origin="off">Angular Material offers predefined palettes based on the 2014 version of the Material Design
 spec. See the <a href="https://material.io/archive/guidelines/style/color.html#color-color-palette">Material Design 2014 color palettes</a> for a full list.</p>
 
-<p translation-result="on">除了编号从 0 到 900 的色调外，2014 年 Material Design 调色板还包括编号为 <code>A100</code>、 <code>A200</code>、 <code>A400</code> 和 <code>A700</code> 的显著<em>强调</em>色调。Angular Material 不需要这些色调，但你可以在定义主题时使用这些色调，如下面的<a href="#defining-a-theme">定义主题</a>中所述。</p><p translation-origin="off">In addition to hues numbered from zero to 900, the 2014 Material Design palettes each include
+<p translation-origin="off">In addition to hues numbered from zero to 900, the 2014 Material Design palettes each include
 distinct <em>accent</em> hues numbered as <code>A100</code>, <code>A200</code>, <code>A400</code>, and <code>A700</code>. Angular Material does not
 require these hues, but you can use these hues when defining a theme as described in
 <a href="#defining-a-theme">Defining a theme</a> below.</p>
@@ -106,7 +106,7 @@ require these hues, but you can use these hues when defining a theme as describe
         <h2 id="themes" class="docs-header-link" translation-result="on">
           <span header-link="主题"></span>
           主题
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------themes--------">
           <span header-link="themes"></span>
           Themes
         </h2>
@@ -133,7 +133,7 @@ custom theme with Sass, or by importing a pre-built theme CSS file.</p>
         <h3 id="custom-themes-with-sass" class="docs-header-link" translation-result="on">
           <span header-link="使用-sass-自定义主题"></span>
           使用 Sass 自定义主题
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------custom-themes-with-sass--------">
           <span header-link="custom-themes-with-sass"></span>
           Custom themes with Sass
         </h3>
@@ -146,7 +146,7 @@ typography, and density CSS styles.</p>
         <h4 id="the-core-mixin" class="docs-header-link" translation-result="on">
           <span header-link="core-mixin（混入函数）"></span>
           <code>core</code> mixin（混入函数）
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------the-core-mixin--------">
           <span header-link="the-core-mixin"></span>
           The <code>core</code> mixin
         </h4>
@@ -165,17 +165,17 @@ times will result in duplicate CSS in your application.</p>
         <h4 id="defining-a-theme" class="docs-header-link" translation-result="on">
           <span header-link="定义主题"></span>
           定义主题
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------defining-a-theme--------">
           <span header-link="defining-a-theme"></span>
           Defining a theme
         </h4>
       
         
-      <p translation-result="on">Angular Material 用 Sass 映射表来表达主题，其中包含你的颜色、排版和密集度选择。有关自定义排版的更多信息，请参阅 <a href="https://material.angular.io/guide/typography">Angular Material 排版</a>。</p><p translation-origin="off">Angular Material represents a theme as a Sass map that contains your color, typography, and density
+      <p translation-result="on">Angular Material 用 Sass 映射表来表达主题，其中包含你的颜色、排版和密集度选择。有关自定义排版的更多信息，请参阅 <a href="https://material.angular.io/guide/typography">Angular Material 排版</a>。</p><p translation-result="on">构建主题首先需要定义你的 <code>primary</code>(主要)和 <code>accent</code>(重音)调色板，以及可选的 <code>warn</code>(警告)调色板。Sass 函数 <code>define-palette</code> 接受一个调色板（这在上面的<a href="#palettes">调色板</a>部分中讲过）以及四个可选的色调数值。这四种色调依次表示：“default(默认)”色调、“lighter(较浅)”色调、“darker(较暗)”色调和“text(文本)”色调。各个组件会使用这些色调为自身的不同部位选择最合适的颜色。</p><p translation-origin="off">Angular Material represents a theme as a Sass map that contains your color, typography, and density
 choices. See <a href="https://material.angular.io/guide/typography">Angular Material Typography</a> for an in-depth guide to customizing typography. See
 <a href="#customizing-density">Customizing density</a> below for details on adjusting component density.</p>
 
-<p translation-result="on">构建主题首先需要定义你的 <code>primary</code>(主要)和 <code>accent</code>(重音)调色板，以及可选的 <code>warn</code>(警告)调色板。Sass 函数 <code>define-palette</code> 接受一个调色板（这在上面的<a href="#palettes">调色板</a>部分中讲过）以及四个可选的色调数值。这四种色调依次表示：“default(默认)”色调、“lighter(较浅)”色调、“darker(较暗)”色调和“text(文本)”色调。各个组件会使用这些色调为自身的不同部位选择最合适的颜色。</p><p translation-origin="off">Constructing the theme first requires defining your primary and accent palettes, with an optional
+<p translation-origin="off">Constructing the theme first requires defining your primary and accent palettes, with an optional
 warn palette. The <code>define-palette</code> Sass function accepts a color palette, described in the
 <a href="#palettes">Palettes</a> section above, as well as four optional hue numbers. These four hues
 represent, in order: the "default" hue, a "lighter" hue, a "darker" hue, and a "text" hue.
@@ -216,24 +216,24 @@ background and foreground colors used throughout the components.</p>
         <h4 id="applying-a-theme-to-components" class="docs-header-link" translation-result="on">
           <span header-link="将主题应用于组件"></span>
           将主题应用于组件
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------applying-a-theme-to-components--------">
           <span header-link="applying-a-theme-to-components"></span>
           Applying a theme to components
         </h4>
       
         
-      <p translation-result="on">Sass mixin <code>core-theme</code> 会为多个组件使用的通用功能（例如涟漪）生成先决样式。每个主题必须包含一次这个 mixin。</p><p translation-origin="off">The <code>core-theme</code> Sass mixin emits prerequisite styles for common features used by multiple
+      <p translation-result="on">Sass mixin <code>core-theme</code> 会为多个组件使用的通用功能（例如涟漪）生成先决样式。每个主题必须包含一次这个 mixin。</p><p translation-result="on">每个 Angular Material 组件都有一个生成颜色、排版和密集度样式的 mixin。比如，<code>MatButton</code> 就声明了 <code>button-color</code>、<code>button-typography</code> 和 <code>button-density</code>。每个 mixin 都只会生成与其负责定制化的区域相对应的样式。</p><p translation-origin="off">The <code>core-theme</code> Sass mixin emits prerequisite styles for common features used by multiple
 components, such as ripples. This mixin must be included once per theme.</p>
 
-<p translation-result="on">每个 Angular Material 组件都有一个生成颜色、排版和密集度样式的 mixin。比如，<code>MatButton</code> 就声明了 <code>button-color</code>、<code>button-typography</code> 和 <code>button-density</code>。每个 mixin 都只会生成与其负责定制化的区域相对应的样式。</p><p translation-origin="off">Each Angular Material component has a mixin for each color , typography, and density. For example, <code>MatButton</code> declares
+<p translation-result="on">此外，每个组件都有一个 <code>theme</code> mixin，它会根据主题配置生成所有样式。如果你为 <code>define-light-theme</code> 或 <code>define-dark-theme</code> 提供了相应的配置，则这个 <code>theme</code> mixin 只会生成颜色、排版或密集度样式。</p><p translation-origin="off">Each Angular Material component has a mixin for each color , typography, and density. For example, <code>MatButton</code> declares
 <code>button-color</code>, <code>button-typography</code>, and <code>button-density</code>. Each mixin emits only the styles corresponding to that
 area of customization.</p>
 
-<p translation-result="on">此外，每个组件都有一个 <code>theme</code> mixin，它会根据主题配置生成所有样式。如果你为 <code>define-light-theme</code> 或 <code>define-dark-theme</code> 提供了相应的配置，则这个 <code>theme</code> mixin 只会生成颜色、排版或密集度样式。</p><p translation-origin="off">Additionally, each component has a "theme" mixin that emits all styles that depend on the theme config.
+<p translation-result="on">通过包含 (<code>include</code>) 每个主题 Sass mixins，可以为应用程序中使用的每个组件应用样式。</p><p translation-origin="off">Additionally, each component has a "theme" mixin that emits all styles that depend on the theme config.
 This theme mixin only emits color, typography, or density styles if you provided a corresponding
 configuration to <code>define-light-theme</code> or <code>define-dark-theme</code>.</p>
 
-<p translation-result="on">通过包含 (<code>include</code>) 每个主题 Sass mixins，可以为应用程序中使用的每个组件应用样式。</p><p translation-origin="off">Apply the styles for each of the components used in your application by including each of their
+<p translation-origin="off">Apply the styles for each of the components used in your application by including each of their
 theme Sass mixins.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
@@ -292,7 +292,7 @@ your project's <code>angular.json</code> file</a>.</p>
         <h3 id="using-a-pre-built-theme" class="docs-header-link" translation-result="on">
           <span header-link="使用预构建主题"></span>
           使用预构建主题
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------using-a-pre-built-theme--------">
           <span header-link="using-a-pre-built-theme"></span>
           Using a pre-built theme
         </h3>
@@ -335,12 +335,12 @@ You can use one of these pre-built themes if you don't want to define a custom t
 </tr>
 
 </tbody></table>
-<p translation-result="on">这些文件包括库中每个组件的 CSS。如果要单独包含这些组件的某个子集的 CSS，你必须使用上面<a href="#defining-a-theme">定义主题</a>中详述的 Sass API。你可以<a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">参考这些预建主题的源代码</a>查看完整主题定义的示例。</p><p translation-origin="off">These files include the CSS for every component in the library. To include only the CSS for a subset
+<p translation-result="on">这些文件包括库中每个组件的 CSS。如果要单独包含这些组件的某个子集的 CSS，你必须使用上面<a href="#defining-a-theme">定义主题</a>中详述的 Sass API。你可以<a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">参考这些预建主题的源代码</a>查看完整主题定义的示例。</p><p translation-result="on">你可以在 Angular Material 的 npm 包 ( <code>@angular/material/prebuilt-themes</code> ) 的 <code>prebuilt-themes</code> 目录中找到预构建的主题文件。要在你的应用程序中包含预先构建的主题，<a href="https://angular.io/guide/workspace-config#styles-and-scripts-configuration">请将你选择的 CSS 文件添加到你项目的 <code>angular.json</code> 文件的 <code>styles</code> 数组中</a>。</p><p translation-origin="off">These files include the CSS for every component in the library. To include only the CSS for a subset
 of components, you must use the Sass API detailed in <a href="#defining-a-theme">Defining a theme</a> above.
 You can <a href="https://github.com/angular/components/blob/main/src/material/core/theming/prebuilt">reference the source code for these pre-built themes</a> to see examples of complete
 theme definitions.</p>
 
-<p translation-result="on">你可以在 Angular Material 的 npm 包 ( <code>@angular/material/prebuilt-themes</code> ) 的 <code>prebuilt-themes</code> 目录中找到预构建的主题文件。要在你的应用程序中包含预先构建的主题，<a href="https://angular.io/guide/workspace-config#styles-and-scripts-configuration">请将你选择的 CSS 文件添加到你项目的 <code>angular.json</code> 文件的 <code>styles</code> 数组中</a>。</p><p translation-origin="off">You can find the pre-built theme files in the "prebuilt-themes" directory of Angular Material's
+<p translation-origin="off">You can find the pre-built theme files in the "prebuilt-themes" directory of Angular Material's
 npm package (<code>@angular/material/prebuilt-themes</code>). To include the pre-built theme in your
 application, <a href="https://angular.io/guide/workspace-config#styles-and-scripts-configuration">add your chosen CSS file to the <code>styles</code> array of your project's <code>angular.json</code>
 file</a>.</p>
@@ -349,7 +349,7 @@ file</a>.</p>
         <h3 id="defining-multiple-themes" class="docs-header-link" translation-result="on">
           <span header-link="定义多重主题"></span>
           定义多重主题
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------defining-multiple-themes--------">
           <span header-link="defining-multiple-themes"></span>
           Defining multiple themes
         </h3>
@@ -363,17 +363,17 @@ theme file or in separate theme files.</p>
         <h4 id="multiple-themes-in-one-file" class="docs-header-link" translation-result="on">
           <span header-link="一个文件中的多重主题"></span>
           一个文件中的多重主题
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------multiple-themes-in-one-file--------">
           <span header-link="multiple-themes-in-one-file"></span>
           Multiple themes in one file
         </h4>
       
         
-      <p translation-result="on">在单个文件中定义多重主题，能让你支持多重主题而无需管理多个 CSS 资产文件的加载。然而，代价是你的 CSS 将包含不必要的样式。</p><p translation-origin="off">Defining multiple themes in a single file allows you to support multiple themes without having to
+      <p translation-result="on">在单个文件中定义多重主题，能让你支持多重主题而无需管理多个 CSS 资产文件的加载。然而，代价是你的 CSS 将包含不必要的样式。</p><p translation-result="on">要控制何时应用哪个主题， 请在通过 CSS 规则声明指定的上下文中 <code>@include</code> 这些 mixin。有关更多背景信息，请参阅 <a href="https://sass-lang.com/documentation/at-rules/mixin">Sass mixins 文档</a>。</p><p translation-origin="off">Defining multiple themes in a single file allows you to support multiple themes without having to
 manage loading of multiple CSS assets. The downside, however, is that your CSS will include more
 styles than necessary.</p>
 
-<p translation-result="on">要控制何时应用哪个主题， 请在通过 CSS 规则声明指定的上下文中 <code>@include</code> 这些 mixin。有关更多背景信息，请参阅 <a href="https://sass-lang.com/documentation/at-rules/mixin">Sass mixins 文档</a>。</p><p translation-origin="off">To control which theme applies when, <code>@include</code> the mixins only within a context specified via
+<p translation-origin="off">To control which theme applies when, <code>@include</code> the mixins only within a context specified via
 CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-rules/mixin">documentation for Sass mixins</a> for further background.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
@@ -415,7 +415,7 @@ CSS rule declaration. See the <a href="https://sass-lang.com/documentation/at-ru
         <h4 id="multiple-themes-across-separate-files" class="docs-header-link" translation-result="on">
           <span header-link="跨文件的多重主题"></span>
           跨文件的多重主题
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------multiple-themes-across-separate-files--------">
           <span header-link="multiple-themes-across-separate-files"></span>
           Multiple themes across separate files
         </h4>
@@ -432,7 +432,7 @@ file. The approach for this loading depends on your application.</p>
         <h3 id="application-background-color" class="docs-header-link" translation-result="on">
           <span header-link="应用背景颜色"></span>
           应用背景颜色
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------application-background-color--------">
           <span header-link="application-background-color"></span>
           Application background color
         </h3>
@@ -454,7 +454,7 @@ to match the components' theme, you can either:</p>
         <h3 id="scoping-style-customizations" class="docs-header-link" translation-result="on">
           <span header-link="范围化样式的自定义方式"></span>
           范围化样式的自定义方式
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------scoping-style-customizations--------">
           <span header-link="scoping-style-customizations"></span>
           Scoping style customizations
         </h3>
@@ -481,7 +481,7 @@ The example below shows how to customize the color of all buttons inside element
         <h3 id="reading-hues-from-palettes" class="docs-header-link" translation-result="on">
           <span header-link="从调色板读取色调"></span>
           从调色板读取色调
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------reading-hues-from-palettes--------">
           <span header-link="reading-hues-from-palettes"></span>
           Reading hues from palettes
         </h3>
@@ -516,27 +516,27 @@ passed to <code>define-palette</code>.</p>
         <h2 id="customizing-density" class="docs-header-link" translation-result="on">
           <span header-link="自定义密集度"></span>
           自定义密集度
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------customizing-density--------">
           <span header-link="customizing-density"></span>
           Customizing density
         </h2>
       
         
-      <p translation-result="on">Angular Material 的密集度定制是基于 <a href="https://m2.material.io/design/layout/applying-density.html">Material Design 密集度指南</a>的。该系统定义了一个等级，其中零表示默认密集度。你可以减少该数字以<em>增加密集度</em>，增加该数字以<em>减少密集度</em>。</p><p translation-origin="off">Angular Material's density customization is based on the
+      <p translation-result="on">Angular Material 的密集度定制是基于 <a href="https://m2.material.io/design/layout/applying-density.html">Material Design 密集度指南</a>的。该系统定义了一个等级，其中零表示默认密集度。你可以减少该数字以<em>增加密集度</em>，增加该数字以<em>减少密集度</em>。</p><p translation-result="on">密集度系统基于某个<em>密集度等级</em>。此等级以默认密集度 <code>0</code> 开始。每个整数递减（<code>-1</code>、<code>-2</code> 等）都会将受影响的尺寸减小 <code>4px</code> ，直至组件连续渲染所需的最小尺寸。</p><p translation-origin="off">Angular Material's density customization is based on the
 <a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidelines</a>. This system
 defines a scale where zero represents the default density. You can decrement the number for <em>more density</em> and increment
 the number for <em>less density</em>.</p>
 
-<p translation-result="on">密集度系统基于某个<em>密集度等级</em>。此等级以默认密集度 <code>0</code> 开始。每个整数递减（<code>-1</code>、<code>-2</code> 等）都会将受影响的尺寸减小 <code>4px</code> ，直至组件连续渲染所需的最小尺寸。</p><p translation-origin="off">The density system is based on a <em>density scale</em>. The scale starts with the
+<p translation-result="on">出现在基于任务的或弹出上下文中的组件，例如 <code>MatDatepicker</code>，无法通过密集度体系更改它们的大小。 <a href="https://m2.material.io/design/layout/applying-density.html">Material Design 密集度指南</a>明确反对增加此类交互的密集度，因为它们不会在应用程序的布局中进行空间竞争。</p><p translation-origin="off">The density system is based on a <em>density scale</em>. The scale starts with the
 default density of <code>0</code>. Each whole number step down (<code>-1</code>, <code>-2</code>, etc.) reduces
 the affected sizes by <code>4px</code>, down to the minimum size necessary for a component to render coherently.</p>
 
-<p translation-result="on">出现在基于任务的或弹出上下文中的组件，例如 <code>MatDatepicker</code>，无法通过密集度体系更改它们的大小。 <a href="https://m2.material.io/design/layout/applying-density.html">Material Design 密集度指南</a>明确反对增加此类交互的密集度，因为它们不会在应用程序的布局中进行空间竞争。</p><p translation-origin="off">Components that appear in task-based or pop-up contexts, such as <code>MatDatepicker</code>, don't change their size via the
+<p translation-result="on">你可以将自定义密集度设置应用于整个库，或使用它们的 density Sass mixin 将其应用于单个组件。</p><p translation-origin="off">Components that appear in task-based or pop-up contexts, such as <code>MatDatepicker</code>, don't change their size via the
 density system. The <a href="https://m2.material.io/design/layout/applying-density.html">Material Design density guidance</a>
 explicitly discourages increasing density for such interactions because they don't compete for space in the
 application's layout.</p>
 
-<p translation-result="on">你可以将自定义密集度设置应用于整个库，或使用它们的 density Sass mixin 将其应用于单个组件。</p><p translation-origin="off">You can apply custom density setting to the entire library or to individual components using their density Sass mixins.</p>
+<p translation-origin="off">You can apply custom density setting to the entire library or to individual components using their density Sass mixins.</p>
 
 <pre><code class="language-scss"><span class="hljs-comment">// You can set a density setting in your theme to apply to all components.</span>
 <span class="hljs-variable">$dark-theme</span>: mat.define-dark-theme((
@@ -554,29 +554,29 @@ application's layout.</p>
         <h2 id="strong-focus-indicators" class="docs-header-link" translation-result="on">
           <span header-link="强焦点指示器"></span>
           强焦点指示器
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------strong-focus-indicators--------">
           <span header-link="strong-focus-indicators"></span>
           Strong focus indicators
         </h2>
       
         
-      <p translation-result="on">默认情况下，大多数组件通过更改 Material Design 规范中描述的背景颜色来指示浏览器焦点。但是，此行为可能无法满足无障碍性要求，例如 <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG</a>，后者要求更强烈地指示浏览器焦点。</p><p translation-origin="off">By default, most components indicate browser focus by changing their background color as described
+      <p translation-result="on">默认情况下，大多数组件通过更改 Material Design 规范中描述的背景颜色来指示浏览器焦点。但是，此行为可能无法满足无障碍性要求，例如 <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG</a>，后者要求更强烈地指示浏览器焦点。</p><p translation-result="on">Angular Material 支持在有焦点的元素上渲染高度可见的轮廓。应用程序可以通过两个 Sass mixin 启用这些强焦点指示器： <code>strong-focus-indicators</code> 和 <code>strong-focus-indicators-theme</code> 。</p><p translation-origin="off">By default, most components indicate browser focus by changing their background color as described
 by the Material Design specification. This behavior, however, can fall short of accessibility
 requirements, such as <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG</a>, which require a stronger indication of browser focus.</p>
 
-<p translation-result="on">Angular Material 支持在有焦点的元素上渲染高度可见的轮廓。应用程序可以通过两个 Sass mixin 启用这些强焦点指示器： <code>strong-focus-indicators</code> 和 <code>strong-focus-indicators-theme</code> 。</p><p translation-origin="off">Angular Material supports rendering highly visible outlines on focused elements. Applications can
+<p translation-result="on"><code>strong-focus-indicators</code> mixin 会为所有组件生成结构化指示器样式。这个 mixin 应该在应用程序中只包含一次，类似于上面描述的 <code>core</code> mixin。</p><p translation-origin="off">Angular Material supports rendering highly visible outlines on focused elements. Applications can
 enable these strong focus indicators via two Sass mixins:
 <code>strong-focus-indicators</code> and <code>strong-focus-indicators-theme</code>.</p>
 
-<p translation-result="on"><code>strong-focus-indicators</code> mixin 会为所有组件生成结构化指示器样式。这个 mixin 应该在应用程序中只包含一次，类似于上面描述的 <code>core</code> mixin。</p><p translation-origin="off">The <code>strong-focus-indicators</code> mixin emits structural indicator styles for all components. This mixin
+<p translation-result="on"><code>strong-focus-indicators-theme</code> mixin 只会生成指示器的颜色样式。这个 mixin 应该包含在每个主题中，类似于上面描述的主题 mixin。此外，在默认颜色与背景颜色对比不足的情况下，你可以使用此 mixin 来更改焦点指示器的颜色。</p><p translation-origin="off">The <code>strong-focus-indicators</code> mixin emits structural indicator styles for all components. This mixin
 should be included exactly once in an application, similar to the <code>core</code> mixin described above.</p>
 
-<p translation-result="on"><code>strong-focus-indicators-theme</code> mixin 只会生成指示器的颜色样式。这个 mixin 应该包含在每个主题中，类似于上面描述的主题 mixin。此外，在默认颜色与背景颜色对比不足的情况下，你可以使用此 mixin 来更改焦点指示器的颜色。</p><p translation-origin="off">The <code>strong-focus-indicators-theme</code> mixin emits only the indicator's color styles. This mixin should
+<p translation-result="on">以下示例在应用程序中包含强焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The <code>strong-focus-indicators-theme</code> mixin emits only the indicator's color styles. This mixin should
 be included once per theme, similar to the theme mixins described above. Additionally, you can use
 this mixin to change the color of the focus indicators in situations in which the default color
 would not contrast sufficiently with the background color.</p>
 
-<p translation-result="on">以下示例在应用程序中包含强焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The following example includes strong focus indicator styles in an application alongside the rest of
+<p translation-origin="off">The following example includes strong focus indicator styles in an application alongside the rest of
 the custom theme API.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
@@ -601,20 +601,20 @@ the custom theme API.</p>
         <h3 id="customizing-strong-focus-indicators" class="docs-header-link" translation-result="on">
           <span header-link="自定义强焦点指示器"></span>
           自定义强焦点指示器
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------customizing-strong-focus-indicators--------">
           <span header-link="customizing-strong-focus-indicators"></span>
           Customizing strong focus indicators
         </h3>
       
         
-      <p translation-result="on">你可以将配置映射传递给 <code>strong-focus-indicators</code> 以自定义指标的外观。此配置包括 <code>border-style</code> 、 <code>border-width</code> 和 <code>border-radius</code> 。</p><p translation-origin="off">You can pass a configuration map to <code>strong-focus-indicators</code> to customize the appearance of the
+      <p translation-result="on">你可以将配置映射传递给 <code>strong-focus-indicators</code> 以自定义指标的外观。此配置包括 <code>border-style</code> 、 <code>border-width</code> 和 <code>border-radius</code> 。</p><p translation-result="on">你还可以使用 <code>strong-focus-indicators-theme</code> 自定义指标的颜色。这个 mixin 接受一个主题，如本指南前面所述，或者一个 CSS 颜色值。提供主题时，指标将使用主调色板的默认色调。</p><p translation-origin="off">You can pass a configuration map to <code>strong-focus-indicators</code> to customize the appearance of the
 indicators. This configuration includes <code>border-style</code>, <code>border-width</code>, and <code>border-radius</code>.</p>
 
-<p translation-result="on">你还可以使用 <code>strong-focus-indicators-theme</code> 自定义指标的颜色。这个 mixin 接受一个主题，如本指南前面所述，或者一个 CSS 颜色值。提供主题时，指标将使用主调色板的默认色调。</p><p translation-origin="off">You also can customize the color of indicators with <code>strong-focus-indicators-theme</code>. This mixin
+<p translation-result="on">以下示例包括具有自定义设置的强焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">You also can customize the color of indicators with <code>strong-focus-indicators-theme</code>. This mixin
 accepts either a theme, as described earlier in this guide, or a CSS color value. When providing a
 theme, the indicators will use the default hue of the primary palette.</p>
 
-<p translation-result="on">以下示例包括具有自定义设置的强焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The following example includes strong focus indicator styles with custom settings alongside the rest
+<p translation-origin="off">The following example includes strong focus indicator styles with custom settings alongside the rest
 of the custom theme API.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
@@ -643,7 +643,7 @@ of the custom theme API.</p>
         <h2 id="theming-and-style-encapsulation" class="docs-header-link" translation-result="on">
           <span header-link="主题和样式封装"></span>
           主题和样式封装
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------theming-and-style-encapsulation--------">
           <span header-link="theming-and-style-encapsulation"></span>
           Theming and style encapsulation
         </h2>
@@ -658,7 +658,7 @@ the CSS in each shadow root, or by using <a href="https://developers.google.com/
         <h2 id="user-preference-media-queries" class="docs-header-link" translation-result="on">
           <span header-link="用户偏好媒体查询"></span>
           用户偏好媒体查询
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------user-preference-media-queries--------">
           <span header-link="user-preference-media-queries"></span>
           User preference media queries
         </h2>
@@ -673,7 +673,7 @@ queries directly or reading a saved user preference.</p>
         <h2 id="style-customization-outside-the-theming-system" class="docs-header-link" translation-result="on">
           <span header-link="主题体系之外的风格定制"></span>
           主题体系之外的风格定制
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------style-customization-outside-the-theming-system--------">
           <span header-link="style-customization-outside-the-theming-system"></span>
           Style customization outside the theming system
         </h2>

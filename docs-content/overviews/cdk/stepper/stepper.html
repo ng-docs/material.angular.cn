@@ -5,7 +5,7 @@ stepper is a wizard-like workflow that divides content into logical steps</p>
         <h3 id="behavior-captured-by-cdkstepper" class="docs-header-link" translation-result="on">
           <span header-link="cdkstepper-所捕获的行为"></span>
           CdkStepper 所捕获的行为
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------behavior-captured-by-cdkstepper--------">
           <span header-link="behavior-captured-by-cdkstepper"></span>
           Behavior captured by CdkStepper
         </h3>
@@ -18,20 +18,20 @@ keyboard interactions and exposing an API for advancing or rewinding through the
         <h4 id="linear-stepper" class="docs-header-link" translation-result="on">
           <span header-link="线性步进器"></span>
           线性步进器
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------linear-stepper--------">
           <span header-link="linear-stepper"></span>
           Linear stepper
         </h4>
       
         
-      <p translation-result="on">标记为 <code>linear</code> 的步进器要求用户在继续下一步之前完成前面的步骤。对于每一个步骤来说，其 <code>stepControl</code> 属性都可以设置为顶级的 <code>AbstractControl</code>，用于检查该步骤的有效性。</p><p translation-origin="off">A stepper marked as <code>linear</code> requires the user to complete previous steps before proceeding.
+      <p translation-result="on">标记为 <code>linear</code> 的步进器要求用户在继续下一步之前完成前面的步骤。对于每一个步骤来说，其 <code>stepControl</code> 属性都可以设置为顶级的 <code>AbstractControl</code>，用于检查该步骤的有效性。</p><p translation-result="on">有两种可能的方式。一种是使用单一表单进行步进，另一种是使用不同的表单进行步进。</p><p translation-origin="off">A stepper marked as <code>linear</code> requires the user to complete previous steps before proceeding.
 For each step, the <code>stepControl</code> attribute can be set to the top level <code>AbstractControl</code> that
 is used to check the validity of the step.</p>
 
-<p translation-result="on">有两种可能的方式。一种是使用单一表单进行步进，另一种是使用不同的表单进行步进。</p><p translation-origin="off">There are two possible approaches. One is using a single form for stepper, and the other is
+<p translation-result="on">或者，如果你不想使用 Angular 表单，也可以把 <code>completed</code> 属性传入每个步骤，这些步骤会阻止用户继续，直到这个属性变为 <code>true</code>。注意，如果同时设置了 <code>completed</code> 和 <code>stepControl</code>，则 <code>stepControl</code> 优先。</p><p translation-origin="off">There are two possible approaches. One is using a single form for stepper, and the other is
 using a different form for each step.</p>
 
-<p translation-result="on">或者，如果你不想使用 Angular 表单，也可以把 <code>completed</code> 属性传入每个步骤，这些步骤会阻止用户继续，直到这个属性变为 <code>true</code>。注意，如果同时设置了 <code>completed</code> 和 <code>stepControl</code>，则 <code>stepControl</code> 优先。</p><p translation-origin="off">Alternatively, if you don't want to use the Angular forms, you can pass in the <code>completed</code> property
+<p translation-origin="off">Alternatively, if you don't want to use the Angular forms, you can pass in the <code>completed</code> property
 to each of the steps which won't allow the user to continue until it becomes <code>true</code>. Note that if
 both <code>completed</code> and <code>stepControl</code> are set, the <code>stepControl</code> will take precedence.</p>
 
@@ -39,7 +39,7 @@ both <code>completed</code> and <code>stepControl</code> are set, the <code>step
         <h4 id="using-a-single-form-for-the-entire-stepper" class="docs-header-link" translation-result="on">
           <span header-link="在整个步进器中使用同一个表单"></span>
           在整个步进器中使用同一个表单
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------using-a-single-form-for-the-entire-stepper--------">
           <span header-link="using-a-single-form-for-the-entire-stepper"></span>
           Using a single form for the entire stepper
         </h4>
@@ -53,7 +53,7 @@ complete.</p>
         <h4 id="using-a-form-for-each-individual-step" class="docs-header-link" translation-result="on">
           <span header-link="每个步骤各自使用一个表单"></span>
           每个步骤各自使用一个表单
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------using-a-form-for-each-individual-step--------">
           <span header-link="using-a-form-for-each-individual-step"></span>
           Using a form for each individual step
         </h4>
@@ -65,7 +65,7 @@ complete.</p>
         <h3 id="types-of-steps" class="docs-header-link" translation-result="on">
           <span header-link="步骤的类型"></span>
           步骤的类型
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------types-of-steps--------">
           <span header-link="types-of-steps"></span>
           Types of steps
         </h3>
@@ -75,7 +75,7 @@ complete.</p>
         <h4 id="optional-step" class="docs-header-link" translation-result="on">
           <span header-link="可选步骤"></span>
           可选步骤
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------optional-step--------">
           <span header-link="optional-step"></span>
           Optional step
         </h4>
@@ -88,7 +88,7 @@ on <code>CdkStep</code> in a <code>linear</code> stepper.</p>
         <h4 id="editable-step" class="docs-header-link" translation-result="on">
           <span header-link="可编辑的步骤"></span>
           可编辑的步骤
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------editable-step--------">
           <span header-link="editable-step"></span>
           Editable step
         </h4>
@@ -101,7 +101,7 @@ edit their responses. <code>editable="false"</code> can be set on <code>CdkStep<
         <h4 id="completed-step" class="docs-header-link" translation-result="on">
           <span header-link="完成步骤"></span>
           完成步骤
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------completed-step--------">
           <span header-link="completed-step"></span>
           Completed step
         </h4>
@@ -115,7 +115,7 @@ this default <code>completed</code> behavior by setting the <code>completed</cod
         <h3 id="stepper-buttons" class="docs-header-link" translation-result="on">
           <span header-link="步进按钮"></span>
           步进按钮
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------stepper-buttons--------">
           <span header-link="stepper-buttons"></span>
           Stepper buttons
         </h3>
@@ -129,7 +129,7 @@ add click handlers to advance or rewind the workflow, respectively.</p>
         <h3 id="resetting-a-stepper" class="docs-header-link" translation-result="on">
           <span header-link="重置步进器的某个步骤"></span>
           重置步进器的某个步骤
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------resetting-a-stepper--------">
           <span header-link="resetting-a-stepper"></span>
           Resetting a stepper
         </h3>
@@ -142,7 +142,7 @@ resetting it will call <code>reset</code> on the underlying form control which c
         <h3 id="keyboard-interaction" class="docs-header-link" translation-result="on">
           <span header-link="键盘交互"></span>
           键盘交互
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------keyboard-interaction--------">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
         </h3>
@@ -181,19 +181,19 @@ resetting it will call <code>reset</code> on the underlying form control which c
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
-      <p translation-result="on">除了内置的键盘支持外，步进器不进行任何处理。在实现你自己的组件时，建议将步进器视为无障碍性的选项卡式视图，方法是为其指定 <code>role="tablist"</code>。可以点击具有 <code>role="tab"</code> 属性的步骤头部来选择此步骤，选择后能展开的内容应该具有 <code>role="tabpanel"</code> 属性。此外，步骤标题应该有一个 <code>aria-selected</code> 属性来反映它的选择状态，并且相关的内容元素应该有 <code>aria-expanded</code> 属性。</p><p translation-origin="off">Apart from the built-in keyboard support, the stepper doesn't apply any treatment. When implementing
+      <p translation-result="on">除了内置的键盘支持外，步进器不进行任何处理。在实现你自己的组件时，建议将步进器视为无障碍性的选项卡式视图，方法是为其指定 <code>role="tablist"</code>。可以点击具有 <code>role="tab"</code> 属性的步骤头部来选择此步骤，选择后能展开的内容应该具有 <code>role="tabpanel"</code> 属性。此外，步骤标题应该有一个 <code>aria-selected</code> 属性来反映它的选择状态，并且相关的内容元素应该有 <code>aria-expanded</code> 属性。</p><p translation-result="on">你可以参考 <a href="https://github.com/angular/components/tree/main/src/material/stepper">Angular Material 步进器</a>作为无障碍实现的示例。</p><p translation-origin="off">Apart from the built-in keyboard support, the stepper doesn't apply any treatment. When implementing
 your own component, it is recommended that the stepper is treated as a tabbed view for accessibility
 purposes by giving it a <code>role="tablist"</code>. The header of step that can be clicked to select the step
 should be given <code>role="tab"</code>, and the content that can be expanded upon selection should be given
 <code>role="tabpanel"</code>. Furthermore, the step header should have an <code>aria-selected</code> attribute that
 reflects its selected state.</p>
 
-<p translation-result="on">你可以参考 <a href="https://github.com/angular/components/tree/main/src/material/stepper">Angular Material 步进器</a>作为无障碍实现的示例。</p><p translation-origin="off">You can refer to the <a href="https://github.com/angular/components/tree/main/src/material/stepper">Angular Material stepper</a> as an example of an accessible implementation.</p>
+<p translation-origin="off">You can refer to the <a href="https://github.com/angular/components/tree/main/src/material/stepper">Angular Material stepper</a> as an example of an accessible implementation.</p>
 
 </div>

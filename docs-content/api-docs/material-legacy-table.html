@@ -446,16 +446,16 @@ tables that animate rows.</p>
 </li>
 </ul>
 <p translation-result="on">如果提供了数组，那么在添加、删除或移动该数组的对象时，都必须通知该表格。
-这可以通过调用 <code>renderRows()</code> 函数来完成，它会渲染自上次渲染表格以来的差异部分。如果数据数组的引用发生了变化，该表格会自动触发对行的更新。</p><p translation-origin="off">If a data array is provided, the table must be notified when the array's objects are
+这可以通过调用 <code>renderRows()</code> 函数来完成，它会渲染自上次渲染表格以来的差异部分。如果数据数组的引用发生了变化，该表格会自动触发对行的更新。</p><p translation-result="on">当提供一个可观察的流时，如果该流发出一个新的数据数组，该表格就会自动触发一次更新。</p><p translation-origin="off">If a data array is provided, the table must be notified when the array's objects are
 added, removed, or moved. This can be done by calling the <code>renderRows()</code> function which will
 render the diff since the last table render. If the data array reference is changed, the table
 will automatically trigger an update to the rows.</p>
 
-<p translation-result="on">当提供一个可观察的流时，如果该流发出一个新的数据数组，该表格就会自动触发一次更新。</p><p translation-origin="off">When providing an Observable stream, the table will trigger an update automatically when the
+<p translation-result="on">最后，在提供 <code>DataSource</code> 对象时，该表格将使用 connect 函数提供的 Observable 流，并在该流发出新的数据数组值时触发更新。
+在表格的 ngOnDestroy 中，或者从表格中删除了数据源时，该表格会调用数据源的 <code>disconnect</code> 函数（这可能对清理在连接过程中注册的所有订阅很有帮助）。</p><p translation-origin="off">When providing an Observable stream, the table will trigger an update automatically when the
 stream emits a new array of data.</p>
 
-<p translation-result="on">最后，在提供 <code>DataSource</code> 对象时，该表格将使用 connect 函数提供的 Observable 流，并在该流发出新的数据数组值时触发更新。
-在表格的 ngOnDestroy 中，或者从表格中删除了数据源时，该表格会调用数据源的 <code>disconnect</code> 函数（这可能对清理在连接过程中注册的所有订阅很有帮助）。</p><p translation-origin="off">Finally, when providing a <code>DataSource</code> object, the table will use the Observable stream
+<p translation-origin="off">Finally, when providing a <code>DataSource</code> object, the table will use the Observable stream
 provided by the connect function and trigger updates when that stream emits new data array
 values. During the table's ngOnDestroy or when the data source is removed from the table, the
 table will call the DataSource's <code>disconnect</code> function (may be useful for cleaning up any
@@ -876,12 +876,12 @@ data source, even if the set of rows is empty.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">根据表格中最新的数据集来渲染行，这些数据既可以直接输入，也可以从一个可观察的流中检索出来（直接获取或从 DataSource 获取）。检查自上次 diff 之后的数据差异，以便只进行必要的修改（添加/删除/移动行）。</p><p translation-origin="off">Renders rows based on the table's latest set of data, which was either provided directly as an
+      <p translation-result="on">根据表格中最新的数据集来渲染行，这些数据既可以直接输入，也可以从一个可观察的流中检索出来（直接获取或从 DataSource 获取）。检查自上次 diff 之后的数据差异，以便只进行必要的修改（添加/删除/移动行）。</p><p translation-result="on">如果表格的数据源是 DataSource 或者 Observable，每当提供的 Observable 流发出一个新的数据数组时，都会自动调用它。如果你的数据是数组，那么就需要手动调用这个函数来渲染任何变化。</p><p translation-origin="off">Renders rows based on the table's latest set of data, which was either provided directly as an
 input or retrieved through an Observable stream (directly or from a DataSource).
 Checks for differences in the data since the last diff to perform only the necessary
 changes (add/remove/move rows).</p>
 
-<p translation-result="on">如果表格的数据源是 DataSource 或者 Observable，每当提供的 Observable 流发出一个新的数据数组时，都会自动调用它。如果你的数据是数组，那么就需要手动调用这个函数来渲染任何变化。</p><p translation-origin="off">If the table's data source is a DataSource or Observable, this will be invoked automatically
+<p translation-origin="off">If the table's data source is a DataSource or Observable, this will be invoked automatically
 each time the provided Observable stream emits a new data array. Otherwise if your data is
 an array, this function will need to be called to render any changes.</p>
 
@@ -1097,9 +1097,7 @@ Captures the header row's template and other header properties such as the colum
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1303,9 +1301,7 @@ Captures the footer row's template and other footer properties such as the colum
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1513,9 +1509,7 @@ For every row, there must be at least one when function that passes or an undefi
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1730,10 +1724,10 @@ if there is no difference.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">只显示表头行和行单元格的文本内容的列。假设该表正在使用原生表格实现（ <code>&lt;table&gt;</code> ）。</p><p translation-origin="off">Column that simply shows text content for the header and row cells. Assumes that the table
+</h4><div class="docs-api-class-description"><p translation-result="on">只显示表头行和行单元格的文本内容的列。假设该表正在使用原生表格实现（ <code>&lt;table&gt;</code> ）。</p><p translation-result="on">默认情况下，该列的名称就是表头文本和数据属性访问器。输入属性 <code>headerText</code> 可以改写表头文本。输入属性 <code>dataAccessor</code> 可以改写单元格的值。 输入属性 <code>justify</code> 把文本对齐方式修改为对齐到开头或结尾。</p><p translation-origin="off">Column that simply shows text content for the header and row cells. Assumes that the table
 is using the native table implementation (<code>&lt;table&gt;</code>).</p>
 
-<p translation-result="on">默认情况下，该列的名称就是表头文本和数据属性访问器。输入属性 <code>headerText</code> 可以改写表头文本。输入属性 <code>dataAccessor</code> 可以改写单元格的值。 输入属性 <code>justify</code> 把文本对齐方式修改为对齐到开头或结尾。</p><p translation-origin="off">By default, the name of this column will be the header text and data property accessor.
+<p translation-origin="off">By default, the name of this column will be the header text and data property accessor.
 The header text can be overridden with the <code>headerText</code> input. Cell values can be overridden with
 the <code>dataAccessor</code> input. Change the text justification to the start or end using the <code>justify</code>
 input.</p>
@@ -1834,14 +1828,14 @@ set, the header text will default to the column name with its first letter capit
   <span header-link="MatLegacyTableDataSource"></span>
   <code>MatLegacyTableDataSource</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">接受客户端数据数组的数据源，包括对过滤、排序（使用 MatSort）和分页（使用分页器）的原生支持。</p><p translation-origin="off">Data source that accepts a client-side data array and includes native support of filtering,
+</h4><div class="docs-api-class-description"><p translation-result="on">接受客户端数据数组的数据源，包括对过滤、排序（使用 MatSort）和分页（使用分页器）的原生支持。</p><p translation-result="on">可以通过改写 sortingDataAccessor 来进行自定义排序，它定义了要如何访问数据属性。 还允许通过改写 filterTermAccessor 来自定义过滤器，它定义了要如何将行数据转换成字符串以进行过滤匹配。</p><p translation-origin="off">Data source that accepts a client-side data array and includes native support of filtering,
 sorting (using MatSort), and pagination (using paginator).</p>
 
-<p translation-result="on">可以通过改写 sortingDataAccessor 来进行自定义排序，它定义了要如何访问数据属性。 还允许通过改写 filterTermAccessor 来自定义过滤器，它定义了要如何将行数据转换成字符串以进行过滤匹配。</p><p translation-origin="off">Allows for sort customization by overriding sortingDataAccessor, which defines how data
+<p translation-result="on"><strong>注意：</strong>这个类是一个简单的数据源，可以帮助你入门。因此，它无法处理某些更高级的案例，比如提供强大的 i18n 支持或服务器端交互。 如果你的应用需要支持更高级的用例，可以考虑实现自己的 <code>DataSource</code>。</p><p translation-origin="off">Allows for sort customization by overriding sortingDataAccessor, which defines how data
 properties are accessed. Also allows for filter customization by overriding filterPredicate,
 which defines how row data is converted to a string for filter matching.</p>
 
-<p translation-result="on"><strong>注意：</strong>这个类是一个简单的数据源，可以帮助你入门。因此，它无法处理某些更高级的案例，比如提供强大的 i18n 支持或服务器端交互。 如果你的应用需要支持更高级的用例，可以考虑实现自己的 <code>DataSource</code>。</p><p translation-origin="off"><strong>Note:</strong> This class is meant to be a simple data source to help you get started. As such
+<p translation-origin="off"><strong>Note:</strong> This class is meant to be a simple data source to help you get started. As such
 it isn't equipped to handle some more advanced cases like robust i18n support or server-side
 interactions. If your app needs to support more advanced use cases, consider implementing your
 own <code>DataSource</code>.</p>
@@ -1928,11 +1922,11 @@ shown to the user rather than all the data.</p>
       <code>paginator: P | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">该表格使用的 MatPaginator 组件实例，用来控制要显示哪页数据。MatPaginator 发出的页面更改会触发表格渲染数据的更新。</p><p translation-origin="off">Instance of the paginator component used by the table to control what page of the data is
+  <td class="docs-api-property-description"><p translation-result="on">该表格使用的 MatPaginator 组件实例，用来控制要显示哪页数据。MatPaginator 发出的页面更改会触发表格渲染数据的更新。</p><p translation-result="on">注意，数据源会使用此分页器的属性来计算应该显示哪个页面的数据。如果分页器要通过模板输入接收其属性，比如 <code>[pageLength]=100</code> 或者 <code>[pageIndex]=1</code>，那就要确保此分页器的视图已经初始化了，然后再赋值给这个数据源。</p><p translation-origin="off">Instance of the paginator component used by the table to control what page of the data is
 displayed. Page changes emitted by the paginator will trigger an update to the
 table's rendered data.</p>
 
-<p translation-result="on">注意，数据源会使用此分页器的属性来计算应该显示哪个页面的数据。如果分页器要通过模板输入接收其属性，比如 <code>[pageLength]=100</code> 或者 <code>[pageIndex]=1</code>，那就要确保此分页器的视图已经初始化了，然后再赋值给这个数据源。</p><p translation-origin="off">Note that the data source uses the paginator's properties to calculate which page of data
+<p translation-origin="off">Note that the data source uses the paginator's properties to calculate which page of data
 should be displayed. If the paginator receives its properties as template inputs,
 e.g. <code>[pageLength]=100</code> or <code>[pageIndex]=1</code>, then be sure that the paginator's view has been
 initialized before assigning it to this data source.</p>

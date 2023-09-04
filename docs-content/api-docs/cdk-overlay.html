@@ -34,12 +34,12 @@
   <span header-link="Overlay"></span>
   <code>Overlay</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">用来创建浮层的服务。浮层是指动态添加的一些浮动用户界面，用来作为其它组件的底层构建块。像对话框、工具提示、菜单、选择器等等都可以用浮层来构建。该服务主要应该由可复用组件的作者使用，而不是供开发者构建最终用户应用。</p><p translation-origin="off">Service to create Overlays. Overlays are dynamically added pieces of floating UI, meant to be
+</h4><div class="docs-api-class-description"><p translation-result="on">用来创建浮层的服务。浮层是指动态添加的一些浮动用户界面，用来作为其它组件的底层构建块。像对话框、工具提示、菜单、选择器等等都可以用浮层来构建。该服务主要应该由可复用组件的作者使用，而不是供开发者构建最终用户应用。</p><p translation-result="on">浮层<em>是</em>一个 PortalOutlet，任何类型的传送点都可以加载到其中。</p><p translation-origin="off">Service to create Overlays. Overlays are dynamically added pieces of floating UI, meant to be
 used as a low-level building block for other components. Dialogs, tooltips, menus,
 selects, etc. can all be built using overlays. The service should primarily be used by authors
 of re-usable components rather than developers building end-user applications.</p>
 
-<p translation-result="on">浮层<em>是</em>一个 PortalOutlet，任何类型的传送点都可以加载到其中。</p><p translation-origin="off">An overlay <em>is</em> a PortalOutlet, so any kind of Portal can be loaded into one.</p>
+<p translation-origin="off">An overlay <em>is</em> a PortalOutlet, so any kind of Portal can be loaded into one.</p>
 
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
   <table class="docs-api-properties-table">
@@ -230,11 +230,11 @@ the container in non-browser environments.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">OverlayContainer 的替代品，支持在全屏模式（<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen%EF%BC%89%E4%B8%8B%E6%AD%A3%E7%A1%AE%E6%98%BE%E7%A4%BA%E6%B5%AE%E5%B1%82%E5%85%83%E7%B4%A0">https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen）下正确显示浮层元素</a></p><p translation-origin="off">Alternative to OverlayContainer that supports correct displaying of overlay elements in
+</h4><div class="docs-api-class-description"><p translation-result="on">OverlayContainer 的替代品，支持在全屏模式（<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen%EF%BC%89%E4%B8%8B%E6%AD%A3%E7%A1%AE%E6%98%BE%E7%A4%BA%E6%B5%AE%E5%B1%82%E5%85%83%E7%B4%A0">https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen）下正确显示浮层元素</a></p><p translation-result="on">应该在根组件中提供。</p><p translation-origin="off">Alternative to OverlayContainer that supports correct displaying of overlay elements in
 Fullscreen mode
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen">https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen</a></p>
 
-<p translation-result="on">应该在根组件中提供。</p><p translation-origin="off">Should be provided in the root component.</p>
+<p translation-origin="off">Should be provided in the root component.</p>
 
 </div>
 
@@ -426,9 +426,9 @@ Only that element and its children are visible when in fullscreen mode.</p>
   <span header-link="ScrollStrategyOptions"></span>
   <code>ScrollStrategyOptions</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">规定浮层该如何处理滚动的选项。</p><p translation-origin="off">Options for how an overlay will handle scrolling.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">规定浮层该如何处理滚动的选项。</p><p translation-result="on">用户可以为 <code>ScrollStrategyOptions</code> 提供自定义值，以替换默认行为。此类主要充当 ScrollStrategy 实例的工厂。</p><p translation-origin="off">Options for how an overlay will handle scrolling.</p>
 
-<p translation-result="on">用户可以为 <code>ScrollStrategyOptions</code> 提供自定义值，以替换默认行为。此类主要充当 ScrollStrategy 实例的工厂。</p><p translation-origin="off">Users can provide a custom value for <code>ScrollStrategyOptions</code> to replace the default
+<p translation-origin="off">Users can provide a custom value for <code>ScrollStrategyOptions</code> to replace the default
 behaviors. This class primarily acts as a factory for ScrollStrategy instances.</p>
 
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
@@ -1359,9 +1359,7 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   
@@ -1378,9 +1376,7 @@ required around the overlay pane.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1405,9 +1401,7 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   
@@ -1424,9 +1418,7 @@ required around the overlay pane.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -1451,9 +1443,7 @@ required around the overlay pane.</p>
       </th>
     </tr>
   </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   
@@ -1470,9 +1460,7 @@ required around the overlay pane.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -2055,9 +2043,7 @@ element to become blurry.</p>
       </th>
     </tr>
   </thead><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   
@@ -2291,9 +2277,7 @@ This will be to the right in LTR layouts and to the left in RTL.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -2467,9 +2451,7 @@ This will be to the left in LTR layouts and to the right in RTL.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -2993,9 +2975,7 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -3045,9 +3025,7 @@ used for cases like contextual menus which open relative to the user's pointer.<
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -3207,9 +3185,7 @@ when the position is re-applied (e.g. when the user scrolls away).</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>
@@ -3261,9 +3237,7 @@ Scrollable must be an ancestor element of the strategy's origin element.</p>
     </td>
   </tr>
   </tbody><thead>
-    <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
-    </tr>
+    
     
   </thead>
   <tbody><tr>

@@ -51,10 +51,10 @@
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">准备稍后要复制的字符串。这对于大型字符串很有用，在同一个检测周期内它们需要很长的时间才能成功渲染并复制。</p><p translation-origin="off">Prepares a string to be copied later. This is useful for large strings
+      <p translation-result="on">准备稍后要复制的字符串。这对于大型字符串很有用，在同一个检测周期内它们需要很长的时间才能成功渲染并复制。</p><p translation-result="on">调用者必须调用 <code>PendingCopy</code> 型返回值上的 <code>destroy</code> 方法。</p><p translation-origin="off">Prepares a string to be copied later. This is useful for large strings
 which take too long to successfully render and be copied in the same tick.</p>
 
-<p translation-result="on">调用者必须调用 <code>PendingCopy</code> 型返回值上的 <code>destroy</code> 方法。</p><p translation-origin="off">The caller must call <code>destroy</code> on the returned <code>PendingCopy</code>.</p>
+<p translation-origin="off">The caller must call <code>destroy</code> on the returned <code>PendingCopy</code>.</p>
 
 
     </td>
@@ -288,16 +288,16 @@ emitted value indicates whether copying was successful.</p>
   <span header-link="PendingCopy"></span>
   <code>PendingCopy</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">一个挂起的复制到剪贴板操作。</p><p translation-origin="off">A pending copy-to-clipboard operation.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">一个挂起的复制到剪贴板操作。</p><p translation-result="on">把文本复制到剪贴板的实现会修改 DOM 并强制重新布局。如果字符串很大，这次重新布局可能需要很长时间，这会导致 execCommand('copy') 在用户点击后很久才会发生。这会导致浏览器拒绝复制。该对象可以通过提供一个稍后调用的复制函数，来允许在一个独立的周期中内进行重新布局。</p><p translation-origin="off">A pending copy-to-clipboard operation.</p>
 
-<p translation-result="on">把文本复制到剪贴板的实现会修改 DOM 并强制重新布局。如果字符串很大，这次重新布局可能需要很长时间，这会导致 execCommand('copy') 在用户点击后很久才会发生。这会导致浏览器拒绝复制。该对象可以通过提供一个稍后调用的复制函数，来允许在一个独立的周期中内进行重新布局。</p><p translation-origin="off">The implementation of copying text to the clipboard modifies the DOM and
+<p translation-result="on">无论是否调用 <code>copy</code>，都必须在不再使用时调用其 Destroy。</p><p translation-origin="off">The implementation of copying text to the clipboard modifies the DOM and
 forces a re-layout. This re-layout can take too long if the string is large,
 causing the execCommand('copy') to happen too long after the user clicked.
 This results in the browser refusing to copy. This object lets the
 re-layout happen in a separate tick from copying by providing a copy function
 that can be called later.</p>
 
-<p translation-result="on">无论是否调用 <code>copy</code>，都必须在不再使用时调用其 Destroy。</p><p translation-origin="off">Destroy must be called when no longer in use, regardless of whether <code>copy</code> is
+<p translation-origin="off">Destroy must be called when no longer in use, regardless of whether <code>copy</code> is
 called.</p>
 
 </div>

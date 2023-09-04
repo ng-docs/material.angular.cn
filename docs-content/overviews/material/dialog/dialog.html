@@ -40,7 +40,7 @@ value is forwarded as the result of the <code>afterClosed</code> Observable.</p>
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link" translation-result="on">
           <span header-link="指定全局默认值"></span>
           指定全局默认值
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------specifying-global-configuration-defaults--------">
           <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
         </h3>
@@ -59,7 +59,7 @@ MAT_DIALOG_DEFAULT_OPTIONS in your application's root module.</p>
         <h3 id="sharing-data-with-the-dialog-component" class="docs-header-link" translation-result="on">
           <span header-link="与对话框组件共享数据"></span>
           与对话框组件共享数据
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------sharing-data-with-the-dialog-component--------">
           <span header-link="sharing-data-with-the-dialog-component"></span>
           Sharing data with the Dialog component.
         </h3>
@@ -98,7 +98,7 @@ will be available implicitly in the template:</p>
         <h3 id="dialog-content" class="docs-header-link" translation-result="on">
           <span header-link="对话框内容"></span>
           对话框内容
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------dialog-content--------">
           <span header-link="dialog-content"></span>
           Dialog content
         </h3>
@@ -145,9 +145,9 @@ will be available implicitly in the template:</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">"true"</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
 </code></pre>
-<p translation-result="on">一旦打开了对话框，它就会自动把焦点转给第一个可接受焦点的元素。</p><p translation-origin="off">Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
+<p translation-result="on">一旦打开了对话框，它就会自动把焦点转给第一个可接受焦点的元素。</p><p translation-result="on">你可以通过 <code>tabindex</code> 属性来控制哪个元素可以接受焦点。</p><p translation-origin="off">Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
 
-<p translation-result="on">你可以通过 <code>tabindex</code> 属性来控制哪个元素可以接受焦点。</p><p translation-origin="off">You can control which elements are tab stops with the <code>tabindex</code> attribute</p>
+<p translation-origin="off">You can control which elements are tab stops with the <code>tabindex</code> attribute</p>
 
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
@@ -157,7 +157,7 @@ will be available implicitly in the template:</p>
         <h3 id="controlling-the-dialog-animation" class="docs-header-link" translation-result="on">
           <span header-link="控制对话框动画"></span>
           控制对话框动画
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------controlling-the-dialog-animation--------">
           <span header-link="controlling-the-dialog-animation"></span>
           Controlling the dialog animation
         </h3>
@@ -173,16 +173,16 @@ animation completely, you can do so by setting the properties to <code>0ms</code
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
-      <p translation-result="on"><code>MatDialog</code> 会创建默认实现了 ARIA <code>role="dialog"</code> 模式的模态对话框。你可以通过 <code>MatDialogConfig</code> 来把对话框的 <code>role</code> 改为 <code>alertdialog</code>。</p><p translation-origin="off"><code>MatDialog</code> creates modal dialogs that implements the ARIA <code>role="dialog"</code> pattern by default.
+      <p translation-result="on"><code>MatDialog</code> 会创建默认实现了 ARIA <code>role="dialog"</code> 模式的模态对话框。你可以通过 <code>MatDialogConfig</code> 来把对话框的 <code>role</code> 改为 <code>alertdialog</code>。</p><p translation-result="on">你应该通过设置 <code>MatDialogConfig</code> 的 <code>ariaLabel</code> 或 <code>ariaLabelledBy</code> 属性来为这个根对话框元素提供一个无障碍标签。你还可以通过 <code>MatDialogConfig</code> 的 <code>ariaDescribedBy</code> 属性来指定描述元素 ID。</p><p translation-origin="off"><code>MatDialog</code> creates modal dialogs that implements the ARIA <code>role="dialog"</code> pattern by default.
 You can change the dialog's role to <code>alertdialog</code> via <code>MatDialogConfig</code>.</p>
 
-<p translation-result="on">你应该通过设置 <code>MatDialogConfig</code> 的 <code>ariaLabel</code> 或 <code>ariaLabelledBy</code> 属性来为这个根对话框元素提供一个无障碍标签。你还可以通过 <code>MatDialogConfig</code> 的 <code>ariaDescribedBy</code> 属性来指定描述元素 ID。</p><p translation-origin="off">You should provide an accessible label to this root dialog element by setting the <code>ariaLabel</code> or
+<p translation-origin="off">You should provide an accessible label to this root dialog element by setting the <code>ariaLabel</code> or
 <code>ariaLabelledBy</code> properties of <code>MatDialogConfig</code>. You can additionally specify a description element
 ID via the <code>ariaDescribedBy</code> property of <code>MatDialogConfig</code>.</p>
 
@@ -190,7 +190,7 @@ ID via the <code>ariaDescribedBy</code> property of <code>MatDialogConfig</code>
         <h4 id="keyboard-interaction" class="docs-header-link" translation-result="on">
           <span header-link="键盘交互"></span>
           键盘交互
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------keyboard-interaction--------">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
         </h4>
@@ -204,7 +204,7 @@ pattern for the ARIA <code>role="dialog"</code> pattern.</p>
         <h4 id="focus-management" class="docs-header-link" translation-result="on">
           <span header-link="焦点管理"></span>
           焦点管理
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------focus-management--------">
           <span header-link="focus-management"></span>
           Focus management
         </h4>
@@ -252,20 +252,20 @@ your users.</p>
         <h4 id="focus-restoration" class="docs-header-link" translation-result="on">
           <span header-link="焦点还原"></span>
           焦点还原
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------focus-restoration--------">
           <span header-link="focus-restoration"></span>
           Focus restoration
         </h4>
       
         
-      <p translation-result="on">当关闭时， <code>MatDialog</code> 会将焦点恢复到先前在对话框打开时持有焦点的元素。但是，如果先前聚焦的元素已不存在了，则必须添加额外的处理以将焦点返回到对用户工作流程有意义的元素。从菜单打开对话框是导致这种情况的常见模式之一。单击菜单项时菜单就会关闭，因此当底部工作表尝试恢复焦点时，聚焦的菜单项已不存在于 DOM 中。</p><p translation-origin="off">When closed, <code>MatDialog</code> restores focus to the element that previously held focus when the
+      <p translation-result="on">当关闭时， <code>MatDialog</code> 会将焦点恢复到先前在对话框打开时持有焦点的元素。但是，如果先前聚焦的元素已不存在了，则必须添加额外的处理以将焦点返回到对用户工作流程有意义的元素。从菜单打开对话框是导致这种情况的常见模式之一。单击菜单项时菜单就会关闭，因此当底部工作表尝试恢复焦点时，聚焦的菜单项已不存在于 DOM 中。</p><p translation-result="on">你可以使用来自 <code>MatDialogRef</code> 的 <code>afterClosed()</code> observable 来添加对这种情况的处理。</p><p translation-origin="off">When closed, <code>MatDialog</code> restores focus to the element that previously held focus when the
 dialog opened. However, if that previously focused element no longer exists, you must
 add additional handling to return focus to an element that makes sense for the user's workflow.
 Opening a dialog from a menu is one common pattern that causes this situation. The menu
 closes upon clicking an item, thus the focused menu item is no longer in the DOM when the bottom
 sheet attempts to restore focus.</p>
 
-<p translation-result="on">你可以使用来自 <code>MatDialogRef</code> 的 <code>afterClosed()</code> observable 来添加对这种情况的处理。</p><p translation-origin="off">You can add handling for this situation with the <code>afterClosed()</code> observable from <code>MatDialogRef</code>.</p>
+<p translation-origin="off">You can add handling for this situation with the <code>afterClosed()</code> observable from <code>MatDialogRef</code>.</p>
 
 <div material-docs-example="dialog-from-menu" file="dialog-from-menu-example.ts" region="focus-restoration"></div>
 </div>

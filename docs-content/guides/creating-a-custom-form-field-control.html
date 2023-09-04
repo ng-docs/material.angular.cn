@@ -1,12 +1,12 @@
-<div class="docs-markdown"><h1 id="creating-a-custom-form-field-control" translation-result="on">创建自定义表单字段（form field）控件</h1><h1 translation-origin="off">Creating a custom form field control</h1><blockquote>
+<div class="docs-markdown"><h1 id="creating-a-custom-form-field-control" translation-result="on">创建自定义表单字段（form field）控件</h1><h1 translation-origin="off" id="creating-a-custom-form-field-control">Creating a custom form field control</h1><blockquote>
 <p>译注：本文中的表单字段控件 <code>form field control</code> 是指内部负责与用户交互的那个输入框控件，而表单字段 <code>form field</code> 是指控件外面的包装，其中可能包括输入框、错误信息、提示信息等。
 注意：表单字段并不是表单字段控件的缩写，另外要和表单控件 Form Control 区分开。</p>
 </blockquote>
-<p translation-result="on">你可以创建能用于 <code>&lt;mat-form-field&gt;</code> 中的自定义表单字段控件。 这种技术能让你创建这样一个控件：它与某个表单字段共享许多常见的行为，但再添加一些额外的逻辑。</p><p translation-origin="off">It is possible to create custom form field controls that can be used inside <code>&lt;mat-form-field&gt;</code>. This
+<p translation-result="on">你可以创建能用于 <code>&lt;mat-form-field&gt;</code> 中的自定义表单字段控件。 这种技术能让你创建这样一个控件：它与某个表单字段共享许多常见的行为，但再添加一些额外的逻辑。</p><p translation-result="on">比如，在这份指南中，你将学会如何创建一个用来输入美国的电话号码的自定义输入框，它能和 <code>&lt;mat-form-field&gt;</code> 协同工作。 其最终效果如下：</p><p translation-origin="off">It is possible to create custom form field controls that can be used inside <code>&lt;mat-form-field&gt;</code>. This
 can be useful if you need to create a component that shares a lot of common behavior with a form
 field, but adds some additional logic.</p>
 
-<p translation-result="on">比如，在这份指南中，你将学会如何创建一个用来输入美国的电话号码的自定义输入框，它能和 <code>&lt;mat-form-field&gt;</code> 协同工作。 其最终效果如下：</p><p translation-origin="off">For example in this guide we'll learn how to create a custom input for inputting US telephone
+<p translation-origin="off">For example in this guide we'll learn how to create a custom input for inputting US telephone
 numbers and hook it up to work with <code>&lt;mat-form-field&gt;</code>. Here is what we'll build by the end of this
 guide:</p>
 
@@ -76,7 +76,7 @@ just a starting point for us to learn.)</p>
         <h2 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link" translation-result="on">
           <span header-link="把我们的组件作为-matformfieldcontrol-提供出来"></span>
           把我们的组件作为 MatFormFieldControl 提供出来
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------providing-our-component-as-a-matformfieldcontrol--------">
           <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
           Providing our component as a MatFormFieldControl
         </h2>
@@ -106,7 +106,7 @@ the <code>MatFormFieldControl</code> interface, see the
         <h3 id="implementing-the-methods-and-properties-of-matformfieldcontrol" class="docs-header-link" translation-result="on">
           <span header-link="实现-matformfieldcontrol-的各个方法和属性"></span>
           实现 MatFormFieldControl 的各个方法和属性
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------implementing-the-methods-and-properties-of-matformfieldcontrol--------">
           <span header-link="implementing-the-methods-and-properties-of-matformfieldcontrol"></span>
           Implementing the methods and properties of MatFormFieldControl
         </h3>
@@ -189,11 +189,11 @@ just set this to <code>null</code> in our component.</p>
 
 <pre><code class="language-ts">ngControl: NgControl = <span class="hljs-literal">null</span>;
 </code></pre>
-<p translation-result="on">你还要实现 <code>ControlValueAccessor</code>，来让你的组件跟 <code>formControl</code> 和 <code>ngModel</code> 协同工作。要想实现 <code>ControlValueAccessor</code>，你就要获得一个关联到此控件的 <code>NgControl</code>，并把它公开。</p><p translation-origin="off">It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
+<p translation-result="on">你还要实现 <code>ControlValueAccessor</code>，来让你的组件跟 <code>formControl</code> 和 <code>ngModel</code> 协同工作。要想实现 <code>ControlValueAccessor</code>，你就要获得一个关联到此控件的 <code>NgControl</code>，并把它公开。</p><p translation-result="on">最简单的方式是把它添加为构造函数中的一个公共属性，并交给依赖注入体系来处理它：</p><p translation-origin="off">It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
 <code>formControl</code> and <code>ngModel</code>. If you do implement <code>ControlValueAccessor</code> you will need to get a
 reference to the <code>NgControl</code> associated with your control and make it publicly available.</p>
 
-<p translation-result="on">最简单的方式是把它添加为构造函数中的一个公共属性，并交给依赖注入体系来处理它：</p><p translation-origin="off">The easy way is to add it as a public property to your constructor and let dependency injection
+<p translation-origin="off">The easy way is to add it as a public property to your constructor and let dependency injection
 handle it:</p>
 
 <pre><code class="language-ts"><span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
@@ -202,11 +202,11 @@ handle it:</p>
   ...,
 </span>)</span> { }
 </code></pre>
-<p translation-result="on">注意，如果你的组件实现了 <code>ControlValueAccessor</code>，那么它可能已经作为 <code>NG_VALUE_ACCESSOR</code> 提供出去了（在组件装饰器的 <code>providers</code> 部分，或模块声明中）。如果是这样，可能会导致<em>cannot instantiate cyclic dependency（不能实例化循环依赖）</em>错误。</p><p translation-origin="off">Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
+<p translation-result="on">注意，如果你的组件实现了 <code>ControlValueAccessor</code>，那么它可能已经作为 <code>NG_VALUE_ACCESSOR</code> 提供出去了（在组件装饰器的 <code>providers</code> 部分，或模块声明中）。如果是这样，可能会导致<em>cannot instantiate cyclic dependency（不能实例化循环依赖）</em>错误。</p><p translation-result="on">要解决这个问题，请移除 <code>NG_VALUE_ACCESSOR</code> 提供者，改为直接设置 Value Accessor 的值：</p><p translation-origin="off">Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
 <code>NG_VALUE_ACCESSOR</code> (in the <code>providers</code> part of the component's decorator, or possibly in a module
 declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em> error.</p>
 
-<p translation-result="on">要解决这个问题，请移除 <code>NG_VALUE_ACCESSOR</code> 提供者，改为直接设置 Value Accessor 的值：</p><p translation-origin="off">To resolve this, remove the <code>NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p>
+<p translation-origin="off">To resolve this, remove the <code>NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p>
 
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
   ...,
@@ -243,14 +243,14 @@ declaration). If so, you may get a <em>cannot instantiate cyclic dependency</em>
           <span header-link="focused"></span>
           <code>focused</code>
         </h4>
-      <p translation-result="on">该属性表示该表单字段控件是否要被视为有焦点状态。当处于有焦点状态时，表单字段会显示一个实下划线。 对于这个组件，我们希望当其中的任何一个输入框拥有焦点时，我们就认为该组件拥有焦点。我们可以使用 <code>focusin</code> 和 <code>focusout</code> 事件来轻松地检查它。另外，当焦点状态发生变化时，别忘了在 <code>stateChanges</code> 流上发出事件，以便触发变更检测。</p><p translation-origin="off">This property indicates whether the form field control should be considered to be in a
+      <p translation-result="on">该属性表示该表单字段控件是否要被视为有焦点状态。当处于有焦点状态时，表单字段会显示一个实下划线。 对于这个组件，我们希望当其中的任何一个输入框拥有焦点时，我们就认为该组件拥有焦点。我们可以使用 <code>focusin</code> 和 <code>focusout</code> 事件来轻松地检查它。另外，当焦点状态发生变化时，别忘了在 <code>stateChanges</code> 流上发出事件，以便触发变更检测。</p><p translation-result="on">除了更新焦点状态之外，我们还使用 <code>focusin</code> 和 <code>focusout</code> 方法来更新组件内部的已接触（touched）状态，我们将使用它们来确定错误状态。</p><p translation-origin="off">This property indicates whether the form field control should be considered to be in a
 focused state. When it is in a focused state, the form field is displayed with a solid color
 underline. For the purposes of our component, we want to consider it focused if any of the part
 inputs are focused. We can use the <code>focusin</code> and <code>focusout</code> events to easily check this. We also
 need to remember to emit on the <code>stateChanges</code> when the focused stated changes stream so change
 detection can happen.</p>
 
-<p translation-result="on">除了更新焦点状态之外，我们还使用 <code>focusin</code> 和 <code>focusout</code> 方法来更新组件内部的已接触（touched）状态，我们将使用它们来确定错误状态。</p><p translation-origin="off">In addition to updating the focused state, we use the <code>focusin</code> and <code>focusout</code> methods to update the
+<p translation-origin="off">In addition to updating the focused state, we use the <code>focusin</code> and <code>focusout</code> methods to update the
 internal touched state of our component, which we'll use to determine the error state.</p>
 
 <pre><code class="language-ts">focused = <span class="hljs-literal">false</span>;
@@ -408,16 +408,16 @@ class <code>mat-form-field-type-example-tel-input</code>.</p>
           <span header-link="setdescribedbyidsids-string"></span>
           <code>setDescribedByIds(ids: string[])</code>
         </h4>
-      <p translation-result="on">此方法被 <code>&lt;mat-form-field&gt;</code> 用于设置元素的 ID，这些 ID 会被控件的 <code>aria-describedby</code> 属性使用。这些 ID 会由表单字段（form field）控制，用于提示（hints）或错误（errors）的有条件显示，并且应该反映到控件的 <code>aria-describedby</code> 属性中，以提升无障碍化体验。</p><p translation-origin="off">This method is used by the <code>&lt;mat-form-field&gt;</code> to set element ids that should be used for the
+      <p translation-result="on">此方法被 <code>&lt;mat-form-field&gt;</code> 用于设置元素的 ID，这些 ID 会被控件的 <code>aria-describedby</code> 属性使用。这些 ID 会由表单字段（form field）控制，用于提示（hints）或错误（errors）的有条件显示，并且应该反映到控件的 <code>aria-describedby</code> 属性中，以提升无障碍化体验。</p><p translation-result="on">每当控件的状态发生变化时，都会调用 <code>setDescribedByIds</code> 方法。自定义控件需要实现这个方法，并根据指定的元素 id 来更新 <code>aria-describedby</code> 属性。下面的例子演示了要如何达成这一目标。</p><p translation-origin="off">This method is used by the <code>&lt;mat-form-field&gt;</code> to set element ids that should be used for the
 <code>aria-describedby</code> attribute of your control. The ids are controlled through the form field
 as hints or errors are conditionally displayed and should be reflected in the control's
 <code>aria-describedby</code> attribute for an improved accessibility experience. </p>
 
-<p translation-result="on">每当控件的状态发生变化时，都会调用 <code>setDescribedByIds</code> 方法。自定义控件需要实现这个方法，并根据指定的元素 id 来更新 <code>aria-describedby</code> 属性。下面的例子演示了要如何达成这一目标。</p><p translation-origin="off">The <code>setDescribedByIds</code> method is invoked whenever the control's state changes. Custom controls
+<p translation-result="on">注意，默认情况下该方法不在乎元素上通过 <code>aria-describedby</code> 属性手动设置的 ID。为了防止你的控件意外覆盖由控件消费者指定的现有 ID，可以创建一个名为 <code>userAriaDescribedby</code> 的输入属性，代码如下：</p><p translation-origin="off">The <code>setDescribedByIds</code> method is invoked whenever the control's state changes. Custom controls
 need to implement this method and update the <code>aria-describedby</code> attribute based on the specified
 element ids. Below is an example that shows how this can be achieved.</p>
 
-<p translation-result="on">注意，默认情况下该方法不在乎元素上通过 <code>aria-describedby</code> 属性手动设置的 ID。为了防止你的控件意外覆盖由控件消费者指定的现有 ID，可以创建一个名为 <code>userAriaDescribedby</code> 的输入属性，代码如下：</p><p translation-origin="off">Note that the method by default will not respect element ids that have been set manually on the
+<p translation-origin="off">Note that the method by default will not respect element ids that have been set manually on the
 control element through the <code>aria-describedby</code> attribute. To ensure that your control does not
 accidentally override existing element ids specified by consumers of your control, create an
 input called <code>userAriaDescribedby</code>  like followed:</p>
@@ -453,26 +453,26 @@ click. In our case we'll just focus the first <code>&lt;input&gt;</code> if the 
         <h3 id="improving-accessibility" class="docs-header-link" translation-result="on">
           <span header-link="提升无障碍性"></span>
           提升无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------improving-accessibility--------">
           <span header-link="improving-accessibility"></span>
           Improving accessibility
         </h3>
       
         
-      <p translation-result="on">我们的自定义表单字段控件由多个用于描述电话号码段的输入控件组成。为了提升无障碍性，我们把这些输入作为带有 <code>role="group"</code> 属性的 <code>div</code> 元素的一部分。这可以确保屏幕阅读器用户知道所有这些输入控件都是一起的。</p><p translation-origin="off">Our custom form field control consists of multiple inputs that describe segments of a phone
+      <p translation-result="on">我们的自定义表单字段控件由多个用于描述电话号码段的输入控件组成。为了提升无障碍性，我们把这些输入作为带有 <code>role="group"</code> 属性的 <code>div</code> 元素的一部分。这可以确保屏幕阅读器用户知道所有这些输入控件都是一起的。</p><p translation-result="on">屏幕阅读器用户却缺少一条很重要的信息。他们无法分辨这个输入组所代表的含义。为了改善这一点，我们应该使用 <code>aria-label</code> 或者 <code>aria-labelledby</code> 为这个分组元素添加一个标签。</p><p translation-origin="off">Our custom form field control consists of multiple inputs that describe segments of a phone
 number. For accessibility purposes, we put those inputs as part of a <code>div</code> element with
 <code>role="group"</code>. This ensures that screen reader users can tell that all those inputs belong
 together.</p>
 
-<p translation-result="on">屏幕阅读器用户却缺少一条很重要的信息。他们无法分辨这个输入组所代表的含义。为了改善这一点，我们应该使用 <code>aria-label</code> 或者 <code>aria-labelledby</code> 为这个分组元素添加一个标签。</p><p translation-origin="off">One significant piece of information is missing for screen reader users though. They won't be able
+<p translation-result="on">我们建议把该标签链接到这个组，将其作为父元素 <code>&lt;mat-form-field&gt;</code> 的一部分。这可以确保显式指定的标签（使用 <code>&lt;mat-label&gt;</code> ）确实被用作了该控件的标签。</p><p translation-origin="off">One significant piece of information is missing for screen reader users though. They won't be able
 to tell what this input group represents. To improve this, we should add a label for the group
 element using either <code>aria-label</code> or <code>aria-labelledby</code>.</p>
 
-<p translation-result="on">我们建议把该标签链接到这个组，将其作为父元素 <code>&lt;mat-form-field&gt;</code> 的一部分。这可以确保显式指定的标签（使用 <code>&lt;mat-label&gt;</code> ）确实被用作了该控件的标签。</p><p translation-origin="off">It's recommended to link the group to the label that is displayed as part of the parent
+<p translation-result="on">在下面的具体例子中，我们添加了一个到 <code>aria-labelledby</code> 属性的绑定，并把它绑定到由父 <code>&lt;mat-form-field&gt;</code> 提供的标签元素的 id。</p><p translation-origin="off">It's recommended to link the group to the label that is displayed as part of the parent
 <code>&lt;mat-form-field&gt;</code>. This ensures that explicitly specified labels (using <code>&lt;mat-label&gt;</code>) are
 actually used for labelling the control.</p>
 
-<p translation-result="on">在下面的具体例子中，我们添加了一个到 <code>aria-labelledby</code> 属性的绑定，并把它绑定到由父 <code>&lt;mat-form-field&gt;</code> 提供的标签元素的 id。</p><p translation-origin="off">In our concrete example, we add an attribute binding for <code>aria-labelledby</code> and bind it
+<p translation-origin="off">In our concrete example, we add an attribute binding for <code>aria-labelledby</code> and bind it
 to the label element id provided by the parent <code>&lt;mat-form-field&gt;</code>.</p>
 
 <pre><code class="language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTelInput</span> <span class="hljs-title">implements</span> <span class="hljs-title">MatFormFieldControl</span>&lt;<span class="hljs-title">MyTel</span>&gt; </span>{
@@ -492,7 +492,7 @@ to the label element id provided by the parent <code>&lt;mat-form-field&gt;</cod
         <h3 id="trying-it-out" class="docs-header-link" translation-result="on">
           <span header-link="试试看"></span>
           试试看
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------trying-it-out--------">
           <span header-link="trying-it-out"></span>
           Trying it out
         </h3>

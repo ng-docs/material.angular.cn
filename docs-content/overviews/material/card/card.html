@@ -6,7 +6,7 @@
         <h3 id="basic-card-sections" class="docs-header-link" translation-result="on">
           <span header-link="基本卡片分节"></span>
           基本卡片分节
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------basic-card-sections--------">
           <span header-link="basic-card-sections"></span>
           Basic card sections
         </h3>
@@ -59,16 +59,16 @@ However, the <code>align</code> property on <code>&lt;mat-card-actions&gt;</code
         <h3 id="card-padding" class="docs-header-link" translation-result="on">
           <span header-link="卡片内衬距"></span>
           卡片内衬距
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------card-padding--------">
           <span header-link="card-padding"></span>
           Card padding
         </h3>
       
         
-      <p translation-result="on"><code>&lt;mat-card&gt;</code> 元素本身不会在其内容周围添加任何内衬距。这允许开发人员通过将内衬距应用于他们放入卡片中的元素来根据自己的喜好自定义内衬距。</p><p translation-origin="off">The <code>&lt;mat-card&gt;</code> element itself does not add any padding around its content. This allows developers
+      <p translation-result="on"><code>&lt;mat-card&gt;</code> 元素本身不会在其内容周围添加任何内衬距。这允许开发人员通过将内衬距应用于他们放入卡片中的元素来根据自己的喜好自定义内衬距。</p><p translation-result="on">在许多情况下，开发人员可能只需要 Material Design 规范中指定的标准内衬距。在这种情况下，可以使用 <code>&lt;mat-card-header&gt;</code> 、 <code>&lt;mat-card-content&gt;</code> 和 <code>&lt;mat-card-footer&gt;</code> 这几个部分。</p><p translation-origin="off">The <code>&lt;mat-card&gt;</code> element itself does not add any padding around its content. This allows developers
 to customize the padding to their liking by applying padding to the elements they put in the card.</p>
 
-<p translation-result="on">在许多情况下，开发人员可能只需要 Material Design 规范中指定的标准内衬距。在这种情况下，可以使用 <code>&lt;mat-card-header&gt;</code> 、 <code>&lt;mat-card-content&gt;</code> 和 <code>&lt;mat-card-footer&gt;</code> 这几个部分。</p><p translation-origin="off">In many cases developers may just want the standard padding specified in the Material Design spec.
+<p translation-origin="off">In many cases developers may just want the standard padding specified in the Material Design spec.
 In this case, the <code>&lt;mat-card-header&gt;</code>, <code>&lt;mat-card-content&gt;</code>, and <code>&lt;mat-card-footer&gt;</code> sections can be
 used.</p>
 
@@ -89,7 +89,7 @@ first element in the <code>&lt;mat-card&gt;</code>, and along the bottom if it i
         <h3 id="card-headers" class="docs-header-link" translation-result="on">
           <span header-link="卡片头"></span>
           卡片头
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------card-headers--------">
           <span header-link="card-headers"></span>
           Card headers
         </h3>
@@ -130,7 +130,7 @@ them with a (non-avatar) image.</p>
         <h3 id="title-groups" class="docs-header-link" translation-result="on">
           <span header-link="标题组"></span>
           标题组
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------title-groups--------">
           <span header-link="title-groups"></span>
           Title groups
         </h3>
@@ -160,7 +160,7 @@ This element can contain:</p>
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
@@ -175,20 +175,20 @@ Due to this flexible nature, the appropriate accessibility treatment depends on 
         <h4 id="group-region-and-landmarks" class="docs-header-link" translation-result="on">
           <span header-link="分组、区域和界标"></span>
           分组、区域和界标
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------group-region-and-landmarks--------">
           <span header-link="group-region-and-landmarks"></span>
           Group, region, and landmarks
         </h4>
       
         
       <p translation-result="on">有几个 ARIA 角色用来表示界面上的某些部分在语义上是一些有意义的整体。
-这取决于卡片的内容在你的应用中的意义，<code>&lt;mat-card&gt;</code> 元素上通常会应用 [<code>role="group"</code>][0]、[<code>role="region"</code>][1] 或 [某个界标角色][2]。</p><p translation-origin="off">There are several ARIA roles that communicate that a portion of the UI represents some semantically
+这取决于卡片的内容在你的应用中的意义，<code>&lt;mat-card&gt;</code> 元素上通常会应用 [<code>role="group"</code>][0]、[<code>role="region"</code>][1] 或 [某个界标角色][2]。</p><p translation-result="on">当卡片用作纯装饰性容器时，不需要指定角色。也就是说，该容器不能作为单个主体为相关内容传达有意义的信息。
+在这些情况下，卡片的内容应该遵循文档内容的标准实践。</p><p translation-origin="off">There are several ARIA roles that communicate that a portion of the UI represents some semantically
 meaningful whole. Depending on what the content of the card means to your application, you can apply
 one of <a href="https://www.w3.org/TR/wai-aria/#group"><code>role="group"</code></a>, <a href="https://www.w3.org/TR/wai-aria/#region"><code>role="region"</code></a>, or
 <a href="https://www.w3.org/TR/wai-aria/#landmark">one of the landmark roles</a> to the <code>&lt;mat-card&gt;</code> element.</p>
 
-<p translation-result="on">当卡片用作纯装饰性容器时，不需要指定角色。也就是说，该容器不能作为单个主体为相关内容传达有意义的信息。
-在这些情况下，卡片的内容应该遵循文档内容的标准实践。</p><p translation-origin="off">You do not need to apply a role when using a card as a purely decorative container that does not
+<p translation-origin="off">You do not need to apply a role when using a card as a purely decorative container that does not
 convey a meaningful grouping of related content for a single subject. In these cases, the content
 of the card should follow standard practices for document content.</p>
 
@@ -196,7 +196,7 @@ of the card should follow standard practices for document content.</p>
         <h4 id="focus" class="docs-header-link" translation-result="on">
           <span header-link="焦点"></span>
           焦点
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------focus--------">
           <span header-link="focus"></span>
           Focus
         </h4>

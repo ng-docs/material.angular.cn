@@ -4,33 +4,33 @@
         <h3 id="component-test-harnesses" class="docs-header-link" translation-result="on">
           <span header-link="组件测试工具"></span>
           组件测试工具
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------component-test-harnesses--------">
           <span header-link="component-test-harnesses"></span>
           Component test harnesses
         </h3>
       
         
-      <p translation-result="on">组件测试工具类是一个让测试可以通过其支持的 API 与组件交互的类。每个工具的 API 都会以和用户相同的方式与一个组件进行交互。通过使用测试工具 API，测试可以防止对组件内部的更新，比如改变它的 DOM 结构。组件测试工具的思想来自常用于集成测试的<a href="https://martinfowler.com/bliki/PageObject.html"> PageObject </a>模式。</p><p translation-origin="off">A component harness is a class that lets a test interact with a component via a supported API.
+      <p translation-result="on">组件测试工具类是一个让测试可以通过其支持的 API 与组件交互的类。每个工具的 API 都会以和用户相同的方式与一个组件进行交互。通过使用测试工具 API，测试可以防止对组件内部的更新，比如改变它的 DOM 结构。组件测试工具的思想来自常用于集成测试的<a href="https://martinfowler.com/bliki/PageObject.html"> PageObject </a>模式。</p><p translation-result="on"><code>@angular/cdk/testing</code> 包含用于创建和使用组件测试工具的基础设施。你可以为任何组件创建测试工具，范围从很小的可复用组件到完整的应用页面。</p><p translation-origin="off">A component harness is a class that lets a test interact with a component via a supported API.
 Each harness's API interacts with a component the same way a user would. By using the harness API,
 a test insulates itself against updates to the internals of a component, such as changing its DOM
 structure. The idea for component harnesses comes from the
 <a href="https://martinfowler.com/bliki/PageObject.html">PageObject</a> pattern commonly used for integration
 testing.</p>
 
-<p translation-result="on"><code>@angular/cdk/testing</code> 包含用于创建和使用组件测试工具的基础设施。你可以为任何组件创建测试工具，范围从很小的可复用组件到完整的应用页面。</p><p translation-origin="off"><code>@angular/cdk/testing</code> contains infrastructure for creating and using component test harnesses. You
+<p translation-result="on">组件工具体系支持多种测试环境。你可以在单元测试和端到端测试中使用相同的工具实现。这意味着用户只需要学习一个 API，而组件作者不需要维护单独的单元测试和端到端测试实现。</p><p translation-origin="off"><code>@angular/cdk/testing</code> contains infrastructure for creating and using component test harnesses. You
 can create test harnesses for any component, ranging from small reusable widgets to full application
 pages.</p>
 
-<p translation-result="on">组件工具体系支持多种测试环境。你可以在单元测试和端到端测试中使用相同的工具实现。这意味着用户只需要学习一个 API，而组件作者不需要维护单独的单元测试和端到端测试实现。</p><p translation-origin="off">The component harness system supports multiple testing environments. You can use the same harness
+<p translation-result="on">特别是对于通用组件库，由于其组件的广泛使用，更容易从这种基础设施中受益。提供一个测试工具可以让组件的使用者编写一些不用依赖任何私有实现细节的测试。通过在一个地方捕获这些实现细节，消费者可以更轻松地更新到库的最新版本。</p><p translation-origin="off">The component harness system supports multiple testing environments. You can use the same harness
 implementation in both unit and end-to-end tests. This means that users only need to learn one API,
 and component authors don't have to maintain separate unit and end-to-end test implementations.</p>
 
-<p translation-result="on">特别是对于通用组件库，由于其组件的广泛使用，更容易从这种基础设施中受益。提供一个测试工具可以让组件的使用者编写一些不用依赖任何私有实现细节的测试。通过在一个地方捕获这些实现细节，消费者可以更轻松地更新到库的最新版本。</p><p translation-origin="off">Common component libraries, in particular, benefit from this infrastructure due to the wide use of
+<p translation-result="on">本文档为三类开发人员提供了指导：</p><p translation-origin="off">Common component libraries, in particular, benefit from this infrastructure due to the wide use of
 their components. Providing a test harness allows the consumers of a component to write tests that
 avoid dependencies on any private implementation details. By capturing these implementation details
 in a single place, consumers can more easily update to new library versions.</p>
 
-<p translation-result="on">本文档为三类开发人员提供了指导：</p><p translation-origin="off">This document provides guidance for three types of developers:</p>
+<p translation-origin="off">This document provides guidance for three types of developers:</p>
 
 <ol>
 <li><p translation-result="on"><a href="#api-for-test-authors">测试的作者</a></p><p translation-origin="off"><a href="#api-for-test-authors">Test authors</a></p>
@@ -50,7 +50,7 @@ developer type in the sections below.</p>
         <h3 id="api-for-test-authors" class="docs-header-link" translation-result="on">
           <span header-link="给测试作者的-api"></span>
           给测试作者的 API
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------api-for-test-authors--------">
           <span header-link="api-for-test-authors"></span>
           API for test authors
         </h3>
@@ -64,7 +64,7 @@ needs to interact with the menu in a unit test.</p>
         <h4 id="working-with-componentharness-classes" class="docs-header-link" translation-result="on">
           <span header-link="使用-componentharness-类"></span>
           使用 <code>ComponentHarness</code> 类
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------working-with-componentharness-classes--------">
           <span header-link="working-with-componentharness-classes"></span>
           Working with <code>ComponentHarness</code> classes
         </h4>
@@ -82,7 +82,7 @@ learn how to use a specific harness.</p>
         <h4 id="using-testbedharnessenvironment-and-seleniumwebdriverharnessenvironment" class="docs-header-link" translation-result="on">
           <span header-link="使用-testbedharnessenvironment-和-seleniumwebdriverharnessenvironment"></span>
           使用 <code>TestbedHarnessEnvironment</code> 和 <code>SeleniumWebDriverHarnessEnvironment</code>
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------using-testbedharnessenvironment-and-seleniumwebdriverharnessenvironment--------">
           <span header-link="using-testbedharnessenvironment-and-seleniumwebdriverharnessenvironment"></span>
           Using <code>TestbedHarnessEnvironment</code> and <code>SeleniumWebDriverHarnessEnvironment</code>
         </h4>
@@ -90,17 +90,17 @@ learn how to use a specific harness.</p>
         
       <p translation-result="on">这些类对应于组件工具体系的不同实现，并绑定到特定的测试环境。任何一种测试都只能导入<em>其中一个</em>类。
 基于 Karma 的单元测试应该使用 <code>TestbedHarnessEnvironment</code>，而基于 Protractor 的端到端测试应该使用 <code>SeleniumWebDriverHarnessEnvironment</code>。
-其他环境会要求自定义绑定；给参见<a href="#api-for-harness-environment-authors">测试工具环境作者的 API</a>，以了解有关备用测试环境的更多信息。</p><p translation-origin="off">These classes correspond to different implementations of the component harness system with bindings
+其他环境会要求自定义绑定；给参见<a href="#api-for-harness-environment-authors">测试工具环境作者的 API</a>，以了解有关备用测试环境的更多信息。</p><p translation-result="on">这些类主要用于创建一个 <code>HarnessLoader</code> 实例，在某些情况下，还可以用来创建 <code>ComponentHarness</code> 实例。</p><p translation-origin="off">These classes correspond to different implementations of the component harness system with bindings
 for specific test environments. Any given test must only import <em>one</em> of these classes. Karma-based
 unit tests should use the <code>TestbedHarnessEnvironment</code>, while Selenium WebDriver-based end-to-end tests
 should use the <code>SeleniumWebDriverHarnessEnvironment</code>. Additional environments require custom bindings; see
 <a href="#api-for-harness-environment-authors">API for harness environment authors</a> for more information on
 alternate test environments.</p>
 
-<p translation-result="on">这些类主要用于创建一个 <code>HarnessLoader</code> 实例，在某些情况下，还可以用来创建 <code>ComponentHarness</code> 实例。</p><p translation-origin="off">These classes are primarily used to create a <code>HarnessLoader</code> instance, and in certain cases, to
+<p translation-result="on"><code>TestbedHarnessEnvironment</code> 提供了以下静态方法：</p><p translation-origin="off">These classes are primarily used to create a <code>HarnessLoader</code> instance, and in certain cases, to
 create <code>ComponentHarness</code> instances directly.</p>
 
-<p translation-result="on"><code>TestbedHarnessEnvironment</code> 提供了以下静态方法：</p><p translation-origin="off"><code>TestbedHarnessEnvironment</code> offers the following static methods:</p>
+<p translation-origin="off"><code>TestbedHarnessEnvironment</code> offers the following static methods:</p>
 
 <table>
 <thead>
@@ -126,12 +126,12 @@ create <code>ComponentHarness</code> instances directly.</p>
 </tr>
 
 </tbody></table>
-<p translation-result="on">在大多数情况下，你可以使用 <code>TestbedHarnessEnvironment.loader(fixture)</code> 在 <code>beforeEach</code> 中创建一个 <code>HarnessLoader</code>，然后使用该 <code>HarnessLoader</code> 来创建任何必要的 <code>ComponentHarness</code> 实例。其他方法涵盖了那些特例，如下例所示：</p><p translation-origin="off">In most cases, you can create a <code>HarnessLoader</code> in the <code>beforeEach</code> block using
+<p translation-result="on">在大多数情况下，你可以使用 <code>TestbedHarnessEnvironment.loader(fixture)</code> 在 <code>beforeEach</code> 中创建一个 <code>HarnessLoader</code>，然后使用该 <code>HarnessLoader</code> 来创建任何必要的 <code>ComponentHarness</code> 实例。其他方法涵盖了那些特例，如下例所示：</p><p translation-result="on">考虑一个可复用的对话框按钮组件，它在单击时会打开一个对话框，其中包含以下组件，每个组件都带有相应的工具：</p><p translation-origin="off">In most cases, you can create a <code>HarnessLoader</code> in the <code>beforeEach</code> block using
 <code>TestbedHarnessEnvironment.loader(fixture)</code> and then use that <code>HarnessLoader</code> to create any
 necessary <code>ComponentHarness</code> instances. The other methods cover special cases as shown in this
 example:</p>
 
-<p translation-result="on">考虑一个可复用的对话框按钮组件，它在单击时会打开一个对话框，其中包含以下组件，每个组件都带有相应的工具：</p><p translation-origin="off">Consider a reusable dialog-button component that opens a dialog on click, containing the following
+<p translation-origin="off">Consider a reusable dialog-button component that opens a dialog on click, containing the following
 components, each with a corresponding harness:</p>
 
 <ul>
@@ -191,11 +191,11 @@ it(<span class="hljs-string">'loads harnesses'</span>, <span class="hljs-keyword
 </tr>
 
 </tbody></table>
-<p translation-result="on">虽然 Selenium WebDriver 不知道怎么用夹具，但这个环境下的 API 比较简单。<code>loader()</code> 方法返回的 <code>HarnessLoader</code> 应足以加载所有必需的 <code>ComponentHarness</code> 实例。</p><p translation-origin="off">Since Selenium WebDriver does not deal with fixtures, the API in this environment is simpler. The
+<p translation-result="on">虽然 Selenium WebDriver 不知道怎么用夹具，但这个环境下的 API 比较简单。<code>loader()</code> 方法返回的 <code>HarnessLoader</code> 应足以加载所有必需的 <code>ComponentHarness</code> 实例。</p><p translation-result="on">请注意，在各种环境中，测试工具的行为可能并不<em>完全相同</em>。当用户点击或输入某个元素时，真正的浏览器生成的事件序列与单元测试中生成的模拟事件序列之间总有一些区别。不过，CDK 会尽最大努力规范其行为，并模拟序列中最重要的事件。</p><p translation-origin="off">Since Selenium WebDriver does not deal with fixtures, the API in this environment is simpler. The
 <code>HarnessLoader</code> returned by the <code>loader()</code> method should be sufficient for loading all necessary
 <code>ComponentHarness</code> instances.</p>
 
-<p translation-result="on">请注意，在各种环境中，测试工具的行为可能并不<em>完全相同</em>。当用户点击或输入某个元素时，真正的浏览器生成的事件序列与单元测试中生成的模拟事件序列之间总有一些区别。不过，CDK 会尽最大努力规范其行为，并模拟序列中最重要的事件。</p><p translation-origin="off">Please note that harnesses may not behave <em>exactly</em> the same in all environments. There will always
+<p translation-origin="off">Please note that harnesses may not behave <em>exactly</em> the same in all environments. There will always
 be some difference between the real browser-generated event sequence when a user clicks or types in
 an element, versus the simulated event sequence generated in unit tests. Instead, the CDK makes a
 best effort to normalize the behavior and simulate the most important events in the sequence.</p>
@@ -204,16 +204,16 @@ best effort to normalize the behavior and simulate the most important events in 
         <h4 id="creating-harnesses-with-harnessloader" class="docs-header-link" translation-result="on">
           <span header-link="使用-harnessloader-创建测试工具"></span>
           使用 <code>HarnessLoader</code> 创建测试工具
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------creating-harnesses-with-harnessloader--------">
           <span header-link="creating-harnesses-with-harnessloader"></span>
           Creating harnesses with <code>HarnessLoader</code>
         </h4>
       
         
-      <p translation-result="on">该类的实例对应一个特定的 DOM 元素（此加载器的“根元素”），用于为该根元素下的元素创建 <code>ComponentHarness</code>。</p><p translation-origin="off">Instances of this class correspond to a specific DOM element (the "root element" of the loader) and
+      <p translation-result="on">该类的实例对应一个特定的 DOM 元素（此加载器的“根元素”），用于为该根元素下的元素创建 <code>ComponentHarness</code>。</p><p translation-result="on"><code>HarnessLoader</code> 实例有以下几种方法：</p><p translation-origin="off">Instances of this class correspond to a specific DOM element (the "root element" of the loader) and
 are used to create <code>ComponentHarness</code> instances for elements under this root element.</p>
 
-<p translation-result="on"><code>HarnessLoader</code> 实例有以下几种方法：</p><p translation-origin="off"><code>HarnessLoader</code> instances have the following methods:</p>
+<p translation-origin="off"><code>HarnessLoader</code> instances have the following methods:</p>
 
 <table>
 <thead>
@@ -257,7 +257,7 @@ created manually.</p>
         <h4 id="change-detection" class="docs-header-link" translation-result="on">
           <span header-link="变更检测"></span>
           变更检测
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------change-detection--------">
           <span header-link="change-detection"></span>
           Change detection
         </h4>
@@ -287,19 +287,19 @@ code. For example:</p>
         <h4 id="working-with-asynchronous-component-harness-methods" class="docs-header-link" translation-result="on">
           <span header-link="使用组件测试工具的异步方法"></span>
           使用组件测试工具的异步方法
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------working-with-asynchronous-component-harness-methods--------">
           <span header-link="working-with-asynchronous-component-harness-methods"></span>
           Working with asynchronous component harness methods
         </h4>
       
         
-      <p translation-result="on">为了支持单元测试和端到端测试，并把测试与异步行为的变化隔离开来，测试工具几乎的所有方法都是异步的，并返回一个 <code>Promise</code>；因此，Angular 团队建议使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 的 <code>async</code> / <code>await</code> 语法</a>来提高测试的可读性。</p><p translation-origin="off">To support both unit and end-to-end tests, and to insulate tests against changes in
+      <p translation-result="on">为了支持单元测试和端到端测试，并把测试与异步行为的变化隔离开来，测试工具几乎的所有方法都是异步的，并返回一个 <code>Promise</code>；因此，Angular 团队建议使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 的 <code>async</code> / <code>await</code> 语法</a>来提高测试的可读性。</p><p translation-result="on">注意，<code>await</code> 语句会阻塞测试的执行，直到相关的 <code>Promise</code> 被解析为止。有时，你可能希望同时执行多个动作，并等待它们全部完成，而不是按顺序执行每个动作。例如，从单个组件中读取多个属性。在这种情况下，请使用 <code>parallel</code> 函数来并行处理这些操作。parallel 函数与 <code>Promise.all</code> 工作方式类似，但同时优化了变更检测，因此它的运行次数不会太多。以下代码演示如何通过 <code>parallel</code> 从测试工具中读取多个属性：</p><p translation-origin="off">To support both unit and end-to-end tests, and to insulate tests against changes in
 asynchronous behavior, almost all harness methods are asynchronous and return a <code>Promise</code>;
 therefore, the Angular team recommends using
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code>/<code>await</code> syntax</a>
 to improve the test readability.</p>
 
-<p translation-result="on">注意，<code>await</code> 语句会阻塞测试的执行，直到相关的 <code>Promise</code> 被解析为止。有时，你可能希望同时执行多个动作，并等待它们全部完成，而不是按顺序执行每个动作。例如，从单个组件中读取多个属性。在这种情况下，请使用 <code>parallel</code> 函数来并行处理这些操作。parallel 函数与 <code>Promise.all</code> 工作方式类似，但同时优化了变更检测，因此它的运行次数不会太多。以下代码演示如何通过 <code>parallel</code> 从测试工具中读取多个属性：</p><p translation-origin="off">Note that <code>await</code> statements block the execution of your test until the associated <code>Promise</code>
+<p translation-origin="off">Note that <code>await</code> statements block the execution of your test until the associated <code>Promise</code>
 resolves. Occasionally, you may want to perform multiple actions simultaneously and wait until
 they're all done rather than performing each action sequentially. For example, reading multiple
 properties off a single component. In these situations use the <code>parallel</code> function to parallelize
@@ -322,7 +322,7 @@ can read multiple properties from a harness with <code>parallel</code>:</p>
         <h3 id="api-for-component-harness-authors" class="docs-header-link" translation-result="on">
           <span header-link="组件测试工具作者的-api"></span>
           组件测试工具作者的 API
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------api-for-component-harness-authors--------">
           <span header-link="api-for-component-harness-authors"></span>
           API for component harness authors
         </h3>
@@ -338,7 +338,7 @@ common components for a large Angular application.</p>
         <h4 id="extending-componentharness" class="docs-header-link" translation-result="on">
           <span header-link="扩展-componentharness"></span>
           扩展 <code>ComponentHarness</code>
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------extending-componentharness--------">
           <span header-link="extending-componentharness"></span>
           Extending <code>ComponentHarness</code>
         </h4>
@@ -382,17 +382,17 @@ in more detail.</p>
         <h4 id="finding-elements-in-the-components-dom" class="docs-header-link" translation-result="on">
           <span header-link="在组件的-dom-中查找元素"></span>
           在组件的 DOM 中查找元素
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------finding-elements-in-the-components-dom--------">
           <span header-link="finding-elements-in-the-components-dom"></span>
           Finding elements in the component's DOM
         </h4>
       
         
-      <p translation-result="on"><code>ComponentHarness</code> 子类的每个实例都表示相应组件的一个特定实例。你可以用 <code>ComponentHarness</code> 类的 <code>host</code> 方法访问组件的宿主元素。</p><p translation-origin="off">Each instance of a <code>ComponentHarness</code> subclass represents a particular instance of the
+      <p translation-result="on"><code>ComponentHarness</code> 子类的每个实例都表示相应组件的一个特定实例。你可以用 <code>ComponentHarness</code> 类的 <code>host</code> 方法访问组件的宿主元素。</p><p translation-result="on"><code>ComponentHarness</code> 还提供了几种在组件 DOM 中定位元素的方法。它们是 <code>locatorFor</code>、<code>locatorForOptional</code> 和 <code>locatorForAll</code>。但请注意，这些方法并不直接查找元素，而是会<em>创建</em>能寻找元素的函数。这种方式可以防止缓存对过时元素的引用。例如，当一个 <code>ngIf</code> 先隐藏再显示一个元素时，其结果是一个新的 DOM 元素；使用函数可以确保测试总能引用 DOM 的当前状态。</p><p translation-origin="off">Each instance of a <code>ComponentHarness</code> subclass represents a particular instance of the
 corresponding component. You can access the component's host element via the <code>host</code> method from
 the <code>ComponentHarness</code> base class.</p>
 
-<p translation-result="on"><code>ComponentHarness</code> 还提供了几种在组件 DOM 中定位元素的方法。它们是 <code>locatorFor</code>、<code>locatorForOptional</code> 和 <code>locatorForAll</code>。但请注意，这些方法并不直接查找元素，而是会<em>创建</em>能寻找元素的函数。这种方式可以防止缓存对过时元素的引用。例如，当一个 <code>ngIf</code> 先隐藏再显示一个元素时，其结果是一个新的 DOM 元素；使用函数可以确保测试总能引用 DOM 的当前状态。</p><p translation-origin="off"><code>ComponentHarness</code> additionally offers several methods for locating elements within the component's
+<p translation-origin="off"><code>ComponentHarness</code> additionally offers several methods for locating elements within the component's
 DOM. These methods are <code>locatorFor</code>, <code>locatorForOptional</code>, and <code>locatorForAll</code>.
 Note, though, that these methods do not directly find elements. Instead, they <em>create functions</em>
 that find elements. This approach safeguards against caching references to out-of-date elements. For
@@ -445,7 +445,7 @@ and content elements as follows:</p>
         <h4 id="working-with-testelement-instances" class="docs-header-link" translation-result="on">
           <span header-link="使用-testelement-实例"></span>
           使用 <code>TestElement</code> 实例
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------working-with-testelement-instances--------">
           <span header-link="working-with-testelement-instances"></span>
           Working with <code>TestElement</code> instances
         </h4>
@@ -543,17 +543,17 @@ and content elements as follows:</p>
 </tr>
 
 </tbody></table>
-<p translation-result="on"><code>TestElement</code> 是一种抽象设计，适用于不同的测试环境（Karma，Selenium WebDriver 等）。在使用测试工具时，你应该通过这个接口来进行所有的 DOM 交互。其他访问 DOM 元素的方法（例如 <code>document.querySelector</code> ）并不适用于所有的测试环境。</p><p translation-origin="off"><code>TestElement</code> is an abstraction designed to work across different test environments (Karma,
+<p translation-result="on"><code>TestElement</code> 是一种抽象设计，适用于不同的测试环境（Karma，Selenium WebDriver 等）。在使用测试工具时，你应该通过这个接口来进行所有的 DOM 交互。其他访问 DOM 元素的方法（例如 <code>document.querySelector</code> ）并不适用于所有的测试环境。</p><p translation-result="on">最好的做法是，你不应该把 <code>TestElement</code> 实例公开给测试工具的用户，除非它是由组件消费者直接定义的元素（比如宿主元素）。公开 <code>TestElement</code> 实例会让用户依赖组件的内部 DOM 结构。</p><p translation-origin="off"><code>TestElement</code> is an abstraction designed to work across different test environments (Karma,
 Selenium WebDriver, etc). When using harnesses, you should perform all DOM interaction via this interface.
 Other means of accessing DOM elements (e.g. <code>document.querySelector</code>) will not work in all test
 environments.</p>
 
-<p translation-result="on">最好的做法是，你不应该把 <code>TestElement</code> 实例公开给测试工具的用户，除非它是由组件消费者直接定义的元素（比如宿主元素）。公开 <code>TestElement</code> 实例会让用户依赖组件的内部 DOM 结构。</p><p translation-origin="off">As a best practice, you should not expose <code>TestElement</code> instances to users of a harness
+<p translation-result="on">相反，要为最终用户可能执行的操作或可能要检查的状态提供更加专用的方法。例如，<code>MyPopupHarness</code> 可以提供像 <code>toggle</code> 和 <code>isOpen</code> 之类的方法：</p><p translation-origin="off">As a best practice, you should not expose <code>TestElement</code> instances to users of a harness
 unless its an element the component consumer defines directly (e.g. the host element). Exposing
 <code>TestElement</code> instances for internal elements leads users to depend on a component's internal DOM
 structure.</p>
 
-<p translation-result="on">相反，要为最终用户可能执行的操作或可能要检查的状态提供更加专用的方法。例如，<code>MyPopupHarness</code> 可以提供像 <code>toggle</code> 和 <code>isOpen</code> 之类的方法：</p><p translation-origin="off">Instead, provide more narrow-focused methods for particular actions the end-user will
+<p translation-origin="off">Instead, provide more narrow-focused methods for particular actions the end-user will
 take or particular state they may want to check. For example, <code>MyPopupHarness</code> could provide methods
 like <code>toggle</code> and <code>isOpen</code>:</p>
 
@@ -580,7 +580,7 @@ like <code>toggle</code> and <code>isOpen</code>:</p>
         <h4 id="loading-harnesses-for-subcomponents" class="docs-header-link" translation-result="on">
           <span header-link="为子组件加载测试工具"></span>
           为子组件加载测试工具
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------loading-harnesses-for-subcomponents--------">
           <span header-link="loading-harnesses-for-subcomponents"></span>
           Loading harnesses for subcomponents
         </h4>
@@ -660,27 +660,27 @@ earlier has an alternate signature that can be used for locating sub-harnesses r
         <h4 id="filtering-harness-instances-with-harnesspredicate" class="docs-header-link" translation-result="on">
           <span header-link="使用-harnesspredicate-过滤测试工具实例"></span>
           使用 <code>HarnessPredicate</code> 过滤测试工具实例
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------filtering-harness-instances-with-harnesspredicate--------">
           <span header-link="filtering-harness-instances-with-harnesspredicate"></span>
           Filtering harness instances with <code>HarnessPredicate</code>
         </h4>
       
         
-      <p translation-result="on">当一个页面包含特定组件的多个实例时，你可能需要根据该组件的某些属性进行过滤，以得到一个特定的组件实例。例如，你可能想要一个带有特定文本的按钮，或一个带有特定 ID 的菜单。<code>HarnessPredicate</code> 可以为 <code>ComponentHarness</code> 的子类按一定的标准捕获它们。虽然测试作者也能手动构建 <code>HarnessPredicate</code> 实例，但 <code>ComponentHarness</code> 子类提供了一个辅助方法来为常用的过滤器构造谓词，这更容易。</p><p translation-origin="off">When a page contains multiple instances of a particular component, you may want to filter based on
+      <p translation-result="on">当一个页面包含特定组件的多个实例时，你可能需要根据该组件的某些属性进行过滤，以得到一个特定的组件实例。例如，你可能想要一个带有特定文本的按钮，或一个带有特定 ID 的菜单。<code>HarnessPredicate</code> 可以为 <code>ComponentHarness</code> 的子类按一定的标准捕获它们。虽然测试作者也能手动构建 <code>HarnessPredicate</code> 实例，但 <code>ComponentHarness</code> 子类提供了一个辅助方法来为常用的过滤器构造谓词，这更容易。</p><p translation-result="on">建议在每个 <code>ComponentHarness</code> 子类的 <code>with</code> 方法中提供这个辅助方法，它返回该类的 <code>HarnessPredicate</code>。这让测试作者可以编写易于理解的代码，例如 <code>loader.getHarness(MyMenuHarness.with({selector: '#menu1'}))</code>。除了标准的 <code>selector</code> 和 <code>ancestor</code> 选项之外，<code>with</code> 方法还应该添加对特定的子类有意义的其他选项。</p><p translation-origin="off">When a page contains multiple instances of a particular component, you may want to filter based on
 some property of the component to get a particular component instance. For example, you may want
 a button with some specific text, or a menu with a specific ID. The <code>HarnessPredicate</code>
 class can capture criteria like this for a <code>ComponentHarness</code> subclass. While the
 test author is able to construct <code>HarnessPredicate</code> instances manually, it's easier when the
 <code>ComponentHarness</code> subclass provides a helper method to construct predicates for common filters.</p>
 
-<p translation-result="on">建议在每个 <code>ComponentHarness</code> 子类的 <code>with</code> 方法中提供这个辅助方法，它返回该类的 <code>HarnessPredicate</code>。这让测试作者可以编写易于理解的代码，例如 <code>loader.getHarness(MyMenuHarness.with({selector: '#menu1'}))</code>。除了标准的 <code>selector</code> 和 <code>ancestor</code> 选项之外，<code>with</code> 方法还应该添加对特定的子类有意义的其他选项。</p><p translation-origin="off">The recommended approach to providing this helper is to create a static <code>with</code> method on each
+<p translation-result="on">需要添加其他选项的测试工具应该根据需要扩展 <code>BaseHarnessFilters</code> 接口和其它可选属性。<code>HarnessPredicate</code> 为添加选项提供了一些便利方法。</p><p translation-origin="off">The recommended approach to providing this helper is to create a static <code>with</code> method on each
 <code>ComponentHarness</code> subclass that returns a <code>HarnessPredicate</code> for that class. This allows test
 authors to write easily understandable code, e.g.
 <code>loader.getHarness(MyMenuHarness.with({selector: '#menu1'}))</code>. In addition to the standard
 <code>selector</code> and <code>ancestor</code> options, the <code>with</code> method should add any other options that make sense
 for the particular subclass.</p>
 
-<p translation-result="on">需要添加其他选项的测试工具应该根据需要扩展 <code>BaseHarnessFilters</code> 接口和其它可选属性。<code>HarnessPredicate</code> 为添加选项提供了一些便利方法。</p><p translation-origin="off">Harnesses that need to add additional options should extend the <code>BaseHarnessFilters</code> interface and
+<p translation-origin="off">Harnesses that need to add additional options should extend the <code>BaseHarnessFilters</code> interface and
 additional optional properties as needed. <code>HarnessPredicate</code> provides several convenience methods
 for adding options.</p>
 
@@ -782,7 +782,7 @@ This can now easily be expanded to allow users of the harness to search for part
         <h4 id="creating-a-harnessloader-for-an-element" class="docs-header-link" translation-result="on">
           <span header-link="为元素创建一个-harnessloader"></span>
           为元素创建一个 <code>HarnessLoader</code>
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------creating-a-harnessloader-for-an-element--------">
           <span header-link="creating-a-harnessloader-for-an-element"></span>
           Creating a <code>HarnessLoader</code> for an element
         </h4>
@@ -831,7 +831,7 @@ extending <code>ContentContainerComponentHarness</code>.</p>
         <h4 id="accessing-elements-outside-of-the-components-host-element" class="docs-header-link" translation-result="on">
           <span header-link="访问该组件的宿主元素之外的元素"></span>
           访问该组件的宿主元素之外的元素
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------accessing-elements-outside-of-the-components-host-element--------">
           <span header-link="accessing-elements-outside-of-the-components-host-element"></span>
           Accessing elements outside of the component's host element
         </h4>
@@ -877,26 +877,26 @@ via <code>documentRootLocatorFactory()</code>:</p>
         <h4 id="waiting-for-asynchronous-tasks" class="docs-header-link" translation-result="on">
           <span header-link="等待异步任务"></span>
           等待异步任务
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------waiting-for-asynchronous-tasks--------">
           <span header-link="waiting-for-asynchronous-tasks"></span>
           Waiting for asynchronous tasks
         </h4>
       
         
       <p translation-result="on"><code>TestElement</code> 上的方法会自动触发 Angular 的变更检测，并等待 <code>NgZone</code> 中的任务，所以在大多数情况下，这些方法不需要特别的工作来让线程作者等待异步任务。
-然而，在一些边缘情况下这可能还不够。</p><p translation-origin="off">The methods on <code>TestElement</code> automatically trigger Angular's change detection and wait for tasks
+然而，在一些边缘情况下这可能还不够。</p><p translation-result="on">在某些情况下，在完全刷新动画事件之前，Angular 动画可能还需要第二个变更检测循环和等待 <code>NgZone</code> 进入稳定状态。
+如果需要这样做，<code>ComponentHarness</code> 提供了一个 <code>forceStabilize()</code> 方法，可以调用它来进行第二轮测试。</p><p translation-origin="off">The methods on <code>TestElement</code> automatically trigger Angular's change detection and wait for tasks
 inside the <code>NgZone</code>, so in most cases no special effort is required for harness authors to wait on
 asynchronous tasks. However, there are some edge cases where this may not be sufficient.</p>
 
-<p translation-result="on">在某些情况下，在完全刷新动画事件之前，Angular 动画可能还需要第二个变更检测循环和等待 <code>NgZone</code> 进入稳定状态。
-如果需要这样做，<code>ComponentHarness</code> 提供了一个 <code>forceStabilize()</code> 方法，可以调用它来进行第二轮测试。</p><p translation-origin="off">Under some circumstances, Angular animations may require a second cycle of change detection and
+<p translation-result="on">另外，某些组件可能会故意在 <code>NgZone</code> <em>之外</em>安排任务，这通常是使用 <code>NgZone.runOutsideAngular</code> 完成的。
+在这种情况下，对应的测试工具可能需要显式等待 <code>NgZone</code> 以外的任务，因为这不会自动发生。
+<code>ComponentHarness</code> 为此提供了一个名为 <code>waitForTasksOutsideAngular</code> 的方法。</p><p translation-origin="off">Under some circumstances, Angular animations may require a second cycle of change detection and
 subsequent <code>NgZone</code> stabilization before animation events are fully flushed. In cases where this is
 needed, the <code>ComponentHarness</code> offers a <code>forceStabilize()</code> method that can be called to do the
 second round.</p>
 
-<p translation-result="on">另外，某些组件可能会故意在 <code>NgZone</code> <em>之外</em>安排任务，这通常是使用 <code>NgZone.runOutsideAngular</code> 完成的。
-在这种情况下，对应的测试工具可能需要显式等待 <code>NgZone</code> 以外的任务，因为这不会自动发生。
-<code>ComponentHarness</code> 为此提供了一个名为 <code>waitForTasksOutsideAngular</code> 的方法。</p><p translation-origin="off">Additionally, some components may intentionally schedule tasks <em>outside</em> of <code>NgZone</code>, this is
+<p translation-origin="off">Additionally, some components may intentionally schedule tasks <em>outside</em> of <code>NgZone</code>, this is
 typically accomplished by using <code>NgZone.runOutsideAngular</code>. In this case, the corresponding harness
 may need to explicitly wait for tasks outside <code>NgZone</code>, as this does not happen automatically.
 <code>ComponentHarness</code> offers a method called <code>waitForTasksOutsideAngular</code> for this purpose.</p>
@@ -924,7 +924,7 @@ may need to explicitly wait for tasks outside <code>NgZone</code>, as this does 
         <h3 id="api-for-harness-environment-authors" class="docs-header-link" translation-result="on">
           <span header-link="测试工具环境作者的-api"></span>
           测试工具环境作者的 API
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------api-for-harness-environment-authors--------">
           <span header-link="api-for-harness-environment-authors"></span>
           API for harness environment authors
         </h3>
@@ -939,7 +939,7 @@ creating custom implementations of <code>TestElement</code> and <code>HarnessEnv
         <h4 id="creating-a-testelement-implementation-for-the-environment" class="docs-header-link" translation-result="on">
           <span header-link="为此环境创建一个-testelement"></span>
           为此环境创建一个 <code>TestElement</code>
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------creating-a-testelement-implementation-for-the-environment--------">
           <span header-link="creating-a-testelement-implementation-for-the-environment"></span>
           Creating a <code>TestElement</code> implementation for the environment
         </h4>
@@ -1046,14 +1046,14 @@ result of the operation.</p>
 </tr>
 
 </tbody></table>
-<p translation-result="on"><code>TestElement</code> 接口包含类似 <code>HTMLElement</code> 方法的大部分方法。在大多数测试环境中都存在类似的方法，这使得实现这些方法相当简单。使用 <code>sendKeys</code> 方法时要注意的一个重要区别是，<code>TestKey</code> 枚举中的键码可能与测试环境中使用的键码有所不同。环境作者应该坚持从 <code>TestKey</code> 代码映射到特定测试环境中的代码。</p><p translation-origin="off">The <code>TestElement</code> interface consists largely of methods that resemble methods
+<p translation-result="on"><code>TestElement</code> 接口包含类似 <code>HTMLElement</code> 方法的大部分方法。在大多数测试环境中都存在类似的方法，这使得实现这些方法相当简单。使用 <code>sendKeys</code> 方法时要注意的一个重要区别是，<code>TestKey</code> 枚举中的键码可能与测试环境中使用的键码有所不同。环境作者应该坚持从 <code>TestKey</code> 代码映射到特定测试环境中的代码。</p><p translation-result="on">Angular CDK 中的 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/testbed/unit-test-element.ts#L57"><code>UnitTestElement</code></a> 和 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/selenium-webdriver/selenium-web-driver-element.ts#L22"><code>SeleniumWebDriverElement</code></a> 实现就是实现这个接口的好例子。</p><p translation-origin="off">The <code>TestElement</code> interface consists largely of methods that resemble methods
 available on <code>HTMLElement</code>; similar methods exist in most test environments, which makes
 implementing the methods fairly straightforward. However, one important difference to note when
 implementing the <code>sendKeys</code> method, is that the key codes in the <code>TestKey</code>
 enum likely differ from the key codes used in the test environment. Environment authors should
 maintain a mapping from <code>TestKey</code> codes to the codes used in the particular testing environment.</p>
 
-<p translation-result="on">Angular CDK 中的 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/testbed/unit-test-element.ts#L57"><code>UnitTestElement</code></a> 和 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/selenium-webdriver/selenium-web-driver-element.ts#L22"><code>SeleniumWebDriverElement</code></a> 实现就是实现这个接口的好例子。</p><p translation-origin="off">The
+<p translation-origin="off">The
 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/testbed/unit-test-element.ts#L57"><code>UnitTestElement</code></a>
 and
 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/selenium-webdriver/selenium-web-driver-element.ts#L22"><code>SeleniumWebDriverElement</code></a>
@@ -1063,23 +1063,23 @@ implementations in Angular CDK serve as good examples of implementations of this
         <h4 id="creating-a-harnessenvironment-implementation-for-the-environment" class="docs-header-link" translation-result="on">
           <span header-link="为此环境创建一个-harnessenvironment"></span>
           为此环境创建一个 <code>HarnessEnvironment</code>
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------creating-a-harnessenvironment-implementation-for-the-environment--------">
           <span header-link="creating-a-harnessenvironment-implementation-for-the-environment"></span>
           Creating a <code>HarnessEnvironment</code> implementation for the environment
         </h4>
       
         
-      <p translation-result="on">测试作者使用 <code>HarnessEnvironemnt</code> 来创建用于测试的组件工具实例。</p><p translation-origin="off">Test authors use <code>HarnessEnvironment</code> to create component harness instances for use in tests.</p>
+      <p translation-result="on">测试作者使用 <code>HarnessEnvironemnt</code> 来创建用于测试的组件工具实例。</p><p translation-result="on"><code>HarnessEnvironment</code> 是一个抽象类，必须进行扩展才能为新环境创建一个具体的子类。在支持新的测试环境时，你必须创建一个 <code>HarnessEnvironment</code> 子类，为所有抽象成员添加具体的实现。</p><p translation-origin="off">Test authors use <code>HarnessEnvironment</code> to create component harness instances for use in tests.</p>
 
-<p translation-result="on"><code>HarnessEnvironment</code> 是一个抽象类，必须进行扩展才能为新环境创建一个具体的子类。在支持新的测试环境时，你必须创建一个 <code>HarnessEnvironment</code> 子类，为所有抽象成员添加具体的实现。</p><p translation-origin="off"><code>HarnessEnvironment</code> is an abstract class that must be extended to create a concrete subclass for
+<p translation-result="on">你会发现 <code>HarnessEnvironment</code> 有一个泛型类型参数：<code>HarnessEnvironment&lt;E&gt;</code>。这个参数 <code>E</code> 就表示环境的原始元素类型。例如，这个参数在单元测试环境下是 <code>Element</code>。</p><p translation-origin="off"><code>HarnessEnvironment</code> is an abstract class that must be extended to create a concrete subclass for
 the new environment. When supporting a new test environment, you must create a <code>HarnessEnvironment</code>
 subclass that adds concrete implementations for all abstract members.</p>
 
-<p translation-result="on">你会发现 <code>HarnessEnvironment</code> 有一个泛型类型参数：<code>HarnessEnvironment&lt;E&gt;</code>。这个参数 <code>E</code> 就表示环境的原始元素类型。例如，这个参数在单元测试环境下是 <code>Element</code>。</p><p translation-origin="off">You will notice that <code>HarnessEnvironment</code> has a generic type parameter: <code>HarnessEnvironment&lt;E&gt;</code>.
+<p translation-result="on">下面是必须要实现的抽象方法：</p><p translation-origin="off">You will notice that <code>HarnessEnvironment</code> has a generic type parameter: <code>HarnessEnvironment&lt;E&gt;</code>.
 This parameter, <code>E</code>, represents the raw element type of the environment. For example, this parameter
 is <code>Element</code> for unit test environments.</p>
 
-<p translation-result="on">下面是必须要实现的抽象方法：</p><p translation-origin="off">The following are the abstract methods that must be implemented:</p>
+<p translation-origin="off">The following are the abstract methods that must be implemented:</p>
 
 <table>
 <thead>
@@ -1121,7 +1121,7 @@ is <code>Element</code> for unit test environments.</p>
 
 </tbody></table>
 <p translation-result="on">除了实现所缺的方法之外，这个类还应该为测试作者提供一种获取 <code>ComponentHarness</code> 实例的方法。
-推荐的方法是具有一个受保护的构造函数，并提供一个名为 <code>loader</code> 的静态方法来返回一个 <code>HarnessLoader</code> 的实例。这让测试作者可以编写如下代码：<code>SomeHarnessEnvironment.loader().getHarness(...)</code>。根据特定环境的需要，该类可以提供几种不同的静态方法，或者要求传递参数。（例如，<code>TestbedHarnessEnvironment</code> 的 <code>loader</code> 方法接受了一个 <code>ComponentFixture</code>，该类还提供了另外一些名为 <code>documentRootLoader</code> 和 <code>harnessForFixture</code> 静态方法）。</p><p translation-origin="off">In addition to implementing the missing methods, this class should provide a way for test authors to
+推荐的方法是具有一个受保护的构造函数，并提供一个名为 <code>loader</code> 的静态方法来返回一个 <code>HarnessLoader</code> 的实例。这让测试作者可以编写如下代码：<code>SomeHarnessEnvironment.loader().getHarness(...)</code>。根据特定环境的需要，该类可以提供几种不同的静态方法，或者要求传递参数。（例如，<code>TestbedHarnessEnvironment</code> 的 <code>loader</code> 方法接受了一个 <code>ComponentFixture</code>，该类还提供了另外一些名为 <code>documentRootLoader</code> 和 <code>harnessForFixture</code> 静态方法）。</p><p translation-result="on">Angular CDK 中的 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/testbed/testbed-harness-environment.ts#L20"><code>TestbedHarnessEnvironment</code></a> 和 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/selenium-webdriver/selenium-web-driver-harness-environment.ts#L71"><code>SeleniumWebDriverHarnessEnvironment</code></a> 的实现就是很好的例子。</p><p translation-origin="off">In addition to implementing the missing methods, this class should provide a way for test authors to
 get <code>ComponentHarness</code> instances. The recommended approach is to have a protected constructor and
 provide a static method called <code>loader</code> that returns a <code>HarnessLoader</code> instance. This allows test
 authors to write code like: <code>SomeHarnessEnvironment.loader().getHarness(...)</code>. Depending on the
@@ -1130,7 +1130,7 @@ require arguments to be passed. (e.g. the <code>loader</code> method on <code>Te
 <code>ComponentFixture</code>, and the class provides additional static methods called <code>documentRootLoader</code> and
 <code>harnessForFixture</code>).</p>
 
-<p translation-result="on">Angular CDK 中的 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/testbed/testbed-harness-environment.ts#L20"><code>TestbedHarnessEnvironment</code></a> 和 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/selenium-webdriver/selenium-web-driver-harness-environment.ts#L71"><code>SeleniumWebDriverHarnessEnvironment</code></a> 的实现就是很好的例子。</p><p translation-origin="off">The
+<p translation-origin="off">The
 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/testbed/testbed-harness-environment.ts#L20"><code>TestbedHarnessEnvironment</code></a>
 and
 <a href="https://github.com/angular/components/blob/main/src/cdk/testing/selenium-webdriver/selenium-web-driver-harness-environment.ts#L71"><code>SeleniumWebDriverHarnessEnvironment</code></a>
@@ -1140,16 +1140,16 @@ implementations in Angular CDK serve as good examples of implementations of this
         <h4 id="handling-auto-change-detection-status" class="docs-header-link" translation-result="on">
           <span header-link="处理自动变更检测状态"></span>
           处理自动变更检测状态
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------handling-auto-change-detection-status--------">
           <span header-link="handling-auto-change-detection-status"></span>
           Handling auto change detection status
         </h4>
       
         
-      <p translation-result="on">为了支持 <code>manualChangeDetection</code> 和 <code>parallel</code> API，你的环境应该为自动变更检测状态安装一个处理器。</p><p translation-origin="off">In order to support the <code>manualChangeDetection</code> and <code>parallel</code> APIs, your environment should install
+      <p translation-result="on">为了支持 <code>manualChangeDetection</code> 和 <code>parallel</code> API，你的环境应该为自动变更检测状态安装一个处理器。</p><p translation-result="on">当你的环境想要开始处理自动变更检测的状态时，可以调用 <code>handleAutoChangeDetectionStatus(handler)</code>。此处理器函数会要求一个 <code>AutoChangeDetectionStatus</code> 参数，其中有两个属性：</p><p translation-origin="off">In order to support the <code>manualChangeDetection</code> and <code>parallel</code> APIs, your environment should install
 a handler for the auto change detection status.</p>
 
-<p translation-result="on">当你的环境想要开始处理自动变更检测的状态时，可以调用 <code>handleAutoChangeDetectionStatus(handler)</code>。此处理器函数会要求一个 <code>AutoChangeDetectionStatus</code> 参数，其中有两个属性：</p><p translation-origin="off">When your environment wants to start handling the auto change detection status it can call
+<p translation-origin="off">When your environment wants to start handling the auto change detection status it can call
 <code>handleAutoChangeDetectionStatus(handler)</code>. The handler function will receive a 
 <code>AutoChangeDetectionStatus</code> which has two properties:</p>
 

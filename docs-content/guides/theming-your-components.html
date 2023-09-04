@@ -1,10 +1,10 @@
-<div class="docs-markdown"><h1 id="theme-your-own-components-with-angular-materials-theming-system" translation-result="on">使用 Angular Material 的主题体系为你自己的组件设置主题</h1><h1 translation-origin="off">Theme your own components with Angular Material's theming system</h1><p translation-result="on">你可以将 Angular Material 基于 Sass 的主题体系用于自定义组件。</p><p translation-origin="off">You can use Angular Material's Sass-based theming system for your own custom components.</p>
+<div class="docs-markdown"><h1 id="theme-your-own-components-with-angular-materials-theming-system" translation-result="on">使用 Angular Material 的主题体系为你自己的组件设置主题</h1><h1 translation-origin="off" id="theme-your-own-components-with-angular-materials-theming-system">Theme your own components with Angular Material's theming system</h1><p translation-result="on">你可以将 Angular Material 基于 Sass 的主题体系用于自定义组件。</p><p translation-origin="off">You can use Angular Material's Sass-based theming system for your own custom components.</p>
 
 
         <h2 id="reading-style-values-from-a-theme" class="docs-header-link" translation-result="on">
           <span header-link="从主题中读取样式值"></span>
           从主题中读取样式值
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------reading-style-values-from-a-theme--------">
           <span header-link="reading-style-values-from-a-theme"></span>
           Reading style values from a theme
         </h2>
@@ -17,7 +17,7 @@ customize components. Angular Material provides APIs for reading values from thi
         <h3 id="reading-color-values" class="docs-header-link" translation-result="on">
           <span header-link="读取颜色值"></span>
           读取颜色值
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------reading-color-values--------">
           <span header-link="reading-color-values"></span>
           Reading color values
         </h3>
@@ -50,7 +50,7 @@ indicating whether dark mode is set.</p>
         <h3 id="reading-typography-values" class="docs-header-link" translation-result="on">
           <span header-link="读取排版值"></span>
           读取排版值
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------reading-typography-values--------">
           <span header-link="reading-typography-values"></span>
           Reading typography values
         </h3>
@@ -69,18 +69,18 @@ structure and for APIs for reading values from this config.</p>
         <h2 id="separating-theme-styles" class="docs-header-link" translation-result="on">
           <span header-link="分离主题样式"></span>
           分离主题样式
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------separating-theme-styles--------">
           <span header-link="separating-theme-styles"></span>
           Separating theme styles
         </h2>
       
         
-      <p translation-result="on">每个 Angular Material 组件都有一个 Sass 文件，该文件定义了用于自定义该组件的颜色和排版的 mixin。例如：<code>MatButton</code> 具有 <code>button-color</code> 和 <code>button-typography</code> 这两个 mixin。它们分别生成该组件的所有颜色和排版样式。</p><p translation-origin="off">Angular Material components each have a Sass file that defines mixins for customizing
+      <p translation-result="on">每个 Angular Material 组件都有一个 Sass 文件，该文件定义了用于自定义该组件的颜色和排版的 mixin。例如：<code>MatButton</code> 具有 <code>button-color</code> 和 <code>button-typography</code> 这两个 mixin。它们分别生成该组件的所有颜色和排版样式。</p><p translation-result="on">你可以通过定义自己的 mixin，在你的组件中模仿这种结构。这些 mixin 应该接受一个 Angular Material 主题，它们可以从中读取颜色和排版值。然后，你可以将这些 mixin 与 Angular Material 自己的 mixins 一起包含在你的应用程序中。</p><p translation-origin="off">Angular Material components each have a Sass file that defines mixins for customizing
 that component's color and typography. For example, <code>MatButton</code> has mixins for <code>button-color</code> and
 <code>button-typography</code>. Each mixin emits all color and typography styles for that component,
 respectively.</p>
 
-<p translation-result="on">你可以通过定义自己的 mixin，在你的组件中模仿这种结构。这些 mixin 应该接受一个 Angular Material 主题，它们可以从中读取颜色和排版值。然后，你可以将这些 mixin 与 Angular Material 自己的 mixins 一起包含在你的应用程序中。</p><p translation-origin="off">You can mirror this structure in your components by defining your own mixins. These mixins
+<p translation-origin="off">You can mirror this structure in your components by defining your own mixins. These mixins
 should accept an Angular Material theme, from which they can read color and typography values. You
 can then include these mixins in your application along with Angular Material's own mixins.</p>
 
@@ -88,7 +88,7 @@ can then include these mixins in your application along with Angular Material's 
         <h2 id="step-by-step-example" class="docs-header-link" translation-result="on">
           <span header-link="分步示例"></span>
           分步示例
-        </h2><h2 class="docs-header-link" translation-origin="off">
+        </h2><h2 class="docs-header-link" translation-origin="off" id="--------------------step-by-step-example--------">
           <span header-link="step-by-step-example"></span>
           Step-by-step example
         </h2>
@@ -114,7 +114,7 @@ structural, color, and typography styles. This file is included in the <code>sty
         <h3 id="step-1-extract-theme-based-styles-to-a-separate-file" class="docs-header-link" translation-result="on">
           <span header-link="步骤-1：将基于主题的样式提取到单独的文件中"></span>
           步骤 1：将基于主题的样式提取到单独的文件中
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------step-1-extract-theme-based-styles-to-a-separate-file--------">
           <span header-link="step-1-extract-theme-based-styles-to-a-separate-file"></span>
           Step 1: Extract theme-based styles to a separate file
         </h3>
@@ -154,7 +154,7 @@ partial files.</p>
         <h3 id="step-2-use-values-from-the-theme" class="docs-header-link" translation-result="on">
           <span header-link="第-2-步：使用主题中的值"></span>
           第 2 步：使用主题中的值
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------step-2-use-values-from-the-theme--------">
           <span header-link="step-2-use-values-from-the-theme"></span>
           Step 2: Use values from the theme
         </h3>
@@ -194,7 +194,7 @@ theme passed into the mixins.</p>
         <h3 id="step-3-add-a-theme-mixin" class="docs-header-link" translation-result="on">
           <span header-link="第-3-步：添加主题-mixin"></span>
           第 3 步：添加主题 mixin
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------step-3-add-a-theme-mixin--------">
           <span header-link="step-3-add-a-theme-mixin"></span>
           Step 3: Add a theme mixin
         </h3>
@@ -247,7 +247,7 @@ have a config specified.</p>
         <h3 id="step-4-include-the-theme-mixin-in-your-application" class="docs-header-link" translation-result="on">
           <span header-link="第-4-步：在你的应用程序中包含主题-mixin"></span>
           第 4 步：在你的应用程序中包含主题 mixin
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------step-4-include-the-theme-mixin-in-your-application--------">
           <span header-link="step-4-include-the-theme-mixin-in-your-application"></span>
           Step 4: Include the theme mixin in your application
         </h3>

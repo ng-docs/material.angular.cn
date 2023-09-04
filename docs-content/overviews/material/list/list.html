@@ -10,7 +10,7 @@ base list component, it provides Material Design styling, but no behavior of its
         <h3 id="simple-lists" class="docs-header-link" translation-result="on">
           <span header-link="简单列表"></span>
           简单列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------simple-lists--------">
           <span header-link="simple-lists"></span>
           Simple lists
         </h3>
@@ -29,7 +29,7 @@ directly into the <code>&lt;mat-list-item&gt;</code> element.</p>
         <h3 id="multi-line-lists" class="docs-header-link" translation-result="on">
           <span header-link="多行列表"></span>
           多行列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------multi-line-lists--------">
           <span header-link="multi-line-lists"></span>
           Multi-line lists
         </h3>
@@ -54,10 +54,10 @@ for each subsequent line of text.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span>
 </code></pre>
-<p translation-result="on">要激活文本换行，必须在 <code>&lt;mat-list-item&gt;</code> 上设置 <code>lines</code> 输入以指示文本行数。</p><p translation-origin="off">To activate text wrapping, the <code>lines</code> input has to be set on the <code>&lt;mat-list-item&gt;</code> indicating the
+<p translation-result="on">要激活文本换行，必须在 <code>&lt;mat-list-item&gt;</code> 上设置 <code>lines</code> 输入以指示文本行数。</p><p translation-result="on">以下指令可用于设置列表条目内容的样式：</p><p translation-origin="off">To activate text wrapping, the <code>lines</code> input has to be set on the <code>&lt;mat-list-item&gt;</code> indicating the
 number of lines of text.</p>
 
-<p translation-result="on">以下指令可用于设置列表条目内容的样式：</p><p translation-origin="off">The following directives can be used to style the content of a list item:</p>
+<p translation-origin="off">The following directives can be used to style the content of a list item:</p>
 
 <table>
 <thead>
@@ -97,15 +97,15 @@ number of lines of text.</p>
         <h3 id="navigation-lists" class="docs-header-link" translation-result="on">
           <span header-link="导航列表"></span>
           导航列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------navigation-lists--------">
           <span header-link="navigation-lists"></span>
           Navigation lists
         </h3>
       
         
-      <p translation-result="on">使用 <code>mat-nav-list</code> 标记来表示导航列表（即带链接的列表）。</p><p translation-origin="off">Use <code>mat-nav-list</code> tags for navigation lists (i.e. lists that have anchor tags).</p>
+      <p translation-result="on">使用 <code>mat-nav-list</code> 标记来表示导航列表（即带链接的列表）。</p><p translation-result="on">简单导航列表可以直接把 <code>mat-list-item</code> 属性用在链接上：</p><p translation-origin="off">Use <code>mat-nav-list</code> tags for navigation lists (i.e. lists that have anchor tags).</p>
 
-<p translation-result="on">简单导航列表可以直接把 <code>mat-list-item</code> 属性用在链接上：</p><p translation-origin="off">Simple navigation lists can use the <code>mat-list-item</code> attribute on anchor tag elements directly:</p>
+<p translation-origin="off">Simple navigation lists can use the <code>mat-list-item</code> attribute on anchor tag elements directly:</p>
 
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-nav-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of links"</span> [<span class="hljs-attr">activated</span>]=<span class="hljs-string">"link.isActive"</span>&gt;</span>{{ link }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -127,16 +127,16 @@ element in an <code>&lt;mat-list-item&gt;</code>.</p>
         <h3 id="action-lists" class="docs-header-link" translation-result="on">
           <span header-link="动作列表"></span>
           动作列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------action-lists--------">
           <span header-link="action-lists"></span>
           Action lists
         </h3>
       
         
-      <p translation-result="on">当列表中的每个项都要执行某种<em>动作</em>时，使用 <code>&lt;mat-action-list&gt;</code> 元素。动作列表中的每一项都是一个 <code>&lt;button&gt;</code> 元素。</p><p translation-origin="off">Use the <code>&lt;mat-action-list&gt;</code> element when each item in the list performs some <em>action</em>. Each item
+      <p translation-result="on">当列表中的每个项都要执行某种<em>动作</em>时，使用 <code>&lt;mat-action-list&gt;</code> 元素。动作列表中的每一项都是一个 <code>&lt;button&gt;</code> 元素。</p><p translation-result="on">简单的动作列表可以直接用 <code>mat-list-item</code> 属性添加在 <code>button</code> 元素上。</p><p translation-origin="off">Use the <code>&lt;mat-action-list&gt;</code> element when each item in the list performs some <em>action</em>. Each item
 in an action list is a <code>&lt;button&gt;</code> element.</p>
 
-<p translation-result="on">简单的动作列表可以直接用 <code>mat-list-item</code> 属性添加在 <code>button</code> 元素上。</p><p translation-origin="off">Simple action lists can use the <code>mat-list-item</code> attribute on button tag elements directly:</p>
+<p translation-origin="off">Simple action lists can use the <code>mat-list-item</code> attribute on button tag elements directly:</p>
 
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-action-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-list-item</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"save()"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -147,7 +147,7 @@ in an action list is a <code>&lt;button&gt;</code> element.</p>
         <h3 id="selection-lists" class="docs-header-link" translation-result="on">
           <span header-link="选取列表"></span>
           选取列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------selection-lists--------">
           <span header-link="selection-lists"></span>
           Selection lists
         </h3>
@@ -164,7 +164,7 @@ as buttons and anchors.</p>
         <h3 id="multi-line-lists-1" class="docs-header-link" translation-result="on">
           <span header-link="多行列表-1"></span>
           多行列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------multi-line-lists---------1">
           <span header-link="multi-line-lists-1"></span>
           Multi-line lists
         </h3>
@@ -199,7 +199,7 @@ attribute. Whichever heading tag is appropriate for your DOM hierarchy should be
         <h3 id="lists-with-icons" class="docs-header-link" translation-result="on">
           <span header-link="带图标的列表"></span>
           带图标的列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------lists-with-icons--------">
           <span header-link="lists-with-icons"></span>
           Lists with icons
         </h3>
@@ -222,7 +222,7 @@ attribute. Whichever heading tag is appropriate for your DOM hierarchy should be
         <h3 id="lists-with-avatars" class="docs-header-link" translation-result="on">
           <span header-link="带头像的列表"></span>
           带头像的列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------lists-with-avatars--------">
           <span header-link="lists-with-avatars"></span>
           Lists with avatars
         </h3>
@@ -245,7 +245,7 @@ attribute. Whichever heading tag is appropriate for your DOM hierarchy should be
         <h3 id="lists-with-multiple-sections" class="docs-header-link" translation-result="on">
           <span header-link="带有多个分区的列表"></span>
           带有多个分区的列表
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------lists-with-multiple-sections--------">
           <span header-link="lists-with-multiple-sections"></span>
           Lists with multiple sections
         </h3>
@@ -275,7 +275,7 @@ To add a divider, use <code>&lt;mat-divider&gt;</code>.</p>
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off">
+        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
@@ -288,59 +288,60 @@ to your use-case.</p>
         <h4 id="navigation" class="docs-header-link" translation-result="on">
           <span header-link="导航"></span>
           导航
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------navigation--------">
           <span header-link="navigation"></span>
           Navigation
         </h4>
       
         
-      <p translation-result="on">当列表中的每个条目都是导航到另一个 URL 的锚点时，你应该使用 <code>MatNavList</code> 。根 <code>&lt;mat-nav-list&gt;</code> 元素会设置 <code>role="navigation"</code> 并且应该只包含具有 <code>mat-list-item</code> 属性的锚点元素。你不应在这些锚点内嵌套任何交互元素，包括按钮和复选框。</p><p translation-origin="off">You should use <code>MatNavList</code> when every item in the list is an anchor that navigate to another URL.
+      <p translation-result="on">当列表中的每个条目都是导航到另一个 URL 的锚点时，你应该使用 <code>MatNavList</code> 。根 <code>&lt;mat-nav-list&gt;</code> 元素会设置 <code>role="navigation"</code> 并且应该只包含具有 <code>mat-list-item</code> 属性的锚点元素。你不应在这些锚点内嵌套任何交互元素，包括按钮和复选框。</p><p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为 <code>&lt;mat-nav-list&gt;</code> 元素提供无障碍标签。</p><p translation-origin="off">You should use <code>MatNavList</code> when every item in the list is an anchor that navigate to another URL.
 The root <code>&lt;mat-nav-list&gt;</code> element sets <code>role="navigation"</code> and should contain only anchor elements
 with the <code>mat-list-item</code> attribute. You should not nest any interactive elements inside these
 anchors, including buttons and checkboxes.</p>
 
-<p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为 <code>&lt;mat-nav-list&gt;</code> 元素提供无障碍标签。</p><p translation-origin="off">Always provide an accessible label for the <code>&lt;mat-nav-list&gt;</code> element via <code>aria-label</code> or
+<p translation-origin="off">Always provide an accessible label for the <code>&lt;mat-nav-list&gt;</code> element via <code>aria-label</code> or
 <code>aria-labelledby</code>.</p>
 
 
         <h4 id="selection" class="docs-header-link" translation-result="on">
           <span header-link="选取结果"></span>
           选取结果
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------selection--------">
           <span header-link="selection"></span>
           Selection
         </h4>
       
         
-      <p translation-result="on">对于允许用户选择一个或多个值的列表，你应该使用 <code>MatSelectionList</code> 和 <code>MatListOption</code> 。此列表变体使用 <code>role="listbox"</code> 交互模式，处理所有相关的键盘输入和焦点管理。你不应在这些选项中嵌套任何交互元素，包括按钮和锚点。</p><p translation-origin="off">You should use <code>MatSelectionList</code> and <code>MatListOption</code> for lists that allow the user to select one
+      <p translation-result="on">对于允许用户选择一个或多个值的列表，你应该使用 <code>MatSelectionList</code> 和 <code>MatListOption</code> 。此列表变体使用 <code>role="listbox"</code> 交互模式，处理所有相关的键盘输入和焦点管理。你不应在这些选项中嵌套任何交互元素，包括按钮和锚点。</p><p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为 <code>&lt;mat-selection-list&gt;</code> 元素提供一个无障碍标签，以描述正在进行的选择。</p><p translation-origin="off">You should use <code>MatSelectionList</code> and <code>MatListOption</code> for lists that allow the user to select one
 or more values. This list variant uses the <code>role="listbox"</code> interaction pattern, handling all
 associated keyboard input and focus management. You should not nest any interactive elements inside
 these options, including buttons and anchors.</p>
 
-<p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为 <code>&lt;mat-selection-list&gt;</code> 元素提供一个无障碍标签，以描述正在进行的选择。</p><p translation-origin="off">Always provide an accessible label for the <code>&lt;mat-selection-list&gt;</code> element via <code>aria-label</code> or
+<p translation-result="on">默认情况下， <code>MatSelectionList</code> 会显示单选或复选标记指示器来标识所选条目。 虽然你可以通过 <code>hideSingleSelectionIndicator</code> 来隐藏用于单选的单选指示器，但这会使用户更难甚至不可能直观地识别所选条目，从而降低组件的无障碍性。</p><p translation-origin="off">Always provide an accessible label for the <code>&lt;mat-selection-list&gt;</code> element via <code>aria-label</code> or
 <code>aria-labelledby</code> that describes the selection being made.</p>
 
-<p>By default, <code>MatSelectionList</code> displays radio or checkmark indicators to identify selected items.
+<p translation-origin="off">By default, <code>MatSelectionList</code> displays radio or checkmark indicators to identify selected items.
 While you can hide the radio indicator for single-selection via <code>hideSingleSelectionIndicator</code>, this
 makes the component less accessible by making it harder or impossible for users to visually identify
 selected items.</p>
 
+
         <h4 id="custom-scenarios" class="docs-header-link" translation-result="on">
           <span header-link="自定义方案"></span>
           自定义方案
-        </h4><h4 class="docs-header-link" translation-origin="off">
+        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------custom-scenarios--------">
           <span header-link="custom-scenarios"></span>
           Custom scenarios
         </h4>
       
         
       <p translation-result="on">默认情况下，列表组件假定自己是纯装饰性的，因此不设置任何角色、ARIA 属性或键盘快捷键。
-这相当于页面上有一系列 <code>&lt;div&gt;</code> 元素。列表内部的任何交互式内容都应该根据应用程序的特定工作流进行适当的无障碍性处理。</p><p translation-origin="off">By default, the list assumes that it will be used in a purely decorative fashion and thus it sets no
+这相当于页面上有一系列 <code>&lt;div&gt;</code> 元素。列表内部的任何交互式内容都应该根据应用程序的特定工作流进行适当的无障碍性处理。</p><p translation-result="on">如果列表组件用于渲染非交互式内容项的列表，那么列表元素应该带有 <code>role="list"</code> 属性，并且每个列表条目都应该带有 <code>role="listitem"</code> 属性。</p><p translation-origin="off">By default, the list assumes that it will be used in a purely decorative fashion and thus it sets no
 roles, ARIA attributes, or keyboard shortcuts. This is equivalent to having a sequence of <code>&lt;div&gt;</code>
 elements on the page. Any interactive content within the list should be given an appropriate
 accessibility treatment based on the specific workflow of your application.</p>
 
-<p translation-result="on">如果列表组件用于渲染非交互式内容项的列表，那么列表元素应该带有 <code>role="list"</code> 属性，并且每个列表条目都应该带有 <code>role="listitem"</code> 属性。</p><p translation-origin="off">If the list is used to present a list of non-interactive content items, then the list element should
+<p translation-origin="off">If the list is used to present a list of non-interactive content items, then the list element should
 be given <code>role="list"</code> and each list item should be given <code>role="listitem"</code>.</p>
 
 </div>
