@@ -34,16 +34,16 @@
   <span header-link="InputModalityDetector"></span>
   <code>InputModalityDetector</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">检测用户输入模式的服务。</p><p translation-result="on">当用户使用屏幕阅读器进行导航（例如借助 VoiceOver 进行线性导航、借助 NVDA 使用对象导航/浏览模式、借助 JAWS 使用虚拟 PC 光标模式）时，此服务不会改变输入模式。这部分是由于技术限制（即在这些模式下键盘事件不会按预期触发），但也可以说是正确的行为。使用屏幕阅读器导航类似于视觉扫描页面，不应被解释为实际的用户输入交互。</p><p translation-origin="off">Service that detects the user's input modality.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">检测用户输入模式的服务。</p><p translation-origin="off">Service that detects the user's input modality.</p>
 
-<p translation-result="on">当用户不是在导航而是与屏幕阅读器<em>交互</em>时，此服务会尝试将输入模式改为键盘，但一般来说此服务的行为在很大程度上是未定义的。</p><p translation-origin="off">This service does not update the input modality when a user navigates with a screen reader
+<p translation-result="on">当用户使用屏幕阅读器进行导航（例如借助 VoiceOver 进行线性导航、借助 NVDA 使用对象导航/浏览模式、借助 JAWS 使用虚拟 PC 光标模式）时，此服务不会改变输入模式。这部分是由于技术限制（即在这些模式下键盘事件不会按预期触发），但也可以说是正确的行为。使用屏幕阅读器导航类似于视觉扫描页面，不应被解释为实际的用户输入交互。</p><p translation-origin="off">This service does not update the input modality when a user navigates with a screen reader
 (e.g. linear navigation with VoiceOver, object navigation / browse mode with NVDA, virtual PC
 cursor mode with JAWS). This is in part due to technical limitations (i.e. keyboard events do not
 fire as expected in these modes) but is also arguably the correct behavior. Navigating with a
 screen reader is akin to visually scanning a page, and should not be interpreted as actual user
 input interaction.</p>
 
-<p translation-origin="off">When a user is not navigating but <em>interacting</em> with a screen reader, this service attempts to
+<p translation-result="on">当用户不是在导航而是与屏幕阅读器<em>交互</em>时，此服务会尝试将输入模式改为键盘，但一般来说此服务的行为在很大程度上是未定义的。</p><p translation-origin="off">When a user is not navigating but <em>interacting</em> with a screen reader, this service attempts to
 update the input modality to keyboard, but in general this service's behavior is largely
 undefined.</p>
 
@@ -110,13 +110,13 @@ undefined.</p>
   <span header-link="HighContrastModeDetector"></span>
   <code>HighContrastModeDetector</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">本服务用于确定浏览器当前是否处于高对比度模式环境中。</p><p translation-result="on">Microsoft Windows 支持一种称为“高对比度模式”的辅助功能。此模式更改所有应用程序（包括 Web 应用程序）的外观，以显著提高对比度。</p><p translation-origin="off">Service to determine whether the browser is currently in a high-contrast-mode environment.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">本服务用于确定浏览器当前是否处于高对比度模式环境中。</p><p translation-origin="off">Service to determine whether the browser is currently in a high-contrast-mode environment.</p>
 
-<p translation-result="on">目前，IE、Edge 和 Firefox 支持此模式。Chrome 浏览器不支持 Windows 高对比度模式。此服务无法检测到由 Chrome 的“高对比度” 扩展程序添加的高对比度模式。</p><p translation-origin="off">Microsoft Windows supports an accessibility feature called "High Contrast Mode". This mode
+<p translation-result="on">Microsoft Windows 支持一种称为“高对比度模式”的辅助功能。此模式更改所有应用程序（包括 Web 应用程序）的外观，以显著提高对比度。</p><p translation-origin="off">Microsoft Windows supports an accessibility feature called "High Contrast Mode". This mode
 changes the appearance of all applications, including web applications, to dramatically increase
 contrast.</p>
 
-<p translation-origin="off">IE, Edge, and Firefox currently support this mode. Chrome does not support Windows High Contrast
+<p translation-result="on">目前，IE、Edge 和 Firefox 支持此模式。Chrome 浏览器不支持 Windows 高对比度模式。此服务无法检测到由 Chrome 的“高对比度” 扩展程序添加的高对比度模式。</p><p translation-origin="off">IE, Edge, and Firefox currently support this mode. Chrome does not support Windows High Contrast
 Mode. This service does not detect high-contrast mode as added by the Chrome "High Contrast"
 browser extension.</p>
 
@@ -301,7 +301,9 @@ message element.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -478,7 +480,9 @@ message element.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -797,9 +801,9 @@ Assumes that the element has already been checked with isFocusable.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">获取某元素可见是否出于交互目的。</p><p translation-result="on">这包括 <code>display: none</code> 和 <code>visibility: hidden</code> 状态下的，但被 <code>overflow: hidden</code> 的父对象切掉或位于视口之外的除外。</p><p translation-origin="off">Gets whether an element is visible for the purposes of interactivity.</p>
+      <p translation-result="on">获取某元素可见是否出于交互目的。</p><p translation-origin="off">Gets whether an element is visible for the purposes of interactivity.</p>
 
-<p translation-origin="off">This will capture states like <code>display: none</code> and <code>visibility: hidden</code>, but not things like
+<p translation-result="on">这包括 <code>display: none</code> 和 <code>visibility: hidden</code> 状态下的，但被 <code>overflow: hidden</code> 的父对象切掉或位于视口之外的除外。</p><p translation-origin="off">This will capture states like <code>display: none</code> and <code>visibility: hidden</code>, but not things like
 being clipped by an <code>overflow: hidden</code> parent or being outside the viewport.</p>
 
 
@@ -824,7 +828,9 @@ being clipped by an <code>overflow: hidden</code> parent or being outside the vi
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1481,7 +1487,9 @@ through the page landmarks.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -1649,10 +1657,10 @@ with a wider range of browsers and screen readers.</p>
   <span header-link="CdkMonitorFocus"></span>
   <code>CdkMonitorFocus</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">指令，用于确定如何让特定元素获得焦点（通过键盘，鼠标，触摸或以编程方式），并向该元素添加相应的类。</p><p translation-result="on">此指令有两种变体：</p><p translation-origin="off">Directive that determines how a particular element was focused (via keyboard, mouse, touch, or
+</h4><div class="docs-api-class-description"><p translation-result="on">指令，用于确定如何让特定元素获得焦点（通过键盘，鼠标，触摸或以编程方式），并向该元素添加相应的类。</p><p translation-origin="off">Directive that determines how a particular element was focused (via keyboard, mouse, touch, or
 programmatically) and adds corresponding classes to the element.</p>
 
-<p translation-origin="off">There are two variants of this directive:</p>
+<p translation-result="on">此指令有两种变体：</p><p translation-origin="off">There are two variants of this directive:</p>
 
 <ol>
 <li><p translation-result="on">cdkMonitorElementFocus：如果元素的任何一个子元素有焦点，则不认为该元素拥有焦点。</p><p translation-origin="off">cdkMonitorElementFocus: does not consider an element to be focused if one of its children is
@@ -2242,7 +2250,9 @@ as the user is pressing the arrow keys. Defaults to not allowing any modifier ke
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3183,7 +3193,9 @@ as the user is pressing the arrow keys. Defaults to not allowing any modifier ke
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4065,7 +4077,9 @@ as the user is pressing the arrow keys. Defaults to not allowing any modifier ke
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4441,9 +4455,9 @@ the other end of list when there are no more items in the given direction.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">允许在 DOM 元素内捕获焦点的类。</p><p translation-result="on">此类使用一种策略模式来确定如何捕获焦点。请参阅 FocusTrapInertStrategy。</p><p translation-origin="off">Class that allows for trapping focus within a DOM element.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">允许在 DOM 元素内捕获焦点的类。</p><p translation-origin="off">Class that allows for trapping focus within a DOM element.</p>
 
-<p translation-origin="off">This class uses a strategy pattern that determines how it traps focus.
+<p translation-result="on">此类使用一种策略模式来确定如何捕获焦点。请参阅 FocusTrapInertStrategy。</p><p translation-origin="off">This class uses a strategy pattern that determines how it traps focus.
 See FocusTrapInertStrategy.</p>
 
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
@@ -4561,7 +4575,9 @@ if the target element isn't currently in the DOM.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4616,7 +4632,9 @@ the first tabbable element within the focus trap region.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4669,7 +4687,9 @@ on whether focus was moved successfully.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4723,7 +4743,9 @@ on whether focus was moved successfully.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4776,7 +4798,9 @@ on whether focus was moved successfully.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4831,7 +4855,9 @@ the last tabbable element within the focus trap region.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4985,9 +5011,9 @@ listener to redirect focus back inside the FocusTrap.</p>
   <span header-link="FocusTrap"></span>
   <code>FocusTrap</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">允许在 DOM 元素内捕获焦点的类。</p><p translation-result="on">此类当前使用相对简单的方法进行焦点捕获。它假定 tab 顺序与 DOM 顺序相同，但这不一定正确。和 <code>tabIndex &gt; 0</code> 一样，flex <code>order</code> 和 Shadow DOM 之类的都可能导致两者未对齐。</p><p translation-origin="off">Class that allows for trapping focus within a DOM element.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">允许在 DOM 元素内捕获焦点的类。</p><p translation-origin="off">Class that allows for trapping focus within a DOM element.</p>
 
-<p translation-origin="off">This class currently uses a relatively simple approach to focus trapping.
+<p translation-result="on">此类当前使用相对简单的方法进行焦点捕获。它假定 tab 顺序与 DOM 顺序相同，但这不一定正确。和 <code>tabIndex &gt; 0</code> 一样，flex <code>order</code> 和 Shadow DOM 之类的都可能导致两者未对齐。</p><p translation-origin="off">This class currently uses a relatively simple approach to focus trapping.
 It assumes that the tab order is the same as DOM order, which is not necessarily true.
 Things like <code>tabIndex &gt; 0</code>, flex <code>order</code>, and shadow roots can cause the two to be misaligned.</p>
 
@@ -5132,7 +5158,9 @@ if the target element isn't currently in the DOM.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -5187,7 +5215,9 @@ the first tabbable element within the focus trap region.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -5240,7 +5270,9 @@ on whether focus was moved successfully.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -5294,7 +5326,9 @@ on whether focus was moved successfully.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -5347,7 +5381,9 @@ on whether focus was moved successfully.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -5402,7 +5438,9 @@ the last tabbable element within the focus trap region.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -6247,7 +6285,9 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -6298,7 +6338,9 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -6349,7 +6391,9 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -6432,9 +6476,9 @@ Used for attributes such as aria-labelledby, aria-owns, etc.</p>
 <h4 id="INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS"></span>
   <code>INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS</code>
-</h4><div class="docs-api-constant-description"><p translation-result="on">InputModalityDetector 的默认选项。</p><p translation-result="on">默认情况下忽略修饰键（即按下时不会导致服务检测键盘输入模式），这有两个原因：</p><p translation-origin="off">Default options for the InputModalityDetector.</p>
+</h4><div class="docs-api-constant-description"><p translation-result="on">InputModalityDetector 的默认选项。</p><p translation-origin="off">Default options for the InputModalityDetector.</p>
 
-<p translation-origin="off">Modifier keys are ignored by default (i.e. when pressed won't cause the service to detect
+<p translation-result="on">默认情况下忽略修饰键（即按下时不会导致服务检测键盘输入模式），这有两个原因：</p><p translation-origin="off">Modifier keys are ignored by default (i.e. when pressed won't cause the service to detect
 keyboard input modality) for two reasons:</p>
 
 <ol>

@@ -6,7 +6,7 @@
         <h3 id="single-row" class="docs-header-link" translation-result="on">
           <span header-link="单行工具栏"></span>
           单行工具栏
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------single-row--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="single-row"></span>
           Single row
         </h3>
@@ -21,7 +21,7 @@ have a single row that includes the title of your application.</p>
         <h3 id="multiple-rows" class="docs-header-link" translation-result="on">
           <span header-link="多行工具栏"></span>
           多行工具栏
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------multiple-rows--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="multiple-rows"></span>
           Multiple rows
         </h3>
@@ -40,16 +40,16 @@ supported.</p>
         <h3 id="positioning-toolbar-content" class="docs-header-link" translation-result="on">
           <span header-link="定位工具栏内容"></span>
           定位工具栏内容
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------positioning-toolbar-content--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="positioning-toolbar-content"></span>
           Positioning toolbar content
         </h3>
       
         
-      <p translation-result="on">工具栏不会对其内容进行任何定位。这让用户有足够的控制权来按照应用的要求对内容进行定位。</p><p translation-result="on">一种常见的模式是把标题定位在左侧，而另一些操作定位在右侧。这可以使用 <code>display: flex</code> 来轻松实现：</p><p translation-origin="off">The toolbar does not perform any positioning of its content. This gives the user full power to 
+      <p translation-result="on">工具栏不会对其内容进行任何定位。这让用户有足够的控制权来按照应用的要求对内容进行定位。</p><p translation-origin="off">The toolbar does not perform any positioning of its content. This gives the user full power to 
 position the content as it suits their application.</p>
 
-<p translation-origin="off">A common pattern is to position a title on the left with some actions on the right. This can be
+<p translation-result="on">一种常见的模式是把标题定位在左侧，而另一些操作定位在右侧。这可以使用 <code>display: flex</code> 来轻松实现：</p><p translation-origin="off">A common pattern is to position a title on the left with some actions on the right. This can be
 easily accomplished with <code>display: flex</code>:</p>
 
 <div material-docs-example="toolbar-multirow" file="toolbar-multirow-example.html" region="toolbar-position-content"></div>
@@ -60,7 +60,7 @@ easily accomplished with <code>display: flex</code>:</p>
         <h3 id="theming" class="docs-header-link" translation-result="on">
           <span header-link="主题"></span>
           主题
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------theming--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="theming"></span>
           Theming
         </h3>
@@ -75,19 +75,19 @@ use a neutral background color based on the current theme (light or dark). This 
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
-      <p translation-result="on">默认情况下，工具栏假设它是纯装饰性的，因此不设置角色、ARIA 属性或键盘快捷键。这时它相当于页面中的一些 <code>&lt;div&gt;</code> 元素。</p><p translation-result="on">通常，工具栏会用作标题，这时候可以使用 <code>role="heading"</code>。</p><p translation-origin="off">By default, the toolbar assumes that it will be used in a purely decorative fashion and thus sets
+      <p translation-result="on">默认情况下，工具栏假设它是纯装饰性的，因此不设置角色、ARIA 属性或键盘快捷键。这时它相当于页面中的一些 <code>&lt;div&gt;</code> 元素。</p><p translation-origin="off">By default, the toolbar assumes that it will be used in a purely decorative fashion and thus sets
 no roles, ARIA attributes, or keyboard shortcuts. This is equivalent to having a sequence of <code>&lt;div&gt;</code>
 elements on the page.</p>
 
-<p translation-result="on">只有当工具栏的用例和 <code>role="toolbar"</code> 相匹配时，它才应该加上此角色，并通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 添加一个标签。</p><p translation-origin="off">Generally, the toolbar is used as a header where <code>role="heading"</code> would be appropriate.</p>
+<p translation-result="on">通常，工具栏会用作标题，这时候可以使用 <code>role="heading"</code>。</p><p translation-origin="off">Generally, the toolbar is used as a header where <code>role="heading"</code> would be appropriate.</p>
 
-<p translation-origin="off">Only if the use-case of the toolbar match that of role="toolbar", the user should add the role and
+<p translation-result="on">只有当工具栏的用例和 <code>role="toolbar"</code> 相匹配时，它才应该加上此角色，并通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 添加一个标签。</p><p translation-origin="off">Only if the use-case of the toolbar match that of role="toolbar", the user should add the role and
 an appropriate label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
 
 </div>

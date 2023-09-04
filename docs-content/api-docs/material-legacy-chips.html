@@ -715,10 +715,10 @@ not selectable.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Allows for programmatic removal of the chip. Called by the MatChipList when the DELETE or
+      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-origin="off">Allows for programmatic removal of the chip. Called by the MatChipList when the DELETE or
 BACKSPACE keys are pressed.</p>
 
-<p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+<p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
 
 
     </td>
@@ -796,7 +796,9 @@ BACKSPACE keys are pressed.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -822,10 +824,10 @@ BACKSPACE keys are pressed.</p>
   <span header-link="MatLegacyChipRemove"></span>
   <code>MatLegacyChipRemove</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">应用正确的（click）支持，并为 <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a> 提供的 Material Design “cancel” 图标添加样式。</p><p translation-result="on">示例：</p><p translation-origin="off">Applies proper (click) support and adds styling for use with the Material Design "cancel" icon
+</h4><div class="docs-api-class-description"><p translation-result="on">应用正确的（click）支持，并为 <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a> 提供的 Material Design “cancel” 图标添加样式。</p><p translation-origin="off">Applies proper (click) support and adds styling for use with the Material Design "cancel" icon
 available at <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a>.</p>
 
-<p translation-origin="off">Example:</p>
+<p translation-result="on">示例：</p><p translation-origin="off">Example:</p>
 
 <pre><code>`&lt;mat-chip&gt;
   &lt;mat-icon matChipRemove&gt;cancel&lt;/mat-icon&gt;
@@ -955,9 +957,9 @@ May be placed inside or outside of an <code>&lt;mat-chip-list&gt;</code>.</p>
       <code>separatorKeyCodes: readonly number[] | ReadonlySet&lt;number&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">会触发 chipEnd 事件的键盘代码列表。</p><p translation-result="on">默认为 <code>[ENTER]</code>。</p><p translation-origin="off">The list of key codes that will trigger a chipEnd event.</p>
+  <td class="docs-api-property-description"><p translation-result="on">会触发 chipEnd 事件的键盘代码列表。</p><p translation-origin="off">The list of key codes that will trigger a chipEnd event.</p>
 
-<p translation-origin="off">Defaults to <code>[ENTER]</code>.</p>
+<p translation-result="on">默认为 <code>[ENTER]</code>。</p><p translation-origin="off">Defaults to <code>[ENTER]</code>.</p>
 
 </td>
 </tr>

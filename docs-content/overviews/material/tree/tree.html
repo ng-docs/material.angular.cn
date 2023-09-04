@@ -1,11 +1,11 @@
-<div class="docs-markdown"><p translation-result="on"><code>mat-tree</code> 提供了一个 Material Design 风格的树，它可用于显示层次型数据。</p><p translation-result="on">树控件基于 CDK 的树控件构建，并使用相似的接口来表示其数据源和模板。只是它们的元素和属性选择器会用 <code>mat-</code> 前缀，而不是 <code>cdk-</code> 前缀。</p><p translation-origin="off">The <code>mat-tree</code> provides a Material Design styled tree that can be used to display hierarchy
+<div class="docs-markdown"><p translation-result="on"><code>mat-tree</code> 提供了一个 Material Design 风格的树，它可用于显示层次型数据。</p><p translation-origin="off">The <code>mat-tree</code> provides a Material Design styled tree that can be used to display hierarchy
 data.</p>
 
-<p translation-result="on">有两种类型的树：扁平树和嵌套树。这两种树的 DOM 结构是不同的。</p><p translation-origin="off">This tree builds on the foundation of the CDK tree and uses a similar interface for its
+<p translation-result="on">树控件基于 CDK 的树控件构建，并使用相似的接口来表示其数据源和模板。只是它们的元素和属性选择器会用 <code>mat-</code> 前缀，而不是 <code>cdk-</code> 前缀。</p><p translation-origin="off">This tree builds on the foundation of the CDK tree and uses a similar interface for its
 data source input and template, except that its element and attribute selectors will be prefixed
 with <code>mat-</code> instead of <code>cdk-</code>.</p>
 
-<p translation-origin="off">There are two types of trees: Flat tree and nested tree. The DOM structures are different for these
+<p translation-result="on">有两种类型的树：扁平树和嵌套树。这两种树的 DOM 结构是不同的。</p><p translation-origin="off">There are two types of trees: Flat tree and nested tree. The DOM structures are different for these
 two types of trees. Flat trees generally offer better performance, while nested trees provide
 flexibility.</p>
 
@@ -13,7 +13,7 @@ flexibility.</p>
         <h4 id="flat-tree" class="docs-header-link" translation-result="on">
           <span header-link="扁平树"></span>
           扁平树
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------flat-tree--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="flat-tree"></span>
           Flat tree
         </h4>
@@ -45,7 +45,7 @@ generally offer better performance.</p>
         <h4 id="nested-tree" class="docs-header-link" translation-result="on">
           <span header-link="嵌套树"></span>
           嵌套树
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------nested-tree--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="nested-tree"></span>
           Nested tree
         </h4>
@@ -73,7 +73,7 @@ represented in ways that would be difficult to accomplish with flat nodes.</p>
         <h3 id="features" class="docs-header-link" translation-result="on">
           <span header-link="特性"></span>
           特性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------features--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="features"></span>
           Features
         </h3>
@@ -89,7 +89,7 @@ rendered data (such as expand/collapse) should be propagated through the table's
         <h3 id="treecontrol" class="docs-header-link" translation-result="on">
           <span header-link="树控制器"></span>
           树控制器
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------treecontrol--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="treecontrol"></span>
           TreeControl
         </h3>
@@ -109,53 +109,53 @@ For flattened tree node, <code>getLevel</code> and <code>isExpandable</code> fun
         <h3 id="toggle" class="docs-header-link" translation-result="on">
           <span header-link="开关"></span>
           开关
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------toggle--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="toggle"></span>
           Toggle
         </h3>
       
         
-      <p translation-result="on">可以把 <code>matTreeNodeToggle</code> 添加到树节点模板中，以展开/折叠树节点。此开关可以切换 <code>TreeControl</code> 中的展开/折叠函数，还能把 <code>[matTreeNodeToggleRecursive]</code> 设置为 <code>true</code> 来递归展开/折叠树节点。</p><p translation-result="on">此开关可以放在树节点中的任何地方，并且只能通过点击（<code>click</code>）操作进行切换。</p><p translation-origin="off">A <code>matTreeNodeToggle</code> can be added in the tree node template to expand/collapse the tree node. The
+      <p translation-result="on">可以把 <code>matTreeNodeToggle</code> 添加到树节点模板中，以展开/折叠树节点。此开关可以切换 <code>TreeControl</code> 中的展开/折叠函数，还能把 <code>[matTreeNodeToggleRecursive]</code> 设置为 <code>true</code> 来递归展开/折叠树节点。</p><p translation-origin="off">A <code>matTreeNodeToggle</code> can be added in the tree node template to expand/collapse the tree node. The
 toggle toggles the expand/collapse functions in <code>TreeControl</code> and is able to expand/collapse a
 tree node recursively by setting <code>[matTreeNodeToggleRecursive]</code> to <code>true</code>.</p>
 
-<p translation-origin="off">The toggle can be placed anywhere in the tree node, and is only toggled by <code>click</code> action.</p>
+<p translation-result="on">此开关可以放在树节点中的任何地方，并且只能通过点击（<code>click</code>）操作进行切换。</p><p translation-origin="off">The toggle can be placed anywhere in the tree node, and is only toggled by <code>click</code> action.</p>
 
 
         <h3 id="padding-flat-tree-only" class="docs-header-link" translation-result="on">
           <span header-link="衬距（只对扁平树）"></span>
           衬距（只对扁平树）
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------padding-flat-tree-only--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="padding-flat-tree-only"></span>
           Padding (Flat tree only)
         </h3>
       
         
-      <p translation-result="on"><code>matTreeNodePadding</code> 可以放在扁平树的节点模板中，以展示扁平树节点的 <code>level</code> 信息。</p><p translation-result="on">嵌套树不需要进行衬距，因为 DOM 中的层次结构就能很容易地加上它。</p><p translation-origin="off">The <code>matTreeNodePadding</code> can be placed in a flat tree's node template to display the <code>level</code>
+      <p translation-result="on"><code>matTreeNodePadding</code> 可以放在扁平树的节点模板中，以展示扁平树节点的 <code>level</code> 信息。</p><p translation-origin="off">The <code>matTreeNodePadding</code> can be placed in a flat tree's node template to display the <code>level</code>
 information of a flat tree node.</p>
 
-<p translation-origin="off">Nested tree does not need this padding since padding can be easily added to the hierarchy
+<p translation-result="on">嵌套树不需要进行衬距，因为 DOM 中的层次结构就能很容易地加上它。</p><p translation-origin="off">Nested tree does not need this padding since padding can be easily added to the hierarchy
 structure in DOM.</p>
 
 
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
-      <p translation-result="on">没有文本或标签的树应该通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 给出一个有意义的标签。如果没有指定，则 <code>aria-readonly</code> 会默认为 <code>true</code>。</p><p translation-result="on">树的角色是 <code>tree</code>。
-父节点会带有 <code>role="group"</code>，而叶节点会带有 <code>role="treeitem"</code>。</p><p translation-origin="off">Trees without text or labels should be given a meaningful label via <code>aria-label</code> or
+      <p translation-result="on">没有文本或标签的树应该通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 给出一个有意义的标签。如果没有指定，则 <code>aria-readonly</code> 会默认为 <code>true</code>。</p><p translation-origin="off">Trees without text or labels should be given a meaningful label via <code>aria-label</code> or
 <code>aria-labelledby</code>. The <code>aria-readonly</code> defaults to <code>true</code> if it's not set.</p>
 
-<p translation-result="on"><code>mat-tree</code> 不会自行管理任何焦点/键盘交互。
-开发者可以根据需求为应用自行添加焦点/键盘交互。</p><p translation-origin="off">Tree's role is <code>tree</code>.
+<p translation-result="on">树的角色是 <code>tree</code>。
+父节点会带有 <code>role="group"</code>，而叶节点会带有 <code>role="treeitem"</code>。</p><p translation-origin="off">Tree's role is <code>tree</code>.
 Parent nodes are given <code>role="group"</code>, while leaf nodes are given <code>role="treeitem"</code></p>
 
-<p translation-origin="off"><code>mat-tree</code> does not manage any focus/keyboard interaction on its own. Users can add desired
+<p translation-result="on"><code>mat-tree</code> 不会自行管理任何焦点/键盘交互。
+开发者可以根据需求为应用自行添加焦点/键盘交互。</p><p translation-origin="off"><code>mat-tree</code> does not manage any focus/keyboard interaction on its own. Users can add desired
 focus/keyboard interactions in their application.</p>
 
 </div>

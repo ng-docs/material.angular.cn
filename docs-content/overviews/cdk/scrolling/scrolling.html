@@ -4,16 +4,16 @@
         <h3 id="cdkscrollable-and-scrolldispatcher" class="docs-header-link" translation-result="on">
           <span header-link="cdkscrollable（可滚动的）-和-scrolldispatcher（滚动派发器）"></span>
           cdkScrollable（可滚动的） 和 ScrollDispatcher（滚动派发器）
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------cdkscrollable-and-scrolldispatcher--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="cdkscrollable-and-scrolldispatcher"></span>
           cdkScrollable and ScrollDispatcher
         </h3>
       
         
-      <p translation-result="on"><code>cdkScrollable</code> 指令和 <code>ScrollDispatcher</code> 服务一起让组件能对其任意上级滚动容器中的滚动事件做出反应。</p><p translation-result="on">要把 <code>cdkScrollable</code> 指令应用在任何充当滚动容器的元素上。这会把该元素标记为 <code>Scrollable</code> 并把它注册到 <code>ScrollDispatcher</code> 中。这时派发器允许组件分享这些事件监听器和应用中所有可滚动容器的知识。</p><p translation-origin="off">The <code>cdkScrollable</code> directive and the <code>ScrollDispatcher</code> service together allow components to
+      <p translation-result="on"><code>cdkScrollable</code> 指令和 <code>ScrollDispatcher</code> 服务一起让组件能对其任意上级滚动容器中的滚动事件做出反应。</p><p translation-origin="off">The <code>cdkScrollable</code> directive and the <code>ScrollDispatcher</code> service together allow components to
 react to scrolling in any of its ancestor scrolling containers.</p>
 
-<p translation-origin="off">The <code>cdkScrollable</code> directive should be applied to any element that acts as a scrolling container.
+<p translation-result="on">要把 <code>cdkScrollable</code> 指令应用在任何充当滚动容器的元素上。这会把该元素标记为 <code>Scrollable</code> 并把它注册到 <code>ScrollDispatcher</code> 中。这时派发器允许组件分享这些事件监听器和应用中所有可滚动容器的知识。</p><p translation-origin="off">The <code>cdkScrollable</code> directive should be applied to any element that acts as a scrolling container.
 This marks the element as a <code>Scrollable</code> and registers it with the <code>ScrollDispatcher</code>. The
 dispatcher, then, allows components to share both event listeners and knowledge of all of the
 scrollable containers in the application.</p>
@@ -22,7 +22,7 @@ scrollable containers in the application.</p>
         <h3 id="viewportruler" class="docs-header-link" translation-result="on">
           <span header-link="viewportruler（视口标尺）"></span>
           ViewportRuler（视口标尺）
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------viewportruler--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="viewportruler"></span>
           ViewportRuler
         </h3>
@@ -35,7 +35,7 @@ viewport.</p>
         <h3 id="virtual-scrolling" class="docs-header-link" translation-result="on">
           <span header-link="虚拟滚动"></span>
           虚拟滚动
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------virtual-scrolling--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="virtual-scrolling"></span>
           Virtual scrolling
         </h3>
@@ -53,7 +53,7 @@ rest.</p>
         <h4 id="creating-items-in-the-viewport" class="docs-header-link" translation-result="on">
           <span header-link="在视口中创建条目"></span>
           在视口中创建条目
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------creating-items-in-the-viewport--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="creating-items-in-the-viewport"></span>
           Creating items in the viewport
         </h4>
@@ -119,7 +119,7 @@ portion.</p>
         <h5 id="view-recycling" class="docs-header-link" translation-result="on">
           <span header-link="视图回收"></span>
           视图回收
-        </h5><h5 class="docs-header-link" translation-origin="off" id="--------------------view-recycling--------">
+        </h5><h5 class="docs-header-link" translation-origin="off">
           <span header-link="view-recycling"></span>
           View recycling
         </h5>
@@ -137,7 +137,7 @@ memory you may wish to reduce this number to avoid spending too much memory on t
         <h5 id="specifying-data" class="docs-header-link" translation-result="on">
           <span header-link="指定数据"></span>
           指定数据
-        </h5><h5 class="docs-header-link" translation-origin="off" id="--------------------specifying-data--------">
+        </h5><h5 class="docs-header-link" translation-origin="off">
           <span header-link="specifying-data"></span>
           Specifying data
         </h5>
@@ -157,24 +157,24 @@ connect process.</p>
         <h4 id="scrolling-over-fixed-size-items" class="docs-header-link" translation-result="on">
           <span header-link="滚动那些固定大小的条目"></span>
           滚动那些固定大小的条目
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------scrolling-over-fixed-size-items--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="scrolling-over-fixed-size-items"></span>
           Scrolling over fixed size items
         </h4>
       
         
-      <p translation-result="on">当所有条目都是固定大小时，你可以使用 <code>FixedSizeVirtualScrollStrategy</code>。可以用 <code>itemSize</code> 指令轻松地将它添加到视口中。这种约束的优点是它可以提供更好的性能，因为在渲染条目时不需要进行测量。</p><p translation-result="on">固定大小的策略也支持设置一些缓冲区参数，用来决定渲染多少额外内容，也就是视口可见内容之外的部分。第一个参数是 <code>minBufferPx</code>。<code>minBufferPx</code> 是视口必须渲染的最小内容缓冲区数量（以像素为单位）。如果视口检测到要缓冲的内容小于这个数量（未填满），就会立即渲染更多内容。第二个参数是 <code>maxBufferPx</code>。它会告诉视口当检测到需要更多缓冲区的时候要渲染多少个备用缓冲区空间。</p><p translation-origin="off">When all items are the same fixed size, you can use the <code>FixedSizeVirtualScrollStrategy</code>. This can
+      <p translation-result="on">当所有条目都是固定大小时，你可以使用 <code>FixedSizeVirtualScrollStrategy</code>。可以用 <code>itemSize</code> 指令轻松地将它添加到视口中。这种约束的优点是它可以提供更好的性能，因为在渲染条目时不需要进行测量。</p><p translation-origin="off">When all items are the same fixed size, you can use the <code>FixedSizeVirtualScrollStrategy</code>. This can
 be easily added to your viewport using the <code>itemSize</code> directive. The advantage of this constraint is
 that it allows for better performance, since items do not need to be measured as they are rendered. </p>
 
-<p translation-result="on">这两个缓冲区参数的作用可以用一个例子来说明。假设我们有以下参数：<code>itemSize = 50</code>、<code>minBufferPx = 100</code>、<code>maxBufferPx = 250</code>。当用户滚动浏览内容时，视口就会检测到只剩下 <code>90px</code> 的缓冲区。由于它小于 <code>minBufferPx</code>，所以视口必须渲染更多缓冲区。它必须渲染足够数量的缓冲区，直到其大于等于 <code>maxBufferPx</code>。在这种情况下，它渲染了 4 个条目（额外的 <code>200px</code>），使缓冲区总大小达到 <code>290px</code>，略高于 <code>maxBufferPx</code>。</p><p translation-origin="off">The fixed size strategy also supports setting a couple of buffer parameters that determine how much
+<p translation-result="on">固定大小的策略也支持设置一些缓冲区参数，用来决定渲染多少额外内容，也就是视口可见内容之外的部分。第一个参数是 <code>minBufferPx</code>。<code>minBufferPx</code> 是视口必须渲染的最小内容缓冲区数量（以像素为单位）。如果视口检测到要缓冲的内容小于这个数量（未填满），就会立即渲染更多内容。第二个参数是 <code>maxBufferPx</code>。它会告诉视口当检测到需要更多缓冲区的时候要渲染多少个备用缓冲区空间。</p><p translation-origin="off">The fixed size strategy also supports setting a couple of buffer parameters that determine how much
 extra content is rendered beyond what is visible in the viewport. The first of these parameters is
 <code>minBufferPx</code>. The <code>minBufferPx</code> is the minimum amount of content buffer (in pixels) that the
 viewport must render. If the viewport ever detects that there is less buffered content it will
 immediately render more. The second buffer parameter is <code>maxBufferPx</code>. This tells the viewport how 
 much buffer space to render back up to when it detects that more buffer is required.</p>
 
-<p translation-origin="off">The interaction of these two buffer parameters can be best illustrated with an example. Supposed 
+<p translation-result="on">这两个缓冲区参数的作用可以用一个例子来说明。假设我们有以下参数：<code>itemSize = 50</code>、<code>minBufferPx = 100</code>、<code>maxBufferPx = 250</code>。当用户滚动浏览内容时，视口就会检测到只剩下 <code>90px</code> 的缓冲区。由于它小于 <code>minBufferPx</code>，所以视口必须渲染更多缓冲区。它必须渲染足够数量的缓冲区，直到其大于等于 <code>maxBufferPx</code>。在这种情况下，它渲染了 4 个条目（额外的 <code>200px</code>），使缓冲区总大小达到 <code>290px</code>，略高于 <code>maxBufferPx</code>。</p><p translation-origin="off">The interaction of these two buffer parameters can be best illustrated with an example. Supposed 
 that we have the following parameters: <code>itemSize = 50</code>, <code>minBufferPx = 100</code>, <code>maxBufferPx = 250</code>. As
 the user is scrolling through the content the viewport detects that there is only <code>90px</code> of buffer
 remaining. Since this is below <code>minBufferPx</code> the viewport must render more buffer. It must render at
@@ -191,7 +191,7 @@ autosize strategy that works on elements of differing sizes is currently being d
         <h3 id="viewport-orientation" class="docs-header-link" translation-result="on">
           <span header-link="视口方向"></span>
           视口方向
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------viewport-orientation--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="viewport-orientation"></span>
           Viewport orientation
         </h3>
@@ -209,7 +209,7 @@ content.</p>
         <h3 id="elements-with-parent-tag-requirements" class="docs-header-link" translation-result="on">
           <span header-link="那些对父标签有特定要求的元素"></span>
           那些对父标签有特定要求的元素
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------elements-with-parent-tag-requirements--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="elements-with-parent-tag-requirements"></span>
           Elements with parent tag requirements
         </h3>
@@ -227,7 +227,7 @@ interfere with the scrolling.</p>
         <h3 id="scrolling-strategies" class="docs-header-link" translation-result="on">
           <span header-link="滚动策略"></span>
           滚动策略
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------scrolling-strategies--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="scrolling-strategies"></span>
           Scrolling strategies
         </h3>
@@ -246,7 +246,7 @@ providing it as the <code>VIRTUAL_SCROLL_STRATEGY</code> on the component contai
         <h3 id="append-only-mode" class="docs-header-link" translation-result="on">
           <span header-link="仅追加模式"></span>
           仅追加模式
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------append-only-mode--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="append-only-mode"></span>
           Append only mode
         </h3>
@@ -262,18 +262,18 @@ views that are already rendered persist in the DOM after they scroll out of view
         <h3 id="separate-viewport-and-scrolling-element" class="docs-header-link" translation-result="on">
           <span header-link="单独的视口和滚动元素"></span>
           单独的视口和滚动元素
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------separate-viewport-and-scrolling-element--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="separate-viewport-and-scrolling-element"></span>
           Separate viewport and scrolling element
         </h3>
       
         
-      <p translation-result="on">默认情况下，虚拟滚动视口本身就会充当滚动元素。但是，在某些情况下，你可能希望让此视口滚动其父元素之一。例如，如果你想要一些非虚拟化内容，用户可以在虚拟化内容之前或之后滚动浏览。</p><p translation-result="on">要将 <code>cdk-vritual-scroll-viewport</code> 配置为使用其父元素之一作为滚动元素，请把 <code>cdkVirtualScrollingElement</code> 应用于那个父元素。</p><p translation-origin="off">The virtual scroll viewport itself acts as the scrolling element by default. However, there may be
+      <p translation-result="on">默认情况下，虚拟滚动视口本身就会充当滚动元素。但是，在某些情况下，你可能希望让此视口滚动其父元素之一。例如，如果你想要一些非虚拟化内容，用户可以在虚拟化内容之前或之后滚动浏览。</p><p translation-origin="off">The virtual scroll viewport itself acts as the scrolling element by default. However, there may be
 some cases where you want to have the viewport scroll one of its parent elements. For example,
 if you want to have some non-virtualized content that the user can scroll through before or after
 the virtualized content.</p>
 
-<p translation-origin="off">To configure a <code>cdk-virtual-scroll-viewport</code> to use one of its parent elements as the scrolling
+<p translation-result="on">要将 <code>cdk-vritual-scroll-viewport</code> 配置为使用其父元素之一作为滚动元素，请把 <code>cdkVirtualScrollingElement</code> 应用于那个父元素。</p><p translation-origin="off">To configure a <code>cdk-virtual-scroll-viewport</code> to use one of its parent elements as the scrolling
 element, apply <code>cdkVirtualScrollingElement</code> to the scrolling parent element.</p>
 
 <div material-docs-example="cdk-virtual-scroll-parent-scrolling"></div>

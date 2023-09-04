@@ -836,12 +836,12 @@ inside the outlet.</p>
   <span header-link="MatTreeFlattener"></span>
   <code>MatTreeFlattener</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">树展平器，用于将普通类型的节点转换为具有子级和级别信息的节点。把 <code>T</code> 型嵌套节点转换为 <code>F</code> 型扁平节点。</p><p translation-result="on">例如，类型为 <code>T</code> 的输入数据是嵌套的，并包含其子数据：</p><p translation-origin="off">Tree flattener to convert a normal type of node to node with children &amp; level information.
+</h4><div class="docs-api-class-description"><p translation-result="on">树展平器，用于将普通类型的节点转换为具有子级和级别信息的节点。把 <code>T</code> 型嵌套节点转换为 <code>F</code> 型扁平节点。</p><p translation-origin="off">Tree flattener to convert a normal type of node to node with children &amp; level information.
 Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F</code>.</p>
 
-<p translation-origin="off">For example, the input data of type <code>T</code> is nested, and contains its children data:</p>
+<p translation-result="on">例如，类型为 <code>T</code> 的输入数据是嵌套的，并包含其子数据：</p><p translation-origin="off">For example, the input data of type <code>T</code> is nested, and contains its children data:</p>
 
-<p translation-result="on">当展平之后，其结构变为：</p><p translation-origin="off">  SomeNode: {
+<p>  SomeNode: {
     key: 'Fruits',
     children: [
       NodeOne: {
@@ -852,9 +852,9 @@ Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F
      }
    ]
  }</p>
-<p translation-origin="off"> After flattener flatten the tree, the structure will become</p>
+<p translation-result="on">当展平之后，其结构变为：</p><p translation-origin="off"> After flattener flatten the tree, the structure will become</p>
 
-<p translation-result="on">而输出的扁平化类型为带有附加信息的 <code>F</code>。</p><p translation-origin="off"> SomeNode: {
+<p> SomeNode: {
    key: 'Fruits',
    expandable: true,
    level: 1
@@ -869,7 +869,7 @@ Transform nested nodes of type <code>T</code> to flattened nodes of type <code>F
   expandable: false,
   level: 2
 }</p>
-<p translation-origin="off">and the output flattened type is <code>F</code> with additional information.</p>
+<p translation-result="on">而输出的扁平化类型为带有附加信息的 <code>F</code>。</p><p translation-origin="off">and the output flattened type is <code>F</code> with additional information.</p>
 
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
   <table class="docs-api-properties-table">
@@ -979,7 +979,9 @@ The returned list may have different length.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1031,7 +1033,9 @@ from that of returned list <code>F[]</code>.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1103,7 +1107,9 @@ to type <code>F</code> for <code>MatTree</code> to consume.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -1120,7 +1126,9 @@ to type <code>F</code> for <code>MatTree</code> to consume.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1165,9 +1173,9 @@ to type <code>F</code> for <code>MatTree</code> to consume.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">嵌套树的数据源。</p><p translation-result="on">嵌套树的数据源不必考虑节点展平器，也不必考虑展开或折叠的方式。展开/折叠将由 TreeControl 和每个非叶节点处理。</p><p translation-origin="off">Data source for nested tree.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">嵌套树的数据源。</p><p translation-origin="off">Data source for nested tree.</p>
 
-<p translation-origin="off">The data source for nested tree doesn't have to consider node flattener, or the way to expand
+<p translation-result="on">嵌套树的数据源不必考虑节点展平器，也不必考虑展开或折叠的方式。展开/折叠将由 TreeControl 和每个非叶节点处理。</p><p translation-origin="off">The data source for nested tree doesn't have to consider node flattener, or the way to expand
 or collapse. The expansion/collapsion will be handled by TreeControl and each non-leaf node.</p>
 
 </div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
@@ -1205,7 +1213,9 @@ or collapse. The expansion/collapsion will be handled by TreeControl and each no
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -1222,7 +1232,9 @@ or collapse. The expansion/collapsion will be handled by TreeControl and each no
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>

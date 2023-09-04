@@ -529,11 +529,11 @@ observable. If the stack is empty or <code>lastItem</code> is not on the stack i
   <span header-link="TargetMenuAim"></span>
   <code>TargetMenuAim</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">TargetMenuAim 会预测用户是否正在进入子菜单。它计算用户鼠标在当前菜单中移动的轨迹，以确定鼠标是否正在向打开的子菜单移动。</p><p translation-result="on">通过计算用户最后 NUM_POINTS 移动的斜率来确定，其中每对点确定轨迹线是否指向子菜单。它使用的方法是检查是否至少有 NUM_POINTS / 2 对来确定用户正在移至子菜单来。</p><p translation-origin="off">TargetMenuAim predicts if a user is moving into a submenu. It calculates the
+</h4><div class="docs-api-class-description"><p translation-result="on">TargetMenuAim 会预测用户是否正在进入子菜单。它计算用户鼠标在当前菜单中移动的轨迹，以确定鼠标是否正在向打开的子菜单移动。</p><p translation-origin="off">TargetMenuAim predicts if a user is moving into a submenu. It calculates the
 trajectory of the user's mouse movement in the current menu to determine if the
 mouse is moving towards an open submenu.</p>
 
-<p translation-origin="off">The determination is made by calculating the slope of the users last NUM_POINTS moves where each
+<p translation-result="on">通过计算用户最后 NUM_POINTS 移动的斜率来确定，其中每对点确定轨迹线是否指向子菜单。它使用的方法是检查是否至少有 NUM_POINTS / 2 对来确定用户正在移至子菜单来。</p><p translation-origin="off">The determination is made by calculating the slope of the users last NUM_POINTS moves where each
 pair of points determines if the trajectory line points into the submenu. It uses consensus
 approach by checking if at least NUM_POINTS / 2 pairs determine that the user is moving towards
 to submenu.</p>
@@ -860,11 +860,11 @@ this directive is applied to should contain components marked with CdkMenuItem.<
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">将此元素配置为菜单的指令，该菜单应包含标记为 CdkMenuItem 或 CdkMenuGroup 的子元素。为菜单设置适当的角色和 aria 属性，并包含可访问的键盘和鼠标处理逻辑。</p><p translation-result="on">它还充当标有角色 <code>menuitemradio</code> 的元素的 RadioGroup。</p><p translation-origin="off">Directive which configures the element as a Menu which should contain child elements marked as
+</h4><div class="docs-api-class-description"><p translation-result="on">将此元素配置为菜单的指令，该菜单应包含标记为 CdkMenuItem 或 CdkMenuGroup 的子元素。为菜单设置适当的角色和 aria 属性，并包含可访问的键盘和鼠标处理逻辑。</p><p translation-origin="off">Directive which configures the element as a Menu which should contain child elements marked as
 CdkMenuItem or CdkMenuGroup. Sets the appropriate role and aria-attributes for a menu and
 contains accessible keyboard and mouse handling logic.</p>
 
-<p translation-origin="off">It also acts as a RadioGroup for elements marked with role <code>menuitemradio</code>.</p>
+<p translation-result="on">它还充当标有角色 <code>menuitemradio</code> 的元素的 RadioGroup。</p><p translation-origin="off">It also acts as a RadioGroup for elements marked with role <code>menuitemradio</code>.</p>
 
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>

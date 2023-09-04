@@ -6,7 +6,7 @@
         <h3 id="opening-a-snackbar" class="docs-header-link" translation-result="on">
           <span header-link="打开快餐栏"></span>
           打开快餐栏
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------opening-a-snackbar--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="opening-a-snackbar"></span>
           Opening a snackbar
         </h3>
@@ -45,19 +45,19 @@ snackBarRef.dismiss();
         <h3 id="dismissal" class="docs-header-link" translation-result="on">
           <span header-link="关闭"></span>
           关闭
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------dismissal--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="dismissal"></span>
           Dismissal
         </h3>
       
         
-      <p translation-result="on">可以调用由 <code>open</code> 调用返回的 <code>MatSnackBarRef</code> 中的 <code>dismiss</code> 方法来手动关闭快餐栏。</p><p translation-result="on">同一时刻只能打开一个快餐栏。如果在显示前一个消息时打开一个新的快餐栏，老的消息就会自动关闭。</p><p translation-origin="off">A snackbar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MatSnackBarRef</code>
+      <p translation-result="on">可以调用由 <code>open</code> 调用返回的 <code>MatSnackBarRef</code> 中的 <code>dismiss</code> 方法来手动关闭快餐栏。</p><p translation-origin="off">A snackbar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MatSnackBarRef</code>
 returned from the call to <code>open</code>.</p>
 
-<p translation-result="on">快餐栏还可以通过一个可选的配置对象来指定持续时间：</p><p translation-origin="off">Only one snackbar can ever be opened at one time. If a new snackbar is opened while a previous
+<p translation-result="on">同一时刻只能打开一个快餐栏。如果在显示前一个消息时打开一个新的快餐栏，老的消息就会自动关闭。</p><p translation-origin="off">Only one snackbar can ever be opened at one time. If a new snackbar is opened while a previous
 message is still showing, the older message will be automatically dismissed.</p>
 
-<p translation-origin="off">A snackbar can also be given a duration via the optional configuration object:</p>
+<p translation-result="on">快餐栏还可以通过一个可选的配置对象来指定持续时间：</p><p translation-origin="off">A snackbar can also be given a duration via the optional configuration object:</p>
 
 <pre><code class="language-ts">snackBar.open(<span class="hljs-string">'Message archived'</span>, <span class="hljs-string">'Undo'</span>, {
   <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>
@@ -67,7 +67,7 @@ message is still showing, the older message will be automatically dismissed.</p>
         <h3 id="sharing-data-with-a-custom-snackbar" class="docs-header-link" translation-result="on">
           <span header-link="与自定义快餐栏共享数据"></span>
           与自定义快餐栏共享数据
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------sharing-data-with-a-custom-snackbar--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="sharing-data-with-a-custom-snackbar"></span>
           Sharing data with a custom snackbar
         </h3>
@@ -97,7 +97,7 @@ by passing it through the <code>data</code> property.</p>
         <h3 id="annotating-custom-snackbar-content" class="docs-header-link" translation-result="on">
           <span header-link="标记自定义快餐栏内容"></span>
           标记自定义快餐栏内容
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------annotating-custom-snackbar-content--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="annotating-custom-snackbar-content"></span>
           Annotating custom snackbar content
         </h3>
@@ -126,7 +126,7 @@ snackbars  opened via <code>snackBar.open</code>.</p>
         <h3 id="setting-the-global-configuration-defaults" class="docs-header-link" translation-result="on">
           <span header-link="设置全局配置的默认值"></span>
           设置全局配置的默认值
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------setting-the-global-configuration-defaults--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="setting-the-global-configuration-defaults"></span>
           Setting the global configuration defaults
         </h3>
@@ -145,24 +145,24 @@ snackbars  opened via <code>snackBar.open</code>.</p>
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
-      <p translation-result="on"><code>MatSnackBar</code> 通过 <code>aria-live</code> 区域来播报消息。虽然默认情况下公告会使用 <code>polite</code> 设置，但你也可以通过设置 <code>MatSnackBarConfig</code> 的 <code>politeness</code> 属性来自定义它。</p><p translation-result="on"><code>MatSnackBar</code> 不会将焦点移动到快餐栏元素。像这样移动焦点会在工作流程中扰乱用户。对于快餐栏中提供的任何操作，你的应用程序都应该提供执行该操作的替代方法。替代交互通常是键盘快捷键或菜单选项。一旦用户执行相应的操作，你应该关闭快餐栏。快餐栏可以包含一个单独的动作和一个额外的可选“关闭”或“取消”动作。</p><p translation-origin="off"><code>MatSnackBar</code> announces messages via an <code>aria-live</code> region. While announcements use the <code>polite</code>
+      <p translation-result="on"><code>MatSnackBar</code> 通过 <code>aria-live</code> 区域来播报消息。虽然默认情况下公告会使用 <code>polite</code> 设置，但你也可以通过设置 <code>MatSnackBarConfig</code> 的 <code>politeness</code> 属性来自定义它。</p><p translation-origin="off"><code>MatSnackBar</code> announces messages via an <code>aria-live</code> region. While announcements use the <code>polite</code>
 setting by default, you can customize this by setting the <code>politeness</code> property of
 <code>MatSnackBarConfig</code>.</p>
 
-<p translation-result="on">尽量不要为具有可用操作的快餐栏设置 <code>duration</code> ，因为屏幕阅读器用户可能希望导航到快餐栏上的元素以激活该操作。如果用户在快餐栏中手动移动了他们的焦点，你应该将焦点返回到用户工作流程上下文中有意义的某个地方。</p><p translation-origin="off"><code>MatSnackBar</code> does not move focus to the snackbar element. Moving focus like this would disrupt
+<p translation-result="on"><code>MatSnackBar</code> 不会将焦点移动到快餐栏元素。像这样移动焦点会在工作流程中扰乱用户。对于快餐栏中提供的任何操作，你的应用程序都应该提供执行该操作的替代方法。替代交互通常是键盘快捷键或菜单选项。一旦用户执行相应的操作，你应该关闭快餐栏。快餐栏可以包含一个单独的动作和一个额外的可选“关闭”或“取消”动作。</p><p translation-origin="off"><code>MatSnackBar</code> does not move focus to the snackbar element. Moving focus like this would disrupt
 users in the middle of a workflow. For any action offered in the snackbar, your application should
 provide an alternative way to perform the action. Alternative interactions are typically keyboard
 shortcuts or menu options. You should dismiss the snackbar once the user performs its corresponding
 action. A snackbar can contain a single action with an additional optional "dismiss" or "cancel"
 action.</p>
 
-<p translation-origin="off">Avoid setting a <code>duration</code> for snackbars that have an action available, as screen reader users may
+<p translation-result="on">尽量不要为具有可用操作的快餐栏设置 <code>duration</code> ，因为屏幕阅读器用户可能希望导航到快餐栏上的元素以激活该操作。如果用户在快餐栏中手动移动了他们的焦点，你应该将焦点返回到用户工作流程上下文中有意义的某个地方。</p><p translation-origin="off">Avoid setting a <code>duration</code> for snackbars that have an action available, as screen reader users may
 want to navigate to the snackbar element to activate the action. If the user has manually moved
 their focus within the snackbar, you should return focus somewhere that makes sense in the context
 of the user's workflow.</p>

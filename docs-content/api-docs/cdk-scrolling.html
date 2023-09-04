@@ -207,7 +207,9 @@ scrollable ancestors of an element are scrolled.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -273,11 +275,11 @@ scrollable is scrolled, the service emits the event to its scrolled observable.<
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">返回一个可观察对象，它会在任何已注册的可滚动对象引用（或 window, document, body）中发生滚动事件时发出一个事件。可以提供一个毫秒数来来改写默认的“限流”时间。</p><p translation-result="on"><strong>注意：</strong>为了避免每次滚动事件都发生变更检测，从这个流发出的所有事件都会在 Angular Zone 之外运行。如果你要在滚动事件中更新任何数据绑定，就必须使用 <code>NgZone.run</code> 来运行回调。</p><p translation-origin="off">Returns an observable that emits an event whenever any of the registered Scrollable
+      <p translation-result="on">返回一个可观察对象，它会在任何已注册的可滚动对象引用（或 window, document, body）中发生滚动事件时发出一个事件。可以提供一个毫秒数来来改写默认的“限流”时间。</p><p translation-origin="off">Returns an observable that emits an event whenever any of the registered Scrollable
 references (or window, document, or body) fire a scrolled event. Can provide a time in ms
 to override the default "throttle" time.</p>
 
-<p translation-origin="off"><strong>Note:</strong> in order to avoid hitting change detection for every scroll event,
+<p translation-result="on"><strong>注意：</strong>为了避免每次滚动事件都发生变更检测，从这个流发出的所有事件都会在 Angular Zone 之外运行。如果你要在滚动事件中更新任何数据绑定，就必须使用 <code>NgZone.run</code> 来运行回调。</p><p translation-origin="off"><strong>Note:</strong> in order to avoid hitting change detection for every scroll event,
 all of the events emitted from this stream will be run outside the Angular zone.
 If you need to update any data bindings as a result of a scroll event, you have
 to run the callback using <code>NgZone.run</code>.</p>
@@ -304,7 +306,9 @@ to run the callback using <code>NgZone.run</code>.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -818,7 +822,9 @@ rendered.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1234,7 +1240,9 @@ will be removed.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -1251,7 +1259,9 @@ will be removed.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1302,7 +1312,9 @@ not rendered.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1868,7 +1880,9 @@ rendered.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -1885,7 +1899,9 @@ rendered.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2148,7 +2164,9 @@ in an RTL context.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -2165,7 +2183,9 @@ in an RTL context.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3126,7 +3146,9 @@ in an RTL context.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -3156,7 +3178,9 @@ in an RTL context.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>

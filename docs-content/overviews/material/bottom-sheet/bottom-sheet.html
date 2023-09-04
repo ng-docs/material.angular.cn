@@ -28,7 +28,7 @@ bottomSheetRef.dismiss();
         <h3 id="sharing-data-with-the-bottom-sheet-component" class="docs-header-link" translation-result="on">
           <span header-link="与底部操作表组件共享数据"></span>
           与底部操作表组件共享数据
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------sharing-data-with-the-bottom-sheet-component--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="sharing-data-with-the-bottom-sheet-component"></span>
           Sharing data with the bottom sheet component.
         </h3>
@@ -57,7 +57,7 @@ bottomSheetRef.dismiss();
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link" translation-result="on">
           <span header-link="全局指定配置的默认值"></span>
           全局指定配置的默认值
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------specifying-global-configuration-defaults--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
         </h3>
@@ -76,7 +76,7 @@ for <code>MAT_BOTTOM_SHEET_DEFAULT_OPTIONS</code> in your application's root mod
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
@@ -90,7 +90,7 @@ dialog element should be given an accessible label via the <code>ariaLabel</code
         <h4 id="keyboard-interaction" class="docs-header-link" translation-result="on">
           <span header-link="键盘交互"></span>
           键盘交互
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------keyboard-interaction--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="keyboard-interaction"></span>
           Keyboard interaction
         </h4>
@@ -104,7 +104,7 @@ pattern for the ARIA <code>role="dialog"</code> pattern.</p>
         <h4 id="focus-management" class="docs-header-link" translation-result="on">
           <span header-link="焦点管理"></span>
           焦点管理
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------focus-management--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="focus-management"></span>
           Focus management
         </h4>
@@ -152,20 +152,20 @@ your users.</p>
         <h4 id="focus-restoration" class="docs-header-link" translation-result="on">
           <span header-link="焦点还原"></span>
           焦点还原
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------focus-restoration--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="focus-restoration"></span>
           Focus restoration
         </h4>
       
         
-      <p translation-result="on">关闭时，<code>MatBottomSheet</code> 会将焦点还原到之前打开底部工作表时持有焦点的元素。但是，如果先前聚焦的元素不再存在，则必须添加额外的处理以将焦点返回到对用户的工作流程有意义的元素。从菜单打开底部工作表是导致这种情况的一种常见模式。单击菜单项时菜单关闭，因此当底部工作表尝试恢复焦点时，聚焦的菜单项已不再存在于 DOM 中。</p><p translation-result="on">你可以使用来自 <code>MatBottomSheetRef</code> 的 <code>afterDismissed()</code> 这个 Observable 添加对这种情况的处理。</p><p translation-origin="off">When closed, <code>MatBottomSheet</code> restores focus to the element that previously held focus when the
+      <p translation-result="on">关闭时，<code>MatBottomSheet</code> 会将焦点还原到之前打开底部工作表时持有焦点的元素。但是，如果先前聚焦的元素不再存在，则必须添加额外的处理以将焦点返回到对用户的工作流程有意义的元素。从菜单打开底部工作表是导致这种情况的一种常见模式。单击菜单项时菜单关闭，因此当底部工作表尝试恢复焦点时，聚焦的菜单项已不再存在于 DOM 中。</p><p translation-origin="off">When closed, <code>MatBottomSheet</code> restores focus to the element that previously held focus when the
 bottom sheet opened. However, if that previously focused element no longer exists, you must
 add additional handling to return focus to an element that makes sense for the user's workflow.
 Opening a bottom sheet from a menu is one common pattern that causes this situation. The menu
 closes upon clicking an item, thus the focused menu item is no longer in the DOM when the bottom
 sheet attempts to restore focus.</p>
 
-<p translation-origin="off">You can add handling for this situation with the <code>afterDismissed()</code> observable from
+<p translation-result="on">你可以使用来自 <code>MatBottomSheetRef</code> 的 <code>afterDismissed()</code> 这个 Observable 添加对这种情况的处理。</p><p translation-origin="off">You can add handling for this situation with the <code>afterDismissed()</code> observable from
 <code>MatBottomSheetRef</code>.</p>
 
 <pre><code class="language-typescript"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(FileTypeChooser);

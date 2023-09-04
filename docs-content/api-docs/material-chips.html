@@ -34,9 +34,9 @@
   <span header-link="MatChip"></span>
   <code>MatChip</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">Material Design 风格的纸片基础组件。在 MatChipSet 组件内部使用。</p><p translation-result="on">由 MatChipOption 和 MatChipRow 扩展用于不同的交互模式。</p><p translation-origin="off">Material design styled Chip base component. Used inside the MatChipSet component.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">Material Design 风格的纸片基础组件。在 MatChipSet 组件内部使用。</p><p translation-origin="off">Material design styled Chip base component. Used inside the MatChipSet component.</p>
 
-<p translation-origin="off">Extended by MatChipOption and MatChipRow for different interaction patterns.</p>
+<p translation-result="on">由 MatChipOption 和 MatChipRow 扩展用于不同的交互模式。</p><p translation-origin="off">Extended by MatChipOption and MatChipRow for different interaction patterns.</p>
 
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
@@ -384,9 +384,9 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Allows for programmatic removal of the chip.</p>
+      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-origin="off">Allows for programmatic removal of the chip.</p>
 
-<p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+<p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
 
 
     </td>
@@ -411,9 +411,9 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
     </a>
   </span>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">支持纸片选择的 MatChip 组件的扩展。与 MatChipListbox 一起使用。</p><p translation-result="on">与其他纸片不同，用户可以专注于 MatChipListbox 中禁用的纸片选项。用户不能单击已禁用的纸片。</p><p translation-origin="off">An extension of the MatChip component that supports chip selection. Used with MatChipListbox.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">支持纸片选择的 MatChip 组件的扩展。与 MatChipListbox 一起使用。</p><p translation-origin="off">An extension of the MatChip component that supports chip selection. Used with MatChipListbox.</p>
 
-<p translation-origin="off">Unlike other chips, the user can focus on disabled chip options inside a MatChipListbox. The
+<p translation-result="on">与其他纸片不同，用户可以专注于 MatChipListbox 中禁用的纸片选项。用户不能单击已禁用的纸片。</p><p translation-origin="off">Unlike other chips, the user can focus on disabled chip options inside a MatChipListbox. The
 user cannot click disabled chips.</p>
 
 </div><div class="docs-api-directive-selectors">
@@ -577,9 +577,9 @@ user cannot click disabled chips.</p>
       <code>selectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">纸片是否可选。</p><p translation-result="on">当一个纸片不可选择时，对其选定状态的改变总是被忽略。默认情况下，选项纸片是可选的，如果其父纸片列表不可选，则该可选纸片变为不可选。</p><p translation-origin="off">Whether or not the chip is selectable.</p>
+  <td class="docs-api-property-description"><p translation-result="on">纸片是否可选。</p><p translation-origin="off">Whether or not the chip is selectable.</p>
 
-<p translation-origin="off">When a chip is not selectable, changes to its selected state are always
+<p translation-result="on">当一个纸片不可选择时，对其选定状态的改变总是被忽略。默认情况下，选项纸片是可选的，如果其父纸片列表不可选，则该可选纸片变为不可选。</p><p translation-origin="off">When a chip is not selectable, changes to its selected state are always
 ignored. By default an option chip is selectable, and it becomes
 non-selectable if its parent chip list is not selectable.</p>
 
@@ -674,11 +674,11 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
   <td class="docs-api-property-description"><p translation-result="on">将 ARIA selected 应用于此纸片。遵循列表框交互模式的 WAI ARIA 最佳实践。</p><p translation-origin="off">The ARIA selected applied to the chip. Conforms to WAI ARIA best practices for listbox
 interaction patterns.</p>
 
-<p translation-result="on">在可选择的未选择列表框选项上设置 <code>aria-selected="false"</code> 以修复 VoiceOver 将每个选项读取为“selected”的问题(#25736)。</p><p translation-origin="off">From <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/">WAI ARIA Listbox authoring practices guide</a>:
+<p>From <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/">WAI ARIA Listbox authoring practices guide</a>:
  "If any options are selected, each selected option has either aria-selected or aria-checked
  set to true. All options that are selectable but not selected have either aria-selected or
  aria-checked set to false."</p>
-<p translation-origin="off">Set <code>aria-selected="false"</code> on not-selected listbox options that are selectable to fix
+<p translation-result="on">在可选择的未选择列表框选项上设置 <code>aria-selected="false"</code> 以修复 VoiceOver 将每个选项读取为“selected”的问题(#25736)。</p><p translation-origin="off">Set <code>aria-selected="false"</code> on not-selected listbox options that are selectable to fix
 VoiceOver reading every option as "selected" (#25736).</p>
 
 </td>
@@ -863,9 +863,9 @@ VoiceOver reading every option as "selected" (#25736).</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Allows for programmatic removal of the chip.</p>
+      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-origin="off">Allows for programmatic removal of the chip.</p>
 
-<p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+<p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
 
 
     </td>
@@ -943,7 +943,9 @@ VoiceOver reading every option as "selected" (#25736).</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1378,9 +1380,9 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Allows for programmatic removal of the chip.</p>
+      <p translation-result="on">允许以编程方式移除该纸片。当按下 DELETE 或 BACKSPACE 键时，会由 MatChipList 调用。</p><p translation-origin="off">Allows for programmatic removal of the chip.</p>
 
-<p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
+<p translation-result="on">通知任何监听器这个删除请求。但不会从 DOM 中移除纸片。</p><p translation-origin="off">Informs any listeners of the removal request. Does not remove the chip from the DOM.</p>
 
 
     </td>
@@ -1398,9 +1400,9 @@ the <code>mat-mdc-chip-action-label</code> element.</p>
   <span header-link="MatChipSet"></span>
   <code>MatChipSet</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">此 MatChip 组件的基本容器组件。</p><p translation-result="on">由 MatChipListbox 和 MatChipGrid 扩展，用于不同的交互模式。</p><p translation-origin="off">Basic container component for the MatChip component.</p>
+</h4><div class="docs-api-class-description"><p translation-result="on">此 MatChip 组件的基本容器组件。</p><p translation-origin="off">Basic container component for the MatChip component.</p>
 
-<p translation-origin="off">Extended by MatChipListbox and MatChipGrid for different interaction patterns.</p>
+<p translation-result="on">由 MatChipListbox 和 MatChipGrid 扩展，用于不同的交互模式。</p><p translation-origin="off">Extended by MatChipListbox and MatChipGrid for different interaction patterns.</p>
 
 </div><div class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">选择器：</span>
@@ -1682,9 +1684,9 @@ should be returned.</p>
       <code>selectable: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此纸片列表框是否可选。</p><p translation-result="on">当纸片列表框不可选时，纸片列表框内所有纸片的选定状态总是被忽略。</p><p translation-origin="off">Whether or not this chip listbox is selectable.</p>
+  <td class="docs-api-property-description"><p translation-result="on">此纸片列表框是否可选。</p><p translation-origin="off">Whether or not this chip listbox is selectable.</p>
 
-<p translation-origin="off">When a chip listbox is not selectable, the selected states for all
+<p translation-result="on">当纸片列表框不可选时，纸片列表框内所有纸片的选定状态总是被忽略。</p><p translation-origin="off">When a chip listbox is not selectable, the selected states for all
 the chips inside the chip listbox are always ignored.</p>
 
 </td>
@@ -2199,9 +2201,9 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
       <code>separatorKeyCodes: readonly number[] | ReadonlySet&lt;number&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">会触发 chipEnd 事件的键盘代码列表。</p><p translation-result="on">默认为 <code>[ENTER]</code>。</p><p translation-origin="off">The list of key codes that will trigger a chipEnd event.</p>
+  <td class="docs-api-property-description"><p translation-result="on">会触发 chipEnd 事件的键盘代码列表。</p><p translation-origin="off">The list of key codes that will trigger a chipEnd event.</p>
 
-<p translation-origin="off">Defaults to <code>[ENTER]</code>.</p>
+<p translation-result="on">默认为 <code>[ENTER]</code>。</p><p translation-origin="off">Defaults to <code>[ENTER]</code>.</p>
 
 </td>
 </tr>
@@ -2315,7 +2317,9 @@ May be placed inside or outside of a <code>&lt;mat-chip-grid&gt;</code>.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -2458,9 +2462,9 @@ but we support non-interactive trailing icons.</p>
 </h4><div class="docs-api-class-description"><p translation-result="on">用于在单击尾随图标或按下 ENTER 键时删除父纸片的指令。</p><p translation-origin="off">Directive to remove the parent chip when the trailing icon is clicked or
 when the ENTER key is pressed on it.</p>
 
-<p translation-result="on">示例：</p><p translation-origin="off">Recommended for use with the Material Design "cancel" icon
+<p>Recommended for use with the Material Design "cancel" icon
 available at <a href="https://material.io/icons/#ic_cancel">https://material.io/icons/#ic_cancel</a>.</p>
-<p translation-origin="off">Example:</p>
+<p translation-result="on">示例：</p><p translation-origin="off">Example:</p>
 
 <pre><code>&lt;mat-chip&gt;
   &lt;mat-icon matChipRemove&gt;cancel&lt;/mat-icon&gt;
@@ -2570,7 +2574,9 @@ element's contents.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2595,7 +2601,9 @@ element's contents.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2620,7 +2628,9 @@ element's contents.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -2649,7 +2659,9 @@ element's contents.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   

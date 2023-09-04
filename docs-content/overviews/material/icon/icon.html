@@ -8,7 +8,7 @@ icon fonts and SVG icons, but not bitmap-based formats (png, jpg, etc.).</p>
         <h3 id="registering-icons" class="docs-header-link" translation-result="on">
           <span header-link="注册图标"></span>
           注册图标
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------registering-icons--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="registering-icons"></span>
           Registering icons
         </h3>
@@ -23,20 +23,20 @@ in the API summary.</p>
         <h3 id="font-icons-with-ligatures" class="docs-header-link" translation-result="on">
           <span header-link="带有合字的字体图标"></span>
           带有合字的字体图标
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------font-icons-with-ligatures--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="font-icons-with-ligatures"></span>
           Font icons with ligatures
         </h3>
       
         
-      <p translation-result="on">有些字体是设计来用<a href="https://en.wikipedia.org/wiki/Typographic_ligature">合字</a>的方式显示图标的，比如把文本格式的 "home" 显示为家的图标。要使用合字图标，请把它对应的文本放进 <code>mat-icon</code> 组件的内容中。</p><p translation-result="on">默认情况下，<code>&lt;mat-icon&gt;</code> 需要 <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">Material 字体图标</a>。
-（你可能还要在 HTML 中加载该字体及其 CSS 文件，像链接中所描述的那样）。
-你可以将输入属性 <code>fontSet</code> 设置为要应用的 CSS 所依赖的字体，也可以设置为以前通过 <code>MatIconRegistry.registerFontClassAlias</code> 注册的某个别名。</p><p translation-origin="off">Some fonts are designed to show icons by using
+      <p translation-result="on">有些字体是设计来用<a href="https://en.wikipedia.org/wiki/Typographic_ligature">合字</a>的方式显示图标的，比如把文本格式的 "home" 显示为家的图标。要使用合字图标，请把它对应的文本放进 <code>mat-icon</code> 组件的内容中。</p><p translation-origin="off">Some fonts are designed to show icons by using
 <a href="https://en.wikipedia.org/wiki/Typographic_ligature">ligatures</a>, for example by rendering the text
 "home" as a home image. To use a ligature icon, put its text in the content of the <code>mat-icon</code>
 component.</p>
 
-<p translation-origin="off">By default, <code>&lt;mat-icon&gt;</code> expects the
+<p translation-result="on">默认情况下，<code>&lt;mat-icon&gt;</code> 需要 <a href="http://google.github.io/material-design-icons/#icon-font-for-the-web">Material 字体图标</a>。
+（你可能还要在 HTML 中加载该字体及其 CSS 文件，像链接中所描述的那样）。
+你可以将输入属性 <code>fontSet</code> 设置为要应用的 CSS 所依赖的字体，也可以设置为以前通过 <code>MatIconRegistry.registerFontClassAlias</code> 注册的某个别名。</p><p translation-origin="off">By default, <code>&lt;mat-icon&gt;</code> expects the
 <a href="https://google.github.io/material-design-icons/#icon-font-for-the-web">Material icons font</a>.
 (You will still need to include the HTML to load the font and its CSS, as described in the link).
 You can specify a different font by setting the <code>fontSet</code> input to either the CSS class to apply to
@@ -47,7 +47,7 @@ use the desired font, or to an alias previously registered with
         <h3 id="font-icons-with-css" class="docs-header-link" translation-result="on">
           <span header-link="带有-css-的字体图标"></span>
           带有 CSS 的字体图标
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------font-icons-with-css--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="font-icons-with-css"></span>
           Font icons with CSS
         </h3>
@@ -55,27 +55,27 @@ use the desired font, or to an alias previously registered with
         
       <p translation-result="on">字体还可以通过为每个图标字符定义 CSS 类来显示图标，它通常使用 <code>:before</code> 选择器来显示图标。
 <a href="https://fontawesome.com/icons">FontAwesome</a> 就是通过这种方式显示图标的。
-要使用这类字体，请把输入属性 <code>fontSet</code> 设置为该字体的 CSS 类（或者它本身的定义类或者通过 <code>MatIconRegistry.registerFontClassAlias</code> 注册的别名），并且把输入属性 <code>fontIcon</code> 设置为要显示的图标的专有类。</p><p translation-result="on">无论对于哪种字体图标，你都可以通过调用 <code>MatIconRegistry.setDefaultFontSetClass</code> 来指定一个默认字体类。当没有指定 <code>fontSet</code> 时就会使用它。</p><p translation-origin="off">Fonts can also display icons by defining a CSS class for each icon glyph, which typically uses a
+要使用这类字体，请把输入属性 <code>fontSet</code> 设置为该字体的 CSS 类（或者它本身的定义类或者通过 <code>MatIconRegistry.registerFontClassAlias</code> 注册的别名），并且把输入属性 <code>fontIcon</code> 设置为要显示的图标的专有类。</p><p translation-origin="off">Fonts can also display icons by defining a CSS class for each icon glyph, which typically uses a
 <code>:before</code> selector to cause the icon to appear.
 <a href="https://fontawesome.com/icons">Font Awesome</a> uses this approach to display
 its icons. To use such a font, set the <code>fontSet</code> input to the font's CSS class (either the class
 itself or an alias registered with <code>MatIconRegistry.registerFontClassAlias</code>), and set the <code>fontIcon</code>
 input to the class for the specific icon to show.</p>
 
-<p translation-origin="off">For both types of font icons, you can specify the default font class to use when <code>fontSet</code> is not
+<p translation-result="on">无论对于哪种字体图标，你都可以通过调用 <code>MatIconRegistry.setDefaultFontSetClass</code> 来指定一个默认字体类。当没有指定 <code>fontSet</code> 时就会使用它。</p><p translation-origin="off">For both types of font icons, you can specify the default font class to use when <code>fontSet</code> is not
 explicitly set by calling <code>MatIconRegistry.setDefaultFontSetClass</code>.</p>
 
 
         <h3 id="svg-icons" class="docs-header-link" translation-result="on">
           <span header-link="svg-图标"></span>
           SVG 图标
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------svg-icons--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="svg-icons"></span>
           SVG icons
         </h3>
       
         
-      <p translation-result="on"><code>&lt;mat-icon&gt;</code> 会把 SVG 内容直接内联到 DOM 中，作为自己的子级，来显示 SVG 图标。这种方法比 <code>&lt;img&gt;</code> 标签或 CSS <code>background-image</code> 更有优势，因为它允许使用 CSS 来为 SVG 指定样式。例如，SVG 内容的默认颜色是 CSS 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentColor_keyword">currentColor</a> 值。这会使 SVG 图标默认使用与周围文本相同的颜色，并让你能通过设置 <code>mat-icon</code> 元素 <code>color</code> 样式来改变其颜色。</p><p translation-result="on">为了防范 XSS 漏洞，传给 <code>MatIconRegistry</code> 的 SVG URL 和 HTML 字符串都必须使用 Angular 的 <code>DomSanitizer</code> 服务标记为可信的。</p><p translation-origin="off"><code>&lt;mat-icon&gt;</code> displays SVG icons by directly inlining the SVG content into the DOM
+      <p translation-result="on"><code>&lt;mat-icon&gt;</code> 会把 SVG 内容直接内联到 DOM 中，作为自己的子级，来显示 SVG 图标。这种方法比 <code>&lt;img&gt;</code> 标签或 CSS <code>background-image</code> 更有优势，因为它允许使用 CSS 来为 SVG 指定样式。例如，SVG 内容的默认颜色是 CSS 的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentColor_keyword">currentColor</a> 值。这会使 SVG 图标默认使用与周围文本相同的颜色，并让你能通过设置 <code>mat-icon</code> 元素 <code>color</code> 样式来改变其颜色。</p><p translation-origin="off"><code>&lt;mat-icon&gt;</code> displays SVG icons by directly inlining the SVG content into the DOM
 as a child of itself. This approach offers an advantage over an <code>&lt;img&gt;</code> tag or a CSS
 <code>background-image</code> because it allows styling the SVG with CSS. For example, the default color of the
 SVG content is the CSS
@@ -83,14 +83,14 @@ SVG content is the CSS
 value. This makes SVG icons by default have the same color as surrounding text, and allows you to
 change the color by setting the <code>color</code> style on the <code>mat-icon</code> element.</p>
 
-<p translation-result="on"><code>MatIconRegistry</code> 通过 Angular 的 <code>HttpClient</code> 服务获取所有的远程 SVG 图标。如果你没有在 <code>NgModule</code> 的 <code>imports</code> 里包含 <a href="https://angular.cn/guide/http"><code>@angular/common/http</code> 包里 <code>HttpClientModule</code></a>，那么运行时就会出错。</p><p translation-origin="off">In order to guard against XSS vulnerabilities, any SVG URLs and HTML strings passed to the
+<p translation-result="on">为了防范 XSS 漏洞，传给 <code>MatIconRegistry</code> 的 SVG URL 和 HTML 字符串都必须使用 Angular 的 <code>DomSanitizer</code> 服务标记为可信的。</p><p translation-origin="off">In order to guard against XSS vulnerabilities, any SVG URLs and HTML strings passed to the
 <code>MatIconRegistry</code> must be marked as trusted by using Angular's <code>DomSanitizer</code> service.</p>
 
-<p translation-result="on">注意，<code>HttpClient</code> 要借助 <code>XmlHttpRequest</code> 来获取通过 URL 注册的 SVG 图标，它必须遵循<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">同源策略</a>。这意味着图标的 URL 必须与容器页面具有相同的源，或者必须将该应用服务器配置为允许跨域请求。</p><p translation-origin="off"><code>MatIconRegistry</code> fetches all remote SVG icons via Angular's <code>HttpClient</code> service. If you haven't
+<p translation-result="on"><code>MatIconRegistry</code> 通过 Angular 的 <code>HttpClient</code> 服务获取所有的远程 SVG 图标。如果你没有在 <code>NgModule</code> 的 <code>imports</code> 里包含 <a href="https://angular.cn/guide/http"><code>@angular/common/http</code> 包里 <code>HttpClientModule</code></a>，那么运行时就会出错。</p><p translation-origin="off"><code>MatIconRegistry</code> fetches all remote SVG icons via Angular's <code>HttpClient</code> service. If you haven't
 included <a href="https://angular.io/guide/http"><code>HttpClientModule</code> from the <code>@angular/common/http</code> package</a>
 in your <code>NgModule</code> imports, you will get an error at runtime.</p>
 
-<p translation-origin="off">Note that <code>HttpClient</code> fetches SVG icons registered with a URL via <code>XmlHttpRequest</code>, subject to the
+<p translation-result="on">注意，<code>HttpClient</code> 要借助 <code>XmlHttpRequest</code> 来获取通过 URL 注册的 SVG 图标，它必须遵循<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">同源策略</a>。这意味着图标的 URL 必须与容器页面具有相同的源，或者必须将该应用服务器配置为允许跨域请求。</p><p translation-origin="off">Note that <code>HttpClient</code> fetches SVG icons registered with a URL via <code>XmlHttpRequest</code>, subject to the
 <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a>. This
 means that icon URLs must have the same origin as the containing page or that the application's
 server must be configured to allow cross-origin requests.</p>
@@ -99,7 +99,7 @@ server must be configured to allow cross-origin requests.</p>
         <h4 id="named-icons" class="docs-header-link" translation-result="on">
           <span header-link="命名图标"></span>
           命名图标
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------named-icons--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="named-icons"></span>
           Named icons
         </h4>
@@ -118,33 +118,33 @@ default namespace, use the name directly. For a non-default namespace, use the f
         <h4 id="icon-sets" class="docs-header-link" translation-result="on">
           <span header-link="图标集"></span>
           图标集
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------icon-sets--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="icon-sets"></span>
           Icon sets
         </h4>
       
         
       <p translation-result="on">图标集允许把多个图标分组到一个单一的 SVG 文件中。它可以通过创建一个单根 <code>&lt;svg&gt;</code> 标记来完成，该标记在其 <code>&lt;defs&gt;</code> 部分包含多个内嵌的 <code>&lt;svg&gt;</code> 标记。
-每个内嵌标记都带有一个 <code>id</code> 属性，该属性就会用作图标的名字。</p><p translation-result="on">图标集使用 <code>MatIconRegistry</code> 的 <code>addSvgIconSet</code>、<code>addSvgIconSetInNamespace</code>、<code>addSvgIconSetLiteral</code> 或 <code>addSvgIconSetLiteralInNamespace</code> 方法进行注册。
-当注册了图标集之后，每个内嵌的图标都可以通过它们的 <code>id</code> 属性进行访问。要显示图标集中的某个图标，
-只要像单独注册的图标那样使用输入属性 <code>svgIcon</code> 就可以了。</p><p translation-origin="off">Icon sets allow grouping multiple icons into a single SVG file. This is done by creating a single
+每个内嵌标记都带有一个 <code>id</code> 属性，该属性就会用作图标的名字。</p><p translation-origin="off">Icon sets allow grouping multiple icons into a single SVG file. This is done by creating a single
 root <code>&lt;svg&gt;</code> tag that contains multiple nested <code>&lt;svg&gt;</code> tags in its <code>&lt;defs&gt;</code> section. Each of these
 nested tags is identified with an <code>id</code> attribute. This <code>id</code> is used as the name of the icon.</p>
 
-<p translation-result="on">多个图标集可以注册进同一个命名空间。如果一个图标的 id 出现在多个图标集中，就会使用最近注册的图标集中的图标。</p><p translation-origin="off">Icon sets are registered using the <code>addSvgIconSet</code>, <code>addSvgIconSetInNamespace</code>,
+<p translation-result="on">图标集使用 <code>MatIconRegistry</code> 的 <code>addSvgIconSet</code>、<code>addSvgIconSetInNamespace</code>、<code>addSvgIconSetLiteral</code> 或 <code>addSvgIconSetLiteralInNamespace</code> 方法进行注册。
+当注册了图标集之后，每个内嵌的图标都可以通过它们的 <code>id</code> 属性进行访问。要显示图标集中的某个图标，
+只要像单独注册的图标那样使用输入属性 <code>svgIcon</code> 就可以了。</p><p translation-origin="off">Icon sets are registered using the <code>addSvgIconSet</code>, <code>addSvgIconSetInNamespace</code>,
 <code>addSvgIconSetLiteral</code> or <code>addSvgIconSetLiteralInNamespace</code> methods of <code>MatIconRegistry</code>.
 After an icon set is registered, each of its embedded icons can be accessed by their <code>id</code>
 attributes. To display an icon from an icon set, use the <code>svgIcon</code> input in the same way
 as for individually registered icons.</p>
 
-<p translation-origin="off">Multiple icon sets can be registered in the same namespace. Requesting an icon whose id appears in
+<p translation-result="on">多个图标集可以注册进同一个命名空间。如果一个图标的 id 出现在多个图标集中，就会使用最近注册的图标集中的图标。</p><p translation-origin="off">Multiple icon sets can be registered in the same namespace. Requesting an icon whose id appears in
 more than one icon set, the icon from the most recently registered set will be used.</p>
 
 
         <h3 id="theming" class="docs-header-link" translation-result="on">
           <span header-link="主题"></span>
           主题
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------theming--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="theming"></span>
           Theming
         </h3>
@@ -159,20 +159,20 @@ match the current theme's colors using the <code>color</code> attribute. This ca
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
       <p translation-result="on">像任何 <code>&lt;img&gt;</code> 元素一样，图标本身并不会想屏幕阅读器用户传达任何有用的信息。
-<code>&lt;mat-icon&gt;</code> 的使用者必须提供一些关于本图标用途的额外信息。根据稍后描述的用例，<code>mat-icon</code> 默认标记为 <code>aria-hidden="true"</code>，但是可以通过网元素上添加 <code>aria-hidden="false"</code> 来覆盖默认行为。</p><p translation-result="on">在考察无障碍性时，可以将图标归入下面三种类别之一：</p><p translation-origin="off">Similar to an <code>&lt;img&gt;</code> element, an icon alone does not convey any useful information for a
+<code>&lt;mat-icon&gt;</code> 的使用者必须提供一些关于本图标用途的额外信息。根据稍后描述的用例，<code>mat-icon</code> 默认标记为 <code>aria-hidden="true"</code>，但是可以通过网元素上添加 <code>aria-hidden="false"</code> 来覆盖默认行为。</p><p translation-origin="off">Similar to an <code>&lt;img&gt;</code> element, an icon alone does not convey any useful information for a
 screen-reader user. The user of <code>&lt;mat-icon&gt;</code> must provide additional information pertaining to how
 the icon is used. Based on the use-cases described below, <code>mat-icon</code> is marked as
 <code>aria-hidden="true"</code> by default, but this can be overridden by adding <code>aria-hidden="false"</code> to the
 element.</p>
 
-<p translation-origin="off">In thinking about accessibility, it is useful to place icon use into one of three categories:</p>
+<p translation-result="on">在考察无障碍性时，可以将图标归入下面三种类别之一：</p><p translation-origin="off">In thinking about accessibility, it is useful to place icon use into one of three categories:</p>
 
 <ol>
 <li><p translation-result="on"><strong>装饰性的</strong>：该图标不传达有意义的信息，是个纯粹的点缀。</p><p translation-origin="off"><strong>Decorative</strong>: the icon conveys no real semantic meaning and is purely cosmetic.</p>
@@ -190,7 +190,7 @@ This includes using the icon in place of text inside of a larger message.</p>
         <h4 id="decorative-icons" class="docs-header-link" translation-result="on">
           <span header-link="装饰性图标"></span>
           装饰性图标
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------decorative-icons--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="decorative-icons"></span>
           Decorative icons
         </h4>
@@ -203,7 +203,7 @@ is marked with <code>aria-hidden="true"</code>.</p>
         <h4 id="interactive-icons" class="docs-header-link" translation-result="on">
           <span header-link="互动式图标"></span>
           互动式图标
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------interactive-icons--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="interactive-icons"></span>
           Interactive icons
         </h4>
@@ -225,7 +225,7 @@ direct text content, <code>aria-label</code>, or <code>aria-labelledby</code>.</
         <h4 id="indicator-icons" class="docs-header-link" translation-result="on">
           <span header-link="指示符图标"></span>
           指示符图标
-        </h4><h4 class="docs-header-link" translation-origin="off" id="--------------------indicator-icons--------">
+        </h4><h4 class="docs-header-link" translation-origin="off">
           <span header-link="indicator-icons"></span>
           Indicator icons
         </h4>
@@ -249,7 +249,7 @@ on-screen but still available to screen-reader users.</p>
         <h3 id="bidirectionality" class="docs-header-link" translation-result="on">
           <span header-link="双向文字"></span>
           双向文字
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------bidirectionality--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="bidirectionality"></span>
           Bidirectionality
         </h3>

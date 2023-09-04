@@ -7,18 +7,18 @@ enhanced with Material Design styling and animations.</p>
         <h3 id="checkbox-label" class="docs-header-link" translation-result="on">
           <span header-link="检查框标签"></span>
           检查框标签
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------checkbox-label--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="checkbox-label"></span>
           Checkbox label
         </h3>
       
         
-      <p translation-result="on">检查框的标签是以 <code>&lt;mat-checkbox&gt;</code> 元素内容的形式提供的。该标签可以通过把 <code>labelPosition</code> 属性设置为 <code>'before'</code> 或 <code>'after'</code> 来让自己定位于检查框的前面或后面。</p><p translation-result="on">如果你不想紧挨着检查框显示该标签，可以使用 <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-label"><code>aria-label</code></a> 或 
-<a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a> 为它指定一个合适的标签。</p><p translation-origin="off">The checkbox label is provided as the content to the <code>&lt;mat-checkbox&gt;</code> element. The label can be
+      <p translation-result="on">检查框的标签是以 <code>&lt;mat-checkbox&gt;</code> 元素内容的形式提供的。该标签可以通过把 <code>labelPosition</code> 属性设置为 <code>'before'</code> 或 <code>'after'</code> 来让自己定位于检查框的前面或后面。</p><p translation-origin="off">The checkbox label is provided as the content to the <code>&lt;mat-checkbox&gt;</code> element. The label can be
 positioned before or after the checkbox by setting the <code>labelPosition</code> property to <code>'before'</code> or
 <code>'after'</code>.</p>
 
-<p translation-origin="off">If you don't want the label to appear next to the checkbox, you can use
+<p translation-result="on">如果你不想紧挨着检查框显示该标签，可以使用 <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-label"><code>aria-label</code></a> 或 
+<a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a> 为它指定一个合适的标签。</p><p translation-origin="off">If you don't want the label to appear next to the checkbox, you can use
 <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-label"><code>aria-label</code></a> or
 <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code></a> to
 specify an appropriate label.</p>
@@ -27,7 +27,7 @@ specify an appropriate label.</p>
         <h3 id="use-with-angularforms" class="docs-header-link" translation-result="on">
           <span header-link="和-angularforms-一起使用"></span>
           和 <code>@angular/forms</code> 一起使用
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------use-with-angularforms--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="use-with-angularforms"></span>
           Use with <code>@angular/forms</code>
         </h3>
@@ -40,7 +40,7 @@ and <code>ReactiveFormsModule</code>.</p>
         <h3 id="indeterminate-state" class="docs-header-link" translation-result="on">
           <span header-link="未决状态"></span>
           未决状态
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------indeterminate-state--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="indeterminate-state"></span>
           Indeterminate state
         </h3>
@@ -56,7 +56,7 @@ remove the indeterminate state.</p>
         <h3 id="click-action-config" class="docs-header-link" translation-result="on">
           <span header-link="配置点击动作"></span>
           配置点击动作
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------click-action-config--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="click-action-config"></span>
           Click action config
         </h3>
@@ -105,7 +105,7 @@ This matches the behavior of native <code>&lt;input type="checkbox"&gt;</code>.<
         <h3 id="theming" class="docs-header-link" translation-result="on">
           <span header-link="主题"></span>
           主题
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------theming--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="theming"></span>
           Theming
         </h3>
@@ -118,19 +118,19 @@ use the theme's accent color. This can be changed to <code>'primary'</code> or <
         <h3 id="accessibility" class="docs-header-link" translation-result="on">
           <span header-link="无障碍性"></span>
           无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off" id="--------------------accessibility--------">
+        </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
       
         
       <p translation-result="on"><code>MatCheckbox</code> 使用一个内部的 <code>&lt;input type="checkbox"&gt;</code> 来提供无障碍性体验。
-这个内部检查框可以接受焦点，并且自动把 <code>&lt;mat-checkbox&gt;</code> 元素的文本内容作为标签。</p><p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为没有描述性文本内容的复选框提供无障碍标签。对于动态标签， <code>MatCheckbox</code> 提供了用于绑定 <code>aria-label</code> 和 <code>aria-labelledby</code> 的输入属性。这意味着你不应该使用 <code>attr.</code> 作为绑定这些属性时的前缀，如下所示。</p><p translation-origin="off"><code>MatCheckbox</code> uses an internal <code>&lt;input type="checkbox"&gt;</code> to provide an accessible experience.
+这个内部检查框可以接受焦点，并且自动把 <code>&lt;mat-checkbox&gt;</code> 元素的文本内容作为标签。</p><p translation-origin="off"><code>MatCheckbox</code> uses an internal <code>&lt;input type="checkbox"&gt;</code> to provide an accessible experience.
 This internal checkbox receives focus and is automatically labelled by the text content of the
 <code>&lt;mat-checkbox&gt;</code> element. Avoid adding other interactive controls into the content of
 <code>&lt;mat-checkbox&gt;</code>, as this degrades the experience for users of assistive technology.</p>
 
-<p translation-origin="off">Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for checkboxes without
+<p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 为没有描述性文本内容的复选框提供无障碍标签。对于动态标签， <code>MatCheckbox</code> 提供了用于绑定 <code>aria-label</code> 和 <code>aria-labelledby</code> 的输入属性。这意味着你不应该使用 <code>attr.</code> 作为绑定这些属性时的前缀，如下所示。</p><p translation-origin="off">Always provide an accessible label via <code>aria-label</code> or <code>aria-labelledby</code> for checkboxes without
 descriptive text content. For dynamic labels, <code>MatCheckbox</code> provides input properties for binding
 <code>aria-label</code> and <code>aria-labelledby</code>. This means that you should not use the <code>attr.</code> prefix when
 binding these properties, as demonstrated below.</p>

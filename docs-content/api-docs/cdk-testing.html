@@ -217,7 +217,9 @@ predicate.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -226,13 +228,13 @@ predicate.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会拒绝（reject）。<code>Promise</code> 解析（resolve）成的类型是每个查询的所有结果类型的并集。</p><p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会拒绝（reject）。<code>Promise</code> 解析（resolve）成的类型是每个查询的所有结果类型的并集。</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
   each query.</p>
 
-<p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
+<p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
 <code>DivHarness.hostSelector === 'div'</code>:</p>
 
 <ul>
@@ -316,7 +318,9 @@ predicate.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -325,7 +329,7 @@ predicate.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果一个元素与多个 <code>ComponentHarness</code> 类匹配，那么该定位器会为同一个元素获取每个元素的实例。如果一个元素匹配多个 <code>string</code> 选择器，只会为它返回一个 <code>TestElement</code> 实例。<code>Promise</code> 解析成的类型是一个数组，其中每个元素都是每个查询的所有结果类型的并集。</p><p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> 和 <code>IdIsD1Harness.hostSelector === '#d1'</code> ：</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for all
+        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果一个元素与多个 <code>ComponentHarness</code> 类匹配，那么该定位器会为同一个元素获取每个元素的实例。如果一个元素匹配多个 <code>string</code> 选择器，只会为它返回一个 <code>TestElement</code> 实例。<code>Promise</code> 解析成的类型是一个数组，其中每个元素都是每个查询的所有结果类型的并集。</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for all
   elements and harnesses matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If an element matches more than
   one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
@@ -333,7 +337,7 @@ predicate.</p>
   for that element. The type that the <code>Promise</code> resolves to is an array where each element is
   the union of all result types for each query.</p>
 
-<p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
+<p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> 和 <code>IdIsD1Harness.hostSelector === '#d1'</code> ：</p><p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
 <code>DivHarness.hostSelector === 'div'</code> and <code>IdIsD1Harness.hostSelector === '#d1'</code>:</p>
 
 <ul>
@@ -429,7 +433,9 @@ predicate.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -438,13 +444,13 @@ predicate.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p translation-result="on">一个异步定位器函数，用于搜索和返回与指定搜索条件匹配的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会被解析为 <code>null</code>。<code>Promise</code> 解析成的类型是每个查询的所有结果类型的并集，或 null。</p><p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+        <p translation-result="on">一个异步定位器函数，用于搜索和返回与指定搜索条件匹配的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会被解析为 <code>null</code>。<code>Promise</code> 解析成的类型是每个查询的所有结果类型的并集，或 null。</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
   result types for each query or null.</p>
 
-<p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
+<p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
 <code>DivHarness.hostSelector === 'div'</code>:</p>
 
 <ul>
@@ -541,7 +547,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -587,7 +595,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -633,7 +643,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -679,7 +691,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -725,7 +739,9 @@ of the harness may want to access other harnesses within the <code>&lt;ng-conten
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -807,7 +823,9 @@ searching for content contained by this harness.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1348,7 +1366,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1398,7 +1418,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1448,7 +1470,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1473,7 +1497,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1549,7 +1575,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1595,7 +1623,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1647,7 +1677,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1693,7 +1725,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1772,7 +1806,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1818,7 +1854,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1864,7 +1902,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1910,7 +1950,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -1956,7 +1998,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2002,7 +2046,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2027,7 +2073,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -2044,7 +2092,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2069,7 +2119,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -2086,7 +2138,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2111,7 +2165,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -2128,7 +2184,9 @@ element type, <code>E</code>, used by the particular test environment.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2932,7 +2990,9 @@ predicate.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -2941,13 +3001,13 @@ predicate.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会拒绝（reject）。<code>Promise</code> 解析（resolve）成的类型是每个查询的所有结果类型的并集。</p><p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会拒绝（reject）。<code>Promise</code> 解析（resolve）成的类型是每个查询的所有结果类型的并集。</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> rejects. The type that the <code>Promise</code> resolves to is a union of all result types for
   each query.</p>
 
-<p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
+<p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
 <code>DivHarness.hostSelector === 'div'</code>:</p>
 
 <ul>
@@ -3031,7 +3091,9 @@ predicate.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3040,7 +3102,7 @@ predicate.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果一个元素与多个 <code>ComponentHarness</code> 类匹配，那么该定位器会为同一个元素获取每个元素的实例。如果一个元素匹配多个 <code>string</code> 选择器，只会为它返回一个 <code>TestElement</code> 实例。<code>Promise</code> 解析成的类型是一个数组，其中每个元素都是每个查询的所有结果类型的并集。</p><p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> 和 <code>IdIsD1Harness.hostSelector === '#d1'</code> ：</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for all
+        <p translation-result="on">一个异步定位器函数，用于搜索并返回满足指定搜索条件的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按在查询列表中的顺序排序。如果一个元素与多个 <code>ComponentHarness</code> 类匹配，那么该定位器会为同一个元素获取每个元素的实例。如果一个元素匹配多个 <code>string</code> 选择器，只会为它返回一个 <code>TestElement</code> 实例。<code>Promise</code> 解析成的类型是一个数组，其中每个元素都是每个查询的所有结果类型的并集。</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for all
   elements and harnesses matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If an element matches more than
   one <code>ComponentHarness</code> class, the locator gets an instance of each for the same element. If
@@ -3048,7 +3110,7 @@ predicate.</p>
   for that element. The type that the <code>Promise</code> resolves to is an array where each element is
   the union of all result types for each query.</p>
 
-<p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
+<p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> 和 <code>IdIsD1Harness.hostSelector === '#d1'</code> ：</p><p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
 <code>DivHarness.hostSelector === 'div'</code> and <code>IdIsD1Harness.hostSelector === '#d1'</code>:</p>
 
 <ul>
@@ -3159,7 +3221,9 @@ predicate.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3168,13 +3232,13 @@ predicate.</p>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <div class="docs-api-method-returns-description">
-        <p translation-result="on">一个异步定位器函数，用于搜索和返回与指定搜索条件匹配的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会被解析为 <code>null</code>。<code>Promise</code> 解析成的类型是每个查询的所有结果类型的并集，或 null。</p><p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
+        <p translation-result="on">一个异步定位器函数，用于搜索和返回与指定搜索条件匹配的第一个元素或测试工具的 <code>Promise</code>。匹配结果首先按照 DOM 中的顺序排序，然后按查询列表中的顺序排序。如果找不到匹配条目，<code>Promise</code> 就会被解析为 <code>null</code>。<code>Promise</code> 解析成的类型是每个查询的所有结果类型的并集，或 null。</p><p translation-origin="off">An asynchronous locator function that searches for and returns a <code>Promise</code> for the
   first element or harness matching the given search criteria. Matches are ordered first by
   order in the DOM, and second by order in the queries list. If no matches are found, the
   <code>Promise</code> is resolved with <code>null</code>. The type that the <code>Promise</code> resolves to is a union of all
   result types for each query or null.</p>
 
-<p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
+<p translation-result="on">例如，指定以下 DOM： <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>，并假设 <code>DivHarness.hostSelector === 'div'</code> ：</p><p translation-origin="off">e.g. Given the following DOM: <code>&lt;div id="d1" /&gt;&lt;div id="d2" /&gt;</code>, and assuming
 <code>DivHarness.hostSelector === 'div'</code>:</p>
 
 <ul>
@@ -3311,7 +3375,9 @@ for the Angular component.</p>
       </th>
     </tr>
   </thead><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -3328,7 +3394,9 @@ for the Angular component.</p>
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3591,7 +3659,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3659,7 +3729,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3748,7 +3820,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3800,7 +3874,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3887,7 +3963,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -3939,7 +4017,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4062,7 +4142,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4237,7 +4319,9 @@ the element is clicked at a specific location, consider using <code>click('cente
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4292,7 +4376,9 @@ reproduce native browser behavior for keyboard shortcuts such as Tab, Ctrl + A, 
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4325,7 +4411,9 @@ reproduce native browser behavior for keyboard shortcuts such as Tab, Ctrl + A, 
 
     </td>
   </tr></tbody><thead>
-    
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
     
   </thead>
   
@@ -4343,7 +4431,9 @@ reproduce native browser behavior for keyboard shortcuts such as Tab, Ctrl + A, 
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4396,7 +4486,9 @@ reproduce native browser behavior for keyboard shortcuts such as Tab, Ctrl + A, 
     </td>
   </tr>
   </tbody><thead>
-    
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
     
   </thead>
   <tbody><tr>
@@ -4878,17 +4970,17 @@ harness of type <code>C2</code></p>
 
 </li>
 </ul>
-<p translation-result="on">由于我们不能确定哪个查询匹配，所以结果类型就是所有可能结果类型的并集。</p><p translation-result="on">例如，类型：
+<p translation-result="on">由于我们不能确定哪个查询匹配，所以结果类型就是所有可能结果类型的并集。</p><p translation-origin="off">Since we don't know for sure which query will match, the result type if the union of the types
+for all possible results.</p>
+
+<p translation-result="on">例如，类型：
 <code>LocatorFnResult&amp;lt;[
   ComponentHarnessConstructor&amp;lt;MyHarness&amp;gt;,
   HarnessPredicate&amp;lt;MyOtherHarness&amp;gt;,
   string
 ]&amp;gt;</code>
 相当于：
-<code>MyHarness | MyOtherHarness | TestElement</code>.</p><p translation-origin="off">Since we don't know for sure which query will match, the result type if the union of the types
-for all possible results.</p>
-
-<p translation-origin="off">e.g.
+<code>MyHarness | MyOtherHarness | TestElement</code>.</p><p translation-origin="off">e.g.
 The type:
 <code>LocatorFnResult&amp;lt;[
   ComponentHarnessConstructor&amp;lt;MyHarness&amp;gt;,
