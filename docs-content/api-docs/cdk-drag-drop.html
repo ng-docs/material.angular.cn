@@ -2507,6 +2507,39 @@ by dragging it into another container.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>receivingStarted: Subject&lt;{
+    receiver: DropListRef;
+    initiator: DropListRef;
+    items: DragRef[];
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when a dragging sequence is started in a list connected to the current one.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>receivingStopped: Subject&lt;{
+    receiver: DropListRef;
+    initiator: DropListRef;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when a dragging sequence is stopped from a list connected to the current one.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>sortPredicate: (index: number, drag: DragRef, drop: DropListRef) =&gt; boolean</code>
     </p>
   </td>
@@ -2653,7 +2686,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
@@ -2796,7 +2829,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
@@ -2881,7 +2914,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
@@ -2920,7 +2953,7 @@ connected, the user will be allowed to transfer items between them.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         item</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
@@ -3129,7 +3162,7 @@ is currently being dragged inside a connected drop list.</p>
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
         items</p>
-      <code class="docs-api-method-parameter-type">DragRefInternal[]</code>
+      <code class="docs-api-method-parameter-type">DragRef&lt;any&gt;[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <div class="docs-api-method-parameter-description">
@@ -4547,22 +4580,6 @@ Same advantages and disadvantages as <code>parent</code>.</p>
     
       
 
-<h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="CDK_DROP_LIST"></span>
-  <code>CDK_DROP_LIST</code>
-</h4><div class="docs-api-constant-description"><p translation-result="on">用来引用 <code>CdkDropList</code> 实例的注入令牌。它用作实际 <code>CdkDropList</code> 类的备用令牌，这可能导致不必要地保留该类及其指令元数据。</p><p translation-origin="off">Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
-alternative token to the actual <code>CdkDropList</code> class which could cause unnecessary
-retention of the class and its directive metadata.</p>
-
-</div><div class="docs-markdown">
-<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
 <h4 id="CDK_DRAG_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
   <span header-link="CDK_DRAG_CONFIG"></span>
   <code>CDK_DRAG_CONFIG</code>
@@ -4587,6 +4604,21 @@ retention of the class and its directive metadata.</p>
 
 </div><div class="docs-markdown">
 <pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST_GROUP: InjectionToken&lt;CdkDropListGroup&lt;unknown&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_DROP_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DROP_LIST"></span>
+  <code>CDK_DROP_LIST</code>
+</h4><div class="docs-api-constant-description"><p>Injection token that can be used to reference instances of <code>CdkDropList</code>. It serves as
+alternative token to the actual <code>CdkDropList</code> class which could cause unnecessary
+retention of the class and its directive metadata.</p>
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropList&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
 </pre>
 </div>
 

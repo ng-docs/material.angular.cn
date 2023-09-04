@@ -1838,7 +1838,7 @@ set, the header text will default to the column name with its first letter capit
 sorting (using MatSort), and pagination (using paginator).</p>
 
 <p translation-result="on">可以通过改写 sortingDataAccessor 来进行自定义排序，它定义了要如何访问数据属性。 还允许通过改写 filterTermAccessor 来自定义过滤器，它定义了要如何将行数据转换成字符串以进行过滤匹配。</p><p translation-origin="off">Allows for sort customization by overriding sortingDataAccessor, which defines how data
-properties are accessed. Also allows for filter customization by overriding filterTermAccessor,
+properties are accessed. Also allows for filter customization by overriding filterPredicate,
 which defines how row data is converted to a string for filter matching.</p>
 
 <p translation-result="on"><strong>注意：</strong>这个类是一个简单的数据源，可以帮助你入门。因此，它无法处理某些更高级的案例，比如提供强大的 i18n 支持或服务器端交互。 如果你的应用需要支持更高级的用例，可以考虑实现自己的 <code>DataSource</code>。</p><p translation-origin="off"><strong>Note:</strong> This class is meant to be a simple data source to help you get started. As such

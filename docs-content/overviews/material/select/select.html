@@ -314,6 +314,10 @@ this interferes with most assistive technology.</p>
 <p translation-result="on">始终要为选择框提供一个无障碍标签。这可以通过在 <code>&lt;mat-form-field&gt;</code> 中添加一个 <code>&lt;mat-label&gt;</code> 组件或 <code>aria-label</code>、<code>aria-labelledby</code> 属性来实现。</p><p translation-origin="off">Always provide an accessible label for the select. This can be done by adding a <code>&lt;mat-label&gt;</code>
 inside of <code>&lt;mat-form-field&gt;</code>, the <code>aria-label</code> attribute, or the <code>aria-labelledby</code> attribute.</p>
 
+<p>By default, <code>MatSelect</code> displays a checkmark to identify selected items. While you can hide the
+checkmark indicator for single-selection via <code>hideSingleSelectionIndicator</code>, this makes the
+component less accessible by making it harder or impossible for users to visually identify selected
+items.</p>
 
         <h3 id="troubleshooting" class="docs-header-link" translation-result="on">
           <span header-link="排查问题"></span>

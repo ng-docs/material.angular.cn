@@ -84,13 +84,14 @@ background color to <code>primary</code>, <code>accent</code>, or <code>warn</co
         </h3>
       
         
-      <p translation-result="on">徽章应该通过 <code>matBadgeDescription</code> 来给出一个有意义的描述信息。该描述信息将会通过 <code>aria-describedby</code> 属性应用到 <code>matBadge</code> 所修饰的元素上。</p><p translation-origin="off">Badges should be given a meaningful description via <code>matBadgeDescription</code>. This description will be
-applied, via <code>aria-describedby</code> to the element decorated by <code>matBadge</code>.</p>
-
+      <p>You must provide a meaningful description via <code>matBadgeDescription</code>. When attached to an interactive
+element, <code>MatBadge</code> applies this description to its host via <code>aria-describedby</code>. When attached to
+a non-interactive element, <code>MatBadge</code> appends a visually-hidden, inline description element. The
+badge determines interactivity based on whether the host element is focusable.</p>
 <p translation-result="on">当给 <code>&lt;mat-icon&gt;</code> 添加徽章时，一定要知道一点：此图标默认是标记为 <code>aria-hidden</code> 的。
-如果要通过图标和徽章的组合表达某些信息，那么该信息就要通过其它方式表现出来。<a href="guide/overview#indicator-icons">欲知详情，参见指示器图标的指南</a></p><p translation-origin="off">When applying a badge to a <code>&lt;mat-icon&gt;</code>, it is important to know that the icon is marked as
-<code>aria-hidden</code> by default. If the combination of icon and badge communicates some meaningful
-information, that information should be surfaced in another way. <a href="https://material.angular.io/components/icon/overview#indicator-icons">See the guidance on indicator
+如果要通过图标和徽章的组合表达某些信息，那么该信息就要通过其它方式表现出来。<a href="guide/overview#indicator-icons">欲知详情，参见指示器图标的指南</a></p><p translation-origin="off">When applying a badge to a <code>&lt;mat-icon&gt;</code>, it is important to know that <code>&lt;mat-icon&gt;</code> is
+<code>aria-hidden="true"</code> by default. If the combination of icon and badge communicates meaningful
+information, always surface this information in another way. <a href="https://material.angular.io/components/icon/overview#indicator-icons">See the guidance on indicator
 icons for more information</a>.</p>
 
 </div>

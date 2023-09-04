@@ -320,7 +320,7 @@ change detection if the required state changes.</p>
 <span class="hljs-keyword">get</span> <span class="hljs-title">required</span>() {
   <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._required;
 }
-<span class="hljs-keyword">set</span> <span class="hljs-title">required</span>(<span class="hljs-params">req</span>) {
+<span class="hljs-keyword">set</span> <span class="hljs-title">required</span>(<span class="hljs-params">req: BooleanInput</span>) {
   <span class="hljs-built_in">this</span>._required = coerceBooleanProperty(req);
   <span class="hljs-built_in">this</span>.stateChanges.next();
 }
@@ -337,7 +337,7 @@ make up our component.</p>
 
 <pre><code class="language-ts"><span class="hljs-meta">@Input</span>()
 <span class="hljs-keyword">get</span> <span class="hljs-title">disabled</span>(): <span class="hljs-title">boolean</span> { <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>._disabled; }
-<span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: <span class="hljs-built_in">boolean</span></span>) {
+<span class="hljs-keyword">set</span> <span class="hljs-title">disabled</span>(<span class="hljs-params">value: BooleanInput</span>) {
   <span class="hljs-built_in">this</span>._disabled = coerceBooleanProperty(value);
   <span class="hljs-built_in">this</span>._disabled ? <span class="hljs-built_in">this</span>.parts.disable() : <span class="hljs-built_in">this</span>.parts.enable();
   <span class="hljs-built_in">this</span>.stateChanges.next();
@@ -349,13 +349,47 @@ make up our component.</p>
           <span header-link="errorstate"></span>
           <code>errorState</code>
         </h4>
-      <p translation-result="on">该属性表示相关的 <code>NgControl</code> 是否处于错误状态。在这个例子中，如果输入无效，且组件已经被碰过，我们就会显示一个错误。</p><p translation-origin="off">This property indicates whether the associated <code>NgControl</code> is in an error state. In this example,
-we show an error if the input is invalid and our component has been touched.</p>
+      <p translation-result="on">该属性表示相关的 <code>NgControl</code> 是否处于错误状态。在这个例子中，如果输入无效，且组件已经被碰过，我们就会显示一个错误。</p><p translation-origin="off">This property indicates whether the associated <code>NgControl</code> is in an error state. For example,
+we can show an error if the input is invalid and our component has been touched.</p>
 
 <pre><code class="language-ts"><span class="hljs-keyword">get</span> <span class="hljs-title">errorState</span>(): <span class="hljs-title">boolean</span> {
   <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.parts.invalid &amp;&amp; <span class="hljs-built_in">this</span>.touched;
 }
 </code></pre>
+<p translation-result="on">但是，有一些错误触发器我们无法订阅（例如父表单提交），为了处理此类情况，我们应该在每个变更检测周期重新对 <code>errorState</code> 进行求值。</p><p translation-origin="off">However, there are some error triggers that we can't subscribe to (e.g. parent form submissions),
+to handle such cases we should re-evaluate <code>errorState</code> on every change detection cycle.</p>
+
+<pre><code class="language-ts"><span class="hljs-comment">/** Whether the component is in an error state. */</span>
+<span class="hljs-attr">errorState</span>: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
+
+<span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">
+  ...,
+  <span class="hljs-meta">@Optional</span>() <span class="hljs-keyword">private</span> _parentForm: NgForm,
+  <span class="hljs-meta">@Optional</span>() <span class="hljs-keyword">private</span> _parentFormGroup: FormGroupDirective
+</span>)</span> {
+...
+}
+
+<span class="hljs-function"><span class="hljs-title">ngDoCheck</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.ngControl) {
+    <span class="hljs-built_in">this</span>.updateErrorState();
+  }
+}
+
+<span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-title">updateErrorState</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-keyword">const</span> parent = <span class="hljs-built_in">this</span>._parentFormGroup || <span class="hljs-built_in">this</span>.parentForm;
+
+  <span class="hljs-keyword">const</span> oldState = <span class="hljs-built_in">this</span>.errorState;
+  <span class="hljs-keyword">const</span> newState = (<span class="hljs-built_in">this</span>.ngControl?.invalid || <span class="hljs-built_in">this</span>.parts.invalid) &amp;&amp; (<span class="hljs-built_in">this</span>.touched || parent.submitted);
+
+  <span class="hljs-keyword">if</span> (oldState !== newState) {
+    <span class="hljs-built_in">this</span>.errorState = newState;
+    <span class="hljs-built_in">this</span>.stateChanges.next();
+  }
+}
+</code></pre>
+<p translation-result="on">请记住，<code>updateErrorState()</code> 应该只有尽可能少的逻辑以避免性能问题。</p><p translation-origin="off">Keep in mind that <code>updateErrorState()</code> must have minimal logic to avoid performance issues.</p>
+
 
         <h4 id="controltype" class="docs-header-link">
           <span header-link="controltype"></span>

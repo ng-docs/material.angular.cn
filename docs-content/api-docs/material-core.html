@@ -548,7 +548,7 @@
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p translation-result="on">如果给定有效的 Date 或 null，则返回给定的值。将有效的 ISO 8601 字符串（ <a href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a> ）反序列化为有效的日期，并将空字符串转换为 null。返回所有其他值的无效日期。</p><p translation-origin="off">Returns the given value if given a valid Date or null. Deserializes valid ISO 8601 strings
-(<a href="https://www.ietf.org/rfc/rfc3339.txt">https://www.ietf.org/rfc/rfc3339.txt</a>) into valid Dates and empty string into null. Returns an
+(<a href="https://www.ietf.org/rfc/rfc3339.txt%5C">https://www.ietf.org/rfc/rfc3339.txt\</a>) into valid Dates and empty string into null. Returns an
 invalid date for all other values.</p>
 
 
@@ -1616,6 +1616,270 @@ a valid date, or <code>null</code> if it's not a valid date.</p>
 
 
 
+    
+      
+
+<h4 id="MatRippleLoader" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRippleLoader"></span>
+  <code>MatRippleLoader</code>
+  
+</h4><div class="docs-api-class-description"><p>Handles attaching ripples on demand.</p>
+<p>This service allows us to avoid eagerly creating &amp; attaching MatRipples.
+It works by creating &amp; attaching a ripple only when a component is first interacted with.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">attachRipple
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">Element</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        ripple</p>
+      <code class="docs-api-method-parameter-type">MatRipple</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">configureRipple
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Configures the ripple that will be rendered by the ripple loader.</p>
+<p>Stores the given information about how the ripple should be configured on the host
+element so that it can later be retrived &amp; used when the ripple is actually created.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config</p>
+      <code class="docs-api-method-parameter-type">{ className?</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createRipple
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Creates a MatRipple and appends it to the given element.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatRipple | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getRipple
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Returns the ripple instance for the given host element.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatRipple | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Sets the disabled state on the ripple instance corresponding to the given host element.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        host</p>
+      <code class="docs-api-method-parameter-type">HTMLElement</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        disabled</p>
+      <code class="docs-api-method-parameter-type">boolean</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
     <h3 id="material-core-directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       指令
@@ -1720,8 +1984,7 @@ counted by checking the query list's length.</p>
       <code>onSelectionChange: EventEmitter&lt;MatOptionSelectionChange&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">选择或取消选择该选项时发出的事件。</p><p translation-origin="off">Event emitted when the option is selected or deselected.</p>
-
+  <td class="docs-api-property-description"><p>Event emitted when the option is selected or deselected.</p>
 </td>
 </tr>
 
@@ -1774,6 +2037,19 @@ for components like autocomplete where focus must remain on the input.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether to display checkmark for single-selection.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>multiple: </code>
     </p>
   </td>
@@ -1816,7 +2092,7 @@ select's trigger.</p>
   </tbody></table>
 
 
-<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
   
     
 
@@ -1832,7 +2108,26 @@ select's trigger.</p>
 
 
     </td>
-  </tr></tbody></table>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        emitEvent</p>
+      <code class="docs-api-method-parameter-type">boolean = true</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
 
 
   
@@ -1933,7 +2228,26 @@ select's trigger.</p>
 
 
     </td>
-  </tr></tbody></table>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        emitEvent</p>
+      <code class="docs-api-method-parameter-type">boolean = true</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
 
 
   
@@ -2090,7 +2404,7 @@ events will display the proper options as active on arrow key events.</p>
   </tbody></table>
 
 
-<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-5">方法</h5>
   
     
 
@@ -3661,7 +3975,7 @@ a valid date, or <code>null</code> if it's not a valid date.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">获取给定日期的 RFC 3339 兼容字符串（ <a href="https://tools.ietf.org/html/rfc3339%EF%BC%89%E6%AD%A4%E6%96%B9%E6%B3%95%E7%94%A8%E4%BA%8E%E7%94%9F%E6%88%90%E4%B8%8E%E5%8E%9F%E7%94%9F>">https://tools.ietf.org/html/rfc3339）此方法用于生成与原生&gt;</a> HTML 属性（例如 <code>&lt;input</code> <code>min</code> 或 <code>max</code> 属性）兼容的日期字符串。</p><p translation-origin="off">Gets the RFC 3339 compatible string (<a href="https://tools.ietf.org/html/rfc3339">https://tools.ietf.org/html/rfc3339</a>) for the given date.
+      <p translation-result="on">获取给定日期的 RFC 3339 兼容字符串（ <a href="https://tools.ietf.org/html/rfc3339%EF%BC%89%E6%AD%A4%E6%96%B9%E6%B3%95%E7%94%A8%E4%BA%8E%E7%94%9F%E6%88%90%E4%B8%8E%E5%8E%9F%E7%94%9F>">https://tools.ietf.org/html/rfc3339）此方法用于生成与原生&gt;</a> HTML 属性（例如 <code>&lt;input</code> <code>min</code> 或 <code>max</code> 属性）兼容的日期字符串。</p><p translation-origin="off">Gets the RFC 3339 compatible string (<a href="https://tools.ietf.org/html/rfc3339%5C">https://tools.ietf.org/html/rfc3339\</a>) for the given date.
 This method is used to generate date strings that are compatible with native HTML attributes
 such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input&gt;</code>.</p>
 
@@ -4137,7 +4451,7 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">混入 <code>initialized</code> 属性以扩展某个之灵，，该指令将在 ngOnInit 结束时发出事件。</p><p translation-origin="off">Mixin to augment a directive with an initialized property that will emits when ngOnInit ends.</p>
+      <p translation-result="on">混入 <code>initialized</code> 属性以扩展某个指令，，该指令将在 ngOnInit 结束时发出事件。</p><p translation-origin="off">Mixin to augment a directive with an initialized property that will emits when ngOnInit ends.</p>
 
 
     </td>

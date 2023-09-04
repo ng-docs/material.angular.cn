@@ -3,6 +3,11 @@ import {FlatTreeControl} from '@angular/cdk/tree';
 import {Component, Injectable} from '@angular/core';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {NgIf} from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTreeModule} from '@angular/material/tree';
 
 /**
  * Flat node with expandable and level information
@@ -58,7 +63,7 @@ export class DynamicDatabase {
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
+ * For a directory, it has filename and children \(a list of files or directories\).
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  *
@@ -160,6 +165,8 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
   selector: 'tree-dynamic-example',
   templateUrl: 'tree-dynamic-example.html',
   styleUrls: ['tree-dynamic-example.css'],
+  standalone: true,
+  imports: [MatTreeModule, MatButtonModule, MatIconModule, NgIf, MatProgressBarModule],
 })
 export class TreeDynamicExample {
   constructor(database: DynamicDatabase) {

@@ -1,4 +1,3 @@
-
 [
   {
     "url": "https://next.material.angular.io",
@@ -10,7 +9,11 @@
   },
   {
     "url": "https://material.angular.cn",
-    "title": "15.0.0 (最新)"
+    "title": "16.1.0 (最新)"
+  },
+  {
+    "title": "v15（中文）",
+    "url": "https://v15.material.angular.cn"
   },
   {
     "title": "v14（中文）",

@@ -224,7 +224,7 @@ changes in Angular Material</p>
       <p translation-result="on">Angular Material 包含一个示意图，可帮助迁移应用程序以使用新的基于 MDC 的组件。首先，将你的应用程序升级到 Angular Material 15。</p><p translation-origin="off">Angular Material includes a schematic to help migrate applications to use the new MDC-based
 components. To get started, upgrade your application to Angular Material 15.</p>
 
-<pre><code class="language-shell">ng update @angular/material^15
+<pre><code class="language-shell">ng update @angular/material@15
 </code></pre>
 <p translation-result="on">作为此更新的一部分，将运行原理图以自动移动你的应用程序以使用包含旧组件实现的“遗留”导入。这提供了一种让你的应用程序在 v15 上运行的快速途径，只需最少的手动更改。</p><p translation-origin="off">As part of this update, a schematic will run to automatically move your application to use the
 "legacy" imports containing the old component implementations. This provides a quick path to getting
@@ -343,6 +343,10 @@ instead of <code>mat-button</code>. However, not all elements in the previous im
 equivalent element in the new implementation.</p>
 
 </li>
+<li><p translation-result="on">不再自动生成与 <code>mat-typography</code> 关联的样式。你只能通过 <code>include</code> <code>mat.typography-hierarchy</code> mixin 来使用它们。</p><p translation-origin="off">The styles associated with the <code>mat-typography</code> class are no longer generated automatically. You
+have to include them using the <code>mat.typography-hierarchy</code> mixin.</p>
+
+</li>
 </ul>
 
         <h3 id="theming" class="docs-header-link" translation-result="on">
@@ -362,7 +366,7 @@ changes to the Material Design spec.</p>
 <li><p translation-result="on">所有组件现在都具有可主题化的密集度。当你包含主题混合时，默认密集度级别 (0) 的样式将默认包含在内。</p><p translation-origin="off">All components now have themeable density. Styles for the default density level (0) will be
 included by default when you include a theme mixin.</p>
 
-<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">'@angular/material'</span> as mat;
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
 
 <span class="hljs-variable">$theme</span>: mat.define-light-theme((
   color: ...
@@ -531,6 +535,10 @@ override typography properties.</p>
       
         
       <ul>
+<li><p translation-result="on">纸片曾经是指令，但现在改成了组件。这意味着它们无法再用于其它组件。</p><p translation-origin="off">Chips used to be directives, but they're now components. This means that they can't be applied to
+other components anymore.</p>
+
+</li>
 <li><p translation-result="on">纸片组件已分为多个变体，分别对应于更合适的无障碍性交互模式。原始的 <code>mat-chip-list</code> 使用 <code>role="listbox"</code> ，但这种交互模式并不适合所有用例。这些新的纸片组件有：</p><p translation-origin="off">The chips component has been split into multiple variants corresponding with more appropriate
 interaction patterns for accessibility. The original <code>mat-chip-list</code> used <code>role="listbox"</code>, but
 this interaction pattern is not suited for all use-cases. The new chips have:</p>
@@ -656,7 +664,7 @@ surrounding form field DOM and styles have changed.</p>
 <code>&lt;input matInput type="date"&gt;</code>, if you want this indicator to appear for your inputs, use the
 following styles:</p>
 
-<pre><code class="language-scss"><span class="hljs-selector-class">.mat-mdc-input-element</span>::-webkit-calendar-picker-indicator {
+<pre><code class="language-scss"><span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.mat-mdc-input-element</span>::-webkit-calendar-picker-indicator {
   display: block;
 }
 </code></pre>

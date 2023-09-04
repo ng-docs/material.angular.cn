@@ -263,7 +263,7 @@ theme Sass mixins.</p>
 </code></pre>
 <p translation-result="on">除了列出应用程序使用的每个组件之外，Angular Material 还提供了一些 Sass mixins，来为本库中的所有组件包含（<code>include</code>）样式： <code>all-component-colors</code> 、<code>all-component-typographies</code>、<code>all-component-densitites</code> 和 <code>all-component-themes</code> 。这些 mixin 的行为与供单个组件使用的 mixin 是一样的，除了一点：它们会为 <code>core-theme</code> 和 Angular Material 中的<em>所有</em> 35+ 个组件生成样式。除非你的应用程序要用到每个组件，否则这将生成一些不必要的 CSS。</p><p translation-origin="off">As an alternative to listing every component that your application uses, Angular Material offers
 Sass mixins that includes styles for all components in the library: <code>all-component-colors</code>,
-<code>all-component-typographies</code>, <code>all-component-densitites</code>, and <code>all-component-themes</code>. These mixins behave the same as
+<code>all-component-typographies</code>, <code>all-component-densities</code>, and <code>all-component-themes</code>. These mixins behave the same as
 individual component mixins, except they emit styles for <code>core-theme</code> and <em>all</em> 35+ components in Angular
 Material. Unless your application uses every single component, this will produce unnecessary CSS.</p>
 
@@ -325,7 +325,7 @@ You can use one of these pre-built themes if you don't want to define a custom t
 <tr>
 <td><code>pink-bluegrey.css</code></td>
 <td><nt-wrapper translation-result="on">暗</nt-wrapper><nt-wrapper translation-origin="off">Dark</nt-wrapper></td>
-<td>pink, bluegrey, red</td>
+<td><nt-wrapper>pink, blue-grey, red</nt-wrapper><nt-wrapper>pink, bluegrey, red</nt-wrapper></td>
 </tr>
 
 <tr>
@@ -496,7 +496,7 @@ hue's number identifier with <code>-contrast</code>.</p>
 <span class="hljs-variable">$my-palette</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
 
 <span class="hljs-selector-class">.my-custom-style</span> {
- <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-number">500</span>);
+ <span class="hljs-attribute">background</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">'500'</span>);
  <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$my-palette</span>, <span class="hljs-string">'500-contrast'</span>);
 }
 </code></pre>
@@ -552,8 +552,8 @@ application's layout.</p>
 </code></pre>
 
         <h2 id="strong-focus-indicators" class="docs-header-link" translation-result="on">
-          <span header-link="强烈焦点指示器"></span>
-          强烈焦点指示器
+          <span header-link="强焦点指示器"></span>
+          强焦点指示器
         </h2><h2 class="docs-header-link" translation-origin="off">
           <span header-link="strong-focus-indicators"></span>
           Strong focus indicators
@@ -564,7 +564,7 @@ application's layout.</p>
 by the Material Design specification. This behavior, however, can fall short of accessibility
 requirements, such as <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/">WCAG</a>, which require a stronger indication of browser focus.</p>
 
-<p translation-result="on">Angular Material 支持在有焦点的元素上渲染高度可见的轮廓。应用程序可以通过两个 Sass mixin 启用这些强烈焦点指示器： <code>strong-focus-indicators</code> 和 <code>strong-focus-indicators-theme</code> 。</p><p translation-origin="off">Angular Material supports rendering highly visible outlines on focused elements. Applications can
+<p translation-result="on">Angular Material 支持在有焦点的元素上渲染高度可见的轮廓。应用程序可以通过两个 Sass mixin 启用这些强焦点指示器： <code>strong-focus-indicators</code> 和 <code>strong-focus-indicators-theme</code> 。</p><p translation-origin="off">Angular Material supports rendering highly visible outlines on focused elements. Applications can
 enable these strong focus indicators via two Sass mixins:
 <code>strong-focus-indicators</code> and <code>strong-focus-indicators-theme</code>.</p>
 
@@ -576,7 +576,7 @@ be included once per theme, similar to the theme mixins described above. Additio
 this mixin to change the color of the focus indicators in situations in which the default color
 would not contrast sufficiently with the background color.</p>
 
-<p translation-result="on">以下示例在应用程序中包含强烈焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The following example includes strong focus indicator styles in an application alongside the rest of
+<p translation-result="on">以下示例在应用程序中包含强焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The following example includes strong focus indicator styles in an application alongside the rest of
 the custom theme API.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
@@ -599,8 +599,8 @@ the custom theme API.</p>
 </code></pre>
 
         <h3 id="customizing-strong-focus-indicators" class="docs-header-link" translation-result="on">
-          <span header-link="自定义强焦点指标"></span>
-          自定义强焦点指标
+          <span header-link="自定义强焦点指示器"></span>
+          自定义强焦点指示器
         </h3><h3 class="docs-header-link" translation-origin="off">
           <span header-link="customizing-strong-focus-indicators"></span>
           Customizing strong focus indicators
@@ -614,7 +614,7 @@ indicators. This configuration includes <code>border-style</code>, <code>border-
 accepts either a theme, as described earlier in this guide, or a CSS color value. When providing a
 theme, the indicators will use the default hue of the primary palette.</p>
 
-<p translation-result="on">以下示例包括具有自定义设置的强烈焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The following example includes strong focus indicator styles with custom settings alongside the rest
+<p translation-result="on">以下示例包括具有自定义设置的强焦点指示器样式以及自定义主题 API 的其余部分。</p><p translation-origin="off">The following example includes strong focus indicator styles with custom settings alongside the rest
 of the custom theme API.</p>
 
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;

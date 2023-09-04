@@ -13,8 +13,12 @@ import {MatDefaultEnabledColumnResizeModule} from '@angular/material-experimenta
 import {DefaultEnabledColumnResizeExample} from './default-enabled-column-resize-example';
 
 @NgModule({
-  imports: [MatDefaultEnabledColumnResizeModule, MatTableModule],
+  imports: [
+    MatDefaultEnabledColumnResizeModule,
+    MatTableModule,
+  ],
   declarations: [DefaultEnabledColumnResizeExample],
   exports: [DefaultEnabledColumnResizeExample],
 })
-export class DefaultEnabledColumnResizeExampleModule {}
+export class DefaultEnabledColumnResizeExampleModule {
+}

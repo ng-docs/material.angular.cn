@@ -159,12 +159,43 @@ inside the overlay container to allow for easy styling.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether checkmark indicator for single-selection options is hidden.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>panelWidth: string | number</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p translation-result="on">指定自动完成面板的宽度。可以是任意 CSS 尺寸值，否则就会匹配它的宿主宽度。</p><p translation-origin="off">Specify the width of the autocomplete panel.  Can be any CSS sizing value, otherwise it will
 match the width of its host.</p>
 
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>requireSelection: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the user is required to make a selection when they're interacting with the
+autocomplete. If the user moves away from the autcomplete without selecting an option from
+the list, the value will be reset. If the user opens the panel and closes it without
+interacting or selecting a value, the initial value will be kept.</p>
 </td>
 </tr>
 
@@ -729,11 +760,37 @@ within the viewport.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Wheter icon indicators should be hidden for single-selection.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>overlayPanelClass: string | string[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">类或类的列表，应用在自动完成器的弹出面板中。</p><p translation-origin="off">Class or list of classes to be applied to the autocomplete's overlay panel.</p>
+  <td class="docs-api-property-description"><p>Class or list of classes to be applied to the autocomplete's overlay panel.</p>
+</td>
+</tr>
 
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>requireSelection: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the user is required to make a selection when
+they're interacting with the autocomplete.</p>
 </td>
 </tr>
 

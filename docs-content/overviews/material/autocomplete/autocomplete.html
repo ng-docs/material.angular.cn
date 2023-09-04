@@ -16,8 +16,8 @@ of the text input to be when that option is selected.</p>
 
 <div material-docs-example="autocomplete-simple" file="autocomplete-simple-example.html" region="mat-autocomplete"></div>
 
-<p translation-result="on">接下来，创建输入框并设置 <code>matAutocomplete</code> 输入属性以引用我们赋值给此自动完成器的模板引用。我们假设你使用 <code>ReactiveFormsModule</code> 中的 <code>formControl</code> 指令来跟踪输入框的值。</p><p translation-origin="off">Next, create the input and set the <code>matAutocomplete</code> input to refer to the template reference we assigned 
-to the autocomplete. Let's assume you're using the <code>formControl</code> directive from <code>ReactiveFormsModule</code> to 
+<p translation-result="on">接下来，创建输入框并设置 <code>matAutocomplete</code> 输入属性以引用我们赋值给此自动完成器的模板引用。我们假设你使用 <code>ReactiveFormsModule</code> 中的 <code>formControl</code> 指令来跟踪输入框的值。</p><p translation-origin="off">Next, create the input and set the <code>matAutocomplete</code> input to refer to the template reference we assigned
+to the autocomplete. Let's assume you're using the <code>formControl</code> directive from <code>ReactiveFormsModule</code> to
 track the value of the input.</p>
 
 <blockquote>
@@ -88,6 +88,25 @@ data as an object, but display just one of the option's string properties.</p>
 desired display value. Then bind it to the autocomplete's <code>displayWith</code> property.</p>
 
 <div material-docs-example="autocomplete-display"></div>
+
+
+        <h3 id="require-an-option-to-be-selected" class="docs-header-link">
+          <span header-link="require-an-option-to-be-selected"></span>
+          Require an option to be selected
+        </h3>
+      <p>By default, the autocomplete will accept the value that the user typed into the input field.
+Instead, if you want to instead ensure that an option from the autocomplete was selected, you can
+enable the <code>requireSelection</code> input on <code>mat-autocomplete</code>. This will change the behavior of
+the autocomplete in the following ways:</p>
+<ol>
+<li>If the user opens the autocomplete, changes its value, but doesn't select anything, the
+autocomplete value will be reset back to <code>null</code>.</li>
+<li>If the user opens and closes the autocomplete without changing the value, the old value will
+be preserved.</li>
+</ol>
+<p>This behavior can be configured globally using the <code>MAT_AUTOCOMPLETE_DEFAULT_OPTIONS</code>
+injection token.</p>
+<div material-docs-example="autocomplete-require-selection"></div>
 
 
         <h3 id="automatically-highlighting-the-first-option" class="docs-header-link" translation-result="on">
@@ -237,4 +256,7 @@ attribute, or the <code>aria-labelledby</code> attribute.</p>
 <p translation-result="on"><code>MatAutocomplete</code> 会保留对文本触发器的焦点，使用 <code>aria-activedescendant</code> 可以支持通过自动完成选项进行导航。</p><p translation-origin="off"><code>MatAutocomplete</code> preserves focus on the text trigger, using <code>aria-activedescendant</code> to support
 navigation though the autocomplete options.</p>
 
+<p>By default, <code>MatAutocomplete</code> displays a checkmark to identify the selected item. While you can hide
+the checkmark indicator via <code>hideSingleSelectionIndicator</code>, this makes the component less accessible
+by making it harder or impossible for users to visually identify selected items.</p>
 </div>
