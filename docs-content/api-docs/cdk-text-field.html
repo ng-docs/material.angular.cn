@@ -1,0 +1,406 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-text-field-api-参考文档--">
+    Angular CDK text-field API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {TextFieldModule} from '@angular/cdk/text-field';
+      </code>
+    </p>
+  <h3 id="cdk-text-field-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="AutofillMonitor" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="AutofillMonitor"></span>
+  <code>AutofillMonitor</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一种可注入的服务，可以用来监控输入框的自动填充状态。根据以下博客文章： <a href="https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7">https：//medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7</a></p><p translation-origin="off">An injectable service that can be used to monitor the autofill state of an input.
+Based on the following blog post:
+<a href="https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7">https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7</a></p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">monitor
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">监控指定输入框元素的自动填充状态变化。</p><p translation-origin="off">Monitor for changes in the autofill state of the given input element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">Element</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要监控的元素。</p><p translation-origin="off">The element to monitor.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;AutofillEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">一个反映自动填充状态变化的流。</p><p translation-origin="off">A stream of autofill state changes.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">monitor
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">监控指定输入框元素的自动填充状态变化。</p><p translation-origin="off">Monitor for changes in the autofill state of the given input element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">ElementRef&lt;Element&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要监控的元素。</p><p translation-origin="off">The element to monitor.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;AutofillEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">一个反映自动填充状态变化的流。</p><p translation-origin="off">A stream of autofill state changes.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">stopMonitoring
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        elementOrRef</p>
+      <code class="docs-api-method-parameter-type">Element | ElementRef&lt;Element&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-text-field-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkAutofill" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkAutofill"></span>
+  <code>CdkAutofill</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一个指令，用于监控输入的自动填充状态。</p><p translation-origin="off">A directive that can be used to monitor the autofill state of an input.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkAutofill]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>cdkAutofill: EventEmitter&lt;AutofillEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">元素的自动填充状态发生变化时触发。</p><p translation-origin="off">Emits when the autofill state of the element changes.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTextareaAutosize" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTextareaAutosize"></span>
+  <code>CdkTextareaAutosize</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于自动调整 textarea 大小以适应其内容的指令。</p><p translation-origin="off">Directive to automatically resize a textarea to fit its content.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">textarea[cdkTextareaAutosize]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkTextareaAutosize</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkTextareaAutosize'</span>)
+        </div><p class="docs-api-property-name">
+      <code>enabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否启用了自动调整大小的功能</p><p translation-origin="off">Whether autosizing is enabled or not</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkAutosizeMaxRows'</span>)
+        </div><p class="docs-api-property-name">
+      <code>maxRows: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">textarea 中的最大行数。</p><p translation-origin="off">Maximum amount of rows in the textarea.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkAutosizeMinRows'</span>)
+        </div><p class="docs-api-property-name">
+      <code>minRows: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">textarea 中的最小行数。</p><p translation-origin="off">Minimum amount of rows in the textarea.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>placeholder: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">reset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把 textarea 重置为原始大小</p><p translation-origin="off">Resets the textarea to its original size</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">resizeToFitContent
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">调整 textarea 的大小以适应它的内容。</p><p translation-origin="off">Resize the textarea to fit its content.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        force</p>
+      <code class="docs-api-method-parameter-type">boolean = false</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">是否强行重新计算高度。默认情况下，只有当自上一次调用后的值发生变化时，才会重新计算高度。</p><p translation-origin="off">Whether to force a height recalculation. By default the height will be
+   recalculated only if the value changed since the last call.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-text-field-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="AutofillEvent" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="AutofillEvent"></span>
+  <code>AutofillEvent</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">当输入框的自动填充状态发生变化时发出的事件。</p><p translation-origin="off">An event that is emitted when the autofill state of an input changes.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> AutofillEvent = {
+    <span class="hljs-attr">target</span>: Element;
+    isAutofilled: <span class="hljs-built_in">boolean</span>;
+};</code>
+</pre>
+</div>
+
+
+    </div>

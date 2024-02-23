@@ -1,0 +1,613 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-ripple-api-参考文档--">
+    Angular Material ripple API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatRippleModule} from '@angular/material/core';
+      </code>
+    </p>
+  <h3 id="material-ripple-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatRipple" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRipple"></span>
+  <code>MatRipple</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-ripple]</span>
+  
+    <span class="docs-api-class-selector-name">[matRipple]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matRipple</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleAnimation'</span>)
+        </div><p class="docs-api-property-name">
+      <code>animation: RippleAnimationConfig</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">涟漪动画的配置。允许修改涟漪的进入和退出动画持续时间。如果使用 <code>NoopAnimationsModule</code> 则动画持续时间将被覆盖。</p><p translation-origin="off">Configuration for the ripple animation. Allows modifying the enter and exit animation
+duration of the ripples. The animation durations will be overwritten if the
+<code>NoopAnimationsModule</code> is being used.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleCentered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>centered: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">涟漪是否总是起源于宿主元素边界的中心，而不是起源于 click 事件的位置。</p><p translation-origin="off">Whether the ripple always originates from the center of the host element's bounds, rather
+than originating from the location of the click event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleColor'</span>)
+        </div><p class="docs-api-property-name">
+      <code>color: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">所有涟漪的自定义颜色。</p><p translation-origin="off">Custom color for all ripples.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">点击事件是否不会触发涟漪。仍然可以使用 <code>launch()</code> 方法手动启动涟漪。</p><p translation-origin="off">Whether click events will not trigger the ripple. Ripples can be still launched manually
+by using the <code>launch()</code> method.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleRadius'</span>)
+        </div><p class="docs-api-property-name">
+      <code>radius: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果设置，则为完全扩展时前景涟漪的半径（以像素为单位）。如果未设置，则半径将是从涟漪中心到宿主元素边界矩形的最远角的距离。</p><p translation-origin="off">If set, the radius in pixels of foreground ripples when fully expanded. If unset, the radius
+will be the distance from the center of the ripple to the furthest corner of the host element's
+bounding rectangle.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleTrigger'</span>)
+        </div><p class="docs-api-property-name">
+      <code>trigger: HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">收到点击事件时触发涟漪的元素。默认为指令的宿主元素。</p><p translation-origin="off">The element that triggers the ripple when click events are received.
+Defaults to the directive's host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'matRippleUnbounded'</span>)
+        </div><p class="docs-api-property-name">
+      <code>unbounded: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">涟漪是否应在组件范围之外可见。</p><p translation-origin="off">Whether the ripples should be visible outside the component's bounds.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">fadeOutAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">淡出当前显示的涟漪元素的所有元素。</p><p translation-origin="off">Fades out all currently showing ripple elements.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">fadeOutAllNonPersistent
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">淡出当前显示的所有非持续性涟漪元素。</p><p translation-origin="off">Fades out all currently showing non-persistent ripple elements.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">launch
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">使用指定的涟漪配置启动手动涟漪。</p><p translation-origin="off">Launches a manual ripple using the specified ripple configuration.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config</p>
+      <code class="docs-api-method-parameter-type">RippleConfig</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">手动涟漪的配置。</p><p translation-origin="off">Configuration for the manual ripple.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">RippleRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">launch
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在相对于视口的指定坐标处手动启动涟漪。</p><p translation-origin="off">Launches a manual ripple at the specified coordinates relative to the viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        x</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">涟漪淡入时沿 X 轴的坐标。此坐标相对于视口。</p><p translation-origin="off">Coordinate along the X axis at which to fade-in the ripple. Coordinate
+  should be relative to the viewport.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        y</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">涟漪淡入时沿 Y 轴的坐标。此坐标相对于视口。</p><p translation-origin="off">Coordinate along the Y axis at which to fade-in the ripple. Coordinate
+  should be relative to the viewport.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">RippleConfig</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">手动涟漪的可选涟漪配置。</p><p translation-origin="off">Optional ripple configuration for the manual ripple.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">RippleRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-ripple-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="RippleRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="RippleRef"></span>
+  <code>RippleRef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">对先前启动的涟漪元素的引用。</p><p translation-origin="off">Reference to a previously launched ripple element.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>config: RippleConfig</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Ripple configuration used for the ripple.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>element: HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the ripple HTML element.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>state: RippleState</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">涟漪的当前状态。</p><p translation-origin="off">Current state of the ripple.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">fadeOut
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">淡出涟漪元素。</p><p translation-origin="off">Fades out the ripple element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-ripple-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="RippleGlobalOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="RippleGlobalOptions"></span>
+  <code>RippleGlobalOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on"><code>matRipple</code> 的可配置选项。</p><p translation-origin="off">Configurable options for <code>matRipple</code>.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>animation: RippleAnimationConfig</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">涟漪的动画持续时间的配置。其两个阶段具有不同的涟漪持续时间。如果使用 <code>NoopAnimationsModule</code> 则动画持续时间将被覆盖。</p><p translation-origin="off">Default configuration for the animation duration of the ripples. There are two phases with
+different durations for the ripples: <code>enter</code> and <code>leave</code>. The durations will be overwritten
+by the value of <code>matRippleAnimation</code> or if the <code>NoopAnimationsModule</code> is included.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应禁用涟漪。仍然可以使用 <code>launch()</code> 方法手动启动涟漪。因此，焦点指示器仍会出现。</p><p translation-origin="off">Whether ripples should be disabled. Ripples can be still launched manually by using
+the <code>launch()</code> method. Therefore focus indicators will still show up.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>terminateOnPointerUp: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">释放鼠标或触摸后，涟漪是否应立即开始逐渐消失。默认情况下，涟漪将等待输入动画完成以及鼠标或触摸释放。</p><p translation-origin="off">Whether ripples should start fading out immediately after the mouse or touch is released. By
+default, ripples will wait for the enter animation to complete and for mouse or touch release.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="RippleAnimationConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="RippleAnimationConfig"></span>
+  <code>RippleAnimationConfig</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">描述涟漪动画配置的接口。有两个动画阶段，其涟漪的持续时间也不同。</p><p translation-origin="off">Interface that describes the configuration for the animation of a ripple.
+There are two animation phases with different durations for the ripples.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>enterDuration: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">进场动画的持续时间（以毫秒为单位）（从接触点开始扩展）。</p><p translation-origin="off">Duration in milliseconds for the enter animation (expansion from point of contact).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exitDuration: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">离场动画（淡出）的持续时间（以毫秒为单位）。</p><p translation-origin="off">Duration in milliseconds for the exit animation (fade-out).</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-ripple-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="RippleConfig" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="RippleConfig"></span>
+  <code>RippleConfig</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> RippleConfig = {
+    color?: <span class="hljs-built_in">string</span>;
+    centered?: <span class="hljs-built_in">boolean</span>;
+    radius?: <span class="hljs-built_in">number</span>;
+    persistent?: <span class="hljs-built_in">boolean</span>;
+    animation?: RippleAnimationConfig;
+    terminateOnPointerUp?: <span class="hljs-built_in">boolean</span>;
+};</code>
+</pre>
+</div>
+
+
+    <h3 id="material-ripple-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_RIPPLE_GLOBAL_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_RIPPLE_GLOBAL_OPTIONS"></span>
+  <code>MAT_RIPPLE_GLOBAL_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">可以用于指定全局涟漪选项的注入令牌。</p><p translation-origin="off">Injection token that can be used to specify the global ripple options.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_RIPPLE_GLOBAL_OPTIONS: InjectionToken&lt;RippleGlobalOptions&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="defaultRippleAnimationConfig" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="defaultRippleAnimationConfig"></span>
+  <code>defaultRippleAnimationConfig</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">没有指定显式动画配置时的默认涟漪动画配置。</p><p translation-origin="off">Default ripple animation configuration for ripples without an explicit
+animation config specified.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> defaultRippleAnimationConfig: { <span class="hljs-attr">enterDuration</span>: <span class="hljs-built_in">number</span>; exitDuration: <span class="hljs-built_in">number</span>; };</code>
+</pre>
+</div>
+
+
+    </div>

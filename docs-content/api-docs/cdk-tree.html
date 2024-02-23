@@ -1,0 +1,2862 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-tree-api-参考文档--">
+    Angular CDK tree API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {CdkTreeModule} from '@angular/cdk/tree';
+      </code>
+    </p>
+  <h3 id="cdk-tree-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkNestedTreeNode" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkNestedTreeNode"></span>
+  <code>CdkNestedTreeNode</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/tree/api#CdkTreeNode" class="docs-api-class-extends-type">
+      CdkTreeNode
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">嵌套节点是 <code>&lt;cdk-tree&gt;</code> 的子节点。它适用于嵌套树。通过在树节点模板中使用 <code>cdk-nested-tree-node</code> 组件，会把父节点的子节点添加到树节点模板的  <code>cdkTreeNodeOutlet</code> 中。该节点的子节点会自动添加到 <code>cdkTreeNodeOutlet</code> 中。</p><p translation-origin="off">Nested node is a child of <code>&lt;cdk-tree&gt;</code>. It works with nested tree.
+By using <code>cdk-nested-tree-node</code> component in tree node template, children of the parent node will
+be added in the <code>cdkTreeNodeOutlet</code> in tree node template.
+The children of node will be automatically added to <code>cdkTreeNodeOutlet</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-nested-tree-node</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkNestedTreeNode</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">树节点的数据。</p><p translation-origin="off">The tree node's data.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpanded: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nodeOutlet: QueryList&lt;CdkTreeNodeOutlet&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">子节点的占位符。</p><p translation-origin="off">The children node placeholder.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 Remove this input
+
+12.0.0 删除该输入属性 或更高版本中删除">
+        已弃用
+      </div><p class="docs-api-property-name">
+      <code>role: 'treeitem' | 'group'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">树节点的角色是什么。</p><p translation-origin="off">The role of the tree node.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此菜单项获得焦点。是对 FocusableOption 的实现。</p><p translation-origin="off">Focuses the menu item. Implements for FocusableOption.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateChildrenNodes
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把子节点的数据节点添加到 NodeOutlet 中</p><p translation-origin="off">Add children dataNodes to the NodeOutlet</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        children<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodeDef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodeDef"></span>
+  <code>CdkTreeNodeDef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">CdkTree 的数据节点定义。保存该节点的模板和一个 when 谓词，用于描述该节点要在何时使用。</p><p translation-origin="off">Data node definition for the CdkTree.
+Captures the node's template and a when predicate that describes when this node should be used.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodeDef]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkTreeNodeDefWhen</span>)
+        </div><p class="docs-api-property-name">
+      <code>when: (index: number, nodeData: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果该节点模板应该应用在所提供的节点数据和索引上，则该函数返回 true。如果未定义，那么当该函数对该数据返回 true 时，该节点将被认为是默认的节点模板。对于每一个节点，至少要传入一个 when 函数或者用 undefined 表示默认行为。</p><p translation-origin="off">Function that should return true if this node template should be used for the provided node
+data and index. If left undefined, this node will be considered the default node template to
+use when no other when functions return true for the data.
+For every node, there must be at least one when function that passes or an undefined to
+default.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>template: TemplateRef&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodePadding" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodePadding"></span>
+  <code>CdkTreeNodePadding</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">子树数据节点的缩进量。该指令会在节点中添加 left-padding 以展示层次结构。</p><p translation-origin="off">Indent for the children tree dataNodes.
+This directive will add left-padding to the node to show hierarchy.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodePadding]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkTreeNodePaddingIndent'</span>)
+        </div><p class="docs-api-property-name">
+      <code>indent: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每个级别的缩进。可以是数字或 CSS 字符串。默认值为 40px，来自 Material Design 菜单中的子菜单规范。</p><p translation-origin="off">The indent for each level. Can be a number or a CSS string.
+Default number 40px from material design menu sub-menu spec.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkTreeNodePadding'</span>)
+        </div><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">树节点的深度级别。其衬距将是 <code>级别 * 缩进值</code> 像素。</p><p translation-origin="off">The level of depth of the tree node. The padding will be <code>level * indent</code> pixels.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>indentUnits: 'px'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于表示缩进值的 CSS 单位。</p><p translation-origin="off">CSS units used for the indentation value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodeOutlet" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodeOutlet"></span>
+  <code>CdkTreeNodeOutlet</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">嵌套的 CdkNode 出口地标。把 <code>[cdkTreeNodeOutlet]</code> 放到标签上，把子数据节点放到这个出口地标中。</p><p translation-origin="off">Outlet for nested CdkNode. Put <code>[cdkTreeNodeOutlet]</code> on a tag to place children dataNodes
+inside the outlet.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodeOutlet]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainer: ViewContainerRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkTree" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTree"></span>
+  <code>CdkTree</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">CDK 树组件，用于连接数据源，检索 <code>T</code> 类型的数据，并使用分层结构渲染数据节点。当数据源提供新数据时，会更新数据节点。</p><p translation-origin="off">CDK tree component that connects with a data source to retrieve data of type <code>T</code> and renders
+dataNodes with hierarchy. Updates the dataNodes when new data is provided by the data source.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-tree</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkTree</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dataSource: DataSource&lt;T&gt; | Observable&lt;T[]&gt; | T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">提供一个包含要渲染的最新数据数组的流。受树的视图流窗口影响（即当前屏幕上有哪些数据节点）。数据源可以是数据数组的可观察对象，也可以是要渲染的数据数组。</p><p translation-origin="off">Provides a stream containing the latest data array to render. Influenced by the tree's
+stream of view window (what dataNodes are currently on screen).
+Data source can be an observable of data array, or a data array to render.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>trackBy: TrackByFunction&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">跟踪函数，用于检查数据变化的差异。类似于 <code>ngFor</code> 的 <code>trackBy</code> 函数。
+可以优化节点操作，方法是根据该函数处理后的数据来标识一个节点，以了解该节点是否应添加/删除/移动。接受带两个参数 <code>index</code> 和 <code>item</code> 的函数。</p><p translation-origin="off">Tracking function that will be used to check the differences in data changes. Used similarly
+to <code>ngFor</code> <code>trackBy</code> function. Optimize node operations by identifying a node based on its data
+relative to the function to know if a node should be added/removed/moved.
+Accepts a function that takes two parameters, <code>index</code> and <code>item</code>.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>treeControl: TreeControl&lt;T, K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">树控制器</p><p translation-origin="off">The tree controller</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewChange: BehaviorSubject&lt;{
+    start: number;
+    end: number;
+}&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个流包含哪些节点正显示在屏幕上的最新信息。可以被数据源用作该提供哪些数据的线索。</p><p translation-origin="off">Stream containing the latest information on what rows are being displayed on screen.
+Can be used by the data source to as a heuristic of what data should be provided.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">insertNode
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">为数据节点模板创建嵌入式视图，并把它放在数据节点视图容器的正确索引位置。</p><p translation-origin="off">Create the embedded view for the data node template and place it in the correct index location
+within the data node view container.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        nodeData</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        index</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        viewContainer<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">ViewContainerRef</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        parentData<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">renderNodeChanges
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">检查数据所做的更改，并渲染每个更改（添加/删除/移动节点）。</p><p translation-origin="off">Check for changes made in the data and render each change (node added/removed/moved).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        data</p>
+      <code class="docs-api-method-parameter-type">readonly T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataDiffer</p>
+      <code class="docs-api-method-parameter-type">IterableDiffer&lt;T&gt; = this._dataDiffer</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        viewContainer</p>
+      <code class="docs-api-method-parameter-type">ViewContainerRef = this._nodeOutlet.viewContainer</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        parentData<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkTreeNode" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNode"></span>
+  <code>CdkTreeNode</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">CdkTree 的树节点。它包含树节点中的数据。</p><p translation-origin="off">Tree node for CdkTree. It contains the data in the tree node.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-tree-node</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkTreeNode</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">树节点的数据。</p><p translation-origin="off">The tree node's data.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpanded: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>static&nbsp;mostRecentTreeNode: CdkTreeNode&lt;any&gt; | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">最近创建的 <code>CdkTreeNode</code>。我们把它保存在静态变量中，这样我们就可以在 <code>CdkTree</code> 中检索它并把数据设置成它。</p><p translation-origin="off">The most recently created <code>CdkTreeNode</code>. We save it in static variable so we can retrieve it
+in <code>CdkTree</code> and set the data to it.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 Remove this input
+
+12.0.0 删除该输入属性 或更高版本中删除">
+        已弃用
+      </div><p class="docs-api-property-name">
+      <code>role: 'treeitem' | 'group'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">树节点的角色是什么。</p><p translation-origin="off">The role of the tree node.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此菜单项获得焦点。是对 FocusableOption 的实现。</p><p translation-origin="off">Focuses the menu item. Implements for FocusableOption.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodeToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodeToggle"></span>
+  <code>CdkTreeNodeToggle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">切换节点，以展开/折叠节点。</p><p translation-origin="off">Node toggle to expand/collapse the node.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTreeNodeToggle]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkTreeNodeToggleRecursive'</span>)
+        </div><p class="docs-api-property-name">
+      <code>recursive: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否递归展开/折叠节点。</p><p translation-origin="off">Whether expand/collapse the node recursively.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-tree-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="BaseTreeControl" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="BaseTreeControl"></span>
+  <code>BaseTreeControl</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">基本树控件。它在单个数据节点上具有基本的切换/展开/折叠操作。</p><p translation-origin="off">Base tree control. It has basic toggle/expand/collapse operations on a single data node.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataNodes: T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">已保存的数据节点，以执行 <code>expandAll</code> 动作。</p><p translation-origin="off">Saved data node for <code>expandAll</code> action.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">具有多选功能以跟踪展开状态的选择模型。</p><p translation-origin="off">A selection model with multi-selection to track expansion status.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getChildren: (dataNode: T) =&gt; Observable&lt;T[]&gt; | T[] | undefined | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">获取在给定数据节点的子代发生更改时会发出事件的流。</p><p translation-origin="off">Gets a stream that emits whenever the given data node's children change.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getLevel: (dataNode: T) =&gt; number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">获取给定数据节点的深度，返回其级别数字。这是用于扁平树节点的。</p><p translation-origin="off">Get depth of a given data node, return the level number. This is for flat tree node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpandable: (dataNode: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">数据节点是否可展开。如果可展开，则返回 true。这是用于扁平树节点的。</p><p translation-origin="off">Whether the data node is expandable. Returns true if expandable.
+This is for flat tree node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">返回要更改其引用的标识符，该标识符应用来跟踪 dataNode。</p><p translation-origin="off">Returns the identifier by which a dataNode should be tracked, should its
+reference change.</p>
+
+<p translation-result="on">与* ngFor 的 trackBy 相似</p><p translation-origin="off">Similar to trackBy for *ngFor</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapse
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠一个数据节点。</p><p translation-origin="off">Collapses one single data node.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠此树中的所有 dataNode。</p><p translation-origin="off">Collapse all dataNodes in the tree.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归折叠以给定数据节点为根的子树。</p><p translation-origin="off">Collapses a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expand
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开一个数据节点。</p><p translation-origin="off">Expands one single data node.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开树中的所有数据节点。</p><p translation-origin="off">Expands all data nodes in the tree.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归展开以给定数据节点为根的子树。</p><p translation-origin="off">Expands a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归获取以给定数据节点为根的子树的后代数据节点的列表。</p><p translation-origin="off">Gets a list of descendent data nodes of a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">T[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isExpanded
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">给定数据节点是否已展开。如果数据节点已展开，则返回 true。</p><p translation-origin="off">Whether a given data node is expanded or not. Returns true if the data node is expanded.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换一个数据节点的展开/折叠状态。</p><p translation-origin="off">Toggles one single data node's expanded/collapsed state.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggleDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归切换以 <code>node</code> 为根的子树。</p><p translation-origin="off">Toggles a subtree rooted at <code>node</code> recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="FlatTreeControl" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="FlatTreeControl"></span>
+  <code>FlatTreeControl</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/tree/api#BaseTreeControl" class="docs-api-class-extends-type">
+      BaseTreeControl
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">扁平树控件。能够对扁平树中的子树进行递归地展开/折叠。</p><p translation-origin="off">Flat tree control. Able to expand/collapse a subtree recursively for flattened tree.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataNodes: T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">已保存的数据节点，以执行 <code>expandAll</code> 动作。</p><p translation-origin="off">Saved data node for <code>expandAll</code> action.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">具有多选功能以跟踪展开状态的选择模型。</p><p translation-origin="off">A selection model with multi-selection to track expansion status.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getChildren: (dataNode: T) =&gt; Observable&lt;T[]&gt; | T[] | undefined | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">获取在给定数据节点的子代发生更改时会发出事件的流。</p><p translation-origin="off">Gets a stream that emits whenever the given data node's children change.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getLevel: (dataNode: T) =&gt; number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpandable: (dataNode: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: FlatTreeControlOptions&lt;T, K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">返回要更改其引用的标识符，该标识符应用来跟踪 dataNode。</p><p translation-origin="off">Returns the identifier by which a dataNode should be tracked, should its
+reference change.</p>
+
+<p translation-result="on">与* ngFor 的 trackBy 相似</p><p translation-origin="off">Similar to trackBy for *ngFor</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapse
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠一个数据节点。</p><p translation-origin="off">Collapses one single data node.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠此树中的所有 dataNode。</p><p translation-origin="off">Collapse all dataNodes in the tree.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归折叠以给定数据节点为根的子树。</p><p translation-origin="off">Collapses a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expand
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开一个数据节点。</p><p translation-origin="off">Expands one single data node.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开树中的所有数据节点。</p><p translation-origin="off">Expands all data nodes in the tree.</p>
+
+<p translation-result="on">为了使它起作用，<code>dataNodes</code> 变量必须设置为树的所有扁平化的数据节点。</p><p translation-origin="off">To make this working, the <code>dataNodes</code> variable of the TreeControl must be set to all flattened
+data nodes of the tree.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归展开以给定数据节点为根的子树。</p><p translation-origin="off">Expands a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取后代数据节点的数据节点子树的列表。</p><p translation-origin="off">Gets a list of the data node's subtree of descendent data nodes.</p>
+
+<p translation-result="on">为了使它工作正常，<code>dataNodes</code> 节点必须展平为具有正确级别的树节点。</p><p translation-origin="off">To make this working, the <code>dataNodes</code> of the TreeControl must be flattened tree nodes
+with correct levels.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">T[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isExpanded
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">给定数据节点是否已展开。如果数据节点已展开，则返回 true。</p><p translation-origin="off">Whether a given data node is expanded or not. Returns true if the data node is expanded.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换一个数据节点的展开/折叠状态。</p><p translation-origin="off">Toggles one single data node's expanded/collapsed state.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggleDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归切换以 <code>node</code> 为根的子树。</p><p translation-origin="off">Toggles a subtree rooted at <code>node</code> recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="NestedTreeControl" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="NestedTreeControl"></span>
+  <code>NestedTreeControl</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/tree/api#BaseTreeControl" class="docs-api-class-extends-type">
+      BaseTreeControl
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">嵌套树控件。能够递归地扩展/折叠 NestedNode 类型的子树。</p><p translation-origin="off">Nested tree control. Able to expand/collapse a subtree recursively for NestedNode type.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataNodes: T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">已保存的数据节点，以执行 <code>expandAll</code> 动作。</p><p translation-origin="off">Saved data node for <code>expandAll</code> action.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">具有多选功能以跟踪展开状态的选择模型。</p><p translation-origin="off">A selection model with multi-selection to track expansion status.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getChildren: (dataNode: T) =&gt; Observable&lt;T[]&gt; | T[] | undefined | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getLevel: (dataNode: T) =&gt; number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">获取给定数据节点的深度，返回其级别数字。这是用于扁平树节点的。</p><p translation-origin="off">Get depth of a given data node, return the level number. This is for flat tree node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpandable: (dataNode: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">数据节点是否可展开。如果可展开，则返回 true。这是用于扁平树节点的。</p><p translation-origin="off">Whether the data node is expandable. Returns true if expandable.
+This is for flat tree node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: NestedTreeControlOptions&lt;T, K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">返回要更改其引用的标识符，该标识符应用来跟踪 dataNode。</p><p translation-origin="off">Returns the identifier by which a dataNode should be tracked, should its
+reference change.</p>
+
+<p translation-result="on">与* ngFor 的 trackBy 相似</p><p translation-origin="off">Similar to trackBy for *ngFor</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-5">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapse
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠一个数据节点。</p><p translation-origin="off">Collapses one single data node.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠此树中的所有 dataNode。</p><p translation-origin="off">Collapse all dataNodes in the tree.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归折叠以给定数据节点为根的子树。</p><p translation-origin="off">Collapses a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expand
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开一个数据节点。</p><p translation-origin="off">Expands one single data node.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开树中的所有 dataNodes。</p><p translation-origin="off">Expands all dataNodes in the tree.</p>
+
+<p translation-result="on">为了使它起作用，<code>dataNodes</code> 变量必须设置为树的所有根级数据节点。</p><p translation-origin="off">To make this working, the <code>dataNodes</code> variable of the TreeControl must be set to all root level
+data nodes of the tree.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归展开以给定数据节点为根的子树。</p><p translation-origin="off">Expands a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归获取以给定数据节点为根的子树的后代 dataNode 列表。</p><p translation-origin="off">Gets a list of descendant dataNodes of a subtree rooted at given data node recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">T[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isExpanded
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">给定数据节点是否已展开。如果数据节点已展开，则返回 true。</p><p translation-origin="off">Whether a given data node is expanded or not. Returns true if the data node is expanded.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换一个数据节点的展开/折叠状态。</p><p translation-origin="off">Toggles one single data node's expanded/collapsed state.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggleDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">递归切换以 <code>node</code> 为根的子树。</p><p translation-origin="off">Toggles a subtree rooted at <code>node</code> recursively.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkTreeNodeOutletContext" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTreeNodeOutletContext"></span>
+  <code>CdkTreeNodeOutletContext</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">提供给树节点组件的上下文。</p><p translation-origin="off">Context provided to the tree node component.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-10">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>$implicit: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该节点的数据。</p><p translation-origin="off">Data for the node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>count: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">所有数据节点的长度。</p><p translation-origin="off">Length of the number of total dataNodes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>index: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该节点的索引位置。</p><p translation-origin="off">Index location of the node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该节点的深度。</p><p translation-origin="off">Depth of the node.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-tree-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="FlatTreeControlOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="FlatTreeControlOptions"></span>
+  <code>FlatTreeControlOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可以提供给 FlatTreeControl 的一组可选配置。</p><p translation-origin="off">Optional set of configuration that can be provided to the FlatTreeControl.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-11">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="NestedTreeControlOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="NestedTreeControlOptions"></span>
+  <code>NestedTreeControlOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可以提供给 NestedTreeControl 的一组可选配置。</p><p translation-origin="off">Optional set of configuration that can be provided to the NestedTreeControl.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-12">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>trackBy: (dataNode: T) =&gt; K</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="TreeControl" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TreeControl"></span>
+  <code>TreeControl</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">树控件接口。用户可以实现 TreeControl 来展开/折叠树中的 dataNodes。CDKTree 将使用此 TreeControl 来展开/折叠节点。用户还可以在 <code>&lt;cdk-tree&gt;</code> 之外使用它来控制树的展开状态。</p><p translation-origin="off">Tree control interface. User can implement TreeControl to expand/collapse dataNodes in the tree.
+The CDKTree will use this TreeControl to expand/collapse a node.
+User can also use it outside the <code>&lt;cdk-tree&gt;</code> to control the expansion status of the tree.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-13">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataNodes: T[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">保存的树节点数据可用于 <code>expandAll</code> 动作。</p><p translation-origin="off">The saved tree nodes data for <code>expandAll</code> action.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>expansionModel: SelectionModel&lt;K&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">展开模型</p><p translation-origin="off">The expansion model</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getChildren: (dataNode: T) =&gt; Observable&lt;T[]&gt; | T[] | undefined | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">获取在给定数据节点的子代发生更改时发出的流。</p><p translation-origin="off">Gets a stream that emits whenever the given data node's children change.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>getLevel: (dataNode: T) =&gt; number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">获取给定数据节点的深度，返回级别号。这是用于扁平树节点的。</p><p translation-origin="off">Get depth of a given data node, return the level number. This is for flat tree node.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpandable: (dataNode: T) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">数据节点是否可展开。如果可展开，则返回 true。这是用于扁平树节点的。</p><p translation-origin="off">Whether the data node is expandable. Returns true if expandable.
+This is for flat tree node.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-6">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapse
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠一个数据节点</p><p translation-origin="off">Collapse one data node</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠树中的所有 dataNode</p><p translation-origin="off">Collapse all the dataNodes in the tree</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">collapseDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">折叠数据节点及其所有后代</p><p translation-origin="off">Collapse a data node and all its descendants</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expand
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开一个数据节点</p><p translation-origin="off">Expand one data node</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开树中的所有 dataNode</p><p translation-origin="off">Expand all the dataNodes in the tree</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">expandDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开数据节点及其所有后代</p><p translation-origin="off">Expand a data node and all its descendants</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取数据节点的所有后代</p><p translation-origin="off">Get all descendants of a data node</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">any[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isExpanded
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">数据节点是展开还是折叠。如果已展开，则返回 true。</p><p translation-origin="off">Whether the data node is expanded or collapsed. Return true if it's expanded.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">展开或折叠数据节点</p><p translation-origin="off">Expand or collapse data node</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggleDescendants
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">通过展开/折叠数据节点及其所有后代来切换数据节点</p><p translation-origin="off">Toggle a data node by expand/collapse it and all its descendants</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dataNode</p>
+      <code class="docs-api-method-parameter-type">T</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    </div>

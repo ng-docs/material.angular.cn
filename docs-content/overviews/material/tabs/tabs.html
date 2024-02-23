@@ -1,0 +1,235 @@
+<div class="docs-markdown"><p translation-result="on">Angular Material 的选项卡（tabs）把内容拆分成几个视图，而同一时刻只有一个视图可见。
+每个选项卡（tab）的标签都显示在其头部，而激活选项卡的标签通过一个带动画效果的墨水条（ink bar）标记出来。
+当选项卡标签的列表超出了标题的宽度时，就会出现一个分页器，让用户可以向左或向右滚动这些标签。</p><p translation-origin="off">Angular Material tabs organize content into separate views where only one view can be
+visible at a time. Each tab's label is shown in the tab header and the active
+tab's label is designated with the animated ink bar. When the list of tab labels exceeds the width
+of the header, pagination controls appear to let the user scroll left and right across the labels.</p>
+
+<p translation-result="on">可以通过输入属性 <code>selectedIndex</code> 来设置激活选项卡，也可以由用户在标题中选取一个选项卡的标签来设置。</p><p translation-origin="off">The active tab may be set using the <code>selectedIndex</code> input or when the user selects one of the
+tab labels in the header.</p>
+
+<div material-docs-example="tab-group-basic"></div>
+
+
+        <h3 id="events" class="docs-header-link" translation-result="on">
+          <span header-link="事件"></span>
+          事件
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="events"></span>
+          Events
+        </h3>
+      
+        
+      <p translation-result="on">当激活选项卡发生变化时，会发出一个事件 <code>selectedTabChange</code>。</p><p translation-origin="off">The <code>selectedTabChange</code> output event is emitted when the active tab changes.</p>
+
+<p translation-result="on">当用户（通常是用键盘导航的方式）把焦点移到头中的任何一个选项卡的标签上时，就会发出一个 <code>focusChange</code> 事件。</p><p translation-origin="off">The <code>focusChange</code> output event is emitted when the user puts focus on any of the tab labels in
+the header, usually through keyboard navigation.</p>
+
+
+        <h3 id="labels" class="docs-header-link" translation-result="on">
+          <span header-link="标签"></span>
+          标签
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="labels"></span>
+          Labels
+        </h3>
+      
+        
+      <p translation-result="on">如果选项卡的标签是纯文本，那么可以使用简单的选项卡组（tab-group） API。</p><p translation-origin="off">If a tab's label is only text then the simple tab-group API can be used.</p>
+
+<div material-docs-example="tab-group-basic" file="tab-group-basic-example.html"></div>
+
+<p translation-result="on">对于更复杂的标签，可以在 <code>mat-tab</code> 中用 <code>mat-tab-label</code> 指令来添加一个模板。</p><p translation-origin="off">For more complex labels, add a template with the <code>mat-tab-label</code> directive inside the <code>mat-tab</code>.</p>
+
+<div material-docs-example="tab-group-custom-label" file="tab-group-custom-label-example.html" region="label-directive"></div>
+
+
+        <h3 id="dynamic-height" class="docs-header-link" translation-result="on">
+          <span header-link="动态高度"></span>
+          动态高度
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="dynamic-height"></span>
+          Dynamic Height
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，选项卡组不会把自己的高度调整为当前激活选项卡的高度。如果要改成自动调整的，请把输入属性 <code>dynamicHeight</code> 设置为 <code>true</code>。
+选项卡的卡体会以动画形式把它的高度调整成激活页的高度。</p><p translation-origin="off">By default, the tab group will not change its height to the height of the currently active tab. To
+change this, set the <code>dynamicHeight</code> input to true. The tab body will animate its height according
+ to the height of the active tab.</p>
+
+ <div material-docs-example="tab-group-dynamic-height" file="tab-group-dynamic-height-example.html" region="dynamic-height"></div>
+
+
+        <h3 id="tabs-and-navigation" class="docs-header-link" translation-result="on">
+          <span header-link="选项卡与导航"></span>
+          选项卡与导航
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tabs-and-navigation"></span>
+          Tabs and navigation
+        </h3>
+      
+        
+      <p translation-result="on"><code>&lt;mat-tab-group&gt;</code> 用于在单个路由中切换视图，而 <code>&lt;nav mat-tab-nav-bar&gt;</code> 提供了一种标签式的 UI，用于在路由之间进行导航。</p><p translation-origin="off">While <code>&lt;mat-tab-group&gt;</code> is used to switch between views within a single route, <code>&lt;nav mat-tab-nav-bar&gt;</code>
+provides a tab-like UI for navigating between routes.</p>
+
+ <div material-docs-example="tab-nav-bar-basic" file="tab-nav-bar-basic-example.html" region="mat-tab-nav"></div>
+
+<p translation-result="on"><code>mat-tab-nav-bar</code> 不会绑定到任何特定的路由器；它适用于普通 <code>&lt;a&gt;</code> 元素并使用 <code>active</code> 属性来确定当前哪个选项卡处于活动状态。相应的 <code>&lt;router-outlet&gt;</code> 必须包裹在 <code>&lt;mat-tab-nav-panel&gt;</code> 组件中，并且通常应放置在相对靠近 <code>mat-tab-nav-bar</code> 的位置（请参阅<a href="#accessibility">无障碍性</a>）。</p><p translation-origin="off">The <code>mat-tab-nav-bar</code> is not tied to any particular router; it works with normal <code>&lt;a&gt;</code> elements and
+uses the <code>active</code> property to determine which tab is currently active. The corresponding
+<code>&lt;router-outlet&gt;</code> must be wrapped in an <code>&lt;mat-tab-nav-panel&gt;</code> component and should typically be
+placed relatively close to the <code>mat-tab-nav-bar</code> (see <a href="#accessibility">Accessibility</a>).</p>
+
+
+        <h3 id="lazy-loading" class="docs-header-link" translation-result="on">
+          <span header-link="惰性加载"></span>
+          惰性加载
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="lazy-loading"></span>
+          Lazy Loading
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，选项卡的内容是立即加载的。立即加载的选项卡会初始化其子组件，但在该选项卡激活之前不会把它插入到 DOM 中。</p><p translation-origin="off">By default, the tab contents are eagerly loaded. Eagerly loaded tabs
+will initalize the child components but not inject them into the DOM
+until the tab is activated.</p>
+
+<p translation-result="on">如果该选项卡包含一些复杂的子组件，或者该选项卡的内容在初始化期间依赖于对 DOM 的某些计算，则建议惰性加载该选项卡的内容。</p><p translation-origin="off">If the tab contains several complex child components or the tab's contents
+rely on DOM calculations during initialization, it is advised
+to lazy load the tab's content.</p>
+
+<p translation-result="on">通过在 <code>ng-template</code> 上使用 <code>matTabContent</code> 属性来声明卡体，可以惰性加载选项卡的内容。</p><p translation-origin="off">Tab contents can be lazy loaded by declaring the body in a <code>ng-template</code>
+with the <code>matTabContent</code> attribute.</p>
+
+ <div material-docs-example="tab-group-lazy-loaded" file="tab-group-lazy-loaded-example.html" region="mat-tab-content"></div>
+
+
+        <h3 id="label-alignment" class="docs-header-link" translation-result="on">
+          <span header-link="标签对齐"></span>
+          标签对齐
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="label-alignment"></span>
+          Label alignment
+        </h3>
+      
+        
+      <p translation-result="on">如果要把选项卡标签对齐到中间或容器的两端，你还可以使用 <code>[mat-align-tabs]</code> 属性。</p><p translation-origin="off">If you want to align the tab labels in the center or towards the end of the container, you can
+do so using the <code>[mat-align-tabs]</code> attribute.</p>
+
+ <div material-docs-example="tab-group-align" file="tab-group-align-example.html" region="align-start"></div>
+
+
+        <h3 id="controlling-the-tab-animation" class="docs-header-link" translation-result="on">
+          <span header-link="控制选项卡的动画"></span>
+          控制选项卡的动画
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="controlling-the-tab-animation"></span>
+          Controlling the tab animation
+        </h3>
+      
+        
+      <p translation-result="on">你可以通过输入参数 <code>animationDuration</code> 来控制选项卡动画的持续时间。如果想完全禁用动画，你可以把该属性设置为 <code>0ms</code>。这个持续时间可以通过注入 <code>MAT_TABS_CONFIG</code> 令牌来进行全局配置。</p><p translation-origin="off">You can control the duration of the tabs' animation using the <code>animationDuration</code> input. If you
+want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>. The
+duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injection token.</p>
+
+ <div material-docs-example="tab-group-animations" file="tab-group-animations-example.html" region="slow-animation-duration"></div>
+
+
+        <h3 id="keeping-the-tab-content-inside-the-dom-while-its-off-screen" class="docs-header-link" translation-result="on">
+          <span header-link="将标签内容保留在-dom-中，即使它在屏幕外"></span>
+          将标签内容保留在 DOM 中，即使它在屏幕外
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="keeping-the-tab-content-inside-the-dom-while-its-off-screen"></span>
+          Keeping the tab content inside the DOM while it's off-screen
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下， <code>&lt;mat-tab-group&gt;</code> 将从 DOM 中删除屏幕外选项卡的内容，直到它们进入视图。这对于大多数情况来说是最佳的，因为它可以保持 DOM 的大小更小，但对于其他情况（例如某个选项卡具有 <code>&lt;audio&gt;</code> 或 <code>&lt;video&gt;</code> 元素）来说，这并不是很好，因为每当用户导航到时内容都会重新初始化选项卡。如果要在 DOM 中保留屏幕外选项卡的内容，可以将 <code>preserveContent</code> 输入属性设置为 <code>true</code> 。</p><p translation-origin="off">By default the <code>&lt;mat-tab-group&gt;</code> will remove the content of off-screen tabs from the DOM until they
+come into the view. This is optimal for most cases since it keeps the DOM size smaller, but it
+isn't great for others like when a tab has an <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> element, because the content
+will be re-initialized whenever the user navigates to the tab. If you want to keep the content of
+off-screen tabs in the DOM, you can set the <code>preserveContent</code> input to <code>true</code>.</p>
+
+<div material-docs-example="tab-group-preserve-content"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on"><code>MatTabGroup</code> 和 <code>MatTabNavBar</code> 都实现了 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel">ARIA Tabs 设计模式</a>。这两个组件组合了 <code>tablist</code> 、 <code>tab</code> 和 <code>tabpanel</code> 元素，并负责处理键盘输入和焦点管理。</p><p translation-origin="off"><code>MatTabGroup</code> and <code>MatTabNavBar</code> both implement the
+<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel">ARIA Tabs design pattern</a>. Both components
+compose <code>tablist</code>, <code>tab</code>, and <code>tabpanel</code> elements with handling for keyboard inputs and focus
+management.</p>
+
+<p translation-result="on">使用 <code>MatTabNavBar</code> 时，你应该将 <code>&lt;mat-tab-nav-panel&gt;</code> 组件放置在相对靠近（如果不是紧邻） <code>&lt;nav mat-tab-nav-bar&gt;</code> 组件的位置，以便屏幕阅读器用户可以轻松识别关联.</p><p translation-origin="off">When using <code>MatTabNavBar</code>, you should place the <code>&lt;mat-tab-nav-panel&gt;</code> component relatively close to
+if not immediately adjacent to the <code>&lt;nav mat-tab-nav-bar&gt;</code> component so that it's easy for screen
+reader users to identify the association.</p>
+
+
+        <h4 id="labels-1" class="docs-header-link" translation-result="on">
+          <span header-link="标签-1"></span>
+          标签
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="labels-1"></span>
+          Labels
+        </h4>
+      
+        
+      <p translation-result="on">始终通过 <code>aria-label</code> 或 <code>aria-describedby</code> 为没有描述性文本内容的选项卡提供无障碍标签。</p><p translation-origin="off">Always provide an accessible label via <code>aria-label</code> or <code>aria-describedby</code> for tabs without
+descriptive text content.</p>
+
+<p translation-result="on">使用 <code>MatTabNavGroup</code> 时，始终为 <code>&lt;nav&gt;</code> 元素指定标签。</p><p translation-origin="off">When using <code>MatTabNavGroup</code>, always specify a label for the <code>&lt;nav&gt;</code> element.</p>
+
+
+        <h4 id="keyboard-interaction" class="docs-header-link" translation-result="on">
+          <span header-link="键盘交互"></span>
+          键盘交互
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h4>
+      
+        
+      <p translation-result="on"><code>MatTabGroup</code> 和 <code>MatTabNavBar</code> 都实现了以下键盘交互。</p><p translation-origin="off"><code>MatTabGroup</code> and <code>MatTabNavBar</code> both implement the following keyboard interactions:</p>
+
+<table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">快捷键</nt-wrapper><nt-wrapper translation-origin="off">Shortcut</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">操作</nt-wrapper><nt-wrapper translation-origin="off">Action</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LEFT_ARROW</code></td>
+<td><nt-wrapper translation-result="on">把焦点移到前一个选项卡</nt-wrapper><nt-wrapper translation-origin="off">Move focus to previous tab</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>RIGHT_ARROW</code></td>
+<td><nt-wrapper translation-result="on">把焦点移到后一个选项卡</nt-wrapper><nt-wrapper translation-origin="off">Move focus to next tab</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>HOME</code></td>
+<td><nt-wrapper translation-result="on">把焦点移到第一个选项卡</nt-wrapper><nt-wrapper translation-origin="off">Move focus to first tab</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><code>END</code></td>
+<td><nt-wrapper translation-result="on">把焦点移到最后一个选项卡</nt-wrapper><nt-wrapper translation-origin="off">Move focus to last tab</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><nt-wrapper translation-result="on"><code>SPACE</code> 或 <code>ENTER</code></nt-wrapper><nt-wrapper translation-origin="off"><code>SPACE</code> or <code>ENTER</code></nt-wrapper></td>
+<td><nt-wrapper translation-result="on">切换到当前有焦点的选项卡</nt-wrapper><nt-wrapper translation-origin="off">Switch to focused tab</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+</div>

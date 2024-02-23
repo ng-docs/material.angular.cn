@@ -1,0 +1,55 @@
+
+[
+  {
+    "url": "https://next.material.angular.io",
+    "title": "下一代"
+  },
+  {
+    "url": "https://rc.material.angular.io",
+    "title": "发布候选版"
+  },
+  {
+    "url": "https://material.angular.cn",
+    "title": "15.0.0 (最新)"
+  },
+  {
+    "title": "v14（中文）",
+    "url": "https://v14.material.angular.cn"
+  },
+  {
+    "title": "v13",
+    "url": "https://v13.material.angular.io"
+  },
+  {
+    "title": "v12（中文）",
+    "url": "https://v12.material.angular.cn"
+  },
+  {
+    "title": "v11（中文）",
+    "url": "https://v11.material.angular.cn"
+  },
+  {
+    "title": "v10",
+    "url": "https://v10.material.angular.io"
+  },
+  {
+    "title": "v9",
+    "url": "https://v9.material.angular.io"
+  },
+  {
+    "title": "v8",
+    "url": "https://v8.material.angular.io"
+  },
+  {
+    "title": "v7",
+    "url": "https://v7.material.angular.io"
+  },
+  {
+    "title": "v6",
+    "url": "https://v6.material.angular.io"
+  },
+  {
+    "title": "v5",
+    "url": "https://v5.material.angular.io"
+  }
+]

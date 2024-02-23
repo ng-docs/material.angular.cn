@@ -1,0 +1,463 @@
+<div class="docs-markdown"><p translation-result="on">Angular Material 的步进器通过把内容拆分成一些逻辑步骤，提供了一个向导式的工作流。</p><p translation-origin="off">Angular Material's stepper provides a wizard-like workflow by dividing content into logical steps.</p>
+
+<p translation-result="on">Material 步进器基于 CDK 中的步进器 —— 它负责实现驱动步进式工作流的逻辑部分。而 Material 步进器扩展了 CDK 的步进器，让它具有 Material Design 的样式。</p><p translation-origin="off">Material stepper builds on the foundation of the CDK stepper that is responsible for the logic
+that drives a stepped workflow. Material stepper extends the CDK stepper and has Material Design
+styling.</p>
+
+
+        <h3 id="stepper-variants" class="docs-header-link" translation-result="on">
+          <span header-link="步进器的变体形式"></span>
+          步进器的变体形式
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="stepper-variants"></span>
+          Stepper variants
+        </h3>
+      
+        
+      <p translation-result="on">有两个步进器组件：<code>mat-horizontal-stepper</code> 和 <code>mat-vertical-stepper</code>。
+他们可以用相同方式使用，唯一的区别是步进器的方向。</p><p translation-origin="off">There are two stepper variants: <code>horizontal</code> and <code>vertical</code>. You can switch between the two using
+the <code>orientation</code> attribute.</p>
+
+<div material-docs-example="stepper-overview"></div>
+
+<div material-docs-example="stepper-vertical"></div>
+
+
+        <h3 id="labels" class="docs-header-link" translation-result="on">
+          <span header-link="标签"></span>
+          标签
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="labels"></span>
+          Labels
+        </h3>
+      
+        
+      <p translation-result="on">如果步进器的标签只是纯文本，那么可以使用 <code>label</code> 属性。</p><p translation-origin="off">If a step's label is only text, then the <code>label</code> attribute can be used.</p>
+
+<div material-docs-example="stepper-overview" file="stepper-overview-example.html" region="label"></div>
+
+<p translation-result="on">对于更复杂的标签，可以在 <code>mat-step</code> 的 <code>matStepLabel</code> 指令中添加一个模板。</p><p translation-origin="off">For more complex labels, add a template with the <code>matStepLabel</code> directive inside the
+<code>mat-step</code>.</p>
+
+<div material-docs-example="stepper-editable" file="stepper-editable-example.html" region="step-label"></div>
+
+
+        <h4 id="label-position" class="docs-header-link" translation-result="on">
+          <span header-link="标签位置"></span>
+          标签位置
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="label-position"></span>
+          Label position
+        </h4>
+      
+        
+      <p translation-result="on"><code>mat-horizontal-stepper</code> 可以定义标签的位置。<code>end</code> 是默认值，而 <code>bottom</code> 会把它放在步骤图标的下面而不是侧面。这个行为是由 <code>labelPosition</code> 属性控制的。</p><p translation-origin="off">For a horizontal <code>mat-stepper</code> it's possible to define the position of the label. <code>end</code> is the
+default value, while <code>bottom</code> will place it under the step icon instead of at its side.
+This behaviour is controlled by <code>labelPosition</code> property.</p>
+
+<div material-docs-example="stepper-label-position-bottom" file="stepper-label-position-bottom-example.html" region="label-position"></div>
+
+
+        <h4 id="header-position" class="docs-header-link" translation-result="on">
+          <span header-link="标题位置"></span>
+          标题位置
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="header-position"></span>
+          Header position
+        </h4>
+      
+        
+      <p translation-result="on">如果你使用的是水平步进器，则可以使用 <code>headerPosition</code> 输入属性来控制步进器内容的位置。默认情况下，它位于内容的顶部，但也可以放在其下方。</p><p translation-origin="off">If you're using a horizontal stepper, you can control where the stepper's content is positioned
+using the <code>headerPosition</code> input. By default it's on top of the content, but it can also be placed
+under it.</p>
+
+<div material-docs-example="stepper-header-position"></div>
+
+
+        <h3 id="stepper-buttons" class="docs-header-link" translation-result="on">
+          <span header-link="步进器按钮"></span>
+          步进器按钮
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="stepper-buttons"></span>
+          Stepper buttons
+        </h3>
+      
+        
+      <p translation-result="on">有两个按钮指令用来支持不同步骤之间的导航：<code>matStepperPrevious</code> 和 <code>matStepperNext</code>。</p><p translation-origin="off">There are two button directives to support navigation between different steps:
+<code>matStepperPrevious</code> and <code>matStepperNext</code>.</p>
+
+<div material-docs-example="stepper-label-position-bottom" file="stepper-label-position-bottom-example.html" region="buttons"></div>
+
+
+        <h3 id="linear-stepper" class="docs-header-link" translation-result="on">
+          <span header-link="线性步进器"></span>
+          线性步进器
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="linear-stepper"></span>
+          Linear stepper
+        </h3>
+      
+        
+      <p translation-result="on">可以设置 <code>mat-horizontal-stepper</code> 和 <code>mat-vertical-stepper</code> 的 <code>linear</code> 属性来创建线性步进器，它会要求用户必须完成了前面的步骤才能继续。
+对于每个 <code>mat-step</code>，都可以把它的 <code>stepControl</code> 属性设置为一个上级 <code>AbstractControl</code> 来检查该步骤的有效性。</p><p translation-origin="off">The <code>linear</code> attribute can be set on <code>mat-stepper</code> to create a linear stepper that requires the
+user to complete previous steps before proceeding to following steps. For each <code>mat-step</code>, the
+<code>stepControl</code> attribute can be set to the top level <code>AbstractControl</code> that is used to check the
+validity of the step.</p>
+
+<p translation-result="on">有两种可能的实现方式。一种是为整个步进器使用单一表单，另一种是为每个步骤都使用不同的表单。</p><p translation-origin="off">There are two possible approaches. One is using a single form for stepper, and the other is
+using a different form for each step.</p>
+
+<p translation-result="on">另外，如果你不想使用 Angular 的表单，也可以为每个步骤传入一个 <code>completed</code> 属性，在它变为 <code>true</code> 之前，都会阻止用户前进。
+注意，如果同时设置了 <code>completed</code> 和 <code>stepControl</code>，那么 <code>stepControl</code> 优先。</p><p translation-origin="off">Alternatively, if you don't want to use the Angular forms, you can pass in the <code>completed</code> property
+to each of the steps which won't allow the user to continue until it becomes <code>true</code>. Note that if
+both <code>completed</code> and <code>stepControl</code> are set, the <code>stepControl</code> will take precedence.</p>
+
+
+        <h4 id="using-a-single-form" class="docs-header-link" translation-result="on">
+          <span header-link="使用单一表单"></span>
+          使用单一表单
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="using-a-single-form"></span>
+          Using a single form
+        </h4>
+      
+        
+      <p translation-result="on">当步进器使用单一表单时，<code>matStepperPrevious</code> 和 <code>matStepperNext</code> 所在的元素都应该设置为 <code>type="button"</code>，以防止在完成了所有步骤之前提交该表单。</p><p translation-origin="off">When using a single form for the stepper, <code>matStepperPrevious</code> and <code>matStepperNext</code> have to be
+set to <code>type="button"</code> in order to prevent submission of the form before all steps
+are completed.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">"formArray"</span> <span class="hljs-attr">linear</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"0"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([0])"</span>&gt;</span>
+      ...
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"1"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([1])"</span>&gt;</span>
+      ...
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+    ...
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+
+        <h4 id="using-a-different-form-for-each-step" class="docs-header-link" translation-result="on">
+          <span header-link="为每个步骤使用不同的表单"></span>
+          为每个步骤使用不同的表单
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="using-a-different-form-for-each-step"></span>
+          Using a different form for each step
+        </h4>
+      
+        
+      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-stepper</span> <span class="hljs-attr">orientation</span>=<span class="hljs-string">"vertical"</span> <span class="hljs-attr">linear</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
+      ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
+      ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-stepper</span>&gt;</span>
+</code></pre>
+
+        <h3 id="types-of-steps" class="docs-header-link" translation-result="on">
+          <span header-link="步骤的类型"></span>
+          步骤的类型
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="types-of-steps"></span>
+          Types of steps
+        </h3>
+      
+        
+      
+        <h4 id="optional-step" class="docs-header-link" translation-result="on">
+          <span header-link="可选步骤"></span>
+          可选步骤
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="optional-step"></span>
+          Optional step
+        </h4>
+      
+        
+      <p translation-result="on">如果线性步进器中的某个步骤不是必须完成的，可以在那个 <code>mat-step</code> 上设置 <code>optional</code> 属性。</p><p translation-origin="off">If completion of a step in linear stepper is not required, then the <code>optional</code> attribute can be set
+on <code>mat-step</code>.</p>
+
+<div material-docs-example="stepper-optional" file="stepper-optional-example.html" region="optional"></div>
+
+
+        <h4 id="editable-step" class="docs-header-link" translation-result="on">
+          <span header-link="可编辑的步骤"></span>
+          可编辑的步骤
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="editable-step"></span>
+          Editable step
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，每个步骤都是可编辑的，也就是说用户可以回到前一个已经完成的步骤，并编辑他们的回复。可以设置 <code>mat-step</code> 的 <code>editable="true"</code> 来修改这种默认行为。</p><p translation-origin="off">By default, steps are editable, which means users can return to previously completed steps and
+edit their responses. <code>editable="false"</code> can be set on <code>mat-step</code> to change the default.</p>
+
+<div material-docs-example="stepper-editable" file="stepper-editable-example.html" region="editable"></div>
+
+
+        <h4 id="completed-step" class="docs-header-link" translation-result="on">
+          <span header-link="已完成的步骤"></span>
+          已完成的步骤
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="completed-step"></span>
+          Completed step
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，如果步骤是有效的（对于线性步进器），并且用户已经与该步骤进行过互动，那么该步骤的 <code>completed</code> 属性就会是 <code>true</code>。
+不过，用户可以通过按需设置 <code>completed</code> 属性，来改写这种默认的 <code>completed</code> 行为。</p><p translation-origin="off">By default, the <code>completed</code> attribute of a step returns <code>true</code> if the step is valid (in case of
+linear stepper) and the user has interacted with the step. The user, however, can also override
+this default <code>completed</code> behavior by setting the <code>completed</code> attribute as needed.</p>
+
+
+        <h4 id="overriding-icons" class="docs-header-link" translation-result="on">
+          <span header-link="改写图标"></span>
+          改写图标
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="overriding-icons"></span>
+          Overriding icons
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，步骤头中会通过 <code>&lt;mat-icon&gt;</code> 元素来设置 Material Design 中的 <code>create</code> 和 <code>done</code> 图标。
+如果你要提供另一个图标集，则可以为要覆盖的图标单独设置 <code>matStepperIcon</code>。每个步骤的 <code>index</code>、<code>active</code> 和 <code>optional</code>
+的值都可以通过模板变量进行访问：</p><p translation-origin="off">By default, the step headers will use the <code>create</code> and <code>done</code> icons from the Material design icon
+set via <code>&lt;mat-icon&gt;</code> elements. If you want to provide a different set of icons, you can do so
+by placing a <code>matStepperIcon</code> for each of the icons that you want to override. The <code>index</code>,
+<code>active</code>, and <code>optional</code> values of the individual steps are available through template variables:</p>
+
+<div material-docs-example="stepper-states" file="stepper-states-example.html" region="override-icons"></div>
+
+<p translation-result="on">注意，要想提供自定义图标，你不一定非要用 <code>mat-icon</code> 组件。</p><p translation-origin="off">Note that you aren't limited to using the <code>mat-icon</code> component when providing custom icons.</p>
+
+
+        <h3 id="controlling-the-stepper-animation" class="docs-header-link" translation-result="on">
+          <span header-link="控制步进器动画"></span>
+          控制步进器动画
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="controlling-the-stepper-animation"></span>
+          Controlling the stepper animation
+        </h3>
+      
+        
+      <p translation-result="on">你可以使用 <code>animationDuration</code> 输入属性来控制步进器动画的持续时间。如果要完全禁用动画，可以通过将此属性设置为 <code>0ms</code> 来实现。</p><p translation-origin="off">You can control the duration of the stepper's animation using the <code>animationDuration</code> input. If you
+want to disable the animation completely, you can do so by setting the properties to <code>0ms</code>.</p>
+
+<div material-docs-example="stepper-animations"></div>
+
+
+        <h4 id="step-states" class="docs-header-link" translation-result="on">
+          <span header-link="步骤的状态"></span>
+          步骤的状态
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="step-states"></span>
+          Step States
+        </h4>
+      
+        
+      <p translation-result="on">你可以随意设置某个步骤的状态。默认情况下，指定的状态会映射到一个图标。不过，你也同样可以像前面所说的那样去覆盖它。</p><p translation-origin="off">You can set the state of a step to whatever you want. The given state by default maps to an icon.
+However, it can be overridden the same way as mentioned above.</p>
+
+<div material-docs-example="stepper-states" file="stepper-states-example.html" region="states"></div>
+
+<p translation-result="on">为了使用自定义的步骤状态，你必须把 <code>displayDefaultIndicatorType</code> 选项添加到全局的默认步进器选项中。你可以通过在应用的根模块中给 <code>STEPPER_GLOBAL_OPTIONS</code> 令牌提供一个值来指定它。</p><p translation-origin="off">In order to use the custom step states, you must add the <code>displayDefaultIndicatorType</code> option to
+the global default stepper options which can be specified by providing a value for
+<code>STEPPER_GLOBAL_OPTIONS</code> in your application's root module.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">providers</span>: [
+    {
+      <span class="hljs-attr">provide</span>: STEPPER_GLOBAL_OPTIONS,
+      <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">displayDefaultIndicatorType</span>: <span class="hljs-literal">false</span> }
+    }
+  ]
+})
+</code></pre>
+<div material-docs-example="stepper-states"></div>
+
+
+        <h3 id="error-state" class="docs-header-link" translation-result="on">
+          <span header-link="错误状态"></span>
+          错误状态
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="error-state"></span>
+          Error State
+        </h3>
+      
+        
+      <p translation-result="on">如果要在用户移过一个尚未正确填写的步骤时显示错误，可以通过输入属性 <code>errorMessage</code> 设置错误信息。并且通过 <code>STEPPER_GLOBAL_OPTIONS</code> 令牌中的 <code>showError</code> 选项配置步进器显示错误的方式。请注意，由于 <code>linear</code> 步进器会阻止用户跳过无效的步骤，因此该设置不会影响标记为 <code>linear</code> 的步进器。</p><p translation-origin="off">If you want to show an error when the user moved past a step that hasn't been filled out correctly,
+you can set the error message through the <code>errorMessage</code> input and configure the stepper to show
+errors via the <code>showError</code> option in the <code>STEPPER_GLOBAL_OPTIONS</code> injection token. Note that since
+<code>linear</code> steppers prevent a user from advancing past an invalid step to begin with, this setting
+will not affect steppers marked as <code>linear</code>.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">providers</span>: [
+    {
+      <span class="hljs-attr">provide</span>: STEPPER_GLOBAL_OPTIONS,
+      <span class="hljs-attr">useValue</span>: { <span class="hljs-attr">showError</span>: <span class="hljs-literal">true</span> }
+    }
+  ]
+})
+</code></pre>
+<div material-docs-example="stepper-errors"></div>
+
+
+        <h3 id="lazy-rendering" class="docs-header-link" translation-result="on">
+          <span header-link="延迟渲染"></span>
+          延迟渲染
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="lazy-rendering"></span>
+          Lazy rendering
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，步进器将在初始化时渲染其所有内容。如果你有一些内容要推迟到打开特定步骤之前才渲染，你可以将其放入具有 <code>matStepContent</code> 属性的 <code>ng-template</code> 中。</p><p translation-origin="off">By default, the stepper will render all of it's content when it's initialized. If you have some
+content that you want to defer until the particular step is opened, you can put it inside
+an <code>ng-template</code> with the <code>matStepContent</code> attribute.</p>
+
+<div material-docs-example="stepper-lazy-content"></div>
+
+
+        <h3 id="responsive-stepper" class="docs-header-link" translation-result="on">
+          <span header-link="响应式步进器"></span>
+          响应式步进器
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="responsive-stepper"></span>
+          Responsive stepper
+        </h3>
+      
+        
+      <p translation-result="on">如果你的应用支持多种屏幕并且步进器的布局不适合特定的屏幕尺寸，你可以动态控制其 <code>orientation</code> 以根据视口更改布局。</p><p translation-origin="off">If your app supports a wide variety of screens and a stepper's layout doesn't fit a particular
+screen size, you can control its <code>orientation</code> dynamically to change the layout based on the
+viewport.</p>
+
+<div material-docs-example="stepper-responsive"></div>
+
+
+        <h3 id="keyboard-interaction" class="docs-header-link" translation-result="on">
+          <span header-link="键盘交互"></span>
+          键盘交互
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      
+        
+      <table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">键盘快捷键</nt-wrapper><nt-wrapper translation-origin="off">Keyboard shortcut</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">操作</nt-wrapper><nt-wrapper translation-origin="off">Action</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>Left Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">聚焦上一步标题。</nt-wrapper><nt-wrapper translation-origin="off">Focus the previous step header.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Right Arrow</kbd></td>
+<td><nt-wrapper translation-result="on">聚焦下一步标题。</nt-wrapper><nt-wrapper translation-origin="off">Focus the next step header.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Enter</kbd></td>
+<td><nt-wrapper translation-result="on">选择聚焦的步骤。</nt-wrapper><nt-wrapper translation-origin="off">Select the focused step.</nt-wrapper></td>
+</tr>
+
+<tr>
+<td><kbd>Space</kbd></td>
+<td><nt-wrapper translation-result="on">选择聚焦的步骤。</nt-wrapper><nt-wrapper translation-origin="off">Select the focused step.</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+<p>  <kbd>TAB</kbd>+<kbd>SHIFT</kbd>：焦点移到上一个可捕获焦点的元素上</p>
+
+        <h3 id="localizing-labels" class="docs-header-link" translation-result="on">
+          <span header-link="本地化标签"></span>
+          本地化标签
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="localizing-labels"></span>
+          Localizing labels
+        </h3>
+      
+        
+      <p translation-result="on">步进器所用的标签是通过 <code>MatStepperIntl</code> 提供的。要想对这些消息进行本地化，可以在应用的根模块中提供它的一个带翻译值的子类。</p><p translation-origin="off">Labels used by the stepper are provided through <code>MatStepperIntl</code>. Localization of these messages
+can be done by providing a subclass with translated values in your application root module.</p>
+
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  <span class="hljs-attr">imports</span>: [MatStepperModule],
+  <span class="hljs-attr">providers</span>: [
+    {<span class="hljs-attr">provide</span>: MatStepperIntl, <span class="hljs-attr">useClass</span>: MyIntl},
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> </span>{}
+</code></pre>
+<div material-docs-example="stepper-intl"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">从无障碍性的角度看，步进器和选项卡视图是一样的，所以默认会为它指定 <code>role="tablist"</code>。
+步骤的头可以点击，以选择该步骤，所以指定 <code>role="tab"</code>，其内容可以在选中时展开，所以指定 <code>role="tabpanel"</code>。
+步骤头的 <code>aria-selected</code> 属性和步骤内容的 <code>aria-expanded</code> 属性会根据其选中状态的变化进行自动设置。</p><p translation-origin="off">The stepper is treated as a tabbed view for accessibility purposes, so it is given
+<code>role="tablist"</code> by default. The header of step that can be clicked to select the step
+is given <code>role="tab"</code>, and the content that can be expanded upon selection is given
+<code>role="tabpanel"</code>. <code>aria-selected</code> attribute of step header is automatically set based on
+step selection change.</p>
+
+<p translation-result="on">步进器和每个步骤都应该通过 <code>aria-label</code> 或 <code>aria-labelledby</code> 给出一个有意义的标签。</p><p translation-origin="off">The stepper and each step should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+
+<p translation-result="on">在为小屏幕尺寸构建时更喜欢垂直步进器，因为水平步进器通常会占用更多的水平空间，从而引入水平滚动。具有多个滚动维度的应用程序会使某些用户更难以消费内容。有关构建基于视口大小调整其布局的步进器的示例，请参阅上面的<a href="#responsive-stepper">响应式步进器部分</a>。</p><p translation-origin="off">Prefer vertical steppers when building for small screen sizes, as horizontal
+steppers typically take up significantly more horizontal space thus introduce
+horizontal scrolling. Applications with multiple scrolling dimensions make
+content harder to consume for some users. See the <a href="#responsive-stepper">Responsive Stepper section</a>
+above for an example on building a stepper that adjusts its layout based on
+viewport size.</p>
+
+
+        <h4 id="forms" class="docs-header-link" translation-result="on">
+          <span header-link="表单"></span>
+          表单
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="forms"></span>
+          Forms
+        </h4>
+      
+        
+      <p translation-result="on">步进器通常会包含表单和表单控件。如果步进器表单中的验证错误阻止了移动到另一个步骤，请确保你的表单控件将错误消息传达给辅助技术。这有助于用户了解为什么他们不能前进到另一个步骤。你可以通过将 <code>&lt;mat-error&gt;</code> 与 <code>&lt;mat-form-field&gt;</code> 结合使用或使用 ARIA 实时区域来完成此操作。</p><p translation-origin="off">Steppers often contain forms and form controls. If validation errors inside of a
+stepper's form prevents moving to another step, make sure that your form
+controls communicate error messages to assistive technology. This helps the user
+know why they can't advance to another step. You can accomplish this by using
+<code>&lt;mat-error&gt;</code> with <code>&lt;mat-form-field&gt;</code>, or by using an ARIA live region.</p>
+
+<p translation-result="on">当某个步骤包含表单验证错误时，<code>MatStepper</code> 将在步骤的标题中显示错误（如果指定过）。有关带有错误消息的步进器示例，请参阅<a href="#error-state">错误状态部分</a>。对于非线性步进器，当用户离开带有错误消息的步骤时，你应该使用 ARIA 实时区域来播报错误消息。</p><p translation-origin="off">When a step contains a forms validation error, <code>MatStepper</code> will display the
+error in the step's header if specified. See the <a href="#error-state">Error State section</a>
+for an example of a stepper with an error message. For non-linear steppers, you
+should use an ARIA live region to announce error messages when users navigate
+away from a step with an error message.</p>
+
+</div>

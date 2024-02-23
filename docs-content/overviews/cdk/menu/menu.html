@@ -1,0 +1,420 @@
+<div class="docs-markdown"><p translation-result="on"><code>@angular/cdk/menu</code> 模块提供了一些指令来帮助创建基于 <a href="https://www.w3.org/TR/wai-aria-1.1/" title="ARIA Spec">WAI ARIA 规范</a> 的自定义菜单交互。</p><p translation-origin="off">The <code>@angular/cdk/menu</code> module provides directives to help create custom menu
+interactions based on the <a href="https://www.w3.org/TR/wai-aria-1.1/" title="ARIA Spec">WAI ARIA specification</a>.</p>
+
+<p translation-result="on">通过使用 <code>@angular/cdk/menu</code> ，你可以获得无障碍化的所有预期行为，包括双向布局支持、键盘交互和焦点管理。所有指令都会将其关联的 ARIA 角色应用于其宿主元素。</p><p translation-origin="off">By using <code>@angular/cdk/menu</code> you get all of the expected behaviors for an accessible
+experience, including bidi layout support, keyboard interaction, and focus management. All
+directives apply their associated ARIA roles to their host element.</p>
+
+
+        <h3 id="supported-aria-roles" class="docs-header-link" translation-result="on">
+          <span header-link="支持的-aria-角色"></span>
+          支持的 ARIA 角色
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="supported-aria-roles"></span>
+          Supported ARIA Roles
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/menu</code> 中的指令在其宿主元素上设置适当的角色。</p><p translation-origin="off">The directives in <code>@angular/cdk/menu</code> set the appropriate roles on their host element.</p>
+
+<table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">指令</nt-wrapper><nt-wrapper translation-origin="off">Directive</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">ARIA 角色</nt-wrapper><nt-wrapper translation-origin="off">ARIA Role</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CdkMenuBar</td>
+<td>menubar</td>
+</tr>
+<tr>
+<td>CdkMenu</td>
+<td>menu</td>
+</tr>
+<tr>
+<td>CdkMenuGroup</td>
+<td>group</td>
+</tr>
+<tr>
+<td>CdkMenuItem</td>
+<td>menuitem</td>
+</tr>
+<tr>
+<td>CdkMenuItemRadio</td>
+<td>menuitemradio</td>
+</tr>
+<tr>
+<td>CdkMenuItemCheckbox</td>
+<td>menuitemcheckbox</td>
+</tr>
+<tr>
+<td>CdkMenuTrigger</td>
+<td>button</td>
+</tr>
+</tbody></table>
+
+        <h3 id="css-styles-and-classes" class="docs-header-link" translation-result="on">
+          <span header-link="css-样式和类"></span>
+          CSS 样式和类
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="css-styles-and-classes"></span>
+          CSS Styles and Classes
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/menu</code> 旨在根据你的需求高度定制。因此，它不对元素的样式做出任何假设。你可以应用任何所需的 CSS 样式，但这些指令确实应用了一些 CSS 类，以便你更轻松地添加自定义样式。下面按指令列出了可用的 CSS 类。</p><p translation-origin="off">The <code>@angular/cdk/menu</code> is designed to be highly customizable to your needs. It therefore does not
+make any assumptions about how elements should be styled. You are expected to apply any required
+CSS styles, but the directives do apply CSS classes to make it easier for you to add custom styles.
+The available CSS classes are listed below, by directive.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><nt-wrapper translation-result="on">指令</nt-wrapper><nt-wrapper translation-origin="off">Directive</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">CSS 类</nt-wrapper><nt-wrapper translation-origin="off">CSS Class</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">何时应用</nt-wrapper><nt-wrapper translation-origin="off">Applied...</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>cdkMenu</code></td>
+<td><code>cdk-menu</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenu</code></td>
+<td><code>cdk-menu-inline</code></td>
+<td><nt-wrapper translation-result="on">如果菜单是<a href="#menu-content">内联菜单</a></nt-wrapper><nt-wrapper translation-origin="off">If the menu is an <a href="#menu-content">inline menu</a></nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuBar</code></td>
+<td><code>cdk-menu-bar</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuGroup</code></td>
+<td><code>cdk-menu-group</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuItem</code></td>
+<td><code>cdk-menu-item</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuItemCheckbox</code></td>
+<td><code>cdk-menu-item</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuItemCheckbox</code></td>
+<td><code>cdk-menu-item-checkbox</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuItemRadio</code></td>
+<td><code>cdk-menu-item</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuItemRadio</code></td>
+<td><code>cdk-menu-item-radio</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left"><code>cdkMenuTriggerFor</code></td>
+<td><code>cdk-menu-trigger</code></td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+
+        <h3 id="getting-started" class="docs-header-link" translation-result="on">
+          <span header-link="快速上手"></span>
+          快速上手
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="getting-started"></span>
+          Getting started
+        </h3>
+      
+        
+      <p translation-result="on">将 <code>CdkMenuModule</code> 导入要在其中创建菜单的 <code>NgModule</code> 。然后，你可以应用菜单指令来构建你的自定义菜单。典型的菜单包含以下指令：</p><p translation-origin="off">Import the <code>CdkMenuModule</code> into the <code>NgModule</code> in which you want to create menus. You can then apply
+menu directives to build your custom menu. A typical menu consists of the following directives:</p>
+
+<ul>
+<li><p translation-result="on"><code>cdkMenuTriggerFor</code> - 将触发器元素链接到包含要打开的菜单的 <code>ng-template</code></p><p translation-origin="off"><code>cdkMenuTriggerFor</code> - links a trigger element to an <code>ng-template</code> containing the menu to be opened</p>
+
+</li>
+<li><p translation-result="on"><code>cdkMenu</code> - 创建由触发器打开的菜单内容</p><p translation-origin="off"><code>cdkMenu</code> - creates the menu content opened by the trigger</p>
+
+</li>
+<li><p translation-result="on"><code>cdkMenuItem</code> - 添加到菜单中的每个菜单项</p><p translation-origin="off"><code>cdkMenuItem</code> - added to each item in the menu</p>
+
+</li>
+</ul>
+<div material-docs-example="cdk-menu-standalone-menu" file="cdk-menu-standalone-menu-example.html"></div>
+
+<p translation-result="on">大多数菜单交互由两部分组成：触发器和菜单面板。</p><p translation-origin="off">Most menu interactions consist of two parts: a trigger and a menu panel.</p>
+
+
+        <h4 id="triggers" class="docs-header-link" translation-result="on">
+          <span header-link="触发器"></span>
+          触发器
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="triggers"></span>
+          Triggers
+        </h4>
+      
+        
+      <p translation-result="on">你可以将 <code>cdkMenuTriggerFor</code> 添加到任何按钮上以使其成为给定菜单的触发器，或者添加到任何菜单项上使其成为子菜单的触发器。添加此指令时，请务必传递对包含它要打开的菜单模板的引用。用户可以使用鼠标或键盘切换相关菜单。</p><p translation-origin="off">You can add <code>cdkMenuTriggerFor</code> to any button to make it a trigger for the given menu, or any menu
+item to make it a trigger for a submenu. When adding this directive, be sure to pass a reference to
+the template containing the menu it should open. Users can toggle the associated menu using a mouse
+or keyboard.</p>
+
+<div material-docs-example="cdk-menu-standalone-menu" file="cdk-menu-standalone-menu-example.html" region="trigger"></div>
+
+<p translation-result="on">创建子菜单触发器时，像这样添加 <code>cdkMenuItem</code> 和 <code>cdkMenuTriggerFor</code> ，</p><p translation-origin="off">When creating a submenu trigger, add both <code>cdkMenuItem</code> and <code>cdkMenuTriggerFor</code> like so,</p>
+
+<div material-docs-example="cdk-menu-menubar" file="cdk-menu-menubar-example.html" region="file-trigger"></div>
+
+
+        <h4 id="menu-content" class="docs-header-link" translation-result="on">
+          <span header-link="菜单内容"></span>
+          菜单内容
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="menu-content"></span>
+          Menu content
+        </h4>
+      
+        
+      <p translation-result="on">有两种类型的菜单：</p><p translation-origin="off">There are two types of menus:</p>
+
+<ul>
+<li><p translation-result="on"><em>内联菜单</em>始终出现在页面上</p><p translation-origin="off"><em>inline menus</em> are always present on the page</p>
+
+</li>
+<li><p translation-result="on"><em>弹出菜单</em>可以由用户切换以隐藏或显示</p><p translation-origin="off"><em>pop-up menus</em> can be toggled to hide or show by the user</p>
+
+</li>
+</ul>
+<p translation-result="on">你可以通过使用 <code>cdkMenu</code> 或 <code>cdkMenuBar</code> 指令标记其内容元素来创建菜单。你可以创建下面要讨论的这几种类型的菜单交互。</p><p translation-origin="off">You can create menus by marking their content element with the <code>cdkMenu</code> or <code>cdkMenuBar</code>
+directives. You can create several types of menu interaction which are discussed below.</p>
+
+<p translation-result="on">所有类型的菜单都应仅包含具有 <code>menuitem</code> 、 <code>menuitemcheckbox</code> 、 <code>menuitemradio</code> 或 <code>group</code> 角色的元素。下面讨论自动应用这些角色的支持指令。</p><p translation-origin="off">All type of menus should exclusively contain elements with role <code>menuitem</code>, <code>menuitemcheckbox</code>,
+<code>menuitemradio</code>, or <code>group</code>. Supporting directives that automatically apply these roles are
+discussed below.</p>
+
+<p translation-result="on">请注意，Angular CDK 不提供样式；你必须添加样式作为构建自定义菜单的一部分。</p><p translation-origin="off">Note that Angular CDK provides no styles; you must add styles as part of building your custom menu.</p>
+
+
+        <h3 id="inline-menus" class="docs-header-link" translation-result="on">
+          <span header-link="内联菜单"></span>
+          内联菜单
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="inline-menus"></span>
+          Inline Menus
+        </h3>
+      
+        
+      <p translation-result="on"><em>内联菜单</em>是直接存在于页面上而不是与触发器关联的弹出窗口中的菜单。当你想要在页面上进行持久菜单交互时，可以使用内联菜单。内联菜单中的菜单项在逻辑上分组在一起，你可以使用键盘浏览它们。你可以通过将 <code>cdkMenu</code> 指令添加到要用作菜单内容的元素来创建内联菜单。</p><p translation-origin="off">An <em>inline menu</em> is a menu that lives directly on the page rather than in a pop-up associated with a
+trigger. You can use an inline menu when you want a persistent menu interaction on a page. Menu
+items within an inline menus are logically grouped together, and you can navigate through them
+using your keyboard. You can create an inline menu by adding the <code>cdkMenu</code> directive to the element
+you want to serve as the menu content.</p>
+
+<div material-docs-example="cdk-menu-inline" file="cdk-menu-inline-example.html"></div>
+
+
+        <h3 id="pop-up-menus" class="docs-header-link" translation-result="on">
+          <span header-link="弹出菜单"></span>
+          弹出菜单
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="pop-up-menus"></span>
+          Pop-up Menus
+        </h3>
+      
+        
+      <p translation-result="on">你也可以使用 <code>cdkMenu</code> 指令创建弹出菜单。将此指令添加到要用作弹出菜单内容的元素。然后将内容元素包装在 <code>ng-template</code> 中，并从触发器的 <code>cdkMenuTriggerFor</code> 属性中引用该模板。这将允许触发器根据需要显示和隐藏菜单内容。</p><p translation-origin="off">You can create pop-up menus using the <code>cdkMenu</code> directive as well. Add this directive to the
+element you want to serve as the content for your pop-up menu. Then wrap the content element in an
+<code>ng-template</code> and reference the template from the <code>cdkMenuTriggerFor</code> property of the trigger. This
+will allow the trigger to show and hide the menu content as needed.</p>
+
+<div material-docs-example="cdk-menu-standalone-menu" file="cdk-menu-standalone-menu-example.html"></div>
+
+
+        <h3 id="menu-bars" class="docs-header-link" translation-result="on">
+          <span header-link="菜单栏"></span>
+          菜单栏
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="menu-bars"></span>
+          Menu Bars
+        </h3>
+      
+        
+      <p translation-result="on">菜单栏是一种内联菜单，你可以使用 <code>cdkMenuBar</code> 指令创建它。它们遵循 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA 菜单栏</a> 规范，其行为类似于桌面应用程序菜单栏。每个栏至少包含一个触发子菜单的 <code>cdkMenuItem</code> 。</p><p translation-origin="off">Menu bars are a type of inline menu that you can create using the <code>cdkMenuBar</code> directive. They
+follow the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA menubar</a> spec and behave similarly to a desktop application menubar. Each
+bar consists of at least one <code>cdkMenuItem</code> that triggers a submenu.</p>
+
+<div material-docs-example="cdk-menu-menubar" file="cdk-menu-menubar-example.html"></div>
+
+
+        <h3 id="context-menus" class="docs-header-link" translation-result="on">
+          <span header-link="上下文菜单"></span>
+          上下文菜单
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="context-menus"></span>
+          Context Menus
+        </h3>
+      
+        
+      <p translation-result="on">上下文菜单是一种弹出菜单类型，它没有传统的触发元素，而是在用户在某个容器元素中右键单击时触发。你可以使用 <code>cdkContextMenuTriggerFor</code> 标记容器元素，其行为类似于 <code>cdkMenuTriggerFor</code> ，只是它响应浏览器的原生 <code>contextmenu</code> 事件。自定义上下文菜单出现在光标旁边，类似于原生上下文菜单。</p><p translation-origin="off">A context menus is a type of pop-up menu that doesn't have a traditional trigger element, instead
+it is triggered when a user right-clicks within some container element. You can mark a
+container element with the <code>cdkContextMenuTriggerFor</code>, which behaves like <code>cdkMenuTriggerFor</code> except
+that it responds to the browser's native <code>contextmenu</code> event. Custom context menus appear next to
+the cursor, similarly to native context menus.</p>
+
+<div material-docs-example="cdk-menu-context" file="cdk-menu-context-example.html"></div>
+
+<p translation-result="on">你可以嵌套上下文菜单的容器元素。右键单击后，与最近的容器元素关联的菜单将打开。</p><p translation-origin="off">You can nest context menu container elements. Upon right-click, the menu associated with the closest
+container element will open.</p>
+
+<div material-docs-example="cdk-menu-nested-context" file="cdk-menu-nested-context-example.html" region="triggers"></div>
+
+<p translation-result="on">在上面的示例中，右键单击“Inner context menu”将打开“内部”菜单，右键单击“Outer context menu”将打开“外部”菜单。</p><p translation-origin="off">In the example above, right-clicking on "Inner context menu" will open up the "inner" menu and
+right-clicking inside "Outer context menu" will open up the "outer" menu.</p>
+
+
+        <h3 id="menu-items" class="docs-header-link" translation-result="on">
+          <span header-link="菜单项"></span>
+          菜单项
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="menu-items"></span>
+          Menu Items
+        </h3>
+      
+        
+      <p translation-result="on"><code>cdkMenuItem</code> 指令允许用户通过键盘导航菜单项。你可以使用 <code>cdkMenuItemTriggered</code> 输出向菜单项添加自定义操作。</p><p translation-origin="off">The <code>cdkMenuItem</code> directive allows users to navigate menu items via keyboard.
+You can add a custom action to a menu item with the <code>cdkMenuItemTriggered</code> output.</p>
+
+<div material-docs-example="cdk-menu-standalone-stateful-menu" file="cdk-menu-standalone-stateful-menu-example.html" region="reset-item"></div>
+
+<p translation-result="on">你可以通过使用一个菜单项作为另一个菜单的触发器来创建嵌套菜单。</p><p translation-origin="off">You can create nested menus by using a menu item as the trigger for another menu.</p>
+
+<div material-docs-example="cdk-menu-menubar" file="cdk-menu-menubar-example.html" region="file-trigger"></div>
+
+
+        <h4 id="menu-item-checkboxes" class="docs-header-link" translation-result="on">
+          <span header-link="复选菜单项"></span>
+          复选菜单项
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="menu-item-checkboxes"></span>
+          Menu Item Checkboxes
+        </h4>
+      
+        
+      <p translation-result="on"><code>cdkMenuItemCheckbox</code> 是一种特殊类型的菜单项，其行为类似于复选框。你可以使用这种类型的菜单项来打开和关闭菜单项。带有 <code>cdkMenuItemCheckbox</code> 指令的元素不需要额外的 <code>cdkMenuItem</code> 指令。</p><p translation-origin="off">A <code>cdkMenuItemCheckbox</code> is a special type of menu item that behaves as a checkbox. You can use this
+type of menu item to toggle items on and off. An element with the <code>cdkMenuItemCheckbox</code> directive
+does not need the additional <code>cdkMenuItem</code> directive.</p>
+
+<p translation-result="on">复选菜单项不跟踪它们自己的状态。你必须使用 <code>cdkMenuItemChecked</code> 输入属性来绑定选中状态，并监听 <code>cdkMenuItemTriggered</code> 以了解它何时切换。如果你不绑定状态，它将在菜单关闭并重新打开时重置。</p><p translation-origin="off">Checkbox items do not track their own state. You must bind the checked state using the
+<code>cdkMenuItemChecked</code> input and listen to <code>cdkMenuItemTriggered</code> to know when it is toggled. If you
+don't bind the state it will reset when the menu is closed and re-opened.</p>
+
+<div material-docs-example="cdk-menu-standalone-stateful-menu" file="cdk-menu-standalone-stateful-menu-example.html" region="bold-item"></div>
+
+
+        <h4 id="menu-item-radios" class="docs-header-link" translation-result="on">
+          <span header-link="单选菜单项"></span>
+          单选菜单项
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="menu-item-radios"></span>
+          Menu Item Radios
+        </h4>
+      
+        
+      <p translation-result="on"><code>cdkMenuItemRadio</code> 是一种特殊类型的菜单项，其行为类似于单选按钮。你可以将这种类型的菜单项用于具有唯一可选菜单项的菜单。带有 <code>cdkMenuItemRadio</code> 指令的元素不需要额外的 <code>cdkMenuItem</code> 指令。</p><p translation-origin="off">A <code>cdkMenuItemRadio</code> is a special type of menu item that behaves as a radio button. You can use this
+type of menu item for menus with exclusively selectable items. An element with the <code>cdkMenuItemRadio</code>
+directive does not need the additional <code>cdkMenuItem</code> directive.</p>
+
+<p translation-result="on">与复选菜单项一样，单选菜单项不会跟踪它们自己的状态，但你可以通过绑定 <code>cdkMenuItemChecked</code> 并监听 <code>cdkMenuItemTriggered</code> 来跟踪它。如果你不绑定状态，则在关闭并重新打开菜单时选择将重置。</p><p translation-origin="off">As with checkbox items, radio items do not track their own state, but you can track it by binding
+<code>cdkMenuItemChecked</code> and listening for <code>cdkMenuItemTriggered</code>. If you do not bind the state the
+selection will reset when the menu is closed and reopened.</p>
+
+<div material-docs-example="cdk-menu-standalone-stateful-menu" file="cdk-menu-standalone-stateful-menu-example.html" region="size-items"></div>
+
+
+        <h4 id="groups" class="docs-header-link" translation-result="on">
+          <span header-link="菜单组"></span>
+          菜单组
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="groups"></span>
+          Groups
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下， <code>cdkMenu</code> 会充当 <code>cdkMenuItemRadio</code> 元素的组。添加为 <code>cdkMenu</code> 子项的带有 <code>cdkMenuItemRadio</code> 的元素将在逻辑上视为一组，并且只有一个菜单项可以具有选中状态。</p><p translation-origin="off">By default <code>cdkMenu</code> acts as a group for <code>cdkMenuItemRadio</code> elements. Elements with
+<code>cdkMenuItemRadio</code> added as children of a <code>cdkMenu</code> will be logically grouped and only a single item
+can have the checked state.</p>
+
+<p translation-result="on">如果你想在单个菜单中包含不相关的多个单选组，你应该使用 <code>cdkMenuGroup</code> 指令。</p><p translation-origin="off">If you would like to have unrelated groups of radio buttons within a single menu you should use the
+<code>cdkMenuGroup</code> directive.</p>
+
+<div material-docs-example="cdk-menu-standalone-stateful-menu" file="cdk-menu-standalone-stateful-menu-example.html"></div>
+
+
+        <h3 id="smart-menu-aim" class="docs-header-link" translation-result="on">
+          <span header-link="智能菜单瞄准"></span>
+          智能菜单瞄准
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="smart-menu-aim"></span>
+          Smart Menu Aim
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/menu</code> 能够智能地预测用户何时打算导航到打开的子菜单并防止过早关闭。此功能可防止用户不得不以迷宫般的方式在打开的菜单中寻找到达目的地。要为菜单及其子菜单启用此功能，请将 <code>cdkMenuTargetAim</code> 指令添加到 <code>cdkMenu</code> 或 <code>cdkMenuBar</code> 元素。</p><p translation-origin="off"><code>@angular/cdk/menu</code> is capable of intelligently predicting when a user intends to navigate to an
+open submenu and preventing premature closeouts. This functionality prevents users from having to
+hunt through the open menus in a maze-like fashion to reach their destination. To enable this
+feature for a menu and its sub-menus, add the <code>cdkMenuTargetAim</code> directive to the <code>cdkMenu</code> or
+<code>cdkMenuBar</code> element.</p>
+
+<p><img src="https://material.angular.io/assets/img/menuaim.png" alt="menu aim diagram" title="Menu Aim Diagram"></p>
+<p translation-result="on">如上图所示，我们首先在菜单中跟踪用户的鼠标移动。接下来，当用户将鼠标移入同级菜单项（例如共享按钮）时，同级菜单项会询问 Menu Aim 服务是否可以执行其关闭操作。为了确定当前子菜单是否可以关闭，Menu Aim 服务会计算子菜单中选定目标坐标与前一个鼠标点之间的斜率，以及目标与当前鼠标点之间的斜率。如果当前鼠标点的斜率大于前一个的斜率，则意味着用户正在向子菜单移动，所以我们不应该关闭。然而，用户有时可能会在移动到子菜单后停止在同级菜单项中。该服务足够智能，可以检测到这种意图并触发下一个菜单。</p><p translation-origin="off">As demonstrated in the diagram above we first track the user's mouse movements within a menu. Next,
+when a user mouses into a sibling menu item (e.g. Share button) the sibling item asks the Menu Aim
+service if it can perform its close actions. In order to determine if the current submenu can be
+closed out, the Menu Aim service calculates the slope between a selected target coordinate in the
+submenu and the previous mouse point, and the slope between the target and the current mouse point.
+If the slope of the current mouse point is greater than the slope of the previous that means the
+user is moving towards the submenu, so we shouldn't close out. Users however may sometimes stop
+short in a sibling item after moving towards the submenu. The service is intelligent enough to
+detect this intention and will trigger the next menu.</p>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/menu</code> 中定义的指令集遵循 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA 规范</a> 中定义的无障碍性最佳实践。具体来说，菜单知道从左到右和从右到左的布局并正确打开。但是，你应该添加任何必要的 CSS 样式。菜单项应始终具有有意义的标签，无论是通过文本内容、 <code>aria-label</code> 还是 <code>aria-labelledby</code> 。最后，它还支持 <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard-interaction-12" title="ARIA Menubar Keyboard Interaction">ARIA 菜单栏键盘交互规范</a>中定义的键盘交互。</p><p translation-origin="off">The set of directives defined in <code>@angular/cdk/menu</code> follow accessibility best practices as defined
+in the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#menu" title="ARIA Menubar Pattern">ARIA spec</a>. Specifically, the menus are aware of left-to-right and right-to-left
+layouts and opened appropriately. You should however add any necessary CSS styles. Menu items should
+always have meaningful labels, whether through text content, <code>aria-label</code>, or <code>aria-labelledby</code>.
+Finally, keyboard interaction is supported as defined in the <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard-interaction-12" title="ARIA Menubar Keyboard Interaction">ARIA menubar keyboard interaction spec</a>.</p>
+
+<!-- links -->
+
+</div>

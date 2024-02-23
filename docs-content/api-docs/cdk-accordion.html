@@ -1,0 +1,315 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-accordion-api-参考文档--">
+    Angular CDK accordion API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {CdkAccordionModule} from '@angular/cdk/accordion';
+      </code>
+    </p>
+  <h3 id="cdk-accordion-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkAccordionItem" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkAccordionItem"></span>
+  <code>CdkAccordionItem</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一个基本指令，供使用者扩展并改成组件装饰器。设置所有要由 CdkAccordion 的父指令管理的事件和属性。</p><p translation-origin="off">An basic directive expected to be extended and decorated as a component.  Sets up all
+events and attributes needed to be managed by a CdkAccordion parent.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-accordion-item</span>
+  
+    <span class="docs-api-class-selector-name">[cdkAccordionItem]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkAccordionItem</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此条目是否已禁用了。</p><p translation-origin="off">Whether the AccordionItem is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>expanded: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此条目是否已经展开了。</p><p translation-origin="off">Whether the AccordionItem is expanded.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>closed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每次关闭此条目时都会发出本事件。</p><p translation-origin="off">Event emitted every time the AccordionItem is closed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>destroyed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当此条目被销毁时会发出本事件。</p><p translation-origin="off">Event emitted when the AccordionItem is destroyed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>opened: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每次打开此条目时都会发出本事件。</p><p translation-origin="off">Event emitted every time the AccordionItem is opened.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>accordion: CdkAccordion</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">AccordionItem 的唯一 id。</p><p translation-origin="off">The unique AccordionItem id.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把此条目的展开状态设置为 false。</p><p translation-origin="off">Sets the expanded state of the accordion item to false.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把此条目的展开状态设置为 true。</p><p translation-origin="off">Sets the expanded state of the accordion item to true.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换此条目的展开状态。</p><p translation-origin="off">Toggles the expanded state of the accordion item.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkAccordion" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkAccordion"></span>
+  <code>CdkAccordion</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令的用途是管理 CdkAccordionItem 子组件的展开状态。</p><p translation-origin="off">Directive whose purpose is to manage the expanded state of CdkAccordionItem children.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-accordion</span>
+  
+    <span class="docs-api-class-selector-name">[cdkAccordion]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkAccordion</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>multi: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">手风琴是否应该允许同时展开多个手风琴条目。</p><p translation-origin="off">Whether the accordion should allow multiple expanded accordion items simultaneously.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">一个只读的 id 值，用于在单选模式下进行协调。</p><p translation-origin="off">A readonly id value to use for unique selection coordination.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closeAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">允许多选时，可以同时关闭手风琴中的所有可用条目。</p><p translation-origin="off">Closes all enabled accordion items.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">openAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">允许多选时，可以同时打开手风琴中的所有可用条目。</p><p translation-origin="off">Opens all enabled accordion items in an accordion where multi is enabled.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    </div>

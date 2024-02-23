@@ -1,0 +1,513 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-paginator-api-参考文档--">
+    Angular Material legacy-paginator API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-paginator</code></p><h3 id="material-legacy-paginator-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacyPaginator" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyPaginator"></span>
+  <code>MatLegacyPaginator</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于提供分页式信息导航的组件。显示当前分页的大小、用户可选的改变分页大小的选项、要显示的条目以及用于转到上一页或下一页的导航按钮。</p><p translation-origin="off">Component to provide navigation between paged information. Displays the size of the current
+page, user-selectable options to change that size, what items are being shown, and
+navigational button to go to the previous or next page.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-paginator</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matPaginator</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要用于底层表单的主题颜色。</p><p translation-origin="off">Theme color to be used for the underlying form controls.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hidePageSize: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否隐藏用户的分页大小选择器界面。</p><p translation-origin="off">Whether to hide the page size selection UI from the user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>length: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">被分页的条目总长度。默认为 0。</p><p translation-origin="off">The length of the total number of items that are being paginated. Defaulted to 0.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>pageIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">显示的条目列表中从零开始的分页索引。默认为 0。</p><p translation-origin="off">The zero-based page index of the displayed list of items. Defaulted to 0.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>pageSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每页显示的条目数。默认情况下，设置为 50。</p><p translation-origin="off">Number of items to display on a page. By default set to 50.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>pageSizeOptions: number[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要显示给用户的分页大小选项的集合。</p><p translation-origin="off">The set of provided page size options to display to the user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selectConfig: MatPaginatorSelectConfig</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于配置分页器内部的底层 <code>MatSelect</code> 。</p><p translation-origin="off">Used to configure the underlying <code>MatSelect</code> inside the paginator.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>showFirstLastButtons: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否要向用户显示第一个/最后一个按钮界面。</p><p translation-origin="off">Whether to show the first/last buttons UI to the user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>page: EventEmitter&lt;PageEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当分页器改变分页大小或分页索引时会发生事件。</p><p translation-origin="off">Event emitted when the paginator changes the page size or page index.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>initialized: Observable&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在指令/组件的 ngOnInit 期间发出一次的流。</p><p translation-origin="off">Stream that emits once during the directive/component's ngOnInit.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">firstPage
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果不在第一页，请移动到第一页。</p><p translation-origin="off">Move to the first page if not already there.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getNumberOfPages
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">计算页数</p><p translation-origin="off">Calculate the number of pages</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasNextPage
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">是否有下一页。</p><p translation-origin="off">Whether there is a next page.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasPreviousPage
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">是否有上一页。</p><p translation-origin="off">Whether there is a previous page.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">lastPage
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果不在最后一页，就移动到最后一页。</p><p translation-origin="off">Move to the last page if not already there.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">nextPage
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果存在，就进入下一页。</p><p translation-origin="off">Advances to the next page if it exists.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">previousPage
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果存在，就回到上一页。</p><p translation-origin="off">Move back to the previous page if it exists.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-legacy-paginator-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatLegacyPaginatorDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatLegacyPaginatorDefaultOptions"></span>
+  <code>MatLegacyPaginatorDefaultOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可用于配置分页器模块默认选项的对象。</p><p translation-origin="off">Object that can be used to configure the default options for the paginator module.</p>
+
+</div><div class="docs-api-interface-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>formFieldAppearance: MatLegacyFormFieldAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要应用于分页大小选项选择器的默认表单字段外观。</p><p translation-origin="off">The default form-field appearance to apply to the page size options selector.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hidePageSize: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否隐藏用户的分页大小选择器界面。</p><p translation-origin="off">Whether to hide the page size selection UI from the user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每页显示的条目数。默认情况下，设置为 50。</p><p translation-origin="off">Number of items to display on a page. By default set to 50.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pageSizeOptions: number[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要显示给用户的分页大小选项的集合。</p><p translation-origin="off">The set of provided page size options to display to the user.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>showFirstLastButtons: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否要向用户显示第一个/最后一个按钮界面。</p><p translation-origin="off">Whether to show the first/last buttons UI to the user.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-legacy-paginator-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_LEGACY_PAGINATOR_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_PAGINATOR_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_PAGINATOR_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来为分页器模块提供默认选项。</p><p translation-origin="off">Injection token that can be used to provide the default options for the paginator module.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_PAGINATOR_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacyPaginatorDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

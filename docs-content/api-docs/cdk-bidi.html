@@ -1,0 +1,163 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-bidi-api-参考文档--">
+    Angular CDK bidi API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {BidiModule} from '@angular/cdk/bidi';
+      </code>
+    </p>
+  <h3 id="cdk-bidi-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="Directionality" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="Directionality"></span>
+  <code>Directionality</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">应用程序（或其子树）的方向性（LTR/RTL）上下文。对外暴露当前的方向和一个表示方向变化的流。</p><p translation-origin="off">The directionality (LTR / RTL) context for the application (or a subtree of it).
+Exposes the current direction and a stream of direction changes.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;Direction&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每当 'ltr' / 'rtl' 状态发生变化时就会触发的流。</p><p translation-origin="off">Stream that emits whenever the 'ltr' / 'rtl' state changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: Direction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前 'ltr' 或 'rtl' 的值。</p><p translation-origin="off">The current 'ltr' or 'rtl' value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-bidi-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="Dir" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="Dir"></span>
+  <code>Dir</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令侦听部分 DOM 的方向变化。</p><p translation-origin="off">Directive to listen for changes of direction of part of the DOM.</p>
+
+<p translation-result="on">通过把自身提供为 Directionality，可以让后代指令只需要注入 Directionality 就能得到最接近的方向。</p><p translation-origin="off">Provides itself as Directionality such that descendant directives only need to ever inject
+Directionality to get the closest direction.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[dir]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">dir</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'dirChange'</span>)
+        </div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;Direction&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当方向发生变化时会触发本事件。</p><p translation-origin="off">Event emitted when the direction changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: Direction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该元素的当前布局方向。</p><p translation-origin="off">Current layout direction of the element.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-bidi-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="Direction" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="Direction"></span>
+  <code>Direction</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> Direction = <span class="hljs-string">'ltr'</span> | <span class="hljs-string">'rtl'</span>;</code>
+</pre>
+</div>
+
+
+    </div>

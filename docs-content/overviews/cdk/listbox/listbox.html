@@ -1,0 +1,387 @@
+<div class="docs-markdown"><p translation-result="on"><code>@angular/cdk/listbox</code> 模块提供指令来帮助创建基于<a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">WAI ARIA 列表框模式</a>的自定义列表框交互。</p><p translation-origin="off">The <code>@angular/cdk/listbox</code> module provides directives to help create custom listbox interactions
+based on the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">WAI ARIA listbox pattern</a>.</p>
+
+<p translation-result="on">通过使用 <code>@angular/cdk/listbox</code>，你可以获得无障碍体验的所有预期行为，包括双向布局支持、键盘交互和焦点管理。所有指令都将其关联的 ARIA 角色应用于其宿主元素。</p><p translation-origin="off">By using <code>@angular/cdk/listbox</code> you get all the expected behaviors for an accessible experience,
+including bidi layout support, keyboard interaction, and focus management. All directives apply
+their associated ARIA roles to their host element.</p>
+
+
+        <h3 id="supported-aria-roles" class="docs-header-link" translation-result="on">
+          <span header-link="支持的-aria-角色"></span>
+          支持的 ARIA 角色
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="supported-aria-roles"></span>
+          Supported ARIA Roles
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/listbox</code> 中的指令在其宿主元素上设置适当的角色。</p><p translation-origin="off">The directives in <code>@angular/cdk/listbox</code> set the appropriate roles on their host element.</p>
+
+<table>
+<thead>
+<tr>
+<th><nt-wrapper translation-result="on">指令</nt-wrapper><nt-wrapper translation-origin="off">Directive</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">ARIA 角色</nt-wrapper><nt-wrapper translation-origin="off">ARIA Role</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cdkOption</td>
+<td>option</td>
+</tr>
+<tr>
+<td>cdkListbox</td>
+<td>listbox</td>
+</tr>
+</tbody></table>
+
+        <h3 id="css-styles-and-classes" class="docs-header-link" translation-result="on">
+          <span header-link="css-样式和类"></span>
+          CSS 样式和类
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="css-styles-and-classes"></span>
+          CSS Styles and Classes
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/listbox</code> 旨在根据你的需要进行高度定制。因此，它不会对元素的样式进行任何假设。你应该应用任何所需的 CSS 样式，但这些指令确实应用了 CSS 类，以便你更轻松地添加自定义样式。下面按指令列出了可用的 CSS 类。</p><p translation-origin="off">The <code>@angular/cdk/listbox</code> is designed to be highly customizable to your needs. It therefore does not
+make any assumptions about how elements should be styled. You are expected to apply any required
+CSS styles, but the directives do apply CSS classes to make it easier for you to add custom styles.
+The available CSS classes are listed below, by directive.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><nt-wrapper translation-result="on">指令</nt-wrapper><nt-wrapper translation-origin="off">Directive</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">CSS 类</nt-wrapper><nt-wrapper translation-origin="off">CSS Class</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">何时应用</nt-wrapper><nt-wrapper translation-origin="off">Applied...</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cdkOption</td>
+<td>.cdk-option</td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkOption</td>
+<td>.cdk-option-active</td>
+<td><nt-wrapper translation-result="on">如果选项处于活动状态</nt-wrapper><nt-wrapper translation-origin="off">If the option is active</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>.cdk-listbox</td>
+<td><nt-wrapper translation-result="on">总是</nt-wrapper><nt-wrapper translation-origin="off">Always</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+<p translation-result="on">除了 CSS 类之外，这些指令还添加了可以在 CSS 中定位的 aria 属性。</p><p translation-origin="off">In addition to CSS classes, these directives add aria attributes that can be targeted in CSS.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"><nt-wrapper translation-result="on">指令</nt-wrapper><nt-wrapper translation-origin="off">Directive</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">Attribute 选择器</nt-wrapper><nt-wrapper translation-origin="off">Attribute Selector</nt-wrapper></th>
+<th><nt-wrapper translation-result="on">何时应用</nt-wrapper><nt-wrapper translation-origin="off">Applied...</nt-wrapper></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-disabled="true"]</td>
+<td><nt-wrapper translation-result="on">如果该选项已禁用</nt-wrapper><nt-wrapper translation-origin="off">If the option is disabled</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-disabled="false"]</td>
+<td><nt-wrapper translation-result="on">如果该选项未禁用</nt-wrapper><nt-wrapper translation-origin="off">If the option is not disabled</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-selected="true"]</td>
+<td><nt-wrapper translation-result="on">如果选定了该选项</nt-wrapper><nt-wrapper translation-origin="off">If the option is selected</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkOption</td>
+<td>[aria-selected="false"]</td>
+<td><nt-wrapper translation-result="on">如果未选定该选项</nt-wrapper><nt-wrapper translation-origin="off">If the option is not selected</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-disabled="true"]</td>
+<td><nt-wrapper translation-result="on">如果列表框已禁用</nt-wrapper><nt-wrapper translation-origin="off">If the listbox is disabled</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-disabled="false"]</td>
+<td><nt-wrapper translation-result="on">如果列表框没有禁用</nt-wrapper><nt-wrapper translation-origin="off">If the listbox is not disabled</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-multiselectable="true"]</td>
+<td><nt-wrapper translation-result="on">如果列表框是多选</nt-wrapper><nt-wrapper translation-origin="off">If the listbox is multiple selection</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-multiselectable="false"]</td>
+<td><nt-wrapper translation-result="on">如果列表框是单选</nt-wrapper><nt-wrapper translation-origin="off">If the listbox is single selection</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-orientation="horizontal"]</td>
+<td><nt-wrapper translation-result="on">如果列表框是水平的</nt-wrapper><nt-wrapper translation-origin="off">If the listbox is oriented horizontally</nt-wrapper></td>
+</tr>
+
+<tr>
+<td align="left">cdkListbox</td>
+<td>[aria-orientation="vertical"]</td>
+<td><nt-wrapper translation-result="on">如果列表框是垂直的</nt-wrapper><nt-wrapper translation-origin="off">If the listbox is oriented vertically</nt-wrapper></td>
+</tr>
+
+</tbody></table>
+
+        <h3 id="getting-started" class="docs-header-link" translation-result="on">
+          <span header-link="入门指南"></span>
+          入门指南
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="getting-started"></span>
+          Getting started
+        </h3>
+      
+        
+      <p translation-result="on">将此 <code>CdkListboxModule</code> 导入到要在其中创建列表框的 <code>NgModule</code> 中。然后你可以应用列表框指令来构建你的自定义列表框。典型的列表框由以下指令组成：</p><p translation-origin="off">Import the <code>CdkListboxModule</code> into the <code>NgModule</code> in which you want to create a listbox. You can
+then apply listbox directives to build your custom listbox. A typical listbox consists of the
+following directives:</p>
+
+<ul>
+<li><p translation-result="on"><code>cdkListbox</code> - 添加到包含要选择的选项的容器元素上</p><p translation-origin="off"><code>cdkListbox</code> - Added to the container element containing the options to be selected</p>
+
+</li>
+<li><p translation-result="on"><code>cdkOption</code> - 添加到列表框中的每个可选选项上</p><p translation-origin="off"><code>cdkOption</code> - Added to each selectable option in the listbox</p>
+
+</li>
+</ul>
+<div material-docs-example="cdk-listbox-overview" file="cdk-listbox-overview-example.html" region="listbox"></div>
+
+
+        <h3 id="option-values" class="docs-header-link" translation-result="on">
+          <span header-link="选项值"></span>
+          选项值
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="option-values"></span>
+          Option values
+        </h3>
+      
+        
+      <p translation-result="on">列表框中的每个选项都会绑定到它在被选中时代表的值，例如 <code>&lt;li cdkOption="red"&gt;Red&lt;/li&gt;</code> 。在单个列表框中，每个选项都必须具有唯一值。如果一个选项没有被明确地赋予一个值，它的值被认为是 <code>''</code> （空字符串），例如 <code>&lt;li cdkOption&gt;No color preference&lt;/li&gt;</code> 。</p><p translation-origin="off">Each option in a listbox is bound to the value it represents when selected, e.g.
+<code>&lt;li cdkOption="red"&gt;Red&lt;/li&gt;</code>. Within a single listbox, each option must have a unique value. If 
+an option is not explicitly given a value, its value is considered to be <code>''</code> (empty string), e.g.
+<code>&lt;li cdkOption&gt;No color preference&lt;/li&gt;</code>.</p>
+
+<div material-docs-example="cdk-listbox-overview" file="cdk-listbox-overview-example.html" region="option"></div>
+
+
+        <h3 id="single-vs-multiple-selection" class="docs-header-link" translation-result="on">
+          <span header-link="单选与多选"></span>
+          单选与多选
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="single-vs-multiple-selection"></span>
+          Single vs multiple selection
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下，列表框一次只支持一个选定的选项，但添加 <code>cdkListboxMultiple</code> 将允许选择多个选项。</p><p translation-origin="off">Listboxes only support a single selected option at a time by default, but adding 
+<code>cdkListboxMultiple</code> will enable selecting more than one option.</p>
+
+<div material-docs-example="cdk-listbox-multiple" file="cdk-listbox-multiple-example.html" region="listbox"></div>
+
+
+        <h3 id="listbox-value" class="docs-header-link" translation-result="on">
+          <span header-link="列表框的值"></span>
+          列表框的值
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="listbox-value"></span>
+          Listbox value
+        </h3>
+      
+        
+      <p translation-result="on">此列表框的值是一个数组，其中包含所选选项的值。即使对于单选列表框亦是如此，它的值是一个包含单个元素的数组。可以使用 <code>[cdkListboxValue]</code> 和 <code>(cdkListboxValueChange)</code> 绑定列表框的值。</p><p translation-origin="off">The listbox's value is an array containing the values of the selected option(s). This is true even
+for the single selection listbox, whose value is an array containing a single element. The listbox's
+value can be bound using <code>[cdkListboxValue]</code> and <code>(cdkListboxValueChange)</code>.</p>
+
+<div material-docs-example="cdk-listbox-value-binding" file="cdk-listbox-value-binding-example.html" region="listbox"></div>
+
+<p translation-result="on">在内部，列表框使用 <code>Object.is</code> 将列表框值与各个选项值进行比较，以确定应该选择哪些选项。如果你的选项值是复杂的对象，你应该提供一个自定义的比较函数。这可以通过列表框上的 <code>cdkListboxCompareWith</code> 输入属性设置。</p><p translation-origin="off">Internally the listbox compares the listbox value against the individual option values using
+<code>Object.is</code> to determine which options should appear selected. If your option values are complex
+objects, you should provide a custom comparison function instead. This can be set via the
+<code>cdkListboxCompareWith</code> input on the listbox.</p>
+
+<div material-docs-example="cdk-listbox-compare-with" file="cdk-listbox-compare-with-example.html" region="listbox"></div>
+
+
+        <h3 id="angular-forms-support" class="docs-header-link" translation-result="on">
+          <span header-link="angular-表单支持"></span>
+          Angular 表单支持
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="angular-forms-support"></span>
+          Angular Forms support
+        </h3>
+      
+        
+      <p translation-result="on">CDK 列表框支持模板驱动表单和响应式表单。</p><p translation-origin="off">The CDK Listbox supports both template driven forms and reactive forms.</p>
+
+<div material-docs-example="cdk-listbox-template-forms" file="cdk-listbox-template-forms-example.html" region="listbox"></div>
+
+<div material-docs-example="cdk-listbox-reactive-forms" file="cdk-listbox-reactive-forms-example.html" region="listbox"></div>
+
+
+        <h4 id="forms-validation" class="docs-header-link" translation-result="on">
+          <span header-link="表单验证"></span>
+          表单验证
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="forms-validation"></span>
+          Forms validation
+        </h4>
+      
+        
+      <p translation-result="on">CDK 列表框与 Angular 的表单验证 API 集成，并具有以下内置验证错误：</p><p translation-origin="off">The CDK listbox integrates with Angular's form validation API and has the following built-in
+validation errors:</p>
+
+<ul>
+<li><p translation-result="on"><code>cdkListboxUnexpectedOptionValues</code> - 当绑定值包含未作为选项值出现在列表框中的值时引发。验证错误包含一个列出无效值的 <code>values</code> 属性</p><p translation-origin="off"><code>cdkListboxUnexpectedOptionValues</code> - Raised when the bound value contains values that do not
+appear as option value in the listbox. The validation error contains a <code>values</code> property that
+lists the invalid values</p>
+
+</li>
+<li><p translation-result="on"><code>cdkListboxUnexpectedMultipleValues</code> - 当单选列表框绑定到包含多个选定选项的值时引发。</p><p translation-origin="off"><code>cdkListboxUnexpectedMultipleValues</code> - Raised when a single-selection listbox is bound to a value
+containing multiple selected options.</p>
+
+</li>
+</ul>
+<div material-docs-example="cdk-listbox-forms-validation" file="cdk-listbox-forms-validation-example.ts" region="errors"></div>
+
+
+        <h3 id="disabling-options" class="docs-header-link" translation-result="on">
+          <span header-link="禁用候选项"></span>
+          禁用候选项
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="disabling-options"></span>
+          Disabling options
+        </h3>
+      
+        
+      <p translation-result="on">你可以通过设置 <code>cdkOptionDisabled</code> 来禁用候选项。此外，可以通过在列表框元素上设置 <code>cdkListboxDisabled</code> 来禁用整个列表框控件。</p><p translation-origin="off">You can disable options for selection by setting <code>cdkOptionDisabled</code>.
+In addition, the entire listbox control can be disabled by setting <code>cdkListboxDisabled</code> on the
+listbox element.</p>
+
+<div material-docs-example="cdk-listbox-disabled" file="cdk-listbox-disabled-example.html" region="listbox"></div>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on"><code>@angular/cdk/listbox</code> 中定义的指令遵循<a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">ARIA 规范</a>中定义的无障碍性最佳实践。支持键盘交互，如<a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard-interaction-11" title="WAI ARIA Listbox Keyboard Interaction">ARIA 列表框键盘交互规范</a>中所定义，<em>没有</em>可选的选择结果会遵循焦点逻辑（TODO：我们应该将其作为一个选项吗？）。</p><p translation-origin="off">The directives defined in <code>@angular/cdk/listbox</code> follow accessibility best practices as defined
+in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" title="WAI ARIA Listbox Pattern">ARIA spec</a>. Keyboard interaction is supported as defined in the
+<a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboard-interaction-11" title="WAI ARIA Listbox Keyboard Interaction">ARIA listbox keyboard interaction spec</a> <em>without</em> the optional selection follows focus
+logic (TODO: should we make this an option?).</p>
+
+
+        <h4 id="listbox-label" class="docs-header-link" translation-result="on">
+          <span header-link="列表框标签"></span>
+          列表框标签
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="listbox-label"></span>
+          Listbox label
+        </h4>
+      
+        
+      <p translation-result="on">始终为列表框提供一个对屏幕阅读器有意义的标签。如果你的列表框有一个可视标签，你可以使用 <code>aria-labelledby</code> 将它与列表框相关联，否则你应该使用 <code>aria-label</code> 提供一个屏幕阅读器专用标签。</p><p translation-origin="off">Always give the listbox a meaningful label for screen readers. If your listbox has a visual label,
+you can associate it with the listbox using <code>aria-labelledby</code>, otherwise you should provide a
+screen-reader-only label with <code>aria-label</code>.</p>
+
+
+        <h4 id="roving-tabindex-vs-active-descendant" class="docs-header-link" translation-result="on">
+          <span header-link="非固定-tabindex-与活动后代"></span>
+          非固定 tabindex 与活动后代
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="roving-tabindex-vs-active-descendant"></span>
+          Roving tabindex vs active descendant
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，CDK 列表框使用<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex" title="MDN Roving Tabindex Technique">非固定 tabindex</a>策略来管理焦点。如果你更喜欢使用<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_2_aria-activedescendant" title="MDN aria-activedescendant Technique">aria-activedescendant</a>策略，请在列表框中设置 <code>useActiveDescendant=true</code> 。</p><p translation-origin="off">By default, the CDK listbox uses the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex" title="MDN Roving Tabindex Technique">roving tabindex</a> strategy to manage focus.
+If you prefer to use the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets#technique_2_aria-activedescendant" title="MDN aria-activedescendant Technique">aria-activedescendant</a> strategy instead, set
+<code>useActiveDescendant=true</code> on the listbox.</p>
+
+<div material-docs-example="cdk-listbox-activedescendant" file="cdk-listbox-activedescendant-example.html" region="listbox"></div>
+
+
+        <h4 id="orientation" class="docs-header-link" translation-result="on">
+          <span header-link="方向"></span>
+          方向
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="orientation"></span>
+          Orientation
+        </h4>
+      
+        
+      <p translation-result="on">默认情况下，列表框采用垂直方向，但可以通过设置 <code>cdkListboxOrientation</code> 输入属性进行自定义。请注意，这只会影响键盘导航。你仍然需要调整 CSS 样式以更改视觉外观。</p><p translation-origin="off">Listboxes assume a vertical orientation by default, but can be customized by setting the
+<code>cdkListboxOrientation</code> input. Note that this only affects the keyboard navigation. You
+will still need to adjust your CSS styles to change the visual appearance.</p>
+
+<div material-docs-example="cdk-listbox-horizontal" file="cdk-listbox-horizontal-example.html" region="listbox"></div>
+
+
+        <h4 id="option-typeahead" class="docs-header-link" translation-result="on">
+          <span header-link="预先输入选项"></span>
+          预先输入选项
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="option-typeahead"></span>
+          Option typeahead
+        </h4>
+      
+        
+      <p translation-result="on">CDK 列表框支持基于选项文本的预先输入。如果选项的预先输入文本需要与显示文本不同（例如，排除表情符号），这可以通过在选项上设置 <code>cdkOptionTypeaheadLabel</code> 来实现。</p><p translation-origin="off">The CDK listbox supports typeahead based on the option text. If the typeahead text for your options
+needs to be different than the display text (e.g. to exclude emoji), this can be accomplished by
+setting the <code>cdkOptionTypeaheadLabel</code> on the option.</p>
+
+<div material-docs-example="cdk-listbox-custom-typeahead" file="cdk-listbox-custom-typeahead-example.html" region="listbox"></div>
+
+
+        <h4 id="keyboard-navigation-options" class="docs-header-link" translation-result="on">
+          <span header-link="键盘导航选项"></span>
+          键盘导航选项
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="keyboard-navigation-options"></span>
+          Keyboard navigation options
+        </h4>
+      
+        
+      <p translation-result="on">使用键盘导航浏览选项时，导航会在尝试浏览选项的开头或结尾时回绕。要更改此设置，请用列表框上的 <code>cdkListboxNavigationWrapDisabled</code> 。</p><p translation-origin="off">When using keyboard navigation to navigate through the options, the navigation wraps when attempting
+to navigate past the start or end of the options. To change this, set
+<code>cdkListboxNavigationWrapDisabled</code> on the listbox.</p>
+
+<p translation-result="on">默认情况下，键盘导航会跳过禁用的选项。要更改此设置，请用列表框上的 <code>cdkListboxNavigatesDisabledOptions</code> 。</p><p translation-origin="off">Keyboard navigation skips disabled options by default. To change this set
+<code>cdkListboxNavigatesDisabledOptions</code> on the listbox.</p>
+
+<div material-docs-example="cdk-listbox-custom-navigation" file="cdk-listbox-custom-navigation-example.html" region="listbox"></div>
+
+<!-- links -->
+
+</div>

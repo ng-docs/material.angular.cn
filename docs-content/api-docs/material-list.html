@@ -1,0 +1,1066 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-list-api-参考文档--">
+    Angular Material list API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {MatListModule} from '@angular/material/list';
+      </code>
+    </p>
+  <h3 id="material-list-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatListOption" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListOption"></span>
+  <code>MatListOption</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-list-option</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matListOption</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此列表选项的主题颜色。这设置了复选框/单选框的颜色。</p><p translation-origin="off">Theme color of the list option. This sets the color of the checkbox/radio.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples for list items are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">列表条目是否已禁用。</p><p translation-origin="off">Whether the list-item is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>lines: string | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此列表条目应为其保留空间的行数。如果未指定，则根据投影内容推断行数。</p><p translation-origin="off">The number of lines this list item should reserve space for. If not specified,
+lines are inferred based on the projected content.</p>
+
+<p translation-result="on">如果你想获得额外的空间并启用文本换行，明确指定行数会很有用。列表条目的未限定范围文本内容将始终能够占用条目的剩余空间，除非它代表标题。</p><p translation-origin="off">Explicitly specifying the number of lines is useful if you want to acquire additional
+space and enable the wrapping of text. The unscoped text content of a list item will
+always be able to take up the remaining space of the item, unless it represents the title.</p>
+
+<p translation-result="on">根据 Material Design 规范，最多支持三行。</p><p translation-origin="off">A maximum of three lines is supported as per the Material Design specification.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>selected: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该选项是否被选定。</p><p translation-origin="off">Whether the option is selected.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>togglePosition: MatListOptionTogglePosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签应该出现在复选框/单选框之前还是之后。默认为“之后（after）”</p><p translation-origin="off">Whether the label should appear before or after the checkbox/radio. Defaults to 'after'</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>value: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选项的值</p><p translation-origin="off">Value of the option</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><div class="docs-api-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+        已弃用
+      </div><p class="docs-api-property-name">
+      <code>checkboxPosition: MatListOptionTogglePosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签应该出现在复选框/单选框之前还是之后。默认为“之后（after）”</p><p translation-origin="off">Whether the label should appear before or after the checkbox/radio. Defaults to 'after'</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">可以通过编程让该选项获得焦点。</p><p translation-origin="off">Allows for programmatic focusing of the option.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取此列表选项的文本标签。用于列表中的预先输入功能。</p><p translation-origin="off">Gets the text label of the list option. Used for the typeahead functionality in the list.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换该选项的选定状态。</p><p translation-origin="off">Toggles the selection state of the option.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatActionList" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatActionList"></span>
+  <code>MatActionList</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-action-list</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matActionList</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用所有列表条目的涟漪。</p><p translation-origin="off">Whether ripples for all list items is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用整个列表。禁用时，列表本身及其每个列表条目都被禁用。</p><p translation-origin="off">Whether the entire list is disabled. When disabled, the list itself and each of its list items
+are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatList" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatList"></span>
+  <code>MatList</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-list</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matList</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用所有列表条目的涟漪。</p><p translation-origin="off">Whether ripples for all list items is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用整个列表。禁用时，列表本身及其每个列表条目都被禁用。</p><p translation-origin="off">Whether the entire list is disabled. When disabled, the list itself and each of its list items
+are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatListItem" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListItem"></span>
+  <code>MatListItem</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-list-item</span>
+  
+    <span class="docs-api-class-selector-name">a[mat-list-item]</span>
+  
+    <span class="docs-api-class-selector-name">button[mat-list-item]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matListItem</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>activated: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">指示 <code>&lt;mat-nav-list&gt;</code> 中的条目是否是当前活动页面。</p><p translation-origin="off">Indicates whether an item in a <code>&lt;mat-nav-list&gt;</code> is the currently active page.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples for list items are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">列表条目是否已禁用。</p><p translation-origin="off">Whether the list-item is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>lines: string | number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此列表条目应为其保留空间的行数。如果未指定，则根据投影内容推断行数。</p><p translation-origin="off">The number of lines this list item should reserve space for. If not specified,
+lines are inferred based on the projected content.</p>
+
+<p translation-result="on">如果你想获得额外的空间并启用文本换行，明确指定行数会很有用。列表条目的未限定范围文本内容将始终能够占用条目的剩余空间，除非它代表标题。</p><p translation-origin="off">Explicitly specifying the number of lines is useful if you want to acquire additional
+space and enable the wrapping of text. The unscoped text content of a list item will
+always be able to take up the remaining space of the item, unless it represents the title.</p>
+
+<p translation-result="on">根据 Material Design 规范，最多支持三行。</p><p translation-origin="off">A maximum of three lines is supported as per the Material Design specification.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatNavList" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatNavList"></span>
+  <code>MatNavList</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-nav-list</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matNavList</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用所有列表条目的涟漪。</p><p translation-origin="off">Whether ripples for all list items is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用整个列表。禁用时，列表本身及其每个列表条目都被禁用。</p><p translation-origin="off">Whether the entire list is disabled. When disabled, the list itself and each of its list items
+are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatSelectionList" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSelectionList"></span>
+  <code>MatSelectionList</code>
+  
+</h4><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-selection-list</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSelectionList</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选择列表的主题颜色。这会为所有列表中的选项设置复选框颜色。</p><p translation-origin="off">Theme color of the selection list. This sets the checkbox color for all list options.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>compareWith: (o1: any, o2: any) =&gt; boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">函数用于在确定哪些选项应该显示为选定状态时，比较一个选项和选定的值。第一个参数就是选项的值。第二个参数是选定值的值。必须返回一个布尔值。</p><p translation-origin="off">Function used for comparing an option against the selected value when determining which
+options should appear as selected. The first argument is the value of an options. The second
+one is a value from the selected value. A boolean must be returned.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用所有列表条目的涟漪。</p><p translation-origin="off">Whether ripples for all list items is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用<em>整个</em>选择列表。当为 true 时，每个列表项都会被禁用并且每个列表项都从 Tab 顺序中删除（有 tabindex="-1"）。</p><p translation-origin="off">Whether the <em>entire</em> selection list is disabled. When true, each list item is also disabled
+and each list item is removed from the tab order (has tabindex="-1").</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether radio indicator for all list items is hidden.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>multiple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">选择是否限制到一个或多个条目（默认的多个）。</p><p translation-origin="off">Whether selection is limited to one or multiple items (default multiple).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;MatSelectionListChange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每当选项的选定状态发生变化时，就会发出一个 change 事件。</p><p translation-origin="off">Emits a change event whenever the selected state of an option changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: QueryList&lt;MatListOption&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个选择列表中包含的选项组件。</p><p translation-origin="off">The option components contained within this selection-list.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selectedOptions: SelectionModel&lt;MatListOption&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The currently selected options.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">deselectAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">取消选定所有选项。返回变化过的选项。</p><p translation-origin="off">Deselects all of the options. Returns the options that changed as a result.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatListOption[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此选择列表获得焦点。</p><p translation-origin="off">Focuses the selection list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">selectAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选择所有选项。返回变化过的选项。</p><p translation-origin="off">Selects all of the options. Returns the options that changed as a result.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatListOption[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatListItemTitle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListItemTitle"></span>
+  <code>MatListItemTitle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">指令捕获列表条目的标题。列表条目通常由标题和可选的第二行或第三行组成。</p><p translation-origin="off">Directive capturing the title of a list item. A list item usually consists of a
+title and optional secondary or tertiary lines.</p>
+
+<p translation-result="on">标题的文本内容从不换行。每个列表条目只能有一个标题。</p><p translation-origin="off">Text content for the title never wraps. There can only be a single title per list item.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matListItemTitle]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatListItemLine" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListItemLine"></span>
+  <code>MatListItemLine</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">此指令捕获列表条目中的一行。列表条目通常由标题和可选的第二行或第三行组成。</p><p translation-origin="off">Directive capturing a line in a list item. A list item usually consists of a
+title and optional secondary or tertiary lines.</p>
+
+<p translation-result="on">一行内的文本内容从不换行。每个列表条目最多可以有两行。</p><p translation-origin="off">Text content inside a line never wraps. There can be at maximum two lines per list item.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matListItemLine]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatListItemMeta" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListItemMeta"></span>
+  <code>MatListItemMeta</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">此指令匹配列表条目的可选元区段。</p><p translation-origin="off">Directive matching an optional meta section for list items.</p>
+
+<p translation-result="on">列表条目可以在条目的末尾预留空间以显示控件、按钮或附加文本内容。</p><p translation-origin="off">List items can reserve space at the end of an item to display a control,
+button or additional text content.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matListItemMeta]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatListItemAvatar" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListItemAvatar"></span>
+  <code>MatListItemAvatar</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">与列表条目中的可选头像匹配的指令。</p><p translation-origin="off">Directive matching an optional avatar within a list item.</p>
+
+<p translation-result="on">列表条目可以在条目的开头预留空间来显示头像。</p><p translation-origin="off">List items can reserve space at the beginning of an item to display an avatar.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matListItemAvatar]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatListItemIcon" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatListItemIcon"></span>
+  <code>MatListItemIcon</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">与列表条目中的可选图标匹配的指令。</p><p translation-origin="off">Directive matching an optional icon within a list item.</p>
+
+<p translation-result="on">列表条目可以在条目的开头预留空间来显示图标。</p><p translation-origin="off">List items can reserve space at the beginning of an item to display an icon.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matListItemIcon]</span>
+  
+</div>
+
+
+
+
+
+
+    <h3 id="material-list-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatSelectionListChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatSelectionListChange"></span>
+  <code>MatSelectionListChange</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">当选项的某个选定状态发生变化时，就会触发这个事件。</p><p translation-origin="off">Change event that is being fired whenever the selected state of an option changes.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>options: MatListOption[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the options that have been changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatSelectionList</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">到发出此事件的选择列表的引用。</p><p translation-origin="off">Reference to the selection list that emitted the event.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-list-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatListConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatListConfig"></span>
+  <code>MatListConfig</code>
+</h4><div class="docs-api-interface-description"><p>Object that can be used to configure the default options for the list module.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hideSingleSelectionIndicator: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Wheter icon indicators should be hidden for single-selection.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-list-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="MatListOptionTogglePosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatListOptionTogglePosition"></span>
+  <code>MatListOptionTogglePosition</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">此类型描述列表中的复选框相对于列表条目文本的的可能位置。</p><p translation-origin="off">Type describing possible positions of a checkbox or radio in a list option
+with respect to the list item's text.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatListOptionTogglePosition = <span class="hljs-string">'before'</span> | <span class="hljs-string">'after'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-list-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LIST"></span>
+  <code>MAT_LIST</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来注入 <code>MatList</code> 实例。它可以作为实际 <code>MatList</code> 类的备用令牌，如果使用真实类可能导致此类及其组件元数据无法优化掉。</p><p translation-origin="off">Injection token that can be used to inject instances of <code>MatList</code>. It serves as
+alternative token to the actual <code>MatList</code> class which could cause unnecessary
+retention of the class and its component metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LIST: InjectionToken&lt;MatList&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_NAV_LIST" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_NAV_LIST"></span>
+  <code>MAT_NAV_LIST</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来注入一些 <code>MatNavList</code> 实例。它可以作为实际 <code>MatNavList</code> 类的备用令牌，如果使用真实类可能导致此类及其组件元数据无法优化掉。</p><p translation-origin="off">Injection token that can be used to inject instances of <code>MatNavList</code>. It serves as
+alternative token to the actual <code>MatNavList</code> class which could cause unnecessary
+retention of the class and its component metadata.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_NAV_LIST: InjectionToken&lt;MatNavList&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_SELECTION_LIST_VALUE_ACCESSOR" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_SELECTION_LIST_VALUE_ACCESSOR"></span>
+  <code>MAT_SELECTION_LIST_VALUE_ACCESSOR</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_SELECTION_LIST_VALUE_ACCESSOR: <span class="hljs-built_in">any</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_LIST_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LIST_CONFIG"></span>
+  <code>MAT_LIST_CONFIG</code>
+</h4><div class="docs-api-constant-description"><p>Injection token that can be used to provide the default options the list module.</p>
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LIST_CONFIG: InjectionToken&lt;MatListConfig&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

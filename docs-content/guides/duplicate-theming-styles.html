@@ -1,0 +1,86 @@
+<div class="docs-markdown"><h1 id="avoiding-duplicated-theming-styles" translation-result="on">避免重复的主题样式</h1><h1 translation-origin="off">Avoiding duplicated theming styles</h1><p translation-result="on">正如<a href="guide/theming">主题指南</a>中所解释的，Angular Material 中的主题包括 <code>color</code>（颜色）、<code>density</code>（密集度）和 <code>typography</code>（排版）体系的配置。由于某些独立体系具有其默认配置，因此在某些使用模式下可能导致重复的 CSS 输出。</p><p translation-origin="off">As explained in the <a href="guide/theming">theming guide</a>, a theme in Angular Material consists of
+configurations for the <code>color</code>, <code>density</code> and <code>typography</code> systems. As some of these individual
+systems have default configurations, some usage patterns may cause duplication in the CSS output.</p>
+
+<p translation-result="on">下面是一个会生成重复主题样式的使用模式的例子：</p><p translation-origin="off">Below are examples of patterns that generate duplicative theme styles:</p>
+
+<p translation-result="on"><strong>例子＃1</strong></p><p translation-origin="off"><strong>Example #1</strong></p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+<span class="hljs-variable">$light-theme</span>: mat.define-light-theme((color: ...));
+<span class="hljs-variable">$dark-theme</span>: mat.define-dark-theme((color: ...));
+
+<span class="hljs-comment">// Generates styles for all systems configured in the theme. In this case, color styles</span>
+<span class="hljs-comment">// and default density styles are generated. Density is in themes by default.</span>
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$light-theme</span>);
+
+<span class="hljs-selector-class">.dark-theme</span> {
+  <span class="hljs-comment">// Generates styles for all systems configured in the theme. In this case, color styles</span>
+  <span class="hljs-comment">// and the default density styles are generated. **Note** that this is a problem because it</span>
+  <span class="hljs-comment">// means that density styles are generated *again*, even though only the color should change.</span>
+  <span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$dark-theme</span>);
+}
+</code></pre>
+<p translation-result="on">为了解决这个问题，你可以使用专门的 mixin 作为 <code>.dark-theme</code> 选择器的颜色样式。请替换 <code>all-component-themes</code> mixin 并使用 <code>all-component-colors</code> mixin 来包含黑色主题。例如：</p><p translation-origin="off">To fix this, you can use the dedicated mixin for color styles for the <code>.dark-theme</code>
+selector. Replace the <code>all-component-themes</code> mixin and include the dark theme using the
+<code>all-component-colors</code> mixin. For example:</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+...
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$light-theme</span>);
+
+<span class="hljs-selector-class">.dark-theme</span> {
+  <span class="hljs-comment">// This mixin only generates the color styles now.</span>
+  <span class="hljs-keyword">@include</span> mat.all-component-colors(<span class="hljs-variable">$dark-theme</span>);
+}
+</code></pre>
+<p translation-result="on">排版也可以通过 Sass mixin 进行配置。参见 <code>all-component-typographies</code> 。</p><p translation-origin="off">Typography can also be configured via Sass mixin; see <code>all-component-typographies</code>.</p>
+
+<p translation-result="on"><strong>例子＃2</strong></p><p translation-origin="off"><strong>Example #2</strong></p>
+
+<p translation-result="on">如果使用了一些独立的主题 mixins，主题样式也可能重复。例如：</p><p translation-origin="off">Theme styles could also be duplicated if individual theme mixins are used. For example:</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$my-theme</span>);
+
+<span class="hljs-selector-class">.my-custom-dark-button</span> {
+  <span class="hljs-comment">// This will also generate the default density styles again.</span>
+  <span class="hljs-keyword">@include</span> mat.button-theme(<span class="hljs-variable">$my-theme</span>);
+}
+</code></pre>
+<p translation-result="on">为了避免这种样式重复，可以使用专用的 mixin 作为颜色体系，并从主题中提取颜色体系的配置。</p><p translation-origin="off">To avoid this duplication of styles, use the dedicated mixin for the color system and
+extract the configuration for the color system from the theme.</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+<span class="hljs-selector-class">.my-custom-dark-button</span> {
+  <span class="hljs-comment">// This will only generate the color styles for `mat-button`.</span>
+  <span class="hljs-keyword">@include</span> mat.button-color(<span class="hljs-variable">$my-theme</span>);
+}
+</code></pre>
+
+        <h2 id="disabling-duplication-warnings" class="docs-header-link" translation-result="on">
+          <span header-link="禁用重复警告"></span>
+          禁用重复警告
+        </h2><h2 class="docs-header-link" translation-origin="off">
+          <span header-link="disabling-duplication-warnings"></span>
+          Disabling duplication warnings
+        </h2>
+      
+        
+      <p translation-result="on">如果你的应用要故意重复样式，可以设置一个全局 Sass 变量，以禁用 Angular Material 中的重复警告。例如：</p><p translation-origin="off">If your application intentionally duplicates styles, a global Sass variable can be
+set to disable duplication warnings from Angular Material. For example:</p>
+
+<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
+
+mat.<span class="hljs-variable">$theme-ignore-duplication-warnings</span>: true;
+
+<span class="hljs-comment">// Include themes as usual.</span>
+<span class="hljs-keyword">@include</span> mat.all-component-themes(<span class="hljs-variable">$light-theme</span>);
+
+...
+</code></pre>
+</div>

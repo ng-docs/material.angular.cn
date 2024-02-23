@@ -1,0 +1,576 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-form-field-api-参考文档--">
+    Angular Material legacy-form-field API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-form-field</code></p><h3 id="material-legacy-form-field-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacyError" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyError"></span>
+  <code>MatLegacyError</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">要在表单字段下方显示的单个错误消息。</p><p translation-origin="off">Single error message to be shown underneath the form field.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-error</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyFormField" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyFormField"></span>
+  <code>MatLegacyFormField</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">表单控件的容器，用来应用 Material Design 的样式和行为。</p><p translation-origin="off">Container for form controls that applies Material Design styling and behavior.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-form-field</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matFormField</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>appearance: MatLegacyFormFieldAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">表单字段的外观样式。</p><p translation-origin="off">The form field appearance style.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的主题调色板。</p><p translation-origin="off">Theme color palette for the component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>floatLabel: LegacyFloatLabelType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签是否应该始终是浮动的、永远不会浮动或根据用户的输入浮动。</p><p translation-origin="off">Whether the label should always float, never float or float as the user types.</p>
+
+<p translation-result="on">注意：只有旧版外观支持 <code>never</code> 选项。<code>never</code> 原本添加为让浮动标签模仿标准输入占位符行为的方法。但是，表单字段现在同时支持浮动标签和占位符。因此，在非遗留应用的外观中，只为了作为占位符使用的 <code>never</code> 选项已被禁用。</p><p translation-origin="off">Note: only the legacy appearance supports the <code>never</code> option. <code>never</code> was originally added as a
+way to make the floating label emulate the behavior of a standard input placeholder. However
+the form field now supports both floating labels and placeholders. Therefore in the non-legacy
+appearances the <code>never</code> option has been disabled in favor of just using the placeholder.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hideRequiredMarker: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否应隐藏必填项标记。</p><p translation-origin="off">Whether the required marker should be hidden.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hintLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">表单字段提示的文本。</p><p translation-origin="off">Text for the form field hint.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，则默认颜色恢复为原来的颜色。</p><p translation-origin="off">Default color to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getConnectedOverlayOrigin
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个 ElementRef 元素，它为附着到表单字段上的浮层提供相对于该元素定位。</p><p translation-origin="off">Gets an ElementRef for the element that a overlay attached to the form field should be
+positioned relative to.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabelId
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取 label 元素的 id。如果没有 label，则返回 <code>null</code>。</p><p translation-origin="off">Gets the id of the label element. If no label is present, returns <code>null</code>.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateOutlineGap
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新轮廓中间隙的宽度和位置。只与轮廓外观有关。</p><p translation-origin="off">Updates the width and position of the gap in the outline. Only relevant for the outline
+appearance.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatLegacyHint" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyHint"></span>
+  <code>MatLegacyHint</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">提示文本显示在表单字段控件的下方。</p><p translation-origin="off">Hint text to be shown underneath the form field control.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-hint</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>align: 'start' | 'end'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">把提示标签对齐到行的开头还是结尾。</p><p translation-origin="off">Whether to align the hint label at the start or end of the line.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">提示的唯一 ID。用于表单字段控件中的 aria-describedby。</p><p translation-origin="off">Unique ID for the hint. Used for the aria-describedby on the form field control.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyPlaceholder" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyPlaceholder"></span>
+  <code>MatLegacyPlaceholder</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on"><code>MatFormField</code> 的占位符文本。</p><p translation-origin="off">The placeholder text for an <code>MatFormField</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-placeholder</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v8.0.0 或更高版本中删除">
+  已弃用
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyPrefix" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyPrefix"></span>
+  <code>MatLegacyPrefix</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">要放在表单字段前面的前缀。</p><p translation-origin="off">Prefix to be placed in front of the form field.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matPrefix]</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacySuffix" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySuffix"></span>
+  <code>MatLegacySuffix</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">后缀放在表单字段的末尾。</p><p translation-origin="off">Suffix to be placed at the end of the form field.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[matSuffix]</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatLegacyLabel" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacyLabel"></span>
+  <code>MatLegacyLabel</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on"><code>mat-form-field</code> 的浮动标签。</p><p translation-origin="off">The floating label for a <code>mat-form-field</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-label</span>
+  
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div>
+
+
+
+
+
+
+    <h3 id="material-legacy-form-field-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatLegacyFormFieldDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatLegacyFormFieldDefaultOptions"></span>
+  <code>MatLegacyFormFieldDefaultOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">表示可通过 <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> 令牌配置的表单字段的默认选项。</p><p translation-origin="off">Represents the default options for the form field that can be configured
+using the <code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> injection token.</p>
+
+</div><div class="docs-api-interface-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>appearance: MatLegacyFormFieldAppearance</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">默认表单字段外观样式。</p><p translation-origin="off">Default form field appearance style.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">表单字段的默认颜色。</p><p translation-origin="off">Default color of the form field.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>floatLabel: LegacyFloatLabelType</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">表单字段的标签默认应该是 <code>always</code>、<code>never</code> 还是 <code>auto</code>（只在必要时）。</p><p translation-origin="off">Whether the label for form fields should by default float <code>always</code>,
+<code>never</code>, or <code>auto</code> (only when necessary).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hideRequiredMarker: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">默认情况下是否应隐藏所需的标记。</p><p translation-origin="off">Whether the required marker should be hidden by default.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-legacy-form-field-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="MatLegacyFormFieldAppearance" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="MatLegacyFormFieldAppearance"></span>
+  <code>MatLegacyFormFieldAppearance</code>
+</h4><div class="docs-api-type-alias-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-type-alias-description"><p translation-result="on">表单字段可能的外观样式。</p><p translation-origin="off">Possible appearance styles for the form field.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> MatLegacyFormFieldAppearance = <span class="hljs-string">'legacy'</span> | <span class="hljs-string">'standard'</span> | <span class="hljs-string">'fill'</span> | <span class="hljs-string">'outline'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="LegacyFloatLabelType" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="LegacyFloatLabelType"></span>
+  <code>LegacyFloatLabelType</code>
+</h4><div class="docs-api-type-alias-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-type-alias-description"><p translation-result="on">表单字段输入属性 “floatLabel” 的可用值。</p><p translation-origin="off">Possible values for the "floatLabel" form field input.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> LegacyFloatLabelType = <span class="hljs-string">'always'</span> | <span class="hljs-string">'never'</span> | <span class="hljs-string">'auto'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-legacy-form-field-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-constant-description"><p translation-result="on">注入令牌，可以用来配置应用中所有表单字段的默认选项。</p><p translation-origin="off">Injection token that can be used to configure the
+default options for all form field within an app.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacyFormFieldDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

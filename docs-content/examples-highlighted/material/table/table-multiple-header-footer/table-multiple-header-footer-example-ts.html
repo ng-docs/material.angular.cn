@@ -1,0 +1,40 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+<span class="hljs-keyword">import</span> {CurrencyPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
+<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
+
+<span class="hljs-keyword">interface</span> Transaction {
+  <span class="hljs-attr">item</span>: <span class="hljs-built_in">string</span>;
+  cost: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@title </span>Table with multiple header and footer rows
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-multiple-header-footer-example&#x27;</span>,
+  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;table-multiple-header-footer-example.css&#x27;</span>],
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-multiple-header-footer-example.html&#x27;</span>,
+  <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">imports</span>: [MatTableModule, CurrencyPipe],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableMultipleHeaderFooterExample</span> </span>{
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;item&#x27;</span>, <span class="hljs-string">&#x27;cost&#x27;</span>];
+  transactions: Transaction[] = [
+    {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Beach ball&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">4</span>},
+    {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Towel&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">5</span>},
+    {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Frisbee&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">2</span>},
+    {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Sunscreen&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">4</span>},
+    {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Cooler&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">25</span>},
+    {<span class="hljs-attr">item</span>: <span class="hljs-string">&#x27;Swim suit&#x27;</span>, <span class="hljs-attr">cost</span>: <span class="hljs-number">15</span>},
+  ];
+
+  <span class="hljs-comment">/**
+   * Gets the total cost of all transactions.
+   *
+   * 获取所有交易的总成本。
+   *
+   */</span>
+  <span class="hljs-function"><span class="hljs-title">getTotalCost</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.transactions.map(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.cost).reduce(<span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> acc + value, <span class="hljs-number">0</span>);
+  }
+}

@@ -1,0 +1,3305 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-scrolling-api-参考文档--">
+    Angular CDK scrolling API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {ScrollingModule} from '@angular/cdk/scrolling';
+      </code>
+    </p>
+  <h3 id="cdk-scrolling-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="ScrollDispatcher" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="ScrollDispatcher"></span>
+  <code>ScrollDispatcher</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">本服务包含所有已注册的可滚动对象的引用，并在任何一个可滚动对象的引用发出滚动事件时触发事件。</p><p translation-origin="off">Service contained all registered Scrollable references and emits an event when any one of the
+Scrollable references emit a scrolled event.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollContainers: Map&lt;CdkScrollable, Subscription&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">所有可滚动对象引用的映射表，由可滚动对象及其对滚动事件的订阅组成。</p><p translation-origin="off">Map of all the scrollable references that are registered with the service and their
+scroll event subscriptions.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ancestorScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回一个可观察对象，它只在元素的任何可滚动祖先发生滚动时才会触发。</p><p translation-origin="off">Returns an observable that emits whenever any of the
+scrollable ancestors of an element are scrolled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        elementOrElementRef</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">祖先要监听的元素。</p><p translation-origin="off">Element whose ancestors to listen for.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        auditTimeInMs<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要对滚动事件进行限流的毫秒数。</p><p translation-origin="off">Time to throttle the scroll events.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">deregister
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">注销一个可滚动对象的引用，并从它的 scroll 事件的可观察对象中取消订阅。</p><p translation-origin="off">De-registers a Scrollable reference and unsubscribes from its scroll event observable.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        scrollable</p>
+      <code class="docs-api-method-parameter-type">CdkScrollable</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要注销的可滚动实例。</p><p translation-origin="off">Scrollable instance to be deregistered.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getAncestorScrollContainers
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回所有包含所指定元素的已注册可滚动对象。</p><p translation-origin="off">Returns all registered Scrollables that contain the provided element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        elementOrElementRef</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkScrollable[]</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">register
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">使用该服务注册一个可滚动的实例，并侦听其滚动的事件。当可滚动对象发生滚动时，此服务会把事件发送到记录其滚动的可观察对象中。</p><p translation-origin="off">Registers a scrollable instance with the service and listens for its scrolled events. When the
+scrollable is scrolled, the service emits the event to its scrolled observable.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        scrollable</p>
+      <code class="docs-api-method-parameter-type">CdkScrollable</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要注册的可滚动对象实例。</p><p translation-origin="off">Scrollable instance to be registered.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回一个可观察对象，它会在任何已注册的可滚动对象引用（或 window, document, body）中发生滚动事件时发出一个事件。可以提供一个毫秒数来来改写默认的“限流”时间。</p><p translation-origin="off">Returns an observable that emits an event whenever any of the registered Scrollable
+references (or window, document, or body) fire a scrolled event. Can provide a time in ms
+to override the default "throttle" time.</p>
+
+<p translation-result="on"><strong>注意：</strong>为了避免每次滚动事件都发生变更检测，从这个流发出的所有事件都会在 Angular Zone 之外运行。如果你要在滚动事件中更新任何数据绑定，就必须使用 <code>NgZone.run</code> 来运行回调。</p><p translation-origin="off"><strong>Note:</strong> in order to avoid hitting change detection for every scroll event,
+all of the events emitted from this stream will be run outside the Angular zone.
+If you need to update any data bindings as a result of a scroll event, you have
+to run the callback using <code>NgZone.run</code>.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        auditTimeInMs</p>
+      <code class="docs-api-method-parameter-type">number = DEFAULT_SCROLL_TIME</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;CdkScrollable | void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-scrolling-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkScrollable" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkScrollable"></span>
+  <code>CdkScrollable</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该指令的元素发生滚动时发送一个事件。使用 ScrollDispatcher 服务注册自己，以便把自己包含在滚动事件集合中，并通过该服务来监听。</p><p translation-origin="off">Sends an event when the directive's element is scrolled. Registers itself with the
+ScrollDispatcher service to include itself as part of its collection of scrolling events that it
+can be listened to through the service.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdk-scrollable]</span>
+  
+    <span class="docs-api-class-selector-name">[cdkScrollable]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dir: Directionality</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>elementRef: ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ngZone: NgZone</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollDispatcher: ScrollDispatcher</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回在宿主元素上发生 scroll 事件时会触发的可观察对象。</p><p translation-origin="off">Returns observable that emits when a scroll event is fired on the host element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getElementRef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取视口的 ElementRef。</p><p translation-origin="off">Gets the ElementRef for the viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量相对于视口指定边缘的滚动偏移量。这个方法可以用来代替对 scrollLeft 或 scrollTop 的直接检查，因为各浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+该方法返回的值是标准化的，左右都总是指向滚动容器的左侧和右侧，与布局方向无关。start 和 end 在 LTR 上下文中指向左右，在 RTL 上下文则相反。</p><p translation-origin="off">Measures the scroll offset relative to the specified edge of the viewport. This method can be
+used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
+about what scrollLeft means in RTL. The values returned by this method are normalized such that
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "start" | "end" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要测量的边缘。</p><p translation-origin="off">The edge to measure from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollTo
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定的偏移量。这是浏览器原生 scrollTo 方法的标准化版本，因为各个浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+对于此方法，无论布局方向如何，左右都总是指向滚动容器的左侧和右侧。start 和 end 在 LTR 上下文中分别指向左右，在 RTL 上下文中则相反。</p><p translation-origin="off">Scrolls to the specified offsets. This is a normalized version of the browser's native scrollTo
+method, since browsers are not consistent about what scrollLeft means in RTL. For this method
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">指定要滚动到的偏移量。</p><p translation-origin="off">specified the offsets to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkFixedSizeVirtualScroll" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkFixedSizeVirtualScroll"></span>
+  <code>CdkFixedSizeVirtualScroll</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">支持固定大小的虚拟滚动策略。</p><p translation-origin="off">A virtual scroll strategy that supports fixed-size items.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-virtual-scroll-viewport[itemSize]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>itemSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">列表中条目的大小（以像素为单位）。</p><p translation-origin="off">The size of the items in the list (in pixels).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>maxBufferPx: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">渲染新条目时要渲染的缓冲区的像素数。默认为 200px。</p><p translation-origin="off">The number of pixels worth of buffer to render for when rendering new items. Defaults to 200px.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>minBufferPx: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">缓存在视口之外的最小缓冲区数（以像素为单位）。当缓冲区的数量低于这个数时，就会渲染出更多的条目。默认为 100px。</p><p translation-origin="off">The minimum amount of buffer rendered beyond the viewport (in pixels).
+If the amount of buffer dips below this number, more items will be rendered. Defaults to 100px.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkVirtualForOf" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkVirtualForOf"></span>
+  <code>CdkVirtualForOf</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">类似于 <code>ngForOf</code> 的指令，用于渲染虚拟滚动容器中的数据。</p><p translation-origin="off">A directive similar to <code>ngForOf</code> to be used for rendering data inside a virtual scrolling
+container.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkVirtualFor][cdkVirtualForOf]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>cdkVirtualForOf: DataSource&lt;T&gt; | Observable&lt;T[]&gt; | NgIterable&lt;T&gt; | null | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要显示的 DataSource。</p><p translation-origin="off">The DataSource to display.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>cdkVirtualForTemplate: TemplateRef&lt;CdkVirtualForOfContext&lt;T&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用来生成新元素的模板。</p><p translation-origin="off">The template used to stamp out new elements.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>cdkVirtualForTemplateCacheSize: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">缓存的大小，用于存放那些以前没有用过的模板。如果将缓存大小设置为 <code>0</code> 将禁用缓存。默认为 20 个模板。</p><p translation-origin="off">The size of the cache used to store templates that are not being used for re-use later.
+Setting the cache size to <code>0</code> will disable caching. Defaults to 20 templates.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>cdkVirtualForTrackBy: TrackByFunction&lt;T&gt; | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on"><code>TrackByFunction</code> 用于跟踪变更。<code>TrackByFunction</code> 接受索引和条目，并在跟踪更改时产生一个值作为此条目的标识。</p><p translation-origin="off">The <code>TrackByFunction</code> to use for tracking changes. The <code>TrackByFunction</code> takes the index and
+the item and produces a value to be used as the item's identity when tracking changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataStream: Observable&lt;readonly T[]&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只要当前 DataSource 中的数据发生变化，就会发出通知。</p><p translation-origin="off">Emits whenever the data in the current DataSource changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewChange: Subject&lt;ListRange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当渲染的数据视图发生变化时触发。</p><p translation-origin="off">Emits when the rendered view of the data changes.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量指定范围内所有条目的组合大小（水平方向的宽度，垂直方向的高度）。如果该范围包含当前尚未渲染过的条目，则会引发错误。</p><p translation-origin="off">Measures the combined size (width for horizontal orientation, height for vertical) of all items
+in the specified range. Throws an error if the range includes items that are not currently
+rendered.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        range</p>
+      <code class="docs-api-method-parameter-type">ListRange</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkVirtualScrollViewport" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkVirtualScrollViewport"></span>
+  <code>CdkVirtualScrollViewport</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/scrolling/api#CdkVirtualScrollable" class="docs-api-class-extends-type">
+      CdkVirtualScrollable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">借助 <code>CdkVirtualForOf</code> 虚拟化滚动行为的视口。</p><p translation-origin="off">A viewport that virtualizes its scrolling with the help of <code>CdkVirtualForOf</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-virtual-scroll-viewport</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>appendOnly: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滚动出视图后，渲染的条目是否应该保留在 DOM 中。默认情况下，条目将被删除。</p><p translation-origin="off">Whether rendered items should persist in the DOM after scrolling out of view. By default, items
+will be removed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>orientation: "vertical" | "horizontal"</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">视口滚动的方向。</p><p translation-origin="off">The direction the viewport scrolls.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>scrolledIndexChange: Observable&lt;number&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当视口中可见的第一个元素的索引发生变化时触发。</p><p translation-origin="off">Emits when the index of the first element visible in the viewport changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>elementRef: ElementRef&lt;HTMLElement&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>renderedRangeStream: Observable&lt;ListRange&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每当渲染范围发生变化时都会发出通知的流。</p><p translation-origin="off">A stream that emits whenever the rendered range changes.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollable: CdkVirtualScrollable</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">attach
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把 <code>CdkVirtualScrollRepeater</code> 附着到这个视口。</p><p translation-origin="off">Attaches a <code>CdkVirtualScrollRepeater</code> to this viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        forOf</p>
+      <code class="docs-api-method-parameter-type">CdkVirtualScrollRepeater&lt;any&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">checkViewportSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新视口规格并重新渲染。</p><p translation-origin="off">Update the viewport dimensions and re-render.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">拆除当前的 <code>CdkVirtualForOf</code>。</p><p translation-origin="off">Detaches the current <code>CdkVirtualForOf</code>.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回在宿主元素上发生 scroll 事件时会触发的可观察对象。</p><p translation-origin="off">Returns observable that emits when a scroll event is fired on the host element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDataLength
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取绑定到该视口的数据的长度（以条目数表示）。</p><p translation-origin="off">Gets the length of the data bound to this viewport (in number of items).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getElementRef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取视口的 ElementRef。</p><p translation-origin="off">Gets the ElementRef for the viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getOffsetToRenderedContentStart
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取从视口起点到渲染数据起始位置的偏移量（以像素为单位）。</p><p translation-origin="off">Gets the offset from the start of the viewport to the start of the rendered data (in pixels).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getRenderedRange
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取当前渲染的条目范围。</p><p translation-origin="off">Get the current rendered range of items.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ListRange</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getViewportSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取视口的大小（以像素为单位）。</p><p translation-origin="off">Gets the size of the viewport (in pixels).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量指定范围的总组合大小。如果该范围包含未渲染的条目，则抛出此异常。</p><p translation-origin="off">Measure the total combined size of the given range. Throws if the range includes items that are
+not rendered.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        range</p>
+      <code class="docs-api-method-parameter-type">ListRange</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureRenderedContentSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量所有渲染条目的组合大小。</p><p translation-origin="off">Measure the combined size of all of the rendered items.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从可滚动区的开头得到当前的滚动偏移量（以像素为单位）。</p><p translation-origin="off">Gets the current scroll offset from the start of the scrollable (in pixels).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "start" | "end" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">测量到边缘的偏移。在垂直模式下默认为 “top”，在水平模式下默认为 “start”。</p><p translation-origin="off">The edge to measure the offset from. Defaults to 'top' in vertical mode and 'start'
+    in horizontal mode.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureViewportOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量视口相对于滚动容器的偏移量</p><p translation-origin="off">Measures the offset of the viewport from the scrolling container</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "start" | "end" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要测量的边缘。</p><p translation-origin="off">The edge to measure from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量给定方向的视口大小。</p><p translation-origin="off">Measure the viewport size for the provided orientation.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">测量尺寸的方向。</p><p translation-origin="off">The orientation to measure the size from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollTo
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定的偏移量。这是浏览器原生 scrollTo 方法的标准化版本，因为各个浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+对于此方法，无论布局方向如何，左右都总是指向滚动容器的左侧和右侧。start 和 end 在 LTR 上下文中分别指向左右，在 RTL 上下文中则相反。</p><p translation-origin="off">Scrolls to the specified offsets. This is a normalized version of the browser's native scrollTo
+method, since browsers are not consistent about what scrollLeft means in RTL. For this method
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">指定要滚动到的偏移量。</p><p translation-origin="off">specified the offsets to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定索引处的偏移量。</p><p translation-origin="off">Scrolls to the offset for the given index.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        index</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要滚动的元素的索引。</p><p translation-origin="off">The index of the element to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        behavior</p>
+      <code class="docs-api-method-parameter-type">ScrollBehavior = 'auto'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">滚动时要使用的 ScrollBehavior。行为默认是 <code>auto</code>。</p><p translation-origin="off">The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollToOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从视口开始处滚动到指定的偏移量。请注意，这并不会总是与设置 <code>scrollTop</code> 或 <code>scrollLeft</code> 一致。在水平视口中，视图是从右向左的方向，这相当于设置了一个虚构的 <code>scrollRight</code> 属性。</p><p translation-origin="off">Scrolls to the given offset from the start of the viewport. Please note that this is not always
+the same as setting <code>scrollTop</code> or <code>scrollLeft</code>. In a horizontal viewport with right-to-left
+direction, this would be the equivalent of setting a fictional <code>scrollRight</code> property.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        offset</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要滚动到的偏移量。</p><p translation-origin="off">The offset to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        behavior</p>
+      <code class="docs-api-method-parameter-type">ScrollBehavior = 'auto'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">滚动时要使用的 ScrollBehavior。行为默认是 <code>auto</code>。</p><p translation-origin="off">The ScrollBehavior to use when scrolling. Default is behavior is <code>auto</code>.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setRenderedContentOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置从视口起点到渲染数据起点或终点的偏移量（以像素为单位）。</p><p translation-origin="off">Sets the offset from the start of the viewport to either the start or end of the rendered data
+(in pixels).</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        offset</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        to</p>
+      <code class="docs-api-method-parameter-type">"to-start" | "to-end" = 'to-start'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setRenderedRange
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置当前渲染的索引范围。</p><p translation-origin="off">Sets the currently rendered range of indices.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        range</p>
+      <code class="docs-api-method-parameter-type">ListRange</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setTotalContentSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置所有内容的总大小（以像素为单位），包括当前未渲染的内容。</p><p translation-origin="off">Sets the total size of all content (in pixels), including content that is not currently
+rendered.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        size</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkVirtualScrollableElement" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkVirtualScrollableElement"></span>
+  <code>CdkVirtualScrollableElement</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/scrolling/api#CdkVirtualScrollable" class="docs-api-class-extends-type">
+      CdkVirtualScrollable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">为附着到的元素提供一个虚拟可滚动。</p><p translation-origin="off">Provides a virtual scrollable for the element it is attached to.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkVirtualScrollingElement]</span>
+  
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回在宿主元素上发生 scroll 事件时会触发的可观察对象。</p><p translation-origin="off">Returns observable that emits when a scroll event is fired on the host element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getElementRef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取视口的 ElementRef。</p><p translation-origin="off">Gets the ElementRef for the viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量相对于视口指定边缘的滚动偏移量。这个方法可以用来代替对 scrollLeft 或 scrollTop 的直接检查，因为各浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+该方法返回的值是标准化的，左右都总是指向滚动容器的左侧和右侧，与布局方向无关。start 和 end 在 LTR 上下文中指向左右，在 RTL 上下文则相反。</p><p translation-origin="off">Measures the scroll offset relative to the specified edge of the viewport. This method can be
+used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
+about what scrollLeft means in RTL. The values returned by this method are normalized such that
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "start" | "end" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要测量的边缘。</p><p translation-origin="off">The edge to measure from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量给定方向的视口大小。</p><p translation-origin="off">Measure the viewport size for the provided orientation.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">测量尺寸的方向。</p><p translation-origin="off">The orientation to measure the size from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollTo
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定的偏移量。这是浏览器原生 scrollTo 方法的标准化版本，因为各个浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+对于此方法，无论布局方向如何，左右都总是指向滚动容器的左侧和右侧。start 和 end 在 LTR 上下文中分别指向左右，在 RTL 上下文中则相反。</p><p translation-origin="off">Scrolls to the specified offsets. This is a normalized version of the browser's native scrollTo
+method, since browsers are not consistent about what scrollLeft means in RTL. For this method
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">指定要滚动到的偏移量。</p><p translation-origin="off">specified the offsets to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkVirtualScrollableWindow" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkVirtualScrollableWindow"></span>
+  <code>CdkVirtualScrollableWindow</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/scrolling/api#CdkVirtualScrollable" class="docs-api-class-extends-type">
+      CdkVirtualScrollable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">为全局/窗口滚动条提供虚拟可滚动。</p><p translation-origin="off">Provides as virtual scrollable for the global / window scrollbar.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">cdk-virtual-scroll-viewport[scrollWindow]</span>
+  
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-5">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回在宿主元素上发生 scroll 事件时会触发的可观察对象。</p><p translation-origin="off">Returns observable that emits when a scroll event is fired on the host element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getElementRef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取视口的 ElementRef。</p><p translation-origin="off">Gets the ElementRef for the viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量相对于视口指定边缘的滚动偏移量。这个方法可以用来代替对 scrollLeft 或 scrollTop 的直接检查，因为各浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+该方法返回的值是标准化的，左右都总是指向滚动容器的左侧和右侧，与布局方向无关。start 和 end 在 LTR 上下文中指向左右，在 RTL 上下文则相反。</p><p translation-origin="off">Measures the scroll offset relative to the specified edge of the viewport. This method can be
+used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
+about what scrollLeft means in RTL. The values returned by this method are normalized such that
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "start" | "end" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要测量的边缘。</p><p translation-origin="off">The edge to measure from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量给定方向的视口大小。</p><p translation-origin="off">Measure the viewport size for the provided orientation.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">测量尺寸的方向。</p><p translation-origin="off">The orientation to measure the size from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollTo
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定的偏移量。这是浏览器原生 scrollTo 方法的标准化版本，因为各个浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+对于此方法，无论布局方向如何，左右都总是指向滚动容器的左侧和右侧。start 和 end 在 LTR 上下文中分别指向左右，在 RTL 上下文中则相反。</p><p translation-origin="off">Scrolls to the specified offsets. This is a normalized version of the browser's native scrollTo
+method, since browsers are not consistent about what scrollLeft means in RTL. For this method
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">指定要滚动到的偏移量。</p><p translation-origin="off">specified the offsets to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-scrolling-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="FixedSizeVirtualScrollStrategy" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="FixedSizeVirtualScrollStrategy"></span>
+  <code>FixedSizeVirtualScrollStrategy</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">具有固定大小已知条目列表的虚拟滚动策略。</p><p translation-origin="off">Virtual scrolling strategy for lists with items of known fixed size.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-6">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">attach
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把这个滚动策略附着到视口中。</p><p translation-origin="off">Attaches this scroll strategy to a viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        viewport</p>
+      <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要把此策略附着到的视口。</p><p translation-origin="off">The viewport to attach this strategy to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">这个滚动策略是从当前连接的视口中拆除出来的。</p><p translation-origin="off">Detaches this scroll strategy from the currently attached viewport.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定索引的偏移量。</p><p translation-origin="off">Scroll to the offset for the given index.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        index</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要滚动的元素的索引。</p><p translation-origin="off">The index of the element to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        behavior</p>
+      <code class="docs-api-method-parameter-type">ScrollBehavior</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">滚动时要使用的 ScrollBehavior。</p><p translation-origin="off">The ScrollBehavior to use when scrolling.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateItemAndBufferSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新条目大小和缓冲区大小。</p><p translation-origin="off">Update the item size and buffer size.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        itemSize</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">虚拟滚动列表中各条目的大小。</p><p translation-origin="off">The size of the items in the virtually scrolling list.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        minBufferPx</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">在需要渲染更多内容之前，缓冲区的最小量（以像素为单位）</p><p translation-origin="off">The minimum amount of buffer (in pixels) before needing to render more</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        maxBufferPx</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">渲染时要渲染的缓冲区（以像素为单位）。</p><p translation-origin="off">The amount of buffer (in pixels) to render when rendering more.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkVirtualScrollable" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkVirtualScrollable"></span>
+  <code>CdkVirtualScrollable</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="" class="docs-api-class-extends-type">
+      CdkScrollable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">扩展 {@link CdkScrollable} 以用作虚拟滚动的滚动容器。</p><p translation-origin="off">Extending the {@link CdkScrollable} to be used as scrolling container for virtual scrolling.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-7">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">elementScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回在宿主元素上发生 scroll 事件时会触发的可观察对象。</p><p translation-origin="off">Returns observable that emits when a scroll event is fired on the host element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;Event&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getElementRef
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取视口的 ElementRef。</p><p translation-origin="off">Gets the ElementRef for the viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureBoundingClientRectWithScrollOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量边界 ClientRect 的大小，包括滚动偏移量。</p><p translation-origin="off">Measure the bounding ClientRect size including the scroll offset.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要测量的边缘。</p><p translation-origin="off">The edge to measure from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureScrollOffset
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量相对于视口指定边缘的滚动偏移量。这个方法可以用来代替对 scrollLeft 或 scrollTop 的直接检查，因为各浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+该方法返回的值是标准化的，左右都总是指向滚动容器的左侧和右侧，与布局方向无关。start 和 end 在 LTR 上下文中指向左右，在 RTL 上下文则相反。</p><p translation-origin="off">Measures the scroll offset relative to the specified edge of the viewport. This method can be
+used instead of directly checking scrollLeft or scrollTop, since browsers are not consistent
+about what scrollLeft means in RTL. The values returned by this method are normalized such that
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        from</p>
+      <code class="docs-api-method-parameter-type">"top" | "bottom" | "start" | "end" | "left" | "right"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要测量的边缘。</p><p translation-origin="off">The edge to measure from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureViewportSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">测量给定方向的视口大小。</p><p translation-origin="off">Measure the viewport size for the provided orientation.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">测量尺寸的方向。</p><p translation-origin="off">The orientation to measure the size from.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollTo
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定的偏移量。这是浏览器原生 scrollTo 方法的标准化版本，因为各个浏览器对于 scrollLeft 在 RTL 中的理解并不一致。
+对于此方法，无论布局方向如何，左右都总是指向滚动容器的左侧和右侧。start 和 end 在 LTR 上下文中分别指向左右，在 RTL 上下文中则相反。</p><p translation-origin="off">Scrolls to the specified offsets. This is a normalized version of the browser's native scrollTo
+method, since browsers are not consistent about what scrollLeft means in RTL. For this method
+left and right always refer to the left and right side of the scrolling container irrespective
+of the layout direction. start and end refer to left and right in an LTR context and vice-versa
+in an RTL context.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options</p>
+      <code class="docs-api-method-parameter-type">ExtendedScrollToOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">指定要滚动到的偏移量。</p><p translation-origin="off">specified the offsets to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-scrolling-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="ViewportScrollPosition" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ViewportScrollPosition"></span>
+  <code>ViewportScrollPosition</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">在每个方向上保存视口滚动位置的对象。</p><p translation-origin="off">Object that holds the scroll position of the viewport in each direction.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>left: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>top: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="VirtualScrollStrategy" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="VirtualScrollStrategy"></span>
+  <code>VirtualScrollStrategy</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">该策略决定了应该在视口中渲染哪些条目。</p><p translation-origin="off">A strategy that dictates which items should be rendered in the viewport.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrolledIndexChange: Observable&lt;number&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当视口中可见的第一个元素的索引发生变化时触发。</p><p translation-origin="off">Emits when the index of the first element visible in the viewport changes.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-8">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">attach
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把这个滚动策略附着到视口中。</p><p translation-origin="off">Attaches this scroll strategy to a viewport.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        viewport</p>
+      <code class="docs-api-method-parameter-type">CdkVirtualScrollViewport</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要把此策略附着到的视口。</p><p translation-origin="off">The viewport to attach this strategy to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把这个滚动策略从当前连接的视口中拆除。</p><p translation-origin="off">Detaches this scroll strategy from the currently attached viewport.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">onContentRendered
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当 DOM 中渲染的条目范围发生变化时调用。</p><p translation-origin="off">Called when the range of items rendered in the DOM has changed.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">onContentScrolled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在视口发生滚动时调用（使用 requestAnimationFrame 来防抖）。</p><p translation-origin="off">Called when the viewport is scrolled (debounced using requestAnimationFrame).</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">onDataLengthChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当数据长度发生变化时调用。</p><p translation-origin="off">Called when the length of the data changes.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">onRenderedOffsetChanged
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当渲染条目的偏移量发生变化时调用。</p><p translation-origin="off">Called when the offset of the rendered items changed.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">scrollToIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">滚动到指定索引的偏移量。</p><p translation-origin="off">Scroll to the offset for the given index.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        index</p>
+      <code class="docs-api-method-parameter-type">number</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要滚动的元素的索引。</p><p translation-origin="off">The index of the element to scroll to.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        behavior</p>
+      <code class="docs-api-method-parameter-type">ScrollBehavior</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">滚动时要使用的 ScrollBehavior。</p><p translation-origin="off">The ScrollBehavior to use when scrolling.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkVirtualScrollRepeater" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkVirtualScrollRepeater"></span>
+  <code>CdkVirtualScrollRepeater</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">要被 VirtualScrollViewport 重复的条目</p><p translation-origin="off">An item to be repeated by the VirtualScrollViewport</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dataStream: Observable&lt;readonly T[]&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-9">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">measureRangeSize
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        range</p>
+      <code class="docs-api-method-parameter-type">ListRange</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">number</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-scrolling-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="ExtendedScrollToOptions" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ExtendedScrollToOptions"></span>
+  <code>ExtendedScrollToOptions</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">ScrollToOptions 的扩展版本，允许表达相对于视口顶部、底部、左侧、右侧、开头或结尾的滚动偏移量，而不仅仅是顶部和左侧。
+请注意：top 和 bottom 属性是互斥的，left 和 right、start 和 end 属性也是如此。</p><p translation-origin="off">An extended version of ScrollToOptions that allows expressing scroll offsets relative to the
+top, bottom, left, right, start, or end of the viewport rather than just the top and left.
+Please note: the top and bottom properties are mutually exclusive, as are the left, right,
+start, and end properties.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> ExtendedScrollToOptions = _XAxis &amp; _YAxis &amp; ScrollOptions;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CdkVirtualForOfContext" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="CdkVirtualForOfContext"></span>
+  <code>CdkVirtualForOfContext</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on"><code>CdkVirtualForOf</code> 渲染的条目的上下文</p><p translation-origin="off">The context for an item rendered by <code>CdkVirtualForOf</code></p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> CdkVirtualForOfContext = {
+    <span class="hljs-attr">$implicit</span>: T;
+    cdkVirtualForOf: DataSource&lt;T&gt; | Observable&lt;T[]&gt; | NgIterable&lt;T&gt;;
+    index: <span class="hljs-built_in">number</span>;
+    count: <span class="hljs-built_in">number</span>;
+    first: <span class="hljs-built_in">boolean</span>;
+    last: <span class="hljs-built_in">boolean</span>;
+    even: <span class="hljs-built_in">boolean</span>;
+    odd: <span class="hljs-built_in">boolean</span>;
+};</code>
+</pre>
+</div>
+
+
+    <h3 id="cdk-scrolling-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="DEFAULT_SCROLL_TIME" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="DEFAULT_SCROLL_TIME"></span>
+  <code>DEFAULT_SCROLL_TIME</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">默认情况下以毫秒为单位的时间来限制滚动事件的频度。</p><p translation-origin="off">Time in ms to throttle the scrolling events by default.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> DEFAULT_SCROLL_TIME: <span class="hljs-number">20</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DEFAULT_RESIZE_TIME" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="DEFAULT_RESIZE_TIME"></span>
+  <code>DEFAULT_RESIZE_TIME</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">resize 事件的默认节流时间（毫秒数）。</p><p translation-origin="off">Time in ms to throttle the resize events by default.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> DEFAULT_RESIZE_TIME: <span class="hljs-number">20</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="VIRTUAL_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="VIRTUAL_SCROLL_STRATEGY"></span>
+  <code>VIRTUAL_SCROLL_STRATEGY</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌用来指定虚拟滚动策略。</p><p translation-origin="off">The injection token used to specify the virtual scrolling strategy.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> VIRTUAL_SCROLL_STRATEGY: InjectionToken&lt;VirtualScrollStrategy&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="VIRTUAL_SCROLLABLE" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="VIRTUAL_SCROLLABLE"></span>
+  <code>VIRTUAL_SCROLLABLE</code>
+</h4><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> VIRTUAL_SCROLLABLE: InjectionToken&lt;CdkVirtualScrollable&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

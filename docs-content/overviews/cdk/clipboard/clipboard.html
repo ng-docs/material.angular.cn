@@ -1,0 +1,78 @@
+<div class="docs-markdown"><p translation-result="on">剪贴板包为处理系统剪贴板提供了一些辅助方法。</p><p translation-origin="off">The clipboard package provides helpers for working with the system clipboard.</p>
+
+
+        <h3 id="click-an-element-to-copy" class="docs-header-link" translation-result="on">
+          <span header-link="单击元素以复制它"></span>
+          单击元素以复制它
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="click-an-element-to-copy"></span>
+          Click an element to copy
+        </h3>
+      
+        
+      <p translation-result="on"><code>cdkCopyToClipboard</code> 指令可以很容易地为现有元素添加 copy-on-click 功能。指令选择器同时用作待复制文本的 <code>@Input()</code></p><p translation-origin="off">The <code>cdkCopyToClipboard</code> directive can be used to easily add copy-on-click functionality to an
+existing element. The directive selector doubles as an <code>@Input()</code> for the text to be copied.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"avatar.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Hero avatar"</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">"getShortBio()"</span>&gt;</span>
+</code></pre>
+<div material-docs-example="cdk-clipboard-overview"></div>
+
+
+        <h3 id="programmatically-copy-a-string" class="docs-header-link" translation-result="on">
+          <span header-link="以编程方式复制字符串"></span>
+          以编程方式复制字符串
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="programmatically-copy-a-string"></span>
+          Programmatically copy a string
+        </h3>
+      
+        
+      <p translation-result="on"><code>Clipboard</code> 服务会将文本复制到用户的剪贴板中。它有两个方法：<code>copy</code> 和 <code>beginCopy</code>。如果要复制相对少量的文本，你可以调用 <code>copy</code> 来把它放在剪贴板上。</p><p translation-origin="off">The <code>Clipboard</code> service copies text to the user's clipboard. It has two methods: <code>copy</code> and
+<code>beginCopy</code>. For cases where you are copying a relatively small amount of text, you can call <code>copy</code>
+directly to place it on the clipboard.</p>
+
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Clipboard} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/clipboard'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeroProfile</span> </span>{
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> clipboard: Clipboard</span>)</span> {}
+
+  <span class="hljs-function"><span class="hljs-title">copyHeroName</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-built_in">this</span>.clipboard.copy(<span class="hljs-string">'Alphonso'</span>);
+  }
+}
+</code></pre>
+<p translation-result="on">但是，对于更长的文本，浏览器需要时间来填充一个临时 textarea 元素并复制内容。在这种情况下，直接调用 <code>copy</code> 可能会失败，所以你可以通过调用 <code>beginCopy</code> 来预加载该文本。这个方法会返回一个 <code>PendingCopy</code> 对象，它有一个 <code>copy</code> 方法来真正复制缓存的文本。请注意，如果你调用过 <code>beginCopy</code>，就必须在完成后调用 <code>destroy</code> 来清理这个 <code>PendingCopy</code> 对象。</p><p translation-origin="off">However, for longer text the browser needs time to fill an intermediate textarea element and copy
+the content. Directly calling <code>copy</code> may fail in this case, so you can pre-load the text by calling
+<code>beginCopy</code>. This method returns a <code>PendingCopy</code> object that has a <code>copy</code> method to finish copying
+the text that was buffered. Please note, if you call <code>beginCopy</code>, you must clean up the
+<code>PendingCopy</code> object by calling <code>destroy</code> on it after you are finished.</p>
+
+<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {Clipboard} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/clipboard'</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HeroProfile</span> </span>{
+  <span class="hljs-attr">lifetimeAchievements</span>: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> clipboard: Clipboard</span>)</span> {}
+
+  <span class="hljs-function"><span class="hljs-title">copyAchievements</span>(<span class="hljs-params"></span>)</span> {
+    <span class="hljs-keyword">const</span> pending = <span class="hljs-built_in">this</span>.clipboard.beginCopy(<span class="hljs-built_in">this</span>.lifetimeAchievements);
+    <span class="hljs-keyword">let</span> remainingAttempts = <span class="hljs-number">3</span>;
+    <span class="hljs-keyword">const</span> attempt = <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-keyword">const</span> result = pending.copy();
+      <span class="hljs-keyword">if</span> (!result &amp;&amp; --remainingAttempts) {
+        <span class="hljs-built_in">setTimeout</span>(attempt);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// Remember to destroy when you're done!</span>
+        pending.destroy();
+      }
+    };
+    attempt();
+  }
+}
+</code></pre>
+<p translation-result="on">如果你在使用 <code>cdkCopyToClipboard</code>，则可以传入 <code>cdkCopyToClipboardAttempts</code> 输入属性要求在复制这些文本时自动重试指定的次数。</p><p translation-origin="off">If you're using the <code>cdkCopyToClipboard</code> you can pass in the <code>cdkCopyToClipboardAttempts</code> input
+to automatically attempt to copy some text a certain number of times.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> [<span class="hljs-attr">cdkCopyToClipboard</span>]=<span class="hljs-string">"longText"</span> [<span class="hljs-attr">cdkCopyToClipboardAttempts</span>]=<span class="hljs-string">"5"</span>&gt;</span>Copy text<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+</div>

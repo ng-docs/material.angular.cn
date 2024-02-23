@@ -1,0 +1,67 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-card</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-card&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-card-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-h2&quot;</span>&gt;</span>Progress bar configuration<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>Color:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;color&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;primary&quot;</span>&gt;</span>
+          Primary
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;accent&quot;</span>&gt;</span>
+          Accent
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;warn&quot;</span>&gt;</span>
+          Warn
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>Mode:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;mode&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;determinate&quot;</span>&gt;</span>
+          Determinate
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;indeterminate&quot;</span>&gt;</span>
+          Indeterminate
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;buffer&quot;</span>&gt;</span>
+          Buffer
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;query&quot;</span>&gt;</span>
+          Query
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;mode === &#x27;determinate&#x27; || mode === &#x27;buffer&#x27;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>Progress:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;value&quot;</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">&quot;mode === &#x27;buffer&#x27;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>Buffer:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">&quot;bufferValue&quot;</span> <span class="hljs-attr">matSliderThumb</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-card</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-card&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-card-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-h2&quot;</span>&gt;</span>Result<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-section&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-progress-bar</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;example-margin&quot;</span>
+          [<span class="hljs-attr">color</span>]=<span class="hljs-string">&quot;color&quot;</span>
+          [<span class="hljs-attr">mode</span>]=<span class="hljs-string">&quot;mode&quot;</span>
+          [<span class="hljs-attr">value</span>]=<span class="hljs-string">&quot;value&quot;</span>
+          [<span class="hljs-attr">bufferValue</span>]=<span class="hljs-string">&quot;bufferValue&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-progress-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>

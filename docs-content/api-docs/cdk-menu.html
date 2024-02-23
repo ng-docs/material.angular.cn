@@ -1,0 +1,4165 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-menu-api-参考文档--">
+    Angular CDK menu API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {CdkMenuModule} from '@angular/cdk/menu';
+      </code>
+    </p>
+  <h3 id="cdk-menu-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="ContextMenuTracker" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="ContextMenuTracker"></span>
+  <code>ContextMenuTracker</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">跟踪整个应用程序中最后打开的上下文菜单触发器。</p><p translation-origin="off">Tracks the last open context menu trigger across the entire application.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">update
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭上一个打开的上下文菜单并将给定的菜单设置为打开。</p><p translation-origin="off">Close the previous open context menu and set the given one as being open.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        trigger</p>
+      <code class="docs-api-method-parameter-type">CdkContextMenuTrigger</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">当前打开的上下文菜单的触发器。</p><p translation-origin="off">The trigger for the currently open Context Menu.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MenuStack" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MenuStack"></span>
+  <code>MenuStack</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">MenuStack 允许订阅者监听关闭事件（当 MenuStackItem 从堆栈中弹出时）以执行关闭操作。当 MenuStack 为空时，它会从 <code>empty</code> 的 observable 发出，指定侦听器应根据更近者的请求执行的下一个焦点操作。</p><p translation-origin="off">MenuStack allows subscribers to listen for close events (when a MenuStackItem is popped off
+of the stack) in order to perform closing actions. Upon the MenuStack being empty it emits
+from the <code>empty</code> observable specifying the next focus action which the listener should perform
+as requested by the closer.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closed: Observable&lt;MenuStackCloseEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个 Observable 发出已请求关闭的 MenuStackItem。</p><p translation-origin="off">Observable which emits the MenuStackItem which has been requested to close.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>emptied: Observable&lt;FocusNext | undefined&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">弹出最后一个元素后，当 MenuStack 为空时发出的 Observable。它发出一个 FocusNext 事件，该事件指定关闭者请求侦听器执行的操作。</p><p translation-origin="off">Observable which emits when the MenuStack is empty after popping off the last element. It
+emits a FocusNext event which specifies the action the closer has requested the listener
+perform.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasFocus: Observable&lt;boolean&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">这个 Observable 发出菜单栈中的任何菜单是否具有焦点。</p><p translation-origin="off">Observable which emits whether any menu in the menu stack has focus.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: `${nextId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单栈的 ID。</p><p translation-origin="off">The ID of this menu stack.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从堆栈中弹出项目直到 <code>lastItem</code>（含）并在 close 这个 observable 上发出每个项目。如果堆栈为空或 <code>lastItem</code> 不在此堆栈上，则什么也不做。</p><p translation-origin="off">Pop items off of the stack up to and including <code>lastItem</code> and emit each on the close
+observable. If the stack is empty or <code>lastItem</code> is not on the stack it does nothing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        lastItem</p>
+      <code class="docs-api-method-parameter-type">MenuStackItem</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">从堆栈中弹出的最后一项。</p><p translation-origin="off">the last item to pop off the stack.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">CloseOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">配置关闭行为的选项。</p><p translation-origin="off">Options that configure behavior on close.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closeAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">弹出所有 MenuStackItems 并在 <code>close</code> 这个 observable 上逐一发出。</p><p translation-origin="off">Pop off all MenuStackItems and emit each one on the <code>close</code> observable one by one.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">CloseOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">用来配置关闭时行为的选项。</p><p translation-origin="off">Options that configure behavior on close.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closeSubMenuOf
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从堆栈中弹出项目直到 <code>lastItem</code>（不含）并在 close 这个 observable 上发出每个项目。如果堆栈为空或 <code>lastItem</code> 不在堆栈上，则什么也不做。</p><p translation-origin="off">Pop items off of the stack up to but excluding <code>lastItem</code> and emit each on the close
+observable. If the stack is empty or <code>lastItem</code> is not on the stack it does nothing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        lastItem</p>
+      <code class="docs-api-method-parameter-type">MenuStackItem</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">应该留在堆栈上的元素</p><p translation-origin="off">the element which should be left on the stack</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">hasInlineMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">菜单栈是否关联着内联菜单。</p><p translation-origin="off">Whether the menu stack is associated with an inline menu.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-modifier-method-marker">
+          static
+        </div>inline
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">创建源自内联菜单的菜单栈。</p><p translation-origin="off">Creates a menu stack that originates from an inline menu.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        orientation</p>
+      <code class="docs-api-method-parameter-type">"vertical" | "horizontal"</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">inlineMenuOrientation
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关联的内联菜单的方向。</p><p translation-origin="off">The orientation of the associated inline menu.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isEmpty
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此堆栈为空，则返回 true。</p><p translation-origin="off">Return true if this stack is empty.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">length
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">返回堆栈的长度。</p><p translation-origin="off">Return the length of the stack.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">peek
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取堆栈中最顶部的元素。</p><p translation-origin="off">Get the top most element on the stack.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MenuStackItem | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">push
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将项目添加到此菜单栈。</p><p translation-origin="off">Adds an item to the menu stack.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        menu</p>
+      <code class="docs-api-method-parameter-type">MenuStackItem</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要放入此堆栈的 MenuStackItem。</p><p translation-origin="off">the MenuStackItem to put on the stack.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">setHasFocus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置菜单栈是否包含有焦点的元素。</p><p translation-origin="off">Sets whether the menu stack contains the focused element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        hasFocus</p>
+      <code class="docs-api-method-parameter-type">boolean</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="TargetMenuAim" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="TargetMenuAim"></span>
+  <code>TargetMenuAim</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">TargetMenuAim 会预测用户是否正在进入子菜单。它计算用户鼠标在当前菜单中移动的轨迹，以确定鼠标是否正在向打开的子菜单移动。</p><p translation-origin="off">TargetMenuAim predicts if a user is moving into a submenu. It calculates the
+trajectory of the user's mouse movement in the current menu to determine if the
+mouse is moving towards an open submenu.</p>
+
+<p translation-result="on">通过计算用户最后 NUM_POINTS 移动的斜率来确定，其中每对点确定轨迹线是否指向子菜单。它使用的方法是检查是否至少有 NUM_POINTS / 2 对来确定用户正在移至子菜单来。</p><p translation-origin="off">The determination is made by calculating the slope of the users last NUM_POINTS moves where each
+pair of points determines if the trajectory line points into the submenu. It uses consensus
+approach by checking if at least NUM_POINTS / 2 pairs determine that the user is moving towards
+to submenu.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">initialize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置菜单及其 PointerFocusTracker。</p><p translation-origin="off">Set the Menu and its PointerFocusTracker.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        menu</p>
+      <code class="docs-api-method-parameter-type">Menu</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该 MenuAim 服务控制的菜单。</p><p translation-origin="off">The menu that this menu aim service controls.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        pointerTracker</p>
+      <code class="docs-api-method-parameter-type">PointerFocusTracker&lt;FocusableElement &amp; Toggler&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">给定菜单的 <code>PointerFocusTracker</code> 。</p><p translation-origin="off">The <code>PointerFocusTracker</code> for the given menu.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当认为用户没有向子菜单移动时调用 <code>doToggle</code> 回调。</p><p translation-origin="off">Calls the <code>doToggle</code> callback when it is deemed that the user is not moving towards
+the submenu.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        doToggle</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">当用户没有移向子菜单时要调用的函数。</p><p translation-origin="off">the function called when the user is not moving towards the submenu.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-menu-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkMenuBar" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuBar"></span>
+  <code>CdkMenuBar</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuBase" class="docs-api-class-extends-type">
+      CdkMenuBase
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">指令应用于通过设置适当的角色、aria 属性和无障碍化键盘和鼠标处理逻辑将其配置为 MenuBar 的元素。应用此指令的组件应包含标有 CdkMenuItem 的组件。</p><p translation-origin="off">Directive applied to an element which configures it as a MenuBar by setting the appropriate
+role, aria attributes, and accessible keyboard and mouse handling logic. The component that
+this directive is applied to should contain components marked with CdkMenuItem.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenuBar]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenuBar</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: `cdk-menu-${nextId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单的宿主元素的 id。</p><p translation-origin="off">The id of the menu's host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isInline: true</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单是否内联显示（即始终存在的弹出菜单，与之相对的是通过触发器元素由用户触发的条件化弹出菜单）。</p><p translation-origin="off">Whether the menu is displayed inline (i.e. always present vs a conditional popup that the user triggers with a trigger element).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>items: QueryList&lt;CdkMenuItem&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">嵌套在此菜单中的所有子 MenuItem 元素。</p><p translation-origin="off">All child MenuItem elements nested in this Menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuStack: MenuStack</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单所属的菜单栈。</p><p translation-origin="off">The stack of menus this menu belongs to.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nativeElement: HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单的原生 DOM 宿主元素。</p><p translation-origin="off">The menu's native DOM host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>orientation: 'horizontal'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单流中的菜单项方向。</p><p translation-origin="off">The direction items in the menu flow.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusFirstItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的第一个 MenuItem 上并设置焦点原点。</p><p translation-origin="off">Place focus on the first MenuItem in the menu and set the focus origin.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = 'program'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">导致此焦点事件的来源模式。</p><p translation-origin="off">The origin input mode of the focus event.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusLastItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的最后一个 MenuItem 上并设置焦点原点。</p><p translation-origin="off">Place focus on the last MenuItem in the menu and set the focus origin.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = 'program'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">导致此焦点事件的来源模式。</p><p translation-origin="off">The origin input mode of the focus event.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenu" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenu"></span>
+  <code>CdkMenu</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuBase" class="docs-api-class-extends-type">
+      CdkMenuBase
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">将此元素配置为菜单的指令，该菜单应包含标记为 CdkMenuItem 或 CdkMenuGroup 的子元素。为菜单设置适当的角色和 aria 属性，并包含可访问的键盘和鼠标处理逻辑。</p><p translation-origin="off">Directive which configures the element as a Menu which should contain child elements marked as
+CdkMenuItem or CdkMenuGroup. Sets the appropriate role and aria-attributes for a menu and
+contains accessible keyboard and mouse handling logic.</p>
+
+<p translation-result="on">它还充当标有角色 <code>menuitemradio</code> 的元素的 RadioGroup。</p><p translation-origin="off">It also acts as a RadioGroup for elements marked with role <code>menuitemradio</code>.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenu]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenu</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: `cdk-menu-${nextId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单的宿主元素的 id。</p><p translation-origin="off">The id of the menu's host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>closed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当菜单关闭时会发出本事件。</p><p translation-origin="off">Event emitted when the menu is closed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isInline: !this._parentTrigger</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单是否内联显示（即始终存在的弹出菜单，与之相对的是通过触发器元素由用户触发的条件化弹出菜单）。</p><p translation-origin="off">Whether the menu is displayed inline (i.e. always present vs a conditional popup that the user triggers with a trigger element).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>items: QueryList&lt;CdkMenuItem&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">嵌套在此菜单中的所有子 MenuItem 元素。</p><p translation-origin="off">All child MenuItem elements nested in this Menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuStack: MenuStack</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单所属的菜单栈。</p><p translation-origin="off">The stack of menus this menu belongs to.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nativeElement: HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单的原生 DOM 宿主元素。</p><p translation-origin="off">The menu's native DOM host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>orientation: 'vertical'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单流中菜单项的方向。</p><p translation-origin="off">The direction items in the menu flow.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusFirstItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的第一个 MenuItem 上并设置焦点原点。</p><p translation-origin="off">Place focus on the first MenuItem in the menu and set the focus origin.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = 'program'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">导致此焦点事件的来源模式。</p><p translation-origin="off">The origin input mode of the focus event.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusLastItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的最后一个 MenuItem 上并设置焦点原点。</p><p translation-origin="off">Place focus on the last MenuItem in the menu and set the focus origin.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = 'program'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">导致此焦点事件的来源模式。</p><p translation-origin="off">The origin input mode of the focus event.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuBase" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuBase"></span>
+  <code>CdkMenuBase</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuGroup" class="docs-api-class-extends-type">
+      CdkMenuGroup
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">实现所有菜单共有的共享逻辑的抽象指令。可以扩展此类以创建自定义菜单类型。</p><p translation-origin="off">Abstract directive that implements shared logic common to all menus.
+This class can be extended to create custom menu types.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: `cdk-menu-${nextId++}`</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单的宿主元素的 id。</p><p translation-origin="off">The id of the menu's host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>destroyed: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当 MenuBar 被销毁时发出。</p><p translation-origin="off">Emits when the MenuBar is destroyed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dir: inject(Directionality, { optional: true })</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前页面的方向性（文本方向）。</p><p translation-origin="off">The directionality (text direction) of the current page.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isInline: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单是否内联显示（即始终存在的弹出菜单，与之相对的是通过触发器元素由用户触发的条件化弹出菜单）。</p><p translation-origin="off">Whether the menu is displayed inline (i.e. always present vs a conditional popup that the
+user triggers with a trigger element).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>items: QueryList&lt;CdkMenuItem&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">嵌套在此菜单中的所有子 MenuItem 元素。</p><p translation-origin="off">All child MenuItem elements nested in this Menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>keyManager: FocusKeyManager&lt;CdkMenuItem&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">处理菜单的键盘事件。</p><p translation-origin="off">Handles keyboard events for the menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuAim: inject(MENU_AIM, { optional: true, self: true })</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单使用的 MenuAim 服务。</p><p translation-origin="off">The menu aim service used by this menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuStack: MenuStack</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单所属的菜单栈。</p><p translation-origin="off">The stack of menus this menu belongs to.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nativeElement: HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单的原生 DOM 宿主元素。</p><p translation-origin="off">The menu's native DOM host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ngZone: inject(NgZone)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">Angular 区域（Zone）。</p><p translation-origin="off">The Angular zone.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>orientation: 'horizontal' | 'vertical'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单流中的菜单项方向。</p><p translation-origin="off">The direction items in the menu flow.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pointerTracker: PointerFocusTracker&lt;CdkMenuItem&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">跟踪用户鼠标在菜单上的移动。</p><p translation-origin="off">Tracks the users mouse movements over the menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>triggerItem: CdkMenuItem</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">触发打开子菜单的菜单项。</p><p translation-origin="off">The Menu Item which triggered the open submenu.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-5">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closeOpenMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果当前活动项打开了所请求的 MenuStackItem，则关闭打开的菜单。</p><p translation-origin="off">Close the open menu if the current active item opened the requested MenuStackItem.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        menu</p>
+      <code class="docs-api-method-parameter-type">MenuStackItem</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">请求关闭菜单。</p><p translation-origin="off">The menu requested to be closed.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ focusParentTrigger?</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">用于配置关闭行为的选项。</p><p translation-origin="off">Options to configure the behavior on close.</p>
+
+<ul>
+<li><p translation-result="on"><code>focusParentTrigger</code> 关闭菜单后是否聚焦父触发器。</p><p translation-origin="off"><code>focusParentTrigger</code> Whether to focus the parent trigger after closing the menu.</p>
+
+</li>
+</ul>
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusFirstItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的第一个 MenuItem 上并设置焦点原点。</p><p translation-origin="off">Place focus on the first MenuItem in the menu and set the focus origin.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = 'program'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">导致此焦点事件的来源模式。</p><p translation-origin="off">The origin input mode of the focus event.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusLastItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的最后一个 MenuItem 上并设置焦点原点。</p><p translation-origin="off">Place focus on the last MenuItem in the menu and set the focus origin.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin = 'program'</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">导致此焦点事件的来源模式。</p><p translation-origin="off">The origin input mode of the focus event.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuItem" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuItem"></span>
+  <code>CdkMenuItem</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">当位于 CdkMenu、CdkMenuBar 或 CdkMenuGroup 中时，该指令为元素提供使用键盘进行聚焦和导航的能力。它在单击时执行用户定义的行为。</p><p translation-origin="off">Directive which provides the ability for an element to be focused and navigated to using the
+keyboard when residing in a CdkMenu, CdkMenuBar, or CdkMenuGroup. It performs user defined
+behavior when clicked.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenuItem]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenuItem</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">CdkMenuItem 是否被禁用 - 默认为 false</p><p translation-origin="off">Whether the CdkMenuItem is disabled - defaults to false</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuitemTypeaheadLabel'</span>)
+        </div><p class="docs-api-property-name">
+      <code>typeaheadLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在菜单预先输入期间用于定位此菜单项的文本。如果未指定，将使用菜单项的 <code>textContent</code> 。</p><p translation-origin="off">The text used to locate this item during menu typeahead. If not specified,
+the <code>textContent</code> of the item will be used.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkMenuItemTriggered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>triggered: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果此 MenuItem 是常规 MenuItem，则在由键盘或鼠标事件触发时输出。</p><p translation-origin="off">If this MenuItem is a regular MenuItem, outputs when it is triggered by a keyboard or mouse
+event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closeOnSpacebarTrigger: true</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果由空格键触发，本菜单项是否应关闭此菜单。</p><p translation-origin="off">Whether the item should close the menu if triggered by the spacebar.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>destroyed: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当此菜单项被销毁时发出。</p><p translation-origin="off">Emits when the menu item is destroyed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasMenu: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该菜单项是否已打开了某个菜单。</p><p translation-origin="off">Whether the menu item opens a menu.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-6">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在元素上。</p><p translation-origin="off">Place focus on the element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取 FocusableOption 接口所需的本元素的标签。</p><p translation-origin="off">Get the label for this element which is required by the FocusableOption interface.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果 Menu 已打开并且在 DOM 中可见，则获取对所渲染的 Menu 的引用。</p><p translation-origin="off">Get a reference to the rendered Menu if the Menu is open and it is visible in the DOM.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Menu | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">如果菜单已打开则为此菜单，否则为 undefined。</p><p translation-origin="off">the menu if it is open, otherwise undefined.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenuTrigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取与此元素关联的 CdkMenuTrigger。</p><p translation-origin="off">Get the CdkMenuTrigger associated with this element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isMenuOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此 MenuItem 有一个已附着的菜单并且它是打开的，则返回 true。</p><p translation-origin="off">Return true if this MenuItem has an attached menu and it is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">trigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此菜单项未禁用并且元素没有附着到某个菜单触发器，则在 cdkMenuItemTriggered 上发出事件并关闭所有打开的菜单。</p><p translation-origin="off">If the menu item is not disabled and the element does not have a menu trigger attached, emit
+on the cdkMenuItemTriggered emitter and close all open menus.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ keepOpen</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">配置此菜单项如何触发的选项</p><p translation-origin="off">Options the configure how the item is triggered</p>
+
+<ul>
+<li><p translation-result="on">keepOpen：指定触发此菜单项后菜单是否应保持打开状态。</p><p translation-origin="off">keepOpen: specifies that the menu should be kept open after triggering the item.</p>
+
+</li>
+</ul>
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuItemCheckbox" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuItemCheckbox"></span>
+  <code>CdkMenuItemCheckbox</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuItemSelectable" class="docs-api-class-extends-type">
+      CdkMenuItemSelectable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">为 “menuitemcheckbox” ARIA 角色提供行为的指令，其行为类似于传统的复选框。</p><p translation-origin="off">A directive providing behavior for the "menuitemcheckbox" ARIA role, which behaves similarly to a
+conventional checkbox.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenuItemCheckbox]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenuItemCheckbox</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemChecked'</span>)
+        </div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否已选中此元素</p><p translation-origin="off">Whether the element is checked</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">CdkMenuItem 是否被禁用 - 默认为 false</p><p translation-origin="off">Whether the CdkMenuItem is disabled - defaults to false</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuitemTypeaheadLabel'</span>)
+        </div><p class="docs-api-property-name">
+      <code>typeaheadLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在菜单预先输入期间用于定位此菜单项的文本。如果未指定，将使用菜单项的 <code>textContent</code> 。</p><p translation-origin="off">The text used to locate this item during menu typeahead. If not specified,
+the <code>textContent</code> of the item will be used.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkMenuItemTriggered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>triggered: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果此 MenuItem 是常规 MenuItem，则在由键盘或鼠标事件触发时输出。</p><p translation-origin="off">If this MenuItem is a regular MenuItem, outputs when it is triggered by a keyboard or mouse
+event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasMenu: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该菜单项是否已打开了某个菜单。</p><p translation-origin="off">Whether the menu item opens a menu.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-7">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在元素上。</p><p translation-origin="off">Place focus on the element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取 FocusableOption 接口所需的本元素的标签。</p><p translation-origin="off">Get the label for this element which is required by the FocusableOption interface.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果 Menu 已打开并且在 DOM 中可见，则获取对所渲染的 Menu 的引用。</p><p translation-origin="off">Get a reference to the rendered Menu if the Menu is open and it is visible in the DOM.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Menu | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">如果菜单已打开则为此菜单，否则为 undefined。</p><p translation-origin="off">the menu if it is open, otherwise undefined.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenuTrigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取与此元素关联的 CdkMenuTrigger。</p><p translation-origin="off">Get the CdkMenuTrigger associated with this element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isMenuOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此 MenuItem 有一个已附着的菜单并且它是打开的，则返回 true。</p><p translation-origin="off">Return true if this MenuItem has an attached menu and it is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">trigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换复选框的选中状态。</p><p translation-origin="off">Toggle the checked state of the checkbox.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ keepOpen</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">配置菜单项如何触发的选项</p><p translation-origin="off">Options the configure how the item is triggered</p>
+
+<ul>
+<li><p translation-result="on">keepOpen：指定触发项后菜单应保持打开状态。</p><p translation-origin="off">keepOpen: specifies that the menu should be kept open after triggering the item.</p>
+
+</li>
+</ul>
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuItemRadio" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuItemRadio"></span>
+  <code>CdkMenuItemRadio</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuItemSelectable" class="docs-api-class-extends-type">
+      CdkMenuItemSelectable
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">为 “menuitemradio” ARIA 角色提供行为的指令，其行为类似于传统的单选按钮。同一个 <code>CdkMenu</code> 或 <code>CdkMenuGroup</code> 中的任何同级 <code>CdkMenuItemRadio</code> 实例都包含一个强制执行唯一选择的单选组。</p><p translation-origin="off">A directive providing behavior for the "menuitemradio" ARIA role, which behaves similarly to
+a conventional radio-button. Any sibling <code>CdkMenuItemRadio</code> instances within the same <code>CdkMenu</code>
+or <code>CdkMenuGroup</code> comprise a radio group with unique selection enforced.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenuItemRadio]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenuItemRadio</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-6">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemChecked'</span>)
+        </div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否已选中此元素</p><p translation-origin="off">Whether the element is checked</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">CdkMenuItem 是否被禁用 - 默认为 false</p><p translation-origin="off">Whether the CdkMenuItem is disabled - defaults to false</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuitemTypeaheadLabel'</span>)
+        </div><p class="docs-api-property-name">
+      <code>typeaheadLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在菜单预先输入期间用于定位此菜单项的文本。如果未指定，将使用菜单项的 <code>textContent</code> 。</p><p translation-origin="off">The text used to locate this item during menu typeahead. If not specified,
+the <code>textContent</code> of the item will be used.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkMenuItemTriggered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>triggered: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果此 MenuItem 是常规 MenuItem，则在由键盘或鼠标事件触发时输出。</p><p translation-origin="off">If this MenuItem is a regular MenuItem, outputs when it is triggered by a keyboard or mouse
+event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasMenu: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该菜单项是否已打开了某个菜单。</p><p translation-origin="off">Whether the menu item opens a menu.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-8">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在元素上。</p><p translation-origin="off">Place focus on the element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取 FocusableOption 接口所需的本元素的标签。</p><p translation-origin="off">Get the label for this element which is required by the FocusableOption interface.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果 Menu 已打开并且在 DOM 中可见，则获取对所渲染的 Menu 的引用。</p><p translation-origin="off">Get a reference to the rendered Menu if the Menu is open and it is visible in the DOM.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Menu | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">如果菜单已打开则为此菜单，否则为 undefined。</p><p translation-origin="off">the menu if it is open, otherwise undefined.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenuTrigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取与此元素关联的 CdkMenuTrigger。</p><p translation-origin="off">Get the CdkMenuTrigger associated with this element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isMenuOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此 MenuItem 有一个已附着的菜单并且它是打开的，则返回 true。</p><p translation-origin="off">Return true if this MenuItem has an attached menu and it is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">trigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换单选按钮的选中状态。</p><p translation-origin="off">Toggles the checked state of the radio-button.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ keepOpen</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">配置此菜单项如何触发的选项</p><p translation-origin="off">Options the configure how the item is triggered</p>
+
+<ul>
+<li><p translation-result="on">keepOpen：指定触发项后菜单是否应保持打开状态。</p><p translation-origin="off">keepOpen: specifies that the menu should be kept open after triggering the item.</p>
+
+</li>
+</ul>
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuTrigger"></span>
+  <code>CdkMenuTrigger</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuTriggerBase" class="docs-api-class-extends-type">
+      CdkMenuTriggerBase
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">将其宿主元素转换为弹出菜单触发器的指令。它可以与 cdkMenuItem 结合创建子菜单。如果此元素在顶级 MenuBar 中，将在单击它时打开菜单，如果已打开了同级元素，则在悬停时打开。如果此元素在其它菜单内，它将在悬停时打开所附着的子菜单，而无论其兄弟的状态如何。</p><p translation-origin="off">A directive that turns its host element into a trigger for a popup menu.
+It can be combined with cdkMenuItem to create sub-menus. If the element is in a top level
+MenuBar it will open the menu on click, or if a sibling is already opened it will open on hover.
+If it is inside of a Menu it will open the attached Submenu on hover regardless of its sibling
+state.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenuTriggerFor]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenuTriggerFor</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-7">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkMenuTriggerData</span>)
+        </div><p class="docs-api-property-name">
+      <code>menuData: unknown</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要传递给菜单模板的上下文数据</p><p translation-origin="off">Context data to be passed along to the menu template</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkMenuPosition</span>)
+        </div><p class="docs-api-property-name">
+      <code>menuPosition: ConnectedPosition[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">为该触发器的菜单构造 <code>FlexibleConnectedPositionStrategy</code> 时要使用的首选菜单位置列表。</p><p translation-origin="off">A list of preferred menu positions to be used when constructing the
+<code>FlexibleConnectedPositionStrategy</code> for this trigger's menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkMenuTriggerFor</span>)
+        </div><p class="docs-api-property-name">
+      <code>menuTemplateRef: TemplateRef&lt;unknown&gt; | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此触发器打开的菜单的模板引用变量</p><p translation-origin="off">Template reference variable to the menu this trigger opens</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias"> cdkMenuClosed</span>)
+        </div><p class="docs-api-property-name">
+      <code>closed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当请求关闭已附着菜单时发出</p><p translation-origin="off">Emits when the attached menu is requested to close</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias"> cdkMenuOpened</span>)
+        </div><p class="docs-api-property-name">
+      <code>opened: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">请求打开已附着菜单时发出</p><p translation-origin="off">Emits when the attached menu is requested to open</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: inject(Injector)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的 DI 注入器。</p><p translation-origin="off">The DI injector for this component.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-9">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭已打开的菜单。</p><p translation-origin="off">Close the opened menu.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果菜单在 DOM 中打开并渲染，则获取对渲染出的菜单的引用。</p><p translation-origin="off">Get a reference to the rendered Menu if the Menu is open and rendered in the DOM.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Menu | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">已附着的菜单是否打开。</p><p translation-origin="off">Whether the attached menu is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开已附着的菜单。</p><p translation-origin="off">Open the attached menu.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerChildMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将子菜单注册为已被此触发器打开。</p><p translation-origin="off">Registers a child menu as having been opened by this trigger.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        child</p>
+      <code class="docs-api-method-parameter-type">Menu</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换已附着的菜单。</p><p translation-origin="off">Toggle the attached menu.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuGroup" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuGroup"></span>
+  <code>CdkMenuGroup</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on"><code>CdkMenuItemRadio</code> 实例的分组容器，类似于 <code>role="radiogroup"</code> 元素。</p><p translation-origin="off">A grouping container for <code>CdkMenuItemRadio</code> instances, similar to a <code>role="radiogroup"</code> element.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkMenuGroup]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkMenuGroup</span>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CdkMenuItemSelectable" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuItemSelectable"></span>
+  <code>CdkMenuItemSelectable</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuItem" class="docs-api-class-extends-type">
+      CdkMenuItem
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">为可选择的 MenuItems 提供检查状态的基类。</p><p translation-origin="off">Base class providing checked state for selectable MenuItems.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-8">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemChecked'</span>)
+        </div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否已选中此元素</p><p translation-origin="off">Whether the element is checked</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuItemDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">CdkMenuItem 是否被禁用 - 默认为 false</p><p translation-origin="off">Whether the CdkMenuItem is disabled - defaults to false</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkMenuitemTypeaheadLabel'</span>)
+        </div><p class="docs-api-property-name">
+      <code>typeaheadLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在菜单预先输入期间用于定位此菜单项的文本。如果未指定，将使用菜单项的 <code>textContent</code> 。</p><p translation-origin="off">The text used to locate this item during menu typeahead. If not specified,
+the <code>textContent</code> of the item will be used.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkMenuItemTriggered'</span>)
+        </div><p class="docs-api-property-name">
+      <code>triggered: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果此 MenuItem 是常规 MenuItem，则在由键盘或鼠标事件触发时输出。</p><p translation-origin="off">If this MenuItem is a regular MenuItem, outputs when it is triggered by a keyboard or mouse
+event.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closeOnSpacebarTrigger: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果由空格键触发，此菜单项是否应关闭菜单。</p><p translation-origin="off">Whether the item should close the menu if triggered by the spacebar.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasMenu: </code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该菜单项是否已打开了某个菜单。</p><p translation-origin="off">Whether the menu item opens a menu.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-10">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在元素上。</p><p translation-origin="off">Place focus on the element.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getLabel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取 FocusableOption 接口所需的本元素的标签。</p><p translation-origin="off">Get the label for this element which is required by the FocusableOption interface.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果 Menu 已打开并且在 DOM 中可见，则获取对所渲染的 Menu 的引用。</p><p translation-origin="off">Get a reference to the rendered Menu if the Menu is open and it is visible in the DOM.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Menu | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">如果菜单已打开则为此菜单，否则为 undefined。</p><p translation-origin="off">the menu if it is open, otherwise undefined.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenuTrigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取与此元素关联的 CdkMenuTrigger。</p><p translation-origin="off">Get the CdkMenuTrigger associated with this element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">CdkMenuTrigger | null</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isMenuOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此 MenuItem 有一个已附着的菜单并且它是打开的，则返回 true。</p><p translation-origin="off">Return true if this MenuItem has an attached menu and it is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">trigger
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">如果此菜单项未禁用并且元素没有附着到某个菜单触发器，则在 cdkMenuItemTriggered 上发出事件并关闭所有打开的菜单。</p><p translation-origin="off">If the menu item is not disabled and the element does not have a menu trigger attached, emit
+on the cdkMenuItemTriggered emitter and close all open menus.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">{ keepOpen</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">配置此菜单项如何触发的选项</p><p translation-origin="off">Options the configure how the item is triggered</p>
+
+<ul>
+<li><p translation-result="on">keepOpen：指定触发此菜单项后菜单是否应保持打开状态。</p><p translation-origin="off">keepOpen: specifies that the menu should be kept open after triggering the item.</p>
+
+</li>
+</ul>
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkContextMenuTrigger" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkContextMenuTrigger"></span>
+  <code>CdkContextMenuTrigger</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/menu/api#CdkMenuTriggerBase" class="docs-api-class-extends-type">
+      CdkMenuTriggerBase
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">当用户在其宿主元素中右键单击时打开菜单的指令。它知道嵌套的上下文菜单，并且只会触发最低级别的非禁用上下文菜单。</p><p translation-origin="off">A directive that opens a menu when a user right-clicks within its host element.
+It is aware of nested context menus and will trigger only the lowest level non-disabled context menu.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkContextMenuTriggerFor]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkContextMenuTriggerFor</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-9">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkContextMenuDisabled'</span>)
+        </div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">上下文菜单是否被禁用。</p><p translation-origin="off">Whether the context menu is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkContextMenuTriggerData</span>)
+        </div><p class="docs-api-property-name">
+      <code>menuData: unknown</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要传递给菜单模板的上下文数据</p><p translation-origin="off">Context data to be passed along to the menu template</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkContextMenuPosition</span>)
+        </div><p class="docs-api-property-name">
+      <code>menuPosition: ConnectedPosition[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">为该触发器的菜单构造 <code>FlexibleConnectedPositionStrategy</code> 时要使用的首选菜单位置列表。</p><p translation-origin="off">A list of preferred menu positions to be used when constructing the
+<code>FlexibleConnectedPositionStrategy</code> for this trigger's menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> cdkContextMenuTriggerFor</span>)
+        </div><p class="docs-api-property-name">
+      <code>menuTemplateRef: TemplateRef&lt;unknown&gt; | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此触发器打开的菜单的模板引用变量</p><p translation-origin="off">Template reference variable to the menu this trigger opens</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias"> cdkContextMenuClosed</span>)
+        </div><p class="docs-api-property-name">
+      <code>closed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当请求关闭已附着菜单时发出</p><p translation-origin="off">Emits when the attached menu is requested to close</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias"> cdkContextMenuOpened</span>)
+        </div><p class="docs-api-property-name">
+      <code>opened: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">请求打开已附着菜单时发出</p><p translation-origin="off">Emits when the attached menu is requested to open</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: inject(Injector)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的 DI 注入器。</p><p translation-origin="off">The DI injector for this component.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-11">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭当前打开的上下文菜单。</p><p translation-origin="off">Close the currently opened context menu.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">已附着的菜单是否打开。</p><p translation-origin="off">Whether the attached menu is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">在指定位置打开已附着的菜单。</p><p translation-origin="off">Open the attached menu at the specified location.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        coordinates</p>
+      <code class="docs-api-method-parameter-type">ContextMenuCoordinates</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">在哪里打开上下文菜单</p><p translation-origin="off">where to open the context menu</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerChildMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将子菜单注册为已被此触发器打开。</p><p translation-origin="off">Registers a child menu as having been opened by this trigger.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        child</p>
+      <code class="docs-api-method-parameter-type">Menu</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkMenuTriggerBase" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkMenuTriggerBase"></span>
+  <code>CdkMenuTriggerBase</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">实现所有菜单触发器共有的共享逻辑的抽象指令。可以扩展此类以创建自定义菜单触发器类型。</p><p translation-origin="off">Abstract directive that implements shared logic common to all menu triggers.
+This class can be extended to create custom menu trigger types.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-10">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>childMenu: Menu</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此触发器打开的子菜单。</p><p translation-origin="off">The child menu opened by this trigger.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closed: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当请求关闭已附着菜单时发出</p><p translation-origin="off">Emits when the attached menu is requested to close</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>destroyed: Subject&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当此触发器被销毁时发出。</p><p translation-origin="off">Emits when this trigger is destroyed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>injector: inject(Injector)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的 DI 注入器。</p><p translation-origin="off">The DI injector for this component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuData: unknown</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要传递给菜单模板的上下文数据</p><p translation-origin="off">Context data to be passed along to the menu template</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuPosition: ConnectedPosition[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">为该触发器的菜单构造 <code>FlexibleConnectedPositionStrategy</code> 时要使用的首选菜单位置列表。</p><p translation-origin="off">A list of preferred menu positions to be used when constructing the
+<code>FlexibleConnectedPositionStrategy</code> for this trigger's menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuStack: MenuStack</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此菜单所在的菜单栈。</p><p translation-origin="off">The menu stack in which this menu resides.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuTemplateRef: TemplateRef&lt;unknown&gt; | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此触发器打开的菜单的模板引用变量</p><p translation-origin="off">Template reference variable to the menu this trigger opens</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>opened: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">请求打开已附着菜单时发出</p><p translation-origin="off">Emits when the attached menu is requested to open</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>overlayRef: OverlayRef | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对管理已触发菜单的浮层的引用</p><p translation-origin="off">A reference to the overlay which manages the triggered menu</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stopOutsideClicksListener: merge(this.closed, this.destroyed)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当应该停止浮层上的外部指针事件侦听器时发出。</p><p translation-origin="off">Emits when the outside pointer events listener on the overlay should be stopped.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainerRef: inject(ViewContainerRef)</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的视图容器引用</p><p translation-origin="off">The view container ref for this component</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-12">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenuContentPortal
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取要附着到的包含菜单的浮层的传送点。允许菜单内容动态变化并反映在应用程序中。</p><p translation-origin="off">Get the portal to be attached to the overlay which contains the menu. Allows for the menu
+content to change dynamically and be reflected in the application.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isElementInsideMenuStack
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">给定元素是否在此触发器的菜单栈范围内。</p><p translation-origin="off">Whether the given element is inside the scope of this trigger's menu stack.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">Element</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要检查的元素。</p><p translation-origin="off">The element to check.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isOpen
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">已附着的菜单是否打开。</p><p translation-origin="off">Whether the attached menu is open.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">registerChildMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将子菜单注册为已被此触发器打开。</p><p translation-origin="off">Registers a child menu as having been opened by this trigger.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        child</p>
+      <code class="docs-api-method-parameter-type">Menu</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CdkTargetMenuAim" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkTargetMenuAim"></span>
+  <code>CdkTargetMenuAim</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">CdkTargetMenuAim 是 TargetMenuAim 服务的提供者。它可以通过 <code>cdkMenu</code> 或 <code>cdkMenuBar</code> 指令和子菜单项添加到元素中。</p><p translation-origin="off">CdkTargetMenuAim is a provider for the TargetMenuAim service. It can be added to an
+element with either the <code>cdkMenu</code> or <code>cdkMenuBar</code> directive and child menu items.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkTargetMenuAim]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">cdkTargetMenuAim</span>
+
+
+
+
+
+
+    <h3 id="cdk-menu-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="PointerFocusTracker" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="PointerFocusTracker"></span>
+  <code>PointerFocusTracker</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">PointerFocusTracker 跟踪鼠标焦点下的当前活动菜单项。它还具有当用户鼠标进入和离开被跟踪元素时发出事件的 observables。</p><p translation-origin="off">PointerFocusTracker keeps track of the currently active item under mouse focus. It also has
+observables which emit when the users mouse enters and leaves a tracked element.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-11">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>activeElement: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当前处于鼠标焦点下的元素。</p><p translation-origin="off">The element currently under mouse focus.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>entered: Observable&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当一个元素被鼠标移入时发出。</p><p translation-origin="off">Emits when an element is moused into.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>exited: Observable&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当元素被鼠标移出时发出。</p><p translation-origin="off">Emits when an element is moused out.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previousElement: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">先前处于鼠标焦点下的元素。</p><p translation-origin="off">The element previously under mouse focus.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-13">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">destroy
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">停止管理器侦听器。</p><p translation-origin="off">Stop the managers listeners.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-menu-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="FocusableElement" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="FocusableElement"></span>
+  <code>FocusableElement</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">跟踪鼠标焦点事件的菜单项。</p><p translation-origin="off">Item to track for mouse focus events.</p>
+
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MenuStackItem" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MenuStackItem"></span>
+  <code>MenuStackItem</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">菜单栈中的单个项目（菜单）。</p><p translation-origin="off">A single item (menu) in the menu stack.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-12">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>menuStack: MenuStack</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对此菜单栈项所属的菜单栈的引用。</p><p translation-origin="off">A reference to the menu stack this menu stack item belongs to.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="CloseOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CloseOptions"></span>
+  <code>CloseOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可以提供给 close 或 closeAll 方法的选项。</p><p translation-origin="off">Options that can be provided to the close or closeAll methods.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-13">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focusNextOnEmpty: FocusNext</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果关闭操作导致菜单栈变为空，则为下一个要聚焦的元素。</p><p translation-origin="off">The element to focus next if the close operation causes the menu stack to become empty.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focusParentTrigger: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">关闭菜单后是否聚焦父触发器。</p><p translation-origin="off">Whether to focus the parent trigger after closing the menu.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MenuStackCloseEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MenuStackCloseEvent"></span>
+  <code>MenuStackCloseEvent</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">关闭菜单时要派发的事件。</p><p translation-origin="off">Event dispatched when a menu is closed.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-14">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>focusParentTrigger: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">关闭菜单后是否聚焦父触发器。</p><p translation-origin="off">Whether to focus the parent trigger after closing the menu.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>item: MenuStackItem</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">正在关闭的菜单。</p><p translation-origin="off">The menu being closed.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="Menu" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="Menu"></span>
+  <code>Menu</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">指定菜单操作并用于打破循环依赖问题的接口</p><p translation-origin="off">Interface which specifies Menu operations and used to break circular dependency issues</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-15">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单的宿主元素的 id。</p><p translation-origin="off">The id of the menu's host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nativeElement: HTMLElement</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单的原生 DOM 宿主元素。</p><p translation-origin="off">The menu's native DOM host element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>orientation: 'horizontal' | 'vertical'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">菜单流中的菜单项方向。</p><p translation-origin="off">The direction items in the menu flow.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-14">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusFirstItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的第一个 MenuItem 上。</p><p translation-origin="off">Place focus on the first MenuItem in the menu.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focusLastItem
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">将焦点放在菜单中的最后一个 MenuItem。</p><p translation-origin="off">Place focus on the last MenuItem in the menu.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        focusOrigin</p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MenuAim" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MenuAim"></span>
+  <code>MenuAim</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">MenuAim （菜单瞄准器）负责确定当悬停在切换器（Toggler）菜单项时是否应关闭其同级菜单项的子菜单。使用所悬停的菜单项来调用 MenuAim 服务以确定它是否可以执行其关闭操作。</p><p translation-origin="off">MenuAim is responsible for determining if a sibling menuitem's menu should be closed when a
+Toggler item is hovered into. It is up to the hovered in item to call the MenuAim service in
+order to determine if it may perform its close actions.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-15">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">initialize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置菜单及其 PointerFocusTracker。</p><p translation-origin="off">Set the Menu and its PointerFocusTracker.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        menu</p>
+      <code class="docs-api-method-parameter-type">Menu</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">该 MenuAim 服务所控制的菜单。</p><p translation-origin="off">The menu that this menu aim service controls.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        pointerTracker</p>
+      <code class="docs-api-method-parameter-type">PointerFocusTracker&lt;FocusableElement &amp; Toggler&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">给定菜单的 <code>PointerFocusTracker</code> 。</p><p translation-origin="off">The <code>PointerFocusTracker</code> for the given menu.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">当认为用户没有移向子菜单时调用 <code>doToggle</code> 回调。</p><p translation-origin="off">Calls the <code>doToggle</code> callback when it is deemed that the user is not moving towards
+the submenu.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        doToggle</p>
+      <code class="docs-api-method-parameter-type">() =&gt; void</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">当用户没有移向子菜单时调用的函数。</p><p translation-origin="off">the function called when the user is not moving towards the submenu.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="Toggler" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="Toggler"></span>
+  <code>Toggler</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一个元素，当悬停在其上时可以打开或关闭菜单。</p><p translation-origin="off">An element which when hovered over may open or close a menu.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-16">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getMenu
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取所打开的菜单，如果没有打开菜单，则为 undefined。</p><p translation-origin="off">Gets the open menu, or undefined if no menu is open.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Menu | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-menu-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="ContextMenuCoordinates" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="ContextMenuCoordinates"></span>
+  <code>ContextMenuCoordinates</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">上下文菜单应打开的坐标。</p><p translation-origin="off">The coordinates where the context menu should open.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> ContextMenuCoordinates = {
+    <span class="hljs-attr">x</span>: <span class="hljs-built_in">number</span>;
+    y: <span class="hljs-built_in">number</span>;
+};</code>
+</pre>
+</div>
+
+
+    <h3 id="cdk-menu-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MENU_TRIGGER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MENU_TRIGGER"></span>
+  <code>MENU_TRIGGER</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用于指定 MenuStack 实现的注入令牌。</p><p translation-origin="off">Injection token used for an implementation of MenuStack.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MENU_TRIGGER: InjectionToken&lt;CdkMenuTriggerBase&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MENU_STACK" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MENU_STACK"></span>
+  <code>MENU_STACK</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用于 MenuStack 实现的注入令牌。</p><p translation-origin="off">Injection token used for an implementation of MenuStack.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MENU_STACK: InjectionToken&lt;MenuStack&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="PARENT_OR_NEW_MENU_STACK_PROVIDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="PARENT_OR_NEW_MENU_STACK_PROVIDER"></span>
+  <code>PARENT_OR_NEW_MENU_STACK_PROVIDER</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">提供父菜单栈的提供者，如果没有父菜单栈，则提供新的菜单栈。</p><p translation-origin="off">Provider that provides the parent menu stack, or a new menu stack if there is no parent one.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> PARENT_OR_NEW_MENU_STACK_PROVIDER: { <span class="hljs-attr">provide</span>: InjectionToken&lt;MenuStack&gt;; deps: Optional[][]; useFactory: <span class="hljs-function">(<span class="hljs-params">parentMenuStack?: MenuStack</span>) =&gt;</span> MenuStack; };</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER"></span>
+  <code>PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">提供父菜单栈的提供者，如果没有父菜单栈，则提供新的内联菜单栈。</p><p translation-origin="off">Provider that provides the parent menu stack, or a new inline menu stack if there is no parent one.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> PARENT_OR_NEW_INLINE_MENU_STACK_PROVIDER: <span class="hljs-function">(<span class="hljs-params">orientation: <span class="hljs-string">"vertical"</span> | <span class="hljs-string">"horizontal"</span></span>) =&gt;</span> { <span class="hljs-attr">provide</span>: InjectionToken&lt;MenuStack&gt;; deps: Optional[][]; useFactory: <span class="hljs-function">(<span class="hljs-params">parentMenuStack?: MenuStack</span>) =&gt;</span> MenuStack; };</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="CDK_MENU" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_MENU"></span>
+  <code>CDK_MENU</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用于返回实现 Menu 接口的类的注入令牌</p><p translation-origin="off">Injection token used to return classes implementing the Menu interface</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_MENU: InjectionToken&lt;Menu&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MENU_AIM" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MENU_AIM"></span>
+  <code>MENU_AIM</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">用于实现 MenuAim 的注入令牌。</p><p translation-origin="off">Injection token used for an implementation of MenuAim.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MENU_AIM: InjectionToken&lt;MenuAim&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

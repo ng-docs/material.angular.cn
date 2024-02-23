@@ -1,0 +1,625 @@
+<div class="docs-markdown"><p translation-result="on"><code>mat-table</code> 提供了一个支持 Material Design 样式的表格，可用来显示多行数据。</p><p translation-origin="off">The <code>mat-table</code> provides a Material Design styled data-table that can be used to display rows of
+data.</p>
+
+<p translation-result="on">此表格基于 CDK 中的 data-table 构建，并在数据输入和模板上采用了相同的接口，只是它的元素选择器和属性选择器都使用 <code>mat-</code> 前缀，而不是 <code>cdk-</code> 前缀。
+对于该接口的更多信息以及表格的具体实现方式，参见 <a href="/guide/cdk-table">CDK data-table 指南</a>。</p><p translation-origin="off">This table builds on the foundation of the CDK data-table and uses a similar interface for its
+data input and template, except that its element and attribute selectors will be prefixed
+with <code>mat-</code> instead of <code>cdk-</code>. For more information on the interface and a detailed look at how
+the table is implemented, see the
+<a href="https://material.angular.io/guide/cdk-table">guide covering the CDK data-table</a>.</p>
+
+
+        <h3 id="getting-started" class="docs-header-link" translation-result="on">
+          <span header-link="快速上手"></span>
+          快速上手
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="getting-started"></span>
+          Getting Started
+        </h3>
+      
+        
+      <div material-docs-example="table-basic"></div>
+
+
+        <h4 id="1-write-your-mat-table-and-provide-data" class="docs-header-link" translation-result="on">
+          <span header-link="1-编写你的-mat-table-并提供数据"></span>
+          1. 编写你的 mat-table 并提供数据
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="1-write-your-mat-table-and-provide-data"></span>
+          1. Write your mat-table and provide data
+        </h4>
+      
+        
+      <p translation-result="on">先把 <code>&lt;table mat-table&gt;</code> 组件添加到模板中，并传入数据。</p><p translation-origin="off">Begin by adding the <code>&lt;table mat-table&gt;</code> component to your template and passing in data.</p>
+
+<p translation-result="on">为表格提供数据的最简单方式就是给它的输入属性 <code>dataSource</code> 提供一个数组型数据。
+该表格将会接收这个数组，并把数组型数据中的每一个对象渲染成一行。</p><p translation-origin="off">The simplest way to provide data to the table is by passing a data array to the table's <code>dataSource</code>
+input. The table will take the array and render a row for each object in the data array.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"myDataArray"</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<p translation-result="on">为了优化表格的性能，它不会自动检查数组型数据的变更。而是要在每次在数据表中添加、删除或移动对象时，通过调用它的 <code>renderRows</code> 方法来更新表格的各行。</p><p translation-origin="off">Since the table optimizes for performance, it will not automatically check for changes to the data
+array. Instead, when objects are added, removed, or moved on the data array, you can trigger an
+update to the table's rendered rows by calling its <code>renderRows()</code> method.</p>
+
+<p translation-result="on">虽然数组是把数据绑定到数据源的<em>最简单的</em>方式，但它也受限最严重。对于更复杂的应用，建议使用 <code>DataSource</code> 实例。参见稍后的 "高级数据源" 部分了解更多。</p><p translation-origin="off">While an array is the <em>simplest</em> way to bind data into the data source, it is also
+the most limited. For more complex applications, using a <code>DataSource</code> instance
+is recommended. See the section "Advanced data sources" below for more information.</p>
+
+
+        <h4 id="2-define-the-column-templates" class="docs-header-link" translation-result="on">
+          <span header-link="2-定义列模板"></span>
+          2. 定义列模板
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="2-define-the-column-templates"></span>
+          2. Define the column templates
+        </h4>
+      
+        
+      <p translation-result="on">接着，编写表格的列模板。</p><p translation-origin="off">Next, write your table's column templates.</p>
+
+<p translation-result="on">每个列定义都应该有一个唯一的名字，并且包含其表头单元格和行内单元格的内容。</p><p translation-origin="off">Each column definition should be given a unique name and contain the content for its header and row
+cells.</p>
+
+<p translation-result="on">下面是一个名为 <code>'username'</code> 的简单列定义。
+表头单元格包含一个文本 "Name"，每个行内单元格将会渲染出每行数据中 <code>name</code> 属性的值。</p><p translation-origin="off">Here's a simple column definition with the name <code>'score'</code>. The header cell contains the text
+"Score" and each row cell will render the <code>score</code> property of each row's data.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"score"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Score <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let user"</span>&gt;</span> {{user.score}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+<p translation-result="on">请注意，单元格模板不仅限于显示简单的字符串值，它非常灵活，可以让你提供任何模板。</p><p translation-origin="off">Note that the cell templates are not restricted to only showing simple string values, but are
+flexible and allow you to provide any template.</p>
+
+<p translation-result="on">如果你的列只负责为表头和单元格渲染一个字符串值，可以改用 <code>mat-text-column</code> 来定义它。下面的列定义与上面的列定义是等价的。</p><p translation-origin="off">If your column is only responsible for rendering a single string value for the header and cells,
+you can instead define your column using the <code>mat-text-column</code>. The following column definition is
+equivalent to the one above.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"score"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
+</code></pre>
+<p translation-result="on">查看 API 文档和 <code>mat-text-column</code> 的例子，以了解如何自定义表头文本、文本对齐方式和单元格数据访问器。请注意，这与 flex-layout 表不兼容。此外，如果数据的属性最小化过，则应提供数据访问器，因为属性名和字符串名称在最小化后将不再匹配。</p><p translation-origin="off">Check out the API docs and examples of the <code>mat-text-column</code> to see how you can customize the header
+text, text alignment, and cell data accessor.  Note that this is not compatible with the flex-layout
+table. Also, a data accessor should be provided if your data may have its properties minified
+since the string name will no longer match after minification.</p>
+
+
+        <h4 id="3-define-the-row-templates" class="docs-header-link" translation-result="on">
+          <span header-link="3-定义行模板"></span>
+          3. 定义行模板
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="3-define-the-row-templates"></span>
+          3. Define the row templates
+        </h4>
+      
+        
+      <p translation-result="on">最后，一旦你定义了各个列，就要告诉表格该在表头和数据行中显示哪些列。</p><p translation-origin="off">Finally, once you have defined your columns, you need to tell the table which columns will be
+rendered in the header and data rows.</p>
+
+<p translation-result="on">先在组件中创建一个变量，其中包含你要渲染的列数组。</p><p translation-origin="off">To start, create a variable in your component that contains the list of the columns you want to
+render.</p>
+
+<pre><code class="language-ts">columnsToDisplay = [<span class="hljs-string">'userName'</span>, <span class="hljs-string">'age'</span>];
+</code></pre>
+<p translation-result="on">然后，把 <code>mat-header-row</code> 和 <code>mat-row</code> 作为内容添加到 <code>mat-table</code> 中，并提供你的列数组作为输入。</p><p translation-origin="off">Then add <code>mat-header-row</code> and <code>mat-row</code> to the content of your <code>mat-table</code> and provide your
+column list as inputs.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let myRowData; columns: columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+</code></pre>
+<p translation-result="on">注意，提供给各行的列数组可以使用任意顺序，不要求和定义列的顺序一致。同样的，你也不必包含模板中定义的每一列。</p><p translation-origin="off">Note that this list of columns provided to the rows can be in any order, not necessarily the order in
+which you wrote the column definitions. Also, you do not necessarily have to include every column
+that was defined in your template.</p>
+
+<p translation-result="on">这意味着通过调整提供给各行的列顺序，你可以轻易调整列序和动态包含/排除某些列。</p><p translation-origin="off">This means that by changing your column list provided to the rows, you can easily re-order and
+include/exclude columns dynamically.</p>
+
+
+        <h3 id="advanced-data-sources" class="docs-header-link" translation-result="on">
+          <span header-link="高级数据结构"></span>
+          高级数据结构
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="advanced-data-sources"></span>
+          Advanced data sources
+        </h3>
+      
+        
+      <p translation-result="on">为表格提供数据的最简单方式是传入一个数组型数据。对于更复杂的用例，则可以从一些更灵活的方式中受益，比如使用 Observable 流，或把你的数据源逻辑封装进 <code>DataSource</code> 类中。</p><p translation-origin="off">The simplest way to provide data to your table is by passing a data array. More complex use-cases
+may benefit from a more flexible approach involving an Observable stream or by encapsulating your
+data source logic into a <code>DataSource</code> class.</p>
+
+
+        <h4 id="observable-stream-of-data-arrays" class="docs-header-link" translation-result="on">
+          <span header-link="数组型数据的-observable-流"></span>
+          数组型数据的 Observable 流
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="observable-stream-of-data-arrays"></span>
+          Observable stream of data arrays
+        </h4>
+      
+        
+      <p translation-result="on">为表格提供数据的另一种方法是传入一个 Observable 流，每当它变化时都会发出一个要渲染的数组型数据。
+表格会监听这个流，每当它发出新的数组型数据时，就会自动触发一次更新。</p><p translation-origin="off">An alternative approach to providing data to the table is by passing an Observable stream that emits
+the data array to be rendered each time it is changed. The table will listen to this stream and
+automatically trigger an update to the rows each time a new data array is emitted.</p>
+
+
+        <h4 id="datasource" class="docs-header-link" translation-result="on">
+          <span header-link="datasource（数据源）"></span>
+          DataSource（数据源）
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="datasource"></span>
+          DataSource
+        </h4>
+      
+        
+      <p translation-result="on">对于大多数真实世界中的应用，为表格提供一个 <code>DataSource</code> 实例都会是管理数据的最佳方式。
+<code>DataSource</code> 旨在封装此应用特有的排序、过滤、分页和数据接收逻辑。</p><p translation-origin="off">For most real-world applications, providing the table a <code>DataSource</code> instance will be the best way to
+manage data. The <code>DataSource</code> is meant to serve as a place to encapsulate any sorting, filtering,
+pagination, and data retrieval logic specific to the application.</p>
+
+<p translation-result="on">DataSource 是一个至少拥有两个函数的类：<code>connect</code> 和 <code>disconnect</code>。
+表格会调用 <code>connect</code> 函数，以接收一个流，流中会发出要渲染的数组型数据。当表格销毁时，就会调用 <code>disconnect</code>，它是清理 <code>connect</code> 期间所做的各种订阅的最佳时机。</p><p translation-origin="off">A <code>DataSource</code> is simply a class that has at a minimum the following methods: <code>connect</code> and
+<code>disconnect</code>. The <code>connect</code> method will be called by the table to provide an <code>Observable</code> that emits
+the data array that should be rendered. The table will call <code>disconnect</code> when the table is destroyed,
+which may be the right time to clean up any subscriptions that may have been registered in the
+<code>connect</code> method.</p>
+
+<p translation-result="on">虽然 Angular Material 提供了现成的表格 <code>DataSource</code> 类 <code>MatTableDataSource</code>，但是你可能希望针对更复杂的用例创建自己的 <code>DataSource</code> 类。你可以用一个自定义的 <code>DataSource</code> 类来扩展抽象类 <code>DataSource</code>，然后实现其 <code>connect</code> 和 <code>disconnect</code> 方法。对于这些复杂用例，自定义 <code>DataSource</code> 必须通过扩展其他基类（ <code>MyCustomDataSource extends SomeOtherBaseClass implements DataSource</code> ）来继承其功能，以遵守 Typescript 的限制，即只能实现一个基类。</p><p translation-origin="off">Although Angular Material provides a ready-made table <code>DataSource</code> class, <code>MatTableDataSource</code>, you may
+want to create your own custom <code>DataSource</code> class for more complex use cases. This can be done by
+extending the abstract <code>DataSource</code> class with a custom <code>DataSource</code> class that then implements the
+<code>connect</code> and <code>disconnect</code> methods. For use cases where the custom <code>DataSource</code> must also inherit
+functionality by extending a different base class, the <code>DataSource</code> base class can be
+implemented instead (<code>MyCustomDataSource extends SomeOtherBaseClass implements DataSource</code>) to
+respect Typescript's restriction to only implement one base class.</p>
+
+
+        <h3 id="styling-columns" class="docs-header-link" translation-result="on">
+          <span header-link="样式列"></span>
+          样式列
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="styling-columns"></span>
+          Styling Columns
+        </h3>
+      
+        
+      <p translation-result="on">每个表格单元格都有一个基于它出现在哪一列自动生成的类。这个生成的类的格式是 <code>mat-column-NAME</code> 。例如，可以使用选择器 <code>.mat-column-symbol</code> 将名为“symbol”的列中的单元格作为目标。</p><p translation-origin="off">Each table cell has an automatically generated class based on which column it appears in. The format for this
+generated class is <code>mat-column-NAME</code>. For example, cells in a column named "symbol" can be targeted with the
+selector <code>.mat-column-symbol</code>.</p>
+
+<div material-docs-example="table-column-styling"></div>
+
+
+        <h3 id="row-templates" class="docs-header-link" translation-result="on">
+          <span header-link="行模板"></span>
+          行模板
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="row-templates"></span>
+          Row Templates
+        </h3>
+      
+        
+      <p translation-result="on">行模板上的事件处理程序和属性绑定将应用于表中渲染的每一行。例如，向行模板添加 <code>(click)</code> 处理程序将导致每个单独的行在单击时调用处理程序。</p><p translation-origin="off">Event handlers and property binding on the row templates will be applied to each row rendered by the table. For example,
+adding a <code>(click)</code> handler to the row template will cause each individual row to call the handler when clicked.</p>
+
+<div material-docs-example="table-row-binding"></div>
+
+
+        <h3 id="features" class="docs-header-link" translation-result="on">
+          <span header-link="特性"></span>
+          特性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="features"></span>
+          Features
+        </h3>
+      
+        
+      <p translation-result="on"><code>MatTable</code> 专注于一个职责：以高效且具有无障碍性的方式执行数据渲染。</p><p translation-origin="off">The <code>MatTable</code> is focused on a single responsibility: efficiently render rows of data in a
+performant and accessible way.</p>
+
+<p translation-result="on">你可能注意到了，表格本身并没有自带很多特性，而是把该表格作为一个组件联合体的一部分，来补全其它特性。</p><p translation-origin="off">You'll notice that the table itself doesn't come out of the box with a lot of features, but expects
+that the table will be included in a composition of components that fills out its features.</p>
+
+<p translation-result="on">比如，你可以把 <code>MatSort</code> 和 <code>MatPaginator</code> 添加到表格中，以提供排序和分页特性，并根据它们的输出来修改要传给表格的数据。</p><p translation-origin="off">For example, you can add sorting and pagination to the table by using MatSort and MatPaginator and
+mutating the data provided to the table according to their outputs.</p>
+
+<p translation-result="on">对于那些可以对数组型数据进行排序、分页和过滤功能的表格，为了简化其用法，Angular Material 库自带了一个 <code>MatTableDataSource</code>，它已经实现了根据当前表格的状态来决定要显示哪些列的逻辑。
+要给表格添加这些特性，请查看其相关部分的文档。</p><p translation-origin="off">To simplify the use case of having a table that can sort, paginate, and filter an array of data,
+the Angular Material library comes with a <code>MatTableDataSource</code> that has already implemented
+the logic of determining what rows should be rendered according to the current table state. To add
+these feature to the table, check out their respective sections below.</p>
+
+
+        <h4 id="pagination" class="docs-header-link" translation-result="on">
+          <span header-link="分页"></span>
+          分页
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="pagination"></span>
+          Pagination
+        </h4>
+      
+        
+      <p translation-result="on">要想对表格数据进行分页，请在表格后添加一个 <code>&lt;mat-paginator&gt;</code>。</p><p translation-origin="off">To paginate the table's data, add a <code>&lt;mat-paginator&gt;</code> after the table.</p>
+
+<p translation-result="on">如果你正在用 <code>MatTableDataSource</code> 作为表格的数据源，那么只要把 <code>MatPaginator</code> 提供给这个数据源就可以了。
+它将会自动监听用户所做的页码变更，并把正确分页之后的数据发给该表格。</p><p translation-origin="off">If you are using the <code>MatTableDataSource</code> for your table's data source, simply provide the
+<code>MatPaginator</code> to your data source. It will automatically listen for page changes made by the user
+and send the right paged data to the table.</p>
+
+<p translation-result="on">而如果你自己实现了数据分页逻辑，那就要监听该分页器的 <code>(page)</code> 输出，并把进行了正确的切片之后的数据发给表格。</p><p translation-origin="off">Otherwise if you are implementing the logic to paginate your data, you will want to listen to the
+paginator's <code>(page)</code> output and pass the right slice of data to your table.</p>
+
+<p translation-result="on">要了解使用和配置 <code>&lt;mat-paginator&gt;</code> 的更多信息，参见 <a href="guide/overview">mat-paginator 的文档</a>。</p><p translation-origin="off">For more information on using and configuring the <code>&lt;mat-paginator&gt;</code>, check out the
+<a href="https://material.angular.io/components/paginator/overview">mat-paginator docs</a>.</p>
+
+<p translation-result="on"><code>MatPaginator</code> 提供了一个对表格数据进行分页的解决方案，不过它不是唯一的选项。
+事实上，该表格可以和任何自定义的分页器 UI 或策略类协同工作，因为 <code>MatTable</code> 及其接口并没有绑死在任何特定的实现上。</p><p translation-origin="off">The <code>MatPaginator</code> is one provided solution to paginating your table's data, but it is not the only
+option. In fact, the table can work with any custom pagination UI or strategy since the <code>MatTable</code>
+and its interface is not tied to any one specific implementation.</p>
+
+<div material-docs-example="table-pagination"></div>
+
+
+        <h4 id="sorting" class="docs-header-link" translation-result="on">
+          <span header-link="排序"></span>
+          排序
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="sorting"></span>
+          Sorting
+        </h4>
+      
+        
+      <p translation-result="on">要想为表格添加排序行为，请给它添加 <code>matSort</code> 指令并把 <code>mat-sort-header</code> 指令添加到每个允许触发排序功能的表头上。</p><p translation-origin="off">To add sorting behavior to the table, add the <code>matSort</code> directive to the table and add
+<code>mat-sort-header</code> to each column header cell that should trigger sorting. Note that you have to import <code>MatSortModule</code> in order to initialize the <code>matSort</code> directive (see <a href="https://material.angular.io/components/sort/api">API docs</a>).</p>
+
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"position"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+<p translation-result="on">如果你正在用 <code>MatTableDataSource</code> 作为数据源，可以把 <code>MatSort</code> 提供给数据源，这样它就会自动监听排序的更改，并据此修改表格中数据的排序顺序。</p><p translation-origin="off">If you are using the <code>MatTableDataSource</code> for your table's data source, provide the <code>MatSort</code>
+directive to the data source and it will automatically listen for sorting changes and change the
+order of data rendered by the table.</p>
+
+<p translation-result="on">默认情况下，<code>MatTableDataSource</code> 会假设已排序列的名称和该列所显示的属性名是一致的。比如，下面的列定义名叫 <code>position</code>，它和要显示在单元格中的属性名是一样的。</p><p translation-origin="off">By default, the <code>MatTableDataSource</code> sorts with the assumption that the sorted column's name
+matches the data property name that the column displays. For example, the following column
+definition is named <code>position</code>, which matches the name of the property displayed in the row cell.</p>
+
+<p translation-result="on">注意，如果数据属性与列名不一致，或需要更复杂的数据属性访问器，那么可以设置一个自定义的 <code>sortingDataAccessor</code> 函数，以覆盖 <code>MatTableDataSource</code> 上默认的数据访问器。</p><p translation-origin="off">Note that if the data properties do not match the column names, or if a more complex data property
+accessor is required, then a custom <code>sortingDataAccessor</code> function can be set to override the
+default data accessor on the <code>MatTableDataSource</code>.</p>
+
+<p translation-result="on">如果你没有使用 <code>MatTableDataSource</code> 而是自己实现了数据排序逻辑，那么可以监听此排序器的 <code>(matSortChange)</code> 事件，并根据其排序状态重新排序你的数据。
+如果你要直接给表格提供一个数组型数据，别忘了调用表格的 <code>renderRows()</code> 函数，因为它不会自动检查对数组的修改。</p><p translation-origin="off">If you are not using the <code>MatTableDataSource</code>, but instead implementing custom logic to sort your
+data, listen to the sort's <code>(matSortChange)</code> event and re-order your data according to the sort state.
+If you are providing a data array directly to the table, don't forget to call <code>renderRows()</code> on the
+table, since it will not automatically check the array for changes.</p>
+
+<div material-docs-example="table-sorting"></div>
+
+<p translation-result="on">要了解使用和配置排序行为的更多信息，参见 <a href="guide/overview">matSort 的文档</a>。</p><p translation-origin="off">For more information on using and configuring the sorting behavior, check out the
+<a href="https://material.angular.io/components/sort/overview">matSort docs</a>.</p>
+
+<p translation-result="on"><code>MatSort</code> 是用来排序表格数据的一个现成的解决方案，但它不是唯一的选择。
+事实上，表格可以和任何一个自定义的排序 UI 或策略类协同工作，因为 <code>MatTable</code> 及其接口没有绑死到任何一个特定的实现。</p><p translation-origin="off">The <code>MatSort</code> is one provided solution to sorting your table's data, but it is not the only option.
+In fact, the table can work with any custom sorting UI or strategy since the <code>MatTable</code> and
+its interface is not tied to any one specific implementation.</p>
+
+
+        <h4 id="filtering" class="docs-header-link" translation-result="on">
+          <span header-link="过滤"></span>
+          过滤
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="filtering"></span>
+          Filtering
+        </h4>
+      
+        
+      <p translation-result="on">Angular Material 没有提供用于过滤 <code>MatTable</code> 的具体组件，因为没有一种简单通用的方式可以为表格数据添加过滤界面。</p><p translation-origin="off">Angular Material does not provide a specific component to be used for filtering the <code>MatTable</code>
+since there is no single common approach to adding a filter UI to table data.</p>
+
+<p translation-result="on">通常的策略是添加一个输入框，用户可以在其中输入过滤字符串，并监听此输入，以修改从数据源提供给表格的数据。</p><p translation-origin="off">A general strategy is to add an input where users can type in a filter string and listen to this
+input to change what data is offered from the data source to the table.</p>
+
+<p translation-result="on">如果你正在使用 <code>MatTableDataSource</code> 只要将过滤字符串提供给 <code>MatTableDataSource</code> 就可以了。
+数据源将会把每一行数据进行缩减，并根据本行有没有包含该过滤字符串进行筛选。
+默认情况下，行数据的缩减函数会把传给它的对象的所有值都连接起来，并转换成小写。</p><p translation-origin="off">If you are using the <code>MatTableDataSource</code>, simply provide the filter string to the
+<code>MatTableDataSource</code>. The data source will reduce each row data to a serialized form and will filter
+out the row if it does not contain the filter string. By default, the row data reducing function
+will concatenate all the object values and convert them to lowercase.</p>
+
+<p translation-result="on">比如，数据 <code>{id: 123, name: 'Mr. Smith', favoriteColor: 'blue'}</code> 将会缩减成 <code>123mr. smithblue</code>。
+如果你的过滤字符串是 <code>blue</code>，那么它就是匹配的，因为它包含在缩减后的字符串中，这一行就会显示在表格中。</p><p translation-origin="off">For example, the data object <code>{id: 123, name: 'Mr. Smith', favoriteColor: 'blue'}</code> will be reduced
+to <code>123mr. smithblue</code>. If your filter string was <code>blue</code> then it would be considered a match because
+it is contained in the reduced string, and the row would be displayed in the table.</p>
+
+<p translation-result="on">要覆盖这种默认的过滤行为，可以设置一个自定义的 <code>filterPredicate</code> 函数，它可以接受一个数据对象和过滤器字符串，如果认为该数据对象是匹配的，就返回 <code>true</code>。</p><p translation-origin="off">To override the default filtering behavior, a custom <code>filterPredicate</code> function can be set which
+takes a data object and filter string and returns true if the data object is considered a match.</p>
+
+<p translation-result="on">如果你想在过滤器匹配不上数据时显示某种信息，可以使用 <code>*matNoDataRow</code> 指令。</p><p translation-origin="off">If you want to show a message when not data matches the filter, you can use the <code>*matNoDataRow</code>
+directive.</p>
+
+<!--- example(table-filtering) -->
+
+
+        <h4 id="selection" class="docs-header-link" translation-result="on">
+          <span header-link="选取"></span>
+          选取
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="selection"></span>
+          Selection
+        </h4>
+      
+        
+      <p translation-result="on">目前，还没有对给表格添加选取界面提供正式的支持。不过 Angular Material 提供了一些组件和代码片段来支持它。
+下面这些步骤是为表格添加列选择功能的解决方案之一（但不是唯一的）。</p><p translation-origin="off">Right now there is no formal support for adding a selection UI to the table, but Angular Material
+does offer the right components and pieces to set this up. The following steps are one solution but
+it is not the only way to incorporate row selection in your table.</p>
+
+
+        <h5 id="1-add-a-selection-model" class="docs-header-link" translation-result="on">
+          <span header-link="1-添加选取模式"></span>
+          1. 添加选取模式
+        </h5><h5 class="docs-header-link" translation-origin="off">
+          <span header-link="1-add-a-selection-model"></span>
+          1. Add a selection model
+        </h5>
+      
+        
+      <p translation-result="on">首先建立来自 <code>@angular/cdk/collections</code> 的 <code>SelectionModel</code>，它用来维护选取状态。</p><p translation-origin="off">Get started by setting up a <code>SelectionModel</code> from <code>@angular/cdk/collections</code> that will maintain the
+selection state.</p>
+
+<pre><code class="language-js"><span class="hljs-keyword">const</span> initialSelection = [];
+<span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
+<span class="hljs-built_in">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);
+</code></pre>
+
+        <h5 id="2-define-a-selection-column" class="docs-header-link" translation-result="on">
+          <span header-link="2-定义选择列"></span>
+          2. 定义选择列
+        </h5><h5 class="docs-header-link" translation-origin="off">
+          <span header-link="2-define-a-selection-column"></span>
+          2. Define a selection column
+        </h5>
+      
+        
+      <p translation-result="on">添加一个列定义，以显示本行的检查框，包括给标题行的主控检查框。
+其列名也要添加到提供给表头和数据行的待显示列数组中。</p><p translation-origin="off">Add a column definition for displaying the row checkboxes, including a main toggle checkbox for
+the header. The column name should be added to the list of displayed columns provided to the
+header and data row.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"select"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? toggleAllRows() : null"</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; isAllSelected()"</span>
+                  [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; !isAllSelected()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"$event.stopPropagation()"</span>
+                  (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? selection.toggle(row) : null"</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.isSelected(row)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+
+        <h5 id="3-add-event-handling-logic" class="docs-header-link" translation-result="on">
+          <span header-link="3-添加事件处理逻辑"></span>
+          3. 添加事件处理逻辑
+        </h5><h5 class="docs-header-link" translation-origin="off">
+          <span header-link="3-add-event-handling-logic"></span>
+          3. Add event handling logic
+        </h5>
+      
+        
+      <p translation-result="on">在组件逻辑中实现一些行为，以处理表头的主控开关，并检查是否所有的行都被选中了。</p><p translation-origin="off">Implement the behavior in your component's logic to handle the header's main toggle and checking
+if all rows are selected.</p>
+
+<pre><code class="language-js"><span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
+<span class="hljs-function"><span class="hljs-title">isAllSelected</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-keyword">const</span> numSelected = <span class="hljs-built_in">this</span>.selection.selected.length;
+  <span class="hljs-keyword">const</span> numRows = <span class="hljs-built_in">this</span>.dataSource.data.length;
+  <span class="hljs-keyword">return</span> numSelected == numRows;
+}
+
+<span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
+<span class="hljs-function"><span class="hljs-title">toggleAllRows</span>(<span class="hljs-params"></span>)</span> {
+  <span class="hljs-built_in">this</span>.isAllSelected() ?
+      <span class="hljs-built_in">this</span>.selection.clear() :
+      <span class="hljs-built_in">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-built_in">this</span>.selection.select(row));
+}
+</code></pre>
+
+        <h5 id="4-include-overflow-styling" class="docs-header-link" translation-result="on">
+          <span header-link="4-包含-overflow-样式"></span>
+          4. 包含 overflow 样式
+        </h5><h5 class="docs-header-link" translation-origin="off">
+          <span header-link="4-include-overflow-styling"></span>
+          4. Include overflow styling
+        </h5>
+      
+        
+      <p translation-result="on">最后，调整选取列的样式，让它的 overflow 不是 hidden。这样就可以让涟漪效果延伸到单元格之外。</p><p translation-origin="off">Finally, adjust the styling for the select column so that its overflow is not hidden. This allows
+the ripple effect to extend beyond the cell.</p>
+
+<pre><code class="language-css"><span class="hljs-selector-class">.mat-column-select</span> {
+  <span class="hljs-attribute">overflow</span>: initial;
+}
+</code></pre>
+<!--- example(table-selection) -->
+
+
+        <h4 id="footer-row" class="docs-header-link" translation-result="on">
+          <span header-link="表尾"></span>
+          表尾
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="footer-row"></span>
+          Footer row
+        </h4>
+      
+        
+      <p translation-result="on">添加一个表尾的定义并为其指定一个单元格模板，可以为表格添加一个表尾。表尾会显示在所有数据行之后。</p><p translation-origin="off">A footer row can be added to the table by adding a footer row definition to the table and adding
+footer cell templates to column definitions. The footer row will be rendered after the rendered
+data rows.</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"cost"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Cost <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let data"</span>&gt;</span> {{data.cost}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> {{totalCost}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+...
+
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let myRowData; columns: columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">"columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+</code></pre>
+<!--- example(table-footer-row) -->
+
+
+        <h4 id="sticky-rows-and-columns" class="docs-header-link" translation-result="on">
+          <span header-link="钉住某些行和列"></span>
+          钉住某些行和列
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="sticky-rows-and-columns"></span>
+          Sticky Rows and Columns
+        </h4>
+      
+        
+      <p translation-result="on">通过使用 <code>position: sticky</code> 样式，可以固定住表格的某些行和列，这样它们在滚动时就不会离开视野。
+表格所提供的输入属性将会自动应用正确的 CSS 样式，以便这些行和列能被钉住。</p><p translation-origin="off">By using <code>position: sticky</code> styling, the table's rows and columns can be fixed so that they do not
+leave the viewport even when scrolled. The table provides inputs that will automatically apply the
+correct CSS styling so that the rows and columns become sticky.</p>
+
+<p translation-result="on">要想把表头行固定到包含此表格的视野顶部，你可以给 <code>matHeaderRowDef</code> 添加输入属性 <code>sticky</code>。</p><p translation-origin="off">In order to fix the header row to the top of the scrolling viewport containing the table, you can
+add a <code>sticky</code> input to the <code>matHeaderRowDef</code>.</p>
+
+<!--- example(table-sticky-header) -->
+
+<p translation-result="on">同样的，我们也可以钉住表格的表尾。注意，如果你正在使用原生的 <code>&lt;table&gt;</code> 和 Safari，那么只有当所有的尾行都带有 <code>sticky</code> 的时候，表尾才会被钉住。</p><p translation-origin="off">Similarly, this can also be applied to the table's footer row. Note that if you are using the native
+<code>&lt;table&gt;</code> and using Safari, then the footer will only stick if <code>sticky</code> is applied to all the
+rendered footer rows.</p>
+
+<!--- example(table-sticky-footer) -->
+
+<p translation-result="on">还可以把一些列的单元格固定在水平滚动视图的头部和尾部，只要把 <code>sticky</code> 或 <code>stickyEnd</code> 指令添加到 <code>ng-container</code> 的列定义上就可以了。</p><p translation-origin="off">It is also possible to fix cell columns to the start or end of the horizontally scrolling viewport.
+To do this, add the <code>sticky</code> or <code>stickyEnd</code> directive to the <code>ng-container</code> column definition.</p>
+
+<!--- example(table-sticky-columns) -->
+
+<p translation-result="on">该特性受到 Chrome、Firefox、Safari 和 Edge 的支持。IE 不支持它，但它会优雅的失败，其后果只是那些列没有钉住而已。</p><p translation-origin="off">This feature is supported by Chrome, Firefox, Safari, and Edge. It is not supported in IE, but
+it does fail gracefully so that the rows simply do not stick.</p>
+
+<p translation-result="on">注意，在移动版的 Safari 上，如果使用 Flex 布局的表格，当滚动时，钉在多于一个方向的单元格将难以保持在正确的位置上。
+比如，如果表头钉在顶部，而且第一列也钉住了，那么当滚动时，其左上角的单元格将会不断抖动。</p><p translation-origin="off">Note that on Safari mobile when using the flex-based table, a cell stuck in more than one direction
+will struggle to stay in the correct position as you scroll. For example, if a header row is stuck
+to the top and the first column is stuck, then the top-left-most cell will appear jittery as you
+scroll.</p>
+
+<p translation-result="on">此外，在一些特殊情况下，Edge 中的定位也会不稳定。比如，如果滚动容器具有复杂的阴影而且还有兄弟元素，那么钉住的单元格就会抖动。
+这里是 <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17514118/">Edge 上关于此问题的 Issue</a>。</p><p translation-origin="off">Also, sticky positioning in Edge will appear shaky for special cases. For example, if the scrolling
+container has a complex box shadow and has sibling elements, the stuck cells will appear jittery.
+There is currently an <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17514118/">open issue with Edge</a>
+to resolve this.</p>
+
+
+        <h4 id="multiple-row-templates" class="docs-header-link" translation-result="on">
+          <span header-link="多行模板"></span>
+          多行模板
+        </h4><h4 class="docs-header-link" translation-origin="off">
+          <span header-link="multiple-row-templates"></span>
+          Multiple row templates
+        </h4>
+      
+        
+      <p translation-result="on">当使用 <code>multiTemplateDataRows</code> 指令以支持让每个数据对象对应多行时，<code>*matRowDef</code> 中使用同一个上下文，不过其 <code>index</code> 值要换成 <code>dataIndex</code> 和 <code>renderIndex</code>。</p><p translation-origin="off">When using the <code>multiTemplateDataRows</code> directive to support multiple rows for each data object, the context of <code>*matRowDef</code> is the same except that the <code>index</code> value is replaced by <code>dataIndex</code> and <code>renderIndex</code>.</p>
+
+
+        <h3 id="accessibility" class="docs-header-link" translation-result="on">
+          <span header-link="无障碍性"></span>
+          无障碍性
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下， <code>MatTable</code> 会应用 <code>role="table"</code>，这里假设表格主要包含静态内容。你可以通过在 table 元素上显式设置 <code>role="grid"</code> 或 <code>role="treegrid"</code> 来更改其角色。虽然更改角色会更新子元素角色，例如将 <code>role="cell"</code> 更改为 <code>role="gridcell"</code> ，但这<em>不会</em>对表格应用额外的键盘输入处理或焦点管理逻辑。</p><p translation-origin="off">By default, <code>MatTable</code> applies <code>role="table"</code>, assuming the table's contains primarily static
+content. You can change the role by explicitly setting <code>role="grid"</code> or <code>role="treegrid"</code> on the
+table element. While changing the role will update child element roles, such as changing
+<code>role="cell"</code> to <code>role="gridcell"</code>, this does <em>not</em> apply additional keyboard input handling or
+focus management to the table.</p>
+
+<p translation-result="on">始终通过表格元素上的 <code>aria-label</code> 或 <code>aria-labelledby</code> 为你的表格提供无障碍标签。</p><p translation-origin="off">Always provide an accessible label for your tables via <code>aria-label</code> or <code>aria-labelledby</code> on the
+table element.</p>
+
+
+        <h3 id="tables-with-display-flex" class="docs-header-link" translation-result="on">
+          <span header-link="使用-display-flex-的表格"></span>
+          使用 <code>display: flex</code> 的表格
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tables-with-display-flex"></span>
+          Tables with <code>display: flex</code>
+        </h3>
+      
+        
+      <p translation-result="on"><code>MatTable</code> 不要求你使用原生 HTML 表格，所以你可以用另一种基于 <code>display: flex</code> 的方式来控制表格的样式。</p><p translation-origin="off">The <code>MatTable</code> does not require that you use a native HTML table. Instead, you can use an
+alternative approach that uses <code>display: flex</code> for the table's styles.</p>
+
+<p translation-result="on">这种方式把原生的 <code>table</code> 元素标记替换成 <code>MatTable</code> 指令的选择器。
+比如 <code>&lt;table mat-table&gt;</code> 变成了 <code>&lt;mat-table&gt;</code>；<code>&lt;tr mat-row&gt;</code> 变成了 <code>&lt;mat-row&gt;</code>。下面的例子用这种方式改写了以前的例子：</p><p translation-origin="off">This alternative approach replaces the native table element tags with the <code>MatTable</code> directive
+selectors. For example, <code>&lt;table mat-table&gt;</code> becomes <code>&lt;mat-table&gt;</code>; <code>&lt;tr mat-row&gt;</code> becomes
+<code>&lt;mat-row&gt;</code>. The following shows a previous example using this alternative template:</p>
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"username"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.username}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Age Definition --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"age"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Age <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.age}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Title Definition --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"title"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Title <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.title}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Header and Row Declarations --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: ['username', 'age', 'title']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
+</code></pre>
+<p translation-result="on">注意，这种方法意味着你不能使用某些原生表格的专属特性，比如 colspan/rowspan 或一些能根据其内容自动调整自身大小的列。</p><p translation-origin="off">Note that this approach means you cannot include certain native-table features such colspan/rowspan
+or have columns that resize themselves based on their content.</p>
+
+
+        <h3 id="tables-with-matripple" class="docs-header-link" translation-result="on">
+          <span header-link="带有-matripple-的表格"></span>
+          带有 <code>MatRipple</code> 的表格
+        </h3><h3 class="docs-header-link" translation-origin="off">
+          <span header-link="tables-with-matripple"></span>
+          Tables with <code>MatRipple</code>
+        </h3>
+      
+        
+      <p translation-result="on">默认情况下， <code>MatTable</code> 不会为行设置 Material Design 涟漪。可以使用来自 <code>@angular/material/core</code> 的 <code>MatRipple</code> 指令将涟漪效果添加到表行。由于浏览器的限制，涟漪不能应用于原生 <code>th</code> 或 <code>tr</code> 元素。设置涟漪的推荐方法是使用 <code>MatTable</code> 的非原生 <code>display: flex</code> 变体。</p><p translation-origin="off">By default, <code>MatTable</code> does not set up Material Design ripples for rows. A ripple effect can be
+added to table rows by using the <code>MatRipple</code> directive from <code>@angular/material/core</code>. Due to
+limitations in browsers, ripples cannot be applied native <code>th</code> or <code>tr</code> elements. The recommended
+approach for setting up ripples is using the non-native <code>display: flex</code> variant of <code>MatTable</code>.</p>
+
+<!--- example(table-with-ripples) -->
+
+<p translation-result="on">有关原生表行上的涟漪及其限制的更多详细信息，请参见<a href="https://github.com/angular/components/issues/11883#issuecomment-634942981">本错误</a>。</p><p translation-origin="off">More details about ripples on native table rows and their limitations can be found <a href="https://github.com/angular/components/issues/11883#issuecomment-634942981">in this issue</a>.</p>
+
+</div>

@@ -1,0 +1,420 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-cdk-clipboard-api-参考文档--">
+    Angular CDK clipboard API 参考文档
+  </h2><p class="docs-api-module-import">
+      <code>
+        import {ClipboardModule} from '@angular/cdk/clipboard';
+      </code>
+    </p>
+  <h3 id="cdk-clipboard-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="Clipboard" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="Clipboard"></span>
+  <code>Clipboard</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">把文本复制到剪贴板的服务。</p><p translation-origin="off">A service for copying text to the clipboard.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">beginCopy
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">准备稍后要复制的字符串。这对于大型字符串很有用，在同一个检测周期内它们需要很长的时间才能成功渲染并复制。</p><p translation-origin="off">Prepares a string to be copied later. This is useful for large strings
+which take too long to successfully render and be copied in the same tick.</p>
+
+<p translation-result="on">调用者必须调用 <code>PendingCopy</code> 型返回值上的 <code>destroy</code> 方法。</p><p translation-origin="off">The caller must call <code>destroy</code> on the returned <code>PendingCopy</code>.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        text</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要复制的字符串。</p><p translation-origin="off">The string to copy.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">PendingCopy</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">挂起的复制操作。</p><p translation-origin="off">the pending copy operation.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copy
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把提供的文本复制到用户的剪贴板中。</p><p translation-origin="off">Copies the provided text into the user's clipboard.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        text</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        <p translation-result="on">要复制的字符串。</p><p translation-origin="off">The string to copy.</p>
+
+
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">操作是否成功。</p><p translation-origin="off">Whether the operation was successful.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-clipboard-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="CdkCopyToClipboard" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkCopyToClipboard"></span>
+  <code>CdkCopyToClipboard</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">为某个按钮提供行为，此按钮在被点击时会把内容复制到用户的剪贴板中。</p><p translation-origin="off">Provides behavior for a button that when clicked copies content into user's
+clipboard.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[cdkCopyToClipboard]</span>
+  
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkCopyToClipboardAttempts'</span>)
+        </div><p class="docs-api-property-name">
+      <code>attempts: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">尝试复制文本的次数是多少次。这对于文本较长的文本来说可能是必需的，因为浏览器需要时间来填充中转 textarea 元素并复制其内容。</p><p translation-origin="off">How many times to attempt to copy the text. This may be necessary for longer text, because
+the browser needs time to fill an intermediate textarea element and copy the content.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkCopyToClipboard'</span>)
+        </div><p class="docs-api-property-name">
+      <code>text: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要复制的内容。</p><p translation-origin="off">Content to be copied.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">@Output(<span class="docs-api-output-alias">'cdkCopyToClipboardCopied'</span>)
+        </div><p class="docs-api-property-name">
+      <code>copied: EventEmitter&lt;boolean&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">某些文本被复制到剪贴板后发出通知。发出的值表示复制是否成功。</p><p translation-origin="off">Emits when some text is copied to the clipboard. The
+emitted value indicates whether copying was successful.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copy
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把当前文本复制到剪贴板。</p><p translation-origin="off">Copies the current text to the clipboard.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        attempts</p>
+      <code class="docs-api-method-parameter-type">number = this.attempts</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-clipboard-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="PendingCopy" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="PendingCopy"></span>
+  <code>PendingCopy</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">一个挂起的复制到剪贴板操作。</p><p translation-origin="off">A pending copy-to-clipboard operation.</p>
+
+<p translation-result="on">把文本复制到剪贴板的实现会修改 DOM 并强制重新布局。如果字符串很大，这次重新布局可能需要很长时间，这会导致 execCommand('copy') 在用户点击后很久才会发生。这会导致浏览器拒绝复制。该对象可以通过提供一个稍后调用的复制函数，来允许在一个独立的周期中内进行重新布局。</p><p translation-origin="off">The implementation of copying text to the clipboard modifies the DOM and
+forces a re-layout. This re-layout can take too long if the string is large,
+causing the execCommand('copy') to happen too long after the user clicked.
+This results in the browser refusing to copy. This object lets the
+re-layout happen in a separate tick from copying by providing a copy function
+that can be called later.</p>
+
+<p translation-result="on">无论是否调用 <code>copy</code>，都必须在不再使用时调用其 Destroy。</p><p translation-origin="off">Destroy must be called when no longer in use, regardless of whether <code>copy</code> is
+called.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copy
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">完成复制文本的操作。</p><p translation-origin="off">Finishes copying the text.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">destroy
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">清理用于执行复制操作的 DOM 更改。</p><p translation-origin="off">Cleans up DOM changes used to perform the copy operation.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="cdk-clipboard-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="CdkCopyToClipboardConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkCopyToClipboardConfig"></span>
+  <code>CdkCopyToClipboardConfig</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可用于配置 <code>CdkCopyToClipboard</code> 默认选项的对象。</p><p translation-origin="off">Object that can be used to configure the default options for <code>CdkCopyToClipboard</code>.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>attempts: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">复制文本到剪贴板时的默认尝试次数。</p><p translation-origin="off">Default number of attempts to make when copying text to the clipboard.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="cdk-clipboard-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="CDK_COPY_TO_CLIPBOARD_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_COPY_TO_CLIPBOARD_CONFIG"></span>
+  <code>CDK_COPY_TO_CLIPBOARD_CONFIG</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来为 <code>CdkCopyToClipboard</code> 提供默认选项。</p><p translation-origin="off">Injection token that can be used to provide the default options to <code>CdkCopyToClipboard</code>.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_COPY_TO_CLIPBOARD_CONFIG: InjectionToken&lt;CdkCopyToClipboardConfig&gt;;</code>
+</pre>
+</div>
+
+
+    </div>

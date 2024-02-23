@@ -1,0 +1,521 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2 id="----angular-material-legacy-slide-toggle-api-参考文档--">
+    Angular Material legacy-slide-toggle API 参考文档
+  </h2>
+    <p>Import symbols from <code>@angular/material/legacy-slide-toggle</code></p><h3 id="material-legacy-slide-toggle-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlideToggle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggle"></span>
+  <code>MatLegacySlideToggle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">表示一个滑动“切换”开关，它可以在打开和关闭之间移动。</p><p translation-origin="off">Represents a slidable "switch" toggle that can be moved between on and off.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">mat-slide-toggle</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matSlideToggle</span><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-describedby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaDescribedby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于在底层输入框元素上设置 aria-describedby 属性。</p><p translation-origin="off">Used to set the aria-describedby attribute on the underlying input element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于在底层的 input 元素上设置 aria-label 属性。</p><p translation-origin="off">Used to set the aria-label attribute on the underlying input element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-labelledby'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于在底层的 input 元素上设置 aria-labelledby 属性。</p><p translation-origin="off">Used to set the aria-labelledby attribute on the underlying input element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否勾选了滑块开关元素。</p><p translation-origin="off">Whether the slide-toggle element is checked or not.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">此组件的主题调色板。</p><p translation-origin="off">Theme color palette for the component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否禁用涟漪。</p><p translation-origin="off">Whether ripples are disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该组件是否已禁用。</p><p translation-origin="off">Whether the component is disabled.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>hideIcon: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether to hide the icon inside of the slide toggle.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑块开关输入组件的唯一 id。如果没有提供，它就会自动生成。</p><p translation-origin="off">A unique id for the slide-toggle input. If none is supplied, it will be auto-generated.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>labelPosition: 'before' | 'after'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标签应出现在滑块开关之后还是之前。默认为 'after'。</p><p translation-origin="off">Whether the label should appear after or before the slide-toggle. Defaults to 'after'.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果存在，name 值就会被应用到输入框元素中。</p><p translation-origin="off">Name value will be applied to the input element if present.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>required: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑块开关是否为必填项。</p><p translation-origin="off">Whether the slide-toggle is required.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>change: EventEmitter&lt;T&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>An event will be dispatched each time the slide-toggle changes its value.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>toggleChange: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">每次切换滑块开关时，都会派发一个事件。当用户切换滑块开关时，就会发出此事件，但这并不意味着滑块开关的值已经改变。</p><p translation-origin="off">An event will be dispatched each time the slide-toggle input is toggled.
+This event is always emitted when the user toggles the slide toggle, but this does not mean
+the slide toggle's value has changed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultColor: ThemePalette | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，则默认颜色恢复为原来的颜色。</p><p translation-origin="off">Default color to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaultTabIndex: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">如果未设置任何值，将退回到 Tabindex。</p><p translation-origin="off">Tabindex to which to fall back to if no value is set.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>defaults: MatSlideToggleDefaultOptions</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>inputId: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">返回不可见输入框的唯一 id。</p><p translation-origin="off">Returns the unique id for the visual hidden input.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">让此滑块开关获得焦点。</p><p translation-origin="off">Focuses the slide-toggle.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOptions</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        origin<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">FocusOrigin</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换滑块开关的勾选状态。</p><p translation-origin="off">Toggles the checked state of the slide-toggle.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-legacy-slide-toggle-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlideToggleChange" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatLegacySlideToggleChange"></span>
+  <code>MatLegacySlideToggleChange</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">由滑动开关发出的变更事件对象。</p><p translation-origin="off">Change event object emitted by a slide toggle.</p>
+
+</div><div class="docs-api-class-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>checked: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The new <code>checked</code> value of the slide toggle.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatLegacySlideToggle</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The source slide toggle of the event.</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-legacy-slide-toggle-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatLegacySlideToggleDefaultOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatLegacySlideToggleDefaultOptions"></span>
+  <code>MatLegacySlideToggleDefaultOptions</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">默认的 <code>mat-slide-toggle</code> 选项，可以被改写。</p><p translation-origin="off">Default <code>mat-slide-toggle</code> options that can be overridden.</p>
+
+</div><div class="docs-api-interface-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>color: ThemePalette</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">滑块开关的默认颜色。</p><p translation-origin="off">Default color for slide toggles.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableToggleValue: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">切换操作是否会触发滑块开关中的值更改。</p><p translation-origin="off">Whether toggle action triggers value changes in slide toggle.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-legacy-slide-toggle-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS"></span>
+  <code>MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-deprecated-marker" title="将会在 v17.0.0 或更高版本中删除">
+  已弃用
+</div><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌用来改写 <code>mat-slide-toggle</code> 的默认选项。</p><p translation-origin="off">Injection token to be used to override the default options for <code>mat-slide-toggle</code></p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_LEGACY_SLIDE_TOGGLE_DEFAULT_OPTIONS: InjectionToken&lt;MatLegacySlideToggleDefaultOptions&gt;;</code>
+</pre>
+</div>
+
+
+    </div>
