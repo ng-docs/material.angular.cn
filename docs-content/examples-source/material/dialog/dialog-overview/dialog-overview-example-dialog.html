@@ -1,12 +1,12 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
+<h2 mat-dialog-title data-ng_translator_product="100" data-ng_translator_ref_id="7bz4lsmo8y7knal8vgfcxa0yo">你好 {{data.name}}</h2>
+<mat-dialog-content>
+  <p data-ng_translator_product="100" data-ng_translator_ref_id="5k2r17sb4ipi17o1h3yvzl3y8">你最喜欢的动物是什么？</p>
   <mat-form-field>
     <mat-label>Favorite Animal</mat-label>
     <input matInput [(ngModel)]="data.animal">
   </mat-form-field>
-</div>
-<div mat-dialog-actions>
+</mat-dialog-content>
+<mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div>
+  <button mat-button [mat-dialog-close]="data.animal" cdkfocusinitial>Ok</button>
+</mat-dialog-actions>

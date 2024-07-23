@@ -33,7 +33,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/theme.scss",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
@@ -78,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "example-app:build:production"
+              "buildTarget": "example-app:build:production"
             },
             "development": {
-              "browserTarget": "example-app:build:development"
+              "buildTarget": "example-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "example-app:build"
+            "buildTarget": "example-app:build"
           }
         },
         "test": {
@@ -109,8 +108,7 @@
               ]
             },
             "styles": [
-              "src/styles.scss",
-              "src/theme.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           }

@@ -1,69 +1,52 @@
-<table editable class="example-table">
-  <!--
-    This edit lens is specified outside of the cell and must explicitly declare
-    its context. It could be reused in multiple cells.
-  -->
-  <ng-template #weightEdit let-element>
+<ng-template #weightedit let-element>
     <div style="background-color: white; width: 100%">
-      <form #f="ngForm"
-          cdkEditControl
-          (ngSubmit)="onSubmitWeight(element, f)"
-          [cdkEditControlPreservedFormValue]="preservedWeightValues.get(element)"
-          (cdkEditControlPreservedFormValueChange)="preservedWeightValues.set(element, $event)">
+      <form #f="ngForm" cdkEditControl (ngSubmit)="onSubmitWeight(element, f)" [cdkEditControlPreservedFormValue]="preservedWeightValues.get(element)" (cdkEditControlPreservedFormValueChange)="preservedWeightValues.set(element, $event)"></form>
         Edit b:
         <input type="number" [ngModel]="element.weight" name="weight" required>
         <br>
         <button type="submit">Confirm</button>
-        <button cdkEditRevert>Revert</button>
-        <button cdkEditClose>Close</button>
-      </form>
+        <button cdkeditrevert>Revert</button>
+        <button cdkeditclose>Close</button>
+      
     </div>
-  </ng-template>
+  </ng-template><table editable class="example-table">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
   
-  <tr>
-    <th> No. </th>
-    <th> Name </th>
-    <th> Weight </th>
-    <th> Symbol </th>
+
+  <tbody><tr>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="ev8cx5z125j1kpdcgd1jmyejr">不。</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="81q72im0w97yzvvhco38hn4yz">名称</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="9pw0vkh2y5qostzm5rfull9dv">重量</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="ad76ex9ufezcz8gjf0mf6idjj">符号</th>
   </tr>
-  
-  <tr *ngFor="let element of elements">
-    <td> {{element.position}} </td>
-    
-    <td [cdkPopoverEdit]="nameEdit">
-      {{element.name}}
-      
-      <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #nameEdit>
-        <div style="background-color: white; width: 100%">
-          <form #f="ngForm"
-              cdkEditControl
-              (ngSubmit)="onSubmitName(element, f)"
-              [cdkEditControlPreservedFormValue]="preservedNameValues.get(element)"
-              (cdkEditControlPreservedFormValueChange)="preservedNameValues.set(element, $event)">
-            Edit a:
-            <input [ngModel]="element.name" name="name" required>
-            <br>
-            <button type="submit">Confirm</button>
-            <button cdkEditRevert>Revert</button>
-            <button cdkEditClose>Close</button>
-          </form>
-        </div>
-      </ng-template>
 
-      <span *cdkRowHoverContent>
-        <button cdkEditOpen>Edit</button>
-      </span>
-    </td>
+  @for (element of elements; track element) {
+    <tr>
+      <td data-ng_translator_product="100" data-ng_translator_ref_id="bem1kr5d3ptu3n16fx7mtrtch">{{element.position}}</td>
 
-    <td [cdkPopoverEdit]="weightEdit" [cdkPopoverEditContext]="element">
-      {{element.weight}}
-      
-      <span *cdkRowHoverContent>
-        <button cdkEditOpen>Edit</button>
-      </span>
-    </td>
+      <td [cdkpopoveredit]="nameEdit" data-ng_translator_product="100" data-ng_translator_ref_id="e3s7t1ntbwmcgzpdkm649dlh2">{{element.name}} 
+<!-- 此编辑在单元格中定义，可以隐式访问 element --> 
+<ng-template #nameedit> 
+ <div style="background-color: white; width: 100%"> 
+  <form #f="ngForm" cdkEditControl (ngSubmit)="onSubmitName(element, f)" [cdkEditControlPreservedFormValue]="preservedNameValues.get(element)" (cdkEditControlPreservedFormValueChange)="preservedNameValues.set(element, $event)">
+    编辑 a: 
+   <input [ngModel]="element.name" name="name" required> 
+   <br> 
+   <button type="submit">确认</button> 
+   <button cdkeditrevert>恢复</button> 
+   <button cdkeditclose>关闭</button> 
+  </form> 
+ </div> 
+</ng-template> 
+<span *cdkrowhovercontent> <button cdkeditopen>编辑</button> </span></td>
 
-    <td> {{element.symbol}} </td>
-  </tr>
-</table>
+      <td [cdkpopoveredit]="weightEdit" [cdkpopovereditcontext]="element" data-ng_translator_product="100" data-ng_translator_ref_id="wmyjvolw52hp3c8nd9g4uivd">{{element.weight}} 
+<span *cdkrowhovercontent> <button cdkeditopen>编辑</button> </span></td>
+
+      <td data-ng_translator_product="100" data-ng_translator_ref_id="ajlcxvp8cjl07pd6l7jqkngsv">{{element.symbol}}</td>
+    </tr>
+  }
+</tbody></table>

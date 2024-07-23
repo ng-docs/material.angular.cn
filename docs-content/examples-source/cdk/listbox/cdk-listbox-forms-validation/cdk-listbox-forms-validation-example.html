@@ -2,24 +2,22 @@
   <label class="example-listbox-label" id="example-zodiac-sign-label">
     Zodiac Sign
   </label>
-  <ul cdkListbox
-      [formControl]="signCtrl"
-      aria-labelledby="example-zodiac-sign-label"
-      class="example-listbox">
-    <li *ngFor="let sign of signs"
-        [cdkOption]="sign"
-        class="example-option">
-      {{sign}}
-    </li>
+  <ul cdklistbox [formcontrol]="signCtrl" aria-labelledby="example-zodiac-sign-label" class="example-listbox">
+    @for (sign of signs; track sign) {
+      <li [cdkoption]="sign" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="6hnv98rbsjm40la24u9fwjn9k">{{星座}}</li>
+    }
   </ul>
 </div>
-<div class="example-listbox-errors" *ngIf="invalid | async">
-  <p *ngFor="let error of getErrors()">{{error}}</p>
-</div>
-<p>
-  Your zodiac sign is: <strong>{{signCtrl.value | json}}</strong>&nbsp;
-  <button (click)="signCtrl.setValue(['Cat'])">Set: Cat</button>&nbsp;
-  <button (click)="signCtrl.setValue(['Dragon', 'Snake'])">Set: Dragon, Snake</button>&nbsp;
-  <button (click)="signCtrl.setValue(['Cat', 'Rat'])">Set: Cat, Rat</button>&nbsp;
-  <button (click)="signCtrl.setValue([])">Clear</button>
-</p>
+@if (invalid | async) {
+  <div class="example-listbox-errors">
+    @for (error of getErrors(); track error) {
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="b5u2yc6shjha138iv60s5tuqs">{{错误}}</p>
+    }
+  </div>
+}
+<p data-ng_translator_product="100" data-ng_translator_ref_id="21iw35q8iuz2n2933jqf2sma5">你的星座是：
+<strong>{{signCtrl.value | json}}</strong>&nbsp; 
+<button (click)="signCtrl.setValue(['Cat'])">设置：猫</button>&nbsp; 
+<button (click)="signCtrl.setValue(['Dragon', 'Snake'])">设置：龙，蛇</button>&nbsp; 
+<button (click)="signCtrl.setValue(['Cat', 'Rat'])">设置：猫，鼠</button>&nbsp; 
+<button (click)="signCtrl.setValue([])">清除</button></p>

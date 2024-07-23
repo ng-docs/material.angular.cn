@@ -7,9 +7,6 @@ import {MatButtonModule} from '@angular/material/button';
 /**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
- *
- * 具有嵌套结构的食物数据。每个节点都有一个名称和一个可选的子节点列表。
- *
  */
 interface FoodNode {
   name: string;
@@ -36,12 +33,7 @@ const TREE_DATA: FoodNode[] = [
   },
 ];
 
-/**
- * Flat node with expandable and level information
- *
- * 具有可扩展和级别信息的平面节点
- *
- */
+/** Flat node with expandable and level information */
 interface ExampleFlatNode {
   expandable: boolean;
   name: string;

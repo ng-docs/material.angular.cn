@@ -1,19 +1,9 @@
-<div class="docs-markdown"><p translation-result="on"><code>MatSnackBar</code> 是一个用来显示快餐栏通知的服务。</p><p translation-origin="off"><code>MatSnackBar</code> is a service for displaying snack-bar notifications.</p>
-
+<div class="docs-markdown"><p data-ng_translator_product="100" data-ng_translator_ref_id="33xxpmrpq12xz4jbg5hqac1cb"><code>MatSnackBar</code> 是一个用来显示快餐栏通知的服务。</p>
 <div material-docs-example="snack-bar-overview"></div>
 
 
-        <h3 id="opening-a-snackbar" class="docs-header-link" translation-result="on">
-          <span header-link="打开快餐栏"></span>
-          打开快餐栏
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="opening-a-snackbar"></span>
-          Opening a snackbar
-        </h3>
-      
-        
-      <p translation-result="on">快餐栏可以包含一个字符串消息或指定的组件。</p><p translation-origin="off">A snackbar can contain either a string message or a given component.</p>
-
+        <h3 id="opening-a-snackbar" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="cvyamf4tx970cokovlk5ywr01">打开快餐栏</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="60gs2hg8lpag57e442wr956zv">快餐栏可以包含一个字符串消息或指定的组件。</p>
 <pre><code class="language-ts"><span class="hljs-comment">// Simple message.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackBar.open(<span class="hljs-string">'Message archived'</span>);
 
@@ -23,17 +13,13 @@
 <span class="hljs-comment">// Load the given component into the snackbar.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackBar.openFromComponent(MessageArchivedComponent);
 </code></pre>
-<p translation-result="on">无论哪种形式，都会返回一个 <code>MatSnackBarRef</code>。它可以用来关闭快餐栏或在快餐栏关闭时接收通知。
+<p data-ng_translator_product="100" data-ng_translator_ref_id="6adfs2gxfamjhj0lzcr0yu2vx">无论哪种形式，都会返回一个 <code>MatSnackBarRef</code>。它可以用来关闭快餐栏或在快餐栏关闭时接收通知。
 对于只有一个操作的简单消息，当该动作被触发时，<code>MatSnackBarRef</code> 会暴露出一个 <code>Observable</code>。
-如果你要关闭一个用 <code>openFromComponent</code> 打开的自定义快餐栏，可以在该组件中注入一个 <code>MatSnackBarRef</code>。</p><p translation-origin="off">In either case, a <code>MatSnackBarRef</code> is returned. This can be used to dismiss the snackbar or to
-receive notification of when the snackbar is dismissed. For simple messages with an action, the
-<code>MatSnackBarRef</code> exposes an observable for when the action is triggered.
-If you want to close a custom snackbar that was opened via <code>openFromComponent</code>, from within the
-component itself, you can inject the <code>MatSnackBarRef</code>.</p>
-
+如果你要关闭一个用 <code>openFromComponent</code> 打开的自定义快餐栏，可以在该组件中注入一个 <code>MatSnackBarRef</code>。</p>
 <pre><code class="language-ts">snackBarRef.afterDismissed().subscribe(<span class="hljs-function">() =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snackbar was dismissed'</span>);
 });
+
 
 snackBarRef.onAction().subscribe(<span class="hljs-function">() =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snackbar action was triggered!'</span>);
@@ -42,46 +28,22 @@ snackBarRef.onAction().subscribe(<span class="hljs-function">() =&gt;</span> {
 snackBarRef.dismiss();
 </code></pre>
 
-        <h3 id="dismissal" class="docs-header-link" translation-result="on">
-          <span header-link="关闭"></span>
-          关闭
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="dismissal"></span>
-          Dismissal
-        </h3>
-      
-        
-      <p translation-result="on">可以调用由 <code>open</code> 调用返回的 <code>MatSnackBarRef</code> 中的 <code>dismiss</code> 方法来手动关闭快餐栏。</p><p translation-origin="off">A snackbar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MatSnackBarRef</code>
-returned from the call to <code>open</code>.</p>
-
-<p translation-result="on">同一时刻只能打开一个快餐栏。如果在显示前一个消息时打开一个新的快餐栏，老的消息就会自动关闭。</p><p translation-origin="off">Only one snackbar can ever be opened at one time. If a new snackbar is opened while a previous
-message is still showing, the older message will be automatically dismissed.</p>
-
-<p translation-result="on">快餐栏还可以通过一个可选的配置对象来指定持续时间：</p><p translation-origin="off">A snackbar can also be given a duration via the optional configuration object:</p>
-
+        <h3 id="dismissal" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="3micujwmo5am0ldwcf8t32eoc">关闭</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="blbh8btxghjwr0fgnigzizc0n">可以调用由 <code>open</code> 调用返回的 <code>MatSnackBarRef</code> 中的 <code>dismiss</code> 方法来手动关闭快餐栏。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="27uc5docl7imkwb039etbymj9">同一时刻只能打开一个快餐栏。如果在显示前一个消息时打开一个新的快餐栏，老的消息就会自动关闭。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="8hjtpw5figpbduqtncta0xqlt">快餐栏还可以通过一个可选的配置对象来指定持续时间：</p>
 <pre><code class="language-ts">snackBar.open(<span class="hljs-string">'Message archived'</span>, <span class="hljs-string">'Undo'</span>, {
   <span class="hljs-attr">duration</span>: <span class="hljs-number">3000</span>
 });
 </code></pre>
 
-        <h3 id="sharing-data-with-a-custom-snackbar" class="docs-header-link" translation-result="on">
-          <span header-link="与自定义快餐栏共享数据"></span>
-          与自定义快餐栏共享数据
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="sharing-data-with-a-custom-snackbar"></span>
-          Sharing data with a custom snackbar
-        </h3>
-      
-        
-      <p translation-result="on">你可以传入 <code>data</code> 属性，来与 <code>openFromComponent</code> 打开的自定义快餐栏共享数据。</p><p translation-origin="off">You can share data with the custom snackbar, that you opened via the <code>openFromComponent</code> method,
-by passing it through the <code>data</code> property.</p>
-
+        <h3 id="sharing-data-with-a-custom-snackbar" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="9y0nmk5hdol0aq1dzdeszjero">与自定义快餐栏共享数据</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="8sazy3itkt9ldpnnf3i7zfxdb">你可以传入 <code>data</code> 属性，来与 <code>openFromComponent</code> 打开的自定义快餐栏共享数据。</p>
 <pre><code class="language-ts">snackBar.openFromComponent(MessageArchivedComponent, {
   <span class="hljs-attr">data</span>: <span class="hljs-string">'some data'</span>
 });
 </code></pre>
-<p translation-result="on">要在组件中访问该数据，可以使用依赖注入令牌 <code>MAT_SNACK_BAR_DATA</code>：</p><p translation-origin="off">To access the data in your component, you have to use the <code>MAT_SNACK_BAR_DATA</code> injection token:</p>
-
+<p data-ng_translator_product="100" data-ng_translator_ref_id="2kfb0qlexp75d6e0ydqd7bos0">要在组件中访问该数据，可以使用依赖注入令牌 <code>MAT_SNACK_BAR_DATA</code>：</p>
 <pre><code class="language-ts"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MAT_SNACK_BAR_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/snack-bar'</span>;
 
@@ -94,47 +56,19 @@ by passing it through the <code>data</code> property.</p>
 }
 </code></pre>
 
-        <h3 id="annotating-custom-snackbar-content" class="docs-header-link" translation-result="on">
-          <span header-link="标记自定义快餐栏内容"></span>
-          标记自定义快餐栏内容
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="annotating-custom-snackbar-content"></span>
-          Annotating custom snackbar content
-        </h3>
-      
-        
-      <p translation-result="on">通过 <code>snackBar.openFromComponent</code> 方法打开自定义 snackbar 时，你可以使用以下指令来标记内容并确保其样式与通过 snackBar.open 打开的一致。</p><p translation-origin="off">When opening a custom snackbar via the <code>snackBar.openFromComponent</code> method, you can use the
-following directives to annotate the content and ensure that it is styled consistently compared to
-snackbars  opened via <code>snackBar.open</code>.</p>
-
+        <h3 id="annotating-custom-snackbar-content" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="dr26ltqv0ishn95pr8rfk974y">标记自定义快餐栏内容</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="9tn3i89srchn85rlrpl4ex8wr">通过 <code>snackBar.openFromComponent</code> 方法打开自定义 snackbar 时，你可以使用以下指令来标记内容并确保其样式与通过 snackBar.open 打开的一致。</p>
 <ul>
-<li><p translation-result="on"><code>matSnackBarLabel</code> - 标记要向用户显示的快餐栏文本</p><p translation-origin="off"><code>matSnackBarLabel</code> - Marks the text of the snackbar shown to users</p>
-
-</li>
-<li><p translation-result="on"><code>matSnackBarActions</code> - 标记包含任何操作按钮的容器元素</p><p translation-origin="off"><code>matSnackBarActions</code> - Marks the container element containing any action buttons</p>
-
-</li>
-<li><p translation-result="on"><code>matSnackBarAction</code> - 标记一个单独的操作按钮</p><p translation-origin="off"><code>matSnackBarAction</code> - Marks an individual action button</p>
-
-</li>
+<li data-ng_translator_product="100" data-ng_translator_ref_id="am7uirip6nzd8whm72s5jnp9o"><code>matSnackBarLabel</code> - 标记要向用户显示的快餐栏文本</li>
+<li data-ng_translator_product="100" data-ng_translator_ref_id="aea5viozmt43m4yc0r4qloupc"><code>matSnackBarActions</code> - 标记包含任何操作按钮的容器元素</li>
+<li data-ng_translator_product="100" data-ng_translator_ref_id="5x7oxk1dse6x3aoirlj9h4i7w"><code>matSnackBarAction</code> - 标记一个单独的操作按钮</li>
 </ul>
-<p translation-result="on">如果不使用标记，所有内容将被视为文本内容。</p><p translation-origin="off">If no annotations are used, all the content will be treated as text content.</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="8w1xtdv7ea4ysvh1ojmovqqa5">如果不使用标记，所有内容将被视为文本内容。</p>
+<div material-docs-example="snack-bar-annotated-component"></div>
 
-<div material-docs-example="snack-bar-annotated-component-example" file="snack-bar-annotated-component-example-snack.html"></div>
 
-
-        <h3 id="setting-the-global-configuration-defaults" class="docs-header-link" translation-result="on">
-          <span header-link="设置全局配置的默认值"></span>
-          设置全局配置的默认值
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="setting-the-global-configuration-defaults"></span>
-          Setting the global configuration defaults
-        </h3>
-      
-        
-      <p translation-result="on">如果你要覆盖快餐栏的默认选项，可以使用 <code>MAT_SNACK_BAR_DEFAULT_OPTIONS</code> 令牌。</p><p translation-origin="off">If you want to override the default snack bar options, you can do so using the
-<code>MAT_SNACK_BAR_DEFAULT_OPTIONS</code> injection token.</p>
-
+        <h3 id="setting-the-global-configuration-defaults" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="7y6wusqpki0hziqka6ga677tv">设置全局配置的默认值</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="3a4mw1x2qjz97wcoqup20g5us">如果你要覆盖快餐栏的默认选项，可以使用 <code>MAT_SNACK_BAR_DEFAULT_OPTIONS</code> 令牌。</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   <span class="hljs-attr">providers</span>: [
     {<span class="hljs-attr">provide</span>: MAT_SNACK_BAR_DEFAULT_OPTIONS, <span class="hljs-attr">useValue</span>: {<span class="hljs-attr">duration</span>: <span class="hljs-number">2500</span>}}
@@ -142,29 +76,8 @@ snackbars  opened via <code>snackBar.open</code>.</p>
 })
 </code></pre>
 
-        <h3 id="accessibility" class="docs-header-link" translation-result="on">
-          <span header-link="无障碍性"></span>
-          无障碍性
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="accessibility"></span>
-          Accessibility
-        </h3>
-      
-        
-      <p translation-result="on"><code>MatSnackBar</code> 通过 <code>aria-live</code> 区域来播报消息。虽然默认情况下公告会使用 <code>polite</code> 设置，但你也可以通过设置 <code>MatSnackBarConfig</code> 的 <code>politeness</code> 属性来自定义它。</p><p translation-origin="off"><code>MatSnackBar</code> announces messages via an <code>aria-live</code> region. While announcements use the <code>polite</code>
-setting by default, you can customize this by setting the <code>politeness</code> property of
-<code>MatSnackBarConfig</code>.</p>
-
-<p translation-result="on"><code>MatSnackBar</code> 不会将焦点移动到快餐栏元素。像这样移动焦点会在工作流程中扰乱用户。对于快餐栏中提供的任何操作，你的应用程序都应该提供执行该操作的替代方法。替代交互通常是键盘快捷键或菜单选项。一旦用户执行相应的操作，你应该关闭快餐栏。快餐栏可以包含一个单独的动作和一个额外的可选“关闭”或“取消”动作。</p><p translation-origin="off"><code>MatSnackBar</code> does not move focus to the snackbar element. Moving focus like this would disrupt
-users in the middle of a workflow. For any action offered in the snackbar, your application should
-provide an alternative way to perform the action. Alternative interactions are typically keyboard
-shortcuts or menu options. You should dismiss the snackbar once the user performs its corresponding
-action. A snackbar can contain a single action with an additional optional "dismiss" or "cancel"
-action.</p>
-
-<p translation-result="on">尽量不要为具有可用操作的快餐栏设置 <code>duration</code> ，因为屏幕阅读器用户可能希望导航到快餐栏上的元素以激活该操作。如果用户在快餐栏中手动移动了他们的焦点，你应该将焦点返回到用户工作流程上下文中有意义的某个地方。</p><p translation-origin="off">Avoid setting a <code>duration</code> for snackbars that have an action available, as screen reader users may
-want to navigate to the snackbar element to activate the action. If the user has manually moved
-their focus within the snackbar, you should return focus somewhere that makes sense in the context
-of the user's workflow.</p>
-
+        <h3 id="accessibility" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="55b8z3baik2ejxevaqhco84f8">无障碍性</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="avfz4mvz27b9p3pucto7g0bpu"><code>MatSnackBar</code> 通过 <code>aria-live</code> 区域来播报消息。虽然默认情况下公告会使用 <code>polite</code> 设置，但你也可以通过设置 <code>MatSnackBarConfig</code> 的 <code>politeness</code> 属性来自定义它。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="b1mrckti3j24frma04pt78eox"><code>MatSnackBar</code> 不会将焦点移动到快餐栏元素。像这样移动焦点会在工作流程中扰乱用户。对于快餐栏中提供的任何操作，你的应用程序都应该提供执行该操作的替代方法。替代交互通常是键盘快捷键或菜单选项。一旦用户执行相应的操作，你应该关闭快餐栏。快餐栏可以包含一个单独的动作和一个额外的可选“关闭”或“取消”动作。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="8ddrgzcbw2rs7l9z7y6i9m4aq">尽量不要为具有可用操作的快餐栏设置 <code>duration</code> ，因为屏幕阅读器用户可能希望导航到快餐栏上的元素以激活该操作。如果用户在快餐栏中手动移动了他们的焦点，你应该将焦点返回到用户工作流程上下文中有意义的某个地方。</p>
 </div>

@@ -3,19 +3,13 @@
   <label class="example-listbox-label" id="example-language-label">
     Preferred Language
   </label>
-  <ul cdkListbox
-      [formControl]="languageCtrl"
-      aria-labelledby="example-language-label"
-      class="example-listbox">
-    <li *ngFor="let language of languages"
-        [cdkOption]="language"
-        class="example-option">
-      {{language}}
-    </li>
+  <ul cdklistbox [formcontrol]="languageCtrl" aria-labelledby="example-language-label" class="example-listbox">
+    @for (language of languages; track language) {
+      <li [cdkoption]="language" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="1n95or59c21sngvk2tvqdut0s">{{语言}}</li>
+    }
   </ul>
   <!-- #enddocregion listbox -->
 </div>
-<p>
-  Your preferred language: <strong>{{languageCtrl.value | json}}</strong>&nbsp;
-  <button (click)="languageCtrl.reset()">Reset</button>
-</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="bdj0d1qqubfa1wxtp4w4q5s4p">你喜欢的语言是：
+<strong>{{languageCtrl.value | json}}</strong>&nbsp; 
+<button (click)="languageCtrl.reset()">重置</button></p>

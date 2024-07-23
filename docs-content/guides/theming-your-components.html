@@ -1,103 +1,311 @@
-<div class="docs-markdown"><h1 id="theme-your-own-components-with-angular-materials-theming-system" translation-result="on">使用 Angular Material 的主题体系为你自己的组件设置主题</h1><h1 translation-origin="off">Theme your own components with Angular Material's theming system</h1><p translation-result="on">你可以将 Angular Material 基于 Sass 的主题体系用于自定义组件。</p><p translation-origin="off">You can use Angular Material's Sass-based theming system for your own custom components.</p>
+<div class="docs-markdown"><h1 data-ng_translator_product="100" data-ng_translator_ref_id="3dy1os5g49b113zvg45m23emc">使用 Angular Material 的主题体系为你自己的组件设置主题</h1><p data-ng_translator_product="100" data-ng_translator_ref_id="41z79dqz2qyzw8bv4rrixcje0">你可以将 Angular Material 基于 Sass 的主题体系用于自定义组件。</p>
 
+        <h2 id="reading-style-values-from-a-theme" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="7drcbv9rotizeq61g2qug0gul">从主题中读取样式值</h2>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="dsbvb10g1mxv38ivuoihi84ek">如<a href="https://material.angular.io/guide/theming#themes">主题指南</a>中所述，主题是一个 Sass 映射表，其中包含用于自定义组件的样式值。 Angular Material 提供了一些用于从该数据结构中读取值的 API。</p>
 
-        <h2 id="reading-style-values-from-a-theme" class="docs-header-link" translation-result="on">
-          <span header-link="从主题中读取样式值"></span>
-          从主题中读取样式值
-        </h2><h2 class="docs-header-link" translation-origin="off">
-          <span header-link="reading-style-values-from-a-theme"></span>
-          Reading style values from a theme
-        </h2>
-      
-        
-      <p translation-result="on">如<a href="https://material.angular.io/guide/theming#themes">主题指南</a>中所述，主题是一个 Sass 映射表，其中包含用于自定义组件的样式值。 Angular Material 提供了一些用于从该数据结构中读取值的 API。</p><p translation-origin="off">As described in the <a href="https://material.angular.io/guide/theming#themes">theming guide</a>, a theme is a Sass map that contains style values to
-customize components. Angular Material provides APIs for reading values from this data structure.</p>
+        <h3 id="reading-color-values" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="bnnc46ifr21mvi5v8g738me8h">读取颜色值</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="k4760694zhop9uzejxhsbd0f">要从主题中读取颜色值，可以使用 
+<code>get-theme-color</code> Sass 函数。此函数支持读取应用颜色调色板（主色调、强调色和警告色）以及前景和背景调色板的颜色。
+<code>get-theme-color</code> 接受三个参数：要读取的主题、调色板的名称和颜色的名称。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="6m4m7qs7mm0cmq4ywvmffonkx">每个颜色调色板（主色调、强调色和警告色）都支持读取以下命名颜色：</p>
+<table>
+<thead>
+<tr>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="6kcpayyvrluoci1l5mqxgtoh9">颜色名称</th>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>default</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="ecu11mwx2wblhsfvxse5p7ntx">此调色板的默认颜色</td>
+</tr>
+<tr>
+<td>lighter</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="53c4j69lkhp383ouperqs301">此调色板颜色的浅色版本</td>
+</tr>
+<tr>
+<td>darker</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="c2k2yjqodkmtuvbyo33vqdteu">此调色板颜色的深色版本</td>
+</tr>
+<tr>
+<td>text</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="47461qh9v5vjlu70rtk51gejz">此调色板的文本颜色</td>
+</tr>
+<tr>
+<td>default-contrast</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="cusl7i1561zwv3e6nvqi2c4i2">与该调色板的默认颜色形成对比的颜色</td>
+</tr>
+<tr>
+<td>lighter-contrast</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="898guj1gz7ieoh9akcoverqii">与该调色板的浅色形成对比的颜色</td>
+</tr>
+<tr>
+<td>darker-contrast</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="46dn4101wb6rj2bsuj559gstq">与该调色板的深色形成对比的颜色</td>
+</tr>
+<tr>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="anoyeycmt8igoppbdz0r8e0wg">[色调]</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="1ozvduc2cfqjyyipkise5hth4">调色板的 [色调] 颜色。
+<br>[色调] 可以是以下之一：50、100、200、300、400、500、600、700、800、900、A100、A200、A400、A700</td>
+</tr>
+<tr>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="44m3zih6fd9krbzseq7xhfnng">[色调]-对比</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="55rztwthf36hubdcahecups0g">与调色板的 [色调] 颜色形成对比的颜色。
+<br>[色调] 可以是以下之一：50、100、200、300、400、500、600、700、800、900、A100、A200、A400、A700</td>
+</tr>
+</tbody></table>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="3kdbbj2kw2lbwrfk89gf6t50w">背景调色板支持读取以下命名颜色：</p>
+<table>
+<thead>
+<tr>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="6kcpayyvrluoci1l5mqxgtoh9">颜色名称</th>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>status-bar</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="6xwwge72xf8e4u7rjg5ow0qhv">状态栏的背景颜色</td>
+</tr>
+<tr>
+<td>app-bar</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="bs69zztq7k6k6z395hot61wf5">应用栏的背景颜色</td>
+</tr>
+<tr>
+<td>background</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="clp25hybks2iftinr8jvrspvq">应用的背景颜色</td>
+</tr>
+<tr>
+<td>hover</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="cxzaisgcae458un241feoyvh2">悬停覆盖的背景颜色</td>
+</tr>
+<tr>
+<td>card</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="a9376nfjkp7mseqzabd8n32j">卡片的背景颜色</td>
+</tr>
+<tr>
+<td>dialog</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="auhwp4qwxja9fp2evm3mi918e">对话框的背景颜色</td>
+</tr>
+<tr>
+<td>raised-button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="aikj843qfhr3pk90rm9n2tygw">凸起按钮的背景颜色</td>
+</tr>
+<tr>
+<td>selected-button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="c1bis1c4gy8laqb6r10sljr48">选中按钮的背景颜色</td>
+</tr>
+<tr>
+<td>selected-disabled-button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="b5wgkgsi4q3s1fo6cjtddvpdh">选中禁用按钮的背景颜色</td>
+</tr>
+<tr>
+<td>disabled-button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="6bu30x7rmysgpxt1vbwi72m2d">禁用按钮的背景颜色</td>
+</tr>
+<tr>
+<td>focused-button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="50yfvzicsvstjtioti419afun">获得焦点的按钮的背景颜色</td>
+</tr>
+<tr>
+<td>disabled-button-toggle</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="3btjdkmd0sapxtacqwudfxfyp">禁用的按钮切换的背景颜色</td>
+</tr>
+<tr>
+<td>unselected-chip</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="dub9e9wlmjgyateha7g4l3l83">未选中的芯片的背景颜色</td>
+</tr>
+<tr>
+<td>disabled-list-option</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="7glv3z76d40kchqvkqcerwff1">禁用的列表选项的背景颜色</td>
+</tr>
+<tr>
+<td>tooltip</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="8wm9zfpr2zsg7t4hqxqxjjvyw">工具提示的背景颜色</td>
+</tr>
+</tbody></table>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="66a48snu2k8cxuaef7df1jxad">前景色调板支持读取以下命名颜色：</p>
+<table>
+<thead>
+<tr>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="6120izg2joy3xxvrj5q02yh21">颜色名称</th>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>base</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="ctipbrhg0k5uf4age9xihurdw">基础前景色，可用于颜色混合或创建自定义不透明度前景色</td>
+</tr>
+<tr>
+<td>divider</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="4yj0nm7ffpwrp1jpuihj0fb3g">分隔线的颜色</td>
+</tr>
+<tr>
+<td>dividers</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="axg98yjek32wnh4l3wawj3m4r">(分隔线的别名)</td>
+</tr>
+<tr>
+<td>disabled-text</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="dt9m2dv4w3cdu06kd43u12boy">禁用文本的颜色</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="jvr48tu5kaag20enmawvi56r">(禁用文本的别名)</td>
+</tr>
+<tr>
+<td>disabled-button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="1ahf5730f7b8ypyay4x5jr26n">禁用按钮文本的颜色</td>
+</tr>
+<tr>
+<td>elevation</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="bunp2rtlltymrlmujy8fvvns4">颜色升高阴影</td>
+</tr>
+<tr>
+<td>hint-text</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="bm5cccywm7qmrw8il63uuy120">提示文本的颜色</td>
+</tr>
+<tr>
+<td>secondary-text</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="4tvz1ry5jcfw3xsunzqsljtet">次要文本的颜色</td>
+</tr>
+<tr>
+<td>icon</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="9ukhxnxi1gg7xk0zviji0dk9u">图标的颜色</td>
+</tr>
+<tr>
+<td>icons</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="1siouqo5kqoziffzevu3b6sr0">(图标的别名)</td>
+</tr>
+<tr>
+<td>text</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="9r766xktur5tj07lwf49d1k3n">文本的颜色</td>
+</tr>
+</tbody></table>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="enj6b7z4iyb32ae6uanrs6dj1">除了读取特定颜色外，你还可以使用 
+<code>get-theme-type</code> Sass 函数来确定主题类型（亮色或暗色）。此函数接受一个参数，即主题，并返回 
+<code>light</code> 或 
+<code>dark</code>。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="8z1qvxvhqdrdy1xj1mk6onyq9">请查看以下从主题读取一些颜色的示例：</p>
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-dark-theme(...);
 
-
-        <h3 id="reading-color-values" class="docs-header-link" translation-result="on">
-          <span header-link="读取颜色值"></span>
-          读取颜色值
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="reading-color-values"></span>
-          Reading color values
-        </h3>
-      
-        
-      <p translation-result="on">要从主题中读取颜色值，你可以使用 Sass 函数 <code>get-color-config</code>。此函数返回一个 Sass 映射表，其中包含主题的 <code>primary</code>（主要）调色板、<code>accent</code>（强调）调色板和 <code>warn</code>（警告）调色板，以及指示是否设置了暗模式的标志。</p><p translation-origin="off">To read color values from a theme, you can use the <code>get-color-config</code> Sass function. This function
-returns a Sass map containing the theme's primary, accent, and warn palettes, as well as a flag
-indicating whether dark mode is set.</p>
-
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'sass:map'</span>;
-<span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
-
-<span class="hljs-variable">$primary</span>: mat.define-palette(mat.<span class="hljs-variable">$indigo-palette</span>);
-<span class="hljs-variable">$accent</span>: mat.define-palette(mat.<span class="hljs-variable">$pink-palette</span>);
-<span class="hljs-variable">$warn</span>: mat.define-palette(mat.<span class="hljs-variable">$red-palette</span>);
-
-<span class="hljs-variable">$theme</span>: mat.define-light-theme((
-  color: (primary: <span class="hljs-variable">$primary</span>, accent: <span class="hljs-variable">$accent</span>, warn: <span class="hljs-variable">$warn</span>),
-));
-
-<span class="hljs-variable">$color-config</span>:    mat.get-color-config(<span class="hljs-variable">$theme</span>);
-<span class="hljs-variable">$primary-palette</span>: map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">'primary'</span>);
-<span class="hljs-variable">$accent-palette</span>:  map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">'accent'</span>);
-<span class="hljs-variable">$warn-palette</span>:    map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">'warn'</span>);
-<span class="hljs-variable">$is-dark-theme</span>:   map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">'is-dark'</span>);
+<span class="hljs-variable">$primary-default</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, primary, default);
+<span class="hljs-variable">$accent-a100</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, accent, A100);
+<span class="hljs-variable">$warn-500-contrast</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, warn, <span class="hljs-number">500</span>-contrast);
+<span class="hljs-variable">$foreground-text</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, foreground, text);
+<span class="hljs-variable">$background-card</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, background, card);
+<span class="hljs-variable">$type</span>: mat.get-theme-type(<span class="hljs-variable">$theme</span>);
+<span class="hljs-variable">$custom-background</span>: if(<span class="hljs-variable">$type</span> == dark, <span class="hljs-number">#030</span>, <span class="hljs-number">#dfd</span>);
 </code></pre>
-<p translation-result="on">关于从调色板读取色调的更多信息，请参阅<a href="https://material.angular.io/guide/theming#reading-hues-from-palettes">主题指南</a>。</p><p translation-origin="off">See the <a href="https://material.angular.io/guide/theming#reading-hues-from-palettes">theming guide</a> for more information on reading hues from palettes.</p>
 
+        <h3 id="reading-typography-values" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="5zysomwy4hkbgf6g916i109gg">读取排版值</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="9m2c9y43qrljtywm8x494yzx8">要从主题读取排版值，可以使用 
+<code>get-theme-typography</code> Sass 函数。此函数支持从主题中定义的排版级别读取排版属性。有两种调用此函数的方法。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="cehdijfukq3ecxc7a66winnm2">第一种调用方法是只传递主题和排版级别，以获取基于该级别设置的简写 
+<code>font</code> 属性。（注意：
+<code>letter-spacing</code> 无法在 
+<code>font</code> 简写中表达，因此必须单独应用）。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="bg3xicmeowdi2uevbrw6qkk1w">第二种调用方法是传递主题、排版级别以及你想要的特定字体属性：
+<code>font-family</code>、
+<code>font-size</code>、
+<code>font-weight</code>、
+<code>line-height</code> 或 
+<code>letter-spacing</code>。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="4jlmuithcut6cja6lf9psdxk5">可用的排版级别为：</p>
+<table>
+<thead>
+<tr>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="4dkesj3d12v3li73mgaxabh53">名称</th>
+<th data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>headline-1</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="4v7wvicbpbp25u5ll6m8a9x0b">一次性标题，通常位于页面顶部（例如英雄标题）。</td>
+</tr>
+<tr>
+<td>headline-2</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="4v7wvicbpbp25u5ll6m8a9x0b">一次性标题，通常位于页面顶部（例如英雄标题）。</td>
+</tr>
+<tr>
+<td>headline-3</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="4v7wvicbpbp25u5ll6m8a9x0b">一次性标题，通常位于页面顶部（例如英雄标题）。</td>
+</tr>
+<tr>
+<td>headline-4</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="4v7wvicbpbp25u5ll6m8a9x0b">一次性标题，通常位于页面顶部（例如英雄标题）。</td>
+</tr>
+<tr>
+<td>headline-5</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="2ru7vm0zmhdk5ezgimdw4e2nw">对应于 
+<code>&lt;h1&gt;</code> 标签的节标题。</td>
+</tr>
+<tr>
+<td>headline-6</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="efn6pvod0yjtjtoabg1tofkwb">对应于 
+<code>&lt;h2&gt;</code> 标签的节标题。</td>
+</tr>
+<tr>
+<td>subtitle-1</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="bv6oxra8oi6lw1kbn26p20qd4">对应于 
+<code>&lt;h3&gt;</code> 标签的节标题。</td>
+</tr>
+<tr>
+<td>subtitle-2</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="ai9g2snylclmu0rm34rf5vtcf">对应于 
+<code>&lt;h4&gt;</code> 标签的节标题。</td>
+</tr>
+<tr>
+<td>body-1</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="dicbdmoywcv52rii7mdyqp7kn">基本正文文本。</td>
+</tr>
+<tr>
+<td>body-2</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="egqagvl12rna5y15ajqkaxxf">次要正文文本。</td>
+</tr>
+<tr>
+<td>caption</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="8gpjju50aa7i6ukjl4a8dslmn">较小的正文和提示文本。</td>
+</tr>
+<tr>
+<td>button</td>
+<td data-ng_translator_product="100" data-ng_translator_ref_id="76pyppbo808edlq03fr81w18c">按钮和锚点。</td>
+</tr>
+</tbody></table>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="yqqd4uzq4ttxamtex3gjbs70">请查看以下从主题读取一些排版设置的示例：</p>
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-dark-theme(...);
 
-        <h3 id="reading-typography-values" class="docs-header-link" translation-result="on">
-          <span header-link="读取排版值"></span>
-          读取排版值
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="reading-typography-values"></span>
-          Reading typography values
-        </h3>
-      
-        
-      <p translation-result="on">要从主题中读取排版值，你可以使用 Sass 函数 <code>get-typography-config</code>。有关排版配置数据结构和用来从此配置中读取值的 API 的更多信息，请参阅<a href="https://material.angular.io/guide/typography#typography-config">排版指南</a>。</p><p translation-origin="off">To read typography values from a theme, you can use the <code>get-typography-config</code> Sass function. See
-the <a href="https://material.angular.io/guide/typography#typography-config">Typography guide</a> for more information about the typography config data
-structure and for APIs for reading values from this config.</p>
-
-<pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
-
-<span class="hljs-variable">$typography-config</span>: mat.get-typography-config(<span class="hljs-variable">$theme</span>);
-<span class="hljs-variable">$my-font-family</span>: mat.font-family(<span class="hljs-variable">$typography-config</span>);
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>);
+  <span class="hljs-attribute">letter-spacing</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, body-<span class="hljs-number">1</span>, letter-spacing);
+}
 </code></pre>
 
-        <h2 id="separating-theme-styles" class="docs-header-link" translation-result="on">
-          <span header-link="分离主题样式"></span>
-          分离主题样式
-        </h2><h2 class="docs-header-link" translation-origin="off">
-          <span header-link="separating-theme-styles"></span>
-          Separating theme styles
-        </h2>
-      
-        
-      <p translation-result="on">每个 Angular Material 组件都有一个 Sass 文件，该文件定义了用于自定义该组件的颜色和排版的 mixin。例如：<code>MatButton</code> 具有 <code>button-color</code> 和 <code>button-typography</code> 这两个 mixin。它们分别生成该组件的所有颜色和排版样式。</p><p translation-origin="off">Angular Material components each have a Sass file that defines mixins for customizing
-that component's color and typography. For example, <code>MatButton</code> has mixins for <code>button-color</code> and
-<code>button-typography</code>. Each mixin emits all color and typography styles for that component,
-respectively.</p>
+        <h3 id="reading-density-values" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="dci4jqtszxevt4ecn9nohntx0">读取密度值</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="9ztkublaa1hf6ikfy5nl6ew5l">要从主题读取密度比例，可以使用 
+<code>get-theme-density</code> Sass 函数。此函数接受一个主题并返回密度比例（0、-1、-2、-3、-4 或 -5）。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="4fec1vuqj0evbduzox80op8ho">请查看以下从主题读取密度比例的示例：</p>
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-dark-theme(...);
 
-<p translation-result="on">你可以通过定义自己的 mixin，在你的组件中模仿这种结构。这些 mixin 应该接受一个 Angular Material 主题，它们可以从中读取颜色和排版值。然后，你可以将这些 mixin 与 Angular Material 自己的 mixins 一起包含在你的应用程序中。</p><p translation-origin="off">You can mirror this structure in your components by defining your own mixins. These mixins
-should accept an Angular Material theme, from which they can read color and typography values. You
-can then include these mixins in your application along with Angular Material's own mixins.</p>
+<span class="hljs-variable">$density-scale</span>: mat.get-theme-density(<span class="hljs-variable">$theme</span>);
+</code></pre>
 
+        <h3 id="checking-what-dimensions-are-configured-for-a-theme" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="6fix4ezzvv3ouzjuvopgu17jv">检查为主题配置了哪些维度</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="14e4nt199jvrupucukqya94fu">根据主题的创建方式，它可能没有为所有主题维度（基础、颜色、排版、密度）配置数据。你可以通过调用 
+<code>theme-has</code> Sass 函数来检查主题是否为特定维度配置了数据，并将主题和要检查的维度传递给它。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="5ogcb5h3anatnkjnrg4ejjow3">请查看以下检查主题的配置维度的示例：</p>
+<pre><code class="language-scss"><span class="hljs-variable">$theme</span>: mat.define-dark-theme(...);
 
-        <h2 id="step-by-step-example" class="docs-header-link" translation-result="on">
-          <span header-link="分步示例"></span>
-          分步示例
-        </h2><h2 class="docs-header-link" translation-origin="off">
-          <span header-link="step-by-step-example"></span>
-          Step-by-step example
-        </h2>
-      
-        
-      <p translation-result="on">为了说明如何融入 Angular Material 的主题体系，我们可以看一个自定义轮播组件的示例。 此轮播组件从单一文件 <code>carousel.scss</code> 开始，其中包含结构、颜色和排版样式。该文件包含在组件的 <code>styleUrls</code> 中。</p><p translation-origin="off">To illustrate participation in Angular Material's theming system, we can look at an example of a
-custom carousel component. The carousel starts with a single file, <code>carousel.scss</code>, that contains
-structural, color, and typography styles. This file is included in the <code>styleUrls</code> of the component.</p>
+<span class="hljs-variable">$has-base</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, base);
+<span class="hljs-variable">$has-color</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, color);
+<span class="hljs-variable">$has-typography</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, typography);
+<span class="hljs-variable">$has-density</span>: mat.theme-has(<span class="hljs-variable">$theme</span>, density);
+</code></pre>
 
+        <h2 id="separating-theme-styles" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="btxkyct3vj1vyzapl58d2o5ld">分离主题样式</h2>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="6d3apdi6mk0sdbzkyh2o2vk9z">每个 Angular Material 组件都有一个 Sass 文件，该文件定义了用于自定义该组件的颜色和排版的 mixin。例如：<code>MatButton</code> 具有 <code>button-color</code> 和 <code>button-typography</code> 这两个 mixin。它们分别生成该组件的所有颜色和排版样式。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="6fr59dgtfz5e6wport87r0w7l">你可以通过定义自己的 mixin，在你的组件中模仿这种结构。这些 mixin 应该接受一个 Angular Material 主题，它们可以从中读取颜色和排版值。然后，你可以将这些 mixin 与 Angular Material 自己的 mixins 一起包含在你的应用程序中。</p>
+
+        <h2 id="step-by-step-example" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="dnuzy6rztb2kdpgs7r4lnzzoj">分步示例</h2>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="edhxl61f80ayveuxoeprxqb4y">为了说明如何融入 Angular Material 的主题体系，我们可以看一个自定义轮播组件的示例。 此轮播组件从单一文件 <code>carousel.scss</code> 开始，其中包含结构、颜色和排版样式。该文件包含在组件的 <code>styleUrls</code> 中。</p>
 <pre><code class="language-scss"><span class="hljs-comment">// carousel.scss</span>
 
 <span class="hljs-selector-class">.my-carousel</span> {
@@ -111,21 +319,8 @@ structural, color, and typography styles. This file is included in the <code>sty
 }
 </code></pre>
 
-        <h3 id="step-1-extract-theme-based-styles-to-a-separate-file" class="docs-header-link" translation-result="on">
-          <span header-link="步骤-1：将基于主题的样式提取到单独的文件中"></span>
-          步骤 1：将基于主题的样式提取到单独的文件中
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="step-1-extract-theme-based-styles-to-a-separate-file"></span>
-          Step 1: Extract theme-based styles to a separate file
-        </h3>
-      
-        
-      <p translation-result="on">为了更改此文件以融入 Angular Material 的主题体系，我们将这些样式拆分为两个文件，把颜色和排版样式移动到 mixin 中。按照惯例，新文件名以 <code>-theme</code> 结尾。此外，该文件以下划线 (<code>_</code>) 开头，以表明这是一个 Sass “部分（partial）文件”。关于“部分文件”的更多信息，请参阅 <a href="https://sass-lang.com/guide#topic-4">Sass 文档</a>。</p><p translation-origin="off">To change this file to participate in Angular Material's theming system, we split the styles into
-two files, with the color and typography styles moved into mixins. By convention, the new file
-name ends with <code>-theme</code>. Additionally, the file starts with an underscore (<code>_</code>), indicating that
-this is a Sass partial file. See the <a href="https://sass-lang.com/guide#topic-4">Sass documentation</a> for more information about
-partial files.</p>
-
+        <h3 id="step-1-extract-theme-based-styles-to-a-separate-file" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="4fzy49fsev6as4xp86f5bogi6">步骤 1：将基于主题的样式提取到单独的文件中</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="cbfrquezaaay7bzcfvjm78ec9">为了更改此文件以融入 Angular Material 的主题体系，我们将这些样式拆分为两个文件，把颜色和排版样式移动到 mixin 中。按照惯例，新文件名以 <code>-theme</code> 结尾。此外，该文件以下划线 (<code>_</code>) 开头，以表明这是一个 Sass “部分（partial）文件”。关于“部分文件”的更多信息，请参阅 <a href="https://sass-lang.com/guide#topic-4">Sass 文档</a>。</p>
 <pre><code class="language-scss"><span class="hljs-comment">// carousel.scss</span>
 
 <span class="hljs-selector-class">.my-carousel</span> {
@@ -151,111 +346,62 @@ partial files.</p>
 }
 </code></pre>
 
-        <h3 id="step-2-use-values-from-the-theme" class="docs-header-link" translation-result="on">
-          <span header-link="第-2-步：使用主题中的值"></span>
-          第 2 步：使用主题中的值
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="step-2-use-values-from-the-theme"></span>
-          Step 2: Use values from the theme
-        </h3>
-      
-        
-      <p translation-result="on">现在，这些基于主题的样式都存在于 mixin 中，我们可以从传给这些 mixin 的主题中提取我们需要的值。</p><p translation-origin="off">Now that theme theme-based styles reside in mixins, we can extract the values we need from the
-theme passed into the mixins.</p>
-
+        <h3 id="step-2-use-values-from-the-theme" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="8bfkh8jvpyrdgrl025lnstc4e">第 2 步：使用主题中的值</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="647qfjdx1zqsydyc2zg9id0t1">现在，这些基于主题的样式都存在于 mixin 中，我们可以从传给这些 mixin 的主题中提取我们需要的值。</p>
 <pre><code class="language-scss"><span class="hljs-comment">// _carousel-theme.scss</span>
 
 <span class="hljs-keyword">@use</span> <span class="hljs-string">'sass:map'</span>;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
 
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
-  <span class="hljs-comment">// Get the color config from the theme.</span>
-  <span class="hljs-variable">$color-config</span>: mat.get-color-config(<span class="hljs-variable">$theme</span>);
-
-  <span class="hljs-comment">// Get the primary color palette from the color-config.</span>
-  <span class="hljs-variable">$primary-palette</span>: map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">'primary'</span>);
-
   <span class="hljs-selector-class">.my-carousel-button</span> {
     <span class="hljs-comment">// Read the 500 hue from the primary color palette.</span>
-    <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$primary-palette</span>, <span class="hljs-number">500</span>);
+    <span class="hljs-attribute">color</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, primary, <span class="hljs-number">500</span>);
   }
 }
 
 <span class="hljs-keyword">@mixin</span> typography(<span class="hljs-variable">$theme</span>) {
-  <span class="hljs-comment">// Get the typography config from the theme.</span>
-  <span class="hljs-variable">$typography-config</span>: mat.get-typography-config(<span class="hljs-variable">$theme</span>);
-
   <span class="hljs-selector-class">.my-carousel</span> {
-    <span class="hljs-attribute">font-family</span>: mat.font-family(<span class="hljs-variable">$typography-config</span>);
+    <span class="hljs-comment">// Get the headline font from the theme.</span>
+    <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
   }
 }
 </code></pre>
 
-        <h3 id="step-3-add-a-theme-mixin" class="docs-header-link" translation-result="on">
-          <span header-link="第-3-步：添加主题-mixin"></span>
-          第 3 步：添加主题 mixin
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="step-3-add-a-theme-mixin"></span>
-          Step 3: Add a theme mixin
-        </h3>
-      
-        
-      <p translation-result="on">为方便起见，我们可以添加一个包含颜色和排版的 <code>theme</code> mixin。如果指定了配置，则此主题 mixin 应仅生成每种颜色和排版的样式。</p><p translation-origin="off">For convenience, we can add a <code>theme</code> mixin that includes both color and typography.
-This theme mixin should only emit the styles for each color and typography, respectively, if they
-have a config specified.</p>
-
+        <h3 id="step-3-add-a-theme-mixin" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="4d93g1l4almho77fc6x06zgqc">第 3 步：添加主题 mixin</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="8bjq31hlb3fa91w6dgjrac0k8">为方便起见，我们可以添加一个包含颜色和排版的 <code>theme</code> mixin。如果指定了配置，则此主题 mixin 应仅生成每种颜色和排版的样式。</p>
 <pre><code class="language-scss"><span class="hljs-comment">// _carousel-theme.scss</span>
 
 <span class="hljs-keyword">@use</span> <span class="hljs-string">'sass:map'</span>;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
 
 <span class="hljs-keyword">@mixin</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>) {
-  <span class="hljs-comment">// Get the color config from the theme.</span>
-  <span class="hljs-variable">$color-config</span>: mat.get-color-config(<span class="hljs-variable">$theme</span>);
-
-  <span class="hljs-comment">// Get the primary color palette from the color-config.</span>
-  <span class="hljs-variable">$primary-palette</span>: map.get(<span class="hljs-variable">$color-config</span>, <span class="hljs-string">'primary'</span>);
-
   <span class="hljs-selector-class">.my-carousel-button</span> {
     <span class="hljs-comment">// Read the 500 hue from the primary color palette.</span>
-    <span class="hljs-attribute">color</span>: mat.get-color-from-palette(<span class="hljs-variable">$primary-palette</span>, <span class="hljs-number">500</span>);
+    <span class="hljs-attribute">color</span>: mat.get-theme-color(<span class="hljs-variable">$theme</span>, primary, <span class="hljs-number">500</span>);
   }
 }
 
 <span class="hljs-keyword">@mixin</span> typography(<span class="hljs-variable">$theme</span>) {
-  <span class="hljs-comment">// Get the typography config from the theme.</span>
-  <span class="hljs-variable">$typography-config</span>: mat.get-typography-config(<span class="hljs-variable">$theme</span>);
-
   <span class="hljs-selector-class">.my-carousel</span> {
-    <span class="hljs-attribute">font-family</span>: mat.font-family(<span class="hljs-variable">$typography-config</span>);
+    <span class="hljs-comment">// Get the headline font from the theme.</span>
+    <span class="hljs-attribute">font</span>: mat.get-theme-typography(<span class="hljs-variable">$theme</span>, headline-<span class="hljs-number">1</span>);
   }
 }
 
 <span class="hljs-keyword">@mixin</span> theme(<span class="hljs-variable">$theme</span>) {
-  <span class="hljs-variable">$color-config</span>: mat.get-color-config(<span class="hljs-variable">$theme</span>);
-  <span class="hljs-keyword">@if</span> <span class="hljs-variable">$color-config</span> != null {
+  <span class="hljs-keyword">@if</span> mat.theme-has(<span class="hljs-variable">$theme</span>, <span class="hljs-attribute">color</span>) {
     <span class="hljs-keyword">@include</span> <span class="hljs-attribute">color</span>(<span class="hljs-variable">$theme</span>);
   }
 
-  <span class="hljs-variable">$typography-config</span>: mat.get-typography-config(<span class="hljs-variable">$theme</span>);
-  <span class="hljs-keyword">@if</span> <span class="hljs-variable">$typography-config</span> != null {
+  <span class="hljs-keyword">@if</span> mat.theme-has(<span class="hljs-variable">$theme</span>, typography) {
     <span class="hljs-keyword">@include</span> typography(<span class="hljs-variable">$theme</span>);
   }
 }
 </code></pre>
 
-        <h3 id="step-4-include-the-theme-mixin-in-your-application" class="docs-header-link" translation-result="on">
-          <span header-link="第-4-步：在你的应用程序中包含主题-mixin"></span>
-          第 4 步：在你的应用程序中包含主题 mixin
-        </h3><h3 class="docs-header-link" translation-origin="off">
-          <span header-link="step-4-include-the-theme-mixin-in-your-application"></span>
-          Step 4: Include the theme mixin in your application
-        </h3>
-      
-        
-      <p translation-result="on">现在你已经定义了轮播组件的主题 mixin，可以将此 mixin 与其他主题 mixin 一起包含在你的应用程序中。</p><p translation-origin="off">Now that you've defined the carousel component's theme mixin, you can include this mixin along with
-the other theme mixins in your application.</p>
-
+        <h3 id="step-4-include-the-theme-mixin-in-your-application" class="docs-header-link" data-ng_translator_product="100" data-ng_translator_ref_id="2mlx66zhgvulidbijewoihdkc">第 4 步：在你的应用程序中包含主题 mixin</h3>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="e51oivhom51ac7snw57rmsndo">现在你已经定义了轮播组件的主题 mixin，可以将此 mixin 与其他主题 mixin 一起包含在你的应用程序中。</p>
 <pre><code class="language-scss"><span class="hljs-keyword">@use</span> <span class="hljs-string">'@angular/material'</span> as mat;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">'./path/to/carousel-theme'</span> as carousel;
 

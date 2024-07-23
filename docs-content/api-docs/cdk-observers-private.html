@@ -1,46 +1,26 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="docs-api">
-  <h2 id="----angular-cdk-observers-private-api-参考文档--">
-    Angular CDK observers-private API 参考文档
-  </h2>
-    <p>Import symbols from <code>@angular/cdk/observers/private</code></p><h3 id="cdk-observers-private-services" class="docs-header-link docs-api-h3">
-      <span header-link="services"></span>
-      服务
-    </h3>
+  <h2 data-ng_translator_product="100" data-ng_translator_ref_id="1k0sabu3y3bld78b2zxtter1h">Angular CDK 私有观察者 API 参考</h2>
+    <p data-ng_translator_product="100" data-ng_translator_ref_id="8w5shpmws7qo1zkk2apotw7xx">从 
+<code>@angular/cdk/observers/private</code> 导入符号</p><h3 id="cdk-observers-private-services" class="docs-header-link docs-api-h3" data-ng_translator_product="100" data-ng_translator_ref_id="36aydmtu2rapwl6jvu6skgwx5">服务</h3>
     
       
 
 <h4 id="SharedResizeObserver" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="SharedResizeObserver"></span>
+  
   <code>SharedResizeObserver</code>
   
-</h4><div class="docs-api-class-description"><p>Allows observing resize events on multiple elements using a shared set of ResizeObserver.
-Sharing a ResizeObserver instance is recommended for better performance (see
-<a href="https://github.com/WICG/resize-observer/issues/59">https://github.com/WICG/resize-observer/issues/59</a>).</p>
-<p>Rather than share a single <code>ResizeObserver</code>, this class creates one <code>ResizeObserver</code> per type
-of observed box ('content-box', 'border-box', and 'device-pixel-content-box'). This avoids
-later calls to <code>observe</code> with a different box type from influencing the events dispatched to
-earlier calls.</p>
-</div>
+</h4><p class="docs-api-class-description"></p><p data-ng_translator_product="100" data-ng_translator_ref_id="7d61l2hpwdap3s9qx67qp1lk3">允许使用共享的 
+<code>ResizeObserver</code> 集合来观察多个元素上的调整大小事件。 建议共享 
+<code>ResizeObserver</code> 实例以提高性能（参见 
+<a href="https://github.com/WICG/resize-observer/issues/59">https://github.com/WICG/resize-observer/issues/59</a>）。</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="59s4x9o5kv5e5mrrtm3zsffbs">此类不共享单个 
+<code>ResizeObserver</code>，而是为每种观察到的框类型（'content-box'、'border-box' 和 'device-pixel-content-box'）创建一个 
+<code>ResizeObserver</code>。这避免了以后对 
+<code>observe</code> 的调用（使用与先前调用不同的框类型）影响到先前调用分派的事件。</p>
+<p></p>
 
 
-<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+<h5 class="docs-api-h5 docs-api-method-header" data-ng_translator_product="100" data-ng_translator_ref_id="1xubgaqmffibk0p3s7z4lwoiw">方法</h5>
   
     
 
@@ -52,14 +32,13 @@ earlier calls.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a stream of resize events for the given target element and box type.</p>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="4ube60p80vfz47w8mb47zkxtb">获取给定目标元素和框类型的调整大小事件流。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -69,41 +48,41 @@ earlier calls.</p>
       <code class="docs-api-method-parameter-type">Element</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p>The element to observe for resizes.</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="1fgj8i16soognv64yqohj6hi3">要观察调整大小的元素。</p>
 
-      </div>
+      <p></p>
     </td>
   </tr>
   
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        options<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <p class="docs-api-method-parameter-name" data-ng_translator_product="100" data-ng_translator_ref_id="bit4jbgkdxnjcx0jf6vg8o2ji">选项
+<span class="docs-api-method-parameter-optional-marker">?</span></p>
       <code class="docs-api-method-parameter-type">ResizeObserverOptions</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p>Options to pass to the <code>ResizeObserver</code></p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="3llm38of1w0bot8yk21akosp4">传递给 
+<code>ResizeObserver</code> 的选项</p>
 
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody><thead>
     <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-returns-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="4858lhppdkvnlpbviww3d1tvv">返回值</th>
     </tr>
-    
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">Observable&lt;ResizeObserverEntry[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <div class="docs-api-method-returns-description">
-        <p>The stream of resize events for the element.</p>
+      <p class="docs-api-method-returns-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="8zpcn1pftvcq9ow2iruki6su0">元素的调整大小事件流。</p>
 
-      </div>
+      <p></p>
     </td>
   </tr></tbody></table>
 

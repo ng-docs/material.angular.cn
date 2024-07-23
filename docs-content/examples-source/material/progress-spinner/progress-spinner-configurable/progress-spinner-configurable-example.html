@@ -1,52 +1,44 @@
 <mat-card class="example-card">
   <mat-card-content>
-    <h2 class="example-h2">Progress spinner configuration</h2>
+    <h2 class="example-h2" data-ng_translator_product="100" data-ng_translator_ref_id="5jcnon5p5j9tqyu32gvrrcmcm">进度指示器配置</h2>
 
-    <section class="example-section">
-      <label class="example-margin">Color:</label>
-      <mat-radio-group [(ngModel)]="color">
-        <mat-radio-button class="example-margin" value="primary">
-          Primary
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="accent">
-          Accent
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="warn">
-          Warn
-        </mat-radio-button>
-      </mat-radio-group>
-    </section>
+    <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="3ryaapdxid8as9v0s9tefnkc5"><label class="example-margin">颜色：</label> 
+<mat-radio-group [(ngmodel)]="color"> 
+ <mat-radio-button class="example-margin" value="primary">
+   主色调 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="accent">
+   强调色调 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="warn">
+   警告色调 
+ </mat-radio-button> 
+</mat-radio-group></section>
 
-    <section class="example-section">
-      <label class="example-margin">Mode:</label>
-      <mat-radio-group [(ngModel)]="mode">
-        <mat-radio-button class="example-margin" value="determinate">
-          Determinate
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="indeterminate">
-          Indeterminate
-        </mat-radio-button>
-      </mat-radio-group>
-    </section>
+    <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="77avytb8x2moqikdiwvdtjavk"><label class="example-margin">模式：</label> 
+<mat-radio-group [(ngmodel)]="mode"> 
+ <mat-radio-button class="example-margin" value="determinate">
+   确定性 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="indeterminate">
+   不确定性 
+ </mat-radio-button> 
+</mat-radio-group></section>
 
-    <section class="example-section" *ngIf="mode === 'determinate'">
-      <label class="example-margin">Progress:</label>
-      <mat-slider class="example-margin">
-        <input type="range" [(ngModel)]="value" matSliderThumb>
-      </mat-slider>
-    </section>
+    @if (mode === 'determinate') {
+      <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="atuo509wmg0e63fbdvtrpe7ff"><label class="example-margin">进度：</label> 
+<mat-slider class="example-margin"> 
+ <input type="range" [(ngModel)]="value" matSliderThumb> 
+</mat-slider></section>
+    }
   </mat-card-content>
 </mat-card>
 
 <mat-card class="example-card">
   <mat-card-content>
-    <h2 class="example-h2">Result</h2>
+    <h2 class="example-h2" data-ng_translator_product="100" data-ng_translator_ref_id="8gldxuy5d8w97mox64wkznwoe">结果</h2>
 
-    <mat-progress-spinner
-        class="example-margin"
-        [color]="color"
-        [mode]="mode"
-        [value]="value">
+    <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
     </mat-progress-spinner>
   </mat-card-content>
 </mat-card>

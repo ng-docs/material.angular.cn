@@ -3,20 +3,14 @@
   <label class="example-listbox-label" id="example-appointment-label">
     Appointment Time
   </label>
-  <ul cdkListbox
-      [cdkListboxValue]="appointment"
-      [cdkListboxCompareWith]="compareDate"
-      (cdkListboxValueChange)="appointment = $event.value"
-      aria-labelledby="example-appointment-label"
-      class="example-listbox">
-    <li *ngFor="let time of slots"
-        [cdkOption]="time"
-        class="example-option">
-      {{formatTime(time)}}
-    </li>
+  <ul cdklistbox [cdklistboxvalue]="appointment" [cdklistboxcomparewith]="compareDate" (cdklistboxvaluechange)="appointment = $event.value" aria-labelledby="example-appointment-label" class="example-listbox">
+    @for (time of slots; track time) {
+      <li [cdkoption]="time" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="8kvy0rib07i5hws9qrfbjetqw">{{formatTime(时间)}}</li>
+    }
   </ul>
   <!-- #enddocregion listbox -->
 </div>
-<p *ngIf="appointment[0]">
-  Your appointment  is scheduled for <strong>{{formatAppointment() | json}}</strong>&nbsp;
-</p>
+@if (appointment[0]) {
+  <p data-ng_translator_product="100" data-ng_translator_ref_id="6qxr0asuny5p51fpou13gfk0u">您的预约时间安排在 
+<strong>{{formatAppointment() | json}}</strong>&nbsp;</p>
+}

@@ -1,45 +1,41 @@
-<table mat-table [dataSource]="transactions" class="mat-elevation-z8">
+<ng-container matcolumndef="item">
+    </ng-container><ng-container matcolumndef="cost">
+    </ng-container><ng-container matcolumndef="item-description">
+    </ng-container><ng-container matcolumndef="cost-description">
+    </ng-container><ng-container matcolumndef="disclaimer">
+    </ng-container><table mat-table [datasource]="transactions" class="mat-elevation-z8">
   <!-- Item Column -->
-  <ng-container matColumnDef="item">
-    <th mat-header-cell *matHeaderCellDef> Item </th>
-    <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
-    <td mat-footer-cell *matFooterCellDef> Total </td>
-  </ng-container>
+  <tbody><tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="co83dwr2200r9tqqv0777lken">条目</th>
+    <td mat-cell *matcelldef="let transaction" data-ng_translator_product="100" data-ng_translator_ref_id="b3bhyou6sxk8basf1iiettvi7">{{transaction.item}}</td>
+    <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="2g41mdlgu4hj6zav4a96bqysq">总计</td>
+  
 
   <!-- Cost Column -->
-  <ng-container matColumnDef="cost">
-    <th mat-header-cell *matHeaderCellDef> Cost </th>
-    <td mat-cell *matCellDef="let transaction"> {{transaction.cost | currency}} </td>
-    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="8f4xuwr6xb5asaknd3rorbmwz">价格</th>
+    <td mat-cell *matcelldef="let transaction" data-ng_translator_product="100" data-ng_translator_ref_id="a1vewdjaslz47ch71l9g1z7lh">{{transaction.cost | currency}}</td>
+    <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="2kiogejun7m0m3urxivvs0flj">{{getTotalCost() | currency}}</td>
+  
 
   <!-- Item Description Column -->
-  <ng-container matColumnDef="item-description">
-    <th mat-header-cell *matHeaderCellDef> Name of the item purchased </th>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="183x2e5x62mr84fruvp8q859n">购买的条目名称</th>
+  
 
   <!-- Cost Description Column -->
-  <ng-container matColumnDef="cost-description">
-    <th mat-header-cell *matHeaderCellDef> Cost of the item in USD </th>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="4p4r2a2jwnievbc68lx3i3i15">条目的美元价格</th>
+  
 
   <!-- Disclaimer column -->
-  <ng-container matColumnDef="disclaimer">
-    <td mat-footer-cell *matFooterCellDef colspan="2">
-      Please note that the cost of items displayed are completely and totally made up.
-    </td>
-  </ng-container>
+  <td mat-footer-cell *matfootercelldef colspan="2" data-ng_translator_product="100" data-ng_translator_ref_id="7h5ohvwtd131qp46qmk0fkl3i">请注意，显示的条目价格完全是虚构的。</td>
+  
 
   <!-- The table will render two header rows, one data row per data object, and two footer rows. -->
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"
-      class="example-first-header-row">
+  </tr><tr mat-header-row *matheaderrowdef="displayedColumns" class="example-first-header-row">
   </tr>
-  <tr mat-header-row *matHeaderRowDef="['item-description', 'cost-description']"
-      class="example-second-header-row">
+  <tr mat-header-row *matheaderrowdef="['item-description', 'cost-description']" class="example-second-header-row">
   </tr>
 
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
 
-  <tr mat-footer-row *matFooterRowDef="displayedColumns" class="example-first-footer-row"></tr>
-  <tr mat-footer-row *matFooterRowDef="['disclaimer']" class="example-second-footer-row"></tr>
-</table>
+  <tr mat-footer-row *matfooterrowdef="displayedColumns" class="example-first-footer-row"></tr>
+  <tr mat-footer-row *matfooterrowdef="['disclaimer']" class="example-second-footer-row"></tr>
+</tbody></table>

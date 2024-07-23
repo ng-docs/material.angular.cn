@@ -1,25 +1,21 @@
-<div cdkDropListGroup>
+<div cdkdroplistgroup>
   <div class="example-container">
-    <h2>To do</h2>
+    <h2 data-ng_translator_product="100" data-ng_translator_ref_id="btz3uwk6yhdokprx512s7t6nu">待办事项</h2>
 
-    <div
-      cdkDropList
-      [cdkDropListData]="todo"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    <div cdkdroplist [cdkdroplistdata]="todo" class="example-list" (cdkdroplistdropped)="drop($event)">
+      @for (item of todo; track item) {
+        <div class="example-box" cdkdrag>{{item}}</div>
+      }
     </div>
   </div>
 
   <div class="example-container">
-    <h2>Done</h2>
+    <h2 data-ng_translator_product="100" data-ng_translator_ref_id="er19jtwpkt8m8vowxuvary986">已完成</h2>
 
-    <div
-      cdkDropList
-      [cdkDropListData]="done"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    <div cdkdroplist [cdkdroplistdata]="done" class="example-list" (cdkdroplistdropped)="drop($event)">
+      @for (item of done; track item) {
+        <div class="example-box" cdkdrag>{{item}}</div>
+      }
     </div>
   </div>
 </div>

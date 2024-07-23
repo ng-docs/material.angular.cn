@@ -1,9 +1,9 @@
-<span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatPaginator, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/paginator&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/sort&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource, MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/table&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/input&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/form-field&#x27;</span>;
+<span class="hljs-keyword">import</span> {AfterViewInit, Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatPaginator, MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/paginator'</span>;
+<span class="hljs-keyword">import</span> {MatSort, MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sort'</span>;
+<span class="hljs-keyword">import</span> {MatTableDataSource, MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/form-field'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserData {
   <span class="hljs-attr">id</span>: <span class="hljs-built_in">string</span>;
@@ -12,56 +12,51 @@
   fruit: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-comment">/**
- * Constants used to fill up our data base.
- *
- * 一些用于填充我们的数据库的常量。
- *
- */</span>
+<span class="hljs-comment">/** Constants used to fill up our data base. */</span>
 <span class="hljs-keyword">const</span> FRUITS: <span class="hljs-built_in">string</span>[] = [
-  <span class="hljs-string">&#x27;blueberry&#x27;</span>,
-  <span class="hljs-string">&#x27;lychee&#x27;</span>,
-  <span class="hljs-string">&#x27;kiwi&#x27;</span>,
-  <span class="hljs-string">&#x27;mango&#x27;</span>,
-  <span class="hljs-string">&#x27;peach&#x27;</span>,
-  <span class="hljs-string">&#x27;lime&#x27;</span>,
-  <span class="hljs-string">&#x27;pomegranate&#x27;</span>,
-  <span class="hljs-string">&#x27;pineapple&#x27;</span>,
+  <span class="hljs-string">'blueberry'</span>,
+  <span class="hljs-string">'lychee'</span>,
+  <span class="hljs-string">'kiwi'</span>,
+  <span class="hljs-string">'mango'</span>,
+  <span class="hljs-string">'peach'</span>,
+  <span class="hljs-string">'lime'</span>,
+  <span class="hljs-string">'pomegranate'</span>,
+  <span class="hljs-string">'pineapple'</span>,
 ];
 <span class="hljs-keyword">const</span> NAMES: <span class="hljs-built_in">string</span>[] = [
-  <span class="hljs-string">&#x27;Maia&#x27;</span>,
-  <span class="hljs-string">&#x27;Asher&#x27;</span>,
-  <span class="hljs-string">&#x27;Olivia&#x27;</span>,
-  <span class="hljs-string">&#x27;Atticus&#x27;</span>,
-  <span class="hljs-string">&#x27;Amelia&#x27;</span>,
-  <span class="hljs-string">&#x27;Jack&#x27;</span>,
-  <span class="hljs-string">&#x27;Charlotte&#x27;</span>,
-  <span class="hljs-string">&#x27;Theodore&#x27;</span>,
-  <span class="hljs-string">&#x27;Isla&#x27;</span>,
-  <span class="hljs-string">&#x27;Oliver&#x27;</span>,
-  <span class="hljs-string">&#x27;Isabella&#x27;</span>,
-  <span class="hljs-string">&#x27;Jasper&#x27;</span>,
-  <span class="hljs-string">&#x27;Cora&#x27;</span>,
-  <span class="hljs-string">&#x27;Levi&#x27;</span>,
-  <span class="hljs-string">&#x27;Violet&#x27;</span>,
-  <span class="hljs-string">&#x27;Arthur&#x27;</span>,
-  <span class="hljs-string">&#x27;Mia&#x27;</span>,
-  <span class="hljs-string">&#x27;Thomas&#x27;</span>,
-  <span class="hljs-string">&#x27;Elizabeth&#x27;</span>,
+  <span class="hljs-string">'Maia'</span>,
+  <span class="hljs-string">'Asher'</span>,
+  <span class="hljs-string">'Olivia'</span>,
+  <span class="hljs-string">'Atticus'</span>,
+  <span class="hljs-string">'Amelia'</span>,
+  <span class="hljs-string">'Jack'</span>,
+  <span class="hljs-string">'Charlotte'</span>,
+  <span class="hljs-string">'Theodore'</span>,
+  <span class="hljs-string">'Isla'</span>,
+  <span class="hljs-string">'Oliver'</span>,
+  <span class="hljs-string">'Isabella'</span>,
+  <span class="hljs-string">'Jasper'</span>,
+  <span class="hljs-string">'Cora'</span>,
+  <span class="hljs-string">'Levi'</span>,
+  <span class="hljs-string">'Violet'</span>,
+  <span class="hljs-string">'Arthur'</span>,
+  <span class="hljs-string">'Mia'</span>,
+  <span class="hljs-string">'Thomas'</span>,
+  <span class="hljs-string">'Elizabeth'</span>,
 ];
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Data table with sorting, pagination, and filtering.
  */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;table-overview-example&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;table-overview-example.css&#x27;</span>],
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;table-overview-example.html&#x27;</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'table-overview-example'</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">'table-overview-example.css'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'table-overview-example.html'</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">imports</span>: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TableOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">AfterViewInit</span> </span>{
-  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&#x27;id&#x27;</span>, <span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;progress&#x27;</span>, <span class="hljs-string">&#x27;fruit&#x27;</span>];
+  <span class="hljs-attr">displayedColumns</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'id'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'progress'</span>, <span class="hljs-string">'fruit'</span>];
   dataSource: MatTableDataSource&lt;UserData&gt;;
 
   <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
@@ -90,18 +85,13 @@
   }
 }
 
-<span class="hljs-comment">/**
- * Builds and returns a new User.
- *
- * 构建并返回一个新用户。
- *
- */</span>
+<span class="hljs-comment">/** Builds and returns a new User. */</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createNewUser</span>(<span class="hljs-params">id: <span class="hljs-built_in">number</span></span>): <span class="hljs-title">UserData</span> </span>{
   <span class="hljs-keyword">const</span> name =
     NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] +
-    <span class="hljs-string">&#x27; &#x27;</span> +
+    <span class="hljs-string">' '</span> +
     NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) +
-    <span class="hljs-string">&#x27;.&#x27;</span>;
+    <span class="hljs-string">'.'</span>;
 
   <span class="hljs-keyword">return</span> {
     <span class="hljs-attr">id</span>: id.toString(),

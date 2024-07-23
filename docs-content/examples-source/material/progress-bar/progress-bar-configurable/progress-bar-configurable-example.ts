@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 import {ProgressBarMode, MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSliderModule} from '@angular/material/slider';
-import {NgIf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCardModule} from '@angular/material/card';
@@ -13,16 +12,9 @@ import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'progress-bar-configurable-example',
   templateUrl: 'progress-bar-configurable-example.html',
-  styleUrls: ['progress-bar-configurable-example.css'],
+  styleUrl: 'progress-bar-configurable-example.css',
   standalone: true,
-  imports: [
-    MatCardModule,
-    MatRadioModule,
-    FormsModule,
-    NgIf,
-    MatSliderModule,
-    MatProgressBarModule,
-  ],
+  imports: [MatCardModule, MatRadioModule, FormsModule, MatSliderModule, MatProgressBarModule],
 })
 export class ProgressBarConfigurableExample {
   color: ThemePalette = 'primary';

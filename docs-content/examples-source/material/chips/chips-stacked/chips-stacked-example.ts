@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
-import {NgFor} from '@angular/common';
 import {MatChipsModule} from '@angular/material/chips';
 
 export interface ChipColor {
@@ -14,9 +13,9 @@ export interface ChipColor {
 @Component({
   selector: 'chips-stacked-example',
   templateUrl: 'chips-stacked-example.html',
-  styleUrls: ['chips-stacked-example.css'],
+  styleUrl: 'chips-stacked-example.css',
   standalone: true,
-  imports: [MatChipsModule, NgFor],
+  imports: [MatChipsModule],
 })
 export class ChipsStackedExample {
   availableColors: ChipColor[] = [

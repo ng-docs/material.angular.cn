@@ -12,12 +12,7 @@ export interface UserData {
   fruit: string;
 }
 
-/**
- * Constants used to fill up our data base.
- *
- * 一些用于填充我们的数据库的常量。
- *
- */
+/** Constants used to fill up our data base. */
 const FRUITS: string[] = [
   'blueberry',
   'lychee',
@@ -55,7 +50,7 @@ const NAMES: string[] = [
  */
 @Component({
   selector: 'table-overview-example',
-  styleUrls: ['table-overview-example.css'],
+  styleUrl: 'table-overview-example.css',
   templateUrl: 'table-overview-example.html',
   standalone: true,
   imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
@@ -90,12 +85,7 @@ export class TableOverviewExample implements AfterViewInit {
   }
 }
 
-/**
- * Builds and returns a new User.
- *
- * 构建并返回一个新用户。
- *
- */
+/** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
   const name =
     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +

@@ -1,35 +1,18 @@
 <form>
-  <p>
-    <input type="checkbox" id="can-drink" [formControl]="canDrinkCtrl">&nbsp;
-    <label for="can-drink">I am 21 or older</label>
-  </p>
+  <p data-ng_translator_product="100" data-ng_translator_ref_id="2c5na6oq4em1lsfbb7kphb2im"><input type="checkbox" id="can-drink" [formControl]="canDrinkCtrl">&nbsp; 
+<label for="can-drink">我已满 21 岁</label></p>
   <section>
     <div class="example-listbox-container" [class.example-disabled]="!canDrinkCtrl.value">
       <!-- #docregion listbox -->
       <label class="example-listbox-label" id="example-wine-type-label">
         Wine Selection
       </label>
-      <ul cdkListbox
-          [cdkListboxDisabled]="!canDrinkCtrl.value"
-          aria-labelledby="example-wine-type-label"
-          class="example-listbox">
-        <li cdkOption="cabernet"
-            class="example-option">
-          Cabernet Sauvignon
-        </li>
-        <li cdkOption="syrah"
-            class="example-option">
-          Syrah
-        </li>
-        <li cdkOption="zinfandel"
-            cdkOptionDisabled
-            class="example-option">
-          Zinfandel <span class="example-sold-out">(sold out)</span>
-        </li>
-        <li cdkOption="riesling"
-            class="example-option">
-          Riesling
-        </li>
+      <ul cdklistbox [cdklistboxdisabled]="!canDrinkCtrl.value" aria-labelledby="example-wine-type-label" class="example-listbox">
+        <li cdkoption="cabernet" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="bz3zv7zto21cav81ibuqztnhj">赤霞珠</li>
+        <li cdkoption="syrah" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="cq9ae83k3zz3kudqe0l2dz7le">西拉</li>
+        <li cdkoption="zinfandel" cdkoptiondisabled class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="8leiwj52ybw33qed4idxhjvj2">仙粉黛 
+<span class="example-sold-out">(已售罄)</span></li>
+        <li cdkoption="riesling" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="3wivgh7cgh4tdpzpiut0rr8el">雷司令</li>
       </ul>
       <!-- #enddocregion listbox -->
     </div>

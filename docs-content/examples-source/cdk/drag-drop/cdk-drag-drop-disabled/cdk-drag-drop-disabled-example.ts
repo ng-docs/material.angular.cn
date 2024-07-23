@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {CdkDragDrop, CdkDrag, CdkDropList, moveItemInArray} from '@angular/cdk/drag-drop';
-import {NgFor} from '@angular/common';
 
 /**
  * @title Drag&Drop disabled
@@ -8,9 +7,9 @@ import {NgFor} from '@angular/common';
 @Component({
   selector: 'cdk-drag-drop-disabled-example',
   templateUrl: 'cdk-drag-drop-disabled-example.html',
-  styleUrls: ['cdk-drag-drop-disabled-example.css'],
+  styleUrl: 'cdk-drag-drop-disabled-example.css',
   standalone: true,
-  imports: [CdkDropList, NgFor, CdkDrag],
+  imports: [CdkDropList, CdkDrag],
 })
 export class CdkDragDropDisabledExample {
   items = [

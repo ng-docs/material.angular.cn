@@ -1,29 +1,21 @@
 <mat-form-field class="example-form-field">
   <mat-label>First campaign</mat-label>
-  <mat-date-range-input
-    [formGroup]="campaignOne"
-    [rangePicker]="campaignOnePicker"
-    [comparisonStart]="campaignTwo.value.start"
-    [comparisonEnd]="campaignTwo.value.end">
+  <mat-date-range-input [formgroup]="campaignOne" [rangepicker]="campaignOnePicker" [comparisonstart]="campaignTwo.value.start" [comparisonend]="campaignTwo.value.end">
     <input matStartDate placeholder="Start date" formControlName="start">
     <input matEndDate placeholder="End date" formControlName="end">
   </mat-date-range-input>
   <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-  <mat-datepicker-toggle matIconSuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
-  <mat-date-range-picker #campaignOnePicker></mat-date-range-picker>
+  <mat-datepicker-toggle maticonsuffix [for]="campaignOnePicker"></mat-datepicker-toggle>
+  <mat-date-range-picker #campaignonepicker></mat-date-range-picker>
 </mat-form-field>
 
 <mat-form-field class="example-form-field">
   <mat-label>Second campaign</mat-label>
-  <mat-date-range-input
-    [formGroup]="campaignTwo"
-    [rangePicker]="campaignTwoPicker"
-    [comparisonStart]="campaignOne.value.start"
-    [comparisonEnd]="campaignOne.value.end">
+  <mat-date-range-input [formgroup]="campaignTwo" [rangepicker]="campaignTwoPicker" [comparisonstart]="campaignOne.value.start" [comparisonend]="campaignOne.value.end">
     <input matStartDate placeholder="Start date" formControlName="start">
     <input matEndDate placeholder="End date" formControlName="end">
   </mat-date-range-input>
-  <mat-datepicker-toggle matIconSuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
+  <mat-datepicker-toggle maticonsuffix [for]="campaignTwoPicker"></mat-datepicker-toggle>
   <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-  <mat-date-range-picker #campaignTwoPicker></mat-date-range-picker>
+  <mat-date-range-picker #campaigntwopicker></mat-date-range-picker>
 </mat-form-field>

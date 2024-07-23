@@ -62,12 +62,7 @@ const TREE_DATA: ExampleFlatNode[] = [
   },
 ];
 
-/**
- * Flat node with expandable and level information
- *
- * 具有可扩展和级别信息的平面节点
- *
- */
+/** Flat node with expandable and level information */
 interface ExampleFlatNode {
   expandable: boolean;
   name: string;
@@ -81,7 +76,7 @@ interface ExampleFlatNode {
 @Component({
   selector: 'cdk-tree-flat-example',
   templateUrl: 'cdk-tree-flat-example.html',
-  styleUrls: ['cdk-tree-flat-example.css'],
+  styleUrl: 'cdk-tree-flat-example.css',
   standalone: true,
   imports: [CdkTreeModule, MatButtonModule, MatIconModule],
 })

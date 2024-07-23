@@ -2,7 +2,6 @@ import {Component, inject} from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
-import {NgFor} from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {LiveAnnouncer} from '@angular/cdk/a11y';
@@ -13,7 +12,7 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
 @Component({
   selector: 'chips-form-control-example',
   templateUrl: 'chips-form-control-example.html',
-  styleUrls: ['chips-form-control-example.css'],
+  styleUrl: 'chips-form-control-example.css',
   standalone: true,
   imports: [
     MatButtonModule,
@@ -21,7 +20,6 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
     MatChipsModule,
     FormsModule,
     ReactiveFormsModule,
-    NgFor,
     MatIconModule,
   ],
 })

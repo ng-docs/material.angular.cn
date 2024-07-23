@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {FocusMonitor, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/a11y&#x27;</span>;
+<span class="hljs-keyword">import</span> {FocusMonitor, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
 <span class="hljs-keyword">import</span> {
   AfterViewInit,
   ChangeDetectorRef,
@@ -7,18 +7,18 @@
   NgZone,
   OnDestroy,
   ViewChild,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Monitoring focus with FocusMonitor */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;focus-monitor-overview-example&#x27;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;focus-monitor-overview-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;focus-monitor-overview-example.css&#x27;</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'focus-monitor-overview-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'focus-monitor-overview-example.html'</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">'focus-monitor-overview-example.css'</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FocusMonitorOverviewExample</span> <span class="hljs-title">implements</span> <span class="hljs-title">OnDestroy</span>, <span class="hljs-title">AfterViewInit</span> </span>{
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;element&#x27;</span>) element: ElementRef&lt;HTMLElement&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">&#x27;subtree&#x27;</span>) subtree: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'element'</span>) element: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'subtree'</span>) subtree: ElementRef&lt;HTMLElement&gt;;
 
   elementOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
   subtreeOrigin = <span class="hljs-built_in">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
@@ -50,6 +50,6 @@
   }
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
-    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">&#x27; focused&#x27;</span> : <span class="hljs-string">&#x27;blurred&#x27;</span>;
+    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">' focused'</span> : <span class="hljs-string">'blurred'</span>;
   }
 }

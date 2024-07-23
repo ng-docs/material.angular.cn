@@ -3,20 +3,13 @@
   <label class="example-listbox-label" id="example-toppings-label">
     Choose Toppings
   </label>
-  <ul cdkListbox
-      cdkListboxMultiple
-      [(ngModel)]="order"
-      aria-labelledby="example-toppings-label"
-      class="example-listbox">
-    <li *ngFor="let topping of toppings"
-        [cdkOption]="topping"
-        class="example-option">
-      {{topping}}
-    </li>
+  <ul cdklistbox cdklistboxmultiple [(ngmodel)]="order" aria-labelledby="example-toppings-label" class="example-listbox">
+    @for (topping of toppings; track topping) {
+      <li [cdkoption]="topping" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="9d9sybw6gsyrtdcp7cyqjwizk">{{配料}}</li>
+    }
   </ul>
   <!-- #enddocregion listbox -->
 </div>
-<p>
-  Your order: <strong>{{order | json}}</strong>&nbsp;
-  <button (click)="order = []">Reset</button>
-</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="e7qwnumhe7hafhe528kicpo44">你的订单：
+<strong>{{order | json}}</strong>&nbsp; 
+<button (click)="order = []">重置</button></p>

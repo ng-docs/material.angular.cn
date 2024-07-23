@@ -3,8 +3,6 @@
   <input matInput [formControl]="message">
 </mat-form-field>
 
-<button mat-raised-button
-        [matTooltip]="message.value || ''"
-        aria-label="Button that displays a tooltip with a custom message">
+<button mat-raised-button [mattooltip]="message.value || ''" aria-label="Button that displays a tooltip with a custom message">
   Action
 </button>

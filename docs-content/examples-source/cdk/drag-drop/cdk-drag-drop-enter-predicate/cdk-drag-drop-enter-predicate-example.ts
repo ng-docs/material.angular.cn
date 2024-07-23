@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {NgFor} from '@angular/common';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -14,9 +13,9 @@ import {
 @Component({
   selector: 'cdk-drag-drop-enter-predicate-example',
   templateUrl: 'cdk-drag-drop-enter-predicate-example.html',
-  styleUrls: ['cdk-drag-drop-enter-predicate-example.css'],
+  styleUrl: 'cdk-drag-drop-enter-predicate-example.css',
   standalone: true,
-  imports: [CdkDropList, NgFor, CdkDrag],
+  imports: [CdkDropList, CdkDrag],
 })
 export class CdkDragDropEnterPredicateExample {
   all = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -35,22 +34,12 @@ export class CdkDragDropEnterPredicateExample {
     }
   }
 
-  /**
-   * Predicate function that only allows even numbers to be dropped into a list.
-   *
-   * 一个谓词函数，只允许将偶数放入列表中。
-   *
-   */
+  /** Predicate function that only allows even numbers to be dropped into a list. */
   evenPredicate(item: CdkDrag<number>) {
     return item.data % 2 === 0;
   }
 
-  /**
-   * Predicate function that doesn't allow items to be dropped into a list.
-   *
-   * 一个谓词函数，不允许将条目放入列表中。
-   *
-   */
+  /** Predicate function that doesn't allow items to be dropped into a list. */
   noReturnPredicate() {
     return false;
   }

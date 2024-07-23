@@ -1,25 +1,25 @@
-<p>Slide Toggle using a simple NgModel.</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="f0mepg2bhxffw61cvbqtnhun4">使用简单的 NgModel 的滑动切换。</p>
 
-<mat-slide-toggle [(ngModel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
+<mat-slide-toggle [(ngmodel)]="isChecked">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>
 
-<p>Slide Toggle inside of a Template-driven form</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="93symurj213vy7o3q9zt435i7">模板驱动表单中的滑动切换</p>
 
 <form class="example-form" #form="ngForm" (ngSubmit)="alertFormValues(form.form)">
 
-  <mat-slide-toggle ngModel name="enableWifi">Enable Wifi</mat-slide-toggle>
-  <mat-slide-toggle ngModel name="acceptTerms" required>Accept Terms of Service</mat-slide-toggle>
+  <mat-slide-toggle ngmodel name="enableWifi">Enable Wifi</mat-slide-toggle>
+  <mat-slide-toggle ngmodel name="acceptTerms" required>Accept Terms of Service</mat-slide-toggle>
 
   <button mat-raised-button type="submit">Save Settings</button>
 </form>
 
-<p>Slide Toggle inside of a Reactive form</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="9bgtcmhgs1exyrc78q1cyz1b9">响应式表单中的滑动切换</p>
 
 <form class="example-form" [formGroup]="formGroup" (ngSubmit)="alertFormValues(formGroup)" ngNativeValidate>
 
-  <mat-slide-toggle formControlName="enableWifi">Enable Wifi</mat-slide-toggle>
-  <mat-slide-toggle formControlName="acceptTerms">Accept Terms of Service</mat-slide-toggle>
+  <mat-slide-toggle formcontrolname="enableWifi">Enable Wifi</mat-slide-toggle>
+  <mat-slide-toggle formcontrolname="acceptTerms">Accept Terms of Service</mat-slide-toggle>
 
-  <p>Form Group Status: {{formGroup.status}}</p>
+  <p data-ng_translator_product="100" data-ng_translator_ref_id="9koh7l1rbid63p2d2v8d7ypht">表单组状态：{{formGroup.status}}</p>
 
   <button mat-raised-button type="submit">Save Settings</button>
 </form>

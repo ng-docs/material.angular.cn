@@ -1,46 +1,48 @@
 <div class="example-container mat-elevation-z8">
-  <div class="example-loading-shade"
-       *ngIf="isLoadingResults || isRateLimitReached">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-    <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
-      GitHub's API rate limit has been reached. It will be reset in one minute.
+  @if (isLoadingResults || isRateLimitReached) {
+    <div class="example-loading-shade">
+      @if (isLoadingResults) {
+        <mat-spinner></mat-spinner>
+      }
+      @if (isRateLimitReached) {
+        <div class="example-rate-limit-reached">
+          GitHub's API rate limit has been reached. It will be reset in one minute.
+        </div>
+      }
     </div>
-  </div>
+  }
 
   <div class="example-table-container">
 
-    <table mat-table [dataSource]="data" class="example-table"
-           matSort matSortActive="created" matSortDisableClear matSortDirection="desc">
+    <ng-container matcolumndef="number">
+        </ng-container><ng-container matcolumndef="title">
+        </ng-container><ng-container matcolumndef="state">
+        </ng-container><ng-container matcolumndef="created">
+        </ng-container><table mat-table [datasource]="data" class="example-table" matsort matsortactive="created" matsortdisableclear matsortdirection="desc">
       <!-- Number Column -->
-      <ng-container matColumnDef="number">
-        <th mat-header-cell *matHeaderCellDef>#</th>
-        <td mat-cell *matCellDef="let row">{{row.number}}</td>
-      </ng-container>
+      <tbody><tr><th mat-header-cell *matheadercelldef>#</th>
+        <td mat-cell *matcelldef="let row">{{row.number}}</td>
+      
 
       <!-- Title Column -->
-      <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef>Title</th>
-        <td mat-cell *matCellDef="let row">{{row.title}}</td>
-      </ng-container>
+      <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="av6c6t8qksxzo8tyqhfsxy00r">标题</th>
+        <td mat-cell *matcelldef="let row">{{row.title}}</td>
+      
 
       <!-- State Column -->
-      <ng-container matColumnDef="state">
-        <th mat-header-cell *matHeaderCellDef>State</th>
-        <td mat-cell *matCellDef="let row">{{row.state}}</td>
-      </ng-container>
+      <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="46jl7g8ajfzvsukbogkwqmsm5">状态</th>
+        <td mat-cell *matcelldef="let row">{{row.state}}</td>
+      
 
       <!-- Created Column -->
-      <ng-container matColumnDef="created">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
-          Created
-        </th>
-        <td mat-cell *matCellDef="let row">{{row.created_at | date}}</td>
-      </ng-container>
+      <th mat-header-cell *matheadercelldef mat-sort-header disableclear data-ng_translator_product="100" data-ng_translator_ref_id="ebv2knb3znaxnppdw3itnne57">创建时间</th>
+        <td mat-cell *matcelldef="let row">{{row.created_at | date}}</td>
+      
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
+      </tr><tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+      <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
+    </tbody></table>
   </div>
 
-  <mat-paginator [length]="resultsLength" [pageSize]="30" aria-label="Select page of GitHub search results"></mat-paginator>
+  <mat-paginator [length]="resultsLength" [pagesize]="30" aria-label="Select page of GitHub search results"></mat-paginator>
 </div>

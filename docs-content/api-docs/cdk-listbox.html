@@ -1,64 +1,36 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="docs-api">
-  <h2 id="----angular-cdk-listbox-api-参考文档--">
-    Angular CDK listbox API 参考文档
-  </h2><p class="docs-api-module-import">
+  <h2 data-ng_translator_product="100" data-ng_translator_ref_id="5ofirtu2ogq6crjlr3hnl9tc7">Angular CDK 列表框 API 参考</h2><p class="docs-api-module-import">
       <code>
         import {CdkListboxModule} from '@angular/cdk/listbox';
       </code>
     </p>
-  <h3 id="cdk-listbox-directives" class="docs-header-link docs-api-h3">
-      <span header-link="directives"></span>
-      指令
-    </h3>
+  <h3 id="cdk-listbox-directives" class="docs-header-link docs-api-h3" data-ng_translator_product="100" data-ng_translator_ref_id="33ukd0rrf9u304g9yjq3lxg48">指令</h3>
     
       
 
 <h4 id="CdkOption" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkOption"></span>
+  
   <code>CdkOption</code>
   
-</h4><div class="docs-api-class-description"><p translation-result="on">列表框中的可选选项。</p><p translation-origin="off">A selectable option in a listbox.</p>
-
-</div><div class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">选择器：</span>
-  
-    <span class="docs-api-class-selector-name">[cdkOption]</span>
-  
-</div><span class="docs-api-class-export-label">导出为：</span>
-<span class="docs-api-class-export-name">cdkOption</span><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+</h4><p class="docs-api-class-description"></p><p data-ng_translator_product="100" data-ng_translator_ref_id="89wq4vdaflumk074m14rd1zwy">列表框中的可选选项。</p>
+<p></p><p class="docs-api-directive-selectors" data-ng_translator_product="100" data-ng_translator_ref_id="ajw0q09glqb7p11lyft5v9lp6"><span class="docs-api-class-selector-label">选择器：</span> 
+<span class="docs-api-class-selector-name">[cdkOption]</span></p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">cdkOption</span><h5 class="docs-api-h5 docs-api-method-header" data-ng_translator_product="100" data-ng_translator_ref_id="9ghvm54f9feewnb0zbrlubp2h">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">名称</th>
-      <th class="docs-api-properties-th">描述</th>
+      <th class="docs-api-properties-th" data-ng_translator_product="100" data-ng_translator_ref_id="4dkesj3d12v3li73mgaxabh53">名称</th>
+      <th class="docs-api-properties-th" data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
     </tr>
     
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkOptionDisabled'</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: 'cdkOptionDisabled', transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">该选项是否已禁用。</p><p translation-origin="off">Whether this option is disabled.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="8zflgrt99x7rxr5p5fxgamgv9">该选项是否已禁用。</p>
 </td>
 </tr>
 
@@ -72,8 +44,7 @@
       <code>enabledTabIndex: </code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此选项启用时的 tabindex。</p><p translation-origin="off">The tabindex of the option when it is enabled.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="7hchkyv5zj9mxjsswpjf510jx">此选项启用时的 tabindex。</p>
 </td>
 </tr>
 
@@ -87,8 +58,7 @@
       <code>id: </code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">选项的宿主元素的 ID。</p><p translation-origin="off">The id of the option's host element.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="6qtztevullfq69wcbgyv5w3xn">选项的宿主元素的 ID。</p>
 </td>
 </tr>
 
@@ -99,12 +69,10 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkOptionTypeaheadLabel'</span>)
         </div><p class="docs-api-property-name">
-      <code>typeaheadLabel: string</code>
+      <code>typeaheadLabel: string | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">用于在列表框预先输入（typeahead）期间定位此条目的文本。如果未指定，将使用条目的 <code>textContent</code> 。</p><p translation-origin="off">The text used to locate this item during listbox typeahead. If not specified,
-the <code>textContent</code> of the item will be used.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="8zmfaqtxog99z0xavh4bak8xj">用于在列表框预先输入（typeahead）期间定位此条目的文本。如果未指定，将使用条目的 <code>textContent</code> 。</p>
 </td>
 </tr>
 
@@ -118,8 +86,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>value: T</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此选项的值。</p><p translation-origin="off">The value of this option.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="vpj36gi6572wqv0yv2x1dhb7">此选项的值。</p>
 </td>
 </tr>
 
@@ -132,8 +99,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>destroyed: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">当销毁此选项时发出。</p><p translation-origin="off">Emits when the option is destroyed.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="42zau8p1qx5f5s2vc7zew2jcf">当销毁此选项时发出。</p>
 </td>
 </tr>
 
@@ -146,8 +112,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>element: HTMLElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此选项的宿主元素</p><p translation-origin="off">The option's host element</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="3fkky7nqdrqdhbh6ej28koirk">此选项的宿主元素</p>
 </td>
 </tr>
 
@@ -160,8 +125,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>listbox: CdkListbox&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此选项所属的父列表框。</p><p translation-origin="off">The parent listbox this option belongs to.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="e0v3ixliws8ifxh9kdcbgumn3">此选项所属的父列表框。</p>
 </td>
 </tr>
 
@@ -170,7 +134,7 @@ the <code>textContent</code> of the item will be used.</p>
   </tbody></table>
 
 
-<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+<h5 class="docs-api-h5 docs-api-method-header" data-ng_translator_product="100" data-ng_translator_ref_id="1xubgaqmffibk0p3s7z4lwoiw">方法</h5>
   
     
 
@@ -182,8 +146,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">如果已选定此选项，就取消选定它。</p><p translation-origin="off">Deselect this option if it is selected.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="5u1c8qmahq5p9d4ouotdypvzr">如果已选定此选项，就取消选定它。</p>
 
     </td>
   </tr></tbody></table>
@@ -200,8 +163,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">聚焦此选项。</p><p translation-origin="off">Focus this option.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="bu8jco4n25hyi2xvvjq0pgwvt">聚焦此选项。</p>
 
     </td>
   </tr></tbody></table>
@@ -218,8 +180,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">获取 FocusableOption 接口所需的本元素的标签。</p><p translation-origin="off">Get the label for this element which is required by the FocusableOption interface.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="43uuiyj8nff988lr9429zgln">获取 FocusableOption 接口所需的本元素的标签。</p>
 
     </td>
   </tr></tbody></table>
@@ -236,8 +197,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">此选项是否处于活动状态。</p><p translation-origin="off">Whether this option is active.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="c7te6jrg7dgrkxeg8uxlcgiow">此选项是否处于活动状态。</p>
 
     </td>
   </tr></tbody></table>
@@ -254,8 +214,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">是否选定了此选项。</p><p translation-origin="off">Whether this option is selected.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="akkpqlau2o63vguwog22xjfqg">是否选定了此选项。</p>
 
     </td>
   </tr></tbody></table>
@@ -272,8 +231,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">如果未选定此选项，就选定它。</p><p translation-origin="off">Select this option if it is not selected.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="8ab6w3pipyp1pzk9g3edrlsgj">如果未选定此选项，就选定它。</p>
 
     </td>
   </tr></tbody></table>
@@ -290,8 +248,7 @@ the <code>textContent</code> of the item will be used.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">切换此选项的选定状态。</p><p translation-origin="off">Toggle the selected state of this option.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="bjfz362lc5ts8m68w0dd3ab5e">切换此选项的选定状态。</p>
 
     </td>
   </tr></tbody></table>
@@ -305,20 +262,16 @@ the <code>textContent</code> of the item will be used.</p>
       
 
 <h4 id="CdkListbox" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="CdkListbox"></span>
+  
   <code>CdkListbox</code>
   
-</h4><div class="docs-api-directive-selectors">
-  <span class="docs-api-class-selector-label">选择器：</span>
-  
-    <span class="docs-api-class-selector-name">[cdkListbox]</span>
-  
-</div><span class="docs-api-class-export-label">导出为：</span>
-<span class="docs-api-class-export-name">cdkListbox</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+</h4><p class="docs-api-directive-selectors" data-ng_translator_product="100" data-ng_translator_ref_id="9zv8qhytag3l5yixio3c6j65j"><span class="docs-api-class-selector-label">选择器：</span> 
+<span class="docs-api-class-selector-name">[cdkListbox]</span></p><span class="docs-api-class-export-label">Exported as:</span>
+<span class="docs-api-class-export-name">cdkListbox</span><h5 class="docs-api-h5 docs-api-method-header" data-ng_translator_product="100" data-ng_translator_ref_id="9ghvm54f9feewnb0zbrlubp2h">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">名称</th>
-      <th class="docs-api-properties-th">描述</th>
+      <th class="docs-api-properties-th" data-ng_translator_product="100" data-ng_translator_ref_id="4dkesj3d12v3li73mgaxabh53">名称</th>
+      <th class="docs-api-properties-th" data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
     </tr>
     
       
@@ -329,8 +282,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>compareWith: undefined | ((o1: T, o2: T) =&gt; boolean)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">用于比较选项值的函数。</p><p translation-origin="off">The function used to compare option values.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="75rfv8sc01kkxpqa3y1yajgqp">用于比较选项值的函数。</p>
 </td>
 </tr>
 
@@ -339,13 +291,12 @@ the <code>textContent</code> of the item will be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkListboxDisabled'</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: 'cdkListboxDisabled', transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>disabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框是否被禁用。</p><p translation-origin="off">Whether the listbox is disabled.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="2xmzhxjzeqznr2tvij66ouh7f">此列表框是否被禁用。</p>
 </td>
 </tr>
 
@@ -359,8 +310,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>enabledTabIndex: </code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">启用此列表框时使用的 tabindex。</p><p translation-origin="off">The tabindex to use when the listbox is enabled.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="eponka44w605rmtnnlsffnva2">启用此列表框时使用的 tabindex。</p>
 </td>
 </tr>
 
@@ -374,8 +324,7 @@ the <code>textContent</code> of the item will be used.</p>
       <code>id: </code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">选项的宿主元素的 ID。</p><p translation-origin="off">The id of the option's host element.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="6qtztevullfq69wcbgyv5w3xn">选项的宿主元素的 ID。</p>
 </td>
 </tr>
 
@@ -384,14 +333,12 @@ the <code>textContent</code> of the item will be used.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkListboxMultiple'</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: 'cdkListboxMultiple', transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>multiple: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框是否允许选定多个选项。如果值从 <code>true</code> 切换为 <code>false</code> ，并且选定了多个选项，则取消选定所有选项。</p><p translation-origin="off">Whether the listbox allows multiple options to be selected. If the value switches from <code>true</code>
-to <code>false</code>, and more than one option is selected, all options are deselected.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="8xxvoyxukcb6p0ir6qc37vgfz">此列表框是否允许选定多个选项。如果值从 <code>true</code> 切换为 <code>false</code> ，并且选定了多个选项，则取消选定所有选项。</p>
 </td>
 </tr>
 
@@ -400,13 +347,12 @@ to <code>false</code>, and more than one option is selected, all options are des
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkListboxNavigatesDisabledOptions'</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: 'cdkListboxNavigatesDisabledOptions', transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>navigateDisabledOptions: BooleanInput</code>
+      <code>navigateDisabledOptions: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">键盘导航是否应跳过禁用的条目。</p><p translation-origin="off">Whether keyboard navigation should skip over disabled items.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="bd65xbsqaaaylyycn3ycay6dh">键盘导航是否应跳过禁用的条目。</p>
 </td>
 </tr>
 
@@ -415,14 +361,12 @@ to <code>false</code>, and more than one option is selected, all options are des
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkListboxNavigationWrapDisabled'</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: 'cdkListboxNavigationWrapDisabled', transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
-      <code>navigationWrapDisabled: BooleanInput</code>
+      <code>navigationWrapDisabled: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">当用户在最后一个条目上按下向下箭头或在第一个条目上按下向上箭头时，键盘导航是否应该回绕。</p><p translation-origin="off">Whether the keyboard navigation should wrap when the user presses arrow down on the last item
-or arrow up on the first item.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="av9xsusk2j0pnsrwywmkr9syk">当用户在最后一个条目上按下向下箭头或在第一个条目上按下向上箭头时，键盘导航是否应该回绕。</p>
 </td>
 </tr>
 
@@ -436,8 +380,7 @@ or arrow up on the first item.</p>
       <code>orientation: "vertical" | "horizontal"</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框的方向。只影响键盘交互，不影响视觉布局。</p><p translation-origin="off">The orientation of the listbox. Only affects keyboard interaction, not visual layout.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="2rr1w95pyhkysozafp5bs8d9v">此列表框的方向。只影响键盘交互，不影响视觉布局。</p>
 </td>
 </tr>
 
@@ -446,13 +389,12 @@ or arrow up on the first item.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'cdkListboxUseActiveDescendant'</span>)
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">{ alias: 'cdkListboxUseActiveDescendant', transform: booleanAttribute }</span>)
         </div><p class="docs-api-property-name">
       <code>useActiveDescendant: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框要使用活动后代还是将焦点移到选项上。</p><p translation-origin="off">Whether the listbox will use active descendant or will move focus onto the options.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="786thp5nw3kllcjpysd29wc9h">此列表框要使用活动后代还是将焦点移到选项上。</p>
 </td>
 </tr>
 
@@ -466,8 +408,7 @@ or arrow up on the first item.</p>
       <code>value: readonly T[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框中选定的值，表示为选项值的数组。</p><p translation-origin="off">The value selected in the listbox, represented as an array of option values.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="4rkrhnmq4z1intxxi9rhe5oy1">此列表框中选定的值，表示为选项值的数组。</p>
 </td>
 </tr>
 
@@ -481,8 +422,7 @@ or arrow up on the first item.</p>
       <code>valueChange: Subject&lt;ListboxValueChangeEvent&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">当列表框中的选定值更改时发出。</p><p translation-origin="off">Emits when the selected value(s) in the listbox change.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="2ad9zb4ja81halkmlcl31jqlp">当列表框中的选定值更改时发出。</p>
 </td>
 </tr>
 
@@ -495,8 +435,7 @@ or arrow up on the first item.</p>
       <code>changeDetectorRef: inject(ChangeDetectorRef)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框的变更检测器。</p><p translation-origin="off">The change detector for this listbox.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="8ur8nkedhky57vjp6qau13nis">此列表框的变更检测器。</p>
 </td>
 </tr>
 
@@ -509,8 +448,7 @@ or arrow up on the first item.</p>
       <code>destroyed: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">当销毁此列表框时发出。</p><p translation-origin="off">Emits when the listbox is destroyed.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="4eutao7ptzooyywdgzo345i5l">当销毁此列表框时发出。</p>
 </td>
 </tr>
 
@@ -523,8 +461,7 @@ or arrow up on the first item.</p>
       <code>element: HTMLElement</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框的宿主元素。</p><p translation-origin="off">The host element of the listbox.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="r32k0u9z5o7tiv5knvw0rt56">此列表框的宿主元素。</p>
 </td>
 </tr>
 
@@ -537,8 +474,7 @@ or arrow up on the first item.</p>
       <code>listKeyManager: ActiveDescendantKeyManager&lt;CdkOption&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">管理此列表框的键盘导航的键盘管理器。</p><p translation-origin="off">The key manager that manages keyboard navigation for this listbox.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="5g1zeugoio0zmsmwntj12pell">管理此列表框的键盘导航的键盘管理器。</p>
 </td>
 </tr>
 
@@ -551,7 +487,7 @@ or arrow up on the first item.</p>
       <code>ngZone: inject(NgZone)</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>The Angular zone.</p>
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="4f0estwn3azz2rg7o0cib0ble">Angular 区域（Zone）。</p>
 </td>
 </tr>
 
@@ -564,8 +500,7 @@ or arrow up on the first item.</p>
       <code>options: QueryList&lt;CdkOption&lt;T&gt;&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框中的子选项。</p><p translation-origin="off">The child options in this listbox.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="8pfcgpjugef7cmesyvajqpw4c">此列表框中的子选项。</p>
 </td>
 </tr>
 
@@ -578,8 +513,7 @@ or arrow up on the first item.</p>
       <code>selectionModel: ListboxSelectionModel&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框使用的选择模型。</p><p translation-origin="off">The selection model used by the listbox.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="71xoj4ixtl4it3ajgdsrwqleu">此列表框使用的选择模型。</p>
 </td>
 </tr>
 
@@ -588,7 +522,7 @@ or arrow up on the first item.</p>
   </tbody></table>
 
 
-<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+<h5 class="docs-api-h5 docs-api-method-header" data-ng_translator_product="100" data-ng_translator_ref_id="1xubgaqmffibk0p3s7z4lwoiw">方法</h5>
   
     
 
@@ -600,15 +534,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">取消选择给定的选项。</p><p translation-origin="off">Deselect the given option.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="d0v1k2byp84ecspfvlak13nyt">取消选择给定的选项。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -618,11 +550,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要取消选定的选项</p><p translation-origin="off">The option to deselect</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="4iurtab145i7a19q3naakzq3y">要取消选定的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -639,15 +570,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">取消选定给定的值。</p><p translation-origin="off">Deselect the given value.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="4mtty449ugje5jfacvh7zq1o8">取消选定给定的值。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -657,11 +586,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要取消选定的值</p><p translation-origin="off">The value to deselect</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="1pcz95ww3irurz91mgms5m66y">要取消选定的值</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -678,8 +606,7 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">聚焦此列表框的宿主元素。</p><p translation-origin="off">Focus the listbox's host element.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="9x5bueq1t6qxu2o8x695im44z">聚焦此列表框的宿主元素。</p>
 
     </td>
   </tr></tbody></table>
@@ -696,15 +623,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">获取给定选项是否处于活动状态。</p><p translation-origin="off">Get whether the given option is active.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="83bhj0kdxu2it5hd814imy0bm">获取给定选项是否处于活动状态。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -714,27 +639,25 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要获取活动状态的选项</p><p translation-origin="off">The option to get the active state of</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="upu60z1z5w0gea7xxcs2z8ne">要获取活动状态的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody><thead>
     <tr class="docs-api-method-returns-header-row">
-        <th colspan="2" class="docs-api-method-returns-header-cell"><nt-wrapper translation-result="on">返回值</nt-wrapper><nt-wrapper translation-origin="off">Returns</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-returns-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="4858lhppdkvnlpbviww3d1tvv">返回值</th>
     </tr>
-    
   </thead>
   <tbody><tr>
     <td class="docs-api-method-returns-type-cell">
       <code class="docs-api-method-returns-type">boolean</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
-      <div class="docs-api-method-returns-description">
+      <p class="docs-api-method-returns-description">
         
-      </div>
+      </p>
     </td>
   </tr></tbody></table>
 
@@ -750,15 +673,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">获取是否选定了给定的选项。</p><p translation-origin="off">Get whether the given option is selected.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="djglpvd79g6pwheozjx6e7p92">获取是否选定了给定的选项。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -768,11 +689,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要获取选定状态的选项</p><p translation-origin="off">The option to get the selected state of</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="6t7agr91r9xqris4h8jgiw2vx">要获取选定状态的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -789,15 +709,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">获取给定值是否已选定。</p><p translation-origin="off">Get whether the given value is selected.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="6excvmmh8n0g0f8ngw8ktev4k">获取给定值是否已选定。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -807,11 +725,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要获取选定状态的值</p><p translation-origin="off">The value to get the selected state of</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="9hwkb6ue7xp70sw2wb05vk28x">要获取选定状态的值</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -828,15 +745,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">选定给定的选项。</p><p translation-origin="off">Select the given option.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="qlirmezeqvpo9d6thofoo7q6">选定给定的选项。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -846,11 +761,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要选定的选项</p><p translation-origin="off">The option to select</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="eajf8vi3zzzxctlequ9w6brmt">要选定的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -867,15 +781,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">选定给定的值。</p><p translation-origin="off">Select the given value.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="p4lwxekmtqj617lq8yctad74">选定给定的值。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -885,11 +797,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要选定的值</p><p translation-origin="off">The value to select</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="75xlad61rfzyki38u7jmhvr8v">要选定的值</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -906,15 +817,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">设置所有选项的选定状态。</p><p translation-origin="off">Set the selected state of all options.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="3dax0jl4dlnqnjoyvu5m79dd4">设置所有选项的选定状态。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -924,11 +833,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">boolean</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要设置的新选定状态</p><p translation-origin="off">The new selected state to set</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="bkzlrl67i2xtf2byy1q79z7k">要设置的新选定状态</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -945,15 +853,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">切换给定选项的选定状态。</p><p translation-origin="off">Toggle the selected state of the given option.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="553muepxrtm0gzpkdsyjbrihk">切换给定选项的选定状态。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -963,11 +869,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要切换的选项</p><p translation-origin="off">The option to toggle</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="58xi164sg5y6gtgybker87p8e">要切换的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -984,15 +889,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">切换给定值的选定状态。</p><p translation-origin="off">Toggle the selected state of the given value.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="5jjuvaa9spykq14mquecyh439">切换给定值的选定状态。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1002,11 +905,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">T</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要切换的值</p><p translation-origin="off">The value to toggle</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="8zb9i9sdfycfngsxvv1kv2txs">要切换的值</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -1023,23 +925,17 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">触发给定选项以响应用户交互。</p><p translation-origin="off">Triggers the given option in response to user interaction.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="1nh2qxz0jkaq86vg7ihmtzspv">触发给定选项以响应用户交互。</p>
 <ul>
-<li><p translation-result="on">在单选模式下：选择此选项并取消选择任何其他选定的选项。</p><p translation-origin="off">In single selection mode: selects the option and deselects any other selected option.</p>
-
-</li>
-<li><p translation-result="on">在多选模式下：切换此选项的选定状态。</p><p translation-origin="off">In multi selection mode: toggles the selected state of the option.</p>
-
-</li>
+<li data-ng_translator_product="100" data-ng_translator_ref_id="5bwxuc95kn0ozl2kai0fw9h3y">在单选模式下：选择此选项并取消选择任何其他选定的选项。</li>
+<li data-ng_translator_product="100" data-ng_translator_ref_id="7kt4yokjnuns5vs0o5yo4u4s7">在多选模式下：切换此选项的选定状态。</li>
 </ul>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1049,11 +945,10 @@ or arrow up on the first item.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要触发的选项</p><p translation-origin="off">The option to trigger</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="980vot665np0moe5nirdu4aa">要触发的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -1070,16 +965,13 @@ or arrow up on the first item.</p>
     </tr>
   </thead><tbody><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p translation-result="on">触发给定范围的选项以响应用户交互。只应在多选模式下调用。</p><p translation-origin="off">Trigger the given range of options in response to user interaction.
-Should only be called in multi-selection mode.</p>
-
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="5mr5v9mx5s2mbswe9c0qjha9p">触发给定范围的选项以响应用户交互。只应在多选模式下调用。</p>
 
     </td>
   </tr></tbody><thead>
     <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell"><nt-wrapper translation-result="on">参数</nt-wrapper><nt-wrapper translation-origin="off">Parameters</nt-wrapper></th>
+      <th colspan="2" class="docs-api-method-parameters-header-cell" data-ng_translator_product="100" data-ng_translator_ref_id="2yvleri23pqevh8tr49s6skto">参数</th>
     </tr>
-    
   </thead>
   
   <tbody><tr class="docs-api-method-parameter-row">
@@ -1089,11 +981,10 @@ Should only be called in multi-selection mode.</p>
       <code class="docs-api-method-parameter-type">CdkOption&lt;T&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">触发过的选项</p><p translation-origin="off">The option that was triggered</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="6e16l33fdn610d3y4mkqx2688">触发过的选项</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   
@@ -1104,11 +995,10 @@ Should only be called in multi-selection mode.</p>
       <code class="docs-api-method-parameter-type">number</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要切换的选项的起始索引</p><p translation-origin="off">The start index of the options to toggle</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="hu3jbudrpqh1h4x8xj1av2vt">要切换的选项的起始索引</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   
@@ -1119,11 +1009,10 @@ Should only be called in multi-selection mode.</p>
       <code class="docs-api-method-parameter-type">number</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">要切换的选项的结束索引</p><p translation-origin="off">The end index of the options to toggle</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="17s12s17smdl9j58z1wvygngj">要切换的选项的结束索引</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   
@@ -1134,11 +1023,10 @@ Should only be called in multi-selection mode.</p>
       <code class="docs-api-method-parameter-type">boolean</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
-      <div class="docs-api-method-parameter-description">
-        <p translation-result="on">是否开启选项范围</p><p translation-origin="off">Whether to toggle the option range on</p>
+      <p class="docs-api-method-parameter-description">
+        </p><p data-ng_translator_product="100" data-ng_translator_ref_id="65kmhj85py84nvwhgaxc733z7">是否开启选项范围</p>
 
-
-      </div>
+      <p></p>
     </td>
   </tr>
   </tbody></table>
@@ -1148,23 +1036,19 @@ Should only be called in multi-selection mode.</p>
 
 
 
-    <h3 id="cdk-listbox-interfaces" class="docs-header-link docs-api-h3">
-      <span header-link="interfaces"></span>
-      接口
-    </h3>
+    <h3 id="cdk-listbox-interfaces" class="docs-header-link docs-api-h3" data-ng_translator_product="100" data-ng_translator_ref_id="cyslup7bbt74203j3v5awkt80">接口</h3>
     
       
 
 <h4 id="ListboxValueChangeEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="ListboxValueChangeEvent"></span>
+  
   <code>ListboxValueChangeEvent</code>
-</h4><div class="docs-api-interface-description"><p translation-result="on">change 事件，当列表框的值改变时触发。</p><p translation-origin="off">Change event that is fired whenever the value of the listbox changes.</p>
-
-</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+</h4><p class="docs-api-interface-description"></p><p data-ng_translator_product="100" data-ng_translator_ref_id="2fvi9made0blwx4tqytiiveli">change 事件，当列表框的值改变时触发。</p>
+<p></p><h5 class="docs-api-h5 docs-api-method-header" data-ng_translator_product="100" data-ng_translator_ref_id="9ghvm54f9feewnb0zbrlubp2h">属性</h5>
   <table class="docs-api-properties-table">
     <tbody><tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">名称</th>
-      <th class="docs-api-properties-th">描述</th>
+      <th class="docs-api-properties-th" data-ng_translator_product="100" data-ng_translator_ref_id="4dkesj3d12v3li73mgaxabh53">名称</th>
+      <th class="docs-api-properties-th" data-ng_translator_product="100" data-ng_translator_ref_id="ar5q09mdsagdppsbze96eagxl">描述</th>
     </tr>
     
       
@@ -1174,8 +1058,7 @@ Should only be called in multi-selection mode.</p>
       <code>listbox: CdkListbox&lt;T&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">对发出本事件的列表框的引用。</p><p translation-origin="off">Reference to the listbox that emitted the event.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="1vyvdugv18bjz1zc2v51w4d2k">对发出本事件的列表框的引用。</p>
 </td>
 </tr>
 
@@ -1188,8 +1071,7 @@ Should only be called in multi-selection mode.</p>
       <code>option: CdkOption&lt;T&gt; | null</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">对触发过的选项的引用。</p><p translation-origin="off">Reference to the option that was triggered.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="9igyrhgh0t4ton48quln751dc">对触发过的选项的引用。</p>
 </td>
 </tr>
 
@@ -1202,8 +1084,7 @@ Should only be called in multi-selection mode.</p>
       <code>value: readonly T[]</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p translation-result="on">此列表框的新值。</p><p translation-origin="off">The new value of the listbox.</p>
-
+  <td class="docs-api-property-description"><p data-ng_translator_product="100" data-ng_translator_ref_id="2qnjhasyxp7sywqffudy086o9">此列表框的新值。</p>
 </td>
 </tr>
 

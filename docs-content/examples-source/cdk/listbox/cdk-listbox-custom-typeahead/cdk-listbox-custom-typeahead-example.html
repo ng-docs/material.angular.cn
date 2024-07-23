@@ -3,25 +3,10 @@
   <label class="example-listbox-label" id="example-satisfaction-label">
     How was your service?
   </label>
-  <ul cdkListbox
-      aria-labelledby="example-satisfaction-label"
-      class="example-listbox">
-    <li
-        [cdkOption]="1"
-        cdkOptionTypeaheadLabel="great"
-        class="example-option">
-      😀 Great
-    </li>
-    <li [cdkOption]="0"
-        cdkOptionTypeaheadLabel="okay"
-        class="example-option">
-      😐 Okay
-    </li>
-    <li [cdkOption]="-1"
-        cdkOptionTypeaheadLabel="bad"
-        class="example-option">
-      🙁 Bad
-    </li>
+  <ul cdklistbox aria-labelledby="example-satisfaction-label" class="example-listbox">
+    <li [cdkoption]="1" cdkoptiontypeaheadlabel="great" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="31epixb8lnxgn514pw8nzoa23">😀 太棒了</li>
+    <li [cdkoption]="0" cdkoptiontypeaheadlabel="okay" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="1oltugg7szfzs4yicoue2t61v">😐 还行</li>
+    <li [cdkoption]="-1" cdkoptiontypeaheadlabel="bad" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="96osm9mpnqjloh2evjs92fxa2">🙁 不好</li>
   </ul>
   <!-- #enddocregion listbox -->
 </div>

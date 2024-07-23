@@ -1,36 +1,55 @@
-<mat-sidenav-container class="example-container" *ngIf="shouldRun" [hasBackdrop]="hasBackdrop.value">
-  <mat-sidenav #sidenav [mode]="mode.value!" [position]="position.value!">
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-    <p>
-      <label>Test input for drawer<input/></label>
-    </p>
-  </mat-sidenav>
+@if (shouldRun) {
+  <mat-sidenav-container class="example-container" [hasbackdrop]="hasBackdrop.value">
+    <mat-sidenav #sidenav [mode]="mode.value!" [position]="position.value!">
+      <p><button mat-button (click)="sidenav.toggle()" data-ng_translator_product="100" data-ng_translator_ref_id="9z6lcoafljs9pe4qghhdlyl9d">开关</button></p>
+      <p>
+        <label data-ng_translator_product="100" data-ng_translator_ref_id="7g1f9j9ksgspa1cfy8sbvcegh">抽屉测试输入
+<input></label>
+      </p>
+    </mat-sidenav>
 
-  <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-    <p>
-      <mat-radio-group class="example-radio-group" [formControl]="mode">
-        <label>Mode:</label>
-        <mat-radio-button value="over">Over</mat-radio-button>
-        <mat-radio-button value="side">Side</mat-radio-button>
-        <mat-radio-button value="push">Push</mat-radio-button>
-      </mat-radio-group>
-      <mat-radio-group class="example-radio-group" [formControl]="hasBackdrop">
-        <label>Has Backdrop:</label>
-        <mat-radio-button [value]="null">Default</mat-radio-button>
-        <mat-radio-button [value]="true">true</mat-radio-button>
-        <mat-radio-button [value]="false">false</mat-radio-button>
-      </mat-radio-group>
-      <mat-radio-group class="example-radio-group" [formControl]="position">
-        <label>Position:</label>
-        <mat-radio-button value="start">Start</mat-radio-button>
-        <mat-radio-button value="end">End</mat-radio-button>
-      </mat-radio-group>
-    </p>
-    <p>
-      <label>Test input for drawer content<input/></label>
-    </p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.toggle()" data-ng_translator_product="100" data-ng_translator_ref_id="9z6lcoafljs9pe4qghhdlyl9d">开关</button></p>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="x1ca3i9ut2clugkuasw9m1kq"><mat-radio-group class="example-radio-group" [formcontrol]="mode"> 
+ <label>模式：</label> 
+ <mat-radio-button value="over">
+  覆盖
+ </mat-radio-button> 
+ <mat-radio-button value="side">
+  侧边
+ </mat-radio-button> 
+ <mat-radio-button value="push">
+  推动
+ </mat-radio-button> 
+</mat-radio-group> 
+<mat-radio-group class="example-radio-group" [formcontrol]="hasBackdrop"> 
+ <label>有背景：</label> 
+ <mat-radio-button [value]="null">
+  默认
+ </mat-radio-button> 
+ <mat-radio-button [value]="true">
+  true
+ </mat-radio-button> 
+ <mat-radio-button [value]="false">
+  false
+ </mat-radio-button> 
+</mat-radio-group> 
+<mat-radio-group class="example-radio-group" [formcontrol]="position"> 
+ <label>位置：</label> 
+ <mat-radio-button value="start">
+  开始
+ </mat-radio-button> 
+ <mat-radio-button value="end">
+  结束
+ </mat-radio-button> 
+</mat-radio-group></p>
+      <p>
+        <label data-ng_translator_product="100" data-ng_translator_ref_id="7ciac0r3kdfgb67fnb6se97pp">抽屉内容测试输入
+<input></label>
+      </p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+} @else {
+  <div>Please open on Stackblitz to see result</div>
+}
 
-<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>

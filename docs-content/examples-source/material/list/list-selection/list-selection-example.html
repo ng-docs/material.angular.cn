@@ -1,9 +1,7 @@
 <mat-selection-list #shoes>
-  <mat-list-option *ngFor="let shoe of typesOfShoes">
-    {{shoe}}
-  </mat-list-option>
+  @for (shoe of typesOfShoes; track shoe) {
+    <mat-list-option>{{shoe}}</mat-list-option>
+  }
 </mat-selection-list>
 
-<p>
-  Options selected: {{shoes.selectedOptions.selected.length}}
-</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="erzcsrvqnjjcjbj1oo3p57i6g">已选选项：{{shoes.selectedOptions.selected.length}}</p>

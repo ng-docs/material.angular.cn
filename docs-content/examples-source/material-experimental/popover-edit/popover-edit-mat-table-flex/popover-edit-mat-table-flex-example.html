@@ -1,15 +1,11 @@
-<mat-table class="example-table" editable [dataSource]="dataSource">
+<mat-table class="example-table" editable [datasource]="dataSource">
   <!--
     This edit lens is specified outside of the cell and must explicitly declare
     its context. It could be reused in multiple cells.
   -->
-  <ng-template #weightEdit let-element>
+  <ng-template #weightedit let-element>
     <div>
-      <form #f="ngForm"
-          matEditLens
-          (ngSubmit)="onSubmitWeight(element, f)"
-          [matEditLensPreservedFormValue]="preservedWeightValues.get(element)"
-          (matEditLensPreservedFormValueChange)="preservedWeightValues.set(element, $event)">
+      <form #f="ngForm" matEditLens (ngSubmit)="onSubmitWeight(element, f)" [matEditLensPreservedFormValue]="preservedWeightValues.get(element)" (matEditLensPreservedFormValueChange)="preservedWeightValues.set(element, $event)">
         <div mat-edit-content>
           <mat-form-field>
             <input matInput type="number" [ngModel]="element.weight" name="weight" required>
@@ -20,27 +16,22 @@
   </ng-template>
 
   <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+  <ng-container matcolumndef="position">
+    <mat-header-cell *matheadercelldef> No. </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.position}} </mat-cell>
   </ng-container>
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-    <mat-cell *matCellDef="let element"
-        [matPopoverEdit]="nameEdit">
+  <ng-container matcolumndef="name">
+    <mat-header-cell *matheadercelldef> Name </mat-header-cell>
+    <mat-cell *matcelldef="let element" [matpopoveredit]="nameEdit">
       {{element.name}}
 
       <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #nameEdit>
+      <ng-template #nameedit>
         <div>
-          <form #f="ngForm"
-              matEditLens
-              (ngSubmit)="onSubmitName(element, f)"
-              [matEditLensPreservedFormValue]="preservedNameValues.get(element)"
-              (matEditLensPreservedFormValueChange)="preservedNameValues.set(element, $event)">
-            <h2 mat-edit-title>Name</h2>
+          <form #f="ngForm" matEditLens (ngSubmit)="onSubmitName(element, f)" [matEditLensPreservedFormValue]="preservedNameValues.get(element)" (matEditLensPreservedFormValueChange)="preservedNameValues.set(element, $event)">
+            <h2 mat-edit-title data-ng_translator_product="100" data-ng_translator_ref_id="4dkesj3d12v3li73mgaxabh53">名称</h2>
             <div mat-edit-content>
               <mat-form-field>
                 <input matInput [ngModel]="element.name" name="name" required>
@@ -48,38 +39,37 @@
             </div>
             <div mat-edit-actions>
               <button mat-button type="submit">Confirm</button>
-              <button mat-button matEditRevert>Revert</button>
-              <button mat-button matEditClose>Close</button>
+              <button mat-button mateditrevert>Revert</button>
+              <button mat-button mateditclose>Close</button>
             </div>
           </form>
         </div>
       </ng-template>
 
-      <span *matRowHoverContent>
-        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>
+      <span *matrowhovercontent>
+        <button mat-icon-button mateditopen><mat-icon>edit</mat-icon></button>
       </span>
     </mat-cell>
   </ng-container>
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-    <mat-cell *matCellDef="let element"
-        [matPopoverEdit]="weightEdit" [matPopoverEditContext]="element">
+  <ng-container matcolumndef="weight">
+    <mat-header-cell *matheadercelldef> Weight </mat-header-cell>
+    <mat-cell *matcelldef="let element" [matpopoveredit]="weightEdit" [matpopovereditcontext]="element">
       {{element.weight}}
 
-      <span *matRowHoverContent>
-        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>
+      <span *matrowhovercontent>
+        <button mat-icon-button mateditopen><mat-icon>edit</mat-icon></button>
       </span>
       </mat-cell>
   </ng-container>
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+  <ng-container matcolumndef="symbol">
+    <mat-header-cell *matheadercelldef> Symbol </mat-header-cell>
+    <mat-cell *matcelldef="let element"> {{element.symbol}} </mat-cell>
   </ng-container>
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-header-row *matheaderrowdef="displayedColumns"></mat-header-row>
+  <mat-row *matrowdef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>

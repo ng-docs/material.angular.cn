@@ -1,26 +1,21 @@
-<div cdkDropListGroup>
+<div cdkdroplistgroup>
   <div class="example-container">
-    <h2>Available items</h2>
+    <h2 data-ng_translator_product="100" data-ng_translator_ref_id="8i9jofht3qnfoum8ife4ge75s">可用条目</h2>
 
-    <div
-      cdkDropList
-      [cdkDropListData]="items"
-      class="example-list"
-      cdkDropListSortingDisabled
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of items" cdkDrag>{{item}}</div>
+    <div cdkdroplist [cdkdroplistdata]="items" class="example-list" cdkdroplistsortingdisabled (cdkdroplistdropped)="drop($event)">
+      @for (item of items; track item) {
+        <div class="example-box" cdkdrag>{{item}}</div>
+      }
     </div>
   </div>
 
   <div class="example-container">
-    <h2>Shopping basket</h2>
+    <h2 data-ng_translator_product="100" data-ng_translator_ref_id="byy2z0b69l52l5146g3jjymrg">购物篮</h2>
 
-    <div
-      cdkDropList
-      [cdkDropListData]="basket"
-      class="example-list"
-      (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of basket" cdkDrag>{{item}}</div>
+    <div cdkdroplist [cdkdroplistdata]="basket" class="example-list" (cdkdroplistdropped)="drop($event)">
+      @for (item of basket; track item) {
+        <div class="example-box" cdkdrag>{{item}}</div>
+      }
     </div>
   </div>
 </div>

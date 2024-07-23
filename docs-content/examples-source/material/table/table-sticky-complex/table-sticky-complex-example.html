@@ -5,9 +5,7 @@
 
 <div>
   Sticky Headers:
-  <mat-button-toggle-group multiple [value]="['header-1']"
-                           #stickyHeaders="matButtonToggleGroup"
-                           class="example-sticky-toggle-group">
+  <mat-button-toggle-group multiple [value]="['header-1']" #stickyheaders="matButtonToggleGroup" class="example-sticky-toggle-group">
     <mat-button-toggle value="header-1"> Row 1 </mat-button-toggle>
     <mat-button-toggle value="header-2"> Row 2 </mat-button-toggle>
   </mat-button-toggle-group>
@@ -15,9 +13,7 @@
 
 <div>
   Sticky Footers:
-  <mat-button-toggle-group multiple [value]="['footer-1']"
-                           #stickyFooters="matButtonToggleGroup"
-                           class="example-sticky-toggle-group">
+  <mat-button-toggle-group multiple [value]="['footer-1']" #stickyfooters="matButtonToggleGroup" class="example-sticky-toggle-group">
     <mat-button-toggle value="footer-1"> Row 1 </mat-button-toggle>
     <mat-button-toggle value="footer-2"> Row 2 </mat-button-toggle>
   </mat-button-toggle-group>
@@ -25,9 +21,7 @@
 
 <div>
   Sticky Columns:
-  <mat-button-toggle-group multiple [value]="['position', 'symbol']"
-                           #stickyColumns="matButtonToggleGroup"
-                           class="example-sticky-toggle-group">
+  <mat-button-toggle-group multiple [value]="['position', 'symbol']" #stickycolumns="matButtonToggleGroup" class="example-sticky-toggle-group">
     <mat-button-toggle value="position"> Position </mat-button-toggle>
     <mat-button-toggle value="name"> Name </mat-button-toggle>
     <mat-button-toggle value="weight"> Weight </mat-button-toggle>
@@ -36,43 +30,45 @@
 </div>
 
 <section class="example-container mat-elevation-z8" tabindex="0">
-  <table mat-table [dataSource]="dataSource" *ngFor="let table of tables">
-    <ng-container matColumnDef="position" [sticky]="isSticky(stickyColumns, 'position')">
-      <th mat-header-cell *matHeaderCellDef> Position </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-      <td mat-footer-cell *matFooterCellDef> Position Footer </td>
-    </ng-container>
+  @for (table of tables; track table) {
+    <ng-container matcolumndef="position" [sticky]="isSticky(stickyColumns, 'position')">
+        </ng-container><ng-container matcolumndef="name" [sticky]="isSticky(stickyColumns, 'name')">
+        </ng-container><ng-container matcolumndef="weight" [stickyend]="isSticky(stickyColumns, 'weight')">
+        </ng-container><ng-container matcolumndef="symbol" [stickyend]="isSticky(stickyColumns, 'symbol')">
+        </ng-container><ng-container matcolumndef="filler">
+        </ng-container><table mat-table [datasource]="dataSource">
+      <tbody><tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="a2zctwdhy45ixr4yvwb724qfg">位置</th>
+        <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="bem1kr5d3ptu3n16fx7mtrtch">{{element.position}}</td>
+        <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="7uzo6ca0zq83ouvxva48t045r">位置页脚</td>
+      
 
-    <ng-container matColumnDef="name" [sticky]="isSticky(stickyColumns, 'name')">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-      <td mat-footer-cell *matFooterCellDef> Name Footer </td>
-    </ng-container>
+      <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="81q72im0w97yzvvhco38hn4yz">名称</th>
+        <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="4qxnwd4mtut2o4lenx3i6alna">{{element.name}}</td>
+        <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="3z509acge2z1m4r6y528hi6iv">名称页脚</td>
+      
 
-    <ng-container matColumnDef="weight" [stickyEnd]="isSticky(stickyColumns, 'weight')">
-      <th mat-header-cell *matHeaderCellDef> Weight </th>
-      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-      <td mat-footer-cell *matFooterCellDef> Weight Footer </td>
-    </ng-container>
+      <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="9pw0vkh2y5qostzm5rfull9dv">重量</th>
+        <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="8dm11u7ptiet8szy0o3g8x3t7">{{element.weight}}</td>
+        <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="8awaukmp797dm4c0jplmyopse">重量页脚</td>
+      
 
-    <ng-container matColumnDef="symbol" [stickyEnd]="isSticky(stickyColumns, 'symbol')">
-      <th mat-header-cell *matHeaderCellDef> Symbol </th>
-      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-      <td mat-footer-cell *matFooterCellDef> Symbol Footer </td>
-    </ng-container>
+      <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ad76ex9ufezcz8gjf0mf6idjj">符号</th>
+        <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="ajlcxvp8cjl07pd6l7jqkngsv">{{element.symbol}}</td>
+        <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="4104ywvzh62zjzx2n6f78g4j5">符号页脚</td>
+      
 
-    <ng-container matColumnDef="filler">
-      <th mat-header-cell *matHeaderCellDef> Filler header cell </th>
-      <td mat-cell *matCellDef="let element"> Filler data cell </td>
-      <td mat-footer-cell *matFooterCellDef> Filler footer cell </td>
-    </ng-container>
+      <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="1cm08jlyng51bjop3rb4sshds">填充表头单元格</th>
+        <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="bftn0izbhk6k0yd5h29r9y7u9">填充数据单元格</td>
+        <td mat-footer-cell *matfootercelldef data-ng_translator_product="100" data-ng_translator_ref_id="5v6ubvuhwk7t204sk52t4xov4">填充页脚单元格</td>
+      
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')"></tr>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')"></tr>
+      </tr><tr mat-header-row *matheaderrowdef="displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')"></tr>
+      <tr mat-header-row *matheaderrowdef="displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')"></tr>
 
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
 
-    <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')"></tr>
-    <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')"></tr>
-  </table>
+      <tr mat-footer-row *matfooterrowdef="displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')"></tr>
+      <tr mat-footer-row *matfooterrowdef="displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')"></tr>
+    </tbody></table>
+  }
 </section>

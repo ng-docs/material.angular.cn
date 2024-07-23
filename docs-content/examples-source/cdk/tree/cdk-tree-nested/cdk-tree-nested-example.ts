@@ -7,9 +7,6 @@ import {MatButtonModule} from '@angular/material/button';
 /**
  * Food data with nested structure.
  * Each node has a name and an optional list of children.
- *
- * 具有嵌套结构的食物数据。每个节点都有一个名称和一个可选的子节点列表。
- *
  */
 interface FoodNode {
   name: string;
@@ -42,7 +39,7 @@ const TREE_DATA: FoodNode[] = [
 @Component({
   selector: 'cdk-tree-nested-example',
   templateUrl: 'cdk-tree-nested-example.html',
-  styleUrls: ['cdk-tree-nested-example.css'],
+  styleUrl: 'cdk-tree-nested-example.css',
   standalone: true,
   imports: [CdkTreeModule, MatButtonModule, MatIconModule],
 })

@@ -12,7 +12,7 @@ export interface Transaction {
  */
 @Component({
   selector: 'table-sticky-footer-example',
-  styleUrls: ['table-sticky-footer-example.css'],
+  styleUrl: 'table-sticky-footer-example.css',
   templateUrl: 'table-sticky-footer-example.html',
   standalone: true,
   imports: [MatTableModule, CurrencyPipe],
@@ -28,12 +28,7 @@ export class TableStickyFooterExample {
     {item: 'Swim suit', cost: 15},
   ];
 
-  /**
-   * Gets the total cost of all transactions.
-   *
-   * 获取所有交易的总成本。
-   *
-   */
+  /** Gets the total cost of all transactions. */
   getTotalCost() {
     return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
   }

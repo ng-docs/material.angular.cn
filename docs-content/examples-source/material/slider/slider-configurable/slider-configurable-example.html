@@ -1,56 +1,55 @@
 <mat-card>
   <mat-card-content>
-    <h2 class="example-h2">Slider configuration</h2>
+    <h2 class="example-h2" data-ng_translator_product="100" data-ng_translator_ref_id="1d7fv0i35h3wa6rlbm9y5vg5p">滑块配置</h2>
+
+    <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="a0r3pw07i3nk5sc6t6y4nojjm"><mat-form-field class="example-margin example-width"> 
+ <mat-label>
+  值
+ </mat-label> 
+ <input matInput type="number" [(ngModel)]="value"> 
+</mat-form-field> 
+<mat-form-field class="example-margin example-width"> 
+ <mat-label>
+  最小值
+ </mat-label> 
+ <input matInput type="number" [(ngModel)]="min"> 
+</mat-form-field> 
+<mat-form-field class="example-margin example-width"> 
+ <mat-label>
+  最大值
+ </mat-label> 
+ <input matInput type="number" [(ngModel)]="max"> 
+</mat-form-field> 
+<mat-form-field class="example-margin example-width"> 
+ <mat-label>
+  步长
+ </mat-label> 
+ <input matInput type="number" [(ngModel)]="step"> 
+</mat-form-field></section>
 
     <section class="example-section">
-      <mat-form-field class="example-margin example-width">
-        <mat-label>Value</mat-label>
-        <input matInput type="number" [(ngModel)]="value">
-      </mat-form-field>
-      <mat-form-field class="example-margin example-width">
-        <mat-label>Min value</mat-label>
-        <input matInput type="number" [(ngModel)]="min">
-      </mat-form-field>
-      <mat-form-field class="example-margin example-width">
-        <mat-label>Max value</mat-label>
-        <input matInput type="number" [(ngModel)]="max">
-      </mat-form-field>
-      <mat-form-field class="example-margin example-width">
-        <mat-label>Step size</mat-label>
-        <input matInput type="number" [(ngModel)]="step">
-      </mat-form-field>
+      <mat-checkbox [(ngmodel)]="showTicks" data-ng_translator_product="100" data-ng_translator_ref_id="75cggnp95v9x4jesucexri8br">显示刻度</mat-checkbox>
     </section>
 
     <section class="example-section">
-      <mat-checkbox [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+      <mat-checkbox [(ngmodel)]="thumbLabel" data-ng_translator_product="100" data-ng_translator_ref_id="18clyla75qnfqjrmlphpk42gf">显示滑块标签</mat-checkbox>
     </section>
 
     <section class="example-section">
-      <mat-checkbox [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
-    </section>
-
-    <section class="example-section">
-      <mat-checkbox [(ngModel)]="disabled">Disabled</mat-checkbox>
+      <mat-checkbox [(ngmodel)]="disabled" data-ng_translator_product="100" data-ng_translator_ref_id="b0c19xwxoz9ftjea5aee4mon5">禁用</mat-checkbox>
     </section>
   </mat-card-content>
 </mat-card>
 
 <mat-card class="example-result-card">
   <mat-card-content>
-    <h2>Result</h2>
+    <h2 data-ng_translator_product="100" data-ng_translator_ref_id="8gldxuy5d8w97mox64wkznwoe">结果</h2>
 
     <div class="example-label-container">
       <label id="example-name-label" class="example-name-label">Value</label>
       <label class="example-value-label">{{slider.value}}</label>
     </div>
-    <mat-slider
-        class="example-margin"
-        [disabled]="disabled"
-        [max]="max"
-        [min]="min"
-        [step]="step"
-        [discrete]="thumbLabel"
-        [showTickMarks]="showTicks">
+    <mat-slider class="example-margin" [disabled]="disabled" [max]="max" [min]="min" [step]="step" [discrete]="thumbLabel" [showtickmarks]="showTicks">
       <input matSliderThumb [(ngModel)]="value" #slider>
     </mat-slider>
   </mat-card-content>

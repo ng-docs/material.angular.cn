@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgFor, JsonPipe} from '@angular/common';
+import {JsonPipe} from '@angular/common';
 import {CdkListbox, CdkOption} from '@angular/cdk/listbox';
 
 /** @title Listbox with value binding. */
@@ -7,9 +7,9 @@ import {CdkListbox, CdkOption} from '@angular/cdk/listbox';
   selector: 'cdk-listbox-value-binding-example',
   exportAs: 'cdkListboxValueBindingExample',
   templateUrl: 'cdk-listbox-value-binding-example.html',
-  styleUrls: ['cdk-listbox-value-binding-example.css'],
+  styleUrl: 'cdk-listbox-value-binding-example.css',
   standalone: true,
-  imports: [CdkListbox, NgFor, CdkOption, JsonPipe],
+  imports: [CdkListbox, CdkOption, JsonPipe],
 })
 export class CdkListboxValueBindingExample {
   starters = ['Sprigatito', 'Fuecoco', 'Quaxly'];

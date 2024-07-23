@@ -1,42 +1,33 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {FormControl, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/forms&#x27;</span>;
-<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs/operators&#x27;</span>;
-<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rxjs&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgFor, NgIf, AsyncPipe, JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk/listbox&#x27;</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators, FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {AsyncPipe, JsonPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {CdkListbox, CdkOption} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/listbox'</span>;
 
 <span class="hljs-comment">/** <span class="hljs-doctag">@title </span>Listbox with forms validation. */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;cdk-listbox-forms-validation-example&#x27;</span>,
-  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">&#x27;cdkListboxFormsValidationExample&#x27;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;cdk-listbox-forms-validation-example.html&#x27;</span>,
-  <span class="hljs-attr">styleUrls</span>: [<span class="hljs-string">&#x27;cdk-listbox-forms-validation-example.css&#x27;</span>],
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'cdk-listbox-forms-validation-example'</span>,
+  <span class="hljs-attr">exportAs</span>: <span class="hljs-string">'cdkListboxFormsValidationExample'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'cdk-listbox-forms-validation-example.html'</span>,
+  <span class="hljs-attr">styleUrl</span>: <span class="hljs-string">'cdk-listbox-forms-validation-example.css'</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [
-    CdkListbox,
-    FormsModule,
-    ReactiveFormsModule,
-    NgFor,
-    CdkOption,
-    NgIf,
-    AsyncPipe,
-    JsonPipe,
-  ],
+  <span class="hljs-attr">imports</span>: [CdkListbox, FormsModule, ReactiveFormsModule, CdkOption, AsyncPipe, JsonPipe],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CdkListboxFormsValidationExample</span> </span>{
   signs = [
-    <span class="hljs-string">&#x27;Rat&#x27;</span>,
-    <span class="hljs-string">&#x27;Ox&#x27;</span>,
-    <span class="hljs-string">&#x27;Tiger&#x27;</span>,
-    <span class="hljs-string">&#x27;Rabbit&#x27;</span>,
-    <span class="hljs-string">&#x27;Dragon&#x27;</span>,
-    <span class="hljs-string">&#x27;Snake&#x27;</span>,
-    <span class="hljs-string">&#x27;Horse&#x27;</span>,
-    <span class="hljs-string">&#x27;Goat&#x27;</span>,
-    <span class="hljs-string">&#x27;Monkey&#x27;</span>,
-    <span class="hljs-string">&#x27;Rooster&#x27;</span>,
-    <span class="hljs-string">&#x27;Dog&#x27;</span>,
-    <span class="hljs-string">&#x27;Pig&#x27;</span>,
+    <span class="hljs-string">'Rat'</span>,
+    <span class="hljs-string">'Ox'</span>,
+    <span class="hljs-string">'Tiger'</span>,
+    <span class="hljs-string">'Rabbit'</span>,
+    <span class="hljs-string">'Dragon'</span>,
+    <span class="hljs-string">'Snake'</span>,
+    <span class="hljs-string">'Horse'</span>,
+    <span class="hljs-string">'Goat'</span>,
+    <span class="hljs-string">'Monkey'</span>,
+    <span class="hljs-string">'Rooster'</span>,
+    <span class="hljs-string">'Dog'</span>,
+    <span class="hljs-string">'Pig'</span>,
   ];
   invalid: Observable&lt;<span class="hljs-built_in">boolean</span>&gt;;
 
@@ -50,14 +41,14 @@
 
   <span class="hljs-function"><span class="hljs-title">getErrors</span>(<span class="hljs-params"></span>)</span> {
     <span class="hljs-keyword">const</span> errors = [];
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">&#x27;required&#x27;</span>)) {
-      errors.push(<span class="hljs-string">&#x27;You must enter your zodiac sign&#x27;</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">'required'</span>)) {
+      errors.push(<span class="hljs-string">'You must enter your zodiac sign'</span>);
     }
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">&#x27;cdkListboxUnexpectedMultipleValues&#x27;</span>)) {
-      errors.push(<span class="hljs-string">&#x27;You can only select one zodiac sign&#x27;</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">'cdkListboxUnexpectedMultipleValues'</span>)) {
+      errors.push(<span class="hljs-string">'You can only select one zodiac sign'</span>);
     }
-    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">&#x27;cdkListboxUnexpectedOptionValues&#x27;</span>)) {
-      <span class="hljs-keyword">const</span> invalidOptions = <span class="hljs-built_in">this</span>.signCtrl.getError(<span class="hljs-string">&#x27;cdkListboxUnexpectedOptionValues&#x27;</span>).values;
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span>.signCtrl.hasError(<span class="hljs-string">'cdkListboxUnexpectedOptionValues'</span>)) {
+      <span class="hljs-keyword">const</span> invalidOptions = <span class="hljs-built_in">this</span>.signCtrl.getError(<span class="hljs-string">'cdkListboxUnexpectedOptionValues'</span>).values;
       errors.push(<span class="hljs-string">`You entered an invalid zodiac sign: <span class="hljs-subst">${invalidOptions[<span class="hljs-number">0</span>]}</span>`</span>);
     }
     <span class="hljs-keyword">return</span> errors.length ? errors : <span class="hljs-literal">null</span>;

@@ -1,38 +1,20 @@
 <div class="example-container">
-  <h2>Available numbers</h2>
+  <h2 data-ng_translator_product="100" data-ng_translator_ref_id="eu9ug4zsiku2zttmx3y1a70xt">可用数字</h2>
 
-  <div
-    id="all"
-    cdkDropList
-    [cdkDropListData]="all"
-    cdkDropListConnectedTo="even"
-    class="example-list"
-    (cdkDropListDropped)="drop($event)"
-    [cdkDropListEnterPredicate]="noReturnPredicate">
-    <div
-      class="example-box"
-      *ngFor="let number of all"
-      [cdkDragData]="number"
-      cdkDrag>{{number}}</div>
+  <div id="all" cdkdroplist [cdkdroplistdata]="all" cdkdroplistconnectedto="even" class="example-list" (cdkdroplistdropped)="drop($event)" [cdkdroplistenterpredicate]="noReturnPredicate">
+    @for (number of all; track number) {
+      <div class="example-box" [cdkdragdata]="number" cdkdrag>{{number}}</div>
+    }
   </div>
 </div>
 
 <div class="example-container">
-  <h2>Even numbers</h2>
+  <h2 data-ng_translator_product="100" data-ng_translator_ref_id="bkgewwu3l1jzarvjj5u389u43">偶数</h2>
 
-  <div
-    id="even"
-    cdkDropList
-    [cdkDropListData]="even"
-    cdkDropListConnectedTo="all"
-    class="example-list"
-    (cdkDropListDropped)="drop($event)"
-    [cdkDropListEnterPredicate]="evenPredicate">
-    <div
-      class="example-box"
-      *ngFor="let number of even"
-      cdkDrag
-      [cdkDragData]="number">{{number}}</div>
+  <div id="even" cdkdroplist [cdkdroplistdata]="even" cdkdroplistconnectedto="all" class="example-list" (cdkdroplistdropped)="drop($event)" [cdkdroplistenterpredicate]="evenPredicate">
+    @for (number of even; track number) {
+      <div class="example-box" cdkdrag [cdkdragdata]="number">{{number}}</div>
+    }
   </div>
 </div>
 

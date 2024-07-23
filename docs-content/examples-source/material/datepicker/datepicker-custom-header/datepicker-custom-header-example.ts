@@ -10,7 +10,7 @@ import {
   DateAdapter,
   MAT_DATE_FORMATS,
   MatDateFormats,
-  MatNativeDateModule,
+  provideNativeDateAdapter,
 } from '@angular/material/core';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
@@ -25,22 +25,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   templateUrl: 'datepicker-custom-header-example.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatNativeDateModule, MatDatepickerModule],
+  providers: [provideNativeDateAdapter()],
+  imports: [MatFormFieldModule, MatInputModule, MatDatepickerModule],
 })
 export class DatepickerCustomHeaderExample {
   exampleHeader = ExampleHeader;
 }
 
-/**
- * Custom header component for datepicker.
- *
- * 日期选择器的自定义标头组件。
- *
- */
+/** Custom header component for datepicker. */
 @Component({
   selector: 'example-header',
-  styles: [
-    `
+  styles: `
     .example-header {
       display: flex;
       align-items: center;
@@ -54,7 +49,6 @@ export class DatepickerCustomHeaderExample {
       text-align: center;
     }
   `,
-  ],
   template: `
     <div class="example-header">
       <button mat-icon-button (click)="previousClicked('year')">

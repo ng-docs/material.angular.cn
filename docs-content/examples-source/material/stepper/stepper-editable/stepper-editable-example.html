@@ -4,40 +4,39 @@
 
 <mat-stepper linear #stepper>
 <!-- #docregion editable -->
-  <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+  <mat-step [stepcontrol]="firstFormGroup" [editable]="isEditable">
 <!-- #enddocregion editable -->
     <form [formGroup]="firstFormGroup">
 <!-- #docregion step-label -->
-      <ng-template matStepLabel>Fill out your name</ng-template>
+      <ng-template matsteplabel>Fill out your name</ng-template>
 <!-- #enddocregion step-label -->
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input matInput formControlName="firstCtrl" placeholder="Last name, First name" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matsteppernext>Next</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+  <mat-step [stepcontrol]="secondFormGroup" [editable]="isEditable">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+      <ng-template matsteplabel>Fill out your address</ng-template>
       <mat-form-field>
         <mat-label>Address</mat-label>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-               required>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matstepperprevious>Back</button>
+        <button mat-button matsteppernext>Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <ng-template matsteplabel>Done</ng-template>
+    <p data-ng_translator_product="100" data-ng_translator_ref_id="f30ioould20646975tytt66pq">你已经完成了。</p>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matstepperprevious>Back</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>

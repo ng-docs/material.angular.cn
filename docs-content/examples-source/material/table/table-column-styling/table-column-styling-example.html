@@ -1,29 +1,29 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+<ng-container matcolumndef="demo-position">
+    </ng-container><ng-container matcolumndef="demo-name">
+    </ng-container><ng-container matcolumndef="demo-weight">
+    </ng-container><ng-container matcolumndef="demo-symbol">
+    </ng-container><table mat-table [datasource]="dataSource" class="mat-elevation-z8 demo-table">
   <!-- Position Column -->
-  <ng-container matColumnDef="demo-position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container>
+  <tbody><tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ev8cx5z125j1kpdcgd1jmyejr">不。</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="bem1kr5d3ptu3n16fx7mtrtch">{{element.position}}</td>
+  
 
   <!-- Name Column -->
-  <ng-container matColumnDef="demo-name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="81q72im0w97yzvvhco38hn4yz">名称</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="4qxnwd4mtut2o4lenx3i6alna">{{element.name}}</td>
+  
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="demo-weight">
-    <th mat-header-cell *matHeaderCellDef> Weight </th>
-    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="9pw0vkh2y5qostzm5rfull9dv">重量</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="8dm11u7ptiet8szy0o3g8x3t7">{{element.weight}}</td>
+  
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="demo-symbol">
-    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ad76ex9ufezcz8gjf0mf6idjj">符号</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="ajlcxvp8cjl07pd6l7jqkngsv">{{element.symbol}}</td>
+  
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+  </tr><tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>
 

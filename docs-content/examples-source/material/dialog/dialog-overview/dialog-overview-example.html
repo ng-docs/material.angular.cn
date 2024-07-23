@@ -1,14 +1,15 @@
 <ol>
   <li>
-    <mat-form-field>
-      <mat-label>What's your name?</mat-label>
-      <input matInput [(ngModel)]="name">
-    </mat-form-field>
+    <mat-form-field data-ng_translator_product="100" data-ng_translator_ref_id="4bfa6tgr410sjgzxw22hpva0f"><mat-label>
+ 你的名字是什么？
+</mat-label> 
+<input matInput [(ngModel)]="name"></mat-form-field>
   </li>
   <li>
-    <button mat-raised-button (click)="openDialog()">Pick one</button>
+    <button mat-raised-button (click)="openDialog()" data-ng_translator_product="100" data-ng_translator_ref_id="dyjhk90ii8u91abllcaz0d6aw">选择一个</button>
   </li>
-  <li *ngIf="animal">
-    You chose: <em>{{animal}}</em>
-  </li>
+  @if (animal) {
+    <li data-ng_translator_product="100" data-ng_translator_ref_id="amkqvx9u2xfzn5iibh6eqd85j">你选择了：
+<em>{{animal}}</em></li>
+  }
 </ol>

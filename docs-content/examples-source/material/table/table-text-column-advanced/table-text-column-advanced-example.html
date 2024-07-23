@@ -1,15 +1,15 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <mat-text-column name="position" [headerText]="headerText"></mat-text-column>
+<mat-text-column name="position" [headertext]="headerText"></mat-text-column><mat-text-column name="name" headertext="Element"></mat-text-column><mat-text-column name="weight" [dataaccessor]="getWeight"></mat-text-column><mat-text-column name="symbol" justify="end"></mat-text-column><table mat-table [datasource]="dataSource" class="mat-elevation-z8">
+  
 
   <!-- Change the header text. -->
-  <mat-text-column name="name" headerText="Element"></mat-text-column>
+  
 
   <!-- Provide a data accessor for getting the cell text values. -->
-  <mat-text-column name="weight" [dataAccessor]="getWeight"></mat-text-column>
+  
 
   <!-- Justify the content of the cells to the cell end. -->
-  <mat-text-column name="symbol" justify="end"></mat-text-column>
+  
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+  <tbody><tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>

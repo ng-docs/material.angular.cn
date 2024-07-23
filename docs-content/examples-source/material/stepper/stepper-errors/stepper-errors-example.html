@@ -1,37 +1,36 @@
 <mat-stepper #stepper>
-  <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+  <mat-step [stepcontrol]="firstFormGroup" errormessage="Name is required.">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
+      <ng-template matsteplabel>Fill out your name</ng-template>
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
       </mat-form-field>
       <div>
-        <p>Go to a different step to see the error state</p>
-        <button mat-button matStepperNext>Next</button>
+        <p data-ng_translator_product="100" data-ng_translator_ref_id="aux5j049tm5l488ppgtqr0nzl">转到不同的步骤以查看错误状态</p>
+        <button mat-button matsteppernext>Next</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+  <mat-step [stepcontrol]="secondFormGroup" errormessage="Address is required.">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+      <ng-template matsteplabel>Fill out your address</ng-template>
       <mat-form-field>
         <mat-label>Address</mat-label>
-        <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl"
-               required>
+        <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl" required>
       </mat-form-field>
       <div>
-        <p>Go to a different step to see the error state</p>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <p data-ng_translator_product="100" data-ng_translator_ref_id="aux5j049tm5l488ppgtqr0nzl">转到不同的步骤以查看错误状态</p>
+        <button mat-button matstepperprevious>Back</button>
+        <button mat-button matsteppernext>Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
+    <ng-template matsteplabel>Done</ng-template>
+    <p data-ng_translator_product="100" data-ng_translator_ref_id="f30ioould20646975tytt66pq">你已经完成了。</p>
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matstepperprevious>Back</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>

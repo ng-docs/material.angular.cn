@@ -1,17 +1,19 @@
-<table matSort (matSortChange)="sortData($event)">
-  <tr>
-    <th mat-sort-header="name">Dessert</th>
-    <th mat-sort-header="calories">Calories</th>
-    <th mat-sort-header="fat" [disabled]="disableThirdHeader">Fat</th>
-    <th mat-sort-header="carbs">Carbs</th>
-    <th mat-sort-header="protein">Protein</th>
+<table matsort (matsortchange)="sortData($event)">
+  <tbody><tr>
+    <th mat-sort-header="name" data-ng_translator_product="100" data-ng_translator_ref_id="2e36suipw6yq7a0qec8tmgccy">甜点</th>
+    <th mat-sort-header="calories" data-ng_translator_product="100" data-ng_translator_ref_id="3rygtell1l8z6znbtkgm2cluw">卡路里</th>
+    <th mat-sort-header="fat" [disabled]="disableThirdHeader" data-ng_translator_product="100" data-ng_translator_ref_id="4k6v65o3nxwprg51jtw1grs8d">脂肪</th>
+    <th mat-sort-header="carbs" data-ng_translator_product="100" data-ng_translator_ref_id="e434loetiav25vapfzydp0ppw">碳水化合物</th>
+    <th mat-sort-header="protein" data-ng_translator_product="100" data-ng_translator_ref_id="7he8czx7cllip2suocyye3wzh">蛋白质</th>
   </tr>
 
-  <tr *ngFor="let dessert of sortedData">
-    <td>{{dessert.name}}</td>
-    <td>{{dessert.calories}}</td>
-    <td>{{dessert.fat}}</td>
-    <td>{{dessert.carbs}}</td>
-    <td>{{dessert.protein}}</td>
-  </tr>
-</table>
+  @for (dessert of sortedData; track dessert) {
+    <tr>
+      <td>{{dessert.name}}</td>
+      <td>{{dessert.calories}}</td>
+      <td>{{dessert.fat}}</td>
+      <td>{{dessert.carbs}}</td>
+      <td>{{dessert.protein}}</td>
+    </tr>
+  }
+</tbody></table>

@@ -1,17 +1,17 @@
-<span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/cdk-experimental/selection&#x27;</span>;
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/core&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material/checkbox&#x27;</span>;
-<span class="hljs-keyword">import</span> {NgFor, AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/common&#x27;</span>;
-<span class="hljs-keyword">import</span> {MatSelectionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@angular/material-experimental/selection&#x27;</span>;
+<span class="hljs-keyword">import</span> {SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk-experimental/selection'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {AsyncPipe} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {MatSelectionModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/selection'</span>;
 
 <span class="hljs-comment">/**
  * <span class="hljs-doctag">@title </span>Mat Selection on a simple list.
  */</span>
 <span class="hljs-meta">@Component</span>({
-  <span class="hljs-attr">selector</span>: <span class="hljs-string">&#x27;mat-selection-list-example&#x27;</span>,
-  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">&#x27;mat-selection-list-example.html&#x27;</span>,
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'mat-selection-list-example'</span>,
+  <span class="hljs-attr">templateUrl</span>: <span class="hljs-string">'mat-selection-list-example.html'</span>,
   <span class="hljs-attr">standalone</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-attr">imports</span>: [MatSelectionModule, NgFor, MatCheckboxModule, AsyncPipe],
+  <span class="hljs-attr">imports</span>: [MatSelectionModule, MatCheckboxModule, AsyncPipe],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MatSelectionListExample</span> </span>{
   data = ELEMENT_NAMES;
@@ -38,47 +38,47 @@
 }
 
 <span class="hljs-keyword">const</span> ELEMENT_NAMES = [
-  <span class="hljs-string">&#x27;Hydrogen&#x27;</span>,
-  <span class="hljs-string">&#x27;Helium&#x27;</span>,
-  <span class="hljs-string">&#x27;Lithium&#x27;</span>,
-  <span class="hljs-string">&#x27;Beryllium&#x27;</span>,
-  <span class="hljs-string">&#x27;Boron&#x27;</span>,
-  <span class="hljs-string">&#x27;Carbon&#x27;</span>,
-  <span class="hljs-string">&#x27;Nitrogen&#x27;</span>,
-  <span class="hljs-string">&#x27;Oxygen&#x27;</span>,
-  <span class="hljs-string">&#x27;Fluorine&#x27;</span>,
-  <span class="hljs-string">&#x27;Neon&#x27;</span>,
-  <span class="hljs-string">&#x27;Sodium&#x27;</span>,
-  <span class="hljs-string">&#x27;Magnesium&#x27;</span>,
-  <span class="hljs-string">&#x27;Aluminum&#x27;</span>,
-  <span class="hljs-string">&#x27;Silicon&#x27;</span>,
-  <span class="hljs-string">&#x27;Phosphorus&#x27;</span>,
-  <span class="hljs-string">&#x27;Sulfur&#x27;</span>,
-  <span class="hljs-string">&#x27;Chlorine&#x27;</span>,
-  <span class="hljs-string">&#x27;Argon&#x27;</span>,
-  <span class="hljs-string">&#x27;Potassium&#x27;</span>,
-  <span class="hljs-string">&#x27;Calcium&#x27;</span>,
+  <span class="hljs-string">'Hydrogen'</span>,
+  <span class="hljs-string">'Helium'</span>,
+  <span class="hljs-string">'Lithium'</span>,
+  <span class="hljs-string">'Beryllium'</span>,
+  <span class="hljs-string">'Boron'</span>,
+  <span class="hljs-string">'Carbon'</span>,
+  <span class="hljs-string">'Nitrogen'</span>,
+  <span class="hljs-string">'Oxygen'</span>,
+  <span class="hljs-string">'Fluorine'</span>,
+  <span class="hljs-string">'Neon'</span>,
+  <span class="hljs-string">'Sodium'</span>,
+  <span class="hljs-string">'Magnesium'</span>,
+  <span class="hljs-string">'Aluminum'</span>,
+  <span class="hljs-string">'Silicon'</span>,
+  <span class="hljs-string">'Phosphorus'</span>,
+  <span class="hljs-string">'Sulfur'</span>,
+  <span class="hljs-string">'Chlorine'</span>,
+  <span class="hljs-string">'Argon'</span>,
+  <span class="hljs-string">'Potassium'</span>,
+  <span class="hljs-string">'Calcium'</span>,
 ];
 
 <span class="hljs-keyword">const</span> ELEMENT_SYMBOLS = [
-  <span class="hljs-string">&#x27;H&#x27;</span>,
-  <span class="hljs-string">&#x27;He&#x27;</span>,
-  <span class="hljs-string">&#x27;Li&#x27;</span>,
-  <span class="hljs-string">&#x27;Be&#x27;</span>,
-  <span class="hljs-string">&#x27;B&#x27;</span>,
-  <span class="hljs-string">&#x27;C&#x27;</span>,
-  <span class="hljs-string">&#x27;N&#x27;</span>,
-  <span class="hljs-string">&#x27;O&#x27;</span>,
-  <span class="hljs-string">&#x27;F&#x27;</span>,
-  <span class="hljs-string">&#x27;Ne&#x27;</span>,
-  <span class="hljs-string">&#x27;Na&#x27;</span>,
-  <span class="hljs-string">&#x27;Mg&#x27;</span>,
-  <span class="hljs-string">&#x27;Al&#x27;</span>,
-  <span class="hljs-string">&#x27;Si&#x27;</span>,
-  <span class="hljs-string">&#x27;P&#x27;</span>,
-  <span class="hljs-string">&#x27;S&#x27;</span>,
-  <span class="hljs-string">&#x27;Cl&#x27;</span>,
-  <span class="hljs-string">&#x27;Ar&#x27;</span>,
-  <span class="hljs-string">&#x27;K&#x27;</span>,
-  <span class="hljs-string">&#x27;Ca&#x27;</span>,
+  <span class="hljs-string">'H'</span>,
+  <span class="hljs-string">'He'</span>,
+  <span class="hljs-string">'Li'</span>,
+  <span class="hljs-string">'Be'</span>,
+  <span class="hljs-string">'B'</span>,
+  <span class="hljs-string">'C'</span>,
+  <span class="hljs-string">'N'</span>,
+  <span class="hljs-string">'O'</span>,
+  <span class="hljs-string">'F'</span>,
+  <span class="hljs-string">'Ne'</span>,
+  <span class="hljs-string">'Na'</span>,
+  <span class="hljs-string">'Mg'</span>,
+  <span class="hljs-string">'Al'</span>,
+  <span class="hljs-string">'Si'</span>,
+  <span class="hljs-string">'P'</span>,
+  <span class="hljs-string">'S'</span>,
+  <span class="hljs-string">'Cl'</span>,
+  <span class="hljs-string">'Ar'</span>,
+  <span class="hljs-string">'K'</span>,
+  <span class="hljs-string">'Ca'</span>,
 ];

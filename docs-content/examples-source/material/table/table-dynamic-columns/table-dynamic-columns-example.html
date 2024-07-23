@@ -2,12 +2,14 @@
 <button mat-raised-button (click)="removeColumn()"> Remove column </button>
 <button mat-raised-button (click)="shuffle()"> Shuffle </button>
 
-<table mat-table [dataSource]="data" class="mat-elevation-z8">
-  <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
-    <th mat-header-cell *matHeaderCellDef> {{column}} </th>
-    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-  </ng-container>
+<ng-container [matcolumndef]="column">
+      </ng-container><table mat-table [datasource]="data" class="mat-elevation-z8">
+  @for (column of displayedColumns; track column) {
+    <tbody><tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="bayn894sahn0teltzc9nhze6t">{{column}}</th>
+      <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="19vx9jyw6jpu0e07v2axbv1vv">{{element[column]}}</td>
+    
+  }
 
-  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-  <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
-</table>
+  </tr><tr mat-header-row *matheaderrowdef="columnsToDisplay"></tr>
+  <tr mat-row *matrowdef="let row; columns: columnsToDisplay;"></tr>
+</tbody></table>

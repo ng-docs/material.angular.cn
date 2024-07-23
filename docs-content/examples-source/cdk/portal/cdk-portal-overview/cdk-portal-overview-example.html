@@ -1,11 +1,11 @@
-<h2>The portal outlet is below:</h2>
+<h2 data-ng_translator_product="100" data-ng_translator_ref_id="bn6rc4pcm4n7of7n2a6jro7ul">门户出口在下面：</h2>
 <div class="example-portal-outlet">
-  <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
+  <ng-template [cdkportaloutlet]="selectedPortal"></ng-template>
 </div>
-<ng-template #templatePortalContent>Hello, this is a template portal</ng-template>
+<ng-template #templateportalcontent>Hello, this is a template portal</ng-template>
 
 <button (click)="selectedPortal = componentPortal">Render component portal</button>
 <button (click)="selectedPortal = templatePortal">Render template portal</button>
 <button (click)="selectedPortal = domPortal">Render DOM portal</button>
 
-<div #domPortalContent>Hello, this is a DOM portal</div>
+<div #domportalcontent>Hello, this is a DOM portal</div>

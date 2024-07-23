@@ -2,22 +2,22 @@
   <h4>mat-select</h4>
   <mat-form-field>
     <mat-label>Favorite food</mat-label>
-    <mat-select [(ngModel)]="selectedValue" name="food">
-      <mat-option *ngFor="let food of foods" [value]="food.value">
-        {{food.viewValue}}
-      </mat-option>
+    <mat-select [(ngmodel)]="selectedValue" name="food">
+      @for (food of foods; track food) {
+        <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+      }
     </mat-select>
   </mat-form-field>
-  <p> Selected food: {{selectedValue}} </p>
-  <h4>native html select</h4>
+  <p data-ng_translator_product="100" data-ng_translator_ref_id="bg52toly3i0uw1v7zzb9fe58h">已选食物：{{selectedValue}}</p>
+  <h4 data-ng_translator_product="100" data-ng_translator_ref_id="7npgg76mhiehnzxfkxh9q3ibk">原生 HTML 选择器</h4>
   <mat-form-field>
     <mat-label>Favorite car</mat-label>
-    <select matNativeControl [(ngModel)]="selectedCar" name="car">
+    <select matnativecontrol [(ngmodel)]="selectedCar" name="car">
       <option value="" selected></option>
-      <option *ngFor="let car of cars" [value]="car.value">
-        {{car.viewValue}}
-      </option>
+      @for (car of cars; track car) {
+        <option [value]="car.value">{{car.viewValue}}</option>
+      }
     </select>
   </mat-form-field>
-  <p> Selected car: {{selectedCar}} </p>
+  <p data-ng_translator_product="100" data-ng_translator_ref_id="48m8qmtpnpc2nwlrajubyebmq">已选汽车：{{selectedCar}}</p>
 </form>

@@ -27,7 +27,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
  */
 @Component({
   selector: 'table-text-column-advanced-example',
-  styleUrls: ['table-text-column-advanced-example.css'],
+  styleUrl: 'table-text-column-advanced-example.css',
   templateUrl: 'table-text-column-advanced-example.html',
   standalone: true,
   imports: [MatTableModule],
@@ -40,12 +40,7 @@ export class TableTextColumnAdvancedExample {
 
   decimalPipe = new DecimalPipe('en-US');
 
-  /**
-   * Data accessor function that transforms the weight value to have at most 2 decimal digits.
-   *
-   * 将重量值转换为最多 2 位小数的数据访问器函数。
-   *
-   */
+  /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
   getWeight = (data: PeriodicElement): string => {
     const result = this.decimalPipe.transform(data.weight, '1.0-2');
     return result === null ? '' : result;

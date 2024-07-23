@@ -3,20 +3,13 @@
   <label class="example-listbox-label" id="example-starter-pokemon-label">
     Starter Pokemon
   </label>
-  <ul cdkListbox
-      [cdkListboxValue]="starter"
-      (cdkListboxValueChange)="starter = $event.value"
-      aria-labelledby="example-starter-pokemon-label"
-      class="example-listbox">
-    <li *ngFor="let pokemon of starters"
-        [cdkOption]="pokemon"
-        class="example-option">
-      {{pokemon}}
-    </li>
+  <ul cdklistbox [cdklistboxvalue]="starter" (cdklistboxvaluechange)="starter = $event.value" aria-labelledby="example-starter-pokemon-label" class="example-listbox">
+    @for (pokemon of starters; track pokemon) {
+      <li [cdkoption]="pokemon" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="3z7v35i1dnu08283biwfr1ucm">{{宝可梦}}</li>
+    }
   </ul>
   <!-- #enddocregion listbox -->
 </div>
-<p>
-  Your starter pokemon is <strong>{{starter | json}}</strong>&nbsp;
-  <button (click)="reset()">Reset</button>
-</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="buof01dqkbrh84svsbijzub09">你的初始宝可梦是 
+<strong>{{starter | json}}</strong>&nbsp; 
+<button (click)="reset()">重置</button></p>

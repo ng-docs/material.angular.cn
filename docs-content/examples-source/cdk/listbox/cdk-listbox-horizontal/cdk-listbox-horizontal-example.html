@@ -1,15 +1,9 @@
-<!-- #docregion listbox -->
 <label class="example-listbox-label" id="example-shirt-size-label">
   Shirt Size
 </label>
-<ul cdkListbox
-    cdkListboxOrientation="horizontal"
-    aria-labelledby="example-shirt-size-label"
-    class="example-listbox">
-  <li *ngFor="let size of sizes"
-      [cdkOption]="size"
-      class="example-option">
-    {{size}}
-  </li>
+<ul cdklistbox cdklistboxorientation="horizontal" aria-labelledby="example-shirt-size-label" class="example-listbox">
+  @for (size of sizes; track size) {
+    <li [cdkoption]="size" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="3idxrbxwb27xfjosfbaoys01i">{{尺寸}}</li>
+  }
 </ul>
 <!-- #enddocregion listbox -->

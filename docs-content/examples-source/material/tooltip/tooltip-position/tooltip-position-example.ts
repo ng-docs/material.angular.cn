@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonModule} from '@angular/material/button';
-import {NgFor} from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -12,14 +11,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 @Component({
   selector: 'tooltip-position-example',
   templateUrl: 'tooltip-position-example.html',
-  styleUrls: ['tooltip-position-example.css'],
+  styleUrl: 'tooltip-position-example.css',
   standalone: true,
   imports: [
     MatFormFieldModule,
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    NgFor,
     MatButtonModule,
     MatTooltipModule,
   ],

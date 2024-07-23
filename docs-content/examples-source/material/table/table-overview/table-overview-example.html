@@ -4,41 +4,41 @@
 </mat-form-field>
 
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort>
+  <ng-container matcolumndef="id">
+      </ng-container><ng-container matcolumndef="progress">
+      </ng-container><ng-container matcolumndef="name">
+      </ng-container><ng-container matcolumndef="fruit">
+      </ng-container><table mat-table [datasource]="dataSource" matsort>
 
     <!-- ID Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-      <td mat-cell *matCellDef="let row"> {{row.id}} </td>
-    </ng-container>
+    <tbody><tr><th mat-header-cell *matheadercelldef mat-sort-header> ID </th>
+      <td mat-cell *matcelldef="let row" data-ng_translator_product="100" data-ng_translator_ref_id="2xc907czhrqhs3od09yswxf7d">{{row.id}}</td>
+    
 
     <!-- Progress Column -->
-    <ng-container matColumnDef="progress">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
-      <td mat-cell *matCellDef="let row"> {{row.progress}}% </td>
-    </ng-container>
+    <th mat-header-cell *matheadercelldef mat-sort-header data-ng_translator_product="100" data-ng_translator_ref_id="4x7wnxw5ummwg7rjkng3m4tkb">进度</th>
+      <td mat-cell *matcelldef="let row" data-ng_translator_product="100" data-ng_translator_ref_id="7smd4e612yqkte6iaplzx7izy">{{row.progress}}%</td>
+    
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
-    </ng-container>
+    <th mat-header-cell *matheadercelldef mat-sort-header data-ng_translator_product="100" data-ng_translator_ref_id="81q72im0w97yzvvhco38hn4yz">名称</th>
+      <td mat-cell *matcelldef="let row" data-ng_translator_product="100" data-ng_translator_ref_id="9ikhjn9z9rjz2ffqtyecfe0kk">{{row.name}}</td>
+    
 
     <!-- Fruit Column -->
-    <ng-container matColumnDef="fruit">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fruit </th>
-      <td mat-cell *matCellDef="let row"> {{row.fruit}} </td>
-    </ng-container>
+    <th mat-header-cell *matheadercelldef mat-sort-header data-ng_translator_product="100" data-ng_translator_ref_id="3tezxo77f18krfppqy9vleckt">水果</th>
+      <td mat-cell *matcelldef="let row" data-ng_translator_product="100" data-ng_translator_ref_id="bni7s44bl7037gu73igmjef60">{{row.fruit}}</td>
+    
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </tr><tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+    <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
 
     <!-- Row shown when there is no matching data. -->
-    <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    <tr class="mat-row" *matnodatarow>
+      <td class="mat-cell" colspan="4" data-ng_translator_product="100" data-ng_translator_ref_id="abky9ixvzabbuxn83ib704ftw">没有与过滤器 "{{input.value}}" 匹配的数据</td>
     </tr>
-  </table>
+  </tbody></table>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  <mat-paginator [pagesizeoptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
 </div>
 

@@ -47,7 +47,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
  */
 @Component({
   selector: 'table-wrapped-example',
-  styleUrls: ['table-wrapped-example.css'],
+  styleUrl: 'table-wrapped-example.css',
   templateUrl: 'table-wrapped-example.html',
   standalone: true,
   imports: [MatButtonModule, forwardRef(() => WrapperTable), MatSortModule, MatTableModule],
@@ -74,20 +74,15 @@ export class TableWrappedExample implements AfterViewInit {
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
  * table.
- *
- * 接受其内容中的列和行定义以注册到表中的表组件。
- *
  */
 @Component({
   selector: 'wrapper-table',
   templateUrl: 'wrapper-table.html',
-  styles: [
-    `
+  styles: `
     table {
       width: 100%;
     }
   `,
-  ],
   standalone: true,
   imports: [MatTableModule, MatSortModule],
 })

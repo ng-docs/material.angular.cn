@@ -1,66 +1,57 @@
 <mat-card class="example-card">
   <mat-card-content>
-    <h2 class="example-h2">Progress bar configuration</h2>
+    <h2 class="example-h2" data-ng_translator_product="100" data-ng_translator_ref_id="210wnd4aok0a6mdombcyquea9">进度条配置</h2>
 
-    <section class="example-section">
-      <label class="example-margin">Color:</label>
-      <mat-radio-group [(ngModel)]="color">
-        <mat-radio-button class="example-margin" value="primary">
-          Primary
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="accent">
-          Accent
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="warn">
-          Warn
-        </mat-radio-button>
-      </mat-radio-group>
-    </section>
+    <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="3ryaapdxid8as9v0s9tefnkc5"><label class="example-margin">颜色：</label> 
+<mat-radio-group [(ngmodel)]="color"> 
+ <mat-radio-button class="example-margin" value="primary">
+   主色调 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="accent">
+   强调色调 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="warn">
+   警告色调 
+ </mat-radio-button> 
+</mat-radio-group></section>
 
-    <section class="example-section">
-      <label class="example-margin">Mode:</label>
-      <mat-radio-group [(ngModel)]="mode">
-        <mat-radio-button class="example-margin" value="determinate">
-          Determinate
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="indeterminate">
-          Indeterminate
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="buffer">
-          Buffer
-        </mat-radio-button>
-        <mat-radio-button class="example-margin" value="query">
-          Query
-        </mat-radio-button>
-      </mat-radio-group>
-    </section>
+    <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="d8liyd6oohs5vox9t9jix6fj6"><label class="example-margin">模式：</label> 
+<mat-radio-group [(ngmodel)]="mode"> 
+ <mat-radio-button class="example-margin" value="determinate">
+   确定性 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="indeterminate">
+   不确定性 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="buffer">
+   缓冲 
+ </mat-radio-button> 
+ <mat-radio-button class="example-margin" value="query">
+   查询 
+ </mat-radio-button> 
+</mat-radio-group></section>
 
-    <section class="example-section" *ngIf="mode === 'determinate' || mode === 'buffer'">
-      <label class="example-margin">Progress:</label>
-      <mat-slider class="example-margin">
-        <input type="range" [(ngModel)]="value" matSliderThumb>
-      </mat-slider>
-    </section>
-    <section class="example-section" *ngIf="mode === 'buffer'">
-      <label class="example-margin">Buffer:</label>
-      <mat-slider class="example-margin">
-        <input type="range" [(ngModel)]="bufferValue" matSliderThumb>
-      </mat-slider>
-    </section>
+    @if (mode === 'determinate' || mode === 'buffer') {
+      <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="atuo509wmg0e63fbdvtrpe7ff"><label class="example-margin">进度：</label> 
+<mat-slider class="example-margin"> 
+ <input type="range" [(ngModel)]="value" matSliderThumb> 
+</mat-slider></section>
+    }
+    @if (mode === 'buffer') {
+      <section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="7hluvfknkqyha1uvwolyus0pu"><label class="example-margin">缓冲区：</label> 
+<mat-slider class="example-margin"> 
+ <input type="range" [(ngModel)]="bufferValue" matSliderThumb> 
+</mat-slider></section>
+    }
   </mat-card-content>
 </mat-card>
 
 <mat-card class="example-card">
   <mat-card-content>
-    <h2 class="example-h2">Result</h2>
+    <h2 class="example-h2" data-ng_translator_product="100" data-ng_translator_ref_id="8gldxuy5d8w97mox64wkznwoe">结果</h2>
 
     <section class="example-section">
-      <mat-progress-bar
-          class="example-margin"
-          [color]="color"
-          [mode]="mode"
-          [value]="value"
-          [bufferValue]="bufferValue">
+      <mat-progress-bar class="example-margin" [color]="color" [mode]="mode" [value]="value" [buffervalue]="bufferValue">
       </mat-progress-bar>
     </section>
   </mat-card-content>

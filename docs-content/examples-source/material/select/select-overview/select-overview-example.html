@@ -1,17 +1,17 @@
-<h4>Basic mat-select</h4>
+<h4 data-ng_translator_product="100" data-ng_translator_ref_id="8kr0nbvtn5vaj9hd0ltn8t8ye">简单 mat-select</h4>
 <mat-form-field>
   <mat-label>Favorite food</mat-label>
   <mat-select>
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
-    </mat-option>
+    @for (food of foods; track food) {
+      <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+    }
   </mat-select>
 </mat-form-field>
 
-<h4>Basic native select</h4>
+<h4 data-ng_translator_product="100" data-ng_translator_ref_id="26mwzm7nzg2ay18q3806j4vol">简单原生选择器</h4>
 <mat-form-field>
   <mat-label>Cars</mat-label>
-  <select matNativeControl required>
+  <select matnativecontrol required>
     <option value="volvo">Volvo</option>
     <option value="saab">Saab</option>
     <option value="mercedes">Mercedes</option>

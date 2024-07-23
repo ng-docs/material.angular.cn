@@ -1,7 +1,5 @@
 <div>
-  <mat-button-toggle-group #colorToggle="matButtonToggleGroup"
-                           value="primary"
-                           aria-label="Change color">
+  <mat-button-toggle-group #colortoggle="matButtonToggleGroup" value="primary" aria-label="Change color">
     <mat-button-toggle value="primary">Primary</mat-button-toggle>
     <mat-button-toggle value="accent">Accent</mat-button-toggle>
     <mat-button-toggle value="warn">Warn</mat-button-toggle>
@@ -10,9 +8,7 @@
 </div>
 
 <div>
-  <mat-button-toggle-group #backgroundColorToggle="matButtonToggleGroup"
-                           value="primary"
-                           aria-label="Change color">
+  <mat-button-toggle-group #backgroundcolortoggle="matButtonToggleGroup" value="primary" aria-label="Change color">
     <mat-button-toggle value="primary">Primary</mat-button-toggle>
     <mat-button-toggle value="accent">Accent</mat-button-toggle>
     <mat-button-toggle value="warn">Warn</mat-button-toggle>
@@ -20,7 +16,7 @@
   <span class="example-button-toggle-label">Background Color</span>
 </div>
 
-<mat-tab-group [color]="colorToggle.value" [backgroundColor]="backgroundColorToggle.value">
+<mat-tab-group [color]="colorToggle.value" [backgroundcolor]="backgroundColorToggle.value">
   <mat-tab label="First">Content 1</mat-tab>
   <mat-tab label="Second">Content 2</mat-tab>
   <mat-tab label="Third">Content 3</mat-tab>

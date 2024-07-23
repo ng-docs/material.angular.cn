@@ -4,17 +4,11 @@ import {Component, Injectable} from '@angular/core';
 import {BehaviorSubject, merge, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {NgIf} from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTreeModule} from '@angular/material/tree';
 
-/**
- * Flat node with expandable and level information
- *
- * 具有可扩展和级别信息的平面节点
- *
- */
+/** Flat node with expandable and level information */
 export class DynamicFlatNode {
   constructor(
     public item: string,
@@ -27,9 +21,6 @@ export class DynamicFlatNode {
 /**
  * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
  * the descendants data from the database.
- *
- * 动态数据的数据库。当在树中扩展一个节点时，数据源将需要从数据库中获取后代数据。
- *
  */
 @Injectable({providedIn: 'root'})
 export class DynamicDatabase {
@@ -42,12 +33,7 @@ export class DynamicDatabase {
 
   rootLevelNodes: string[] = ['Fruits', 'Vegetables'];
 
-  /**
-   * Initial data from database
-   *
-   * 来自数据库的初始数据
-   *
-   */
+  /** Initial data from database */
   initialData(): DynamicFlatNode[] {
     return this.rootLevelNodes.map(name => new DynamicFlatNode(name, 0, true));
   }
@@ -63,12 +49,9 @@ export class DynamicDatabase {
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children \(a list of files or directories\).
+ * For a directory, it has filename and children (a list of files or directories).
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
- *
- * 文件数据库，它可以从字符串构建一个树状结构的 Json 对象。 Json 对象中的每个节点代表一个文件或目录。对于文件，它具有文件名和类型。对于一个目录，它有文件名和子目录（文件或目录的列表）。其输入将是一个 json 对象字符串，其输出是一个具有嵌套结构的 `FileNode` 列表。
- *
  */
 export class DynamicDataSource implements DataSource<DynamicFlatNode> {
   dataChange = new BehaviorSubject<DynamicFlatNode[]>([]);
@@ -101,12 +84,7 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
 
   disconnect(collectionViewer: CollectionViewer): void {}
 
-  /**
-   * Handle expand/collapse behaviors
-   *
-   * 处理展开/折叠行为
-   *
-   */
+  /** Handle expand/collapse behaviors */
   handleTreeControl(change: SelectionChange<DynamicFlatNode>) {
     if (change.added) {
       change.added.forEach(node => this.toggleNode(node, true));
@@ -121,9 +99,6 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
 
   /**
    * Toggle the node, remove from display list
-   *
-   * 切换节点，从显示列表中移除
-   *
    */
   toggleNode(node: DynamicFlatNode, expand: boolean) {
     const children = this._database.getChildren(node.item);
@@ -164,9 +139,9 @@ export class DynamicDataSource implements DataSource<DynamicFlatNode> {
 @Component({
   selector: 'tree-dynamic-example',
   templateUrl: 'tree-dynamic-example.html',
-  styleUrls: ['tree-dynamic-example.css'],
+  styleUrl: 'tree-dynamic-example.css',
   standalone: true,
-  imports: [MatTreeModule, MatButtonModule, MatIconModule, NgIf, MatProgressBarModule],
+  imports: [MatTreeModule, MatButtonModule, MatIconModule, MatProgressBarModule],
 })
 export class TreeDynamicExample {
   constructor(database: DynamicDatabase) {

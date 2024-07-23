@@ -1,6 +1,6 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgFor, AsyncPipe} from '@angular/common';
+import {AsyncPipe} from '@angular/common';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -11,7 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 @Component({
   selector: 'autocomplete-require-selection-example',
   templateUrl: 'autocomplete-require-selection-example.html',
-  styleUrls: ['autocomplete-require-selection-example.css'],
+  styleUrl: 'autocomplete-require-selection-example.css',
   standalone: true,
   imports: [
     FormsModule,
@@ -19,7 +19,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
-    NgFor,
     AsyncPipe,
   ],
 })

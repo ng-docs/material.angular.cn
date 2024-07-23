@@ -1,13 +1,14 @@
-<mat-sidenav-container
-    class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
-  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
-    <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
-  </mat-sidenav>
+@if (shouldRun) {
+  <mat-sidenav-container class="example-container" (backdropclick)="close('backdrop')">
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableclose>
+      <p><button mat-button (click)="close('toggle button')" data-ng_translator_product="100" data-ng_translator_ref_id="9z6lcoafljs9pe4qghhdlyl9d">开关</button></p>
+    </mat-sidenav>
 
-  <mat-sidenav-content>
-    <p><button mat-button (click)="sidenav.open()">Open</button></p>
-    <p>Closed due to: {{reason}}</p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+    <mat-sidenav-content>
+      <p><button mat-button (click)="sidenav.open()" data-ng_translator_product="100" data-ng_translator_ref_id="bl6ylac8jqzzdfcgc0lcfaq9g">打开</button></p>
+      <p data-ng_translator_product="100" data-ng_translator_ref_id="tgbf1px7ky2p6dn9qwlnmxft">关闭原因：{{reason}}</p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+} @else {
+  <div>Please open on Stackblitz to see result</div>
+}

@@ -1,56 +1,42 @@
-<table editable class="example-table">
+<ng-template #weightedit let-element>
+    <div style="background-color: white; width: 100%">
+      <form #f="ngForm" cdkEditControl cdkEditControlClickOutBehavior="submit" (ngSubmit)="onSubmitWeight(element, f)" [cdkEditControlPreservedFormValue]="preservedWeightValues.get(element)" (cdkEditControlPreservedFormValueChange)="preservedWeightValues.set(element, $event)"></form>
+        <input type="number" [ngModel]="element.weight" name="weight" required>
+      
+    </div>
+  </ng-template><table editable class="example-table">
   <!--
     This edit lens is specified outside of the cell and must explicitly declare
     its context. It could be reused in multiple cells.
   -->
-  <ng-template #weightEdit let-element>
-    <div style="background-color: white; width: 100%">
-      <form #f="ngForm"
-          cdkEditControl
-          cdkEditControlClickOutBehavior="submit"
-          (ngSubmit)="onSubmitWeight(element, f)"
-          [cdkEditControlPreservedFormValue]="preservedWeightValues.get(element)"
-          (cdkEditControlPreservedFormValueChange)="preservedWeightValues.set(element, $event)">
-        <input type="number" [ngModel]="element.weight" name="weight" required>
-      </form>
-    </div>
-  </ng-template>
   
-  <tr>
-    <th> No. </th>
-    <th> Name </th>
-    <th> Weight </th>
-    <th> Symbol </th>
-  </tr>
-  
-  <tr *ngFor="let element of elements">
-    <td> {{element.position}} </td>
-    
-    <td [cdkPopoverEdit]="nameEdit" cdkPopoverEditTabOut cdkEditOpen>
-      {{element.name}}
-      
-      <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #nameEdit>
-        <div style="background-color: white; width: 100%">
-          <form #f="ngForm"
-              cdkEditControl
-              cdkEditControlClickOutBehavior="submit"
-              (ngSubmit)="onSubmitName(element, f)"
-              [cdkEditControlPreservedFormValue]="preservedNameValues.get(element)"
-              (cdkEditControlPreservedFormValueChange)="preservedNameValues.set(element, $event)">
-            <input [ngModel]="element.name" name="name" required>
-            <br>
-            <button type="submit">Confirm</button>
-          </form>
-        </div>
-      </ng-template>
-    </td>
 
-    <td [cdkPopoverEdit]="weightEdit" [cdkPopoverEditContext]="element"
-        cdkPopoverEditTabOut cdkEditOpen>
-      {{element.weight}}
-    </td>
-
-    <td> {{element.symbol}} </td>
+  <tbody><tr>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="ev8cx5z125j1kpdcgd1jmyejr">不。</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="81q72im0w97yzvvhco38hn4yz">名称</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="9pw0vkh2y5qostzm5rfull9dv">重量</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="ad76ex9ufezcz8gjf0mf6idjj">符号</th>
   </tr>
-</table>
+
+  @for (element of elements; track element) {
+    <tr>
+      <td data-ng_translator_product="100" data-ng_translator_ref_id="bem1kr5d3ptu3n16fx7mtrtch">{{element.position}}</td>
+
+      <td [cdkpopoveredit]="nameEdit" cdkpopoveredittabout cdkeditopen data-ng_translator_product="100" data-ng_translator_ref_id="ctj497jgwanfbqo6h0rlmhcwc">{{element.name}} 
+<!-- 此编辑在单元格中定义，可以隐式访问 element --> 
+<ng-template #nameedit> 
+ <div style="background-color: white; width: 100%"> 
+  <form #f="ngForm" cdkEditControl cdkEditControlClickOutBehavior="submit" (ngSubmit)="onSubmitName(element, f)" [cdkEditControlPreservedFormValue]="preservedNameValues.get(element)" (cdkEditControlPreservedFormValueChange)="preservedNameValues.set(element, $event)"> 
+   <input [ngModel]="element.name" name="name" required> 
+   <br> 
+   <button type="submit">确认</button> 
+  </form> 
+ </div> 
+</ng-template></td>
+
+      <td [cdkpopoveredit]="weightEdit" [cdkpopovereditcontext]="element" cdkpopoveredittabout cdkeditopen data-ng_translator_product="100" data-ng_translator_ref_id="bw1k2f8b94hnip3w0mfg8zh5a">{{element.weight}}</td>
+
+      <td data-ng_translator_product="100" data-ng_translator_ref_id="ajlcxvp8cjl07pd6l7jqkngsv">{{element.symbol}}</td>
+    </tr>
+  }
+</tbody></table>

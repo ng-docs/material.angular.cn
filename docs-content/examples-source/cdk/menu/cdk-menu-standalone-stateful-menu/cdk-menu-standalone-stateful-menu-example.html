@@ -1,41 +1,28 @@
-<button [cdkMenuTriggerFor]="menu" class="example-standalone-item">Click me!</button>
+<button [cdkmenutriggerfor]="menu" class="example-standalone-item">Click me!</button>
 
 <ng-template #menu>
-  <div class="example-menu" cdkMenu>
+  <div class="example-menu" cdkmenu>
     <!-- #docregion bold-item -->
-    <button
-        cdkMenuItemCheckbox
-        class="example-menu-item"
-        [cdkMenuItemChecked]="bold"
-        (cdkMenuItemTriggered)="bold = !bold">
+    <button cdkmenuitemcheckbox class="example-menu-item" [cdkmenuitemchecked]="bold" (cdkmenuitemtriggered)="bold = !bold">
       Bold
     </button>
     <!-- #enddocregion bold-item -->
-    <button
-        cdkMenuItemCheckbox
-        class="example-menu-item"
-        [cdkMenuItemChecked]="italic"
-        (cdkMenuItemTriggered)="italic = !italic">
+    <button cdkmenuitemcheckbox class="example-menu-item" [cdkmenuitemchecked]="italic" (cdkmenuitemtriggered)="italic = !italic">
       Italic
     </button>
-    <hr />
-    <div cdkMenuGroup>
+    <hr>
+    <div cdkmenugroup>
       <!-- #docregion size-items -->
-      <button
-          *ngFor="let size of sizes"
-          cdkMenuItemRadio
-          class="example-menu-item"
-          [cdkMenuItemChecked]="size === selectedSize"
-          (cdkMenuItemTriggered)="selectedSize = size">
-        {{size}}
-      </button>
+      @for (size of sizes; track size) {
+        <button cdkmenuitemradio class="example-menu-item" [cdkmenuitemchecked]="size === selectedSize" (cdkmenuitemtriggered)="selectedSize = size">
+          {{size}}
+        </button>
+      }
       <!-- #enddocregion size-items -->
     </div>
-    <hr />
+    <hr>
     <!-- #docregion reset-item -->
-    <button cdkMenuItem
-            class="example-menu-item"
-            (cdkMenuItemTriggered)="reset()">Reset</button>
+    <button cdkmenuitem class="example-menu-item" (cdkmenuitemtriggered)="reset()">Reset</button>
     <!-- #enddocregion reset-item -->
   </div>
 </ng-template>

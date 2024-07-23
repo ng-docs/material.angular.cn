@@ -1,61 +1,52 @@
-<table class="example-table" mat-table editable [dataSource]="dataSource">
-  <!--
-    This edit lens is specified outside of the cell and must explicitly declare
-    its context. It could be reused in multiple cells.
-  -->
-  <ng-template #weightEdit let-element>
+<ng-template #weightedit let-element>
     <div>
-      <form #f="ngForm"
-          matEditLens
-          (ngSubmit)="onSubmitWeight(element, f)"
-          [(matEditLensPreservedFormValue)]="weightValues.for(element).value">
+      <form #f="ngForm" matEditLens (ngSubmit)="onSubmitWeight(element, f)" [(matEditLensPreservedFormValue)]="weightValues.for(element).value"></form>
         <div mat-edit-content>
           <mat-form-field>
             <input matInput type="number" [ngModel]="element.weight" name="weight" required>
           </mat-form-field>
         </div>
-      </form>
+      
     </div>
-  </ng-template>
+  </ng-template><ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="name">
+    </ng-container><ng-container matcolumndef="type">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><ng-container matcolumndef="fantasyCounterpart">
+    </ng-container><table class="example-table" mat-table editable [datasource]="dataSource">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
+  
 
   <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element">
-      {{element.position}}
-
-      <!-- Row hover content in a non-edit cell. -->
-      <span *matRowHoverContent>
-        <button mat-icon-button (click)="goodJob(element)">
-          <mat-icon>thumb_up</mat-icon>
-        </button>
-        <button mat-icon-button (click)="badJob(element)">
-          <mat-icon>thumb_down</mat-icon>
-        </button>
-      </span>
-    </td>
-  </ng-container>
+  <tbody><tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ev8cx5z125j1kpdcgd1jmyejr">不。</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="9tzz4ypf7jekdc0p2cff4srpk">{{element.position}} 
+<!-- 行悬停内容在非编辑单元格中。 --> 
+<span *matrowhovercontent> <button mat-icon-button (click)="goodJob(element)"> 
+  <mat-icon>
+   thumb_up
+  </mat-icon> </button> <button mat-icon-button (click)="badJob(element)"> 
+  <mat-icon>
+   thumb_down
+  </mat-icon> </button> </span></td>
+  
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>
-      Name
-      <mat-checkbox
-          [(ngModel)]="nameEditEnabled">Edit enabled</mat-checkbox>
-    </th>
-    <td mat-cell *matCellDef="let element"
-        [matPopoverEdit]="nameEdit"
-        [matPopoverEditDisabled]="!nameEditEnabled">
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="8plsyv8maykt0i8zba29ktecf">姓名 
+<mat-checkbox [(ngmodel)]="nameEditEnabled">
+ 启用编辑
+</mat-checkbox></th>
+    <td mat-cell *matcelldef="let element" [matpopoveredit]="nameEdit" [matpopovereditdisabled]="!nameEditEnabled">
       {{element.name}}
 
       <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #nameEdit>
+      <ng-template #nameedit>
         <div>
-          <form #f="ngForm"
-              matEditLens
-              (ngSubmit)="onSubmitName(element, f)"
-              [(matEditLensPreservedFormValue)]="nameValues.for(element).value">
-            <h2 mat-edit-title>Name</h2>
+          <form #f="ngForm" matEditLens (ngSubmit)="onSubmitName(element, f)" [(matEditLensPreservedFormValue)]="nameValues.for(element).value">
+            <h2 mat-edit-title data-ng_translator_product="100" data-ng_translator_ref_id="4dkesj3d12v3li73mgaxabh53">名称</h2>
             <div mat-edit-content>
               <mat-form-field>
                 <input matInput [ngModel]="element.name" name="name" required>
@@ -63,116 +54,87 @@
             </div>
             <div mat-edit-actions>
               <button mat-button type="submit">Confirm</button>
-              <button mat-button matEditRevert>Revert</button>
-              <button mat-button matEditClose>Close</button>
+              <button mat-button mateditrevert>Revert</button>
+              <button mat-button mateditclose>Close</button>
             </div>
           </form>
         </div>
       </ng-template>
 
-      <ng-container *ngIf="nameEditEnabled">
-        <span *matRowHoverContent>
-          <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>
+      @if (nameEditEnabled) {
+        <span *matrowhovercontent>
+          <button mat-icon-button mateditopen><mat-icon>edit</mat-icon></button>
         </span>
-      </ng-container>
+      }
     </td>
-  </ng-container>
+  
 
   <!-- Type Column -->
-  <ng-container matColumnDef="type">
-    <th mat-header-cell *matHeaderCellDef> Type </th>
-    <td mat-cell *matCellDef="let element"
-        [matPopoverEdit]="typeEdit">
-      {{element.type}}
-
-      <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #typeEdit>
-        <div>
-          <form #f="ngForm"
-              matEditLens
-              matEditClose
-              (ngSubmit)="onSubmitType(element, f)"
-              [(matEditLensPreservedFormValue)]="typeValues.for(element).value">
-            <div mat-edit-fill>
-              <mat-selection-list [multiple]="false"
-                  name="type"
-                  [ngModel]="[element.type]"
-                  (selectionChange)="f.ngSubmit.emit()"
-                  aria-label="Element type">
-                <mat-list-option *ngFor="let type of TYPES"
-                    [value]="type">
-                  {{type}}
-                </mat-list-option>
-              </mat-selection-list>
-            </div>
-          </form>
-        </div>
-      </ng-template>
-
-      <span *matRowHoverContent>
-        <button mat-icon-button matEditOpen><mat-icon>arrow_drop_down</mat-icon></button>
-      </span>
-    </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="edw883q6hmdzzqgypztynkxdl">类型</th>
+    <td mat-cell *matcelldef="let element" [matpopoveredit]="typeEdit" data-ng_translator_product="100" data-ng_translator_ref_id="6jw5shq1hjb22w7n1r9bpv6kx">{{element.type}} 
+<!-- 此编辑在单元格中定义，可以隐式访问 element --> 
+<ng-template #typeedit> 
+ <div> 
+  <form #f="ngForm" matEditLens matEditClose (ngSubmit)="onSubmitType(element, f)" [(matEditLensPreservedFormValue)]="typeValues.for(element).value"> 
+   <div mat-edit-fill> 
+    <mat-selection-list [multiple]="false" name="type" [ngmodel]="[element.type]" (selectionchange)="f.ngSubmit.emit()" aria-label="元素类型">
+      @for (type of TYPES; track type) { 
+     <mat-list-option [value]="type">
+      {{type}}
+     </mat-list-option> } 
+    </mat-selection-list> 
+   </div> 
+  </form> 
+ </div> 
+</ng-template> 
+<span *matrowhovercontent> <button mat-icon-button mateditopen>
+  <mat-icon>
+   arrow_drop_down
+  </mat-icon></button> </span></td>
+  
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef> Weight </th>
-    <td mat-cell *matCellDef="let element"
-        [matPopoverEdit]="weightEdit" [matPopoverEditContext]="element">
-      {{element.weight}}
-
-      <span *matRowHoverContent>
-        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>
-      </span>
-    </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="9pw0vkh2y5qostzm5rfull9dv">重量</th>
+    <td mat-cell *matcelldef="let element" [matpopoveredit]="weightEdit" [matpopovereditcontext]="element" data-ng_translator_product="100" data-ng_translator_ref_id="3gr0qozzyhjmpehcpxppohsgl">{{element.weight}} 
+<span *matrowhovercontent> <button mat-icon-button mateditopen>
+  <mat-icon>
+   edit
+  </mat-icon></button> </span></td>
+  
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ad76ex9ufezcz8gjf0mf6idjj">符号</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="ajlcxvp8cjl07pd6l7jqkngsv">{{element.symbol}}</td>
+  
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </tr><tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
 
   <!-- Fantasy Counterparts Column -->
-  <ng-container matColumnDef="fantasyCounterpart">
-    <th mat-header-cell *matHeaderCellDef> Fantasy Counterparts </th>
-    <td mat-cell *matCellDef="let element"
-        [matPopoverEdit]="fantasyCounterpartEdit">
-      {{element.fantasyCounterparts.join(', ')}}
-
-      <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #fantasyCounterpartEdit>
-        <div>
-          <form #f="ngForm"
-              matEditLens
-              (ngSubmit)="onSubmitFantasyCounterparts(element, f)"
-              [(matEditLensPreservedFormValue)]="fantasyValues.for(element).value">
-            <div mat-edit-fill>
-              <mat-selection-list [ngModel]="element.fantasyCounterparts"
-                  name="fantasyCounterparts"
-                  aria-label="Fantasy Element Counterparts">
-                <mat-list-option *ngFor="let fantasyElement of FANTASY_ELEMENTS"
-                    [value]="fantasyElement"
-                    checkboxPosition="before">
-                  {{fantasyElement}}
-                </mat-list-option>
-              </mat-selection-list>
-            </div>
-            <div mat-edit-actions>
-              <button mat-button type="submit">Confirm</button>
-              <button mat-button matEditRevert>Revert</button>
-            </div>
-          </form>
-        </div>
-      </ng-template>
-
-      <span *matRowHoverContent>
-        <button mat-icon-button matEditOpen><mat-icon>arrow_drop_down</mat-icon></button>
-      </span>
-    </td>
-  </ng-container>
-</table>
+  <tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="9vlvweasly930kwz4gp3492zx">奇幻对应物</th>
+    <td mat-cell *matcelldef="let element" [matpopoveredit]="fantasyCounterpartEdit" data-ng_translator_product="100" data-ng_translator_ref_id="8wb3n46en3uj0xq8ezsfx5lys">{{element.fantasyCounterparts.join(', ')}} 
+<!-- 此编辑在单元格中定义，可以隐式访问 element --> 
+<ng-template #fantasycounterpartedit> 
+ <div> 
+  <form #f="ngForm" matEditLens (ngSubmit)="onSubmitFantasyCounterparts(element, f)" [(matEditLensPreservedFormValue)]="fantasyValues.for(element).value"> 
+   <div mat-edit-fill> 
+    <mat-selection-list [ngmodel]="element.fantasyCounterparts" name="fantasyCounterparts" aria-label="幻想元素对应物">
+      @for (fantasyElement of FANTASY_ELEMENTS; track fantasyElement) { 
+     <mat-list-option [value]="fantasyElement" checkboxposition="before">
+      {{fantasyElement}}
+     </mat-list-option> } 
+    </mat-selection-list> 
+   </div> 
+   <div mat-edit-actions> 
+    <button mat-button type="submit">确认</button> 
+    <button mat-button mateditrevert>恢复</button> 
+   </div> 
+  </form> 
+ </div> 
+</ng-template> 
+<span *matrowhovercontent> <button mat-icon-button mateditopen>
+  <mat-icon>
+   arrow_drop_down
+  </mat-icon></button> </span></td>
+  
+</tr></tbody></table>

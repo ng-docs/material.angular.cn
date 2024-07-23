@@ -3,16 +3,10 @@
   <label class="example-listbox-label" id="example-spatula-label">
     Spatula Features
   </label>
-  <ul cdkListbox
-      cdkListboxMultiple
-      cdkListboxUseActiveDescendant
-      aria-labelledby="example-spatula-label"
-      class="example-listbox">
-    <li *ngFor="let feature of features"
-        [cdkOption]="feature"
-        class="example-option">
-      {{feature}}
-    </li>
+  <ul cdklistbox cdklistboxmultiple cdklistboxuseactivedescendant aria-labelledby="example-spatula-label" class="example-listbox">
+    @for (feature of features; track feature) {
+      <li [cdkoption]="feature" class="example-option" data-ng_translator_product="100" data-ng_translator_ref_id="63nqfwuw00cgug061wbjcz03c">{{特性}}</li>
+    }
   </ul>
   <!-- #enddocregion listbox -->
 </div>

@@ -1,70 +1,44 @@
-<table editable class="example-table">
-  <!--
-    This edit lens is specified outside of the cell and must explicitly declare
-    its context. It could be reused in multiple cells.
-  -->
-  <ng-template #nameEdit let-ctx>
+<ng-template #nameedit let-ctx>
     <div style="background-color: #ddd; width: 100%">
-      <form #f="ngForm"
-          cdkEditControl
-          (ngSubmit)="onSubmit(ctx.person, f)"
-          [cdkEditControlPreservedFormValue]="preservedValues.get(ctx.person)"
-          (cdkEditControlPreservedFormValueChange)="preservedValues.set(ctx.person, $event)">
+      <form #f="ngForm" cdkEditControl (ngSubmit)="onSubmit(ctx.person, f)" [cdkEditControlPreservedFormValue]="preservedValues.get(ctx.person)" (cdkEditControlPreservedFormValueChange)="preservedValues.set(ctx.person, $event)"></form>
         <div class="example-input-container">
-          <input [ngModel]="ctx.person.firstName" name="firstName" required
-              [attr.cdkFocusInitial]="ctx.focus === 'firstName' || null">
-          <input [ngModel]="ctx.person.middleName" name="middleName"
-              [attr.cdkFocusInitial]="ctx.focus === 'middleName' || null">
-          <input [ngModel]="ctx.person.lastName" name="lastName" required
-              [attr.cdkFocusInitial]="ctx.focus === 'lastName' || null">
+          <input [ngModel]="ctx.person.firstName" name="firstName" required [attr.cdkFocusInitial]="ctx.focus === 'firstName' || null">
+          <input [ngModel]="ctx.person.middleName" name="middleName" [attr.cdkFocusInitial]="ctx.focus === 'middleName' || null">
+          <input [ngModel]="ctx.person.lastName" name="lastName" required [attr.cdkFocusInitial]="ctx.focus === 'lastName' || null">
         </div>
         <br>
         <br>
         <button type="submit">Confirm</button>
-        <button cdkEditRevert>Revert</button>
-        <button cdkEditClose>Close</button>
-      </form>
+        <button cdkeditrevert>Revert</button>
+        <button cdkeditclose>Close</button>
+      
     </div>
-  </ng-template>
+  </ng-template><table editable class="example-table">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
   
-  <tr>
-    <th> No. </th>
-    <th> First name </th>
-    <th> Middle name </th>
-    <th> Last name </th>
-  </tr>
-  
-  <tr *ngFor="let person of persons">
-    <td> {{person.id}} </td>
 
-    <td [cdkPopoverEdit]="nameEdit"
-        [cdkPopoverEditContext]="{person: person, focus: 'firstName'}"
-        [cdkPopoverEditColspan]="{after: 2}">
-      {{person.firstName}}
-      
-      <span *cdkRowHoverContent>
-        <button cdkEditOpen>Edit</button>
-      </span>
-    </td>
-    
-    <td [cdkPopoverEdit]="nameEdit"
-        [cdkPopoverEditContext]="{person: person, focus: 'middleName'}"
-        [cdkPopoverEditColspan]="{before: 1, after: 1}">
-      {{person.middleName}}
-      
-      <span *cdkRowHoverContent>
-        <button cdkEditOpen>Edit</button>
-      </span>
-    </td>
-    
-    <td [cdkPopoverEdit]="nameEdit"
-        [cdkPopoverEditContext]="{person: person, focus: 'lastName'}"
-        [cdkPopoverEditColspan]="{before: 2}">
-      {{person.lastName}}
-      
-      <span *cdkRowHoverContent>
-        <button cdkEditOpen>Edit</button>
-      </span>
-    </td>
+  <tbody><tr>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="ev8cx5z125j1kpdcgd1jmyejr">不。</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="in1botyza8fg36z5dmd3vnpo">名字</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="9kopk678de0m9plcz8iak9qcm">中间名</th>
+    <th data-ng_translator_product="100" data-ng_translator_ref_id="cp5ylcx1p9gzwwuophfakq7nb">姓氏</th>
   </tr>
-</table>
+
+  @for (person of persons; track person) {
+    <tr>
+      <td data-ng_translator_product="100" data-ng_translator_ref_id="4lbsyughrychbgy3e5ocxxgl3">{{person.id}}</td>
+
+      <td [cdkpopoveredit]="nameEdit" [cdkpopovereditcontext]="{person: person, focus: 'firstName'}" [cdkpopovereditcolspan]="{after: 2}" data-ng_translator_product="100" data-ng_translator_ref_id="amdyskyrcaou1vc71flajnn7q">{{person.firstName}} 
+<span *cdkrowhovercontent> <button cdkeditopen>编辑</button> </span></td>
+
+      <td [cdkpopoveredit]="nameEdit" [cdkpopovereditcontext]="{person: person, focus: 'middleName'}" [cdkpopovereditcolspan]="{before: 1, after: 1}" data-ng_translator_product="100" data-ng_translator_ref_id="5ltux4tn3xoljp0v07rucahqk">{{person.middleName}} 
+<span *cdkrowhovercontent> <button cdkeditopen>编辑</button> </span></td>
+
+      <td [cdkpopoveredit]="nameEdit" [cdkpopovereditcontext]="{person: person, focus: 'lastName'}" [cdkpopovereditcolspan]="{before: 2}" data-ng_translator_product="100" data-ng_translator_ref_id="36iy7zq29ghv9ya2290l03i7j">{{person.lastName}} 
+<span *cdkrowhovercontent> <button cdkeditopen>编辑</button> </span></td>
+    </tr>
+  }
+</tbody></table>

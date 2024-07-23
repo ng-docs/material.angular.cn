@@ -1,27 +1,23 @@
-<section class="example-section">
-  <mat-checkbox class="example-margin">Check me!</mat-checkbox>
-  <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
-</section>
+<section class="example-section" data-ng_translator_product="100" data-ng_translator_ref_id="24bwjl49qr8oxyr98v4r7rng5"><mat-checkbox class="example-margin">
+ 选中我！
+</mat-checkbox> 
+<mat-checkbox class="example-margin" [disabled]="true">
+ 已禁用
+</mat-checkbox></section>
 
 <section class="example-section">
   <span class="example-list-section">
-    <mat-checkbox class="example-margin"
-                  [checked]="allComplete"
-                  [color]="task.color"
-                  [indeterminate]="someComplete()"
-                  (change)="setAll($event.checked)">
+    <mat-checkbox class="example-margin" [checked]="allComplete" [color]="task.color" [indeterminate]="someComplete()" (change)="setAll($event.checked)">
       {{task.name}}
     </mat-checkbox>
   </span>
   <span class="example-list-section">
     <ul>
-      <li *ngFor="let subtask of task.subtasks">
-        <mat-checkbox [(ngModel)]="subtask.completed"
-                      [color]="subtask.color"
-                      (ngModelChange)="updateAllComplete()">
-          {{subtask.name}}
-        </mat-checkbox>
-      </li>
+      @for (subtask of task.subtasks; track subtask) {
+        <li>
+          <mat-checkbox [(ngmodel)]="subtask.completed" [color]="subtask.color" (ngmodelchange)="updateAllComplete()" data-ng_translator_product="100" data-ng_translator_ref_id="2h7lxrdj56adxe0qff0zxkkx0">{{subtask.name}}</mat-checkbox>
+        </li>
+      }
     </ul>
   </span>
 </section>

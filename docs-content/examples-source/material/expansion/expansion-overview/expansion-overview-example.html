@@ -1,7 +1,7 @@
 <mat-accordion>
 <!-- #docregion basic-panel -->
 <!-- #docregion hide-toggle -->
-  <mat-expansion-panel hideToggle>
+  <mat-expansion-panel hidetoggle>
 <!-- #enddocregion hide-toggle -->
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -11,11 +11,10 @@
         This is a summary of the content
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>This is the primary content of the panel.</p>
+    <p data-ng_translator_product="100" data-ng_translator_ref_id="d2zmrj94vj7axh85swp5fvq8d">这是面板的主要内容。</p>
   </mat-expansion-panel>
 <!-- #enddocregion basic-panel -->
-  <mat-expansion-panel (opened)="panelOpenState = true"
-                       (closed)="panelOpenState = false">
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
         Self aware panel
@@ -24,6 +23,6 @@
         Currently I am {{panelOpenState ? 'open' : 'closed'}}
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+    <p data-ng_translator_product="100" data-ng_translator_ref_id="cj6yggdafvyk1phor7v41ht5t">我可见是因为我打开了。</p>
   </mat-expansion-panel>
 </mat-accordion>

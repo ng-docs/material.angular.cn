@@ -16,29 +16,18 @@
 
   <mat-form-field>
     <mat-label>Page Size Options</mat-label>
-    <input matInput [ngModel]="pageSizeOptions" (ngModelChange)="setPageSizeOptions($event)"
-           [ngModelOptions]="{updateOn: 'blur'}" placeholder="Ex. 10,25,50">
+    <input matInput [ngModel]="pageSizeOptions" (ngModelChange)="setPageSizeOptions($event)" [ngModelOptions]="{updateOn: 'blur'}" placeholder="Ex. 10,25,50">
   </mat-form-field>
 
   <div class="demo-toggles">
-    <mat-slide-toggle [(ngModel)]="hidePageSize">Hide page size</mat-slide-toggle>
-    <mat-slide-toggle [(ngModel)]="showPageSizeOptions">Show multiple page size options</mat-slide-toggle>
-    <mat-slide-toggle [(ngModel)]="showFirstLastButtons">Show first/last buttons</mat-slide-toggle>
-    <mat-slide-toggle [(ngModel)]="disabled">Disabled</mat-slide-toggle>
+    <mat-slide-toggle [(ngmodel)]="hidePageSize">Hide page size</mat-slide-toggle>
+    <mat-slide-toggle [(ngmodel)]="showPageSizeOptions">Show multiple page size options</mat-slide-toggle>
+    <mat-slide-toggle [(ngmodel)]="showFirstLastButtons">Show first/last buttons</mat-slide-toggle>
+    <mat-slide-toggle [(ngmodel)]="disabled">Disabled</mat-slide-toggle>
   </div>
 </div>
 
-<mat-paginator #paginator
-               class="demo-paginator"
-               (page)="handlePageEvent($event)"
-               [length]="length"
-               [pageSize]="pageSize"
-               [disabled]="disabled"
-               [showFirstLastButtons]="showFirstLastButtons"
-               [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
-               [hidePageSize]="hidePageSize"
-               [pageIndex]="pageIndex"
-               aria-label="Select page">
+<mat-paginator #paginator class="demo-paginator" (page)="handlePageEvent($event)" [length]="length" [pagesize]="pageSize" [disabled]="disabled" [showfirstlastbuttons]="showFirstLastButtons" [pagesizeoptions]="showPageSizeOptions ? pageSizeOptions : []" [hidepagesize]="hidePageSize" [pageindex]="pageIndex" aria-label="Select page">
 </mat-paginator>
 
 <div class="demo-data">

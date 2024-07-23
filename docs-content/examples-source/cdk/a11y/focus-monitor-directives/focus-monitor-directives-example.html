@@ -1,14 +1,12 @@
 <div class="example-focus-monitor">
-  <button cdkMonitorSubtreeFocus
-          (cdkFocusChange)="elementOrigin = formatOrigin($event); markForCheck()">
+  <button cdkmonitorsubtreefocus (cdkfocuschange)="elementOrigin = formatOrigin($event); markForCheck()">
     Focus Monitored Element ({{elementOrigin}})
   </button>
 </div>
 
 <div class="example-focus-monitor">
-  <div cdkMonitorSubtreeFocus
-       (cdkFocusChange)="subtreeOrigin = formatOrigin($event); markForCheck()">
-    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>
+  <div cdkmonitorsubtreefocus (cdkfocuschange)="subtreeOrigin = formatOrigin($event); markForCheck()">
+    <p data-ng_translator_product="100" data-ng_translator_ref_id="23n47jgjxin9rw403ulyl2as5">聚焦监控的子树 ({{subtreeOrigin}})</p>
     <button>Child Button 1</button>
     <button>Child Button 2</button>
   </div>

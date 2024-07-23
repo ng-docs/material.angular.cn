@@ -1,84 +1,64 @@
-<table class="example-table" mat-table editable [dataSource]="dataSource">
-  <!--
-    This edit lens is specified outside of the cell and must explicitly declare
-    its context. It could be reused in multiple cells.
-  -->
-  <ng-template #weightEdit let-element>
+<ng-template #weightedit let-element>
     <div>
-      <form #f="ngForm"
-          matEditLens
-          matEditLensClickOutBehavior="submit"
-          (ngSubmit)="onSubmitWeight(element, f)"
-          [matEditLensPreservedFormValue]="preservedWeightValues.get(element)"
-          (matEditLensPreservedFormValueChange)="preservedWeightValues.set(element, $event)">
+      <form #f="ngForm" matEditLens matEditLensClickOutBehavior="submit" (ngSubmit)="onSubmitWeight(element, f)" [matEditLensPreservedFormValue]="preservedWeightValues.get(element)" (matEditLensPreservedFormValueChange)="preservedWeightValues.set(element, $event)"></form>
         <div mat-edit-content>
           <mat-form-field>
             <input matInput type="number" [ngModel]="element.weight" name="weight" required>
           </mat-form-field>
         </div>
-      </form>
+      
     </div>
-  </ng-template>
+  </ng-template><ng-container matcolumndef="position">
+    </ng-container><ng-container matcolumndef="name">
+    </ng-container><ng-container matcolumndef="weight">
+    </ng-container><ng-container matcolumndef="symbol">
+    </ng-container><table class="example-table" mat-table editable [datasource]="dataSource">
+  <!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  -->
+  
 
   <!-- Position Column -->
-  <ng-container matColumnDef="position">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-  </ng-container>
+  <tbody><tr><th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ev8cx5z125j1kpdcgd1jmyejr">不。</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="bem1kr5d3ptu3n16fx7mtrtch">{{element.position}}</td>
+  
 
   <!-- Name Column -->
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"
-        [matPopoverEdit]="nameEdit" matPopoverEditTabOut
-        matEditOpen>
-      {{element.name}}
-
-      <!-- This edit is defined in the cell and can implicitly access element -->
-      <ng-template #nameEdit>
-        <div>
-          <form #f="ngForm"
-              matEditLens
-              matEditLensClickOutBehavior="submit"
-              (ngSubmit)="onSubmitName(element, f)"
-              [matEditLensPreservedFormValue]="preservedNameValues.get(element)"
-              (matEditLensPreservedFormValueChange)="preservedNameValues.set(element, $event)">
-            <div mat-edit-content>
-              <mat-form-field>
-                <input matInput [ngModel]="element.name" name="name" required>
-              </mat-form-field>
-            </div>
-          </form>
-        </div>
-      </ng-template>
-
-      <span *matRowHoverContent>
-        <mat-icon>edit</mat-icon>
-      </span>
-    </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="81q72im0w97yzvvhco38hn4yz">名称</th>
+    <td mat-cell *matcelldef="let element" [matpopoveredit]="nameEdit" matpopoveredittabout mateditopen data-ng_translator_product="100" data-ng_translator_ref_id="de3kdpfcl6cj641bcfbidm7i9">{{element.name}} 
+<!-- 此编辑在单元格中定义，可以隐式访问 element --> 
+<ng-template #nameedit> 
+ <div> 
+  <form #f="ngForm" matEditLens matEditLensClickOutBehavior="submit" (ngSubmit)="onSubmitName(element, f)" [matEditLensPreservedFormValue]="preservedNameValues.get(element)" (matEditLensPreservedFormValueChange)="preservedNameValues.set(element, $event)"> 
+   <div mat-edit-content> 
+    <mat-form-field> 
+     <input matInput [ngModel]="element.name" name="name" required> 
+    </mat-form-field> 
+   </div> 
+  </form> 
+ </div> 
+</ng-template> 
+<span *matrowhovercontent> 
+ <mat-icon>
+  edit
+ </mat-icon> </span></td>
+  
 
   <!-- Weight Column -->
-  <ng-container matColumnDef="weight">
-    <th mat-header-cell *matHeaderCellDef> Weight </th>
-    <td mat-cell *matCellDef="let element"
-        [matPopoverEdit]="weightEdit" matPopoverEditTabOut
-        [matPopoverEditContext]="element"
-        matEditOpen>
-      {{element.weight}}
-
-      <span *matRowHoverContent>
-        <mat-icon>edit</mat-icon>
-      </span>
-    </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="9pw0vkh2y5qostzm5rfull9dv">重量</th>
+    <td mat-cell *matcelldef="let element" [matpopoveredit]="weightEdit" matpopoveredittabout [matpopovereditcontext]="element" mateditopen data-ng_translator_product="100" data-ng_translator_ref_id="7hg4cocc70i44d0zg9t9kecl4">{{element.weight}} 
+<span *matrowhovercontent> 
+ <mat-icon>
+  edit
+ </mat-icon> </span></td>
+  
 
   <!-- Symbol Column -->
-  <ng-container matColumnDef="symbol">
-    <th mat-header-cell *matHeaderCellDef> Symbol </th>
-    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-  </ng-container>
+  <th mat-header-cell *matheadercelldef data-ng_translator_product="100" data-ng_translator_ref_id="ad76ex9ufezcz8gjf0mf6idjj">符号</th>
+    <td mat-cell *matcelldef="let element" data-ng_translator_product="100" data-ng_translator_ref_id="ajlcxvp8cjl07pd6l7jqkngsv">{{element.symbol}}</td>
+  
 
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+  </tr><tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+  <tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
+</tbody></table>

@@ -1,16 +1,13 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+<mat-tree [datasource]="dataSource" [treecontrol]="treeControl">
   <!-- Leaf node -->
-  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+  <mat-tree-node *mattreenodedef="let node" mattreenodepadding>
     <button mat-icon-button disabled></button>
     {{node.item}}
   </mat-tree-node>
 
   <!-- expandable node -->
-  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
-    <button mat-icon-button
-            [attr.aria-label]="'Toggle ' + node.item"
-            (click)="loadChildren(node)"
-            matTreeNodeToggle>
+  <mat-tree-node *mattreenodedef="let node; when: hasChild" mattreenodepadding>
+    <button mat-icon-button [attr.aria-label]="'Toggle ' + node.item" (click)="loadChildren(node)" mattreenodetoggle>
       <mat-icon class="mat-icon-rtl-mirror">
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
@@ -18,7 +15,7 @@
     {{node.item}}
   </mat-tree-node>
 
-  <mat-tree-node *matTreeNodeDef="let node; when: isLoadMore">
+  <mat-tree-node *mattreenodedef="let node; when: isLoadMore">
     <button mat-button (click)="loadMore(node.loadMoreParentItem)">
       Load more...
     </button>

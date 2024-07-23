@@ -1,12 +1,11 @@
 <ol>
+  <li data-ng_translator_product="100" data-ng_translator_ref_id="7k8tfft1ps6d7vxqb6y6a58to"><label id="dialog-user-name">你的名字是什么？</label> 
+<input for="dialog-user-name" [(ngModel)]="name"></li>
   <li>
-    <label id="dialog-user-name">What's your name?</label>
-    <input for="dialog-user-name" [(ngModel)]="name">
+    <button (click)="openDialog()" data-ng_translator_product="100" data-ng_translator_ref_id="dyjhk90ii8u91abllcaz0d6aw">选择一个</button>
   </li>
-  <li>
-    <button (click)="openDialog()">Pick one</button>
-  </li>
-  <li *ngIf="animal">
-    You chose: <em>{{animal}}</em>
-  </li>
+  @if (animal) {
+    <li data-ng_translator_product="100" data-ng_translator_ref_id="633tu0h6di770hjn336wcwjoj">你选择了：
+<em>{{animal}}</em></li>
+  }
 </ol>

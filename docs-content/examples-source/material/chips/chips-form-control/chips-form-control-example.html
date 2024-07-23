@@ -3,23 +3,21 @@
   <button mat-raised-button (click)="formControl.enable()">Enable form control</button>
 </div>
 <p>
-  <em>Enter video keywords</em>
+  <em data-ng_translator_product="100" data-ng_translator_ref_id="56sg8no848urh1q48lw8kcufo">输入视频关键词</em>
 </p>
 <mat-form-field class="example-form-field">
   <mat-label>Video keywords</mat-label>
-  <mat-chip-grid #chipGrid aria-label="Enter keywords" [formControl]="formControl" >
-    <mat-chip-row *ngFor="let keyword of keywords" (removed)="removeKeyword(keyword)">
-      {{keyword}}
-      <button matChipRemove aria-label="'remove ' + keyword">
-        <mat-icon>cancel</mat-icon>
-      </button>
-    </mat-chip-row>
+  <mat-chip-grid #chipgrid aria-label="Enter keywords" [formcontrol]="formControl">
+    @for (keyword of keywords; track keyword) {
+      <mat-chip-row (removed)="removeKeyword(keyword)">
+        {{keyword}}
+        <button matchipremove aria-label="'remove ' + keyword">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+    }
   </mat-chip-grid>
-  <input placeholder="New keyword..."
-          [matChipInputFor]="chipGrid"
-          (matChipInputTokenEnd)="add($event)"/>
+  <input placeholder="New keyword..." [matChipInputFor]="chipGrid" (matChipInputTokenEnd)="add($event)">
 </mat-form-field>
 
-<p>
-  <strong>The following keywords are entered:</strong> {{formControl.value}}
-</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="5cgnbvhjkbtgzfu8nqdwhq2cj"><strong>以下关键词已输入：</strong> {{formControl.value}}</p>

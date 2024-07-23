@@ -1,9 +1,7 @@
 <mat-selection-list #shoes [multiple]="false">
-  <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
-    {{shoe}}
-  </mat-list-option>
+  @for (shoe of typesOfShoes; track shoe) {
+    <mat-list-option [value]="shoe">{{shoe}}</mat-list-option>
+  }
 </mat-selection-list>
 
-<p>
-  Option selected: {{shoes.selectedOptions.hasValue() ? shoes.selectedOptions.selected[0].value : 'None'}}
-</p>
+<p data-ng_translator_product="100" data-ng_translator_ref_id="e0ht1q05x14hbbhudae1017se">已选选项：{{shoes.selectedOptions.hasValue() ? shoes.selectedOptions.selected[0].value : '无'}}</p>

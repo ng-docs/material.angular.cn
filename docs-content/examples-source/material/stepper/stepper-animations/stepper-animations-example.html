@@ -3,35 +3,35 @@
   <input id="duration" value="2000" type="number" min="0" step="100" #duration>
 </div>
 
-<mat-vertical-stepper [linear]="false" #stepper [animationDuration]="duration.value">
-  <mat-step [stepControl]="firstFormGroup">
+<mat-vertical-stepper [linear]="false" #stepper [animationduration]="duration.value">
+  <mat-step [stepcontrol]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
+      <ng-template matsteplabel>Fill out your name</ng-template>
       <mat-form-field>
         <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matsteppernext>Next</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
+  <mat-step [stepcontrol]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
+      <ng-template matsteplabel>Fill out your address</ng-template>
       <mat-form-field>
         <input matInput placeholder="Address" formControlName="secondCtrl" required>
       </mat-form-field>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matstepperprevious>Back</button>
+        <button mat-button matsteppernext>Next</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
+    <ng-template matsteplabel>Done</ng-template>
     You are now done.
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matstepperprevious>Back</button>
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
